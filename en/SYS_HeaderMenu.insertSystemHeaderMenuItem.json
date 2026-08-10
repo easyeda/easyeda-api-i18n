@@ -46,7 +46,7 @@
     "params.env": "环境",
     "params.id": "菜单项 ID 树，将会按照数组顺序按层级匹配菜单项，并将数组最后一位作为插入的菜单项的 ID",
     "params.props": "其它参数",
-    "returns": "顶部菜单项的 ID，分隔线是否插入并不会影响操��结果的返回值，不包含 menuItems 中的子项的 ID"
+    "returns": "顶部菜单项的 ID，分隔线是否插入并不会影响操作结果的返回值，不包含 menuItems 中的子项的 ID"
   },
   "title": null,
   "remarks.text.0": null,

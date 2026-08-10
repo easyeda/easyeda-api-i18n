@@ -25,7 +25,7 @@
   },
   "_source": {
     "title": "判断点是否在多边形内部",
-    "remarks.text.0": "使用射线法（Ray Casting）判断点是否在多边形内部",
+    "remarks.text.0": "���用射线法（Ray Casting）判断点是否在多边形内部",
     "remarks.text.1": "由于射线法的特性，边界上的点行为不一致：部分边界上的点可能返回 `true`，部分可能返回 `false`，\n具体取决于射线方向与边界的几何关系",
     "remarks.text.2": "如需严格判断点是否在边界上，请结合 {@link SYS_Math.distanceToPoint} 判断距离是否为 `0`",
     "params.polygon": "多边形",

@@ -11,7 +11,7 @@
     "properties.tabId": "标签页 ID",
     "properties.documentType": "文档类型",
     "properties.draggable": "标签页是否可拖动",
-    "properties.isAbleDelete": "��签页是否可关闭",
+    "properties.isAbleDelete": "标签页是否可关闭",
     "properties.notUseI18n": "标签页是否不使用 I18n 功能（内部功能）"
   },
   "title": null,

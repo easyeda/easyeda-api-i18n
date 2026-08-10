@@ -16,7 +16,7 @@
     }
   },
   "_source": {
-    "title": "私有消息总线：发布消��",
+    "title": "私有消息总线：发布消息",
     "remarks.text.0": "将消息广播给每一个 Subscriber",
     "params.topic": "主题",
     "params.message": "消息"
