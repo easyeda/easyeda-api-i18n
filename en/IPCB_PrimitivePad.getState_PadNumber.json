@@ -7,7 +7,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "获取属��状态：焊盘编号",
+    "title": "获取属性状态：焊盘编号",
     "returns": "焊盘编号"
   },
   "title": null,

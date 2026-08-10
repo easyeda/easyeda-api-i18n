@@ -7,7 +7,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "清除���定单次定时器",
+    "title": "清除指定单次定时器",
     "params.id": "定时器 ID",
     "returns": "定时器是否清除成功"
   },
