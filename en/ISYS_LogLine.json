@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "ISYS_LogLine",
+    "kind": "interface",
+    "name": "ISYS_LogLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "日志行",
+    "properties.timestamp": "时间戳",
+    "properties.type": "日志类型",
+    "properties.message": "日志内容"
+  },
+  "title": null,
+  "properties.timestamp": null,
+  "properties.type": null,
+  "properties.message": null
+}

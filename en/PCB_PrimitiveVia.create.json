@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveVia.create",
+    "kind": "method",
+    "name": "create",
+    "className": "PCB_PrimitiveVia",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建过孔",
+    "params.net": "网络名称",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "params.holeDiameter": "孔径",
+    "params.diameter": "外径",
+    "params.viaType": "过孔类型",
+    "params.designRuleBlindViaName": "盲埋孔设计规则项名称，定义过孔的开始层与结束层，`null` 表示非盲埋孔",
+    "params.solderMaskExpansion": "阻焊/助焊扩展，`null` 表示跟随规则",
+    "params.primitiveLock": "是否锁定",
+    "returns": "过孔图元对象"
+  },
+  "title": null,
+  "params.net": null,
+  "params.x": null,
+  "params.y": null,
+  "params.holeDiameter": null,
+  "params.diameter": null,
+  "params.viaType": null,
+  "params.designRuleBlindViaName": null,
+  "params.solderMaskExpansion": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

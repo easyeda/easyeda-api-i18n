@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveFill.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "PCB_PrimitiveFill",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有填充",
+    "params.layer": "层",
+    "params.net": "网络名称",
+    "params.primitiveLock": "是否锁定",
+    "returns": "填充图元对象数组"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.net": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

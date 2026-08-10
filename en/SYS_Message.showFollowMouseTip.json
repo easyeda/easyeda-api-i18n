@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_Message.showFollowMouseTip",
+    "kind": "method",
+    "name": "showFollowMouseTip",
+    "className": "SYS_Message",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "展示跟随鼠标的提示",
+    "remarks.text.0": "同一时间只能展示一条提示，如果展示新的提示，则之前的提示将被自动移除",
+    "params.tip": "提示内容",
+    "params.msTimeout": "展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 {@link SYS_Message.removeFollowMouseTip | removeFollowMouseTip} 或被其它提示覆盖"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.tip": null,
+  "params.msTimeout": null
+}

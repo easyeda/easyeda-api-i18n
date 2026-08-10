@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "SYS_Dialog.showInformationMessage",
+    "kind": "method",
+    "name": "showInformationMessage",
+    "className": "SYS_Dialog",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "弹出消息窗口",
+    "remarks.text.0": "显示一个文字消息窗口",
+    "params.content": "消息文本，支持使用 `\\n` 换行",
+    "params.title": "弹出窗口标题",
+    "params.buttonTitle": "按钮标题，为空则不显示按钮"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.content": null,
+  "params.title": null,
+  "params.buttonTitle": null
+}

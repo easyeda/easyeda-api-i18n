@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.getState_Hole",
+    "kind": "method",
+    "name": "getState_Hole",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：孔",
+    "returns": "孔"
+  },
+  "title": null,
+  "returns": null
+}

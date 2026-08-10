@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponentPad",
+    "kind": "class",
+    "name": "IPCB_PrimitiveComponentPad",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "器件焊盘图元",
+    "remarks.text.0": "器件焊盘图元是一个特殊的图元，它指的是在 PCB 画布上关联到封装的焊盘",
+    "remarks.text.1": "你只能通过 {@link PCB_PrimitiveComponent.getAllPinsByPrimitiveId | 器件类的 getAllPinsByPrimitiveId 方法} 或 {@link IPCB_PrimitiveComponent.getAllPins | 器件图元的 getAllPads 方法} 获取到器件焊盘图元"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePour.rebuildCopperRegions",
+    "kind": "method",
+    "name": "rebuildCopperRegions",
+    "className": "PCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "重建覆铜区域",
+    "params.primitiveIds": "覆铜边框图元 ID 数组，如若未传入则重建所有覆铜区域",
+    "returns": "覆铜填充图元数组"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

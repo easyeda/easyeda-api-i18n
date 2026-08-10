@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveText.getState_FontName",
+    "kind": "method",
+    "name": "getState_FontName",
+    "className": "ISCH_PrimitiveText",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：字体名称",
+    "returns": "字体名称"
+  },
+  "title": null,
+  "returns": null
+}

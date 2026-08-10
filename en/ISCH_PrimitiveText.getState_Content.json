@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveText.getState_Content",
+    "kind": "method",
+    "name": "getState_Content",
+    "className": "ISCH_PrimitiveText",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：文本内容",
+    "returns": "文本内容"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "TableInstance",
+    "kind": "interface",
+    "name": "TableInstance",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "Table 实例方法类型",
+    "properties.tableBodyDiv": "表格体 DOM 引用"
+  },
+  "title": null,
+  "properties.tableBodyDiv": null
+}

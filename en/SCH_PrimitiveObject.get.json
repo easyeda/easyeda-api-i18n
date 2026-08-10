@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveObject.get",
+    "kind": "method",
+    "name": "get",
+    "className": "SCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取二进制内嵌对象",
+    "params.primitiveIds": "二进制内嵌对象的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "二进制内嵌对象图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_Environment.isEasyEDAProEdition",
+    "kind": "method",
+    "name": "isEasyEDAProEdition",
+    "className": "SYS_Environment",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "是否为 EasyEDA Pro 版本",
+    "returns": "是否为 EasyEDA Pro 版本"
+  },
+  "title": null,
+  "returns": null
+}

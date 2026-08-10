@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePad.get",
+    "kind": "method",
+    "name": "get",
+    "className": "PCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取焊盘",
+    "params.primitiveIds": "焊盘的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "焊盘图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

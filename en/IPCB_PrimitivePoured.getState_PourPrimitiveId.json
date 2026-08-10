@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured.getState_PourPrimitiveId",
+    "kind": "method",
+    "name": "getState_PourPrimitiveId",
+    "className": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：覆铜边框图元 ID",
+    "returns": "覆铜边框图元 ID"
+  },
+  "title": null,
+  "returns": null
+}

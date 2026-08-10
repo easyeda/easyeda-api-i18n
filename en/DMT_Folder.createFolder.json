@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "DMT_Folder.createFolder",
+    "kind": "method",
+    "name": "createFolder",
+    "className": "DMT_Folder",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建文件夹",
+    "params.folderName": "文件夹名称",
+    "params.teamUuid": "团队 UUID",
+    "params.parentFolderUuid": "父文件夹 UUID，如若不指定，则为根文件夹",
+    "params.description": "文件夹描述",
+    "returns": "文件夹 UUID，如若为 `undefined` 则创建失败"
+  },
+  "title": null,
+  "params.folderName": null,
+  "params.teamUuid": null,
+  "params.parentFolderUuid": null,
+  "params.description": null,
+  "returns": null
+}

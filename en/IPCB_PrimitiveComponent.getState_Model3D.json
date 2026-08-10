@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponent.getState_Model3D",
+    "kind": "method",
+    "name": "getState_Model3D",
+    "className": "IPCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：关联库 3D 模型",
+    "returns": "关联库 3D 模型"
+  },
+  "title": null,
+  "returns": null
+}

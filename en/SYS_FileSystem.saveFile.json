@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_FileSystem.saveFile",
+    "kind": "method",
+    "name": "saveFile",
+    "className": "SYS_FileSystem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "保存文件",
+    "remarks.text.0": "调用浏览器下载接口或 Electron 保存文件接口，将传入的文件流保存到本地",
+    "params.fileData": "文件数据",
+    "params.fileName": "文件名称"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileData": null,
+  "params.fileName": null
+}

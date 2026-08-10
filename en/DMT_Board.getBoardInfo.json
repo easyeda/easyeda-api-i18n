@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Board.getBoardInfo",
+    "kind": "method",
+    "name": "getBoardInfo",
+    "className": "DMT_Board",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取板子的详细属性",
+    "params.boardName": "板子名称",
+    "returns": "板子的详细属性，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "params.boardName": null,
+  "returns": null
+}

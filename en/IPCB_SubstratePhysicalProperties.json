@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "IPCB_SubstratePhysicalProperties",
+    "kind": "interface",
+    "name": "IPCB_SubstratePhysicalProperties",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "基板物理属性",
+    "properties.numberOfLayers": "铜箔层数",
+    "properties.substrateMaterial": "基板材料"
+  },
+  "title": null,
+  "properties.numberOfLayers": null,
+  "properties.substrateMaterial": null
+}

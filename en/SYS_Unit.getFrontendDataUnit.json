@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "SYS_Unit.getFrontendDataUnit",
+    "kind": "method",
+    "name": "getFrontendDataUnit",
+    "className": "SYS_Unit",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取 EDA 前端数据单位跨度",
+    "remarks.text.0": "此处指的是前端用户可以切换的单位，需要同时兼容原理图和 PCB 画布",
+    "returns": "单位"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

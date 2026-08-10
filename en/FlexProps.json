@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "FlexProps",
+    "kind": "interface",
+    "name": "FlexProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "SelectListItem",
+    "kind": "interface",
+    "name": "SelectListItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

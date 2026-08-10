@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.deleteByUuid",
+    "kind": "method",
+    "name": "deleteByUuid",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除指定 UUID 的分类",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "params.primaryClassificationUuid": "一级分类 UUID",
+    "params.secondaryClassificationUuid": "二级分类 UUID",
+    "returns": "操作是否成功",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "params.primaryClassificationUuid": null,
+  "params.secondaryClassificationUuid": null,
+  "returns": null,
+  "deprecated": null
+}

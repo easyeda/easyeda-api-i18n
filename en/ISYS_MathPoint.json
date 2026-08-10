@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "ISYS_MathPoint",
+    "kind": "interface",
+    "name": "ISYS_MathPoint",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "离散点",
+    "properties.x": "X 坐标",
+    "properties.y": "Y 坐标"
+  },
+  "title": null,
+  "properties.x": null,
+  "properties.y": null
+}

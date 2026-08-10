@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.publishPublic",
+    "kind": "method",
+    "name": "publishPublic",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "公共消息总线：发布消息",
+    "remarks.text.0": "将消息广播给每一个 Subscriber",
+    "params.topic": "主题",
+    "params.message": "消息"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.topic": null,
+  "params.message": null
+}

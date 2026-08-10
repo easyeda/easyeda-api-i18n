@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject",
+    "kind": "class",
+    "name": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "二进制内嵌对象图元"
+  },
+  "title": null
+}

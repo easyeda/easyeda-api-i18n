@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TPCB_LayersOfLine",
+    "kind": "type",
+    "name": "TPCB_LayersOfLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "线所属层"
+  },
+  "title": null
+}

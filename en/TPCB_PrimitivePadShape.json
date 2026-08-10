@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "id": "TPCB_PrimitivePadShape",
+    "kind": "type",
+    "name": "TPCB_PrimitivePadShape",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.4"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.5"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.6"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.7"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.8"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.9"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.10"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.11"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.12"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.13"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.14"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.15"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.16"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "焊盘外形",
+    "remarks.text.0": "焊盘当前存在以下四种 {@link EPCB_PrimitivePadShapeType | 外形种类}：",
+    "remarks.text.1": "① 圆形",
+    "remarks.text.2": "`[EPCB_PrimitivePadShapeType.ELLIPSE, width, height]`",
+    "remarks.text.3": "- `{number}` `width` - 宽",
+    "remarks.text.4": "- `{number}` `height` - 高",
+    "remarks.text.5": "② 矩形",
+    "remarks.text.6": "`[EPCB_PrimitivePadShapeType.RECTANGLE, width, height, round]`",
+    "remarks.text.7": "- `{number}` `width` - 宽",
+    "remarks.text.8": "- `{number}` `height` - 高",
+    "remarks.text.9": "- `{number}` `round` - 圆角半径",
+    "remarks.text.10": "③ 正多边形",
+    "remarks.text.11": "`[EPCB_PrimitivePadShapeType.REGULAR_POLYGON, diameter, numberOfSides]`",
+    "remarks.text.12": "- `{number}` `diameter` - 直径",
+    "remarks.text.13": "- `{number}` `numberOfSides` - 边数（＞ 2）",
+    "remarks.text.14": "④ 折线复杂多边形",
+    "remarks.text.15": "`[EPCB_PrimitivePadShapeType.POLYLINE_COMPLEX_POLYGON, complexPolygon]`",
+    "remarks.text.16": "- `{TPCB_PolygonSourceArray | Array<TPCB_PolygonSourceArray>}` `complexPolygon` - 复杂多边形源数组，可以使用 {@link IPCB_ComplexPolygon.getSource} 获取"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "remarks.text.3": null,
+  "remarks.text.4": null,
+  "remarks.text.5": null,
+  "remarks.text.6": null,
+  "remarks.text.7": null,
+  "remarks.text.8": null,
+  "remarks.text.9": null,
+  "remarks.text.10": null,
+  "remarks.text.11": null,
+  "remarks.text.12": null,
+  "remarks.text.13": null,
+  "remarks.text.14": null,
+  "remarks.text.15": null,
+  "remarks.text.16": null
+}

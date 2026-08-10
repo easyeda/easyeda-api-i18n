@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.modifyDifferentialPairNegativeNet",
+    "kind": "method",
+    "name": "modifyDifferentialPairNegativeNet",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改差分对负网络",
+    "params.differentialPairName": "差分对名称",
+    "params.negativeNet": "负网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.differentialPairName": null,
+  "params.negativeNet": null,
+  "returns": null
+}

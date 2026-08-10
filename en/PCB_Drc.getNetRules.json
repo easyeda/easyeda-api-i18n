@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.getNetRules",
+    "kind": "method",
+    "name": "getNetRules",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取网络规则",
+    "returns": "当前 PCB 的所有网络规则"
+  },
+  "title": null,
+  "returns": null
+}

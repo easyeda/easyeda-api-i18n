@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponent.getState_AddIntoBom",
+    "kind": "method",
+    "name": "getState_AddIntoBom",
+    "className": "IPCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否加入 BOM",
+    "returns": "是否加入 BOM"
+  },
+  "title": null,
+  "returns": null
+}

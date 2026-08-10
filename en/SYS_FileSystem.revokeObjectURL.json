@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "SYS_FileSystem.revokeObjectURL",
+    "kind": "method",
+    "name": "revokeObjectURL",
+    "className": "SYS_FileSystem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.162",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "吊销 ObjectURL",
+    "remarks.text.0": "吊销指定的 ObjectURL",
+    "params.url": "ObjectURL 字符串"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.url": null
+}

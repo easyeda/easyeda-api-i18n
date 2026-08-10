@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SYS_FileManager",
+    "kind": "class",
+    "name": "SYS_FileManager",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "系统 / 文件管理类"
+  },
+  "title": null
+}

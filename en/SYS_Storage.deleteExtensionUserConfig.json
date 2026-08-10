@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_Storage.deleteExtensionUserConfig",
+    "kind": "method",
+    "name": "deleteExtensionUserConfig",
+    "className": "SYS_Storage",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "删除扩展用户配置",
+    "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "params.key": "配置项",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.key": null,
+  "returns": null
+}

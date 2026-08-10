@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveLine",
+    "kind": "class",
+    "name": "IPCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "直线图元",
+    "remarks.text.0": "直线和圆弧线均为导线，对应画布的线条走线和圆弧走线"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

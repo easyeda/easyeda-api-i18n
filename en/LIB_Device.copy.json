@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "LIB_Device.copy",
+    "kind": "method",
+    "name": "copy",
+    "className": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复制器件",
+    "params.deviceUuid": "器件 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.targetLibraryUuid": "目标库 UUID",
+    "params.targetClassification": "目标库内的分类",
+    "params.newDeviceName": "新器件名称，如若目标库内存在重名器件将导致复制失败",
+    "returns": "目标库内新器件的 UUID"
+  },
+  "title": null,
+  "params.deviceUuid": null,
+  "params.libraryUuid": null,
+  "params.targetLibraryUuid": null,
+  "params.targetClassification": null,
+  "params.newDeviceName": null,
+  "returns": null
+}

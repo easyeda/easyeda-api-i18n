@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Unit.milToMm",
+    "kind": "method",
+    "name": "milToMm",
+    "className": "SYS_Unit",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单位转换：密尔到毫米",
+    "params.mil": "输入密尔数",
+    "params.numberOfDecimals": "保留小数位数，默认为 `4`",
+    "returns": "输出毫米数"
+  },
+  "title": null,
+  "params.mil": null,
+  "params.numberOfDecimals": null,
+  "returns": null
+}

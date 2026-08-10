@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "CheckedOptionalParams",
+    "kind": "interface",
+    "name": "CheckedOptionalParams",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复选框变更可选参数",
+    "properties.isTriggerByRowsUpdate": "是否由行更新触发",
+    "properties.isTriggerByCheckListUpdate": "是否由选中列表更新触发",
+    "properties.row": "行数据"
+  },
+  "title": null,
+  "properties.isTriggerByRowsUpdate": null,
+  "properties.isTriggerByCheckListUpdate": null,
+  "properties.row": null
+}

@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SYS_Unit",
+    "kind": "class",
+    "name": "SYS_Unit",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "系统 / 单位类",
+    "remarks.text.0": "控制系统数据单位与单位转换基础函数，当前原理图数据单位跨度等效为 `10mil` 或 `0.01inch`，PCB 数据单位跨度等效为 `mil`"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

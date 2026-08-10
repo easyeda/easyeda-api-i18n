@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "SYS_Timer.setTimeoutTimer",
+    "kind": "method",
+    "name": "setTimeoutTimer",
+    "className": "SYS_Timer",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "设置单次定时器",
+    "remarks.text.0": "如果遇到 ID 重复的定时器，则之前设置的定时器将被清除",
+    "params.id": "定时器 ID",
+    "params.timeout": "定时时间，单位 ms",
+    "params.callFn": "定时调用函数",
+    "params.args": "传给定时调用函数的参数",
+    "returns": "定时器是否设置成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.id": null,
+  "params.timeout": null,
+  "params.callFn": null,
+  "params.args": null,
+  "returns": null
+}

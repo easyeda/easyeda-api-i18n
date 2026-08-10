@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getGerberFile",
+    "kind": "method",
+    "name": "getGerberFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0"
+        },
+        {
+          "type": "code",
+          "content": "const gerberFile = await eda.pcb_ManufactureData.getGerberFile('MyBoard_Gerber');\nif (gerberFile) {\nconsole.log('Gerber 文件已生成:', gerberFile);\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1"
+        },
+        {
+          "type": "code",
+          "content": "const gerberFile = await eda.pcb_ManufactureData.getGerberFile(\n'MyBoard_Gerber',\nfalse,\nESYS_Unit.MILLIMETER,\n{ integerNumber: 2, decimalNumber: 6 }\n);\nif (gerberFile) {\nawait eda.sys_FileSystem.saveFile(gerberFile,'Gerber.zip');\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2"
+        },
+        {
+          "type": "code",
+          "content": "const gerberFile = await eda.pcb_ManufactureData.getGerberFile(\n'Custom_Gerber',\nfalse,\nESYS_Unit.INCH,\n{ integerNumber: 3, decimalNumber: 5 },\n{ metallicDrillingInformation: true, nonMetallicDrillingInformation: true, drillTable: false, flyingProbeTestingFile: false },\n[{ layerId: 1, isMirror: false }, { layerId: 2, isMirror: false }, { layerId: 11, isMirror: false }],\n['Pad', 'Via', 'Track', 'BoardOutline']\n);\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取 PCB 制版文件（Gerber）",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "导出默认的 Gerber 文件",
+    "example.text.1": "导出并保存到本地",
+    "example.text.2": "自定义导出层和对象",
+    "params.fileName": "文件名",
+    "params.colorSilkscreen": "是否生成彩色丝印制造文件（嘉立创专用文件）",
+    "params.unit": "单位",
+    "params.digitalFormat": "数字格式",
+    "params.other": "其它",
+    "params.layers": "导出层，默认则按照嘉立创生产需求导出",
+    "params.objects": "导出对象，默认则按照嘉立创生产需求导出",
+    "returns": "PCB 制版文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "params.fileName": null,
+  "params.colorSilkscreen": null,
+  "params.unit": null,
+  "params.digitalFormat": null,
+  "params.other": null,
+  "params.layers": null,
+  "params.objects": null,
+  "returns": null
+}

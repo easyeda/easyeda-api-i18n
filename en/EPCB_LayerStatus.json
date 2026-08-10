@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "EPCB_LayerStatus",
+    "kind": "enum",
+    "name": "EPCB_LayerStatus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "层状态",
+    "members.NOT_USED": "不使用",
+    "members.SHOW": "使用并展示",
+    "members.HIDDEN": "使用但不展示"
+  },
+  "title": null,
+  "members.NOT_USED": null,
+  "members.SHOW": null,
+  "members.HIDDEN": null
+}

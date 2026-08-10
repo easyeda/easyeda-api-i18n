@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveRectangle.create",
+    "kind": "method",
+    "name": "create",
+    "className": "SCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建矩形",
+    "params.topLeftX": "左上点 X",
+    "params.topLeftY": "左上点 Y",
+    "params.width": "宽",
+    "params.height": "高",
+    "params.cornerRadius": "圆角半径",
+    "params.rotation": "旋转角度，绕左上点旋转，可选 `0` `90` `180` `270`",
+    "params.color": "颜色，`null` 表示默认",
+    "params.fillColor": "填充颜色，`none` 表示无填充，`null` 表示默认",
+    "params.lineWidth": "线宽，范围 `1-10`，`null` 表示默认",
+    "params.lineType": "线型，`null` 表示默认",
+    "params.fillStyle": "填充样式，`null` 表示默认",
+    "returns": "矩形图元对象"
+  },
+  "title": null,
+  "params.topLeftX": null,
+  "params.topLeftY": null,
+  "params.width": null,
+  "params.height": null,
+  "params.cornerRadius": null,
+  "params.rotation": null,
+  "params.color": null,
+  "params.fillColor": null,
+  "params.lineWidth": null,
+  "params.lineType": null,
+  "params.fillStyle": null,
+  "returns": null
+}

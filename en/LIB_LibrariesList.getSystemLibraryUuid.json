@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "LIB_LibrariesList.getSystemLibraryUuid",
+    "kind": "method",
+    "name": "getSystemLibraryUuid",
+    "className": "LIB_LibrariesList",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取系统库的 UUID",
+    "returns": "系统库的 UUID"
+  },
+  "title": null,
+  "returns": null
+}

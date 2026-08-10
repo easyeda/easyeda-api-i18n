@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.getTheNumberOfCopperLayers",
+    "kind": "method",
+    "name": "getTheNumberOfCopperLayers",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取铜箔层数",
+    "returns": "层数"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "ILIB_DeviceExtendPropertyItem",
+    "kind": "interface",
+    "name": "ILIB_DeviceExtendPropertyItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "器件扩展属性",
+    "properties.name": "名称",
+    "properties.designator": "位号",
+    "properties.addIntoBom": "加入 BOM",
+    "properties.addIntoPcb": "转到 PCB",
+    "properties.net": "网络",
+    "properties.manufacturer": "制造商",
+    "properties.manufacturerId": "制造商编号",
+    "properties.supplier": "供应商",
+    "properties.supplierId": "供应商编号",
+    "properties.otherProperty": "其它属性"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.designator": null,
+  "properties.addIntoBom": null,
+  "properties.addIntoPcb": null,
+  "properties.net": null,
+  "properties.manufacturer": null,
+  "properties.manufacturerId": null,
+  "properties.supplier": null,
+  "properties.supplierId": null,
+  "properties.otherProperty": null
+}

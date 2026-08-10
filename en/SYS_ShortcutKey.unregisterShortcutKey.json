@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_ShortcutKey.unregisterShortcutKey",
+    "kind": "method",
+    "name": "unregisterShortcutKey",
+    "className": "SYS_ShortcutKey",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "反注册快捷键",
+    "params.shortcutKey": "快捷键，不区分传入的排列顺序，将自动排序并查询匹配的快捷键",
+    "returns": "反注册操作是否成功",
+    "deprecated": "since EDA v4.2"
+  },
+  "title": null,
+  "params.shortcutKey": null,
+  "returns": null,
+  "deprecated": null
+}

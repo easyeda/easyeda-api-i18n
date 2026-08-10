@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "DragConfigParams",
+    "kind": "interface",
+    "name": "DragConfigParams",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "拖拽配置参数",
+    "properties.upperLimitIndex": "上限索引",
+    "properties.lowerLimitIndex": "下限索引"
+  },
+  "title": null,
+  "properties.upperLimitIndex": null,
+  "properties.lowerLimitIndex": null
+}

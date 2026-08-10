@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.importAutoRouteSesFile",
+    "kind": "method",
+    "name": "importAutoRouteSesFile",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "导入自动布线文件（SES）",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.openReadFileDialog} 读入文件",
+    "params.autoRouteFile": "欲导入的 SES 文件",
+    "returns": "导入操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.autoRouteFile": null,
+  "returns": null
+}

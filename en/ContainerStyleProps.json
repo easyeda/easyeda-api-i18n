@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "ContainerStyleProps",
+    "kind": "interface",
+    "name": "ContainerStyleProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

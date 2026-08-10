@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveFill",
+    "kind": "class",
+    "name": "IPCB_PrimitiveFill",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "填充图元"
+  },
+  "title": null
+}

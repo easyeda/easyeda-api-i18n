@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "ILIB_LibraryItem",
+    "kind": "interface",
+    "name": "ILIB_LibraryItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "库属性",
+    "properties.uuid": "UUID",
+    "properties.libraryType": "库类型",
+    "properties.libraryUuid": "所属库 UUID"
+  },
+  "title": null,
+  "properties.uuid": null,
+  "properties.libraryType": null,
+  "properties.libraryUuid": null
+}

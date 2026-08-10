@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "SYS_Math.translate",
+    "kind": "method",
+    "name": "translate",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "平移多边形",
+    "params.polygon": "多边形",
+    "params.dx": "X 方向偏移量",
+    "params.dy": "Y 方向偏移量",
+    "returns": "平移后的离散点数组"
+  },
+  "title": null,
+  "params.polygon": null,
+  "params.dx": null,
+  "params.dy": null,
+  "returns": null
+}

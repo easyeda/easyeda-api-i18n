@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveVia.setState_DesignRuleBlindViaName",
+    "kind": "method",
+    "name": "setState_DesignRuleBlindViaName",
+    "className": "IPCB_PrimitiveVia",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：盲埋孔设计规则项名称",
+    "params.designRuleBlindViaName": "盲埋孔设计规则项名称",
+    "returns": "过孔图元对象"
+  },
+  "title": null,
+  "params.designRuleBlindViaName": null,
+  "returns": null
+}

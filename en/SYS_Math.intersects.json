@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "SYS_Math.intersects",
+    "kind": "method",
+    "name": "intersects",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "判断两个多边形是否相交",
+    "remarks.text.0": "判断两个多边形的区域是否有任何重叠（包括包含、部分相交、边界接触）",
+    "params.polygon1": "多边形 1",
+    "params.polygon2": "多边形 2",
+    "returns": "是否相交"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.polygon1": null,
+  "params.polygon2": null,
+  "returns": null
+}

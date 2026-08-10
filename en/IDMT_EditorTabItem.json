@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "IDMT_EditorTabItem",
+    "kind": "interface",
+    "name": "IDMT_EditorTabItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "编辑器标签页",
+    "properties.title": "标签页标题",
+    "properties.tabId": "标签页 ID",
+    "properties.documentType": "文档类型",
+    "properties.draggable": "标签页是否可拖动",
+    "properties.isAbleDelete": "��签页是否可关闭",
+    "properties.notUseI18n": "标签页是否不使用 I18n 功能（内部功能）"
+  },
+  "title": null,
+  "properties.title": null,
+  "properties.tabId": null,
+  "properties.documentType": null,
+  "properties.draggable": null,
+  "properties.isAbleDelete": null,
+  "properties.notUseI18n": null
+}

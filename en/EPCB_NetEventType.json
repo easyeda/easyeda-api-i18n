@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "EPCB_NetEventType",
+    "kind": "enum",
+    "name": "EPCB_NetEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "网络事件类型",
+    "members.ADD": "新增",
+    "members.REMOVE": "移除",
+    "members.SELECTED": "选中（仅当选中整个网络时触发）"
+  },
+  "title": null,
+  "members.ADD": null,
+  "members.REMOVE": null,
+  "members.SELECTED": null
+}

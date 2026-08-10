@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveDimension.create",
+    "kind": "method",
+    "name": "create",
+    "className": "PCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建尺寸标注",
+    "params.dimensionType": "尺寸标注类型",
+    "params.coordinateSet": "尺寸标注坐标集",
+    "params.layer": "层",
+    "params.unit": "单位",
+    "params.lineWidth": "线宽",
+    "params.precision": "精度，取值范围 `0`-`4`",
+    "params.primitiveLock": "是否锁定",
+    "returns": "尺寸标注图元对象"
+  },
+  "title": null,
+  "params.dimensionType": null,
+  "params.coordinateSet": null,
+  "params.layer": null,
+  "params.unit": null,
+  "params.lineWidth": null,
+  "params.precision": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

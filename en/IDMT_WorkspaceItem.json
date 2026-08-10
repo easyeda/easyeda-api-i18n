@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "IDMT_WorkspaceItem",
+    "kind": "interface",
+    "name": "IDMT_WorkspaceItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "工作区属性",
+    "properties.itemType": "项目类型",
+    "properties.name": "工作区名称",
+    "properties.uuid": "工作区 UUID"
+  },
+  "title": null,
+  "properties.itemType": null,
+  "properties.name": null,
+  "properties.uuid": null
+}

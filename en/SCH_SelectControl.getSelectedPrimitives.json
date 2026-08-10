@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_SelectControl.getSelectedPrimitives",
+    "kind": "method",
+    "name": "getSelectedPrimitives",
+    "className": "SCH_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "查询选中图元的所有参数",
+    "returns": "选中图元的所有参数",
+    "deprecated": "请使用 {@link SCH_SelectControl.getAllSelectedPrimitives | getAllSelectedPrimitives} 替代"
+  },
+  "title": null,
+  "returns": null,
+  "deprecated": null
+}

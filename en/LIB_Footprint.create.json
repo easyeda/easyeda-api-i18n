@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "LIB_Footprint.create",
+    "kind": "method",
+    "name": "create",
+    "className": "LIB_Footprint",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建封装",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.footprintName": "封装名称",
+    "params.classification": "分类",
+    "params.description": "描述",
+    "returns": "封装 UUID"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.footprintName": null,
+  "params.classification": null,
+  "params.description": null,
+  "returns": null
+}

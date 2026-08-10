@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveVia.getState_Net",
+    "kind": "method",
+    "name": "getState_Net",
+    "className": "IPCB_PrimitiveVia",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：网络名称",
+    "returns": "网络名称"
+  },
+  "title": null,
+  "returns": null
+}

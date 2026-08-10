@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Math.xor",
+    "kind": "method",
+    "name": "xor",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "计算两个多边形的对称差集（异或）",
+    "params.polygon1": "多边形 1",
+    "params.polygon2": "多边形 2",
+    "returns": "对称差集结果的多边形组，保留外环与孔洞的归属关系"
+  },
+  "title": null,
+  "params.polygon1": null,
+  "params.polygon2": null,
+  "returns": null
+}

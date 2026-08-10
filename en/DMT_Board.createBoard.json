@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "DMT_Board.createBoard",
+    "kind": "method",
+    "name": "createBoard",
+    "className": "DMT_Board",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建板子",
+    "params.schematicUuid": "关联原理图 UUID",
+    "params.pcbUuid": "关联 PCB UUID",
+    "returns": "板子名称，如若为 `undefined` 则创建失败"
+  },
+  "title": null,
+  "params.schematicUuid": null,
+  "params.pcbUuid": null,
+  "returns": null
+}

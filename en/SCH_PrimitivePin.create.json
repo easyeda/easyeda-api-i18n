@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitivePin.create",
+    "kind": "method",
+    "name": "create",
+    "className": "SCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建引脚",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "params.pinNumber": "引脚编号",
+    "params.pinName": "引脚名称",
+    "params.rotation": "旋转角度，可选 `0` `90` `180` `270`",
+    "params.pinLength": "引脚长度",
+    "params.pinColor": "引脚颜色，`null` 表示默认",
+    "params.pinShape": "引脚形状",
+    "params.pinType": "引脚类型",
+    "returns": "引脚图元对象"
+  },
+  "title": null,
+  "params.x": null,
+  "params.y": null,
+  "params.pinNumber": null,
+  "params.pinName": null,
+  "params.rotation": null,
+  "params.pinLength": null,
+  "params.pinColor": null,
+  "params.pinShape": null,
+  "params.pinType": null,
+  "returns": null
+}

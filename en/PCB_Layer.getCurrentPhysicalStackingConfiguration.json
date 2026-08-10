@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.getCurrentPhysicalStackingConfiguration",
+    "kind": "method",
+    "name": "getCurrentPhysicalStackingConfiguration",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取当前物理叠层配置",
+    "returns": "当前物理叠层配置，`undefined` 为获取失败"
+  },
+  "title": null,
+  "returns": null
+}

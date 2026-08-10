@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "LIB_Symbol.create",
+    "kind": "method",
+    "name": "create",
+    "className": "LIB_Symbol",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建符号",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.symbolName": "符号名称",
+    "params.classification": "分类",
+    "params.symbolType": "符号类型",
+    "params.description": "描述",
+    "returns": "符号 UUID"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.symbolName": null,
+  "params.classification": null,
+  "params.symbolType": null,
+  "params.description": null,
+  "returns": null
+}

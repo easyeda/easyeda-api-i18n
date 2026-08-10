@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.getState_Layer",
+    "kind": "method",
+    "name": "getState_Layer",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：层",
+    "returns": "层"
+  },
+  "title": null,
+  "returns": null
+}

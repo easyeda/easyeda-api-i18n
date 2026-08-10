@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponentPad.setState_ParentComponentPrimitiveId",
+    "kind": "method",
+    "name": "setState_ParentComponentPrimitiveId",
+    "className": "IPCB_PrimitiveComponentPad",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "设置属性状态：父器件图元 ID",
+    "remarks.text.0": "本器件焊盘图元属性不支持修改，本接口调用将不会有任何效果",
+    "returns": "器件焊盘图元对象"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

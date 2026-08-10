@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension",
+    "kind": "class",
+    "name": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "尺寸标注图元"
+  },
+  "title": null
+}

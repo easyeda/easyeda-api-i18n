@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveAttribute.setState_Y",
+    "kind": "method",
+    "name": "setState_Y",
+    "className": "ISCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：坐标 Y",
+    "params.y": "坐标 Y",
+    "returns": "属性图元对象"
+  },
+  "title": null,
+  "params.y": null,
+  "returns": null
+}

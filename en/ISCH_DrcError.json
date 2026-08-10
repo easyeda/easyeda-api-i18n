@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "ISCH_DrcError",
+    "kind": "interface",
+    "name": "ISCH_DrcError",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "DRC 错误条目",
+    "properties.type": "错误级别",
+    "properties.rule": "触发规则 key，如 `IN-IN`、`OUT-OUT`",
+    "properties.primitives": "涉及的图元",
+    "properties.net": "涉及网络（若有）"
+  },
+  "title": null,
+  "properties.type": null,
+  "properties.rule": null,
+  "properties.primitives": null,
+  "properties.net": null
+}

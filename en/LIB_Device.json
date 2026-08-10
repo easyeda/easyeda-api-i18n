@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "LIB_Device",
+    "kind": "class",
+    "name": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库 / 器件类"
+  },
+  "title": null
+}

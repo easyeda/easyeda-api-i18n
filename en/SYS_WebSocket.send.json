@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "SYS_WebSocket.send",
+    "kind": "method",
+    "name": "send",
+    "className": "SYS_WebSocket",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "向 WebSocket 服务器发送数据",
+    "remarks.text.0": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "params.id": "自定义的 WebSocket ID",
+    "params.data": "发送的数据",
+    "params.extensionUuid": "扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.id": null,
+  "params.data": null,
+  "params.extensionUuid": null
+}

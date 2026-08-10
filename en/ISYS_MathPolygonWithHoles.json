@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "ISYS_MathPolygonWithHoles",
+    "kind": "interface",
+    "name": "ISYS_MathPolygonWithHoles",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "带孔洞的多边形",
+    "remarks.text.0": "包含一个外环和零到多个孔洞（内环），保留完整的拓扑结构",
+    "properties.outer": "外环",
+    "properties.holes": "孔洞（内环）数组"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.outer": null,
+  "properties.holes": null
+}

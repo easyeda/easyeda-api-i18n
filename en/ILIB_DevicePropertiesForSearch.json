@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "ILIB_DevicePropertiesForSearch",
+    "kind": "interface",
+    "name": "ILIB_DevicePropertiesForSearch",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "可用于精确搜索的器件参数",
+    "properties.name": "器件名称",
+    "properties.value": "值",
+    "properties.symbolName": "关联符号名称",
+    "properties.footprintName": "关联封装名称",
+    "properties.supplierFootprint": "供应商封装名称",
+    "properties.supplierId": "供应商编号",
+    "properties.partNumber": "料号",
+    "properties.partCode": "元件编码"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.value": null,
+  "properties.symbolName": null,
+  "properties.footprintName": null,
+  "properties.supplierFootprint": null,
+  "properties.supplierId": null,
+  "properties.partNumber": null,
+  "properties.partCode": null
+}

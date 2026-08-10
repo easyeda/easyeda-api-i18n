@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.overwriteCurrentRuleConfiguration",
+    "kind": "method",
+    "name": "overwriteCurrentRuleConfiguration",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "覆写当前设计规则配置",
+    "remarks.text.0": "将会覆写 PCB 当前的设计规则配置，请注意数据丢失风险",
+    "params.ruleConfiguration": "设计规则配置",
+    "returns": "覆写是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.ruleConfiguration": null,
+  "returns": null
+}

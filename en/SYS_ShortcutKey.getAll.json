@@ -1,0 +1,45 @@
+{
+  "_meta": {
+    "id": "SYS_ShortcutKey.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "SYS_ShortcutKey",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取所有快捷键数据",
+    "remarks.text.0": "本接口将会获取本扩展的所有快捷键数据",
+    "remarks.text.1": "本接口无法获取系统快捷键数据",
+    "remarks.text.2": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "returns": "获取到的快捷键数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "returns": null
+}

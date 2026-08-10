@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.getCopperRegion",
+    "kind": "method",
+    "name": "getCopperRegion",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取铺铜区域覆铜填充图元",
+    "returns": "覆铜填充图元，如若不存在关联的覆铜填充图元则返回 `undefined`"
+  },
+  "title": null,
+  "returns": null
+}

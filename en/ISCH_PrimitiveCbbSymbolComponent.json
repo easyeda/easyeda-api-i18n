@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCbbSymbolComponent",
+    "kind": "class",
+    "name": "ISCH_PrimitiveCbbSymbolComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复用模块符号图元"
+  },
+  "title": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePin.getState_Rotation",
+    "kind": "method",
+    "name": "getState_Rotation",
+    "className": "ISCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：旋转角度",
+    "returns": "旋转角度"
+  },
+  "title": null,
+  "returns": null
+}

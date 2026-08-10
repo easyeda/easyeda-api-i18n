@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "LIB_LibrariesList.getProjectLibraryUuid",
+    "kind": "method",
+    "name": "getProjectLibraryUuid",
+    "className": "LIB_LibrariesList",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取工程库的 UUID",
+    "remarks.text.0": "在未打开工程的情况下调用将返回 `undefined`",
+    "returns": "工程库的 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

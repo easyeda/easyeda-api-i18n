@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured",
+    "kind": "class",
+    "name": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜填充图元"
+  },
+  "title": null
+}

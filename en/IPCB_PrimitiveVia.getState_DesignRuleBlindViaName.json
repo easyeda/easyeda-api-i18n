@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveVia.getState_DesignRuleBlindViaName",
+    "kind": "method",
+    "name": "getState_DesignRuleBlindViaName",
+    "className": "IPCB_PrimitiveVia",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：盲埋孔设计规则项名称",
+    "returns": "盲埋孔设计规则项名称"
+  },
+  "title": null,
+  "returns": null
+}

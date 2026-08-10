@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "ILIB_CbbSearchItem",
+    "kind": "interface",
+    "name": "ILIB_CbbSearchItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "搜索到的复用模块属性",
+    "properties.uuid": "复用模块 UUID",
+    "properties.libraryUuid": "所属库 UUID",
+    "properties.classification": "分类",
+    "properties.ordinal": "排序",
+    "properties.name": "复用模块名称",
+    "properties.description": "描述",
+    "properties.updateTimestamp": "更新时间戳",
+    "properties.ascription": "归属",
+    "properties.lastModifiedBy": "前次修改者"
+  },
+  "title": null,
+  "properties.uuid": null,
+  "properties.libraryUuid": null,
+  "properties.classification": null,
+  "properties.ordinal": null,
+  "properties.name": null,
+  "properties.description": null,
+  "properties.updateTimestamp": null,
+  "properties.ascription": null,
+  "properties.lastModifiedBy": null
+}

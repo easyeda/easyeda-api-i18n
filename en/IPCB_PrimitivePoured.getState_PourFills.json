@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured.getState_PourFills",
+    "kind": "method",
+    "name": "getState_PourFills",
+    "className": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：覆铜填充区域",
+    "returns": "覆铜填充区域"
+  },
+  "title": null,
+  "returns": null
+}

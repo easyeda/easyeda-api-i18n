@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "EPCB_LayerColorConfiguration",
+    "kind": "enum",
+    "name": "EPCB_LayerColorConfiguration",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图层颜色配置",
+    "members.JLCEDA": "嘉立创 EDA",
+    "members.EASYEDA": "EasyEDA",
+    "members.ALTIUM_DESIGNER": "Altium Designer",
+    "members.PADS": "PADS",
+    "members.KICAD": "KiCAD"
+  },
+  "title": null,
+  "members.JLCEDA": null,
+  "members.EASYEDA": null,
+  "members.ALTIUM_DESIGNER": null,
+  "members.PADS": null,
+  "members.KICAD": null
+}

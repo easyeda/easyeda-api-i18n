@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ESYS_BottomPanelTab",
+    "kind": "enum",
+    "name": "ESYS_BottomPanelTab",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "底部面板标签页",
+    "members.LIBRARY": "库",
+    "members.LOG": "日志",
+    "members.PCB_DRC": "PCB：DRC",
+    "members.SCHEMATIC_DRC": "原理图：DRC",
+    "members.FIND": "查找结果"
+  },
+  "title": null,
+  "members.LIBRARY": null,
+  "members.LOG": null,
+  "members.PCB_DRC": null,
+  "members.SCHEMATIC_DRC": null,
+  "members.FIND": null
+}

@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "GridItemProps",
+    "kind": "interface",
+    "name": "GridItemProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

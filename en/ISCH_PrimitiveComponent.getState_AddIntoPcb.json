@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveComponent.getState_AddIntoPcb",
+    "kind": "method",
+    "name": "getState_AddIntoPcb",
+    "className": "ISCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否转到 PCB",
+    "returns": "是否转到 PCB"
+  },
+  "title": null,
+  "returns": null
+}

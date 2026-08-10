@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveLineType",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveLineType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "线型",
+    "members.SOLID": "实线",
+    "members.DASHED": "短划线",
+    "members.DOTTED": "点线",
+    "members.DOT_DASHED": "点划线"
+  },
+  "title": null,
+  "members.SOLID": null,
+  "members.DASHED": null,
+  "members.DOTTED": null,
+  "members.DOT_DASHED": null
+}

@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "ISYS_HeaderMenuTopMenuItem",
+    "kind": "interface",
+    "name": "ISYS_HeaderMenuTopMenuItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "顶部一级菜单项",
+    "properties.id": "菜单项 ID，不可重复",
+    "properties.title": "菜单项标题",
+    "properties.menuItems": "子菜单项"
+  },
+  "title": null,
+  "properties.id": null,
+  "properties.title": null,
+  "properties.menuItems": null
+}

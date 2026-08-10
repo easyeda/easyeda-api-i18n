@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.getTabsBySplitScreenId",
+    "kind": "method",
+    "name": "getTabsBySplitScreenId",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取指定分屏 ID 下的所有标签页",
+    "remarks.text.0": "如果指定分屏下不存在直接标签页（即它属下还存在 {@link IDMT_EditorSplitScreenItem.children | children}），则返回空数组",
+    "params.splitScreenId": "分屏 ID",
+    "returns": "标签页列表"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.splitScreenId": null,
+  "returns": null
+}

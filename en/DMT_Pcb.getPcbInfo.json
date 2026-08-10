@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Pcb.getPcbInfo",
+    "kind": "method",
+    "name": "getPcbInfo",
+    "className": "DMT_Pcb",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取 PCB 的详细属性",
+    "params.pcbUuid": "PCB UUID",
+    "returns": "PCB 的详细属性，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "params.pcbUuid": null,
+  "returns": null
+}

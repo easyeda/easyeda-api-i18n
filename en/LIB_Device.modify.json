@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "id": "LIB_Device.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "修改器件",
+    "remarks.text.0": "如希望清除某些属性，则将其的值设置为 `null`",
+    "params.deviceUuid": "器件 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.deviceName": "器件名称",
+    "params.classification": "分类",
+    "params.association": "关联符号、封装、图像",
+    "params.description": "描述",
+    "params.property": "其它属性",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.deviceUuid": null,
+  "params.libraryUuid": null,
+  "params.deviceName": null,
+  "params.classification": null,
+  "params.association": null,
+  "params.description": null,
+  "params.property": null,
+  "returns": null
+}

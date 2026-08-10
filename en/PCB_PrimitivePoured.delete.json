@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePoured.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除覆铜填充",
+    "params.primitiveIds": "覆铜填充的图元 ID 或覆铜填充图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

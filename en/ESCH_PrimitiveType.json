@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveType",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图元类型",
+    "members.ARC": "圆弧",
+    "members.BUS": "总线",
+    "members.CIRCLE": "圆",
+    "members.COMPONENT": "器件",
+    "members.COMPONENT_PIN": "器件引脚",
+    "members.PIN": "引脚",
+    "members.POLYGON": "多边形",
+    "members.RECTANGLE": "矩形",
+    "members.TEXT": "文本",
+    "members.WIRE": "导线",
+    "members.OBJECT": "二进制内嵌对象",
+    "members.BEZIER": "三阶贝塞尔线条",
+    "members.ELLIPSE": "椭圆",
+    "members.ATTRIBUTE": "属性"
+  },
+  "title": null,
+  "members.ARC": null,
+  "members.BUS": null,
+  "members.CIRCLE": null,
+  "members.COMPONENT": null,
+  "members.COMPONENT_PIN": null,
+  "members.PIN": null,
+  "members.POLYGON": null,
+  "members.RECTANGLE": null,
+  "members.TEXT": null,
+  "members.WIRE": null,
+  "members.OBJECT": null,
+  "members.BEZIER": null,
+  "members.ELLIPSE": null,
+  "members.ATTRIBUTE": null
+}

@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ILIB_ExtendLibrarySearchResult",
+    "kind": "interface",
+    "name": "ILIB_ExtendLibrarySearchResult",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "外部库搜索结果",
+    "properties.count": "总条目数",
+    "properties.lists": "结果列表",
+    "properties.page": "当前页数",
+    "properties.pageSize": "单页条目数",
+    "properties.totalPage": "总页数"
+  },
+  "title": null,
+  "properties.count": null,
+  "properties.lists": null,
+  "properties.page": null,
+  "properties.pageSize": null,
+  "properties.totalPage": null
+}

@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "DMT_Pcb.modifyPcbName",
+    "kind": "method",
+    "name": "modifyPcbName",
+    "className": "DMT_Pcb",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "修改 PCB 名称",
+    "remarks.text.0": "如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联原理图名称",
+    "params.pcbUuid": "PCB UUID",
+    "params.pcbName": "PCB 名称",
+    "returns": "是否修改成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.pcbUuid": null,
+  "params.pcbName": null,
+  "returns": null
+}

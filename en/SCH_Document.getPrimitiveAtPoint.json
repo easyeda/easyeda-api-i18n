@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "id": "SCH_Document.getPrimitiveAtPoint",
+    "kind": "method",
+    "name": "getPrimitiveAtPoint",
+    "className": "SCH_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取坐标点的图元",
+    "remarks.text.0": "本操作和前端鼠标点击操作类似，将会获取指定坐标点上的图元",
+    "params.x": "坐标点 X",
+    "params.y": "坐标点 Y",
+    "returns": "坐标点的图元，如若坐标点无法找到图元，将返回 `undefined`"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.x": null,
+  "params.y": null,
+  "returns": null
+}

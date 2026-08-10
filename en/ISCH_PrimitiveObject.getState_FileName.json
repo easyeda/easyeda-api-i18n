@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject.getState_FileName",
+    "kind": "method",
+    "name": "getState_FileName",
+    "className": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：文件名称",
+    "returns": "文件名称"
+  },
+  "title": null,
+  "returns": null
+}

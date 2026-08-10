@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Document.getCalculatingRatlineStatus",
+    "kind": "method",
+    "name": "getCalculatingRatlineStatus",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取当前飞线计算功能状态",
+    "returns": "功能状态",
+    "deprecated": "since EDA v4.2"
+  },
+  "title": null,
+  "returns": null,
+  "deprecated": null
+}

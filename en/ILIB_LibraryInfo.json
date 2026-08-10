@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "ILIB_LibraryInfo",
+    "kind": "interface",
+    "name": "ILIB_LibraryInfo",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "库信息",
+    "remarks.text.0": "包含库的名称以及它的 UUID",
+    "properties.name": "库名称",
+    "properties.uuid": "库 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.name": null,
+  "properties.uuid": null
+}

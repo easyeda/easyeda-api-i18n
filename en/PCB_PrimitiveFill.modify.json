@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveFill.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "PCB_PrimitiveFill",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改填充",
+    "params.primitiveId": "图元 ID",
+    "params.property": "修改参数",
+    "returns": "填充图元对象，`undefined` 表示修改失败"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "params.property": null,
+  "returns": null
+}

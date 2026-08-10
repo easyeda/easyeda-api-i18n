@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_Tool.pcbComparison",
+    "kind": "method",
+    "name": "pcbComparison",
+    "className": "SYS_Tool",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "PCB 对比",
+    "params.pcb1": "PCB 1，可以为：①当前工程内的 PCB 的 UUID；②其它工程的工程 UUID 和 PCB UUID；③PCB 文件数据",
+    "params.pcb2": "PCB 2，可以为：①当前工程内的 PCB 的 UUID；②其它工程的工程 UUID 和 PCB UUID；③PCB 文件数据",
+    "params.options": "对比参数",
+    "returns": "PCB 对比响应：`success = true` 时 `data` 为对比结果；`success = false` 时 `error` 包含错误码与信息"
+  },
+  "title": null,
+  "params.pcb1": null,
+  "params.pcb2": null,
+  "params.options": null,
+  "returns": null
+}

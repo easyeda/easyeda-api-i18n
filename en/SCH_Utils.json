@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SCH_Utils",
+    "kind": "class",
+    "name": "SCH_Utils",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 工具类"
+  },
+  "title": null
+}

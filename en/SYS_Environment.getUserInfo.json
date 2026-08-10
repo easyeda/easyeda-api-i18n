@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_Environment.getUserInfo",
+    "kind": "method",
+    "name": "getUserInfo",
+    "className": "SYS_Environment",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取用户信息",
+    "returns": "用户信息"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveComponent.getAllPinsByPrimitiveId",
+    "kind": "method",
+    "name": "getAllPinsByPrimitiveId",
+    "className": "SCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取器件关联的所有引脚",
+    "params.primitiveId": "器件图元 ID",
+    "returns": "器件引脚图元数组"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "returns": null
+}

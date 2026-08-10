@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.zoom",
+    "kind": "method",
+    "name": "zoom",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "设置缩放比例",
+    "remarks.text.0": "在返回数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil",
+    "params.percent": "缩放百分比",
+    "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
+    "returns": "缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.percent": null,
+  "params.tabId": null,
+  "returns": null
+}

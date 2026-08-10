@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Panel.copyPanel",
+    "kind": "method",
+    "name": "copyPanel",
+    "className": "DMT_Panel",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复制面板",
+    "params.panelUuid": "源面板 UUID",
+    "returns": "新面板 UUID，如若为 `undefined` 则复制失败"
+  },
+  "title": null,
+  "params.panelUuid": null,
+  "returns": null
+}

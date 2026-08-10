@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.getExportDocumentFile",
+    "kind": "method",
+    "name": "getExportDocumentFile",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取导出文档文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "params.fileName": "文件名",
+    "params.fileType": "文件类型",
+    "params.typeSpecificParams": "类型特定参数",
+    "params.object": "对象",
+    "params.objectSpecificParams": "对象特定参数",
+    "returns": "导出文档文件数据（或压缩包）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileName": null,
+  "params.fileType": null,
+  "params.typeSpecificParams": null,
+  "params.object": null,
+  "params.objectSpecificParams": null,
+  "returns": null
+}

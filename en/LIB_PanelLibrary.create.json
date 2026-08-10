@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "LIB_PanelLibrary.create",
+    "kind": "method",
+    "name": "create",
+    "className": "LIB_PanelLibrary",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建面板库",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.panelLibraryName": "面板库名称",
+    "params.classification": "分类",
+    "params.description": "描述",
+    "returns": "面板库 UUID"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.panelLibraryName": null,
+  "params.classification": null,
+  "params.description": null,
+  "returns": null
+}

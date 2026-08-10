@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveLine.getEntireTrack.7611",
+    "kind": "method",
+    "name": "getEntireTrack",
+    "className": "IPCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取整段导线",
+    "params.includeVias": "是否包含导线两端的过孔",
+    "returns": "整段导线内的所有直线、圆弧线，以及两端连接的过孔（如果有）"
+  },
+  "title": null,
+  "params.includeVias": null,
+  "returns": null
+}

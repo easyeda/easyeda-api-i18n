@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponent.setState_X",
+    "kind": "method",
+    "name": "setState_X",
+    "className": "IPCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：坐标 X",
+    "params.x": "坐标 X",
+    "returns": "器件图元对象"
+  },
+  "title": null,
+  "params.x": null,
+  "returns": null
+}

@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "ILIB_SymbolPropertiesForSearch",
+    "kind": "interface",
+    "name": "ILIB_SymbolPropertiesForSearch",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "可用于精确搜索的符号参数",
+    "properties.name": "符号名称"
+  },
+  "title": null,
+  "properties.name": null
+}

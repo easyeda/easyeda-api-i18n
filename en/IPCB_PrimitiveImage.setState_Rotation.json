@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveImage.setState_Rotation",
+    "kind": "method",
+    "name": "setState_Rotation",
+    "className": "IPCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：旋转角度",
+    "params.rotation": "旋转角度",
+    "returns": "图像图元对象"
+  },
+  "title": null,
+  "params.rotation": null,
+  "returns": null
+}

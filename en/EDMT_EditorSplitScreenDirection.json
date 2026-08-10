@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "EDMT_EditorSplitScreenDirection",
+    "kind": "enum",
+    "name": "EDMT_EditorSplitScreenDirection",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "编辑器分屏方向",
+    "members.HORIZONTAL": "水平",
+    "members.VERTICAL": "垂直"
+  },
+  "title": null,
+  "members.HORIZONTAL": null,
+  "members.VERTICAL": null
+}

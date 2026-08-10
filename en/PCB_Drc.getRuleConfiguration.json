@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.getRuleConfiguration",
+    "kind": "method",
+    "name": "getRuleConfiguration",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取指定设计规则配置",
+    "params.configurationName": "配置名称",
+    "returns": "设计规则配置，`undefined` 为不存在该设计规则"
+  },
+  "title": null,
+  "params.configurationName": null,
+  "returns": null
+}

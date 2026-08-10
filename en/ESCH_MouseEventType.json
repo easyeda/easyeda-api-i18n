@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "ESCH_MouseEventType",
+    "kind": "enum",
+    "name": "ESCH_MouseEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "鼠标事件类型",
+    "members.SELECTED": "选中",
+    "members.CLEAR_SELECTED": "取消选中"
+  },
+  "title": null,
+  "members.SELECTED": null,
+  "members.CLEAR_SELECTED": null
+}

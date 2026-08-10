@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "DMT_Folder.getFolderInfo",
+    "kind": "method",
+    "name": "getFolderInfo",
+    "className": "DMT_Folder",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取文件夹详细属性",
+    "remarks.text.0": "当 {@link IDMT_FolderItem.parentFolderUuid | parentFolderUuid} 等于 {@link IDMT_FolderItem.teamUuid | teamUuid} 时，代表当前文件夹为指定团队下的一级文件夹",
+    "params.teamUuid": "团队 UUID",
+    "params.folderUuid": "文件夹 UUID",
+    "returns": "文件夹属性，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.teamUuid": null,
+  "params.folderUuid": null,
+  "returns": null
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "SYS_Message.removeFollowMouseTip",
+    "kind": "method",
+    "name": "removeFollowMouseTip",
+    "className": "SYS_Message",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "移除跟随鼠标的提示",
+    "remarks.text.0": "移除当前或指定的跟随鼠标的提示",
+    "params.tip": "提示内容，如若传入，则仅当当前提示为指定内容时才移除"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.tip": null
+}

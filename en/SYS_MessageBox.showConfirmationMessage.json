@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBox.showConfirmationMessage",
+    "kind": "method",
+    "name": "showConfirmationMessage",
+    "className": "SYS_MessageBox",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "显示确认框",
+    "remarks.text.0": "显示一个拥有确认和取消按钮的确认框",
+    "params.content": "消息文本，支持使用 `\\n` 换行",
+    "params.title": "确认框标题",
+    "params.mainButtonTitle": "主要按钮标题",
+    "params.buttonTitle": "主要按钮标题",
+    "params.callbackFn": "回调函数，如需调用扩展内的函数，请在函数名前加上扩展的唯一 ID，以西文句号 `.` 分隔",
+    "deprecated": "请使用 {@link SYS_Dialog.showConfirmationMessage} 替代"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.content": null,
+  "params.title": null,
+  "params.mainButtonTitle": null,
+  "params.buttonTitle": null,
+  "params.callbackFn": null,
+  "deprecated": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitivePolygon.getAllPrimitiveId",
+    "kind": "method",
+    "name": "getAllPrimitiveId",
+    "className": "SCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有多边形的图元 ID",
+    "returns": "多边形的图元 ID 数组"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveImage.getState_Y",
+    "kind": "method",
+    "name": "getState_Y",
+    "className": "IPCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：BBox 左上点坐标 Y",
+    "returns": "BBox 左上点坐标 Y"
+  },
+  "title": null,
+  "returns": null
+}

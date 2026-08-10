@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.overwriteNetRules",
+    "kind": "method",
+    "name": "overwriteNetRules",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "覆写网络规则",
+    "remarks.text.0": "将会覆写当前 PCB 的所有网络规则，请注意数据丢失风险",
+    "params.netRules": "网络规则",
+    "returns": "覆写是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.netRules": null,
+  "returns": null
+}

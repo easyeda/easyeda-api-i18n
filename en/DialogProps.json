@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "DialogProps",
+    "kind": "interface",
+    "name": "DialogProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "TableRow",
+    "kind": "interface",
+    "name": "TableRow",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "表格行数据",
+    "properties.bgColor": "自定义行背景颜色",
+    "properties.isError": "错误行标识",
+    "properties.noCheckbox": "不显示复选框",
+    "properties.fixed": "固定状态",
+    "properties.disabledRow": "禁止选中当前行",
+    "properties.disabledCheckbox": "禁用复选框",
+    "properties.propagationClickHandle": "允许事件传递"
+  },
+  "title": null,
+  "properties.bgColor": null,
+  "properties.isError": null,
+  "properties.noCheckbox": null,
+  "properties.fixed": null,
+  "properties.disabledRow": null,
+  "properties.disabledCheckbox": null,
+  "properties.propagationClickHandle": null
+}

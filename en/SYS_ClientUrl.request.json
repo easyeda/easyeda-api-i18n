@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "id": "SYS_ClientUrl.request",
+    "kind": "method",
+    "name": "request",
+    "className": "SYS_ClientUrl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "code",
+          "content": "更多信息，请查阅 {@link https:"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "发起即时请求",
+    "remarks.text.0": "请注意，需要在被请求的站点上允许跨源资源共享（CORS），否则接口将始终返回错误结果。",
+    "remarks.text.1": "developer.mozilla.org/docs/Web/HTTP/CORS | 跨源资源共享 (CORS) - MDN}。",
+    "remarks.text.2": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "params.url": "请求地址",
+    "params.method": "请求方法",
+    "params.data": "请求发送的数据，可以是直接数据或 {@link https://developer.mozilla.org/docs/Web/API/URLSearchParams | URLSearchParams} 对象，如果 method 为 `HEAD` 或 `GET`，本参数将被忽略",
+    "params.options": "请求参数",
+    "params.succeedCallFn": "请求成功后回调的函数",
+    "returns": "Fetch 的返回结果"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "params.url": null,
+  "params.method": null,
+  "params.data": null,
+  "params.options": null,
+  "params.succeedCallFn": null,
+  "returns": null
+}

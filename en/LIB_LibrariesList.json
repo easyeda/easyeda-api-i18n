@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "LIB_LibrariesList",
+    "kind": "class",
+    "name": "LIB_LibrariesList",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "综合库 / 库列表类",
+    "remarks.text.0": "此处所有接口都基于编辑器当前工作区环境，如需切换到其他工作区，请使用 {@link DMT_Workspace.toggleToWorkspace} 接口切换工作区"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

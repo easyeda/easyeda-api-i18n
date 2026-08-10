@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveArc.getState_EndX",
+    "kind": "method",
+    "name": "getState_EndX",
+    "className": "ISCH_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：终止点 X",
+    "returns": "终止点 X"
+  },
+  "title": null,
+  "returns": null
+}

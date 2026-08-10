@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveRectangle.getState_Color",
+    "kind": "method",
+    "name": "getState_Color",
+    "className": "ISCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：边框颜色",
+    "returns": "边框颜色"
+  },
+  "title": null,
+  "returns": null
+}

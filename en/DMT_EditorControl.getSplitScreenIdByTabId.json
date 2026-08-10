@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.getSplitScreenIdByTabId",
+    "kind": "method",
+    "name": "getSplitScreenIdByTabId",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "使用标签页 ID 获取分屏 ID",
+    "params.tabId": "标签页 ID",
+    "returns": "分屏 ID"
+  },
+  "title": null,
+  "params.tabId": null,
+  "returns": null
+}

@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "DMT_Folder.deleteFolder",
+    "kind": "method",
+    "name": "deleteFolder",
+    "className": "DMT_Folder",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除文件夹",
+    "params.teamUuid": "团队 UUID",
+    "params.folderUuid": "文件夹 UUID",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.teamUuid": null,
+  "params.folderUuid": null,
+  "returns": null
+}

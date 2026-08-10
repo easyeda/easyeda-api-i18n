@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_I18n.getAllSupportedLanguages",
+    "kind": "method",
+    "name": "getAllSupportedLanguages",
+    "className": "SYS_I18n",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "查询所有支持的语言",
+    "returns": "所有支持的语言列表"
+  },
+  "title": null,
+  "returns": null
+}

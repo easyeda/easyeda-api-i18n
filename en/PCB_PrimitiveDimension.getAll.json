@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveDimension.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "PCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有尺寸标注",
+    "params.layer": "层",
+    "params.primitiveLock": "是否锁定",
+    "returns": "尺寸标注图元对象数组"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SYS_I18n",
+    "kind": "class",
+    "name": "SYS_I18n",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "系统 / 多语言类",
+    "remarks.text.0": "使用多语言系统展示多语言文本"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

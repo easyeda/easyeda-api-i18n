@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveObject.toSync",
+    "kind": "method",
+    "name": "toSync",
+    "className": "IPCB_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将图元转换为同步图元",
+    "returns": "二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "returns": null
+}

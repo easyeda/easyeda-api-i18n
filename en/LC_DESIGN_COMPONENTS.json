@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "LC_DESIGN_COMPONENTS",
+    "kind": "type",
+    "name": "LC_DESIGN_COMPONENTS",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

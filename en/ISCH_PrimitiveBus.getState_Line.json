@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveBus.getState_Line",
+    "kind": "method",
+    "name": "getState_Line",
+    "className": "ISCH_PrimitiveBus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：多段线坐标组",
+    "returns": "多段线坐标组"
+  },
+  "title": null,
+  "returns": null
+}

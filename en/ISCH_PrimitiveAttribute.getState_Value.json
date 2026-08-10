@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveAttribute.getState_Value",
+    "kind": "method",
+    "name": "getState_Value",
+    "className": "ISCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：值",
+    "returns": "值"
+  },
+  "title": null,
+  "returns": null
+}

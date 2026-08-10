@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitivePourFillMethod",
+    "kind": "enum",
+    "name": "EPCB_PrimitivePourFillMethod",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜填充方法",
+    "members.GRID45": "45 度网格",
+    "members.GRID": "90 度网格",
+    "members.SOLID": "实心填充"
+  },
+  "title": null,
+  "members.GRID45": null,
+  "members.GRID": null,
+  "members.SOLID": null
+}

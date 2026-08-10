@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TPCB_LayersOfCustom",
+    "kind": "type",
+    "name": "TPCB_LayersOfCustom",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自定义层"
+  },
+  "title": null
+}

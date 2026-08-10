@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "EPCB_AutoRoutingCornerStyle",
+    "kind": "enum",
+    "name": "EPCB_AutoRoutingCornerStyle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自动布线拐角风格",
+    "members.DEGREE_45": "45 度",
+    "members.DEGREE_90": "90 度"
+  },
+  "title": null,
+  "members.DEGREE_45": null,
+  "members.DEGREE_90": null
+}

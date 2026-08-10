@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveDimensionType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveDimensionType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "尺寸标注类型",
+    "members.RADIUS": "半径",
+    "members.LENGTH": "长度",
+    "members.ANGLE": "角度"
+  },
+  "title": null,
+  "members.RADIUS": null,
+  "members.LENGTH": null,
+  "members.ANGLE": null
+}

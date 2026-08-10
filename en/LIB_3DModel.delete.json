@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_3DModel.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "LIB_3DModel",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除 3D 模型",
+    "params.modelUuid": "3D 模型 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "操作是��成功"
+  },
+  "title": null,
+  "params.modelUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

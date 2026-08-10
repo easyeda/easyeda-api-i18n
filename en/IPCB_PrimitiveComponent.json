@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveComponent",
+    "kind": "class",
+    "name": "IPCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "器件图元"
+  },
+  "title": null
+}

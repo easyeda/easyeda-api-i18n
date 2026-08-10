@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitivePolygon",
+    "kind": "class",
+    "name": "SCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 多边形（折线）图元类"
+  },
+  "title": null
+}

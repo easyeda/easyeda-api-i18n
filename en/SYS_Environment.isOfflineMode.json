@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_Environment.isOfflineMode",
+    "kind": "method",
+    "name": "isOfflineMode",
+    "className": "SYS_Environment",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "是否为全离线模式",
+    "returns": "是否为全离线模式"
+  },
+  "title": null,
+  "returns": null
+}

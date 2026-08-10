@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getPickAndPlaceFile",
+    "kind": "method",
+    "name": "getPickAndPlaceFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0"
+        },
+        {
+          "type": "code",
+          "content": "const pnpFile = await eda.pcb_ManufactureData.getPickAndPlaceFile(\n'PickAndPlace',\n'xlsx',\nESYS_Unit.MILLIMETER\n);\nif (pnpFile) {\nawait eda.sys_FileSystem.saveFile(pnpFile);\n}\n\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取坐标文件（PickAndPlace）",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "导出毫米单位的 Excel 格式坐标文件",
+    "params.fileName": "文件名",
+    "params.fileType": "文件类型",
+    "params.unit": "单位",
+    "returns": "坐标文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "example.text.0": null,
+  "params.fileName": null,
+  "params.fileType": null,
+  "params.unit": null,
+  "returns": null
+}

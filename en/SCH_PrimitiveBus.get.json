@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveBus.get",
+    "kind": "method",
+    "name": "get",
+    "className": "SCH_PrimitiveBus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取总线",
+    "params.primitiveIds": "总线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "总线图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

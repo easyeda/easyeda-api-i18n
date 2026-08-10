@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ISCH_WireInfo",
+    "kind": "interface",
+    "name": "ISCH_WireInfo",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "导线属性",
+    "properties.name": "导线名称",
+    "properties.id": "ID",
+    "properties.globalNetName": "全局网络名",
+    "properties.pageName": "原理图图页名称",
+    "properties.pageUuid": "原理图图页 UUID"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.id": null,
+  "properties.globalNetName": null,
+  "properties.pageName": null,
+  "properties.pageUuid": null
+}

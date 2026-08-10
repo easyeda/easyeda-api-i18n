@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_MathPolygon.createComplexPolygon",
+    "kind": "method",
+    "name": "createComplexPolygon",
+    "className": "PCB_MathPolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建复杂多边形",
+    "params.complexPolygon": "复杂多边形数据",
+    "returns": "复杂多边形对象，`undefined` 表示数据不合法"
+  },
+  "title": null,
+  "params.complexPolygon": null,
+  "returns": null
+}

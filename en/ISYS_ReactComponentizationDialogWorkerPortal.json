@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "ISYS_ReactComponentizationDialogWorkerPortal",
+    "kind": "interface",
+    "name": "ISYS_ReactComponentizationDialogWorkerPortal",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "WorkerPortal 类接口 用于管理组件的生命周期和事件处理",
+    "remarks.text.0": "WorkerPortal 负责在虚拟环境中创建、更新和销毁组件，\n并通过消息机制与 EditorDesignPortal 通信。",
+    "properties.Provider": "Provider 组件 用于提供 PortalContext 给子组件"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.Provider": null
+}

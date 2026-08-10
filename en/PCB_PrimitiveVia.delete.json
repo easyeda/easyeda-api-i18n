@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveVia.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitiveVia",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除过孔",
+    "params.primitiveIds": "过孔的图元 ID 或过孔图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

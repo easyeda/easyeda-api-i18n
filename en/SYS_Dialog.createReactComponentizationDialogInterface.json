@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Dialog.createReactComponentizationDialogInterface",
+    "kind": "method",
+    "name": "createReactComponentizationDialogInterface",
+    "className": "SYS_Dialog",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建 React 组件化弹出窗口接口",
+    "params.React": "扩展的 React 实例",
+    "params.Reconciler": "扩展的 react-reconciler 实例",
+    "returns": "包含 Components、LC_DESIGN_COMPONENTS_NAMES、WorkerPortal 类和 VirtualRender 类的对象"
+  },
+  "title": null,
+  "params.React": null,
+  "params.Reconciler": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveObject.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "SCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除二进制内嵌对象",
+    "params.primitiveIds": "二进制内嵌对象的图元 ID 或二进制内嵌对象图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

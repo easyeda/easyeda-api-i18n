@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "PCB_Document.getCanvasUpdateCalculationStatus",
+    "kind": "method",
+    "name": "getCanvasUpdateCalculationStatus",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "查询当前画布更新计算状态",
+    "remarks.text.0": "画布更新计算包括画布渲染更新、属性面板更新等",
+    "returns": "画布更新计算功能状态"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

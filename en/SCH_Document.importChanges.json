@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SCH_Document.importChanges",
+    "kind": "method",
+    "name": "importChanges",
+    "className": "SCH_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "从 PCB 导入变更",
+    "returns": "导入操作是否成功，导入失败或游离原理图返回 `false`"
+  },
+  "title": null,
+  "returns": null
+}

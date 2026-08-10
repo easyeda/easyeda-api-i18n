@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Math.contains",
+    "kind": "method",
+    "name": "contains",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "判断 polygon1 是否完全包含 polygon2",
+    "params.polygon1": "外部多边形",
+    "params.polygon2": "内部多边形",
+    "returns": "polygon1 是否完全包含 polygon2"
+  },
+  "title": null,
+  "params.polygon1": null,
+  "params.polygon2": null,
+  "returns": null
+}

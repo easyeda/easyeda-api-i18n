@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "TPCB_LayersOfFill",
+    "kind": "type",
+    "name": "TPCB_LayersOfFill",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "填充所属层",
+    "remarks.text.0": "填充所属层为 {@link EPCB_LayerId.MULTI} 时代表挖槽区域"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

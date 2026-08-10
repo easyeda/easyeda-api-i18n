@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_Window.urlPushState",
+    "kind": "method",
+    "name": "urlPushState",
+    "className": "SYS_Window",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "追加新的 URL 历史记录栈信息",
+    "params.url": "URL"
+  },
+  "title": null,
+  "params.url": null
+}

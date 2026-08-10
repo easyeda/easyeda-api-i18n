@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "ISYS_ReactComponentizationDialogInterface",
+    "kind": "interface",
+    "name": "ISYS_ReactComponentizationDialogInterface",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```typescript\nconst { Components, WorkerPortal, VirtualRender } = await eda.sys_Dialog.createReactComponentizationDialogInterface(\n{\ncreateContext: React.createContext,\nuseContext: React.useContext,\nuseRef: React.useRef,\nuseEffect: React.useEffect,\ncreateElement: React.createElement,\n},\n{\ndefault: Reconciler,\nconstants: {\nContinuousEventPriority,\nDiscreteEventPriority,\nDefaultEventPriority,\nConcurrentRoot,\n},\n},\n);\n\nconst portal = new WorkerPortal();\nconst root = new VirtualRender();\n\nfunction MyDialog() {\nreturn (\n<Modal defaultTop={100} defaultLeft={100} defaultWidth={800} defaultHeight={600}>\n<Dialog title=\"My Dialog\">\n<Input placeholder=\"Enter text\" />\n</Dialog>\n</Modal>\n);\n}\n\nroot.render(\n<portal.Provider>\n<MyDialog />\n</portal.Provider>,\n);\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "React 组件化弹出窗口接口",
+    "remarks.text.0": "此接口提供了创建 React 组件化弹出窗口所需的所有功能。\n通过此接口，用户可以使用 lc-editor-design 提供的预制组件创建自定义弹窗。",
+    "properties.Components": "预制组件",
+    "properties.LC_DESIGN_COMPONENTS_NAMES": "组件名称常量"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.Components": null,
+  "properties.LC_DESIGN_COMPONENTS_NAMES": null
+}

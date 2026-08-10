@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "IDMT_ProjectItem",
+    "kind": "interface",
+    "name": "IDMT_ProjectItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "工程属性",
+    "properties.name": "工程链接名称",
+    "properties.description": "描述",
+    "properties.data": "工程内文档数据",
+    "properties.collaborationMode": "工程协作模式"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.description": null,
+  "properties.data": null,
+  "properties.collaborationMode": null
+}

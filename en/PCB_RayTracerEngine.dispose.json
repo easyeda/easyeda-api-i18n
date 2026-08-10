@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.dispose",
+    "kind": "method",
+    "name": "dispose",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "停止光线追踪引擎"
+  },
+  "title": null
+}

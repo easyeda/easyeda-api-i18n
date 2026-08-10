@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.publish",
+    "kind": "method",
+    "name": "publish",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "私有消息总线：发布消��",
+    "remarks.text.0": "将消息广播给每一个 Subscriber",
+    "params.topic": "主题",
+    "params.message": "消息"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.topic": null,
+  "params.message": null
+}

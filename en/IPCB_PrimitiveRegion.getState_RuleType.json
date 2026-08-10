@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveRegion.getState_RuleType",
+    "kind": "method",
+    "name": "getState_RuleType",
+    "className": "IPCB_PrimitiveRegion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：区域规则类型",
+    "returns": "区域规则类型"
+  },
+  "title": null,
+  "returns": null
+}

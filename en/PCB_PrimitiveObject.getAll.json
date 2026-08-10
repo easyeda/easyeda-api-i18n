@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveObject.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "PCB_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有二进制内嵌对象",
+    "params.layer": "层",
+    "params.primitiveLock": "是否锁定",
+    "returns": "二进制内嵌对象图元对象数组"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

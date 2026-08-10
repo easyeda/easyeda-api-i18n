@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Net.getAllNetName",
+    "kind": "method",
+    "name": "getAllNetName",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有网络的网络名称",
+    "returns": "网络名称数组",
+    "deprecated": "请使用 {@link PCB_Net.getAllNetsName | getAllNetsName} 替代"
+  },
+  "title": null,
+  "returns": null,
+  "deprecated": null
+}

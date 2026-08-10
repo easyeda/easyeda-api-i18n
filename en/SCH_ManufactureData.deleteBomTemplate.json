@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.deleteBomTemplate",
+    "kind": "method",
+    "name": "deleteBomTemplate",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除 BOM 模板",
+    "params.template": "BOM 模板名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.template": null,
+  "returns": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured.convertToFill",
+    "kind": "method",
+    "name": "convertToFill",
+    "className": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "转换到：填充图元",
+    "returns": "填充图元对象，无法转换或 ID 错误将返回 `undefined`"
+  },
+  "title": null,
+  "returns": null
+}

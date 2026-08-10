@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "IPCB_AutoLayoutResult",
+    "kind": "interface",
+    "name": "IPCB_AutoLayoutResult",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自动布局结果",
+    "properties.success": "自动布局是否成功启动",
+    "properties.totalComponentsCount": "参与自动布局的器件总数",
+    "properties.successComponentsCount": "成功完成布局的器件数量",
+    "properties.failedComponents": "未能完成布局的器件图元 ID 列表",
+    "properties.duration": "自动布局耗时（毫秒）"
+  },
+  "title": null,
+  "properties.success": null,
+  "properties.totalComponentsCount": null,
+  "properties.successComponentsCount": null,
+  "properties.failedComponents": null,
+  "properties.duration": null
+}

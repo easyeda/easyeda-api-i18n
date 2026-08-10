@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ISYS_FileSystemFileList",
+    "kind": "interface",
+    "name": "ISYS_FileSystemFileList",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "文件系统文件路径",
+    "properties.fileName": "文件名（前后均无斜杠）",
+    "properties.isDirectory": "是否为目录",
+    "properties.subFiles": "目录子文件",
+    "properties.relativePath": "相对路径，不包含前面的传入路径和文件名（当没有传入路径时，不存在相对路径），且前后均无斜杠",
+    "properties.fullPath": "完整路径，包含文件名的绝对路径"
+  },
+  "title": null,
+  "properties.fileName": null,
+  "properties.isDirectory": null,
+  "properties.subFiles": null,
+  "properties.relativePath": null,
+  "properties.fullPath": null
+}

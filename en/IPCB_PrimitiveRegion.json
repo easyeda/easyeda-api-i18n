@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveRegion",
+    "kind": "class",
+    "name": "IPCB_PrimitiveRegion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "区域图元"
+  },
+  "title": null
+}

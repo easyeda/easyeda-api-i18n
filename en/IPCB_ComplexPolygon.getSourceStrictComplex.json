@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "IPCB_ComplexPolygon.getSourceStrictComplex",
+    "kind": "method",
+    "name": "getSourceStrictComplex",
+    "className": "IPCB_ComplexPolygon",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取复杂多边形数据",
+    "remarks.text.0": "强制返回复杂多边形格式数据，即使它仅包含单一的单多边形",
+    "returns": "复杂多边形数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

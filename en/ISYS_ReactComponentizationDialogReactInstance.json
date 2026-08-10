@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "ISYS_ReactComponentizationDialogReactInstance",
+    "kind": "interface",
+    "name": "ISYS_ReactComponentizationDialogReactInstance",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```typescript\nconst ReactInstance = {\ncreateContext: React.createContext,\nuseContext: React.useContext,\nuseRef: React.useRef,\nuseEffect: React.useEffect,\ncreateElement: React.createElement,\n};\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "React 实例接口 用于接收扩展的 React 实例",
+    "remarks.text.0": "此接口定义了从扩展传递的 React 实例的方法。\n由于扩展和 pro-api 使用不同的 React 实例，需要通过此接口传递 React 方法。"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

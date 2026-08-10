@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePin.getState_PinName",
+    "kind": "method",
+    "name": "getState_PinName",
+    "className": "ISCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：引脚名称",
+    "returns": "引脚名称"
+  },
+  "title": null,
+  "returns": null
+}

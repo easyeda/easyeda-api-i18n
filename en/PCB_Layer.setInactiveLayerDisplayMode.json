@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.setInactiveLayerDisplayMode",
+    "kind": "method",
+    "name": "setInactiveLayerDisplayMode",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置非激活层展示模式",
+    "params.displayMode": "展示模式",
+    "returns": "是否设置成功"
+  },
+  "title": null,
+  "params.displayMode": null,
+  "returns": null
+}

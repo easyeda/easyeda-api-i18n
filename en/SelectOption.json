@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SelectOption",
+    "kind": "interface",
+    "name": "SelectOption",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "下拉框选项"
+  },
+  "title": null
+}

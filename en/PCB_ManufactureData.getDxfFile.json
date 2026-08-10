@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getDxfFile",
+    "kind": "method",
+    "name": "getDxfFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取 DXF 文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "params.fileName": "文件名",
+    "params.layers": "导出层",
+    "params.objects": "导出对象",
+    "returns": "DXF 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileName": null,
+  "params.layers": null,
+  "params.objects": null,
+  "returns": null
+}

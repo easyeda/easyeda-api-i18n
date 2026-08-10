@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePin.setState_OtherProperty",
+    "kind": "method",
+    "name": "setState_OtherProperty",
+    "className": "ISCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：其它参数",
+    "params.otherProperty": "其它参数",
+    "returns": "引脚图元对象"
+  },
+  "title": null,
+  "params.otherProperty": null,
+  "returns": null
+}

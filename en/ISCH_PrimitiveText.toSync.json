@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveText.toSync",
+    "kind": "method",
+    "name": "toSync",
+    "className": "ISCH_PrimitiveText",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将图元转换为同步图元",
+    "returns": "文本图元对象"
+  },
+  "title": null,
+  "returns": null
+}

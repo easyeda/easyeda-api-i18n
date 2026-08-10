@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveArc.getState_InteractiveMode",
+    "kind": "method",
+    "name": "getState_InteractiveMode",
+    "className": "IPCB_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：交互模式",
+    "returns": "交互模式"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveLine.getState_StartY",
+    "kind": "method",
+    "name": "getState_StartY",
+    "className": "IPCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：起始位置 Y",
+    "returns": "起始位置 Y"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "DelRowInfo",
+    "kind": "interface",
+    "name": "DelRowInfo",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除行信息",
+    "properties.indexValue": "索引值",
+    "properties.refreshCount": "刷新次数"
+  },
+  "title": null,
+  "properties.indexValue": null,
+  "properties.refreshCount": null
+}

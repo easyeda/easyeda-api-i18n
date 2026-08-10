@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "id": "SYS_WebSocket.register",
+    "kind": "method",
+    "name": "register",
+    "className": "SYS_WebSocket",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "注册 WebSocket 连接",
+    "remarks.text.0": "可以用来执行前检测 WebSocket 连接是否正常，但需要注意 **不要尝试相同 ID 不同参数的连接**，这会造成混乱：\n如果存在指定 ID 且处于活跃状态中的 WebSocket 连接，那么其余参数的变更将不会被应用",
+    "remarks.text.1": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "params.id": "自定义 WebSocket ID",
+    "params.serviceUri": "WebSocket 服务地址",
+    "params.receiveMessageCallFn": "接收到消息时的回调函数",
+    "params.connectedCallFn": "连接建立时的回调函数",
+    "params.protocols": "子协议"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.id": null,
+  "params.serviceUri": null,
+  "params.receiveMessageCallFn": null,
+  "params.connectedCallFn": null,
+  "params.protocols": null
+}

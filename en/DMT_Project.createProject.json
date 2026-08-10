@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "DMT_Project.createProject",
+    "kind": "method",
+    "name": "createProject",
+    "className": "DMT_Project",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建工程",
+    "params.projectFriendlyName": "工程友好名称",
+    "params.projectName": "工程名称，不可重复，仅支持字母 `a-zA-Z`、数字 `0-9`、中划线 `-`，如若不指定，则根据工程友好名称自动生成",
+    "params.teamUuid": "团队 UUID，如若不指定，则默认为个人；在不存在个人工程的环境下必须指定团队 UUID",
+    "params.folderUuid": "文件夹 UUID，如若不指定，则为根文件夹",
+    "params.description": "工程描述",
+    "params.collaborationMode": "工程协作模式，如若团队权限无需工程设置协作模式，则该参数将被忽略",
+    "returns": "工程 UUID，如若为 `undefined` 则创建失败"
+  },
+  "title": null,
+  "params.projectFriendlyName": null,
+  "params.projectName": null,
+  "params.teamUuid": null,
+  "params.folderUuid": null,
+  "params.description": null,
+  "params.collaborationMode": null,
+  "returns": null
+}

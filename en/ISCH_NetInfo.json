@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "ISCH_NetInfo",
+    "kind": "interface",
+    "name": "ISCH_NetInfo",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "网络属性",
+    "properties.net": "网络名称",
+    "properties.wires": "导线"
+  },
+  "title": null,
+  "properties.net": null,
+  "properties.wires": null
+}

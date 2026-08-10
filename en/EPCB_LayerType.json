@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "EPCB_LayerType",
+    "kind": "enum",
+    "name": "EPCB_LayerType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图层类型",
+    "members.SIGNAL": "信号层",
+    "members.INTERNAL_ELECTRICAL": "内电层",
+    "members.SILKSCREEN": "丝印层",
+    "members.SOLDER_MASK": "阻焊层",
+    "members.PASTE_MASK": "锡膏（助焊）层",
+    "members.ASSEMBLY": "装配层",
+    "members.OTHER": "其它",
+    "members.CUSTOM": "自定义层"
+  },
+  "title": null,
+  "members.SIGNAL": null,
+  "members.INTERNAL_ELECTRICAL": null,
+  "members.SILKSCREEN": null,
+  "members.SOLDER_MASK": null,
+  "members.PASTE_MASK": null,
+  "members.ASSEMBLY": null,
+  "members.OTHER": null,
+  "members.CUSTOM": null
+}

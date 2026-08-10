@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Net.unselectNet",
+    "kind": "method",
+    "name": "unselectNet",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "取消选中网络",
+    "params.net": "网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.net": null,
+  "returns": null
+}

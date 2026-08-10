@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveString.constructor",
+    "kind": "method",
+    "name": "constructor",
+    "className": "IPCB_PrimitiveString",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

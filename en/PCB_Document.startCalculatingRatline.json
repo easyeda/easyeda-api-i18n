@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.startCalculatingRatline",
+    "kind": "method",
+    "name": "startCalculatingRatline",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "启动飞线计算功能",
+    "remarks.text.0": "在启动时将会触发一次飞线计算",
+    "returns": "操作是否成功",
+    "deprecated": "since EDA v4.2"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null,
+  "deprecated": null
+}

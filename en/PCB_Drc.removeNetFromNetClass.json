@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.removeNetFromNetClass",
+    "kind": "method",
+    "name": "removeNetFromNetClass",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "从网络类中移除网络",
+    "params.netClassName": "网络类名称",
+    "params.net": "网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.netClassName": null,
+  "params.net": null,
+  "returns": null
+}

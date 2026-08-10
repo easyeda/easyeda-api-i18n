@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveRectangle",
+    "kind": "class",
+    "name": "SCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 矩形图元类"
+  },
+  "title": null
+}

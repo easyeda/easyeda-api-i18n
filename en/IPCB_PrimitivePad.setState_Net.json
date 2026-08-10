@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.setState_Net",
+    "kind": "method",
+    "name": "setState_Net",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "设置属性状态：网络",
+    "remarks.text.0": "本接口仅在 PCB 编辑器可用，空字符串与 `undefined` 均被视为空网络",
+    "params.net": "网络名称",
+    "returns": "焊盘图元对象"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.net": null,
+  "returns": null
+}

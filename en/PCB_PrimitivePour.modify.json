@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePour.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "PCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改覆铜边框",
+    "params.primitiveId": "图元 ID",
+    "params.property": "修改参数",
+    "returns": "覆铜边框图元对象，`undefined` 表示修改失败"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "params.property": null,
+  "returns": null
+}

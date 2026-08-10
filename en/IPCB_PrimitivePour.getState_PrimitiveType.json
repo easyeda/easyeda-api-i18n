@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.getState_PrimitiveType",
+    "kind": "method",
+    "name": "getState_PrimitiveType",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：图元类型",
+    "returns": "图元类型"
+  },
+  "title": null,
+  "returns": null
+}

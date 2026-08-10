@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "DMT_Schematic.modifySchematicPageName",
+    "kind": "method",
+    "name": "modifySchematicPageName",
+    "className": "DMT_Schematic",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改原理图图页名称",
+    "params.schematicPageUuid": "原理图图页 UUID",
+    "params.schematicPageName": "原理图图页名称",
+    "returns": "是否修改成功"
+  },
+  "title": null,
+  "params.schematicPageUuid": null,
+  "params.schematicPageName": null,
+  "returns": null
+}

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ILIB_ExtendLibrary3DModelFunctions",
+    "kind": "interface",
+    "name": "ILIB_ExtendLibrary3DModelFunctions",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "外部库 3D 模型方法"
+  },
+  "title": null
+}

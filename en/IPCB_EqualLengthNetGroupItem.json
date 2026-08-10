@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "IPCB_EqualLengthNetGroupItem",
+    "kind": "interface",
+    "name": "IPCB_EqualLengthNetGroupItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "等长网络组属性",
+    "properties.name": "等长网络组名称",
+    "properties.nets": "网络名称数组",
+    "properties.color": "等长网络组颜色"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.nets": null,
+  "properties.color": null
+}

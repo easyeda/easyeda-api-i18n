@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveComponent.getState_Mirror",
+    "kind": "method",
+    "name": "getState_Mirror",
+    "className": "ISCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否镜像",
+    "returns": "是否镜像"
+  },
+  "title": null,
+  "returns": null
+}

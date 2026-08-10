@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "IDMT_BriefProjectItem",
+    "kind": "interface",
+    "name": "IDMT_BriefProjectItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "简略工程属性",
+    "properties.itemType": "项目类型",
+    "properties.uuid": "工程 UUID",
+    "properties.friendlyName": "工程友好名称",
+    "properties.teamUuid": "所属团队 UUID",
+    "properties.folderUuid": "所属文件夹 UUID"
+  },
+  "title": null,
+  "properties.itemType": null,
+  "properties.uuid": null,
+  "properties.friendlyName": null,
+  "properties.teamUuid": null,
+  "properties.folderUuid": null
+}

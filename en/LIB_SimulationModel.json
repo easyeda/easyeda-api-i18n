@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "LIB_SimulationModel",
+    "kind": "class",
+    "name": "LIB_SimulationModel",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库 / 仿真模型类"
+  },
+  "title": null
+}

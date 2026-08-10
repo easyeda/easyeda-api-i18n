@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveComponent.getAllPrimitiveId",
+    "kind": "method",
+    "name": "getAllPrimitiveId",
+    "className": "PCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有器件的图元 ID",
+    "params.layer": "层",
+    "params.primitiveLock": "是否锁定",
+    "returns": "器件的图元 ID 数组"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

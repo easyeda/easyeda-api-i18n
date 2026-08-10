@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.setLayerVisible",
+    "kind": "method",
+    "name": "setLayerVisible",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将层设置为可见",
+    "params.layer": "层，如若不指定任何层则默认为所有层",
+    "params.setOtherLayerInvisible": "是否将其它层设置为不可见",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.setOtherLayerInvisible": null,
+  "returns": null
+}

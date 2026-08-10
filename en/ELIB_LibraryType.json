@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "ELIB_LibraryType",
+    "kind": "enum",
+    "name": "ELIB_LibraryType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库库类型",
+    "members.DEVICE": "器件",
+    "members.SYMBOL": "符号",
+    "members.FOOTPRINT": "封装",
+    "members.CBB": "复用模块",
+    "members.MODEL": "3D 模型",
+    "members.PANEL_LIBRARY": "面板库",
+    "members.SIMULATION_MODEL_NGSPICE": "仿真模型：Ngspice",
+    "members.SIMULATION_MODEL_SIMULIDE": "仿真模型：SimulIDE"
+  },
+  "title": null,
+  "members.DEVICE": null,
+  "members.SYMBOL": null,
+  "members.FOOTPRINT": null,
+  "members.CBB": null,
+  "members.MODEL": null,
+  "members.PANEL_LIBRARY": null,
+  "members.SIMULATION_MODEL_NGSPICE": null,
+  "members.SIMULATION_MODEL_SIMULIDE": null
+}

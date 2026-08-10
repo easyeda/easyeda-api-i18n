@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour",
+    "kind": "class",
+    "name": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜边框图元"
+  },
+  "title": null
+}

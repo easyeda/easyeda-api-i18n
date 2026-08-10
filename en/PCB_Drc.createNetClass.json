@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.createNetClass",
+    "kind": "method",
+    "name": "createNetClass",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建网络类",
+    "params.netClassName": "网络类名称",
+    "params.nets": "网络名称数组",
+    "params.color": "网络类颜色",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.netClassName": null,
+  "params.nets": null,
+  "params.color": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_FormatConversion.convertDisaLibrariesToEasyEDAMultiFiles",
+    "kind": "method",
+    "name": "convertDisaLibrariesToEasyEDAMultiFiles",
+    "className": "SYS_FormatConversion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "转换 T/DISA 4001 库到多个嘉立创库文件（每个器件一个文件）",
+    "params.file": "T/DISA 4001 库文件",
+    "returns": "多个嘉立创库文件"
+  },
+  "title": null,
+  "params.file": null,
+  "returns": null
+}

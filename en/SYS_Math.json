@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SYS_Math",
+    "kind": "class",
+    "name": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "系统 / 数学计算类",
+    "remarks.text.0": "提供多边形几何计算方法，支持离散点坐标和 {@link TPCB_PolygonSourceArray} 多边形数据"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

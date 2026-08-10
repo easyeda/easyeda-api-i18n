@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject.reset",
+    "kind": "method",
+    "name": "reset",
+    "className": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将异步图元重置为当前画布状态",
+    "returns": "二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "returns": null
+}

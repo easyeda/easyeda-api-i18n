@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveString.create",
+    "kind": "method",
+    "name": "create",
+    "className": "PCB_PrimitiveString",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建文本",
+    "params.layer": "层",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "params.text": "文本内容",
+    "params.fontFamily": "字体，需要预先导入嘉立创 EDA",
+    "params.fontSize": "字号",
+    "params.lineWidth": "线宽",
+    "params.alignMode": "对齐模式",
+    "params.rotation": "旋转角度",
+    "params.reverse": "是否反相",
+    "params.expansion": "反相扩展",
+    "params.mirror": "是否镜像",
+    "params.primitiveLock": "是否锁定",
+    "returns": "文本图元对象"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.x": null,
+  "params.y": null,
+  "params.text": null,
+  "params.fontFamily": null,
+  "params.fontSize": null,
+  "params.lineWidth": null,
+  "params.alignMode": null,
+  "params.rotation": null,
+  "params.reverse": null,
+  "params.expansion": null,
+  "params.mirror": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

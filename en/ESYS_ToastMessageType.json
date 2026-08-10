@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ESYS_ToastMessageType",
+    "kind": "enum",
+    "name": "ESYS_ToastMessageType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "吐司消息类型",
+    "members.ERROR": "错误",
+    "members.WARNING": "警告",
+    "members.INFO": "信息",
+    "members.SUCCESS": "成功",
+    "members.ASK": "问询"
+  },
+  "title": null,
+  "members.ERROR": null,
+  "members.WARNING": null,
+  "members.INFO": null,
+  "members.SUCCESS": null,
+  "members.ASK": null
+}

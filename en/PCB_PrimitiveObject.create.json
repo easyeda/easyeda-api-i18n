@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveObject.create",
+    "kind": "method",
+    "name": "create",
+    "className": "PCB_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建二进制内嵌对象",
+    "params.layer": "层",
+    "params.topLeftX": "左上点 X",
+    "params.topLeftY": "左上点 Y",
+    "params.binaryData": "二进制数据",
+    "params.width": "宽",
+    "params.height": "高",
+    "params.rotation": "旋转角度",
+    "params.mirror": "是否水平镜像",
+    "params.fileName": "文件名",
+    "params.primitiveLock": "是否锁定",
+    "returns": "- 二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.topLeftX": null,
+  "params.topLeftY": null,
+  "params.binaryData": null,
+  "params.width": null,
+  "params.height": null,
+  "params.rotation": null,
+  "params.mirror": null,
+  "params.fileName": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

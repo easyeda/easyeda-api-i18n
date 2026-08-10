@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl",
+    "kind": "class",
+    "name": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "文档树 / 编辑器控制类",
+    "remarks.text.0": "此处编辑器控制基于当前已打开的工程设计下的图页，其它任何 `documentUuid` 都将被认为是不存在的文档页"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

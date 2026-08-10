@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveDimension",
+    "kind": "class",
+    "name": "PCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PCB & 封装 / 尺寸标注图元类"
+  },
+  "title": null
+}

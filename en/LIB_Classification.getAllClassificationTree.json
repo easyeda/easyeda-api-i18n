@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.getAllClassificationTree",
+    "kind": "method",
+    "name": "getAllClassificationTree",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有分类信息组成的树",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "returns": "分类信息组成的树结构数据",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "returns": null,
+  "deprecated": null
+}

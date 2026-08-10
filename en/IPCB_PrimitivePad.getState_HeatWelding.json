@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.getState_HeatWelding",
+    "kind": "method",
+    "name": "getState_HeatWelding",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：热焊优化参数",
+    "returns": "热焊优化参数"
+  },
+  "title": null,
+  "returns": null
+}

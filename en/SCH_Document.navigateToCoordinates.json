@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "id": "SCH_Document.navigateToCoordinates",
+    "kind": "method",
+    "name": "navigateToCoordinates",
+    "className": "SCH_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "定位到画布坐标",
+    "remarks.text.0": "本接口在前端画布上定位到指定的坐标；",
+    "remarks.text.1": "此处的单位跨度为 0.01inch",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.x": null,
+  "params.y": null,
+  "returns": null
+}

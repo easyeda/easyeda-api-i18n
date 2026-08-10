@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveAttribute.setState_Layer",
+    "kind": "method",
+    "name": "setState_Layer",
+    "className": "IPCB_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：层",
+    "params.layer": "层",
+    "returns": "属性图元对象"
+  },
+  "title": null,
+  "params.layer": null,
+  "returns": null
+}

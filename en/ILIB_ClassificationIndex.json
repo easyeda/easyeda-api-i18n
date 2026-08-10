@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "ILIB_ClassificationIndex",
+    "kind": "interface",
+    "name": "ILIB_ClassificationIndex",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "分类索引",
+    "remarks.text.0": "本分类索引用于索引指定库内的分类，其中库 UUID 和库类型仅作针对于本索引的识别用途，防止将不同库内的索引互相引用从而引发错误",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3",
+    "properties.libraryUuid": "库 UUID",
+    "properties.libraryType": "库类型",
+    "properties.primaryClassificationUuid": "一级分类 UUID",
+    "properties.secondaryClassificationUuid": "二级分类 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "deprecated": null,
+  "properties.libraryUuid": null,
+  "properties.libraryType": null,
+  "properties.primaryClassificationUuid": null,
+  "properties.secondaryClassificationUuid": null
+}
