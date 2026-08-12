@@ -6,11 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "打开窗口上下文目标",
-    "members.BLANK": "新标签页",
-    "members.SELF": "当前页"
+    "title": "打开窗口上下文目标"
   },
-  "title": null,
-  "members.BLANK": null,
-  "members.SELF": null
+  "title": null
 }

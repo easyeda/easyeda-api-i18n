@@ -6,11 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "工程协作模式",
-    "members.STRICT": "严格",
-    "members.FREE": "自由"
+    "title": "工程协作模式"
   },
-  "title": null,
-  "members.STRICT": null,
-  "members.FREE": null
+  "title": null
 }

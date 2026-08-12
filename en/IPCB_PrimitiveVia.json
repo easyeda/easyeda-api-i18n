@@ -6,7 +6,29 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "过孔图元"
+    "title": "过孔图元",
+    "properties.async": "异步",
+    "properties.primitiveId": "图元 ID",
+    "properties.net": "网络名称",
+    "properties.x": "坐标 X",
+    "properties.y": "坐标 Y",
+    "properties.holeDiameter": "孔径",
+    "properties.diameter": "外径",
+    "properties.viaType": "过孔类型",
+    "properties.designRuleBlindViaName": "盲埋孔设计规则项名称",
+    "properties.solderMaskExpansion": "阻焊/助焊扩展",
+    "properties.primitiveLock": "是否锁定"
   },
-  "title": null
+  "title": null,
+  "properties.async": null,
+  "properties.primitiveId": null,
+  "properties.net": null,
+  "properties.x": null,
+  "properties.y": null,
+  "properties.holeDiameter": null,
+  "properties.diameter": null,
+  "properties.viaType": null,
+  "properties.designRuleBlindViaName": null,
+  "properties.solderMaskExpansion": null,
+  "properties.primitiveLock": null
 }

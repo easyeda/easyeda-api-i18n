@@ -6,11 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "画布更新计算功能状态",
-    "members.ACTIVE": "启用",
-    "members.INACTIVE": "停用"
+    "title": "画布更新计算功能状态"
   },
-  "title": null,
-  "members.ACTIVE": null,
-  "members.INACTIVE": null
+  "title": null
 }

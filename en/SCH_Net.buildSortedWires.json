@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SCH_Net.buildSortedWires",
+    "kind": "method",
+    "name": "buildSortedWires",
+    "className": "SCH_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "对导线按自然排序后转换为 ISCH_WireInfo 数组"
+  },
+  "title": null
+}

@@ -6,13 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "导入工程导入选项",
-    "members.IMPORT_DOCUMENT": "导入文档",
-    "members.EXTRACT_LIBRARIES": "提取库文件",
-    "members.IMPORT_DOCUMENT_EXTRACT_LIBRARIES": "导入文档并提取库"
+    "title": "导入工程导入选项"
   },
-  "title": null,
-  "members.IMPORT_DOCUMENT": null,
-  "members.EXTRACT_LIBRARIES": null,
-  "members.IMPORT_DOCUMENT_EXTRACT_LIBRARIES": null
+  "title": null
 }

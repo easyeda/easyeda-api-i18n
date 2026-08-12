@@ -16,12 +16,8 @@
   },
   "_source": {
     "title": "导入工程板边框来源",
-    "remarks.text.0": "仅 `fileType` 为 `Altium Designer` 或 `Protel` 时才可以指定该属性，否则将被忽略",
-    "members.FROM_KEEPOUT_LAYER": "从 Keepout 层",
-    "members.FROM_MECHANICAL_LAYER_1": "从机械层 1"
+    "remarks.text.0": "仅 `fileType` 为 `Altium Designer` 或 `Protel` 时才可以指定该属性，否则将被忽略"
   },
   "title": null,
-  "remarks.text.0": null,
-  "members.FROM_KEEPOUT_LAYER": null,
-  "members.FROM_MECHANICAL_LAYER_1": null
+  "remarks.text.0": null
 }

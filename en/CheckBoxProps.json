@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "CheckBoxProps",
-    "kind": "interface",
-    "name": "CheckBoxProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

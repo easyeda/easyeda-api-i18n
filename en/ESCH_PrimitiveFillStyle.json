@@ -6,23 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "填充样式",
-    "members.NONE": "无",
-    "members.SOLID": "实心",
-    "members.GRID": "网格",
-    "members.HORIZONTAL_LINE": "横线",
-    "members.VERTICAL_LINE": "竖线",
-    "members.RHOMBIC_GRID": "菱形网格",
-    "members.LEFT_SLASH_LINE": "左斜线",
-    "members.RIGHT_SLASH_LINE": "右斜线"
+    "title": "填充样式"
   },
-  "title": null,
-  "members.NONE": null,
-  "members.SOLID": null,
-  "members.GRID": null,
-  "members.HORIZONTAL_LINE": null,
-  "members.VERTICAL_LINE": null,
-  "members.RHOMBIC_GRID": null,
-  "members.LEFT_SLASH_LINE": null,
-  "members.RIGHT_SLASH_LINE": null
+  "title": null
 }

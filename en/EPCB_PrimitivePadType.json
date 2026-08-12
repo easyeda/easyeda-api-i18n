@@ -6,13 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "焊盘类型",
-    "members.NORMAL": "焊盘",
-    "members.TEST": "测试点",
-    "members.MARK_POINT": "标识点"
+    "title": "焊盘类型"
   },
-  "title": null,
-  "members.NORMAL": null,
-  "members.TEST": null,
-  "members.MARK_POINT": null
+  "title": null
 }

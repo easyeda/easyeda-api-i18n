@@ -6,11 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "编辑器分屏方向",
-    "members.HORIZONTAL": "水平",
-    "members.VERTICAL": "垂直"
+    "title": "编辑器分屏方向"
   },
-  "title": null,
-  "members.HORIZONTAL": null,
-  "members.VERTICAL": null
+  "title": null
 }

@@ -6,19 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "快捷键生效场景范围",
-    "members.EDITOR": "非画布",
-    "members.CANVAS_SELECTED": "画布选中",
-    "members.CANVAS_NOT_SELECT": "画布未选中",
-    "members.DRAWING": "画布绘制",
-    "members.PLACING": "画布放置",
-    "members.LOCAL": "局部快捷键"
+    "title": "快捷键生效场景范围"
   },
-  "title": null,
-  "members.EDITOR": null,
-  "members.CANVAS_SELECTED": null,
-  "members.CANVAS_NOT_SELECT": null,
-  "members.DRAWING": null,
-  "members.PLACING": null,
-  "members.LOCAL": null
+  "title": null
 }

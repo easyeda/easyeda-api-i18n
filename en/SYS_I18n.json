@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "系统 / 多语言类",
-    "remarks.text.0": "使用多语言系统展示多语言文本"
+    "remarks.text.0": "使用多语言系统展示多语言文本",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "FlexItemProps",
-    "kind": "interface",
-    "name": "FlexItemProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "NetportDeviceName",
+    "kind": "enum",
+    "name": "NetportDeviceName",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "网络端口符号对应的器件名称"
+  },
+  "title": null
+}

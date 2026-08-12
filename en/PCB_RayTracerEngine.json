@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "PCB & 封装 / 光线追踪引擎类",
-    "remarks.text.0": "控制光线追踪引擎的对接和交互"
+    "remarks.text.0": "控制光线追踪引擎的对接和交互",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

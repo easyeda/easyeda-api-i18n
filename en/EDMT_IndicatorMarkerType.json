@@ -6,17 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "指示标记类型",
-    "members.POINT": "点",
-    "members.CIRCLE": "圆形",
-    "members.LINE": "线段",
-    "members.ARC": "圆弧",
-    "members.RECTANGLE": "矩形"
+    "title": "指示标记类型"
   },
-  "title": null,
-  "members.POINT": null,
-  "members.CIRCLE": null,
-  "members.LINE": null,
-  "members.ARC": null,
-  "members.RECTANGLE": null
+  "title": null
 }

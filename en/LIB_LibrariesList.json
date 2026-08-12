@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "综合库 / 库列表类",
-    "remarks.text.0": "此处所有接口都基于编辑器当前工作区环境，如需切换到其他工作区，请使用 {@link DMT_Workspace.toggleToWorkspace} 接口切换工作区"
+    "remarks.text.0": "此处所有接口都基于编辑器当前工作区环境，如需切换到其他工作区，请使用 {@link DMT_Workspace.toggleToWorkspace} 接口切换工作区",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

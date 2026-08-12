@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "TextProps",
-    "kind": "interface",
-    "name": "TextProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

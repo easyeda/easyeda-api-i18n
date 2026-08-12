@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "InputProps",
-    "kind": "interface",
-    "name": "InputProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

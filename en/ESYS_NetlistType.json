@@ -6,23 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "网表类型",
-    "members.ALLEGRO": "Allegro",
-    "members.PADS": "PADS",
-    "members.PROTEL2": "Protel 2",
-    "members.JLCEDA_PRO": "嘉立创 EDA 专业版",
-    "members.EASYEDA_PRO": "EasyEDA Pro Edition",
-    "members.ALTIUM_DESIGNER": "Altium Designer",
-    "members.DISA": "数字化工业软件联盟",
-    "members.DISA_SIMULATION": "数字化工业软件联盟仿真"
+    "title": "网表类型"
   },
-  "title": null,
-  "members.ALLEGRO": null,
-  "members.PADS": null,
-  "members.PROTEL2": null,
-  "members.JLCEDA_PRO": null,
-  "members.EASYEDA_PRO": null,
-  "members.ALTIUM_DESIGNER": null,
-  "members.DISA": null,
-  "members.DISA_SIMULATION": null
+  "title": null
 }

@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SCH_Net.buildProjectNetInfo",
+    "kind": "method",
+    "name": "buildProjectNetInfo",
+    "className": "SCH_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将原始原理图数据转换为 ISCH_ProjectNetInfo 数据"
+  },
+  "title": null
+}

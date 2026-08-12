@@ -16,20 +16,8 @@
   },
   "_source": {
     "title": "区域图元区域规则类型",
-    "remarks.text.0": "{@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE | FOLLOW_REGION_RULE} 即为约束区域",
-    "members.NO_COMPONENTS": "禁止元件",
-    "members.NO_WIRES": "禁止布线",
-    "members.NO_FILLS": "禁止填充",
-    "members.NO_POURS": "禁止覆铜",
-    "members.NO_INNER_ELECTRICAL_LAYERS": "禁止内电层",
-    "members.FOLLOW_REGION_RULE": "约束区域"
+    "remarks.text.0": "{@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE | FOLLOW_REGION_RULE} 即为约束区域"
   },
   "title": null,
-  "remarks.text.0": null,
-  "members.NO_COMPONENTS": null,
-  "members.NO_WIRES": null,
-  "members.NO_FILLS": null,
-  "members.NO_POURS": null,
-  "members.NO_INNER_ELECTRICAL_LAYERS": null,
-  "members.FOLLOW_REGION_RULE": null
+  "remarks.text.0": null
 }

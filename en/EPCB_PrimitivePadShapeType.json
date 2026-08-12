@@ -6,17 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "焊盘外形种类",
-    "members.ELLIPSE": "圆形",
-    "members.OBLONG": "长圆形",
-    "members.RECTANGLE": "矩形",
-    "members.REGULAR_POLYGON": "正多边形",
-    "members.POLYLINE_COMPLEX_POLYGON": "折线复杂多边形"
+    "title": "焊盘外形种类"
   },
-  "title": null,
-  "members.ELLIPSE": null,
-  "members.OBLONG": null,
-  "members.RECTANGLE": null,
-  "members.REGULAR_POLYGON": null,
-  "members.POLYLINE_COMPLEX_POLYGON": null
+  "title": null
 }

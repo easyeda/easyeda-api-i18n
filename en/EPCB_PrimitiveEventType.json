@@ -6,13 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "图元事件类型",
-    "members.DELETE": "删除",
-    "members.CREATE": "创建",
-    "members.MODIFY": "属性变更"
+    "title": "图元事件类型"
   },
-  "title": null,
-  "members.DELETE": null,
-  "members.CREATE": null,
-  "members.MODIFY": null
+  "title": null
 }

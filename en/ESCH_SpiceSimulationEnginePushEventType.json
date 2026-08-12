@@ -6,15 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "Spice 仿真引擎推送事件类型",
-    "members.SIMULATION_RESULT": "仿真结果",
-    "members.VALIDATION_RESULT": "验证结果",
-    "members.LOG_RESULT": "日志",
-    "members.ERROR_RESULT": "错误"
+    "title": "Spice 仿真引擎推送事件类型"
   },
-  "title": null,
-  "members.SIMULATION_RESULT": null,
-  "members.VALIDATION_RESULT": null,
-  "members.LOG_RESULT": null,
-  "members.ERROR_RESULT": null
+  "title": null
 }

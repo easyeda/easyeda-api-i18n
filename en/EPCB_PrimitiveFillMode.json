@@ -16,14 +16,8 @@
   },
   "_source": {
     "title": "填充图元填充模式",
-    "remarks.text.0": "网格填充和内电层填充为预留配置",
-    "members.SOLID": "实心填充",
-    "members.MESH": "网格填充",
-    "members.INNER_ELECTRICAL_LAYER": "内电层填充"
+    "remarks.text.0": "网格填充和内电层填充为预留配置"
   },
   "title": null,
-  "remarks.text.0": null,
-  "members.SOLID": null,
-  "members.MESH": null,
-  "members.INNER_ELECTRICAL_LAYER": null
+  "remarks.text.0": null
 }

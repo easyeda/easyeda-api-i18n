@@ -6,29 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "引脚类型",
-    "members.IN": "输入",
-    "members.OUT": "输出",
-    "members.BI": "双向",
-    "members.PASSIVE": "无源",
-    "members.OPEN_COLLECTOR": "开集电极",
-    "members.OPEN_EMITTER": "开发射极",
-    "members.POWER": "电源",
-    "members.GROUND": "地",
-    "members.HIZ": "高阻",
-    "members.TERMINATOR": "信号终端",
-    "members.UNDEFINED": "未定义"
+    "title": "引脚类型"
   },
-  "title": null,
-  "members.IN": null,
-  "members.OUT": null,
-  "members.BI": null,
-  "members.PASSIVE": null,
-  "members.OPEN_COLLECTOR": null,
-  "members.OPEN_EMITTER": null,
-  "members.POWER": null,
-  "members.GROUND": null,
-  "members.HIZ": null,
-  "members.TERMINATOR": null,
-  "members.UNDEFINED": null
+  "title": null
 }

@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "系统 / 快捷键类",
-    "remarks.text.0": "注册与管理系统快捷键"
+    "remarks.text.0": "注册与管理系统快捷键",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

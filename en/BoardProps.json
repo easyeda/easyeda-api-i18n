@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "BoardProps",
-    "kind": "interface",
-    "name": "BoardProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

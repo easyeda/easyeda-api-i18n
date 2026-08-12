@@ -6,21 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "动态仿真引擎拉取事件类型",
-    "members.SESSION_START": "开始动态仿真会话",
-    "members.SESSION_PAUSE": "暂停",
-    "members.SESSION_RESUME": "恢复",
-    "members.SESSION_STOP": "停止并释放资源",
-    "members.SESSION_STATE_QUERY": "查询动态仿真状态",
-    "members.SPEED_SET": "设置速度",
-    "members.COMPONENT_UPDATE": "更新元件属性"
+    "title": "动态仿真引擎拉取事件类型"
   },
-  "title": null,
-  "members.SESSION_START": null,
-  "members.SESSION_PAUSE": null,
-  "members.SESSION_RESUME": null,
-  "members.SESSION_STOP": null,
-  "members.SESSION_STATE_QUERY": null,
-  "members.SPEED_SET": null,
-  "members.COMPONENT_UPDATE": null
+  "title": null
 }

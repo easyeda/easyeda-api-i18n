@@ -6,13 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "PDF 输出方式",
-    "members.MULTI_PAGE_PDF": "单个多页 PDF",
-    "members.MULTIPLE_SINGLE_PAGE_PDF": "多个单页 PDF（将会输出包含所有分解图层 PDF 文件的压缩包）",
-    "members.SINGLE_PAGE_PDF": "单个单页 PDF（将会输出包含每层一个 PDF 文件的压缩包）"
+    "title": "PDF 输出方式"
   },
-  "title": null,
-  "members.MULTI_PAGE_PDF": null,
-  "members.MULTIPLE_SINGLE_PAGE_PDF": null,
-  "members.SINGLE_PAGE_PDF": null
+  "title": null
 }

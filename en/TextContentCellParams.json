@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "TextContentCellParams",
-    "kind": "interface",
-    "name": "TextContentCellParams",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

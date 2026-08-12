@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "PCB & 封装 / 事件类",
-    "remarks.text.0": "注册事件回调"
+    "remarks.text.0": "注册事件回调",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

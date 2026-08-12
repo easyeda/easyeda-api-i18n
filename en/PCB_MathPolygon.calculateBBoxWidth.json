@@ -1,0 +1,10 @@
+{
+  "_meta": {
+    "id": "PCB_MathPolygon.calculateBBoxWidth",
+    "kind": "method",
+    "name": "calculateBBoxWidth",
+    "className": "PCB_MathPolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

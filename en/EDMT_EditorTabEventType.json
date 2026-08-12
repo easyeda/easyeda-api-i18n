@@ -16,14 +16,8 @@
   },
   "_source": {
     "title": "编辑器标签页事件类型",
-    "remarks.text.0": "在类型为 {@link EDMT_EditorTabEventType.CLOSE | 关闭} 或 {@link EDMT_EditorTabEventType.OPEN | 打开} 时，均会同时触发 {@link EDMT_EditorTabEventType.TOGGLE | 切换} 事件",
-    "members.TOGGLE": "切换",
-    "members.CLOSE": "关闭",
-    "members.OPEN": "打开"
+    "remarks.text.0": "在类型为 {@link EDMT_EditorTabEventType.CLOSE | 关闭} 或 {@link EDMT_EditorTabEventType.OPEN | 打开} 时，均会同时触发 {@link EDMT_EditorTabEventType.TOGGLE | 切换} 事件"
   },
   "title": null,
-  "remarks.text.0": null,
-  "members.TOGGLE": null,
-  "members.CLOSE": null,
-  "members.OPEN": null
+  "remarks.text.0": null
 }

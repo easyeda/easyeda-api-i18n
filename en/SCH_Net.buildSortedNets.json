@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SCH_Net.buildSortedNets",
+    "kind": "method",
+    "name": "buildSortedNets",
+    "className": "SCH_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "对网络按自然排序后转换为 ISCH_NetInfo 数组"
+  },
+  "title": null
+}

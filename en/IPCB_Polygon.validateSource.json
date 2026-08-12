@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "IPCB_Polygon.validateSource",
+    "kind": "method",
+    "name": "validateSource",
+    "className": "IPCB_Polygon",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "校验单多边形",
+    "remarks.text.0": "校验并整理输入数据，如数据有误，则抛出错误",
+    "returns": "单多边形数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

@@ -6,39 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "右侧面板标签页",
-    "members.SCH_ATTR": "原理图：属性",
-    "members.SCH_FILTER": "原理图：过滤",
-    "members.PROJECT_ATTR": "工程：属性",
-    "members.PANEL_LAYER": "面板：图层",
-    "members.PANEL_ATTR": "面板：属性",
-    "members.PANEL_FILTER": "面板：过滤",
-    "members.PCB_LAYER": "PCB：图层",
-    "members.PCB_ATTR": "PCB：属性",
-    "members.PCB_SKETCHER_ATTR": "PCB：测量对象属性",
-    "members.PCB_FILTER": "PCB：过滤",
-    "members.PCB_2D_PREVIEW_ATTR": "PCB 2D 预览：属性",
-    "members.PCB_3D_PREVIEW_LAYER": "PCB 3D 预览：图层",
-    "members.PCB_3D_PREVIEW_ATTR": "PCB 3D 预览：属性",
-    "members.PANEL_3D_PREVIEW_LAYER": "面板 3D 预览：图层",
-    "members.PANEL_3D_PREVIEW_ATTR": "面板 3D 预览：属性",
-    "members.ANNOTATION": "批注"
+    "title": "右侧面板标签页"
   },
-  "title": null,
-  "members.SCH_ATTR": null,
-  "members.SCH_FILTER": null,
-  "members.PROJECT_ATTR": null,
-  "members.PANEL_LAYER": null,
-  "members.PANEL_ATTR": null,
-  "members.PANEL_FILTER": null,
-  "members.PCB_LAYER": null,
-  "members.PCB_ATTR": null,
-  "members.PCB_SKETCHER_ATTR": null,
-  "members.PCB_FILTER": null,
-  "members.PCB_2D_PREVIEW_ATTR": null,
-  "members.PCB_3D_PREVIEW_LAYER": null,
-  "members.PCB_3D_PREVIEW_ATTR": null,
-  "members.PANEL_3D_PREVIEW_LAYER": null,
-  "members.PANEL_3D_PREVIEW_ATTR": null,
-  "members.ANNOTATION": null
+  "title": null
 }

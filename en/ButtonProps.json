@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "ButtonProps",
-    "kind": "interface",
-    "name": "ButtonProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

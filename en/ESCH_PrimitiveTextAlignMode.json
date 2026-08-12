@@ -6,25 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "文本对齐模式",
-    "members.LEFT_TOP": "左上",
-    "members.LEFT_MIDDLE": "左中",
-    "members.LEFT_BOTTOM": "左下",
-    "members.CENTER_TOP": "中上",
-    "members.CENTER": "中心",
-    "members.CENTER_BOTTOM": "中下",
-    "members.RIGHT_TOP": "右上",
-    "members.RIGHT_MIDDLE": "右中",
-    "members.RIGHT_BOTTOM": "右下"
+    "title": "文本对齐模式"
   },
-  "title": null,
-  "members.LEFT_TOP": null,
-  "members.LEFT_MIDDLE": null,
-  "members.LEFT_BOTTOM": null,
-  "members.CENTER_TOP": null,
-  "members.CENTER": null,
-  "members.CENTER_BOTTOM": null,
-  "members.RIGHT_TOP": null,
-  "members.RIGHT_MIDDLE": null,
-  "members.RIGHT_BOTTOM": null
+  "title": null
 }

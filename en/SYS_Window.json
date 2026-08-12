@@ -16,8 +16,10 @@
   },
   "_source": {
     "title": "系统 / 窗口类",
-    "remarks.text.0": "为了保证安全性，仅提供有限的窗口跳转与监听支持，更多操作请使用内联框架窗口 {@link SYS_IFrame}"
+    "remarks.text.0": "为了保证安全性，仅提供有限的窗口跳转与监听支持，更多操作请使用内联框架窗口 {@link SYS_IFrame}",
+    "properties.extensionUuid": "扩展 UUID"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "properties.extensionUuid": null
 }

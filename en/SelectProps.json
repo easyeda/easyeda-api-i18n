@@ -1,9 +1,0 @@
-{
-  "_meta": {
-    "id": "SelectProps",
-    "kind": "interface",
-    "name": "SelectProps",
-    "sourceFile": "dist/api-types.d.ts"
-  },
-  "_source": {}
-}

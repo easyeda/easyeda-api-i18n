@@ -6,13 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "焊盘热焊连接方式",
-    "members.DIVERGENT": "发散",
-    "members.DIRECT_CONNECTED": "直连",
-    "members.NON_CONNECTED": "无连接"
+    "title": "焊盘热焊连接方式"
   },
-  "title": null,
-  "members.DIVERGENT": null,
-  "members.DIRECT_CONNECTED": null,
-  "members.NON_CONNECTED": null
+  "title": null
 }
