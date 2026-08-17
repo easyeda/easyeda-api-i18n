@@ -5,5 +5,16 @@
     "name": "BoardProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "分组面板：带标题的可折叠/分组容器",
+    "properties.children": "面板内容子节点",
+    "properties.padding": "内边距（CSS 简写数组）",
+    "properties.bgColor": "背景颜色，接受任意 CSS 颜色值",
+    "properties.title": "标题文本（必填）"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.padding": null,
+  "properties.bgColor": null,
+  "properties.title": null
 }

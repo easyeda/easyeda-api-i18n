@@ -5,5 +5,32 @@
     "name": "DialogProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "对话框组件：带标题栏、可拖拽缩放的组合弹窗",
+    "properties.children": "对话框内容子节点",
+    "properties.title": "标题文本（必填）",
+    "properties.width": "宽度（像素）",
+    "properties.height": "高度（像素）",
+    "properties.left": "距左侧位置（像素）",
+    "properties.top": "距顶部位置（像素）",
+    "properties.hide": "是否隐藏对话框",
+    "properties.overlay": "是否显示遮罩层",
+    "properties.maxDragY": "最大垂直拖拽距离（像素）",
+    "properties.modal": "是否以模态方式显示",
+    "properties.resizeX": "是否允许水平调整大小",
+    "properties.resizeY": "是否允许垂直调整大小"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.title": null,
+  "properties.width": null,
+  "properties.height": null,
+  "properties.left": null,
+  "properties.top": null,
+  "properties.hide": null,
+  "properties.overlay": null,
+  "properties.maxDragY": null,
+  "properties.modal": null,
+  "properties.resizeX": null,
+  "properties.resizeY": null
 }

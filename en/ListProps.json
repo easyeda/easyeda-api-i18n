@@ -5,5 +5,16 @@
     "name": "ListProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "列表组件：支持多级嵌套、图标、展开的列表",
+    "properties.list": "列表数据（必填）",
+    "properties.itemHeight": "列表项高度（像素）",
+    "properties.border": "是否显示边框",
+    "properties.expandEnable": "是否允许展开嵌套子项"
+  },
+  "title": null,
+  "properties.list": null,
+  "properties.itemHeight": null,
+  "properties.border": null,
+  "properties.expandEnable": null
 }

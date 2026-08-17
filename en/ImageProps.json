@@ -5,5 +5,12 @@
     "name": "ImageProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "图片组件：展示单张图片",
+    "properties.src": "图片地址（必填）",
+    "properties.title": "图片标题（alt/text）"
+  },
+  "title": null,
+  "properties.src": null,
+  "properties.title": null
 }

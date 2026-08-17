@@ -5,5 +5,16 @@
     "name": "SelectProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "下拉选择器：基于输入框的下拉选择控件",
+    "properties.disabled": "是否禁用",
+    "properties.readonly": "是否只读",
+    "properties.dropDownList": "下拉选项列表",
+    "properties.value": "当前选中值"
+  },
+  "title": null,
+  "properties.disabled": null,
+  "properties.readonly": null,
+  "properties.dropDownList": null,
+  "properties.value": null
 }

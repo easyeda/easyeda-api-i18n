@@ -5,5 +5,16 @@
     "name": "GridProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "布局容器：固定列数的网格布局容器",
+    "properties.children": "子节点",
+    "properties.columns": "列数（必填）",
+    "properties.rowGap": "行间距（像素）",
+    "properties.colGap": "列间距（像素）"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.columns": null,
+  "properties.rowGap": null,
+  "properties.colGap": null
 }

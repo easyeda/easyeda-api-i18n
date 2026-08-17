@@ -5,5 +5,20 @@
     "name": "FlexProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "布局容器：灵活的 Flex 布局容器",
+    "properties.children": "子节点",
+    "properties.direction": "主轴方向：row 水平 / column 垂直（含反向）",
+    "properties.alignX": "主轴对齐方式（水平）",
+    "properties.alignY": "交叉轴对齐方式（垂直）",
+    "properties.gap": "子元素间距（像素）",
+    "properties.classes": "附加的样式 class 名列表"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.direction": null,
+  "properties.alignX": null,
+  "properties.alignY": null,
+  "properties.gap": null,
+  "properties.classes": null
 }

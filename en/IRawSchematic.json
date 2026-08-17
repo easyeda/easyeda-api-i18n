@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IRawSchematic",
+    "kind": "interface",
+    "name": "IRawSchematic",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原始数据 - schematic"
+  },
+  "title": null
+}

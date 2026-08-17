@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IDesignPortal",
+    "kind": "interface",
+    "name": "IDesignPortal",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "组件树操作契约。"
+  },
+  "title": null
+}

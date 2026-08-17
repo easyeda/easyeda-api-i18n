@@ -5,5 +5,30 @@
     "name": "ModalProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "模态弹窗：可拖拽、可调整大小的顶层弹窗",
+    "properties.children": "弹窗内容子节点",
+    "properties.top": "距顶部位置（像素，必填）",
+    "properties.left": "距左侧位置（像素，必填）",
+    "properties.width": "宽度（像素，必填）",
+    "properties.height": "高度（像素，必填）",
+    "properties.overlay": "是否显示遮罩层",
+    "properties.maxDragX": "最大水平拖拽距离（像素）",
+    "properties.maxDragY": "最大垂直拖拽距离（像素）",
+    "properties.hide": "是否隐藏弹窗",
+    "properties.resizeX": "是否允许水平调整大小",
+    "properties.resizeY": "是否允许垂直调整大小"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.top": null,
+  "properties.left": null,
+  "properties.width": null,
+  "properties.height": null,
+  "properties.overlay": null,
+  "properties.maxDragX": null,
+  "properties.maxDragY": null,
+  "properties.hide": null,
+  "properties.resizeX": null,
+  "properties.resizeY": null
 }

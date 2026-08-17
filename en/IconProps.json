@@ -1,9 +1,16 @@
 {
   "_meta": {
     "id": "IconProps",
-    "kind": "type",
+    "kind": "interface",
     "name": "IconProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "图标配置：通过 URL 或 CSS class 指定图标",
+    "properties.iconUrl": "图标图片地址",
+    "properties.iconClass": "图标 CSS class 名"
+  },
+  "title": null,
+  "properties.iconUrl": null,
+  "properties.iconClass": null
 }

@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "SlotProps",
+    "kind": "interface",
+    "name": "SlotProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "插槽组件：为父组件提供具名内容占位",
+    "properties.children": "插槽内容子节点",
+    "properties.name": "插槽名称（必填）"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.name": null
+}

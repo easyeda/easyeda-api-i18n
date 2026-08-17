@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "id": "StyleProps",
+    "kind": "interface",
+    "name": "StyleProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "通用样式属性：可被布局容器等组件继承的样式集合",
+    "properties.backgroundColor": "背景颜色，接受任意 CSS 颜色值",
+    "properties.borderWidth": "边框宽度（像素），>0 时生效",
+    "properties.borderColor": "边框颜色，仅在 borderWidth > 0 时生效",
+    "properties.hide": "是否隐藏（display: none），优先于 invisible",
+    "properties.color": "文本颜色，接受任意 CSS 颜色值",
+    "properties.padding": "内边距（CSS 简写），如 [上,右,下,左] 或 [上下,左右] 或 [全部]",
+    "properties.margin": "外边距（CSS 简写），如 [上,右,下,左] 或 [上下,左右] 或 [全部]",
+    "properties.width": "宽度（像素）或 '100%'",
+    "properties.height": "高度（像素）或 '100%'",
+    "properties.rotate": "旋转角度（度）",
+    "properties.cursor": "鼠标悬停时的光标样式",
+    "properties.invisible": "是否仅隐藏视觉（visibility: hidden），仍占位",
+    "properties.display": "覆盖 display 样式"
+  },
+  "title": null,
+  "properties.backgroundColor": null,
+  "properties.borderWidth": null,
+  "properties.borderColor": null,
+  "properties.hide": null,
+  "properties.color": null,
+  "properties.padding": null,
+  "properties.margin": null,
+  "properties.width": null,
+  "properties.height": null,
+  "properties.rotate": null,
+  "properties.cursor": null,
+  "properties.invisible": null,
+  "properties.display": null
+}

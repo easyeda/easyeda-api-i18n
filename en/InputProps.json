@@ -5,5 +5,32 @@
     "name": "InputProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "输入框组件：支持下拉、搜索、清除、前后缀等多种形态",
+    "properties.disabled": "是否禁用输入",
+    "properties.readonly": "是否只读",
+    "properties.clearBtn": "是否显示清除按钮",
+    "properties.clickBtn": "是否显示点击按钮",
+    "properties.dropDownList": "下拉列表数据，提供时输入框可下拉选择",
+    "properties.searchBtn": "是否显示搜索按钮",
+    "properties.value": "当前输入值",
+    "properties.placeholder": "占位提示文本",
+    "properties.preText": "前缀文本",
+    "properties.type": "输入框类型（必填）",
+    "properties.otherAttr": "附加到 input 元素的其他属性（键值对字符串）",
+    "properties.testVal": "测试用校验值"
+  },
+  "title": null,
+  "properties.disabled": null,
+  "properties.readonly": null,
+  "properties.clearBtn": null,
+  "properties.clickBtn": null,
+  "properties.dropDownList": null,
+  "properties.searchBtn": null,
+  "properties.value": null,
+  "properties.placeholder": null,
+  "properties.preText": null,
+  "properties.type": null,
+  "properties.otherAttr": null,
+  "properties.testVal": null
 }

@@ -5,5 +5,18 @@
     "name": "RadioGroupProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "单选组组件：一组互斥的单选选项",
+    "properties.group": "选项列表（必填）",
+    "properties.selectedValue": "当前选中的值",
+    "properties.onlyChangeByBox": "是否仅通过点击单选框本身来改变状态",
+    "properties.lineBreak": "是否换行排列",
+    "properties.gap": "选项间距（像素）"
+  },
+  "title": null,
+  "properties.group": null,
+  "properties.selectedValue": null,
+  "properties.onlyChangeByBox": null,
+  "properties.lineBreak": null,
+  "properties.gap": null
 }

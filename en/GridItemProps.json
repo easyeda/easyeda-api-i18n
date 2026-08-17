@@ -5,5 +5,16 @@
     "name": "GridItemProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "Grid 子项：网格中的单个子元素",
+    "properties.children": "子节点",
+    "properties.colSpan": "跨列数",
+    "properties.rowSpan": "跨行数",
+    "properties.align": "单元格内对齐方式"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.colSpan": null,
+  "properties.rowSpan": null,
+  "properties.align": null
 }

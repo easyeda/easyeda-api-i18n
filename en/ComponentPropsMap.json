@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ComponentPropsMap",
+    "kind": "interface",
+    "name": "ComponentPropsMap",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "组件名 → Props 类型映射 作为 createComponent 泛型约束的唯一来源"
+  },
+  "title": null
+}

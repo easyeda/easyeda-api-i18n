@@ -5,5 +5,18 @@
     "name": "TextProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "文本组件：静态文本展示",
+    "properties.value": "文本内容（必填）",
+    "properties.fontFamily": "字体族",
+    "properties.textAlign": "水平对齐方式",
+    "properties.fontSize": "字号（像素）",
+    "properties.color": "文本颜色"
+  },
+  "title": null,
+  "properties.value": null,
+  "properties.fontFamily": null,
+  "properties.textAlign": null,
+  "properties.fontSize": null,
+  "properties.color": null
 }

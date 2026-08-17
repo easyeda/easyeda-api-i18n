@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "ScrollerProps",
+    "kind": "interface",
+    "name": "ScrollerProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "滚动组件：虚拟滚动列表，仅渲染可见行",
+    "properties.children": "子节点",
+    "properties.itemCount": "总行数（必填）",
+    "properties.itemHeight": "每行高度（像素，必填）",
+    "properties.buffer": "额外缓冲渲染的行数"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.itemCount": null,
+  "properties.itemHeight": null,
+  "properties.buffer": null
+}

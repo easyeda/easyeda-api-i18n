@@ -5,5 +5,16 @@
     "name": "SelectListItem",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "下拉选项：支持多级嵌套分组",
+    "properties.title": "选项标题（必填）",
+    "properties.value": "选项关联值",
+    "properties.selected": "是否选中",
+    "properties.children": "子选项，用于多级嵌套"
+  },
+  "title": null,
+  "properties.title": null,
+  "properties.value": null,
+  "properties.selected": null,
+  "properties.children": null
 }

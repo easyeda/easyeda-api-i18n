@@ -5,5 +5,18 @@
     "name": "TextAreaProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "多行文本输入组件",
+    "properties.disabled": "是否禁用输入",
+    "properties.value": "当前文本值",
+    "properties.resizable": "是否可调整尺寸（x 水平 / y 垂直）",
+    "properties.placeholder": "占位提示文本",
+    "properties.name": "输入框名称（表单 name 属性）"
+  },
+  "title": null,
+  "properties.disabled": null,
+  "properties.value": null,
+  "properties.resizable": null,
+  "properties.placeholder": null,
+  "properties.name": null
 }

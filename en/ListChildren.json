@@ -5,5 +5,22 @@
     "name": "ListChildren",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "列表项：支持多级嵌套分组",
+    "properties.title": "列表项标题（必填）",
+    "properties.id": "列表项唯一标识",
+    "properties.value": "列表项关联值",
+    "properties.clearBtn": "是否显示清除按钮",
+    "properties.children": "子列表项，用于多级嵌套",
+    "properties.selected": "是否选中",
+    "properties.icons": "列表项图标列表"
+  },
+  "title": null,
+  "properties.title": null,
+  "properties.id": null,
+  "properties.value": null,
+  "properties.clearBtn": null,
+  "properties.children": null,
+  "properties.selected": null,
+  "properties.icons": null
 }

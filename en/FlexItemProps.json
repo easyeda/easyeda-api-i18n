@@ -5,5 +5,12 @@
     "name": "FlexItemProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "Flex 子项：Flex 布局中的单个子元素",
+    "properties.children": "子节点",
+    "properties.flexRatio": "弹性占比（flex 生长因子）"
+  },
+  "title": null,
+  "properties.children": null,
+  "properties.flexRatio": null
 }

@@ -5,5 +5,18 @@
     "name": "CheckBoxProps",
     "sourceFile": "dist/api-types.d.ts"
   },
-  "_source": {}
+  "_source": {
+    "title": "复选框组件：可勾选的状态控件",
+    "properties.checked": "是否选中",
+    "properties.disabled": "是否禁用",
+    "properties.text": "复选框旁显示文本",
+    "properties.name": "复选框名称（表单 name 属性）",
+    "properties.onlyChangeByBox": "是否仅通过点击勾选框本身来改变状态"
+  },
+  "title": null,
+  "properties.checked": null,
+  "properties.disabled": null,
+  "properties.text": null,
+  "properties.name": null,
+  "properties.onlyChangeByBox": null
 }
