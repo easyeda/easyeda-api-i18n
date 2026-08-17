@@ -6,7 +6,9 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "仿真网表类型"
+    "title": "仿真网表类型",
+    "members.NGSPICE": "Ngspice"
   },
-  "title": null
+  "title": null,
+  "members.NGSPICE": null
 }

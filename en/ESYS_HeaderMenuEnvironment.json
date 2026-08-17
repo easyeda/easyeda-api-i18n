@@ -6,7 +6,31 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "顶部菜单环境"
+    "title": "顶部菜单环境",
+    "members.HOME": "主页",
+    "members.BLANK": "空白页",
+    "members.SCHEMATIC": "原理图",
+    "members.SYMBOL": "符号（包括 CBB 符号）",
+    "members.PCB": "PCB",
+    "members.FOOTPRINT": "封装",
+    "members.PCB_VIEW": "PCB 预览（包括 2D、3D 预览）",
+    "members.PANEL": "面板",
+    "members.PANEL_LIBRARY": "面板库",
+    "members.PANEL_VIEW": "面板预览",
+    "members.SIMULATION_SCHEMATIC_NGSPICE": "仿真原理图：Ngspice",
+    "members.SIMULATION_SCHEMATIC_SIMULIDE": "仿真原理图：SimulIDE"
   },
-  "title": null
+  "title": null,
+  "members.HOME": null,
+  "members.BLANK": null,
+  "members.SCHEMATIC": null,
+  "members.SYMBOL": null,
+  "members.PCB": null,
+  "members.FOOTPRINT": null,
+  "members.PCB_VIEW": null,
+  "members.PANEL": null,
+  "members.PANEL_LIBRARY": null,
+  "members.PANEL_VIEW": null,
+  "members.SIMULATION_SCHEMATIC_NGSPICE": null,
+  "members.SIMULATION_SCHEMATIC_SIMULIDE": null
 }

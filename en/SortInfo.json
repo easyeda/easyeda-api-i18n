@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "SortInfo",
+    "kind": "interface",
+    "name": "SortInfo",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "排序信息",
+    "properties.colKey": "列key",
+    "properties.key": "排序字段",
+    "properties.status": "排序状态"
+  },
+  "title": null,
+  "properties.colKey": null,
+  "properties.key": null,
+  "properties.status": null
+}

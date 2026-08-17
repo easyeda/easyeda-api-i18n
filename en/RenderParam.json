@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "RenderParam",
+    "kind": "interface",
+    "name": "RenderParam",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "渲染参数",
+    "properties.clickObj": "点击对象",
+    "properties.rowNumber": "行号",
+    "properties.colKey": "列key",
+    "properties.row": "行数据",
+    "properties.cellData": "单元格数据",
+    "properties.tableData": "表格数据",
+    "properties.editingRowNumbers": "编辑行号数组",
+    "properties.selectedRowNumbers": "选中行号数组",
+    "properties.heightLightStr": "高亮字符串"
+  },
+  "title": null,
+  "properties.clickObj": null,
+  "properties.rowNumber": null,
+  "properties.colKey": null,
+  "properties.row": null,
+  "properties.cellData": null,
+  "properties.tableData": null,
+  "properties.editingRowNumbers": null,
+  "properties.selectedRowNumbers": null,
+  "properties.heightLightStr": null
+}

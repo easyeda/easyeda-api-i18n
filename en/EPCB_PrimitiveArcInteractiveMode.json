@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "圆弧交互模式"
+    "title": "圆弧交互模式",
+    "members.TWO_POINT_ARC": "两点圆弧交互",
+    "members.CENTER_ARC": "中心圆弧交互"
   },
-  "title": null
+  "title": null,
+  "members.TWO_POINT_ARC": null,
+  "members.CENTER_ARC": null
 }

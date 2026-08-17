@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "自动布线对已有导线/过孔的处理方式"
+    "title": "自动布线对已有导线/过孔的处理方式",
+    "members.KEEP": "保留已有导线和过孔（在其基础上继续布线）",
+    "members.REMOVE": "移除已有导线和过孔（推倒重布）"
   },
-  "title": null
+  "title": null,
+  "members.KEEP": null,
+  "members.REMOVE": null
 }

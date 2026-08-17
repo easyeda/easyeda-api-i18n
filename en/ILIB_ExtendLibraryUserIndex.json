@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "id": "ILIB_ExtendLibraryUserIndex",
+    "kind": "interface",
+    "name": "ILIB_ExtendLibraryUserIndex",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "外部库用户索引",
+    "remarks.text.0": "支持外部库使用名称或关联的嘉立创 EDA 系统内用户 UUID 作为用户的唯一 ID 索引",
+    "remarks.text.1": "如若希望关联嘉立创 EDA 的用户，请传入该用户的 UUID，将会自动读取用户的名称（如若用户存在）",
+    "remarks.text.2": "如若仅希望显示用户名称，可以传入 `name` 字段",
+    "properties.name": "用户名称",
+    "properties.uuid": "嘉立创 EDA 系统内的用户 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "properties.name": null,
+  "properties.uuid": null
+}

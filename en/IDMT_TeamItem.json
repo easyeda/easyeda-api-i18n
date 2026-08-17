@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "IDMT_TeamItem",
+    "kind": "interface",
+    "name": "IDMT_TeamItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "团队属性",
+    "properties.itemType": "项目类型",
+    "properties.name": "团队名称",
+    "properties.uuid": "团队 UUID",
+    "properties.identity": "当前用户在团队内的身份（权限组）ID"
+  },
+  "title": null,
+  "properties.itemType": null,
+  "properties.name": null,
+  "properties.uuid": null,
+  "properties.identity": null
+}

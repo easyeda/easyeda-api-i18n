@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "CustomContentCellParams",
+    "kind": "interface",
+    "name": "CustomContentCellParams",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自定义内容单元格参数",
+    "properties.element": "自定义节点",
+    "properties.maskStyle": "遮罩层样式",
+    "properties.data": "额外数据"
+  },
+  "title": null,
+  "properties.element": null,
+  "properties.maskStyle": null,
+  "properties.data": null
+}

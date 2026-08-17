@@ -6,23 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "区域图元",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.layer": "层",
-    "properties.complexPolygon": "复杂多边形",
-    "properties.ruleType": "区域规则类型",
-    "properties.regionName": "区域名称",
-    "properties.lineWidth": "线宽",
-    "properties.primitiveLock": "是否锁定"
+    "title": "区域图元"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.layer": null,
-  "properties.complexPolygon": null,
-  "properties.ruleType": null,
-  "properties.regionName": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": null
 }

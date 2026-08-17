@@ -6,7 +6,13 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "系统 / 工具类"
+    "title": "系统 / 工具类",
+    "properties.valUnit": "值单位名，默认为 `mil`",
+    "properties.deviation": "误差值（以 valUnit 为单位）",
+    "properties.comparisonSize": "对比尺寸（以 valUnit 为单位）"
   },
-  "title": null
+  "title": null,
+  "properties.valUnit": null,
+  "properties.deviation": null,
+  "properties.comparisonSize": null
 }

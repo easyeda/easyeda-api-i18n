@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "ILIB_SimulationModelItem",
+    "kind": "interface",
+    "name": "ILIB_SimulationModelItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "仿真模型属性",
+    "properties.libraryType": "库类型",
+    "properties.uuid": "仿真模型 UUID",
+    "properties.libraryUuid": "所属库 UUID",
+    "properties.name": "仿真模型名称",
+    "properties.modelData": "仿真模型数据",
+    "properties.modelCategory": "仿真模型分类",
+    "properties.modelPin": "仿真模型引脚",
+    "properties.classification": "分类",
+    "properties.type": "仿真模型类型",
+    "properties.description": "描述"
+  },
+  "title": null,
+  "properties.libraryType": null,
+  "properties.uuid": null,
+  "properties.libraryUuid": null,
+  "properties.name": null,
+  "properties.modelData": null,
+  "properties.modelCategory": null,
+  "properties.modelPin": null,
+  "properties.classification": null,
+  "properties.type": null,
+  "properties.description": null
+}

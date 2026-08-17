@@ -6,29 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "图像图元",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.x": "BBox 左上点坐标 X",
-    "properties.y": "BBox 左上点坐标 Y",
-    "properties.complexPolygon": "图像源数据（复杂多边形）",
-    "properties.layer": "层",
-    "properties.width": "宽",
-    "properties.height": "高",
-    "properties.rotation": "旋转角度",
-    "properties.horizonMirror": "是否水平镜像",
-    "properties.primitiveLock": "是否锁定"
+    "title": "图像图元"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.x": null,
-  "properties.y": null,
-  "properties.complexPolygon": null,
-  "properties.layer": null,
-  "properties.width": null,
-  "properties.height": null,
-  "properties.rotation": null,
-  "properties.horizonMirror": null,
-  "properties.primitiveLock": null
+  "title": null
 }

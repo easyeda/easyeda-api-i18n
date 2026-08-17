@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "TSYS_MathPolygonGroup",
+    "kind": "type",
+    "name": "TSYS_MathPolygonGroup",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "多边形组",
+    "remarks.text.0": "布尔运算的返回类型，由多个带孔洞的多边形组成，保留外环与孔洞的归属关系"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ISYS_ShortcutKeyData",
+    "kind": "interface",
+    "name": "ISYS_ShortcutKeyData",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "快捷键数据",
+    "properties.shortcutKey": "快捷键",
+    "properties.title": "标题",
+    "properties.remark": "备注",
+    "properties.range": "快捷键生效页面范围",
+    "properties.scene": "快捷键生效场景范围"
+  },
+  "title": null,
+  "properties.shortcutKey": null,
+  "properties.title": null,
+  "properties.remark": null,
+  "properties.range": null,
+  "properties.scene": null
+}

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TSYS_PcbComparisonErrorCode",
+    "kind": "type",
+    "name": "TSYS_PcbComparisonErrorCode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PCB 对比失败错误码"
+  },
+  "title": null
+}

@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "ILIB_SymbolItem",
+    "kind": "interface",
+    "name": "ILIB_SymbolItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "符号属性",
+    "properties.libraryType": "库类型",
+    "properties.uuid": "符号 UUID",
+    "properties.libraryUuid": "所属库 UUID",
+    "properties.cbbUuid": "所属复用模块 UUID，仅复用模块符号存在该属性",
+    "properties.name": "符号名称",
+    "properties.classification": "分类",
+    "properties.type": "符号类型",
+    "properties.description": "描述",
+    "properties.subPartNames": "子部件名称数组"
+  },
+  "title": null,
+  "properties.libraryType": null,
+  "properties.uuid": null,
+  "properties.libraryUuid": null,
+  "properties.cbbUuid": null,
+  "properties.name": null,
+  "properties.classification": null,
+  "properties.type": null,
+  "properties.description": null,
+  "properties.subPartNames": null
+}

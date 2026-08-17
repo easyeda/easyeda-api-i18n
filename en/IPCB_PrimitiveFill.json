@@ -6,23 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "填充图元",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.layer": "层",
-    "properties.complexPolygon": "复杂多边形",
-    "properties.net": "网络名称",
-    "properties.fillMode": "填充模式",
-    "properties.lineWidth": "线宽",
-    "properties.primitiveLock": "是否锁定"
+    "title": "填充图元"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.layer": null,
-  "properties.complexPolygon": null,
-  "properties.net": null,
-  "properties.fillMode": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": null
 }

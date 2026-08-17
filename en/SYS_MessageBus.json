@@ -6,9 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "系统 / 消息总线类",
-    "properties.extensionUuid": "扩展 UUID"
+    "title": "系统 / 消息总线类"
   },
-  "title": null,
-  "properties.extensionUuid": null
+  "title": null
 }

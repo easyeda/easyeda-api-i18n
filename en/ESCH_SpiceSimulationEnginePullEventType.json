@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "Spice 仿真引擎拉取事件类型"
+    "title": "Spice 仿真引擎拉取事件类型",
+    "members.SIMULATE_NETLIST": "仿真网表",
+    "members.VALIDATE_NETLIST": "验证网表"
   },
-  "title": null
+  "title": null,
+  "members.SIMULATE_NETLIST": null,
+  "members.VALIDATE_NETLIST": null
 }

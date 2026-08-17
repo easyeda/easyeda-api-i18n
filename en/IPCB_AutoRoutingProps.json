@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "IPCB_AutoRoutingProps",
+    "kind": "interface",
+    "name": "IPCB_AutoRoutingProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自动布线入参",
+    "properties.RoutingNets": "布线网络",
+    "properties.cornerStyle": "布线拐角风格",
+    "properties.existingPrimitiveMode": "已有导线/过孔的处理方式",
+    "properties.optimization": "效果优先级",
+    "properties.layers": "布线图层",
+    "properties.ignoreNets": "忽略网络"
+  },
+  "title": null,
+  "properties.RoutingNets": null,
+  "properties.cornerStyle": null,
+  "properties.existingPrimitiveMode": null,
+  "properties.optimization": null,
+  "properties.layers": null,
+  "properties.ignoreNets": null
+}

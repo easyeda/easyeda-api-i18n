@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "ILIB_CbbItem",
+    "kind": "interface",
+    "name": "ILIB_CbbItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复用模块属性",
+    "properties.libraryType": "库类型",
+    "properties.uuid": "复用模块 UUID",
+    "properties.libraryUuid": "所属库 UUID",
+    "properties.name": "复用模块名称",
+    "properties.classification": "分类",
+    "properties.description": "描述",
+    "properties.boards": "下属板子"
+  },
+  "title": null,
+  "properties.libraryType": null,
+  "properties.uuid": null,
+  "properties.libraryUuid": null,
+  "properties.name": null,
+  "properties.classification": null,
+  "properties.description": null,
+  "properties.boards": null
+}

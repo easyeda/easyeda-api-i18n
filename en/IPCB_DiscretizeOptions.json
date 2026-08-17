@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "IPCB_DiscretizeOptions",
+    "kind": "interface",
+    "name": "IPCB_DiscretizeOptions",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "离散化选项",
+    "properties.tolerance": "弦高容差，即弧/曲线被弦（相邻离散点连线）近似时允许的最大偏差"
+  },
+  "title": null,
+  "properties.tolerance": null
+}

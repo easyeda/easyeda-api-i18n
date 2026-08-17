@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "IPCB_DiscretizedPoint",
+    "kind": "interface",
+    "name": "IPCB_DiscretizedPoint",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "离散化点",
+    "properties.x": "X 坐标",
+    "properties.y": "Y 坐标"
+  },
+  "title": null,
+  "properties.x": null,
+  "properties.y": null
+}

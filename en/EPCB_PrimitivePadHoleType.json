@@ -6,7 +6,13 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "焊盘钻孔类型"
+    "title": "焊盘钻孔类型",
+    "members.ROUND": "圆形",
+    "members.RECTANGLE": "矩形（暂未开发）",
+    "members.SLOT": "插槽"
   },
-  "title": null
+  "title": null,
+  "members.ROUND": null,
+  "members.RECTANGLE": null,
+  "members.SLOT": null
 }

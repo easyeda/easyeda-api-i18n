@@ -1,0 +1,179 @@
+{
+  "_meta": {
+    "id": "TPCB_PrimitiveDimensionCoordinateSet",
+    "kind": "type",
+    "name": "TPCB_PrimitiveDimensionCoordinateSet",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.4"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.5"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.6"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.7"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.8"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.9"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.10"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.11"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.12"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.13"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.14"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.15"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.16"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.17"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.18"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.19"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.20"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.21"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.22"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.23"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.24"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.25"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.26"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "尺寸标注坐标集",
+    "remarks.text.0": "尺寸标注坐标集存在以下三种 {@link EPCB_PrimitiveDimensionType | 尺寸标注类型}：",
+    "remarks.text.1": "① 半径标注",
+    "remarks.text.2": "`[x1, y1, x2, y2, x3, y3]`",
+    "remarks.text.3": "- `{number}` `x1` - 圆、圆弧上的端点 X",
+    "remarks.text.4": "- `{number}` `y1` - 圆、圆弧上的端点 Y",
+    "remarks.text.5": "- `{number}` `x2` - 标注线尾部的端点 X",
+    "remarks.text.6": "- `{number}` `y2` - 标注线尾部的端点 Y",
+    "remarks.text.7": "- `{number}` `x3` - 标注文字的左下端点 X",
+    "remarks.text.8": "- `{number}` `y3` - 标注文字的左下端点 Y",
+    "remarks.text.9": "② 长度标注",
+    "remarks.text.10": "`[x1, y1, x2, y2, x3, y3, x4, y4]`",
+    "remarks.text.11": "- `{number}` `x1` - 第一测量端点 X",
+    "remarks.text.12": "- `{number}` `y1` - 第一测量端点 Y",
+    "remarks.text.13": "- `{number}` `x2` - 第一标注箭头端点 X",
+    "remarks.text.14": "- `{number}` `y2` - 第一标注箭头端点 Y",
+    "remarks.text.15": "- `{number}` `x3` - 第二标注箭头端点 X",
+    "remarks.text.16": "- `{number}` `y3` - 第二标注箭头端点 Y",
+    "remarks.text.17": "- `{number}` `x4` - 第二测量端点 X",
+    "remarks.text.18": "- `{number}` `y4` - 第二测量端点 Y",
+    "remarks.text.19": "③ 角度标注",
+    "remarks.text.20": "`[x1, y1, x2, y2, x3, y3]`",
+    "remarks.text.21": "- `{number}` `x1` - 第一边端点 X",
+    "remarks.text.22": "- `{number}` `y1` - 第一边端点 Y",
+    "remarks.text.23": "- `{number}` `x2` - 角度中心 X",
+    "remarks.text.24": "- `{number}` `y2` - 角度中心 Y",
+    "remarks.text.25": "- `{number}` `x3` - 第二边端点 X",
+    "remarks.text.26": "- `{number}` `y3` - 第二边端点 Y"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "remarks.text.3": null,
+  "remarks.text.4": null,
+  "remarks.text.5": null,
+  "remarks.text.6": null,
+  "remarks.text.7": null,
+  "remarks.text.8": null,
+  "remarks.text.9": null,
+  "remarks.text.10": null,
+  "remarks.text.11": null,
+  "remarks.text.12": null,
+  "remarks.text.13": null,
+  "remarks.text.14": null,
+  "remarks.text.15": null,
+  "remarks.text.16": null,
+  "remarks.text.17": null,
+  "remarks.text.18": null,
+  "remarks.text.19": null,
+  "remarks.text.20": null,
+  "remarks.text.21": null,
+  "remarks.text.22": null,
+  "remarks.text.23": null,
+  "remarks.text.24": null,
+  "remarks.text.25": null,
+  "remarks.text.26": null
+}

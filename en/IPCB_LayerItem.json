@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "IPCB_LayerItem",
+    "kind": "interface",
+    "name": "IPCB_LayerItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图层属性",
+    "properties.id": "图层 ID",
+    "properties.name": "名称",
+    "properties.type": "类型",
+    "properties.color": "颜色（RGB HEX 格式）",
+    "properties.transparency": "透明度（%）",
+    "properties.inactiveColor": "非激活颜色（RGB HEX 格式）",
+    "properties.inactiveTransparency": "非激活透明度（%）",
+    "properties.layerStatus": "层状态",
+    "properties.locked": "是否锁定"
+  },
+  "title": null,
+  "properties.id": null,
+  "properties.name": null,
+  "properties.type": null,
+  "properties.color": null,
+  "properties.transparency": null,
+  "properties.inactiveColor": null,
+  "properties.inactiveTransparency": null,
+  "properties.layerStatus": null,
+  "properties.locked": null
+}

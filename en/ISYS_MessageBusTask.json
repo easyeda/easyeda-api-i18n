@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ISYS_MessageBusTask",
+    "kind": "interface",
+    "name": "ISYS_MessageBusTask",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "消息总线任务"
+  },
+  "title": null
+}

@@ -16,28 +16,8 @@
   },
   "_source": {
     "title": "直线图元",
-    "remarks.text.0": "直线和圆弧线均为导线，对应画布的线条走线和圆弧走线",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.net": "网络名称",
-    "properties.layer": "层",
-    "properties.startX": "起始位置 X",
-    "properties.startY": "起始位置 Y",
-    "properties.endX": "终止位置 X",
-    "properties.endY": "终止位置 Y",
-    "properties.lineWidth": "线宽",
-    "properties.primitiveLock": "是否锁定"
+    "remarks.text.0": "直线和圆弧线均为导线，对应画布的线条走线和圆弧走线"
   },
   "title": null,
-  "remarks.text.0": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.net": null,
-  "properties.layer": null,
-  "properties.startX": null,
-  "properties.startY": null,
-  "properties.endX": null,
-  "properties.endY": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "remarks.text.0": null
 }

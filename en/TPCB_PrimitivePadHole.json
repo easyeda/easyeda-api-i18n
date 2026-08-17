@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "id": "TPCB_PrimitivePadHole",
+    "kind": "type",
+    "name": "TPCB_PrimitivePadHole",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.4"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.5"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.6"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.7"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "焊盘钻孔",
+    "remarks.text.0": "焊盘钻孔当前存在以下两种 {@link EPCB_PrimitivePadHoleType | 类型}：",
+    "remarks.text.1": "① 圆形",
+    "remarks.text.2": "`[EPCB_PrimitivePadHoleType.ROUND, diameter]`",
+    "remarks.text.3": "- `{number}` `diameter` - 直径",
+    "remarks.text.4": "② 插槽",
+    "remarks.text.5": "`[EPCB_PrimitivePadHoleType.SLOT, diameter, length]`",
+    "remarks.text.6": "- `{number}` `length` - 长度，长度不能小于直径,长度小于直径的话长度的值跟随直径",
+    "remarks.text.7": "- `{number}` `diameter` - 直径"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "remarks.text.3": null,
+  "remarks.text.4": null,
+  "remarks.text.5": null,
+  "remarks.text.6": null,
+  "remarks.text.7": null
+}

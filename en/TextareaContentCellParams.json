@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TextareaContentCellParams",
+    "kind": "interface",
+    "name": "TextareaContentCellParams",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "文本域内容单元格参数"
+  },
+  "title": null
+}

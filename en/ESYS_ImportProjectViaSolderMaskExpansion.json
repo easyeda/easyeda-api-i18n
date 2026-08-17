@@ -16,8 +16,12 @@
   },
   "_source": {
     "title": "导入工程过孔阻焊扩展",
-    "remarks.text.0": "仅 `fileType` 为 `Altium Designer` 或 `Protel` 时才可以指定该属性，否则将被忽略"
+    "remarks.text.0": "仅 `fileType` 为 `Altium Designer` 或 `Protel` 时才可以指定该属性，否则将被忽略",
+    "members.ALL_COVER_OIL": "全部盖油",
+    "members.FOLLOW_ORIGINAL_SETTING": "跟随源设置"
   },
   "title": null,
-  "remarks.text.0": null
+  "remarks.text.0": null,
+  "members.ALL_COVER_OIL": null,
+  "members.FOLLOW_ORIGINAL_SETTING": null
 }

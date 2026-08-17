@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "自动布线效果优先级"
+    "title": "自动布线效果优先级",
+    "members.COMPLETION": "优先布通率（尽可能完成所有网络）",
+    "members.FASTER": "优先布线速度"
   },
-  "title": null
+  "title": null,
+  "members.COMPLETION": null,
+  "members.FASTER": null
 }

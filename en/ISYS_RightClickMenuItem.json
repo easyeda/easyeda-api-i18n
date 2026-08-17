@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ISYS_RightClickMenuItem",
+    "kind": "interface",
+    "name": "ISYS_RightClickMenuItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "右键菜单项",
+    "properties.id": "菜单项 ID，不可重复",
+    "properties.title": "菜单项标题",
+    "properties.icon": "菜单项图标",
+    "properties.registerFn": "注册方法名称（需要在扩展入口文件导出该方法）",
+    "properties.menuItems": "子菜单项"
+  },
+  "title": null,
+  "properties.id": null,
+  "properties.title": null,
+  "properties.icon": null,
+  "properties.registerFn": null,
+  "properties.menuItems": null
+}

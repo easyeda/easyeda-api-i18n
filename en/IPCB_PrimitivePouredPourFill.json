@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePouredPourFill",
+    "kind": "interface",
+    "name": "IPCB_PrimitivePouredPourFill",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜填充区域",
+    "properties.path": "复杂多边形",
+    "properties.lineWidth": "线宽",
+    "properties.fill": "是否填充",
+    "properties.id": "ID"
+  },
+  "title": null,
+  "properties.path": null,
+  "properties.lineWidth": null,
+  "properties.fill": null,
+  "properties.id": null
+}

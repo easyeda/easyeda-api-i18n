@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "ISYS_LanguageKeyValuePairs",
+    "kind": "type",
+    "name": "ISYS_LanguageKeyValuePairs",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "语言数据键值对",
+    "remarks.text.0": "单一语言的数据"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

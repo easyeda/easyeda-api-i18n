@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "IPCB_NetClassItem",
+    "kind": "interface",
+    "name": "IPCB_NetClassItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "网络类属性",
+    "properties.name": "网络类名称",
+    "properties.nets": "网络名称数组",
+    "properties.color": "网络类颜色"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.nets": null,
+  "properties.color": null
+}

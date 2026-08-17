@@ -6,27 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "圆图元",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.centerX": "圆心 X",
-    "properties.centerY": "圆心 Y",
-    "properties.radius": "半径",
-    "properties.color": "颜色",
-    "properties.fillColor": "填充颜色",
-    "properties.lineWidth": "线宽",
-    "properties.lineType": "线型",
-    "properties.fillStyle": "填充样式"
+    "title": "圆图元"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.centerX": null,
-  "properties.centerY": null,
-  "properties.radius": null,
-  "properties.color": null,
-  "properties.fillColor": null,
-  "properties.lineWidth": null,
-  "properties.lineType": null,
-  "properties.fillStyle": null
+  "title": null
 }

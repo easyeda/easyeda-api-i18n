@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveAPI",
+    "kind": "interface",
+    "name": "IPCB_PrimitiveAPI",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PCB 图元接口"
+  },
+  "title": null
+}

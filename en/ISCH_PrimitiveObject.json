@@ -6,27 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "二进制内嵌对象图元",
-    "properties.async": "异步",
-    "properties.primitiveId": "图元 ID",
-    "properties.content": "对象内容",
-    "properties.startX": "起点坐标 X",
-    "properties.startY": "起点坐标 Y",
-    "properties.width": "宽度",
-    "properties.height": "高度",
-    "properties.rotation": "旋转角度",
-    "properties.mirror": "是否镜像",
-    "properties.fileName": "文件名称"
+    "title": "二进制内嵌对象图元"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.content": null,
-  "properties.startX": null,
-  "properties.startY": null,
-  "properties.width": null,
-  "properties.height": null,
-  "properties.rotation": null,
-  "properties.mirror": null,
-  "properties.fileName": null
+  "title": null
 }

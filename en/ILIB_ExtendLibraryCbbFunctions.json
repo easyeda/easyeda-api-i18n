@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ILIB_ExtendLibraryCbbFunctions",
+    "kind": "interface",
+    "name": "ILIB_ExtendLibraryCbbFunctions",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "外部库复用模块方法"
+  },
+  "title": null
+}

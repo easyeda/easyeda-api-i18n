@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "嘉立创贴片库类别"
+    "title": "嘉立创贴片库类别",
+    "members.STANDARD": "基础库",
+    "members.EXTEND": "扩展库"
   },
-  "title": null
+  "title": null,
+  "members.STANDARD": null,
+  "members.EXTEND": null
 }

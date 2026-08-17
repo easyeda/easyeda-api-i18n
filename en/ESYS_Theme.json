@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "主题"
+    "title": "主题",
+    "members.LIGHT": "浅色",
+    "members.DARK": "深色"
   },
-  "title": null
+  "title": null,
+  "members.LIGHT": null,
+  "members.DARK": null
 }

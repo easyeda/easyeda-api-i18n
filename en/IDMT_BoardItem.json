@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "IDMT_BoardItem",
+    "kind": "interface",
+    "name": "IDMT_BoardItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "板子属性",
+    "properties.itemType": "项目类型",
+    "properties.name": "板子名称",
+    "properties.schematic": "下属原理图",
+    "properties.pcb": "下属 PCB",
+    "properties.parentProjectUuid": "所属工程 UUID"
+  },
+  "title": null,
+  "properties.itemType": null,
+  "properties.name": null,
+  "properties.schematic": null,
+  "properties.pcb": null,
+  "properties.parentProjectUuid": null
+}

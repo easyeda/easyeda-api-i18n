@@ -6,7 +6,13 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "非激活层展示模式"
+    "title": "非激活层展示模式",
+    "members.NORMAL_BRIGHTNESS": "正常亮度",
+    "members.TURN_GRAY": "置灰",
+    "members.HIDE": "隐藏"
   },
-  "title": null
+  "title": null,
+  "members.NORMAL_BRIGHTNESS": null,
+  "members.TURN_GRAY": null,
+  "members.HIDE": null
 }

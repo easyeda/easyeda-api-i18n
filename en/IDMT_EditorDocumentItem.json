@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "IDMT_EditorDocumentItem",
+    "kind": "interface",
+    "name": "IDMT_EditorDocumentItem",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "编辑器文档对象",
+    "properties.documentType": "文档类型",
+    "properties.uuid": "文档 UUID",
+    "properties.tabId": "文档的标签页 ID",
+    "properties.parentProjectUuid": "文档所属工程 UUID",
+    "properties.parentLibraryUuid": "库文档所属库 UUID"
+  },
+  "title": null,
+  "properties.documentType": null,
+  "properties.uuid": null,
+  "properties.tabId": null,
+  "properties.parentProjectUuid": null,
+  "properties.parentLibraryUuid": null
+}

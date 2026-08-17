@@ -1,0 +1,9 @@
+{
+  "_meta": {
+    "id": "ListProps",
+    "kind": "interface",
+    "name": "ListProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {}
+}

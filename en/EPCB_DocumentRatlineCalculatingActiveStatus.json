@@ -7,8 +7,12 @@
   },
   "_source": {
     "title": "文档飞线计算功能状态",
-    "deprecated": "since EDA v4.2"
+    "deprecated": "since EDA v4.2",
+    "members.ACTIVE": "启用",
+    "members.INACTIVE": "停用"
   },
   "title": null,
-  "deprecated": null
+  "deprecated": null,
+  "members.ACTIVE": null,
+  "members.INACTIVE": null
 }

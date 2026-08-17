@@ -6,7 +6,15 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "引脚形状"
+    "title": "引脚形状",
+    "members.NONE": "无",
+    "members.INVERTED": "反向",
+    "members.CLOCK": "时钟",
+    "members.INVERTED_CLOCK": "反向时钟"
   },
-  "title": null
+  "title": null,
+  "members.NONE": null,
+  "members.INVERTED": null,
+  "members.CLOCK": null,
+  "members.INVERTED_CLOCK": null
 }

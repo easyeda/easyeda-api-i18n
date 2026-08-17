@@ -6,7 +6,11 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "PCB 板材类型"
+    "title": "PCB 板材类型",
+    "members.NORMAL": "普通板材",
+    "members.FPC": "FPC 软板"
   },
-  "title": null
+  "title": null,
+  "members.NORMAL": null,
+  "members.FPC": null
 }

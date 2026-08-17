@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ISCH_Primitive",
+    "kind": "interface",
+    "name": "ISCH_Primitive",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图图元"
+  },
+  "title": null
+}
