@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.getRegionRules",
+    "kind": "method",
+    "name": "getRegionRules",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取区域规则",
+    "returns": "- 当前 PCB 的所有区域规则"
+  },
+  "title": null,
+  "returns": null
+}

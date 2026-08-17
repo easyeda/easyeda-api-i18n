@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.setLayerColorConfiguration",
+    "kind": "method",
+    "name": "setLayerColorConfiguration",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置层颜色配置",
+    "params.colorConfiguration": "颜色配置",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.colorConfiguration": null,
+  "returns": null
+}

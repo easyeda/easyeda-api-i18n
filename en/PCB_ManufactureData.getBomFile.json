@@ -1,0 +1,75 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getBomFile",
+    "kind": "method",
+    "name": "getBomFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0"
+        },
+        {
+          "type": "code",
+          "content": "const bomFile = await eda.pcb_ManufactureData.getBomFile('MyBOM', 'xlsx');\nif (bomFile) {\nawait eda.sys_FileSystem.saveFile(bomFile);\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1"
+        },
+        {
+          "type": "code",
+          "content": "const bomFile = await eda.pcb_ManufactureData.getBomFile(\n'Custom_Production_BOM',\n'xlsx',\nundefined,\n[\n{ property: 'Add into BOM', includeValue: 'yes' },\n{ property: 'Convert to PCB', includeValue: 'yes' }\n],\n['No.', 'Quantity', 'Comment'],\n['Name', 'Device', 'Designator', 'Supplier'],\n[\n{ property: 'Designator', title: '位号', sort: 'asc', group: 'No', orderWeight: 10 },\n{ property: 'Quantity', title: '数量', sort: 'desc', group: 'Yes', orderWeight: 9 }\n]\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2"
+        },
+        {
+          "type": "code",
+          "content": "const csvBomFile = await eda.pcb_ManufactureData.getBomFile(\n'Simple_BOM',\n'csv',\nundefined,\n[{ property: 'Add into BOM', includeValue: 'yes' }],\n['No.', 'Quantity'],\n['Designator', 'Footprint', 'Value']\n);\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取 BOM 文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "使用默认配置导出 BOM",
+    "example.text.1": "自定义 BOM 过滤和列配置",
+    "example.text.2": "导出 CSV 格式 BOM",
+    "params.fileName": "文件名",
+    "params.fileType": "文件类型",
+    "params.template": "模板名称",
+    "params.filterOptions": "过滤规则，仅应包含需要启用的规则，`property` 为规则名称，`includeValue` 为匹配的值",
+    "params.statistics": "统计，包含所有需要启用的统计项的名称",
+    "params.property": "属性，包含所有需要启用的属性的名称",
+    "params.columns": "列的属性及排序，`title`、`sort`、`group`、`orderWeight` 不传入则取默认值，`null` 代表 **无** 或 **空**",
+    "returns": "BOM 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "params.fileName": null,
+  "params.fileType": null,
+  "params.template": null,
+  "params.filterOptions": null,
+  "params.statistics": null,
+  "params.property": null,
+  "params.columns": null,
+  "returns": null
+}

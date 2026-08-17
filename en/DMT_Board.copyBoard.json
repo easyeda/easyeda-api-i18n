@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Board.copyBoard",
+    "kind": "method",
+    "name": "copyBoard",
+    "className": "DMT_Board",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复制板子",
+    "params.sourceBoardName": "源板子名称",
+    "returns": "新板子名称，如若为 `undefined` 则复制失败"
+  },
+  "title": null,
+  "params.sourceBoardName": null,
+  "returns": null
+}

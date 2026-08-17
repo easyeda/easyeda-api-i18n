@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveText.setState_Content",
+    "kind": "method",
+    "name": "setState_Content",
+    "className": "ISCH_PrimitiveText",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：文本内容",
+    "params.content": "文本内容",
+    "returns": "文本图元对象"
+  },
+  "title": null,
+  "params.content": null,
+  "returns": null
+}

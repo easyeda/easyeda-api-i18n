@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveArc.getState_StartX",
+    "kind": "method",
+    "name": "getState_StartX",
+    "className": "IPCB_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：起始位置 X",
+    "returns": "起始位置 X"
+  },
+  "title": null,
+  "returns": null
+}

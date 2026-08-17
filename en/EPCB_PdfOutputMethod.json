@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PdfOutputMethod",
+    "kind": "enum",
+    "name": "EPCB_PdfOutputMethod",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PDF 输出方式"
+  },
+  "title": null
+}

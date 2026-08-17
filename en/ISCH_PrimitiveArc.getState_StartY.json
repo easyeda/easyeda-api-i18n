@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveArc.getState_StartY",
+    "kind": "method",
+    "name": "getState_StartY",
+    "className": "ISCH_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：起始点 Y",
+    "returns": "起始点 Y"
+  },
+  "title": null,
+  "returns": null
+}

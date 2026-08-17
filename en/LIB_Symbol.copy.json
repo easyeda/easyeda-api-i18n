@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "LIB_Symbol.copy",
+    "kind": "method",
+    "name": "copy",
+    "className": "LIB_Symbol",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复制符号",
+    "params.symbolUuid": "符号 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.targetLibraryUuid": "目标库 UUID",
+    "params.targetClassification": "目标库内的分类",
+    "params.newSymbolName": "新符号名称，如若目标库内存在重名符号将导致复制失败",
+    "returns": "目标库内新符号的 UUID"
+  },
+  "title": null,
+  "params.symbolUuid": null,
+  "params.libraryUuid": null,
+  "params.targetLibraryUuid": null,
+  "params.targetClassification": null,
+  "params.newSymbolName": null,
+  "returns": null
+}

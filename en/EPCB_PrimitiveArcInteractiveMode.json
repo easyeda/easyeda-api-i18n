@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveArcInteractiveMode",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveArcInteractiveMode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "圆弧交互模式"
+  },
+  "title": null
+}

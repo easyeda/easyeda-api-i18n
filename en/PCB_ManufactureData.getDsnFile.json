@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getDsnFile",
+    "kind": "method",
+    "name": "getDsnFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst dsnFile = await eda.pcb_ManufactureData.getDsnFile('AutoRoute_DSN');\nif (dsnFile) {\nawait eda.sys_FileSystem.saveFile(dsnFile);\n}\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取自动布线文件（DSN）",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "params.fileName": "文件名",
+    "returns": "自动布线 DSN 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileName": null,
+  "returns": null
+}

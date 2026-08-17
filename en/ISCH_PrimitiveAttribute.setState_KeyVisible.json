@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveAttribute.setState_KeyVisible",
+    "kind": "method",
+    "name": "setState_KeyVisible",
+    "className": "ISCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：键是否显示",
+    "params.keyVisible": "键是否显示",
+    "returns": "属性图元对象"
+  },
+  "title": null,
+  "params.keyVisible": null,
+  "returns": null
+}

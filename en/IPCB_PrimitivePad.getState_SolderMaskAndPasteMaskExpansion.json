@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.getState_SolderMaskAndPasteMaskExpansion",
+    "kind": "method",
+    "name": "getState_SolderMaskAndPasteMaskExpansion",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：阻焊/助焊扩展",
+    "returns": "阻焊/助焊扩展"
+  },
+  "title": null,
+  "returns": null
+}

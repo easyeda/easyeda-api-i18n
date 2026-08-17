@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePoured.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "PCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有覆铜填充图元",
+    "returns": "覆铜填充图元对象数组"
+  },
+  "title": null,
+  "returns": null
+}

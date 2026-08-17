@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_MouseEventType",
+    "kind": "enum",
+    "name": "EPCB_MouseEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "鼠标事件类型"
+  },
+  "title": null
+}

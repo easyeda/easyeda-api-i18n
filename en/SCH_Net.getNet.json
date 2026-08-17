@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "SCH_Net.getNet",
+    "kind": "method",
+    "name": "getNet",
+    "className": "SCH_Net",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取指定网络的详细信息",
+    "params.net": "网络名称",
+    "returns": "网络的详细信息, `undefined` 为不存在该网络"
+  },
+  "title": null,
+  "params.net": null,
+  "returns": null
+}

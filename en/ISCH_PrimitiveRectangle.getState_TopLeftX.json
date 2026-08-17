@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveRectangle.getState_TopLeftX",
+    "kind": "method",
+    "name": "getState_TopLeftX",
+    "className": "ISCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：左上点 X",
+    "returns": "左上点 X"
+  },
+  "title": null,
+  "returns": null
+}

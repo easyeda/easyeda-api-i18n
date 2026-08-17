@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.addNetToEqualLengthNetGroup",
+    "kind": "method",
+    "name": "addNetToEqualLengthNetGroup",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将网络添加到等长网络组",
+    "params.equalLengthNetGroupName": "等长网络组名称",
+    "params.net": "网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.equalLengthNetGroupName": null,
+  "params.net": null,
+  "returns": null
+}

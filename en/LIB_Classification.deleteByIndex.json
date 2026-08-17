@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.deleteByIndex",
+    "kind": "method",
+    "name": "deleteByIndex",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除指定索引的分类",
+    "params.classificationIndex": "分类索引",
+    "returns": "操作是否成功",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "params.classificationIndex": null,
+  "returns": null,
+  "deprecated": null
+}

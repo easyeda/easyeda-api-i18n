@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.modifyNetClassName",
+    "kind": "method",
+    "name": "modifyNetClassName",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改网络类的名称",
+    "params.originalNetClassName": "原网络类名称",
+    "params.netClassName": "新网络类名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.originalNetClassName": null,
+  "params.netClassName": null,
+  "returns": null
+}

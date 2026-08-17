@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveImage.reset",
+    "kind": "method",
+    "name": "reset",
+    "className": "IPCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将异步图元重置为当前画布状态",
+    "returns": "图像图元对象"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveArc.setState_ReferenceY",
+    "kind": "method",
+    "name": "setState_ReferenceY",
+    "className": "ISCH_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：参考点 Y",
+    "params.referenceY": "参考点 Y",
+    "returns": "圆弧图元对象"
+  },
+  "title": null,
+  "params.referenceY": null,
+  "returns": null
+}

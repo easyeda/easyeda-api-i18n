@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveEventType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图元事件类型"
+  },
+  "title": null
+}

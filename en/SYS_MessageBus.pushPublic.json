@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.pushPublic",
+    "kind": "method",
+    "name": "pushPublic",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "公共消息总线：推消息",
+    "remarks.text.0": "每个消息只有一个 Puller 可以收到",
+    "params.topic": "主题",
+    "params.message": "消息"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.topic": null,
+  "params.message": null
+}

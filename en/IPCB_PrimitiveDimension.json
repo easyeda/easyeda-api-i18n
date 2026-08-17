@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension",
+    "kind": "class",
+    "name": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "尺寸标注图元",
+    "properties.async": "异步",
+    "properties.primitiveId": "图元 ID",
+    "properties.dimensionType": "尺寸标注类型",
+    "properties.coordinateSet": "坐标集",
+    "properties.layer": "层",
+    "properties.unit": "单位",
+    "properties.lineWidth": "线宽",
+    "properties.precision": "精度",
+    "properties.textFollow": "文字跟随",
+    "properties.primitiveLock": "是否锁定"
+  },
+  "title": null,
+  "properties.async": null,
+  "properties.primitiveId": null,
+  "properties.dimensionType": null,
+  "properties.coordinateSet": null,
+  "properties.layer": null,
+  "properties.unit": null,
+  "properties.lineWidth": null,
+  "properties.precision": null,
+  "properties.textFollow": null,
+  "properties.primitiveLock": null
+}

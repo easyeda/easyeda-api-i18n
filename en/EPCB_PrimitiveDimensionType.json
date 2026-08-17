@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveDimensionType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveDimensionType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "尺寸标注类型"
+  },
+  "title": null
+}

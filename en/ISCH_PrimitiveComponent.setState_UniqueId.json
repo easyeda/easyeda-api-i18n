@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveComponent.setState_UniqueId",
+    "kind": "method",
+    "name": "setState_UniqueId",
+    "className": "ISCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：唯一 ID",
+    "params.uniqueId": "唯一 ID",
+    "returns": "器件图元对象"
+  },
+  "title": null,
+  "params.uniqueId": null,
+  "returns": null
+}

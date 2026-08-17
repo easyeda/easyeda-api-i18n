@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitivePinType",
+    "kind": "enum",
+    "name": "ESCH_PrimitivePinType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "引脚类型"
+  },
+  "title": null
+}

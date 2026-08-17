@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCircle.setState_CenterY",
+    "kind": "method",
+    "name": "setState_CenterY",
+    "className": "ISCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：圆心 Y",
+    "params.centerY": "圆心 Y",
+    "returns": "圆图元对象"
+  },
+  "title": null,
+  "params.centerY": null,
+  "returns": null
+}

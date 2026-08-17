@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getIpc2581CFile",
+    "kind": "method",
+    "name": "getIpc2581CFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取 IPC-2581C 文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "params.fileName": "文件名",
+    "returns": "IPC-2581C 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileName": null,
+  "returns": null
+}

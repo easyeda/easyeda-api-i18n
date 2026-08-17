@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图元类型"
+  },
+  "title": null
+}

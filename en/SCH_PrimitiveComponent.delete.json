@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveComponent.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "SCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除器件",
+    "params.primitiveIds": "器件的图元 ID 或器件图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

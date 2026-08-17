@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "SYS_Message.showToastMessage",
+    "kind": "method",
+    "name": "showToastMessage",
+    "className": "SYS_Message",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "显示吐司消息",
+    "params.message": "消息内容",
+    "params.messageType": "消息类型",
+    "params.timer": "自动关闭倒计时秒数，`0` 为不自动关闭",
+    "params.bottomPanel": "展开底部信息面板",
+    "params.buttonTitle": "回调按钮标题",
+    "params.buttonCallbackFn": "回调函数内容，字符串形式，会被自动解析并执行"
+  },
+  "title": null,
+  "params.message": null,
+  "params.messageType": null,
+  "params.timer": null,
+  "params.bottomPanel": null,
+  "params.buttonTitle": null,
+  "params.buttonCallbackFn": null
+}

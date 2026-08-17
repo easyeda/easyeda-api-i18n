@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension.getState_CoordinateSet",
+    "kind": "method",
+    "name": "getState_CoordinateSet",
+    "className": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：坐标集",
+    "returns": "坐标集"
+  },
+  "title": null,
+  "returns": null
+}

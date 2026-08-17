@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePolygon.done",
+    "kind": "method",
+    "name": "done",
+    "className": "ISCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将对图元的更改应用到画布",
+    "returns": "多边形图元对象"
+  },
+  "title": null,
+  "returns": null
+}

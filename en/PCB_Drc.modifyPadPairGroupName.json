@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.modifyPadPairGroupName",
+    "kind": "method",
+    "name": "modifyPadPairGroupName",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改焊盘对组的名称",
+    "params.originalPadPairGroupName": "原焊盘对组名称",
+    "params.padPairGroupName": "新焊盘对组名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.originalPadPairGroupName": null,
+  "params.padPairGroupName": null,
+  "returns": null
+}

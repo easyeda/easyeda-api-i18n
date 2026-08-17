@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveString.getState_Text",
+    "kind": "method",
+    "name": "getState_Text",
+    "className": "IPCB_PrimitiveString",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：文本内容",
+    "returns": "文本内容"
+  },
+  "title": null,
+  "returns": null
+}

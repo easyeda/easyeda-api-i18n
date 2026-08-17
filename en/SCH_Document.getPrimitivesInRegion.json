@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "id": "SCH_Document.getPrimitivesInRegion",
+    "kind": "method",
+    "name": "getPrimitivesInRegion",
+    "className": "SCH_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取区域内所有图元",
+    "remarks.text.0": "本接口仅会返回完全包含在区域内的图元，如果图元有部分位于区域外，将被忽略",
+    "params.left": "矩形框第一 X 坐标",
+    "params.right": "矩形框第二 X 坐标",
+    "params.top": "矩形框第一 Y 坐标",
+    "params.bottom": "矩形框第二 Y 坐标",
+    "returns": "区域内所有图元"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.left": null,
+  "params.right": null,
+  "params.top": null,
+  "params.bottom": null,
+  "returns": null
+}

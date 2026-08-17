@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveObject",
+    "kind": "class",
+    "name": "IPCB_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "二进制内嵌对象图元",
+    "properties.async": "异步",
+    "properties.primitiveId": "图元 ID",
+    "properties.layer": "层",
+    "properties.topLeftX": "左上点 X",
+    "properties.topLeftY": "左上点 Y",
+    "properties.binaryData": "二进制数据",
+    "properties.width": "宽",
+    "properties.height": "高",
+    "properties.rotation": "旋转角度",
+    "properties.mirror": "是否水平镜像",
+    "properties.fileName": "文件名",
+    "properties.primitiveLock": "是否锁定"
+  },
+  "title": null,
+  "properties.async": null,
+  "properties.primitiveId": null,
+  "properties.layer": null,
+  "properties.topLeftX": null,
+  "properties.topLeftY": null,
+  "properties.binaryData": null,
+  "properties.width": null,
+  "properties.height": null,
+  "properties.rotation": null,
+  "properties.mirror": null,
+  "properties.fileName": null,
+  "properties.primitiveLock": null
+}

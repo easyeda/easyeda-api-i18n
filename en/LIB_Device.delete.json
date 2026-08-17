@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_Device.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除器件",
+    "params.deviceUuid": "器件 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.deviceUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

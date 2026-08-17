@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePolyline.getState_PrimitiveId",
+    "kind": "method",
+    "name": "getState_PrimitiveId",
+    "className": "IPCB_PrimitivePolyline",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：图元 ID",
+    "returns": "图元 ID"
+  },
+  "title": null,
+  "returns": null
+}

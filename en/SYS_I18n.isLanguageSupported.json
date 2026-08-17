@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_I18n.isLanguageSupported",
+    "kind": "method",
+    "name": "isLanguageSupported",
+    "className": "SYS_I18n",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "检查语言是否受支持",
+    "params.language": "语言",
+    "returns": "是否受支持"
+  },
+  "title": null,
+  "params.language": null,
+  "returns": null
+}

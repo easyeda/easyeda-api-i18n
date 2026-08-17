@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.subscribePublic",
+    "kind": "method",
+    "name": "subscribePublic",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "公共消息总线：订阅消息",
+    "remarks.text.0": "持久性订阅消息",
+    "params.topic": "主题",
+    "params.callbackFn": "接收到消息后的回调",
+    "returns": "消息总线任务"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.topic": null,
+  "params.callbackFn": null,
+  "returns": null
+}

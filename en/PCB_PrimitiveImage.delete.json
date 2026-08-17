@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveImage.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除图像",
+    "params.primitiveIds": "图像的图元 ID 或图像图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

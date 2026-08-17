@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveViaType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveViaType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "过孔类型"
+  },
+  "title": null
+}

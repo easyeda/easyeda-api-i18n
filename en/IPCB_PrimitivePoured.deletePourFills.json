@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured.deletePourFills",
+    "kind": "method",
+    "name": "deletePourFills",
+    "className": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除覆铜填充区域",
+    "params.pourFillIds": "覆铜填充区域 ID",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.pourFillIds": null,
+  "returns": null
+}

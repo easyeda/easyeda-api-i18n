@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveAttribute.getState_ValueVisible",
+    "kind": "method",
+    "name": "getState_ValueVisible",
+    "className": "IPCB_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：Value 是否可见",
+    "returns": "Value 是否可见"
+  },
+  "title": null,
+  "returns": null
+}

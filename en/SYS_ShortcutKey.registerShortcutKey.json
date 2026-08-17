@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SYS_ShortcutKey.registerShortcutKey",
+    "kind": "method",
+    "name": "registerShortcutKey",
+    "className": "SYS_ShortcutKey",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "注册快捷键",
+    "params.shortcutKey": "快捷键，数组中包含多个元素则解析为组合快捷键，将按规则排序后存入缓存",
+    "params.title": "快捷键标题，快捷键的友好名称",
+    "params.callbackFn": "回调函数",
+    "returns": "注册操作是否成功",
+    "deprecated": "since EDA v4.2"
+  },
+  "title": null,
+  "params.shortcutKey": null,
+  "params.title": null,
+  "params.callbackFn": null,
+  "returns": null,
+  "deprecated": null
+}

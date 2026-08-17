@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "LIB_3DModel.create",
+    "kind": "method",
+    "name": "create",
+    "className": "LIB_3DModel",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "创建 3D 模型",
+    "remarks.text.0": "传入的 `modelFile` 可以为多个模型文件的压缩包，EDA 将会自动提取多个模型",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.modelFile": "3D 模型文件数据",
+    "params.classification": "分类",
+    "params.unit": "单位",
+    "returns": "创建的所有 3D 模型的 UUID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.libraryUuid": null,
+  "params.modelFile": null,
+  "params.classification": null,
+  "params.unit": null,
+  "returns": null
+}

@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.setAsDefaultPhysicalStackingConfiguration",
+    "kind": "method",
+    "name": "setAsDefaultPhysicalStackingConfiguration",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "设置为新建 PCB 默认物理叠层配置",
+    "remarks.text.0": "返回值为结果导向，重复设置相同的物理叠层为默认物理叠层也将返回 `true`",
+    "params.configurationName": "配置名称",
+    "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
+    "returns": "设置是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.configurationName": null,
+  "params.physicalProps": null,
+  "returns": null
+}

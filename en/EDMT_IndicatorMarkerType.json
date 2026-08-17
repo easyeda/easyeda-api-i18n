@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EDMT_IndicatorMarkerType",
+    "kind": "enum",
+    "name": "EDMT_IndicatorMarkerType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "指示标记类型"
+  },
+  "title": null
+}

@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "SYS_Dialog.createDesignPortal",
+    "kind": "method",
+    "name": "createDesignPortal",
+    "className": "SYS_Dialog",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "创建组件化弹出窗口的通信入口",
+    "remarks.text.0": "返回一个 IDesignPortal 对象，扩展结合 lc-editor-design-react 的 VirtualRender / 虚拟机组件使用。\n所有通信（发消息 + 收事件）均封装在对象内部。",
+    "returns": "实现 IDesignPortal 的通信对象"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

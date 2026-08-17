@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveRectangle.setState_TopLeftX",
+    "kind": "method",
+    "name": "setState_TopLeftX",
+    "className": "ISCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：左上点 X",
+    "params.topLeftX": "左上点 X",
+    "returns": "矩形图元对象"
+  },
+  "title": null,
+  "params.topLeftX": null,
+  "returns": null
+}

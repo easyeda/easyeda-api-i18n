@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PNL_Document.save",
+    "kind": "method",
+    "name": "save",
+    "className": "PNL_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "保存文档",
+    "returns": "保存操作是否成功，保存失败、上传失败等错误均返回 `false`"
+  },
+  "title": null,
+  "returns": null
+}

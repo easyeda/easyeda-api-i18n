@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.modifyDifferentialPairName",
+    "kind": "method",
+    "name": "modifyDifferentialPairName",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改差分对的名称",
+    "params.originalDifferentialPairName": "原差分对名称",
+    "params.differentialPairName": "新差分对名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.originalDifferentialPairName": null,
+  "params.differentialPairName": null,
+  "returns": null
+}

@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitivePin",
+    "kind": "class",
+    "name": "SCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 引脚图元类",
+    "remarks.text.0": "引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 {@link ISCH_PrimitiveComponentPin | 器件引脚图元}"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SCH_SelectControl.getCurrentMousePosition",
+    "kind": "method",
+    "name": "getCurrentMousePosition",
+    "className": "SCH_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取当前鼠标在画布上的位置",
+    "returns": "鼠标在画布上的位置，`undefined` 代表当前鼠标不在画布上"
+  },
+  "title": null,
+  "returns": null
+}

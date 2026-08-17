@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "ESYS_StartPageQuickStartItem",
+    "kind": "enum",
+    "name": "ESYS_StartPageQuickStartItem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "开始页快速启动项",
+    "remarks.text.0": "对应开始页快速启动模块中的各个项"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

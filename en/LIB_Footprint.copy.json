@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "LIB_Footprint.copy",
+    "kind": "method",
+    "name": "copy",
+    "className": "LIB_Footprint",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "复制封装",
+    "params.footprintUuid": "封装 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.targetLibraryUuid": "目标库 UUID",
+    "params.targetClassification": "目标库内的分类",
+    "params.newFootprintName": "新封装名称，如若目标库内存在重名封装将导致复制失败",
+    "returns": "目标库内新封装的 UUID"
+  },
+  "title": null,
+  "params.footprintUuid": null,
+  "params.libraryUuid": null,
+  "params.targetLibraryUuid": null,
+  "params.targetClassification": null,
+  "params.newFootprintName": null,
+  "returns": null
+}

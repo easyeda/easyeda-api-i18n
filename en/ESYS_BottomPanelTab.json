@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_BottomPanelTab",
+    "kind": "enum",
+    "name": "ESYS_BottomPanelTab",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "底部面板标签页"
+  },
+  "title": null
+}

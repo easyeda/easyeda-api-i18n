@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension.setState_CoordinateSet",
+    "kind": "method",
+    "name": "setState_CoordinateSet",
+    "className": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：坐标集",
+    "params.coordinateSet": "坐标集",
+    "returns": "尺寸标注图元对象"
+  },
+  "title": null,
+  "params.coordinateSet": null,
+  "returns": null
+}

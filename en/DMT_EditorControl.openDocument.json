@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.openDocument",
+    "kind": "method",
+    "name": "openDocument",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "打开文档",
+    "params.documentUuid": "文档 UUID，此处支持 {@link IDMT_SchematicItem.uuid}、{@link IDMT_SchematicPageItem.uuid}、{@link IDMT_PcbItem.uuid}、{@link IDMT_PanelItem.uuid} 作为输入",
+    "params.splitScreenId": "分屏 ID，即 {@link DMT_EditorControl.getSplitScreenTree} 方法获取到的 {@link IDMT_EditorSplitScreenItem.id}",
+    "returns": "标签页 ID，如若为 `undefined`，则打开文档失败"
+  },
+  "title": null,
+  "params.documentUuid": null,
+  "params.splitScreenId": null,
+  "returns": null
+}

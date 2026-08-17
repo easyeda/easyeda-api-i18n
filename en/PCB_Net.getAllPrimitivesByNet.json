@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "PCB_Net.getAllPrimitivesByNet",
+    "kind": "method",
+    "name": "getAllPrimitivesByNet",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取关联指定网络的所有图元",
+    "params.net": "网络名称",
+    "params.primitiveTypes": "图元类型数组，如若指定图元类型不存在网络属性，返回的数据将恒为空",
+    "returns": "图元对象数组"
+  },
+  "title": null,
+  "params.net": null,
+  "params.primitiveTypes": null,
+  "returns": null
+}

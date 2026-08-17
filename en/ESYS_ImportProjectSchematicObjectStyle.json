@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_ImportProjectSchematicObjectStyle",
+    "kind": "enum",
+    "name": "ESYS_ImportProjectSchematicObjectStyle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "导入工程原理图图元样式"
+  },
+  "title": null
+}

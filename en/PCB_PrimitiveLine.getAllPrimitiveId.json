@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveLine.getAllPrimitiveId",
+    "kind": "method",
+    "name": "getAllPrimitiveId",
+    "className": "PCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有直线的图元 ID",
+    "params.net": "网络名称",
+    "params.layer": "层",
+    "params.primitiveLock": "是否锁定",
+    "returns": "折线的图元 ID 数组"
+  },
+  "title": null,
+  "params.net": null,
+  "params.layer": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

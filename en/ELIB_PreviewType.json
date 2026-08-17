@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ELIB_PreviewType",
+    "kind": "enum",
+    "name": "ELIB_PreviewType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "预览视图类型"
+  },
+  "title": null
+}

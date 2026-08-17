@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Panel.deletePanel",
+    "kind": "method",
+    "name": "deletePanel",
+    "className": "DMT_Panel",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除面板",
+    "params.panelUuid": "面板 UUID",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.panelUuid": null,
+  "returns": null
+}

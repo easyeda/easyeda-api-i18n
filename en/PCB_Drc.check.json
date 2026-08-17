@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.check",
+    "kind": "method",
+    "name": "check",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "检查 DRC",
+    "params.strict": "是否严格检查，当前 PCB 统一为严格检查模式",
+    "params.userInterface": "是否显示 UI（呼出底部 DRC 窗口）",
+    "params.includeVerboseError": "是否在返回值中包含详细错误信息，如若为 `true`，则返回值将始终为数组",
+    "returns": "DRC 检查是否通过"
+  },
+  "title": null,
+  "params.strict": null,
+  "params.userInterface": null,
+  "params.includeVerboseError": null,
+  "returns": null
+}

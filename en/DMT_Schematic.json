@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "DMT_Schematic",
+    "kind": "class",
+    "name": "DMT_Schematic",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "文档树 / 原理图管理类",
+    "remarks.text.0": "在当前打开的工程内进行原理图管理的相关操作"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

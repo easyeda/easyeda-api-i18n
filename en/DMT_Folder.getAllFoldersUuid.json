@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "DMT_Folder.getAllFoldersUuid",
+    "kind": "method",
+    "name": "getAllFoldersUuid",
+    "className": "DMT_Folder",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取所有文件夹的 UUID",
+    "remarks.text.0": "本接口忽略层级信息，将会返回所有层级的文件夹的 UUID 并放置于一维数组中",
+    "params.teamUuid": "团队 UUID",
+    "returns": "文件夹 UUID 数组"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.teamUuid": null,
+  "returns": null
+}

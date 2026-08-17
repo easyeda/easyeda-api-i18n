@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveComponent.setState_Supplier",
+    "kind": "method",
+    "name": "setState_Supplier",
+    "className": "ISCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：供应商",
+    "params.supplier": "供应商",
+    "returns": "器件图元对象"
+  },
+  "title": null,
+  "params.supplier": null,
+  "returns": null
+}

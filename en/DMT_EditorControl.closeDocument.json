@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.closeDocument",
+    "kind": "method",
+    "name": "closeDocument",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "关闭文档",
+    "remarks.text.0": "如若文档尚未保存，执行此操作将会直接丢失所有未保存的数据，请在修改操作完成后首先执行 {@link SCH_Document.save}、{@link PCB_Document.save}、{@link PNL_Document.save} 保存数据",
+    "params.tabId": "标签页 ID，此处支持 {@link IDMT_SchematicPageItem.uuid}、{@link IDMT_PcbItem.uuid}、{@link IDMT_PanelItem.uuid} 作为输入",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.tabId": null,
+  "returns": null
+}

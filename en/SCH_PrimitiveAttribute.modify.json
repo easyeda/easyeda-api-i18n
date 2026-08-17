@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveAttribute.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "SCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改属性",
+    "params.primitiveId": "图元 ID",
+    "params.property": "修改参数",
+    "returns": "属性图元对象"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "params.property": null,
+  "returns": null
+}

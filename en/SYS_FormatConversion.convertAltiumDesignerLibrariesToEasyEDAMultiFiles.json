@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_FormatConversion.convertAltiumDesignerLibrariesToEasyEDAMultiFiles",
+    "kind": "method",
+    "name": "convertAltiumDesignerLibrariesToEasyEDAMultiFiles",
+    "className": "SYS_FormatConversion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "转换 Altium Designer 库到多个嘉立创库文件（每个器件一个文件）",
+    "params.file": "Altium Designer 库文件",
+    "returns": "多个嘉立创库文件"
+  },
+  "title": null,
+  "params.file": null,
+  "returns": null
+}

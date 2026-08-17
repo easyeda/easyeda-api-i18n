@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePolyline.convertToRegion",
+    "kind": "method",
+    "name": "convertToRegion",
+    "className": "IPCB_PrimitivePolyline",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "转换到：区域图元",
+    "returns": "区域图元对象"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_ToastMessageType",
+    "kind": "enum",
+    "name": "ESYS_ToastMessageType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "吐司消息类型"
+  },
+  "title": null
+}

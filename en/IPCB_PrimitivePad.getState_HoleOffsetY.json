@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.getState_HoleOffsetY",
+    "kind": "method",
+    "name": "getState_HoleOffsetY",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：孔偏移 Y",
+    "returns": "孔偏移 Y"
+  },
+  "title": null,
+  "returns": null
+}

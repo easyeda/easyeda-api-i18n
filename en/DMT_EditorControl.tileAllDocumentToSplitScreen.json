@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.tileAllDocumentToSplitScreen",
+    "kind": "method",
+    "name": "tileAllDocumentToSplitScreen",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "平铺所有文档",
+    "remarks.text.0": "仅当不存在子分屏时可用，将会自动为所有已打开的文档标签页创建分屏",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

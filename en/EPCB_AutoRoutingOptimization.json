@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_AutoRoutingOptimization",
+    "kind": "enum",
+    "name": "EPCB_AutoRoutingOptimization",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自动布线效果优先级"
+  },
+  "title": null
+}

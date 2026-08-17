@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "id": "LIB_SimulationModel.get",
+    "kind": "method",
+    "name": "get",
+    "className": "LIB_SimulationModel",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.167",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取仿真模型的所有属性",
+    "remarks.text.0": "注意：本接口仅私有化部署版本有效，如若在其他版本调用将始终 `throw Error`",
+    "params.simulationModelUuid": "仿真模型 UUID",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "仿真模型属性"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.simulationModelUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

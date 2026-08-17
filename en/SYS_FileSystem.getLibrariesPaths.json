@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "SYS_FileSystem.getLibrariesPaths",
+    "kind": "method",
+    "name": "getLibrariesPaths",
+    "className": "SYS_FileSystem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取库目录路径",
+    "remarks.text.0": "注意 1：本接口仅全离线客户端有效，在浏览器环境内调用将始终 `throw Error`",
+    "remarks.text.1": "注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "returns": "库目录路径数组"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "returns": null
+}

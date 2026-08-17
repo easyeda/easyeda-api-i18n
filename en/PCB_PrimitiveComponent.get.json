@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveComponent.get",
+    "kind": "method",
+    "name": "get",
+    "className": "PCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取器件",
+    "params.primitiveIds": "器件的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "器件图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

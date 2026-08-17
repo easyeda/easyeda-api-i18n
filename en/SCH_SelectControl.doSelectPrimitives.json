@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_SelectControl.doSelectPrimitives",
+    "kind": "method",
+    "name": "doSelectPrimitives",
+    "className": "SCH_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "使用图元 ID 选中图元",
+    "params.primitiveIds": "图元 ID",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

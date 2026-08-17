@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.selectLayer",
+    "kind": "method",
+    "name": "selectLayer",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "选中图层",
+    "params.layer": "层",
+    "returns": "操作是否成功，不存在指定层将返回 `false`"
+  },
+  "title": null,
+  "params.layer": null,
+  "returns": null
+}

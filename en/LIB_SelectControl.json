@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "LIB_SelectControl",
+    "kind": "class",
+    "name": "LIB_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库 / 选择控制类"
+  },
+  "title": null
+}

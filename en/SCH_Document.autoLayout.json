@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SCH_Document.autoLayout",
+    "kind": "method",
+    "name": "autoLayout",
+    "className": "SCH_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "自动布局",
+    "remarks.text.0": "如不传入任何参数，将对所有器件进行自动布局",
+    "params.props": "自动布局参数",
+    "returns": "自动布局结果"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.props": null,
+  "returns": null
+}

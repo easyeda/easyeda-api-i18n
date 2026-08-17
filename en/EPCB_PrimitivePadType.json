@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitivePadType",
+    "kind": "enum",
+    "name": "EPCB_PrimitivePadType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "焊盘类型"
+  },
+  "title": null
+}

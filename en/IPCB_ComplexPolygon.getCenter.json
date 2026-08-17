@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_ComplexPolygon.getCenter",
+    "kind": "method",
+    "name": "getCenter",
+    "className": "IPCB_ComplexPolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取复杂多边形中心点",
+    "returns": "复杂多边形中心点"
+  },
+  "title": null,
+  "returns": null
+}

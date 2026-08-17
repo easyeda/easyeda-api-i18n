@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveArc",
+    "kind": "class",
+    "name": "IPCB_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "圆弧线图元",
+    "remarks.text.0": "直线和圆弧线均为导线，对应画布的线条走线和圆弧走线",
+    "properties.async": "异步",
+    "properties.primitiveId": "图元 ID",
+    "properties.net": "网络名称",
+    "properties.layer": "层",
+    "properties.startX": "起始位置 X",
+    "properties.startY": "起始位置 Y",
+    "properties.endX": "终止位置 X",
+    "properties.endY": "终止位置 Y",
+    "properties.arcAngle": "圆弧角度",
+    "properties.lineWidth": "线宽",
+    "properties.interactiveMode": "交互模式",
+    "properties.primitiveLock": "是否锁定"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.async": null,
+  "properties.primitiveId": null,
+  "properties.net": null,
+  "properties.layer": null,
+  "properties.startX": null,
+  "properties.startY": null,
+  "properties.endX": null,
+  "properties.endY": null,
+  "properties.arcAngle": null,
+  "properties.lineWidth": null,
+  "properties.interactiveMode": null,
+  "properties.primitiveLock": null
+}

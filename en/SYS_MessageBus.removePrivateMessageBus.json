@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.removePrivateMessageBus",
+    "kind": "method",
+    "name": "removePrivateMessageBus",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "移除私有消息总线",
+    "remarks.text.0": "一般无需调用该方法，除非你知道自己在做什么"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

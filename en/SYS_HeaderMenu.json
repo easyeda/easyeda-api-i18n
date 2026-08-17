@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "SYS_HeaderMenu",
+    "kind": "class",
+    "name": "SYS_HeaderMenu",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "系统 / 顶部菜单类",
+    "properties.extensionUuid": "扩展 UUID"
+  },
+  "title": null,
+  "properties.extensionUuid": null
+}

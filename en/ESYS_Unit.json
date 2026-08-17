@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_Unit",
+    "kind": "enum",
+    "name": "ESYS_Unit",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单位"
+  },
+  "title": null
+}

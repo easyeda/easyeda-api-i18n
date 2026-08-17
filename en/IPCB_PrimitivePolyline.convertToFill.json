@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePolyline.convertToFill",
+    "kind": "method",
+    "name": "convertToFill",
+    "className": "IPCB_PrimitivePolyline",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "转换到：填充图元",
+    "returns": "填充图元对象"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_Primitive.getPrimitivesBBox",
+    "kind": "method",
+    "name": "getPrimitivesBBox",
+    "className": "SCH_Primitive",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取图元的 BBox",
+    "params.primitiveIds": "图元 ID 数组或图元对象数组",
+    "returns": "图元的 BBox，如若图元不存在或没有 BBox，将会返回 `undefined` 的结果"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

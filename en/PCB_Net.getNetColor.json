@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Net.getNetColor",
+    "kind": "method",
+    "name": "getNetColor",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取指定网络的颜色",
+    "params.net": "网络名称",
+    "returns": "网络颜色，`undefined` 为不存在该网络"
+  },
+  "title": null,
+  "params.net": null,
+  "returns": null
+}

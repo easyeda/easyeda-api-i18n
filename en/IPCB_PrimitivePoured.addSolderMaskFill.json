@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured.addSolderMaskFill",
+    "kind": "method",
+    "name": "addSolderMaskFill",
+    "className": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "添加：阻焊区域",
+    "returns": "阻焊区域填充图元对象，无法转换或 ID 错误将返回 `undefined`"
+  },
+  "title": null,
+  "returns": null
+}

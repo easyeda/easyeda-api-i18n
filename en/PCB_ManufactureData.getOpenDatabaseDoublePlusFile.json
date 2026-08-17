@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getOpenDatabaseDoublePlusFile",
+    "kind": "method",
+    "name": "getOpenDatabaseDoublePlusFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0"
+        },
+        {
+          "type": "code",
+          "content": "const odbFile = await eda.pcb_ManufactureData.getOpenDatabaseDoublePlusFile(\n'MyBoard_ODB',\nESYS_Unit.INCH,\n{\nmetallizedDrilledHoles: true,\nnonMetallizedDrilledHoles: true,\ndrillTable: true,\nflyingProbeTestFile: false\n}\n);\nif (odbFile) {\nawait eda.sys_FileSystem.saveFile(odbFile);\n}\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取 ODB++ 文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "导出 ODB++ 文件，自定义单位和选项",
+    "params.fileName": "文件名",
+    "params.unit": "单位",
+    "params.otherData": "其它",
+    "params.layers": "导出层，默认则按照嘉立创生产需求导出",
+    "params.objects": "导出对象，默认则按照嘉立创生产需求导出",
+    "returns": "ODB++ 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "example.text.0": null,
+  "params.fileName": null,
+  "params.unit": null,
+  "params.otherData": null,
+  "params.layers": null,
+  "params.objects": null,
+  "returns": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.getCurrentRuleConfiguration",
+    "kind": "method",
+    "name": "getCurrentRuleConfiguration",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取当前设计规则配置",
+    "returns": "当前设计规则配置，`undefined` 为获取失败"
+  },
+  "title": null,
+  "returns": null
+}

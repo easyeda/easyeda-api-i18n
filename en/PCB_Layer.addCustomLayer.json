@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.addCustomLayer",
+    "kind": "method",
+    "name": "addCustomLayer",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "新增自定义层",
+    "returns": "新增的自定义层的图层 ID，如若为 `undefined` 则为新增失败，可能是自定义层数量已达到上限"
+  },
+  "title": null,
+  "returns": null
+}

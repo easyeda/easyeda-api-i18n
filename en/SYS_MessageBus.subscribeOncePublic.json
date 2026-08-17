@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus.subscribeOncePublic",
+    "kind": "method",
+    "name": "subscribeOncePublic",
+    "className": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "公共消息总线：订阅单次消息",
+    "params.topic": "主题",
+    "params.callbackFn": "接收到消息后的回调",
+    "returns": "消息总线任务"
+  },
+  "title": null,
+  "params.topic": null,
+  "params.callbackFn": null,
+  "returns": null
+}

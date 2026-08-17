@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveRegion.getState_ComplexPolygon",
+    "kind": "method",
+    "name": "getState_ComplexPolygon",
+    "className": "IPCB_PrimitiveRegion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：复杂多边形",
+    "returns": "复杂多边形"
+  },
+  "title": null,
+  "returns": null
+}

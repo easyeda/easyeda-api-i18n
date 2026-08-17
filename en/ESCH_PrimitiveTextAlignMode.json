@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveTextAlignMode",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveTextAlignMode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "文本对齐模式"
+  },
+  "title": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.deletePadPairGroup",
+    "kind": "method",
+    "name": "deletePadPairGroup",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除焊盘对组",
+    "params.padPairGroupName": "焊盘对组名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.padPairGroupName": null,
+  "returns": null
+}

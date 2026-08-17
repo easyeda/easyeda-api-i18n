@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.getIndexByName",
+    "kind": "method",
+    "name": "getIndexByName",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取指定名称的分类的分类索引",
+    "remarks.text.0": "分类索引内包含分类的 UUID，具体可查阅 {@link ILIB_ClassificationIndex}",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "params.primaryClassificationName": "一级分类名称",
+    "params.secondaryClassificationName": "二级分类名称",
+    "returns": "分类索引",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "params.primaryClassificationName": null,
+  "params.secondaryClassificationName": null,
+  "returns": null,
+  "deprecated": null
+}

@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "DMT_Project.openProject",
+    "kind": "method",
+    "name": "openProject",
+    "className": "DMT_Project",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "打开工程",
+    "remarks.text.0": "本操作将会在 EDA 前端打开指定工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据",
+    "params.projectUuid": "工程 UUID",
+    "returns": "是否成功打开工程"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.projectUuid": null,
+  "returns": null
+}

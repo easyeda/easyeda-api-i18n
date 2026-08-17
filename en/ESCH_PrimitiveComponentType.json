@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveComponentType",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveComponentType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "器件类型"
+  },
+  "title": null
+}

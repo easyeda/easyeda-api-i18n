@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject.setState_Height",
+    "kind": "method",
+    "name": "setState_Height",
+    "className": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：高度",
+    "params.height": "高度",
+    "returns": "二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "params.height": null,
+  "returns": null
+}

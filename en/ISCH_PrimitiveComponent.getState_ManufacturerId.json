@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveComponent.getState_ManufacturerId",
+    "kind": "method",
+    "name": "getState_ManufacturerId",
+    "className": "ISCH_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：制造商编号",
+    "returns": "制造商编号"
+  },
+  "title": null,
+  "returns": null
+}

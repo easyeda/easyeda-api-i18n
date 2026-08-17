@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "LIB_Symbol.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "LIB_Symbol",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "修改符号",
+    "remarks.text.0": "如希望清除某些属性，则将其的值设置为 `null`",
+    "params.symbolUuid": "符号 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.symbolName": "符号名称",
+    "params.classification": "分类",
+    "params.description": "描述",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.symbolUuid": null,
+  "params.libraryUuid": null,
+  "params.symbolName": null,
+  "params.classification": null,
+  "params.description": null,
+  "returns": null
+}

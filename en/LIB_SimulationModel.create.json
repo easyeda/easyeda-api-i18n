@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "LIB_SimulationModel.create",
+    "kind": "method",
+    "name": "create",
+    "className": "LIB_SimulationModel",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.167",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "创建仿真模型",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.model": "仿真模型数据",
+    "params.classification": "分类",
+    "params.description": "描述",
+    "returns": "仿真模型 UUID"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.model": null,
+  "params.classification": null,
+  "params.description": null,
+  "returns": null
+}

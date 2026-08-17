@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveArc.get",
+    "kind": "method",
+    "name": "get",
+    "className": "PCB_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取圆弧线",
+    "params.primitiveIds": "圆弧线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "圆弧线图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

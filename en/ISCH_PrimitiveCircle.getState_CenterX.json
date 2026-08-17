@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCircle.getState_CenterX",
+    "kind": "method",
+    "name": "getState_CenterX",
+    "className": "ISCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：圆心 X",
+    "returns": "圆心 X"
+  },
+  "title": null,
+  "returns": null
+}

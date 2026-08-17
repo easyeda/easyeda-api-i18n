@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "SYS_Window.getViewportSize",
+    "kind": "method",
+    "name": "getViewportSize",
+    "className": "SYS_Window",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.162",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取页面当前视口大小",
+    "returns": "视口宽高（单位：像素）"
+  },
+  "title": null,
+  "returns": null
+}

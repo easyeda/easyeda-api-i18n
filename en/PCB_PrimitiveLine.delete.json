@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveLine.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除直线",
+    "params.primitiveIds": "直线的图元 ID 或直线图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

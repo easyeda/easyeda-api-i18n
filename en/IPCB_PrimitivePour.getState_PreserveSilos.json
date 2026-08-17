@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.getState_PreserveSilos",
+    "kind": "method",
+    "name": "getState_PreserveSilos",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否保留孤岛",
+    "returns": "是否保留孤岛"
+  },
+  "title": null,
+  "returns": null
+}

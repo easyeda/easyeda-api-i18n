@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Net.highlightNet",
+    "kind": "method",
+    "name": "highlightNet",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "高亮网络",
+    "remarks.text.0": "本接口的返回值为结果导向，如果该网络原先已高亮，也将返回 `true`",
+    "params.net": "网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.net": null,
+  "returns": null
+}

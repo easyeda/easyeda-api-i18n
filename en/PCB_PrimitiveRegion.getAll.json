@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveRegion.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "PCB_PrimitiveRegion",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有区域",
+    "params.layer": "层",
+    "params.ruleType": "区域规则类型，只会匹配所有规则类型均一致的图元",
+    "params.primitiveLock": "是否锁定",
+    "returns": "区域图元对象数组"
+  },
+  "title": null,
+  "params.layer": null,
+  "params.ruleType": null,
+  "params.primitiveLock": null,
+  "returns": null
+}

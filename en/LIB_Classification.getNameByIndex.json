@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.getNameByIndex",
+    "kind": "method",
+    "name": "getNameByIndex",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取指定索引的分类的名称",
+    "params.classificationIndex": "分类索引",
+    "returns": "两级分类的名称",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "params.classificationIndex": null,
+  "returns": null,
+  "deprecated": null
+}

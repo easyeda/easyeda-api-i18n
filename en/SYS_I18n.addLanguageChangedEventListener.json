@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_I18n.addLanguageChangedEventListener",
+    "kind": "method",
+    "name": "addLanguageChangedEventListener",
+    "className": "SYS_I18n",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "新增语言切换事件监听",
+    "params.id": "事件 ID，用以防止重复注册事件",
+    "params.callFn": "事件触发时的回调函数"
+  },
+  "title": null,
+  "params.id": null,
+  "params.callFn": null
+}

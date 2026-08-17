@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCircle.getState_LineType",
+    "kind": "method",
+    "name": "getState_LineType",
+    "className": "ISCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：线型",
+    "returns": "线型"
+  },
+  "title": null,
+  "returns": null
+}

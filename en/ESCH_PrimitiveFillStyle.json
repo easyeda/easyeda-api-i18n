@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveFillStyle",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveFillStyle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "填充样式"
+  },
+  "title": null
+}

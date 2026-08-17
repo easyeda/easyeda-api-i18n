@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveText",
+    "kind": "class",
+    "name": "SCH_PrimitiveText",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 文本图元类"
+  },
+  "title": null
+}

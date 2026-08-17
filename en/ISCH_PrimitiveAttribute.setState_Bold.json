@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveAttribute.setState_Bold",
+    "kind": "method",
+    "name": "setState_Bold",
+    "className": "ISCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：是否加粗",
+    "params.bold": "是否加粗",
+    "returns": "属性图元对象"
+  },
+  "title": null,
+  "params.bold": null,
+  "returns": null
+}

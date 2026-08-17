@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCircle.getState_FillColor",
+    "kind": "method",
+    "name": "getState_FillColor",
+    "className": "ISCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：填充颜色",
+    "returns": "填充颜色"
+  },
+  "title": null,
+  "returns": null
+}

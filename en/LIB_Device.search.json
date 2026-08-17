@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "LIB_Device.search",
+    "kind": "method",
+    "name": "search",
+    "className": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "搜索器件",
+    "params.key": "搜索关键字",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.classification": "分类，默认为全部",
+    "params.symbolType": "符号类型，默认为全部",
+    "params.itemsOfPage": "一页搜索结果的数量",
+    "params.page": "页数",
+    "returns": "搜索到的器件属性的列表"
+  },
+  "title": null,
+  "params.key": null,
+  "params.libraryUuid": null,
+  "params.classification": null,
+  "params.symbolType": null,
+  "params.itemsOfPage": null,
+  "params.page": null,
+  "returns": null
+}

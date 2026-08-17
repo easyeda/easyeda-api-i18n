@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_AutoRoutingExistingPrimitiveMode",
+    "kind": "enum",
+    "name": "EPCB_AutoRoutingExistingPrimitiveMode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自动布线对已有导线/过孔的处理方式"
+  },
+  "title": null
+}

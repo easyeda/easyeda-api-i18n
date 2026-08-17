@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.generateIndicatorMarkers",
+    "kind": "method",
+    "name": "generateIndicatorMarkers",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "生成指示标记",
+    "remarks.text.0": "指示标记外形数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil",
+    "params.markers": "指示标记外形对象数组",
+    "params.color": "指示标记颜色",
+    "params.lineWidth": "线宽",
+    "params.zoom": "是否定位并缩放",
+    "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
+    "returns": "指示标记生成是否成功，`false` 表示画布不支持该操作或 `tabId` 不存在"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.markers": null,
+  "params.color": null,
+  "params.lineWidth": null,
+  "params.zoom": null,
+  "params.tabId": null,
+  "returns": null
+}

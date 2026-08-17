@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "LIB_3DModel",
+    "kind": "class",
+    "name": "LIB_3DModel",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库 / 3D 模型类"
+  },
+  "title": null
+}

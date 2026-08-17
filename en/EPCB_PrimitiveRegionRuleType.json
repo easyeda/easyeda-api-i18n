@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveRegionRuleType",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveRegionRuleType",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "区域图元区域规则类型",
+    "remarks.text.0": "{@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE | FOLLOW_REGION_RULE} 即为约束区域"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_Timer.clearTimeoutTimer",
+    "kind": "method",
+    "name": "clearTimeoutTimer",
+    "className": "SYS_Timer",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "清除指定单次定时器",
+    "params.id": "定时器 ID",
+    "returns": "定时器是否清除成功"
+  },
+  "title": null,
+  "params.id": null,
+  "returns": null
+}

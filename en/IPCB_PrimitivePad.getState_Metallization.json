@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePad.getState_Metallization",
+    "kind": "method",
+    "name": "getState_Metallization",
+    "className": "IPCB_PrimitivePad",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否金属化孔壁",
+    "returns": "是否金属化孔壁"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveFill.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitiveFill",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除填充",
+    "params.primitiveIds": "填充的图元 ID 或填充图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

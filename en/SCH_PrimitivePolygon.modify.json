@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitivePolygon.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "SCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改多边形",
+    "params.primitiveId": "图元 ID",
+    "params.property": "修改参数",
+    "returns": "多边形图元对象"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "params.property": null,
+  "returns": null
+}

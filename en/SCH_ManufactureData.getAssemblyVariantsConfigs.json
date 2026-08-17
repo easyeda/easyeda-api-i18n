@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.getAssemblyVariantsConfigs",
+    "kind": "method",
+    "name": "getAssemblyVariantsConfigs",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取装配体变量配置列表",
+    "returns": "装配体变量配置列表"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_RightPanelTab",
+    "kind": "enum",
+    "name": "ESYS_RightPanelTab",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "右侧面板标签页"
+  },
+  "title": null
+}

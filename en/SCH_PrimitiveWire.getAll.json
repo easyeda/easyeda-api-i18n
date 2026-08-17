@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveWire.getAll",
+    "kind": "method",
+    "name": "getAll",
+    "className": "SCH_PrimitiveWire",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有导线",
+    "params.net": "网络名称",
+    "returns": "导线图元对象数组"
+  },
+  "title": null,
+  "params.net": null,
+  "returns": null
+}

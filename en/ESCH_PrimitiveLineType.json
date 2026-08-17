@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_PrimitiveLineType",
+    "kind": "enum",
+    "name": "ESCH_PrimitiveLineType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "线型"
+  },
+  "title": null
+}

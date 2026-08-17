@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_LayerId",
+    "kind": "enum",
+    "name": "EPCB_LayerId",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图层 ID"
+  },
+  "title": null
+}

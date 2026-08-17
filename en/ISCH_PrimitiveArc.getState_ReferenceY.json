@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveArc.getState_ReferenceY",
+    "kind": "method",
+    "name": "getState_ReferenceY",
+    "className": "ISCH_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：参考点 Y",
+    "returns": "参考点 Y"
+  },
+  "title": null,
+  "returns": null
+}

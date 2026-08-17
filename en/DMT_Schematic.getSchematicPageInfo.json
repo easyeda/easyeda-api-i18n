@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Schematic.getSchematicPageInfo",
+    "kind": "method",
+    "name": "getSchematicPageInfo",
+    "className": "DMT_Schematic",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取原理图图页的详细属性",
+    "params.schematicPageUuid": "原理图图页 UUID",
+    "returns": "原理图图页的详细属性，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "params.schematicPageUuid": null,
+  "returns": null
+}

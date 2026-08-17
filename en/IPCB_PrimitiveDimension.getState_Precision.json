@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension.getState_Precision",
+    "kind": "method",
+    "name": "getState_Precision",
+    "className": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：精度",
+    "returns": "精度"
+  },
+  "title": null,
+  "returns": null
+}

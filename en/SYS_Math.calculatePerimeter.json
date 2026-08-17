@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_Math.calculatePerimeter",
+    "kind": "method",
+    "name": "calculatePerimeter",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "计算多边形周长",
+    "params.polygon": "多边形",
+    "returns": "周长"
+  },
+  "title": null,
+  "params.polygon": null,
+  "returns": null
+}

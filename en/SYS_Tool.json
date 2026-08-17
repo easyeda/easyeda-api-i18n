@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SYS_Tool",
+    "kind": "class",
+    "name": "SYS_Tool",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "系统 / 工具类"
+  },
+  "title": null
+}

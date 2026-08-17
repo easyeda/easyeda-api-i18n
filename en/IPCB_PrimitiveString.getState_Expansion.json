@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveString.getState_Expansion",
+    "kind": "method",
+    "name": "getState_Expansion",
+    "className": "IPCB_PrimitiveString",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：反相扩展",
+    "returns": "反相扩展"
+  },
+  "title": null,
+  "returns": null
+}

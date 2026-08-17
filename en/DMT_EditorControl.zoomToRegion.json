@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.zoomToRegion",
+    "kind": "method",
+    "name": "zoomToRegion",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "缩放到区域",
+    "remarks.text.0": "在原理图、符号画布坐标单位跨度为 0.01inch，在 PCB、封装画布坐标单位跨度为 mil",
+    "params.left": "矩形框第一 X 坐标",
+    "params.right": "矩形框第二 X 坐标",
+    "params.top": "矩形框第一 Y 坐标",
+    "params.bottom": "矩形框第二 Y 坐标",
+    "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.left": null,
+  "params.right": null,
+  "params.top": null,
+  "params.bottom": null,
+  "params.tabId": null,
+  "returns": null
+}

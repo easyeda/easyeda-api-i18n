@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour",
+    "kind": "class",
+    "name": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜边框图元",
+    "properties.async": "异步",
+    "properties.primitiveId": "图元 ID",
+    "properties.net": "网络名称",
+    "properties.layer": "层",
+    "properties.complexPolygon": "复杂多边形",
+    "properties.pourFillMethod": "覆铜填充方法",
+    "properties.preserveSilos": "是否保留孤岛",
+    "properties.pourName": "覆铜边框名称",
+    "properties.pourPriority": "覆铜优先级",
+    "properties.lineWidth": "线宽",
+    "properties.primitiveLock": "是否锁定"
+  },
+  "title": null,
+  "properties.async": null,
+  "properties.primitiveId": null,
+  "properties.net": null,
+  "properties.layer": null,
+  "properties.complexPolygon": null,
+  "properties.pourFillMethod": null,
+  "properties.preserveSilos": null,
+  "properties.pourName": null,
+  "properties.pourPriority": null,
+  "properties.lineWidth": null,
+  "properties.primitiveLock": null
+}

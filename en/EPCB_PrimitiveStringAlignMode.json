@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveStringAlignMode",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveStringAlignMode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "文本对齐模式"
+  },
+  "title": null
+}

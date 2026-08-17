@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ELIB_LibraryType",
+    "kind": "enum",
+    "name": "ELIB_LibraryType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库库类型"
+  },
+  "title": null
+}

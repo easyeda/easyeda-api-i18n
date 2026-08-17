@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePolygon.getState_Color",
+    "kind": "method",
+    "name": "getState_Color",
+    "className": "ISCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：颜色",
+    "returns": "颜色"
+  },
+  "title": null,
+  "returns": null
+}

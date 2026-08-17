@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Math.bboxIntersects",
+    "kind": "method",
+    "name": "bboxIntersects",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "快速判断两个 BBox 是否相交",
+    "params.bbox1": "BBox 1",
+    "params.bbox2": "BBox 2",
+    "returns": "是否相交"
+  },
+  "title": null,
+  "params.bbox1": null,
+  "params.bbox2": null,
+  "returns": null
+}

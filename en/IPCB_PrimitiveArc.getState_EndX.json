@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveArc.getState_EndX",
+    "kind": "method",
+    "name": "getState_EndX",
+    "className": "IPCB_PrimitiveArc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：终止位置 X",
+    "returns": "终止位置 X"
+  },
+  "title": null,
+  "returns": null
+}

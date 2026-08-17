@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Unit.milToInch",
+    "kind": "method",
+    "name": "milToInch",
+    "className": "SYS_Unit",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单位转换：密尔到英寸",
+    "params.mil": "输入密尔数",
+    "params.numberOfDecimals": "保留小数位数，默认为 `4`",
+    "returns": "输出英寸数"
+  },
+  "title": null,
+  "params.mil": null,
+  "params.numberOfDecimals": null,
+  "returns": null
+}

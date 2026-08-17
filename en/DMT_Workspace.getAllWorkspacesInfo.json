@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "DMT_Workspace.getAllWorkspacesInfo",
+    "kind": "method",
+    "name": "getAllWorkspacesInfo",
+    "className": "DMT_Workspace",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有工作区的详细属性",
+    "returns": "所有工作区的详细属性"
+  },
+  "title": null,
+  "returns": null
+}

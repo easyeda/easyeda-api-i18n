@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Document.stopCalculatingRatline",
+    "kind": "method",
+    "name": "stopCalculatingRatline",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "停止飞线计算功能",
+    "returns": "操作是否成功",
+    "deprecated": "since EDA v4.2"
+  },
+  "title": null,
+  "returns": null,
+  "deprecated": null
+}

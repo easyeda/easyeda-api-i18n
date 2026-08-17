@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCircle.getState_Radius",
+    "kind": "method",
+    "name": "getState_Radius",
+    "className": "ISCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：半径",
+    "returns": "半径"
+  },
+  "title": null,
+  "returns": null
+}

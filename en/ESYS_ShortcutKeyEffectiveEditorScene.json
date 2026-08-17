@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_ShortcutKeyEffectiveEditorScene",
+    "kind": "enum",
+    "name": "ESYS_ShortcutKeyEffectiveEditorScene",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "快捷键生效场景范围"
+  },
+  "title": null
+}

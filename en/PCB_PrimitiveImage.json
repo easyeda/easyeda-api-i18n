@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveImage",
+    "kind": "class",
+    "name": "PCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PCB & 封装 / 图像图元类"
+  },
+  "title": null
+}

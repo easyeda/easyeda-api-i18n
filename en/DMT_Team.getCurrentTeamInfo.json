@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "DMT_Team.getCurrentTeamInfo",
+    "kind": "method",
+    "name": "getCurrentTeamInfo",
+    "className": "DMT_Team",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取当前团队的详细属性",
+    "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的所属团队的详细属性",
+    "returns": "团队的详细属性，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

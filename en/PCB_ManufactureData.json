@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData",
+    "kind": "class",
+    "name": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "PCB & 封装 / 生产资料类",
+    "remarks.text.0": "获取当前 PCB 的生产资料文件及快捷下单"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

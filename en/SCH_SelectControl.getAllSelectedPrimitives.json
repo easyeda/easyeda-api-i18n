@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SCH_SelectControl.getAllSelectedPrimitives",
+    "kind": "method",
+    "name": "getAllSelectedPrimitives",
+    "className": "SCH_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "查询所有已选中图元的图元对象",
+    "returns": "所有已选中图元的图元对象"
+  },
+  "title": null,
+  "returns": null
+}

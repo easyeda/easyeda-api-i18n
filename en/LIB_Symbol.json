@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "LIB_Symbol",
+    "kind": "class",
+    "name": "LIB_Symbol",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "综合库 / 符号类"
+  },
+  "title": null
+}

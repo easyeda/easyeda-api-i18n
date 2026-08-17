@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitivePadHoleType",
+    "kind": "enum",
+    "name": "EPCB_PrimitivePadHoleType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "焊盘钻孔类型"
+  },
+  "title": null
+}

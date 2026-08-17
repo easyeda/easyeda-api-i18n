@@ -1,0 +1,44 @@
+{
+  "_meta": {
+    "id": "LIB_Device.getByLcscIds.2",
+    "kind": "method",
+    "name": "getByLcscIds",
+    "className": "LIB_Device",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "使用立创 C 编号批量获取器件",
+    "remarks.text.0": "默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；",
+    "remarks.text.1": "如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true`；",
+    "remarks.text.2": "私有化部署环境暂无法使用本接口",
+    "params.lcscIds": "立创 C 编号数组",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "params.allowMultiMatch": "是否允许单个立创 C 编号匹配多个结果",
+    "returns": "搜索到的器件属性的列表"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "params.lcscIds": null,
+  "params.libraryUuid": null,
+  "params.allowMultiMatch": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveLine.get",
+    "kind": "method",
+    "name": "get",
+    "className": "PCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取直线",
+    "params.primitiveIds": "直线的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
+    "returns": "直线图元对象，`undefined` 表示获取失败"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

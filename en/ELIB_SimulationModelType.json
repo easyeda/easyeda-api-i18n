@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ELIB_SimulationModelType",
+    "kind": "enum",
+    "name": "ELIB_SimulationModelType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "仿真模型类型"
+  },
+  "title": null
+}

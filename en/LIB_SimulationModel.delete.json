@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "LIB_SimulationModel.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "LIB_SimulationModel",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.167",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "删除仿真模型",
+    "params.simulationModelUuid": "仿真模型 UUID",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.simulationModelUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

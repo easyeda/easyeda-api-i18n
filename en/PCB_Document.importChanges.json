@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Document.importChanges",
+    "kind": "method",
+    "name": "importChanges",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "从原理图导入变更",
+    "params.uuid": "原理图 UUID，默认为关联在同一个 Board 下的原理图",
+    "returns": "导入操作是否成功，导入失败或未传入原理图 UUID 的游离 PCB 将返回 `false`"
+  },
+  "title": null,
+  "params.uuid": null,
+  "returns": null
+}

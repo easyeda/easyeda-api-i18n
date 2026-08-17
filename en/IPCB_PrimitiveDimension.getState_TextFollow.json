@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveDimension.getState_TextFollow",
+    "kind": "method",
+    "name": "getState_TextFollow",
+    "className": "IPCB_PrimitiveDimension",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：文字跟随",
+    "returns": "文字跟随"
+  },
+  "title": null,
+  "returns": null
+}

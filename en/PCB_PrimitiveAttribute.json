@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveAttribute",
+    "kind": "class",
+    "name": "PCB_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "PCB & 封装 / 属性图元类"
+  },
+  "title": null
+}

@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SYS_Window.openUI",
+    "kind": "method",
+    "name": "openUI",
+    "className": "SYS_Window",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "打开 UI 窗口",
+    "remarks.text.0": "非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+    "params.uiName": "UI 名称",
+    "params.args": "可选参数对象"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.uiName": null,
+  "params.args": null
+}

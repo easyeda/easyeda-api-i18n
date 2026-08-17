@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject.done",
+    "kind": "method",
+    "name": "done",
+    "className": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将对图元的更改应用到画布",
+    "returns": "二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "returns": null
+}

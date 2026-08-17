@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.createPrimary",
+    "kind": "method",
+    "name": "createPrimary",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "创建一级分类",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "params.primaryClassificationName": "一级分类名称",
+    "returns": "分类索引",
+    "deprecated": "since EDA v3.2; dropped EDA v3.3"
+  },
+  "title": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "params.primaryClassificationName": null,
+  "returns": null,
+  "deprecated": null
+}

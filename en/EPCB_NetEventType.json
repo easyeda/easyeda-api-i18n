@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_NetEventType",
+    "kind": "enum",
+    "name": "EPCB_NetEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "网络事件类型"
+  },
+  "title": null
+}

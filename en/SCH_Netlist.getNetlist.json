@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SCH_Netlist.getNetlist",
+    "kind": "method",
+    "name": "getNetlist",
+    "className": "SCH_Netlist",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取网表",
+    "params.type": "网表格式",
+    "returns": "网表数据",
+    "deprecated": "请使用 {@link SCH_ManufactureData.getNetlistFile} 替代"
+  },
+  "title": null,
+  "params.type": null,
+  "returns": null,
+  "deprecated": null
+}

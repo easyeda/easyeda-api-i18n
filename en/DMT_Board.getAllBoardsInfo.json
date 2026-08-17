@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "DMT_Board.getAllBoardsInfo",
+    "kind": "method",
+    "name": "getAllBoardsInfo",
+    "className": "DMT_Board",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取工程内所有板子的详细属性",
+    "returns": "所有板子的详细属性的数组"
+  },
+  "title": null,
+  "returns": null
+}

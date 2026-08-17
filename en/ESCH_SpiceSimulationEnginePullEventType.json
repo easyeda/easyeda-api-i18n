@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESCH_SpiceSimulationEnginePullEventType",
+    "kind": "enum",
+    "name": "ESCH_SpiceSimulationEnginePullEventType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "Spice 仿真引擎拉取事件类型"
+  },
+  "title": null
+}

@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveObject.getState_FileName",
+    "kind": "method",
+    "name": "getState_FileName",
+    "className": "IPCB_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：文件名",
+    "returns": "文件名"
+  },
+  "title": null,
+  "returns": null
+}

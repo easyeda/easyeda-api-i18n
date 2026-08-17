@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.rebuildCopperRegion",
+    "kind": "method",
+    "name": "rebuildCopperRegion",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "重建铺铜区域覆铜填充",
+    "returns": "覆铜填充图元，如若未重建出覆铜填充图元则返回 `undefined`"
+  },
+  "title": null,
+  "returns": null
+}

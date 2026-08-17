@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "SCH_Event.addPrimitiveEventListener",
+    "kind": "method",
+    "name": "addPrimitiveEventListener",
+    "className": "SCH_Event",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "新增图元事件监听",
+    "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "params.id": "事件 ID，用以防止重复注册事件",
+    "params.eventType": "事件类型",
+    "params.callFn": "事件触发时的回调函数",
+    "params.onlyOnce": "是否仅监听一次"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.id": null,
+  "params.eventType": null,
+  "params.callFn": null,
+  "params.onlyOnce": null
+}

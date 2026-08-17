@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveLine.getState_EndY",
+    "kind": "method",
+    "name": "getState_EndY",
+    "className": "IPCB_PrimitiveLine",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：终止位置 Y",
+    "returns": "终止位置 Y"
+  },
+  "title": null,
+  "returns": null
+}

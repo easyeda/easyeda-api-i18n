@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.removeLayer",
+    "kind": "method",
+    "name": "removeLayer",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "移除层",
+    "remarks.text.0": "当前仅支持移除自定义层",
+    "params.layer": "层",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.layer": null,
+  "returns": null
+}

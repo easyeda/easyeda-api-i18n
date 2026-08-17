@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "SYS_RightClickMenu",
+    "kind": "class",
+    "name": "SYS_RightClickMenu",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "系统 / 右键菜单类",
+    "properties.extensionUuid": "扩展 UUID"
+  },
+  "title": null,
+  "properties.extensionUuid": null
+}

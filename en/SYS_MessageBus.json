@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBus",
+    "kind": "class",
+    "name": "SYS_MessageBus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "系统 / 消息总线类",
+    "properties.extensionUuid": "扩展 UUID"
+  },
+  "title": null,
+  "properties.extensionUuid": null
+}

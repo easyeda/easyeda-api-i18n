@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SYS_LoadingAndProgressBar.destroyProgressBar",
+    "kind": "method",
+    "name": "destroyProgressBar",
+    "className": "SYS_LoadingAndProgressBar",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "销毁进度条"
+  },
+  "title": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_Math.getCentroid",
+    "kind": "method",
+    "name": "getCentroid",
+    "className": "SYS_Math",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "计算多边形质心",
+    "params.polygon": "多边形",
+    "returns": "质心坐标"
+  },
+  "title": null,
+  "params.polygon": null,
+  "returns": null
+}

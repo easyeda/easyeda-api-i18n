@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "IPCB_Polygon",
+    "kind": "class",
+    "name": "IPCB_Polygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单多边形"
+  },
+  "title": null
+}

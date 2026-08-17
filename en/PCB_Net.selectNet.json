@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Net.selectNet",
+    "kind": "method",
+    "name": "selectNet",
+    "className": "PCB_Net",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "选中网络",
+    "params.net": "网络名称",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.net": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitivePour.delete",
+    "kind": "method",
+    "name": "delete",
+    "className": "PCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除覆铜边框",
+    "params.primitiveIds": "覆铜边框的图元 ID 或覆铜边框图元对象",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.primitiveIds": null,
+  "returns": null
+}

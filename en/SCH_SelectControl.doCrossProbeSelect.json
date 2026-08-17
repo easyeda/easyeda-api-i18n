@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "SCH_SelectControl.doCrossProbeSelect",
+    "kind": "method",
+    "name": "doCrossProbeSelect",
+    "className": "SCH_SelectControl",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "进行交叉选择",
+    "params.components": "器件位号",
+    "params.pins": "器件位号_引脚编号，格式为 ['U1_1', 'U1_2']",
+    "params.nets": "网络名称",
+    "params.highlight": "是否高亮",
+    "params.select": "是否选中",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "params.components": null,
+  "params.pins": null,
+  "params.nets": null,
+  "params.highlight": null,
+  "params.select": null,
+  "returns": null
+}

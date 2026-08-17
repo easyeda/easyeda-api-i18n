@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "SYS_FileManager.getDeviceFileByDeviceUuid",
+    "kind": "method",
+    "name": "getDeviceFileByDeviceUuid",
+    "className": "SYS_FileManager",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "使用器件 UUID 获取器件文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.1": "注意：本接口需要启用 **团队库 \\> 下载库** 权限，没有权限调用将始终 `throw Error`",
+    "params.deviceUuid": "器件 UUID 或器件 UUID 列表",
+    "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取，如若不传入，则为系统库",
+    "returns": "器件文件数据，`undefined` 表示数据获取失败"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.deviceUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

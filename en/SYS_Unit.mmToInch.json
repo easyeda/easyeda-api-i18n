@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "SYS_Unit.mmToInch",
+    "kind": "method",
+    "name": "mmToInch",
+    "className": "SYS_Unit",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单位转换：毫米到英寸",
+    "params.mm": "输入毫米数",
+    "params.numberOfDecimals": "保留小数位数，默认为 `4`",
+    "returns": "输出英寸数"
+  },
+  "title": null,
+  "params.mm": null,
+  "params.numberOfDecimals": null,
+  "returns": null
+}

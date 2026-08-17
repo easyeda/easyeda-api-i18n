@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "SYS_Window.urlReplaceState",
+    "kind": "method",
+    "name": "urlReplaceState",
+    "className": "SYS_Window",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改当前的 URL 历史记录栈信息",
+    "params.url": "URL"
+  },
+  "title": null,
+  "params.url": null
+}

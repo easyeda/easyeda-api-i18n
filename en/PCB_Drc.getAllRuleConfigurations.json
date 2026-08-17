@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Drc.getAllRuleConfigurations",
+    "kind": "method",
+    "name": "getAllRuleConfigurations",
+    "className": "PCB_Drc",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取所有设计规则配置",
+    "params.includeSystem": "是否获取系统设计规则配置",
+    "returns": "所有设计规则配置"
+  },
+  "title": null,
+  "params.includeSystem": null,
+  "returns": null
+}

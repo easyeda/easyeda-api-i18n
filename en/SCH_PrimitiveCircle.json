@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveCircle",
+    "kind": "class",
+    "name": "SCH_PrimitiveCircle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "原理图 & 符号 / 圆图元类"
+  },
+  "title": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_MathPolygon.calculateHeight",
+    "kind": "method",
+    "name": "calculateHeight",
+    "className": "PCB_MathPolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "计算复杂多边形 BBox 高度",
+    "params.complexPolygon": "复杂多边形",
+    "returns": "BBox 高度"
+  },
+  "title": null,
+  "params.complexPolygon": null,
+  "returns": null
+}

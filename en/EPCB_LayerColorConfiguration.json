@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_LayerColorConfiguration",
+    "kind": "enum",
+    "name": "EPCB_LayerColorConfiguration",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "图层颜色配置"
+  },
+  "title": null
+}

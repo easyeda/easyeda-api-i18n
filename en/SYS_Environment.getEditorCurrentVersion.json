@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_Environment.getEditorCurrentVersion",
+    "kind": "method",
+    "name": "getEditorCurrentVersion",
+    "className": "SYS_Environment",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取编辑器当前版本",
+    "params.onlySemantic": "是否仅返回语义化版本号 ADD since EDA v3.2.176 ADD since EDA v4.1.13",
+    "returns": "编辑器当前版本"
+  },
+  "title": null,
+  "params.onlySemantic": null,
+  "returns": null
+}

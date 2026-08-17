@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePin.getState_OtherProperty",
+    "kind": "method",
+    "name": "getState_OtherProperty",
+    "className": "ISCH_PrimitivePin",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：其它参数",
+    "returns": "其它参数"
+  },
+  "title": null,
+  "returns": null
+}

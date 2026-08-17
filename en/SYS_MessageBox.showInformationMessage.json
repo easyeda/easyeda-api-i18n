@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "SYS_MessageBox.showInformationMessage",
+    "kind": "method",
+    "name": "showInformationMessage",
+    "className": "SYS_MessageBox",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "显示消息框",
+    "remarks.text.0": "显示一个文字消息提示框",
+    "params.content": "消息文本，支持使用 `\\n` 换行",
+    "params.title": "消息框标题",
+    "params.buttonTitle": "按钮标题，为空则不显示按钮",
+    "deprecated": "请使用 {@link SYS_Dialog.showInformationMessage} 替代"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.content": null,
+  "params.title": null,
+  "params.buttonTitle": null,
+  "deprecated": null
+}

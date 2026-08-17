@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitivePadHeatWeldingConnectionMethod",
+    "kind": "enum",
+    "name": "EPCB_PrimitivePadHeatWeldingConnectionMethod",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "焊盘热焊连接方式"
+  },
+  "title": null
+}

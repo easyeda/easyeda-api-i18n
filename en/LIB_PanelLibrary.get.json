@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_PanelLibrary.get",
+    "kind": "method",
+    "name": "get",
+    "className": "LIB_PanelLibrary",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取面板库的所有属性",
+    "params.panelLibraryUuid": "面板库 UUID",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "面板库属性"
+  },
+  "title": null,
+  "params.panelLibraryUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

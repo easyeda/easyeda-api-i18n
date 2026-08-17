@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "LIB_SelectControl.getSelectedLibraryRowInfo",
+    "kind": "method",
+    "name": "getSelectedLibraryRowInfo",
+    "className": "LIB_SelectControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取当前底部库选中行的信息",
+    "remarks.text.0": "将会获取当前底部库选中行的库类型、UUID、所属库 UUID",
+    "returns": "库属性对象，如若为 `undefined` 则获取失败"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "PCB_ManufactureData.getIpcD356AFile",
+    "kind": "method",
+    "name": "getIpcD356AFile",
+    "className": "PCB_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst ipcFile = await eda.pcb_ManufactureData.getIpcD356AFile('IPC_D356A_Test');\nif (ipcFile) {\nawait eda.sys_FileSystem.saveFile(ipcFile);\n}\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "获取 IPC-D-356A 文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "params.fileName": "文件名",
+    "returns": "IPC-D-356A 文件数据"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.fileName": null,
+  "returns": null
+}

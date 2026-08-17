@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.renamePhysicalStackingConfiguration",
+    "kind": "method",
+    "name": "renamePhysicalStackingConfiguration",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "重命名物理叠层配置",
+    "params.originalConfigurationName": "原物理叠层配置名称",
+    "params.configurationName": "新物理叠层配置名称",
+    "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
+    "returns": "重命名是否成功"
+  },
+  "title": null,
+  "params.originalConfigurationName": null,
+  "params.configurationName": null,
+  "params.physicalProps": null,
+  "returns": null
+}

@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "SYS_FontManager.deleteFont",
+    "kind": "method",
+    "name": "deleteFont",
+    "className": "SYS_FontManager",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "删除字体列表内的指定字体",
+    "params.fontName": "字体名称",
+    "returns": "删除操作是否成功"
+  },
+  "title": null,
+  "params.fontName": null,
+  "returns": null
+}

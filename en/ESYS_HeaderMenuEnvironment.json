@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_HeaderMenuEnvironment",
+    "kind": "enum",
+    "name": "ESYS_HeaderMenuEnvironment",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "顶部菜单环境"
+  },
+  "title": null
+}

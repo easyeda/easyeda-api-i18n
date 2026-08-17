@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveRegion.setState_RegionName",
+    "kind": "method",
+    "name": "setState_RegionName",
+    "className": "IPCB_PrimitiveRegion",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "设置属性状态：区域名称",
+    "remarks.text.0": "仅当 `ruleType` 为 {@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE} 时有效，用于匹配区域 DRC 规则",
+    "remarks.text.1": "如若 `ruleType` 为 {@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE} 但 `regionName` 为空，则系统将会自动分配名称",
+    "params.regionName": "区域名称",
+    "returns": "区域图元对象"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.regionName": null,
+  "returns": null
+}

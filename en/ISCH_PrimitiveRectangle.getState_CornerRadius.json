@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveRectangle.getState_CornerRadius",
+    "kind": "method",
+    "name": "getState_CornerRadius",
+    "className": "ISCH_PrimitiveRectangle",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：圆角半径",
+    "returns": "圆角半径"
+  },
+  "title": null,
+  "returns": null
+}

@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "LIB_Cbb.get",
+    "kind": "method",
+    "name": "get",
+    "className": "LIB_Cbb",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取复用模块的所有属性",
+    "params.cbbUuid": "复用模块 UUID",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "复用模块属性"
+  },
+  "title": null,
+  "params.cbbUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

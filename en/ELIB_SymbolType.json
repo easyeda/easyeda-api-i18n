@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ELIB_SymbolType",
+    "kind": "enum",
+    "name": "ELIB_SymbolType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "符号类型"
+  },
+  "title": null
+}

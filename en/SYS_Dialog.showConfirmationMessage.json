@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "SYS_Dialog.showConfirmationMessage",
+    "kind": "method",
+    "name": "showConfirmationMessage",
+    "className": "SYS_Dialog",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "弹出确认窗口",
+    "remarks.text.0": "显示一个拥有确认和取消按钮的窗口",
+    "params.content": "消息文本，支持使用 `\\n` 换行",
+    "params.title": "弹出窗口标题",
+    "params.mainButtonTitle": "主要按钮标题",
+    "params.buttonTitle": "主要按钮标题",
+    "params.callbackFn": "回调函数"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.content": null,
+  "params.title": null,
+  "params.mainButtonTitle": null,
+  "params.buttonTitle": null,
+  "params.callbackFn": null
+}

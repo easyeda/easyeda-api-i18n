@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "EPCB_PrimitiveFillMode",
+    "kind": "enum",
+    "name": "EPCB_PrimitiveFillMode",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "填充图元填充模式",
+    "remarks.text.0": "网格填充和内电层填充为预留配置"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

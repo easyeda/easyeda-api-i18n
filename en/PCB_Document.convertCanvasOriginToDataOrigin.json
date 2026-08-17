@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "PCB_Document.convertCanvasOriginToDataOrigin",
+    "kind": "method",
+    "name": "convertCanvasOriginToDataOrigin",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "输入画布坐标返回该坐标对应的数据坐标",
+    "remarks.text.0": "嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点",
+    "params.canvasOriginX": "画布原点 X",
+    "params.canvasOriginY": "画布原点 Y",
+    "returns": "数据原点坐标"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.canvasOriginX": null,
+  "params.canvasOriginY": null,
+  "returns": null
+}

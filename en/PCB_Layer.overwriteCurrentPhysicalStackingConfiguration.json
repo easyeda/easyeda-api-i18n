@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "id": "PCB_Layer.overwriteCurrentPhysicalStackingConfiguration",
+    "kind": "method",
+    "name": "overwriteCurrentPhysicalStackingConfiguration",
+    "className": "PCB_Layer",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "覆写当前物理叠层配置",
+    "remarks.text.0": "将会覆写 PCB 当前的物理叠层配置，请注意数据丢失风险",
+    "remarks.text.1": "如果传入的物理叠层配置不符合当前 PCB 的物理属性，将会直接返回 `false` 且不进行修改",
+    "params.ruleConfiguration": "物理叠层配置",
+    "returns": "覆写是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.ruleConfiguration": null,
+  "returns": null
+}

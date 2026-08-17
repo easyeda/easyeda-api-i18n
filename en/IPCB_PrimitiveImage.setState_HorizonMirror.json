@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitiveImage.setState_HorizonMirror",
+    "kind": "method",
+    "name": "setState_HorizonMirror",
+    "className": "IPCB_PrimitiveImage",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：是否水平镜像",
+    "params.horizonMirror": "是否水平镜像",
+    "returns": "图像图元对象"
+  },
+  "title": null,
+  "params.horizonMirror": null,
+  "returns": null
+}

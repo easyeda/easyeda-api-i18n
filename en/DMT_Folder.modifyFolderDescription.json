@@ -1,0 +1,32 @@
+{
+  "_meta": {
+    "id": "DMT_Folder.modifyFolderDescription",
+    "kind": "method",
+    "name": "modifyFolderDescription",
+    "className": "DMT_Folder",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "修改文件夹描述",
+    "remarks.text.0": "修改文件夹描述需要与工作区系统进行交互，修改操作存在延迟，需要短暂等待后才会呈现效果",
+    "params.teamUuid": "团队 UUID",
+    "params.folderUuid": "文件夹 UUID",
+    "params.description": "文件夹描述，如若为 `undefined` 则清空工程现有描述",
+    "returns": "是否修改成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.teamUuid": null,
+  "params.folderUuid": null,
+  "params.description": null,
+  "returns": null
+}

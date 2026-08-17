@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "DMT_Workspace.toggleToWorkspace",
+    "kind": "method",
+    "name": "toggleToWorkspace",
+    "className": "DMT_Workspace",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "切换到工作区",
+    "params.workspaceUuid": "工作区 UUID，如若不指定，则将切换到个人工作区",
+    "returns": "切换操作是否成功"
+  },
+  "title": null,
+  "params.workspaceUuid": null,
+  "returns": null
+}

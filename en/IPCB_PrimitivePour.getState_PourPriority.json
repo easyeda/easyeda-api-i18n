@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePour.getState_PourPriority",
+    "kind": "method",
+    "name": "getState_PourPriority",
+    "className": "IPCB_PrimitivePour",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：覆铜优先级",
+    "returns": "覆铜优先级"
+  },
+  "title": null,
+  "returns": null
+}

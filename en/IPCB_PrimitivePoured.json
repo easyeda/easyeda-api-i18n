@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "IPCB_PrimitivePoured",
+    "kind": "class",
+    "name": "IPCB_PrimitivePoured",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "覆铜填充图元",
+    "properties.async": "异步",
+    "properties.pourPrimitiveId": "覆铜边框图元 ID",
+    "properties.pourFills": "覆铜填充区域",
+    "properties.primitiveId": "图元 ID"
+  },
+  "title": null,
+  "properties.async": null,
+  "properties.pourPrimitiveId": null,
+  "properties.pourFills": null,
+  "properties.primitiveId": null
+}

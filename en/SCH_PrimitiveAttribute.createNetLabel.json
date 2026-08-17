@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "SCH_PrimitiveAttribute.createNetLabel",
+    "kind": "method",
+    "name": "createNetLabel",
+    "className": "SCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "创建网络标签",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "params.net": "网络名称",
+    "returns": "网络标签属性图元"
+  },
+  "title": null,
+  "params.x": null,
+  "params.y": null,
+  "params.net": null,
+  "returns": null
+}

@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveComponent.modify",
+    "kind": "method",
+    "name": "modify",
+    "className": "PCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "修改器件",
+    "params.primitiveId": "图元 ID",
+    "params.layer": "层",
+    "params.x": "坐标 X",
+    "params.y": "坐标 Y",
+    "params.rotation": "旋转角度",
+    "params.primitiveLock": "是否锁定",
+    "params.addIntoBom": "是否加入 BOM",
+    "params.designator": "位号",
+    "params.name": "名称，`null` 表示留空",
+    "params.uniqueId": "唯一 ID，`null` 表示留空",
+    "params.manufacturer": "制造商，`null` 表示留空",
+    "params.manufacturerId": "制造商编号，`null` 表示留空",
+    "params.supplier": "供应商，`null` 表示留空",
+    "params.supplierId": "供应商编号，`null` 表示留空",
+    "returns": "器件图元对象"
+  },
+  "title": null,
+  "params.primitiveId": null,
+  "params.layer": null,
+  "params.x": null,
+  "params.y": null,
+  "params.rotation": null,
+  "params.primitiveLock": null,
+  "params.addIntoBom": null,
+  "params.designator": null,
+  "params.name": null,
+  "params.uniqueId": null,
+  "params.manufacturer": null,
+  "params.manufacturerId": null,
+  "params.supplier": null,
+  "params.supplierId": null,
+  "returns": null
+}

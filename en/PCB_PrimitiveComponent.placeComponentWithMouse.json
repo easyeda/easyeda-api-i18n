@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "PCB_PrimitiveComponent.placeComponentWithMouse",
+    "kind": "method",
+    "name": "placeComponentWithMouse",
+    "className": "PCB_PrimitiveComponent",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "使用鼠标放置器件",
+    "remarks.text.0": "本接口模拟前端点击放置按钮，指定的器件将绑定到当前鼠标，并在用户后续点击时放置于画布",
+    "remarks.text.1": "本接口的返回时机并不会等待用户的放置操作，一旦器件被绑定到鼠标，本接口将立即返回 `true` 的结果",
+    "params.component": "关联库器件",
+    "returns": "是否找到器件"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.component": null,
+  "returns": null
+}

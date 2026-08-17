@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitivePolygon.reset",
+    "kind": "method",
+    "name": "reset",
+    "className": "ISCH_PrimitivePolygon",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将异步图元重置为当前画布状态",
+    "returns": "多边形图元对象"
+  },
+  "title": null,
+  "returns": null
+}

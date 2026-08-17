@@ -1,0 +1,21 @@
+{
+  "_meta": {
+    "id": "SYS_Window.addEventListener",
+    "kind": "method",
+    "name": "addEventListener",
+    "className": "SYS_Window",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "新增事件监听",
+    "params.type": "事件类型，当前支持 `blur` `focus`",
+    "params.listener": "事件监听回调",
+    "params.options": "可选参数",
+    "returns": "事件监听方法，用于移除事件监听，如若为 `undefined` 则表示创建事件监听失败"
+  },
+  "title": null,
+  "params.type": null,
+  "params.listener": null,
+  "params.options": null,
+  "returns": null
+}

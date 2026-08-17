@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveObject.setState_Content",
+    "kind": "method",
+    "name": "setState_Content",
+    "className": "ISCH_PrimitiveObject",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "设置属性状态：对象内容",
+    "params.content": "对象内容",
+    "returns": "二进制内嵌对象图元对象"
+  },
+  "title": null,
+  "params.content": null,
+  "returns": null
+}

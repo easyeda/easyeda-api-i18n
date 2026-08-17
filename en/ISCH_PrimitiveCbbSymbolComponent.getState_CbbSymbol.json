@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveCbbSymbolComponent.getState_CbbSymbol",
+    "kind": "method",
+    "name": "getState_CbbSymbol",
+    "className": "ISCH_PrimitiveCbbSymbolComponent",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：关联复用模块符号",
+    "returns": "关联复用模块符号"
+  },
+  "title": null,
+  "returns": null
+}

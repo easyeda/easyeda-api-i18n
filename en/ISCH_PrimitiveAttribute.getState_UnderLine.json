@@ -1,0 +1,15 @@
+{
+  "_meta": {
+    "id": "ISCH_PrimitiveAttribute.getState_UnderLine",
+    "kind": "method",
+    "name": "getState_UnderLine",
+    "className": "ISCH_PrimitiveAttribute",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取属性状态：是否加下划线",
+    "returns": "是否加下划线"
+  },
+  "title": null,
+  "returns": null
+}
