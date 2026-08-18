@@ -24,11 +24,11 @@
     "params.saveTo": "保存到工程参数",
     "returns": "导入的工程的简略工程属性"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.projectFile": null,
-  "params.fileType": null,
-  "params.props": null,
-  "params.saveTo": null,
-  "returns": null
+  "title": "Use project file import project",
+  "remarks.text.0": "Extracting library-related configurations is not supported yet. If the library needs to be extracted, it will be extracted according to the default configuration",
+  "params.projectFile": "Project file",
+  "params.fileType": "File type",
+  "params.props": "Import parameters. Refer to the configuration items in the **Import** window of the EDA front end",
+  "params.saveTo": "Save To project parameter",
+  "returns": "Brief project properties of the imported project"
 }

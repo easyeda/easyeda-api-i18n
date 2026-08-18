@@ -11,7 +11,7 @@
     "params.line": "坐标组",
     "returns": "多边形图元对象"
   },
-  "title": null,
-  "params.line": null,
-  "returns": null
+  "title": "Set the property state: coordinate group",
+  "params.line": "Coordinate group",
+  "returns": "Polygon primitive object"
 }

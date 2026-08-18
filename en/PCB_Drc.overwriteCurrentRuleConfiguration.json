@@ -21,8 +21,8 @@
     "params.ruleConfiguration": "设计规则配置",
     "returns": "覆写是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.ruleConfiguration": null,
-  "returns": null
+  "title": "Overwrite current design rule configuration",
+  "remarks.text.0": "It will overwrite the current design rule configuration of the PCB. Please note the risk of data loss",
+  "params.ruleConfiguration": "Design rule configuration",
+  "returns": "Overwrite whether it is successful"
 }

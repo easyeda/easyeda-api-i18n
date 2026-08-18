@@ -9,6 +9,6 @@
     "title": "可用于精确搜索的符号参数",
     "properties.name": "符号名称"
   },
-  "title": null,
-  "properties.name": null
+  "title": "Symbol parameters that can be used for precise search",
+  "properties.name": "Symbol name"
 }

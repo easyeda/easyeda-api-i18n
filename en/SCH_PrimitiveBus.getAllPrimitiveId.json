@@ -10,6 +10,6 @@
     "title": "获取所有总线的图元 ID",
     "returns": "总线的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the primitive IDs of all buses",
+  "returns": "Array of bus primitive IDs"
 }

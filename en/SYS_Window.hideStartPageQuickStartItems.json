@@ -38,10 +38,10 @@
     "params.items": "欲隐藏的快速启动项数组",
     "returns": "是否全部隐藏成功（若存在未知项或已隐藏的项则返回 `false`）"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "params.items": null,
-  "returns": null
+  "title": "Hide start page quick start items",
+  "remarks.text.0": "Hide the specified items in the quick start module of the start page",
+  "remarks.text.1": "Note 1: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.2": "Note 2: This API is dedicated to the private deployment edition. Calling it in other editions will always `throw Error`",
+  "params.items": "Array of quick start items to hide",
+  "returns": "Whether all items were hidden successfully (`false` is returned if unknown items or already-hidden items exist)"
 }

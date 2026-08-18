@@ -20,7 +20,7 @@
     "remarks.text.0": "移除当前或指定的跟随鼠标的提示",
     "params.tip": "提示内容，如若传入，则仅当当前提示为指定内容时才移除"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tip": null
+  "title": "Remove the follow-mouse tip",
+  "remarks.text.0": "Remove the current or specified follow-mouse tip",
+  "params.tip": "Tip content. If passed in, the tip is only removed when the current tip matches the specified content"
 }

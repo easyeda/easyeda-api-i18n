@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "网络长度，`undefined` 为不存在该网络，`0` 为网络无长度"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Get the length of the specified net",
+  "params.net": "Net name",
+  "returns": "Net length. `undefined` means the net does not exist; `0` means the net has no length"
 }

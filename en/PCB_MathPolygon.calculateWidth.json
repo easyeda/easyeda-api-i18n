@@ -11,7 +11,7 @@
     "params.complexPolygon": "复杂多边形",
     "returns": "BBox 宽度"
   },
-  "title": null,
-  "params.complexPolygon": null,
-  "returns": null
+  "title": "Calculate complex polygon BBox width",
+  "params.complexPolygon": "Complex polygon",
+  "returns": "BBox width"
 }

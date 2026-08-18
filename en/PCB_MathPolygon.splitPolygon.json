@@ -11,7 +11,7 @@
     "params.complexPolygons": "复杂多边形",
     "returns": "单多边形数组"
   },
-  "title": null,
-  "params.complexPolygons": null,
-  "returns": null
+  "title": "Split single polygon",
+  "params.complexPolygons": "Complex polygon",
+  "returns": "Single polygon array"
 }

@@ -15,11 +15,11 @@
     "params.description": "描述",
     "returns": "符号 UUID"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.symbolName": null,
-  "params.classification": null,
-  "params.symbolType": null,
-  "params.description": null,
-  "returns": null
+  "title": "Create Symbol",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.symbolName": "Symbol name",
+  "params.classification": "Classification",
+  "params.symbolType": "Symbol type",
+  "params.description": "Description",
+  "returns": "Symbol UUID"
 }

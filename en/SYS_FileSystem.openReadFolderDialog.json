@@ -8,10 +8,6 @@
     "codeSegments": {
       "remarks": [
         {
-          "type": "code",
-          "content": "本接口的浏览器支持有限，具体请参考 {@link https:"
-        },
-        {
           "type": "text",
           "key": "remarks.text.0"
         }
@@ -28,10 +24,10 @@
   },
   "_source": {
     "title": "打开读入文件夹窗口",
-    "remarks.text.0": "developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory | MDN}",
+    "remarks.text.0": "本接口的浏览器支持有限，具体请参考 {@link https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory | MDN}",
     "returns": "读取到的所有文件及其路径信息"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Open the read-folder dialog",
+  "remarks.text.0": "developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/webkitdirectory | MDN}",
+  "returns": "All read files and their path information"
 }

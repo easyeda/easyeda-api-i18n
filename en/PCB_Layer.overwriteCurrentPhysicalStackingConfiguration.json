@@ -33,9 +33,9 @@
     "params.ruleConfiguration": "物理叠层配置",
     "returns": "覆写是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.ruleConfiguration": null,
-  "returns": null
+  "title": "Overwrite current physical stacking configuration",
+  "remarks.text.0": "It will overwrite the current physical stacking configuration of the PCB. Please note the risk of data loss",
+  "remarks.text.1": "If the passed-in physical stacking configuration does not match the physical properties of the current PCB, `false` will be returned directly without modification",
+  "params.ruleConfiguration": "Physical stacking configuration",
+  "returns": "Overwrite whether it is successful"
 }

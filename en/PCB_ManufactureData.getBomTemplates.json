@@ -10,25 +10,15 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0"
-        },
-        {
-          "type": "code",
-          "content": "const templates = await eda.pcb_ManufactureData.getBomTemplates();\nconsole.log('可用的 BOM 模板:', templates);\ntemplates.forEach((template, index) => {\nconsole.log(`${index + 1}. ${template}`);\n});\n```"
+          "content": "```javascript\n// 获取所有可用的 BOM 模板\nconst templates = await eda.pcb_ManufactureData.getBomTemplates();\nconsole.log('可用的 BOM 模板:', templates);\ntemplates.forEach((template, index) => {\n    console.log(`${index + 1}. ${template}`);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取 BOM 模板列表",
-    "example.text.0": "获取所有可用的 BOM 模板",
     "returns": "BOM 模板列表"
   },
-  "title": null,
-  "example.text.0": null,
-  "returns": null
+  "title": "Get BOM template list",
+  "returns": "BOM template list"
 }

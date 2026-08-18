@@ -10,6 +10,6 @@
     "title": "获取属性状态：覆铜边框名称",
     "returns": "覆铜边框名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: copper border name",
+  "returns": "Copper border name"
 }

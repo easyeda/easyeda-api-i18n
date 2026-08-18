@@ -11,7 +11,7 @@
     "params.radius": "半径",
     "returns": "圆图元对象"
   },
-  "title": null,
-  "params.radius": null,
-  "returns": null
+  "title": "Set the property state: radius",
+  "params.radius": "Radius",
+  "returns": "Circle primitive object"
 }

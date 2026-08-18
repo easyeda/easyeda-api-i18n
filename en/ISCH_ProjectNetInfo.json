@@ -12,9 +12,9 @@
     "properties.boardName": "板子名称",
     "properties.nets": "网络"
   },
-  "title": null,
-  "properties.schematicName": null,
-  "properties.schematicUuid": null,
-  "properties.boardName": null,
-  "properties.nets": null
+  "title": "Project net property",
+  "properties.schematicName": "Schematic name",
+  "properties.schematicUuid": "Schematic UUID",
+  "properties.boardName": "Board name",
+  "properties.nets": "Net"
 }

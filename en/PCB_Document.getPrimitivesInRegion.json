@@ -15,11 +15,11 @@
     "params.leftToRight": "是否仅获取完全框选的图元，`false` 则触碰即获取",
     "returns": "区域内所有图元"
   },
-  "title": null,
-  "params.left": null,
-  "params.right": null,
-  "params.top": null,
-  "params.bottom": null,
-  "params.leftToRight": null,
-  "returns": null
+  "title": "Get All primitives in the region",
+  "params.left": "First X coordinate of the rectangle",
+  "params.right": "Second X coordinate of the rectangle",
+  "params.top": "First Y coordinate of the rectangle",
+  "params.bottom": "Second Y coordinate of the rectangle",
+  "params.leftToRight": "Whether to only get primitives that are fully enclosed by the box selection. If `false`, primitives touched by the selection are also obtained",
+  "returns": "All primitives in the region"
 }

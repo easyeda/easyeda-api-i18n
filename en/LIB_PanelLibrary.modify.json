@@ -25,12 +25,12 @@
     "params.description": "描述",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.panelLibraryUuid": null,
-  "params.libraryUuid": null,
-  "params.panelLibraryName": null,
-  "params.classification": null,
-  "params.description": null,
-  "returns": null
+  "title": "Modify Panel library",
+  "remarks.text.0": "If you want to clear certain properties, set their values to `null`",
+  "params.panelLibraryUuid": "Panel library UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.panelLibraryName": "Panel library name",
+  "params.classification": "Classification",
+  "params.description": "Description",
+  "returns": "Whether the operation is successful"
 }

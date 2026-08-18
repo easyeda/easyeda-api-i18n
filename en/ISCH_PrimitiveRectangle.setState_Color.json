@@ -11,7 +11,7 @@
     "params.color": "边框颜色",
     "returns": "矩形图元对象"
   },
-  "title": null,
-  "params.color": null,
-  "returns": null
+  "title": "Set the property state: border color",
+  "params.color": "Border color",
+  "returns": "Rectangle primitive object"
 }

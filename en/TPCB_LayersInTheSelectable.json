@@ -18,6 +18,6 @@
     "title": "可选中图层",
     "remarks.text.0": "此处为所有在编辑器图层菜单中可以选中并设置可见性的图层"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Selectable layers",
+  "remarks.text.0": "Here are all layers that can be selected and set visible in the editor layer menu"
 }

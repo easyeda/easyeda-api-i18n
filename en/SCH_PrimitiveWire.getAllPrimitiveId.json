@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "导线的图元 ID 数组"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Get all Wire primitive IDs",
+  "params.net": "Net name",
+  "returns": "Array of Wire primitive IDs"
 }

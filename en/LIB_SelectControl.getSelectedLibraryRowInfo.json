@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前底部库选中行的库类型、UUID、所属库 UUID",
     "returns": "库属性对象，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the information of the currently selected row in the bottom library",
+  "remarks.text.0": "It will get the library type, UUID, and the UUID of the library it belongs to for the currently selected row in the bottom library",
+  "returns": "Library property object; if it is `undefined`, the retrieval failed"
 }

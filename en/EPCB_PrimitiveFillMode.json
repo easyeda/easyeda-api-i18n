@@ -18,6 +18,6 @@
     "title": "填充图元填充模式",
     "remarks.text.0": "网格填充和内电层填充为预留配置"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Fill primitive fill mode",
+  "remarks.text.0": "Grid fill and inner layer fill are reserved configurations"
 }

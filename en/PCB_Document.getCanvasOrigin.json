@@ -35,10 +35,10 @@
     "remarks.text.3": "此处的单位为数据层面单位，在跨度上等同于画布层面的 mil",
     "returns": "画布原点相对于数据原点的偏移坐标"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "returns": null
+  "title": "Get the offset coordinate of the canvas origin relative to the data origin",
+  "remarks.text.0": "The coordinates displayed on the EasyEDA Pro front end are all relative to the canvas origin;",
+  "remarks.text.1": "The EasyEDA Pro API uses the data origin;",
+  "remarks.text.2": "If the returned data is `{ canvasOriginOffsetX: 100, canvasOriginOffsetY: 200 }`,\nit means the canvas origin is at a position 100 units to the right and 200 units up from the data origin;",
+  "remarks.text.3": "The units here are data-level units, which are equivalent to mil on the canvas level in span",
+  "returns": "The offset coordinate of the canvas origin relative to the data origin"
 }

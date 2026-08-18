@@ -10,6 +10,6 @@
     "title": "获取网络-网络规则",
     "returns": "当前 PCB 的所有网络-网络规则"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Net - net rules",
+  "returns": "All net-by-net rules of the current PCB"
 }

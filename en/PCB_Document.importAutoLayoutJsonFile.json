@@ -21,8 +21,8 @@
     "params.autoLayoutFile": "欲导入的 JSON 文件",
     "returns": "导入操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.autoLayoutFile": null,
-  "returns": null
+  "title": "Import auto layout file (JSON)",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.openReadFileDialog} to read in a file",
+  "params.autoLayoutFile": "The JSON file to import",
+  "returns": "Whether the import operation is successful"
 }

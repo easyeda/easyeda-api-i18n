@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否转到 PCB",
     "returns": "是否转到 PCB"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether to switch to PCB",
+  "returns": "Whether Transfer to PCB"
 }

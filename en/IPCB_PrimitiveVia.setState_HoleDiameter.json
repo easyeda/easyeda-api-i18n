@@ -11,7 +11,7 @@
     "params.holeDiameter": "孔径",
     "returns": "过孔图元对象"
   },
-  "title": null,
-  "params.holeDiameter": null,
-  "returns": null
+  "title": "Set the property state: hole diameter",
+  "params.holeDiameter": "Hole diameter",
+  "returns": "Via primitive object"
 }

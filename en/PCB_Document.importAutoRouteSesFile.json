@@ -21,8 +21,8 @@
     "params.autoRouteFile": "欲导入的 SES 文件",
     "returns": "导入操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.autoRouteFile": null,
-  "returns": null
+  "title": "Import auto routing file (SES)",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.openReadFileDialog} to read in a file",
+  "params.autoRouteFile": "The SES file to import",
+  "returns": "Whether the import operation is successful"
 }

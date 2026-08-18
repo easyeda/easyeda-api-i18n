@@ -11,7 +11,7 @@
     "params.centerY": "圆心 Y",
     "returns": "圆图元对象"
   },
-  "title": null,
-  "params.centerY": null,
-  "returns": null
+  "title": "Set the property state: center of the circle Y",
+  "params.centerY": "Center of the circle Y",
+  "returns": "Circle primitive object"
 }

@@ -20,7 +20,7 @@
     "remarks.text.0": "校验并整理输入数据，如数据有误，则抛出错误",
     "returns": "单多边形数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Validate the single polygon",
+  "remarks.text.0": "Validates and organizes the input data. If the data is incorrect, an error is thrown",
+  "returns": "Single polygon data"
 }

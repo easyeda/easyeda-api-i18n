@@ -28,11 +28,11 @@
     "params.fileType": "文件格式",
     "returns": "工程文件数据，`undefined` 表示当前未打开工程或数据获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.fileName": null,
-  "params.password": null,
-  "params.fileType": null,
-  "returns": null
+  "title": "Get Project file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "remarks.text.1": "Note: This API requires the **Project Management > Download Project** permission. Calling it without permission will always `throw Error`",
+  "params.fileName": "File name",
+  "params.password": "Encrypted password",
+  "params.fileType": "File format",
+  "returns": "Project file data, `undefined` indicates that it is currently not open project or data retrieval failed"
 }

@@ -11,7 +11,7 @@
     "params.padPairGroupName": "焊盘对组名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.padPairGroupName": null,
-  "returns": null
+  "title": "Delete the pad pair group",
+  "params.padPairGroupName": "Pad pair group name",
+  "returns": "Whether the operation is successful"
 }

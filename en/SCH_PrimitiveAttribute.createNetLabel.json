@@ -20,9 +20,9 @@
     "params.net": "网络名称",
     "returns": "网络标签属性图元"
   },
-  "title": null,
-  "params.x": null,
-  "params.y": null,
-  "params.net": null,
-  "returns": null
+  "title": "Create a net label",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.net": "Net name",
+  "returns": "Net label attribute primitive"
 }

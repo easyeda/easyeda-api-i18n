@@ -11,7 +11,7 @@
     "params.solderMaskAndPasteMaskExpansion": "阻焊/助焊扩展",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "params.solderMaskAndPasteMaskExpansion": null,
-  "returns": null
+  "title": "Set the property state: solder mask / paste mask expansion",
+  "params.solderMaskAndPasteMaskExpansion": "Solder mask / paste mask expansion",
+  "returns": "Pad primitive object"
 }

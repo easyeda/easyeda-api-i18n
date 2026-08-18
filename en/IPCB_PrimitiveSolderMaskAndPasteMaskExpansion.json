@@ -42,14 +42,14 @@
     "properties.topPasteMask": "顶层助焊扩展",
     "properties.bottomPasteMask": "底层助焊扩展"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "properties.topSolderMask": null,
-  "properties.bottomSolderMask": null,
-  "properties.topPasteMask": null,
-  "properties.bottomPasteMask": null
+  "title": "Solder mask / paste mask expansion",
+  "remarks.text.0": "This parameter setting includes the following three cases:",
+  "remarks.text.1": "1. When the primitive is a top/bottom layer SMD pad, the solder mask/paste mask expansion of the corresponding layer can be set; other settings have no effect",
+  "remarks.text.2": "2. When the primitive is a through-hole pad, the solder mask expansion of the top/bottom layer can be set; paste mask expansion settings have no effect",
+  "remarks.text.3": "3. When the primitive is a via, the solder mask expansion of the top/bottom layer can be set; paste mask expansion settings have no effect. If it is a blind via, its solder mask expansion setting takes effect according to its exposed layer",
+  "remarks.text.4": "The paste mask expansion is generally only used for specific purposes such as stencil production. If you do not understand its function, feel free to ignore its parameter settings",
+  "properties.topSolderMask": "Top solder mask expansion",
+  "properties.bottomSolderMask": "Bottom solder mask expansion",
+  "properties.topPasteMask": "Top paste mask expansion",
+  "properties.bottomPasteMask": "Bottom paste mask expansion"
 }

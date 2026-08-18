@@ -12,8 +12,8 @@
     "params.netClassName": "新网络类名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.originalNetClassName": null,
-  "params.netClassName": null,
-  "returns": null
+  "title": "Modify Net class name of",
+  "params.originalNetClassName": "Original net class name",
+  "params.netClassName": "New net class name",
+  "returns": "Whether the operation is successful"
 }

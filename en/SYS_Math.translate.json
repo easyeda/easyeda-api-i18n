@@ -13,9 +13,9 @@
     "params.dy": "Y 方向偏移量",
     "returns": "平移后的离散点数组"
   },
-  "title": null,
-  "params.polygon": null,
-  "params.dx": null,
-  "params.dy": null,
-  "returns": null
+  "title": "Translate the polygon",
+  "params.polygon": "Polygon",
+  "params.dx": "X direction offset",
+  "params.dy": "Y direction offset",
+  "returns": "Array of discrete points after translation"
 }

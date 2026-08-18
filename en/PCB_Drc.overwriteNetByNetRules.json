@@ -21,8 +21,8 @@
     "params.netByNetRules": "网络-网络规则",
     "returns": "覆写是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.netByNetRules": null,
-  "returns": null
+  "title": "Overwrite net - net rules",
+  "remarks.text.0": "It will overwrite all net-by-net rules of the current PCB. Please note the risk of data loss",
+  "params.netByNetRules": "Net - net rules",
+  "returns": "Overwrite whether it is successful"
 }

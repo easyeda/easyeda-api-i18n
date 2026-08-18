@@ -11,7 +11,7 @@
     "params.noConnected": "是否存在非连接标识",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.noConnected": null,
-  "returns": null
+  "title": "Set the property state: whether there is a no-connect flag",
+  "params.noConnected": "Whether there is a no-connect flag",
+  "returns": "Pin primitive object"
 }

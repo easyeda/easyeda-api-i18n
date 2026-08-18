@@ -11,7 +11,7 @@
     "params.name": "名称",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.name": null,
-  "returns": null
+  "title": "Set the property state: name",
+  "params.name": "Name",
+  "returns": "Device primitive object"
 }

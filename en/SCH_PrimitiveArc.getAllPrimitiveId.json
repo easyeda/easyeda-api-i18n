@@ -10,6 +10,6 @@
     "title": "获取所有圆弧的图元 ID",
     "returns": "圆弧的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Arc primitive IDs",
+  "returns": "Array of Arc primitive IDs"
 }

@@ -10,6 +10,6 @@
     "title": "获取所有圆的图元 ID",
     "returns": "圆的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the primitive IDs of all circles",
+  "returns": "Array of circle primitive IDs"
 }

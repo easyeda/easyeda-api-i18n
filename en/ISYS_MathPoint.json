@@ -10,7 +10,7 @@
     "properties.x": "X 坐标",
     "properties.y": "Y 坐标"
   },
-  "title": null,
-  "properties.x": null,
-  "properties.y": null
+  "title": "Discrete points",
+  "properties.x": "X coordinate",
+  "properties.y": "Y coordinate"
 }

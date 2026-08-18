@@ -27,7 +27,7 @@
     "remarks.text.0": "画布更新计算包括画布渲染更新、属性面板更新等",
     "returns": "画布更新计算功能状态"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Query the current canvas update calculation status",
+  "remarks.text.0": "Canvas update calculation includes canvas render updates, property panel updates, etc.",
+  "returns": "Canvas update calculation function status"
 }

@@ -11,7 +11,7 @@
     "params.primitiveIds": "二进制内嵌对象的图元 ID 或二进制内嵌对象图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Binary embedded object",
+  "params.primitiveIds": "Binary embedded object primitive ID or Binary embedded object primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

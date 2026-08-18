@@ -19,16 +19,16 @@
     "properties.resizeX": "是否允许水平调整大小",
     "properties.resizeY": "是否允许垂直调整大小"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.top": null,
-  "properties.left": null,
-  "properties.width": null,
-  "properties.height": null,
-  "properties.overlay": null,
-  "properties.maxDragX": null,
-  "properties.maxDragY": null,
-  "properties.hide": null,
-  "properties.resizeX": null,
-  "properties.resizeY": null
+  "title": "Modal popup: a top-level popup that can be dragged and resized",
+  "properties.children": "Popup content child nodes",
+  "properties.top": "Position from the top (pixels, required)",
+  "properties.left": "Position from the left (pixels, required)",
+  "properties.width": "Width ( pixels, required)",
+  "properties.height": "Height ( pixels, required)",
+  "properties.overlay": "Whether to show the mask layer",
+  "properties.maxDragX": "Maximum horizontal drag distance (pixels)",
+  "properties.maxDragY": "Maximum vertical drag distance ( pixels)",
+  "properties.hide": "Whether to hide the popup",
+  "properties.resizeX": "Whether horizontal resizing is allowed",
+  "properties.resizeY": "Whether vertical resizing is allowed"
 }

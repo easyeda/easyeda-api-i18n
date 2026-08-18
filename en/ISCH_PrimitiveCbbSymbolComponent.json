@@ -10,7 +10,7 @@
     "properties.cbb": "关联复用模块",
     "properties.cbbSymbol": "关联复用模块符号"
   },
-  "title": null,
-  "properties.cbb": null,
-  "properties.cbbSymbol": null
+  "title": "Reuse block symbol primitive",
+  "properties.cbb": "Associate reuse block",
+  "properties.cbbSymbol": "Associate reuse block symbol"
 }

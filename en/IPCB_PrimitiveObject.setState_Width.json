@@ -11,7 +11,7 @@
     "params.width": "宽",
     "returns": "二进制内嵌对象图元对象"
   },
-  "title": null,
-  "params.width": null,
-  "returns": null
+  "title": "Set the property state: width",
+  "params.width": "Width",
+  "returns": "Binary embedded object primitive object"
 }

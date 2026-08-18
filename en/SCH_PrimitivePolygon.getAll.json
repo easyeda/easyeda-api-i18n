@@ -10,6 +10,6 @@
     "title": "获取所有多边形",
     "returns": "多边形图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Polygon",
+  "returns": "Array of Polygon primitive objects"
 }

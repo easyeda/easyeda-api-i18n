@@ -20,7 +20,7 @@
     "remarks.text.0": "将复杂多边形拆分为单多边形对象数组",
     "returns": "单多边形数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Split is single polygon array",
+  "remarks.text.0": "Will complex polygon split is single polygon array of objects",
+  "returns": "Single polygon array"
 }

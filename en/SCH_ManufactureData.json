@@ -18,6 +18,6 @@
     "title": "原理图 & 符号 / 生产资料类",
     "remarks.text.0": "获取当前原理图图页的生产资料文件及快捷下单"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Schematic & symbol / manufacture data class",
+  "remarks.text.0": "Get the manufacture data files of the current schematic sheet and quick ordering"
 }

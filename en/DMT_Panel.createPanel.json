@@ -10,6 +10,6 @@
     "title": "创建面板",
     "returns": "面板 UUID，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Create Panel",
+  "returns": "Panel UUID, if it is `undefined` creation fails"
 }

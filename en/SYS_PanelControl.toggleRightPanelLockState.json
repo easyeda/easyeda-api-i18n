@@ -10,6 +10,6 @@
     "title": "切换右侧面板锁定状态",
     "params.state": "是否锁定，如若不指定则反置当前状态"
   },
-  "title": null,
-  "params.state": null
+  "title": "Toggle the lock state of the right panel",
+  "params.state": "Whether to lock. If not specified, the current state is inverted"
 }

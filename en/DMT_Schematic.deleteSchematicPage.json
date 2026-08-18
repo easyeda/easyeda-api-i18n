@@ -11,7 +11,7 @@
     "params.schematicPageUuid": "原理图图页 UUID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.schematicPageUuid": null,
-  "returns": null
+  "title": "Delete Schematic sheet",
+  "params.schematicPageUuid": "Schematic sheet UUID",
+  "returns": "Whether the operation is successful"
 }

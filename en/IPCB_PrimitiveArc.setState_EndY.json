@@ -11,7 +11,7 @@
     "params.endY": "终止位置 Y",
     "returns": "圆弧线图元对象"
   },
-  "title": null,
-  "params.endY": null,
-  "returns": null
+  "title": "Set the property state: end position Y",
+  "params.endY": "End position Y",
+  "returns": "Arc line primitive object"
 }

@@ -11,7 +11,7 @@
     "params.complexPolygon": "复杂多边形数据",
     "returns": "复杂多边形对象，`undefined` 表示数据不合法"
   },
-  "title": null,
-  "params.complexPolygon": null,
-  "returns": null
+  "title": "Create Complex polygon",
+  "params.complexPolygon": "Complex polygon data",
+  "returns": "Complex polygon object. `undefined` indicates that the data is invalid"
 }

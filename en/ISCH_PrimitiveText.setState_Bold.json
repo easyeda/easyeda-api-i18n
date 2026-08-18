@@ -11,7 +11,7 @@
     "params.bold": "是否加粗",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.bold": null,
-  "returns": null
+  "title": "Set the property state: whether it is bold",
+  "params.bold": "Whether it is bold",
+  "returns": "Text primitive object"
 }

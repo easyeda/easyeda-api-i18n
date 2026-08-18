@@ -14,11 +14,11 @@
     "properties.layers": "布线图层",
     "properties.ignoreNets": "忽略网络"
   },
-  "title": null,
-  "properties.RoutingNets": null,
-  "properties.cornerStyle": null,
-  "properties.existingPrimitiveMode": null,
-  "properties.optimization": null,
-  "properties.layers": null,
-  "properties.ignoreNets": null
+  "title": "Auto routing props",
+  "properties.RoutingNets": "Routing nets",
+  "properties.cornerStyle": "Routing corner style",
+  "properties.existingPrimitiveMode": "How existing wires/vias are handled",
+  "properties.optimization": "Optimization priority",
+  "properties.layers": "Routing layers",
+  "properties.ignoreNets": "Ignore net"
 }

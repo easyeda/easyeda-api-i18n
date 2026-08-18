@@ -14,11 +14,11 @@
     "properties.showTitleBlock": "是否显示明细表",
     "properties.titleBlockData": "明细表数据"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.name": null,
-  "properties.parentSchematicUuid": null,
-  "properties.showTitleBlock": null,
-  "properties.titleBlockData": null
+  "title": "Schematic sheet property",
+  "properties.itemType": "Project type",
+  "properties.uuid": "Schematic sheet UUID",
+  "properties.name": "Schematic sheet name",
+  "properties.parentSchematicUuid": "UUID of the schematic it belongs to",
+  "properties.showTitleBlock": "Whether to show the title block",
+  "properties.titleBlockData": "Title block data"
 }

@@ -12,9 +12,9 @@
     "properties.maxX": "最大 X 坐标",
     "properties.maxY": "最大 Y 坐标"
   },
-  "title": null,
-  "properties.minX": null,
-  "properties.minY": null,
-  "properties.maxX": null,
-  "properties.maxY": null
+  "title": "BBox (minimum bounding rectangle)",
+  "properties.minX": "Minimum X coordinate",
+  "properties.minY": "Minimum Y coordinate",
+  "properties.maxX": "Maximum X coordinate",
+  "properties.maxY": "Maximum Y coordinate"
 }

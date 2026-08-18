@@ -10,6 +10,6 @@
     "title": "转换到：折线图元",
     "returns": "折线图元对象"
   },
-  "title": null,
-  "returns": null
+  "title": "Convert to: polyline primitive",
+  "returns": "Polyline primitive object"
 }

@@ -11,7 +11,7 @@
     "params.rotation": "旋转角度",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "params.rotation": null,
-  "returns": null
+  "title": "Set the property state: rotation angle",
+  "params.rotation": "Rotation angle",
+  "returns": "Pad primitive object"
 }

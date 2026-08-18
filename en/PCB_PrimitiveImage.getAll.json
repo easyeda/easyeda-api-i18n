@@ -12,8 +12,8 @@
     "params.primitiveLock": "是否锁定",
     "returns": "图像图元对象数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Image",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Image primitive objects"
 }

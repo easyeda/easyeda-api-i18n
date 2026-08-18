@@ -21,8 +21,8 @@
     "params.configurationName": "配置名称",
     "returns": "设置是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.configurationName": null,
-  "returns": null
+  "title": "Set as the default design rule configuration for new PCBs",
+  "remarks.text.0": "The return value is result-oriented. Repeatedly setting the same design rule as the default will also return `true`",
+  "params.configurationName": "Configuration name",
+  "returns": "Set Whether Successful"
 }

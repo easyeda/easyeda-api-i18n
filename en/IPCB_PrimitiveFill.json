@@ -16,13 +16,13 @@
     "properties.lineWidth": "线宽",
     "properties.primitiveLock": "是否锁定"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.layer": null,
-  "properties.complexPolygon": null,
-  "properties.net": null,
-  "properties.fillMode": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": "Fill primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.layer": "Layer",
+  "properties.complexPolygon": "Complex polygon",
+  "properties.net": "Net name",
+  "properties.fillMode": "Fill mode",
+  "properties.lineWidth": "Line width",
+  "properties.primitiveLock": "Whether it is locked"
 }

@@ -18,7 +18,7 @@
     "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "所有物理叠层配置"
   },
-  "title": null,
-  "params.physicalProps": null,
-  "returns": null
+  "title": "Get all Physical stacking configuration",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "returns": "All physical stacking configurations"
 }

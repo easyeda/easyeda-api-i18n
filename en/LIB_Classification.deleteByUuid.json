@@ -15,11 +15,11 @@
     "returns": "操作是否成功",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.libraryType": null,
-  "params.primaryClassificationUuid": null,
-  "params.secondaryClassificationUuid": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Delete the classification with the specified UUID",
+  "params.libraryUuid": "Library UUID",
+  "params.libraryType": "Library type",
+  "params.primaryClassificationUuid": "Primary classification UUID",
+  "params.secondaryClassificationUuid": "Secondary classification UUID",
+  "returns": "Whether the operation is successful",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3"
 }

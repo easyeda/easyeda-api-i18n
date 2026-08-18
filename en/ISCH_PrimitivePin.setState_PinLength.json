@@ -11,7 +11,7 @@
     "params.pinLength": "引脚长度",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.pinLength": null,
-  "returns": null
+  "title": "Set the property state: pin length",
+  "params.pinLength": "Pin length",
+  "returns": "Pin primitive object"
 }

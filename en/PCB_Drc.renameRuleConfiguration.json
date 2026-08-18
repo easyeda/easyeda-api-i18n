@@ -22,9 +22,9 @@
     "params.configurationName": "新设计规则配置名称",
     "returns": "重命名是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.originalConfigurationName": null,
-  "params.configurationName": null,
-  "returns": null
+  "title": "Rename the design rule configuration",
+  "remarks.text.0": "Only custom configurations can be renamed. System configurations cannot be renamed",
+  "params.originalConfigurationName": "Original design rule configuration name",
+  "params.configurationName": "New design rule configuration name",
+  "returns": "Whether the rename was successful"
 }

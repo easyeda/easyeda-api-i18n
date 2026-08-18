@@ -12,8 +12,8 @@
     "params.source": "欲导入的多语言数据对象",
     "returns": "导入是否成功"
   },
-  "title": null,
-  "params.namespace": null,
-  "params.source": null,
-  "returns": null
+  "title": "Import multilingual: specify namespace",
+  "params.namespace": "Namespace",
+  "params.source": "The multilingual data object to import",
+  "returns": "Import whether it is successful"
 }

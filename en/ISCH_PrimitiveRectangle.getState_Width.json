@@ -10,6 +10,6 @@
     "title": "获取属性状态：宽",
     "returns": "宽"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: width",
+  "returns": "Width"
 }

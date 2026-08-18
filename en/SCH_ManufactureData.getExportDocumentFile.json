@@ -25,12 +25,12 @@
     "params.objectSpecificParams": "对象特定参数",
     "returns": "导出文档文件数据（或压缩包）"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.fileName": null,
-  "params.fileType": null,
-  "params.typeSpecificParams": null,
-  "params.object": null,
-  "params.objectSpecificParams": null,
-  "returns": null
+  "title": "Get Export document file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "params.fileName": "File name",
+  "params.fileType": "File type",
+  "params.typeSpecificParams": "Type-specific parameters",
+  "params.object": "Object",
+  "params.objectSpecificParams": "Object-specific parameters",
+  "returns": "Exported document file data (or archive)"
 }

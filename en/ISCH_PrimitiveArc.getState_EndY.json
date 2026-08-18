@@ -10,6 +10,6 @@
     "title": "获取属性状态：终止点 Y",
     "returns": "终止点 Y"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: end point Y",
+  "returns": "End point Y"
 }

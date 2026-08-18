@@ -48,15 +48,15 @@
     "params.props": "其它参数",
     "returns": "顶部菜单项的 ID，分隔线是否插入并不会影响操作结果的返回值，不包含 menuItems 中的子项的 ID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "remarks.text.5": null,
-  "params.env": null,
-  "params.id": null,
-  "params.props": null,
-  "returns": null
+  "title": "Insert a system header menu item at the specified position",
+  "remarks.text.0": "This API adds a sub-menu under an existing system first-level menu. First-level menus cannot be added or modified. The `id` array should contain at least `2` values",
+  "remarks.text.1": "This API forces the ID of the newly created system header menu to include the extension UUID. For example, an input `id = 'example'` will be automatically rewritten to `e143d88179874e7f851cc890cd22fc71|example`. To remove this menu later, enter the rewritten name",
+  "remarks.text.2": "This API cannot add any sub-menu under the **Advanced** menu",
+  "remarks.text.3": "Sub-menus added by this API are placed at the end of the original menu by default, unless the `props.insertBefore` parameter is specified",
+  "remarks.text.4": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.5": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "params.env": "Environment",
+  "params.id": "Menu item ID tree. It will match menu items by hierarchy in array order and use the last element of the array as the ID of the menu item to insert",
+  "params.props": "Other parameters",
+  "returns": "The ID of the header menu item. Whether a separator is inserted does not affect the return value of the operation. The IDs of sub-items in menuItems are not included"
 }

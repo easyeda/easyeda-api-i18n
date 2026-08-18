@@ -11,7 +11,7 @@
     "params.mirror": "是否水平镜像",
     "returns": "二进制内嵌对象图元对象"
   },
-  "title": null,
-  "params.mirror": null,
-  "returns": null
+  "title": "Set the property state: whether it is horizontally mirrored",
+  "params.mirror": "Whether it is horizontally mirrored",
+  "returns": "Binary embedded object primitive object"
 }

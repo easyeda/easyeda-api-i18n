@@ -11,7 +11,7 @@
     "params.sourceBoardName": "源板子名称",
     "returns": "新板子名称，如若为 `undefined` 则复制失败"
   },
-  "title": null,
-  "params.sourceBoardName": null,
-  "returns": null
+  "title": "Copy Board",
+  "params.sourceBoardName": "Source board name",
+  "returns": "New board name, if it is `undefined` the copy fails"
 }

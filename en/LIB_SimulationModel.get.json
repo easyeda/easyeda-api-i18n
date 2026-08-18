@@ -29,9 +29,9 @@
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "仿真模型属性"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.simulationModelUuid": null,
-  "params.libraryUuid": null,
-  "returns": null
+  "title": "Get all properties of the simulation model",
+  "remarks.text.0": "Note: This API is only valid for the private deployment edition. Calling it in other editions will always `throw Error`",
+  "params.simulationModelUuid": "Simulation model UUID",
+  "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
+  "returns": "Simulation model properties"
 }

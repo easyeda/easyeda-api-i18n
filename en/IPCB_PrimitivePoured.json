@@ -12,9 +12,9 @@
     "properties.pourFills": "覆铜填充区域",
     "properties.primitiveId": "图元 ID"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.pourPrimitiveId": null,
-  "properties.pourFills": null,
-  "properties.primitiveId": null
+  "title": "Copper fill primitive",
+  "properties.async": "Async",
+  "properties.pourPrimitiveId": "Copper border primitive ID",
+  "properties.pourFills": "Copper fill region",
+  "properties.primitiveId": "Primitive ID"
 }

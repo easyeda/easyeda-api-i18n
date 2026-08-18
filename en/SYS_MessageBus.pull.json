@@ -22,9 +22,9 @@
     "params.callbackFn": "拉到消息后的回调",
     "returns": "消息总线任务"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.topic": null,
-  "params.callbackFn": null,
-  "returns": null
+  "title": "Private message bus: pull a message",
+  "remarks.text.0": "Only one message can be pulled at a time",
+  "params.topic": "Theme",
+  "params.callbackFn": "Callback after a message is pulled",
+  "returns": "Message bus task"
 }

@@ -10,6 +10,6 @@
     "title": "获取属性状态：旋转角度",
     "returns": "旋转角度"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: rotation angle",
+  "returns": "Rotation angle"
 }

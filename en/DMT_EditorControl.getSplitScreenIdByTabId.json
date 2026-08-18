@@ -11,7 +11,7 @@
     "params.tabId": "标签页 ID",
     "returns": "分屏 ID"
   },
-  "title": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Use tab ID get split screen ID",
+  "params.tabId": "Tab ID",
+  "returns": "Split screen ID"
 }

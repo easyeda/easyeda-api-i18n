@@ -21,8 +21,8 @@
     "params.tabId": "标签页 ID，此处支持 {@link IDMT_SchematicPageItem.uuid}、{@link IDMT_PcbItem.uuid}、{@link IDMT_PanelItem.uuid} 作为输入",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Close document",
+  "remarks.text.0": "If the document has not been saved, executing this operation will directly lose all unsaved data. After completing modification operations, first execute {@link SCH_Document.save}, {@link PCB_Document.save}, and {@link PNL_Document.save} to save the data",
+  "params.tabId": "Tab ID. Here {@link IDMT_SchematicPageItem.uuid}, {@link IDMT_PcbItem.uuid}, and {@link IDMT_PanelItem.uuid} are supported as input",
+  "returns": "Whether the operation is successful"
 }

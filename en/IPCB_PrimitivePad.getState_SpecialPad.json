@@ -10,6 +10,6 @@
     "title": "获取属性状态：特殊焊盘外形",
     "returns": "特殊焊盘外形"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: special pad shape",
+  "returns": "Special pad shape"
 }

@@ -12,8 +12,8 @@
     "params.schematicUuid": "目标原理图 UUID，如若不指定则为当前原理图",
     "returns": "新原理图图页 UUID，如若为 `undefined` 则复制失败"
   },
-  "title": null,
-  "params.schematicPageUuid": null,
-  "params.schematicUuid": null,
-  "returns": null
+  "title": "Copy Schematic sheet",
+  "params.schematicPageUuid": "Source schematic sheet UUID",
+  "params.schematicUuid": "Target schematic UUID. If not specified, it is the current schematic",
+  "returns": "New schematic sheet UUID. If it is `undefined`, the copy failed"
 }

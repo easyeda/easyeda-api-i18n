@@ -11,7 +11,7 @@
     "params.fillColor": "填充颜色",
     "returns": "多边形图元对象"
   },
-  "title": null,
-  "params.fillColor": null,
-  "returns": null
+  "title": "Set the property state: fill color",
+  "params.fillColor": "Fill color",
+  "returns": "Polygon primitive object"
 }

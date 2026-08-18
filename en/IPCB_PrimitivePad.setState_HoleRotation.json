@@ -21,8 +21,8 @@
     "params.holeRotation": "孔相对于焊盘的旋转角度",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.holeRotation": null,
-  "returns": null
+  "title": "Set the property state: Rotation angle of the hole relative to the pad",
+  "remarks.text.0": "If the hole does not exist, the property will not be modified",
+  "params.holeRotation": "Rotation angle of the hole relative to the pad",
+  "returns": "Pad primitive object"
 }

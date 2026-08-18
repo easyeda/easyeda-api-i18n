@@ -19,7 +19,7 @@
     "remarks.text.0": "使用多语言系统展示多语言文本",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.extensionUuid": null
+  "title": "System / multilingual class",
+  "remarks.text.0": "Use the multilingual system to display multilingual text",
+  "properties.extensionUuid": "Extension UUID"
 }

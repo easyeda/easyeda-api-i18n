@@ -11,7 +11,7 @@
     "params.key": "Key",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.key": null,
-  "returns": null
+  "title": "Set the property state: Key",
+  "params.key": "Key",
+  "returns": "Attribute primitive object"
 }

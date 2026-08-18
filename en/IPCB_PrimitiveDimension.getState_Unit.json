@@ -10,6 +10,6 @@
     "title": "获取属性状态：单位",
     "returns": "单位"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: unit",
+  "returns": "Unit"
 }

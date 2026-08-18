@@ -15,11 +15,11 @@
     "params.lineType": "线型，`null` 表示默认",
     "returns": "总线图元对象"
   },
-  "title": null,
-  "params.busName": null,
-  "params.line": null,
-  "params.color": null,
-  "params.lineWidth": null,
-  "params.lineType": null,
-  "returns": null
+  "title": "Create a bus",
+  "params.busName": "Bus name",
+  "params.line": "Polyline coordinate group. Each segment is a continuous line described by `[x1, y1, x2, y2, x3, y3]`. If the polylines have no connection to each other, the creation will fail. Examples for the type `Array<Array<number>>`: 1. `[[], [0, 0, 0, 1]]` - segment 1 has no path, invalid; 2. `[[1], [0, 0, 0, 1]]` - segment 1 only has x, missing y, invalid; 3. `[[0, 0, -1, 0], [0, 0, 1, 1]]` - segment 1 is a horizontal line but segment 2 is a diagonal line, invalid; 4. `[[0, 0, -1, 0, -1, 1], [0, 1, 1, 1]]` - the two segments have no connection, invalid; 5. `[[1, 1], [1, 2, 2, 2]]` - segment 1 has only one point, ignored; segment 2 is a horizontal segment, and the final path keeps only segment 2, valid; 6. `[[1, 1], [1, 2]]` - segment 1 has only one point, ignored; segment 2 is also ignored, and the final path is empty, invalid",
+  "params.color": "Bus color. `null` indicates the default",
+  "params.lineWidth": "Line width, range `1-10`. `null` indicates the default",
+  "params.lineType": "Line type. `null` indicates the default",
+  "returns": "Bus primitive object"
 }

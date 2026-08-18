@@ -22,9 +22,9 @@
     "params.boardName": "新原理图所属板子名称，如若不指定则为游离原理图",
     "returns": "新原理图 UUID，如若为 `undefined` 则复制失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.schematicUuid": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Copy Schematic",
+  "remarks.text.0": "If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), copying the schematic will also create a new reuse block symbol",
+  "params.schematicUuid": "Source schematic UUID",
+  "params.boardName": "Name of the board the new schematic belongs to. If not specified, it is a free schematic",
+  "returns": "New schematic UUID. If it is `undefined`, the copy failed"
 }

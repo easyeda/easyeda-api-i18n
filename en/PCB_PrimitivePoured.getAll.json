@@ -10,6 +10,6 @@
     "title": "获取所有覆铜填充图元",
     "returns": "覆铜填充图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Copper fill primitive",
+  "returns": "Array of Copper fill primitive objects"
 }

@@ -11,7 +11,7 @@
     "params.y": "坐标 Y",
     "returns": "过孔图元对象"
   },
-  "title": null,
-  "params.y": null,
-  "returns": null
+  "title": "Set the property state: Y coordinate",
+  "params.y": "Y coordinate",
+  "returns": "Via primitive object"
 }

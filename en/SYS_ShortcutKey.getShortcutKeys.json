@@ -12,8 +12,8 @@
     "returns": "快捷键列表",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "params.includeSystem": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Query shortcut key list",
+  "params.includeSystem": "Whether Contain system shortcut key",
+  "returns": "Shortcut key list",
+  "deprecated": "since EDA v4.2"
 }

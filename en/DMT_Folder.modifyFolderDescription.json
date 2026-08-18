@@ -23,10 +23,10 @@
     "params.description": "文件夹描述，如若为 `undefined` 则清空工程现有描述",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "params.description": null,
-  "returns": null
+  "title": "Modify Folder description",
+  "remarks.text.0": "Modifying the folder description requires interaction with the workspace system. The modification is delayed and takes effect only after a short wait",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID",
+  "params.description": "Folder description. If it is `undefined`, the existing project description is cleared",
+  "returns": "Whether Modify Successful"
 }

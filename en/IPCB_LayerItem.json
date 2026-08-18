@@ -17,14 +17,14 @@
     "properties.layerStatus": "层状态",
     "properties.locked": "是否锁定"
   },
-  "title": null,
-  "properties.id": null,
-  "properties.name": null,
-  "properties.type": null,
-  "properties.color": null,
-  "properties.transparency": null,
-  "properties.inactiveColor": null,
-  "properties.inactiveTransparency": null,
-  "properties.layerStatus": null,
-  "properties.locked": null
+  "title": "Layer properties",
+  "properties.id": "Layer ID",
+  "properties.name": "Name",
+  "properties.type": "Type",
+  "properties.color": "Color (RGB HEX format)",
+  "properties.transparency": "Transparency (%)",
+  "properties.inactiveColor": "Inactive color (RGB HEX format)",
+  "properties.inactiveTransparency": "Inactive transparency (%)",
+  "properties.layerStatus": "Layer status",
+  "properties.locked": "Whether it is locked"
 }

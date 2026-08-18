@@ -20,7 +20,7 @@
     "remarks.text.0": "在未打开工程的情况下调用将返回 `undefined`",
     "returns": "工程库的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the UUID of the project library",
+  "remarks.text.0": "Calling it without an open project will return `undefined`",
+  "returns": "UUID of the project library"
 }

@@ -11,8 +11,8 @@
     "properties.nets": "网络名称数组",
     "properties.color": "等长网络组颜色"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.nets": null,
-  "properties.color": null
+  "title": "Equal-length net group properties",
+  "properties.name": "Equal-length net group name",
+  "properties.nets": "Net name array",
+  "properties.color": "Equal-length net group color"
 }

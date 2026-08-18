@@ -21,8 +21,8 @@
     "params.id": "事件 ID，用以防止重复注册事件",
     "params.callFn": "事件触发时的回调函数"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.callFn": null
+  "title": "Add a cross-probe selection event listener",
+  "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.id": "Event ID, used to prevent duplicate event registration",
+  "params.callFn": "The callback function triggered when the event fires"
 }

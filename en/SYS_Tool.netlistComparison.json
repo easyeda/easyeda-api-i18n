@@ -12,8 +12,8 @@
     "params.netlist2": "网表 2，可以为：①当前工程内的原理图、PCB 的 UUID；②其它工程的工程 UUID 和原理图、PCB UUID；③原理图、PCB 文件数据",
     "returns": "网表对比结果"
   },
-  "title": null,
-  "params.netlist1": null,
-  "params.netlist2": null,
-  "returns": null
+  "title": "Netlist comparison",
+  "params.netlist1": "Netlist 1, which can be: 1. The UUID of a schematic or PCB in the current project; 2. The project UUID and schematic/PCB UUID of another project; 3. Schematic or PCB file data",
+  "params.netlist2": "Netlist 2, which can be: 1. The UUID of a schematic or PCB in the current project; 2. The project UUID and schematic/PCB UUID of another project; 3. Schematic or PCB file data",
+  "returns": "Netlist comparison result"
 }

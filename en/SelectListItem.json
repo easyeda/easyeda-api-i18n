@@ -12,9 +12,9 @@
     "properties.selected": "是否选中",
     "properties.children": "子选项，用于多级嵌套"
   },
-  "title": null,
-  "properties.title": null,
-  "properties.value": null,
-  "properties.selected": null,
-  "properties.children": null
+  "title": "Dropdown option: supports multi-level nested grouping",
+  "properties.title": "Option title (required)",
+  "properties.value": "Associated value of the option",
+  "properties.selected": "Whether Select",
+  "properties.children": "Child options, used for multi-level nesting"
 }

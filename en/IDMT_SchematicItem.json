@@ -15,12 +15,12 @@
     "properties.parentBoardName": "所属板子名称",
     "properties.cbbSymbol": "复用模块原理图关联的模块符号"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.name": null,
-  "properties.page": null,
-  "properties.parentProjectUuid": null,
-  "properties.parentBoardName": null,
-  "properties.cbbSymbol": null
+  "title": "Schematic property",
+  "properties.itemType": "Project type",
+  "properties.uuid": "Schematic UUID",
+  "properties.name": "Schematic name",
+  "properties.page": "Subordinate schematic sheet",
+  "properties.parentProjectUuid": "UUID of the project it belongs to",
+  "properties.parentBoardName": "Name of the board it belongs to",
+  "properties.cbbSymbol": "The module symbol associated with the reuse block schematic"
 }

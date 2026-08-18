@@ -10,6 +10,6 @@
     "title": "获取属性状态：颜色",
     "returns": "颜色"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: color",
+  "returns": "Color"
 }

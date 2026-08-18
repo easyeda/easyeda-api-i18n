@@ -11,7 +11,7 @@
     "params.fontName": "字体名称",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.fontName": null,
-  "returns": null
+  "title": "Set the property state: font name",
+  "params.fontName": "Font name",
+  "returns": "Attribute primitive object"
 }

@@ -11,7 +11,7 @@
     "params.pourPriority": "覆铜优先级",
     "returns": "覆铜边框图元对象"
   },
-  "title": null,
-  "params.pourPriority": null,
-  "returns": null
+  "title": "Set the property state: copper priority",
+  "params.pourPriority": "Copper priority",
+  "returns": "Copper border primitive object"
 }

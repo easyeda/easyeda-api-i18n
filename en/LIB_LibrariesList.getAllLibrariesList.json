@@ -20,7 +20,7 @@
     "remarks.text.0": "此处不会获取到系统库、个人库、工程库、收藏库的信息，如需获取它们的信息，请使用 {@link LIB_LibrariesList.getSystemLibraryUuid | getSystemLibraryUuid}、{@link LIB_LibrariesList.getPersonalLibraryUuid | getPersonalLibraryUuid}、{@link LIB_LibrariesList.getProjectLibraryUuid | getProjectLibraryUuid}、{@link LIB_LibrariesList.getFavoriteLibraryUuid | getFavoriteLibraryUuid} 接口",
     "returns": "库信息列表"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the list of all libraries",
+  "remarks.text.0": "This does not get the information of the system library, personal library, project library, or favorite library. To get their information, use the {@link LIB_LibrariesList.getSystemLibraryUuid | getSystemLibraryUuid}, {@link LIB_LibrariesList.getPersonalLibraryUuid | getPersonalLibraryUuid}, {@link LIB_LibrariesList.getProjectLibraryUuid | getProjectLibraryUuid}, and {@link LIB_LibrariesList.getFavoriteLibraryUuid | getFavoriteLibraryUuid} APIs",
+  "returns": "Library information list"
 }

@@ -13,9 +13,9 @@
     "params.folderName": "文件夹名称",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "params.folderName": null,
-  "returns": null
+  "title": "Modify Folder name",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID",
+  "params.folderName": "Folder name",
+  "returns": "Whether Modify Successful"
 }

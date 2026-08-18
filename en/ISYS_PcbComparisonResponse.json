@@ -11,8 +11,8 @@
     "properties.data": "对比结果（`success = true` 时存在）",
     "properties.error": "错误（`success = false` 时存在）"
   },
-  "title": null,
-  "properties.success": null,
-  "properties.data": null,
-  "properties.error": null
+  "title": "PCB comparison response",
+  "properties.success": "Whether Successful",
+  "properties.data": "Comparison result (present when `success = true`)",
+  "properties.error": "Error (present when `success = false`)"
 }

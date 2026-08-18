@@ -10,6 +10,6 @@
     "title": "获取属性状态：位号",
     "returns": "位号"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: designator",
+  "returns": "Designator"
 }

@@ -22,10 +22,10 @@
     "properties.divergenceLineWidth": "发散线宽",
     "properties.divergenceAngle": "发散角度"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.connectionMethod": null,
-  "properties.divergenceSpacing": null,
-  "properties.divergenceLineWidth": null,
-  "properties.divergenceAngle": null
+  "title": "Pad thermal relief optimization parameters",
+  "remarks.text.0": "When the connection method ({@link IPCB_PrimitivePadHeatWelding.connectionMethod | connectionMethod}) is direct connection ({@link EPCB_PrimitivePadHeatWeldingConnectionMethod.DIRECT_CONNECTED | DIRECT_CONNECTED}) or no connection ({@link EPCB_PrimitivePadHeatWeldingConnectionMethod.NON_CONNECTED | NON_CONNECTED}), the settings of divergence spacing, divergence line width, and divergence angle will be ignored",
+  "properties.connectionMethod": "Connection method",
+  "properties.divergenceSpacing": "Divergence spacing",
+  "properties.divergenceLineWidth": "Divergence line width",
+  "properties.divergenceAngle": "Divergence angle"
 }

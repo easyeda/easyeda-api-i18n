@@ -11,7 +11,7 @@
     "params.fillStyle": "填充样式",
     "returns": "矩形图元对象"
   },
-  "title": null,
-  "params.fillStyle": null,
-  "returns": null
+  "title": "Set the property state: fill style",
+  "params.fillStyle": "Fill style",
+  "returns": "Rectangle primitive object"
 }

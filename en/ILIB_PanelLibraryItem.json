@@ -14,11 +14,11 @@
     "properties.classification": "分类",
     "properties.description": "描述"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.name": null,
-  "properties.classification": null,
-  "properties.description": null
+  "title": "Panel library property",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "Panel library UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.name": "Panel library name",
+  "properties.classification": "Classification",
+  "properties.description": "Description"
 }

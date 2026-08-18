@@ -10,6 +10,6 @@
     "title": "获取当前鼠标在画布上的位置",
     "returns": "鼠标在画布上的位置，`undefined` 代表当前鼠标不在画布上"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Current the mouse position on the canvas",
+  "returns": "The mouse position on the canvas. `undefined` means the current mouse is not on the canvas"
 }

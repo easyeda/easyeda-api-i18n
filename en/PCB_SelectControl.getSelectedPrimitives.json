@@ -11,7 +11,7 @@
     "returns": "选中图元的所有参数",
     "deprecated": "请使用 {@link PCB_SelectControl.getAllSelectedPrimitives | getAllSelectedPrimitives} 替代"
   },
-  "title": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Query all parameters of the selected primitives",
+  "returns": "All parameters of the selected primitives",
+  "deprecated": "Please use {@link PCB_SelectControl.getAllSelectedPrimitives | getAllSelectedPrimitives} instead"
 }

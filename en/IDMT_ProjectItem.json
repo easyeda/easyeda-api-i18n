@@ -12,9 +12,9 @@
     "properties.data": "工程内文档数据",
     "properties.collaborationMode": "工程协作模式"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.description": null,
-  "properties.data": null,
-  "properties.collaborationMode": null
+  "title": "Project property",
+  "properties.name": "Project link name",
+  "properties.description": "Description",
+  "properties.data": "Project in document data",
+  "properties.collaborationMode": "Project collaboration mode"
 }

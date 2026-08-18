@@ -29,9 +29,9 @@
     "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "设置是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.configurationName": null,
-  "params.physicalProps": null,
-  "returns": null
+  "title": "Set as the default physical stacking configuration for new PCBs",
+  "remarks.text.0": "The return value is result-oriented. Repeatedly setting the same physical stacking as the default will also return `true`",
+  "params.configurationName": "Configuration name",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "returns": "Set Whether Successful"
 }

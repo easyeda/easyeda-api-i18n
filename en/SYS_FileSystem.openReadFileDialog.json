@@ -12,8 +12,8 @@
     "params.multiFiles": "是否允许读取多文件",
     "returns": "File 格式文件数组"
   },
-  "title": null,
-  "params.filenameExtensions": null,
-  "params.multiFiles": null,
-  "returns": null
+  "title": "Open the read-file dialog",
+  "params.filenameExtensions": "File extension",
+  "params.multiFiles": "Whether multiple files are allowed to be read",
+  "returns": "File format file array"
 }

@@ -12,9 +12,9 @@
     "properties.type": "按钮样式类型：default 默认 / primary 主按钮 / danger 危险 / forbidden 禁用态 / text 纯文本",
     "properties.icon": "按钮图标配置"
   },
-  "title": null,
-  "properties.text": null,
-  "properties.disabled": null,
-  "properties.type": null,
-  "properties.icon": null
+  "title": "Button component: a clickable operation button",
+  "properties.text": "Button show text",
+  "properties.disabled": "Whether Disable",
+  "properties.type": "Button style type: default / primary / danger / forbidden / text",
+  "properties.icon": "Button icon configuration"
 }

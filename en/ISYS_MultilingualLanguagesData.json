@@ -18,6 +18,6 @@
     "title": "多语言数据",
     "remarks.text.0": "包含同一命名空间下的多种语言的数据"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Multilingual data",
+  "remarks.text.0": "Contains data of multiple languages under the same namespace"
 }

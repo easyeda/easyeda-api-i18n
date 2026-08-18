@@ -18,6 +18,6 @@
     "title": "原理图 & 符号 / 引脚图元类",
     "remarks.text.0": "引脚图元仅符号编辑器可用，在原理图图页内，关联到符号的引脚被称为 {@link ISCH_PrimitiveComponentPin | 器件引脚图元}"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Schematic & symbol / pin primitive class",
+  "remarks.text.0": "Pin primitives are only available in the symbol editor. In a schematic sheet, the pin associated with a symbol is called {@link ISCH_PrimitiveComponentPin | a device pin primitive}"
 }

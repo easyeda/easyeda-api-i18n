@@ -10,6 +10,6 @@
     "title": "获取属性状态：热焊优化参数",
     "returns": "热焊优化参数"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: thermal relief optimization parameters",
+  "returns": "Thermal relief optimization parameters"
 }

@@ -17,14 +17,14 @@
     "properties.ascription": "归属",
     "properties.lastModifiedBy": "前次修改者"
   },
-  "title": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.classification": null,
-  "properties.ordinal": null,
-  "properties.name": null,
-  "properties.description": null,
-  "properties.updateTimestamp": null,
-  "properties.ascription": null,
-  "properties.lastModifiedBy": null
+  "title": "Searched 3D model properties",
+  "properties.uuid": "3D model UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.classification": "Classification",
+  "properties.ordinal": "Sorting",
+  "properties.name": "3D model name",
+  "properties.description": "Description",
+  "properties.updateTimestamp": "Update timestamp",
+  "properties.ascription": "Ownership",
+  "properties.lastModifiedBy": "Last modifier"
 }

@@ -22,9 +22,9 @@
     "params.eventType": "事件类型",
     "params.callFn": "事件触发时的回调函数"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.eventType": null,
-  "params.callFn": null
+  "title": "Register a simulation engine pull event listener",
+  "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.id": "Event ID, used to prevent duplicate event registration",
+  "params.eventType": "Event type",
+  "params.callFn": "The callback function triggered when the event fires"
 }

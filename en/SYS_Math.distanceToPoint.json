@@ -12,8 +12,8 @@
     "params.point": "待计算的点",
     "returns": "最短距离，如点在多边形内部则返回 `0`"
   },
-  "title": null,
-  "params.polygon": null,
-  "params.point": null,
-  "returns": null
+  "title": "Calculate the shortest distance from a point to the polygon boundary",
+  "params.polygon": "Polygon",
+  "params.point": "The point to calculate",
+  "returns": "Shortest distance. If the point is inside the polygon, `0` is returned"
 }

@@ -14,10 +14,10 @@
     "returns": "分类索引",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.libraryType": null,
-  "params.primaryClassificationName": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Create a primary classification",
+  "params.libraryUuid": "Library UUID",
+  "params.libraryType": "Library type",
+  "params.primaryClassificationName": "Primary classification name",
+  "returns": "Classification index",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3"
 }

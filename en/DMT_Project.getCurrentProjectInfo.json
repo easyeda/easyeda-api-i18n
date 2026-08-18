@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的详细属性",
     "returns": "工程属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get detailed properties of Current project",
+  "remarks.text.0": "It will get the detailed properties of the project associated with the currently open schematic, PCB, or panel that has the last input focus",
+  "returns": "Project property; if it is `undefined`, the retrieval failed"
 }

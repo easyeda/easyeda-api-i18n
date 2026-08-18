@@ -10,6 +10,6 @@
     "title": "获取所有参与的团队的详细属性",
     "returns": "所有参与的团队的详细属性"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of all involved teams",
+  "returns": "Detailed properties of all involved teams"
 }

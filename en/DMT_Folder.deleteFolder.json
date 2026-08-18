@@ -12,8 +12,8 @@
     "params.folderUuid": "文件夹 UUID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "returns": null
+  "title": "Delete Folder",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID",
+  "returns": "Whether the operation is successful"
 }

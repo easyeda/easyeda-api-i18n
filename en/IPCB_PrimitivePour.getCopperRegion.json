@@ -10,6 +10,6 @@
     "title": "获取铺铜区域覆铜填充图元",
     "returns": "覆铜填充图元，如若不存在关联的覆铜填充图元则返回 `undefined`"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the copper fill primitive of the copper region",
+  "returns": "The copper fill primitive. If no associated copper fill primitive exists, `undefined` is returned"
 }

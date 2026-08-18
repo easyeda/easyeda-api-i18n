@@ -27,10 +27,10 @@
     "params.force": "强制删除文件夹（当欲删除的是文件夹且文件夹内有文件时，是否强制删除该文件夹）",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.uri": null,
-  "params.force": null,
-  "returns": null
+  "title": "Delete a file in the file system",
+  "remarks.text.0": "Note 1: This API is only valid for clients. Calling it in a browser environment will always `throw Error`",
+  "remarks.text.1": "Note 2: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.uri": "File resource locator. If it ends with a slash `/` (a backslash `\\` on Windows), it is recognized as a folder; if it does not end with a slash, it is recognized as a complete file name, in which case the `fileName` parameter is ignored",
+  "params.force": "Force delete the folder (whether to force delete the folder when the target is a folder containing files)",
+  "returns": "Delete Whether the operation is successful"
 }

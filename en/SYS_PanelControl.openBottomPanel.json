@@ -10,6 +10,6 @@
     "title": "打开底部面板",
     "params.tab": "标签页，如若不指定则不切换标签页"
   },
-  "title": null,
-  "params.tab": null
+  "title": "Open the bottom panel",
+  "params.tab": "Tab. If not specified, the tab will not be switched"
 }

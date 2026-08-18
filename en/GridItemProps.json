@@ -12,9 +12,9 @@
     "properties.rowSpan": "跨行数",
     "properties.align": "单元格内对齐方式"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.colSpan": null,
-  "properties.rowSpan": null,
-  "properties.align": null
+  "title": "Grid item: a single child element in a grid",
+  "properties.children": "Child node",
+  "properties.colSpan": "Column span",
+  "properties.rowSpan": "Row span",
+  "properties.align": "Alignment within the cell"
 }

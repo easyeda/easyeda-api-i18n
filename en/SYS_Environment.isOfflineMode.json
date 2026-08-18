@@ -10,6 +10,6 @@
     "title": "是否为全离线模式",
     "returns": "是否为全离线模式"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is fully-offline mode",
+  "returns": "Whether it is fully-offline mode"
 }

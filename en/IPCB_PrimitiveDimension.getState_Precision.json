@@ -10,6 +10,6 @@
     "title": "获取属性状态：精度",
     "returns": "精度"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: precision",
+  "returns": "Precision"
 }

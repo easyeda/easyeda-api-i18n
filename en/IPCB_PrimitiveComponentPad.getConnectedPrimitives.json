@@ -20,7 +20,7 @@
     "remarks.text.0": "本接口可以获取到与焊盘直接接触的图元",
     "params.onlyCentreConnection": "是否仅中心连接，如若为 `true` 则仅获取中心连接的图元（直线、圆弧线、过孔），如若为 `false` 则获取所有接触的图元"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.onlyCentreConnection": null
+  "title": "Get connected primitives",
+  "remarks.text.0": "This API can get the primitives that are in direct contact with the pad",
+  "params.onlyCentreConnection": "Whether to only use center connection. If it is `true`, only center-connected primitives (lines, arc lines, vias) are obtained; if it is `false`, all contacting primitives are obtained"
 }

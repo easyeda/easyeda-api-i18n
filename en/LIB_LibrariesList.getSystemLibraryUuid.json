@@ -10,6 +10,6 @@
     "title": "获取系统库的 UUID",
     "returns": "系统库的 UUID"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the UUID of the system library",
+  "returns": "UUID of the system library"
 }

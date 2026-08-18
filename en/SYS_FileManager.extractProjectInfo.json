@@ -11,7 +11,7 @@
     "params.data": "工程文件",
     "returns": "工程配置信息"
   },
-  "title": null,
-  "params.data": null,
-  "returns": null
+  "title": "Extract the project configuration information from the file",
+  "params.data": "Project file",
+  "returns": "Project configuration information"
 }

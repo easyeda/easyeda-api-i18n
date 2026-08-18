@@ -21,8 +21,8 @@
     "params.holeOffsetY": "孔偏移 Y",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.holeOffsetY": null,
-  "returns": null
+  "title": "Set the property state: hole offset Y",
+  "remarks.text.0": "If the hole does not exist, the property will not be modified",
+  "params.holeOffsetY": "Hole offset Y",
+  "returns": "Pad primitive object"
 }

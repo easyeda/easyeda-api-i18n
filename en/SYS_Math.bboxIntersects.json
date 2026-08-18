@@ -12,8 +12,8 @@
     "params.bbox2": "BBox 2",
     "returns": "是否相交"
   },
-  "title": null,
-  "params.bbox1": null,
-  "params.bbox2": null,
-  "returns": null
+  "title": "Quickly determine whether two BBoxes intersect",
+  "params.bbox1": "BBox 1",
+  "params.bbox2": "BBox 2",
+  "returns": "Whether they intersect"
 }

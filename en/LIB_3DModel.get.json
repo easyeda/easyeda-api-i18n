@@ -12,8 +12,8 @@
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "3D 模型属性"
   },
-  "title": null,
-  "params.modelUuid": null,
-  "params.libraryUuid": null,
-  "returns": null
+  "title": "Get all properties of the 3D model",
+  "params.modelUuid": "3D model UUID",
+  "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
+  "returns": "3D model property"
 }

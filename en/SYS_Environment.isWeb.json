@@ -10,6 +10,6 @@
     "title": "是否处于浏览器环境",
     "returns": "是否处于浏览器环境"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is in the browser environment",
+  "returns": "Whether it is in the browser environment"
 }

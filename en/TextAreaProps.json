@@ -13,10 +13,10 @@
     "properties.placeholder": "占位提示文本",
     "properties.name": "输入框名称（表单 name 属性）"
   },
-  "title": null,
-  "properties.disabled": null,
-  "properties.value": null,
-  "properties.resizable": null,
-  "properties.placeholder": null,
-  "properties.name": null
+  "title": "Multi-line text input component",
+  "properties.disabled": "Whether Disable input",
+  "properties.value": "Current text value",
+  "properties.resizable": "Whether it is resizable (x horizontal / y vertical)",
+  "properties.placeholder": "Placeholder text",
+  "properties.name": "Input box name (the form `name` attribute)"
 }

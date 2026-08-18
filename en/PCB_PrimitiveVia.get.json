@@ -11,7 +11,7 @@
     "params.primitiveIds": "过孔的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "过孔图元对象，`undefined` 表示获取失败"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Get Via",
+  "params.primitiveIds": "Via primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
+  "returns": "Via primitive object, `undefined` indicates that the retrieval failed"
 }

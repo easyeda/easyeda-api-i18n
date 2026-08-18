@@ -10,6 +10,6 @@
     "title": "将图元转换为同步图元",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "returns": null
+  "title": "Convert Primitive to Sync primitive",
+  "returns": "Device primitive object"
 }

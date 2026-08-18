@@ -11,7 +11,7 @@
     "params.startY": "起始位置 Y",
     "returns": "圆弧线图元对象"
   },
-  "title": null,
-  "params.startY": null,
-  "returns": null
+  "title": "Set the property state: start position Y",
+  "params.startY": "Start position Y",
+  "returns": "Arc line primitive object"
 }

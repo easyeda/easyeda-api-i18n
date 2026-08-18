@@ -13,9 +13,9 @@
     "params.primitiveLock": "是否锁定",
     "returns": "属性的图元 ID 数组"
   },
-  "title": null,
-  "params.parentPrimitiveId": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Property primitive IDs",
+  "params.parentPrimitiveId": "Associated parent primitive ID",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Property primitive IDs"
 }

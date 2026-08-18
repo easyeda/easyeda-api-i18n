@@ -11,7 +11,7 @@
     "params.height": "高",
     "returns": "矩形图元对象"
   },
-  "title": null,
-  "params.height": null,
-  "returns": null
+  "title": "Set the property state: height",
+  "params.height": "Height",
+  "returns": "Rectangle primitive object"
 }

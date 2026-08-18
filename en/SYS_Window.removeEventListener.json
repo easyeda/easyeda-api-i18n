@@ -10,6 +10,6 @@
     "title": "移除事件监听",
     "params.removableObject": "窗口事件监听可移除对象"
   },
-  "title": null,
-  "params.removableObject": null
+  "title": "Remove Event listener",
+  "params.removableObject": "Window event listener can remove object"
 }

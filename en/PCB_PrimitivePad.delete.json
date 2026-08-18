@@ -11,7 +11,7 @@
     "params.primitiveIds": "焊盘的图元 ID 或焊盘图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Pad",
+  "params.primitiveIds": "Pad primitive ID or Pad primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

@@ -10,6 +10,6 @@
     "title": "获取所有圆",
     "returns": "圆图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all circles",
+  "returns": "Array of circle primitive objects"
 }

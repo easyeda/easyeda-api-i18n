@@ -10,6 +10,6 @@
     "title": "获取所有多边形的图元 ID",
     "returns": "多边形的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Polygon primitive IDs",
+  "returns": "Array of Polygon primitive IDs"
 }

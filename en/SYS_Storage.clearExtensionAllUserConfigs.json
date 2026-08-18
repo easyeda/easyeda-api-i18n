@@ -25,8 +25,8 @@
     "remarks.text.1": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "returns": null
+  "title": "Clear all user configurations of the extension",
+  "remarks.text.0": "This will delete all user configuration information of the current extension. Please operate with caution",
+  "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "returns": "Whether the operation is successful"
 }

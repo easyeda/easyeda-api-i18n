@@ -21,8 +21,8 @@
     "params.progress": "进度值，取值范围 `0-100`",
     "params.title": "进度条标题"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.progress": null,
-  "params.title": null
+  "title": "Show the progress bar or set its progress",
+  "remarks.text.0": "When the progress reaches `100`, the progress bar will be automatically destroyed",
+  "params.progress": "Progress value, value range `0-100`",
+  "params.title": "Progress bar title"
 }

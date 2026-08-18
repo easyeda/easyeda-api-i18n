@@ -13,9 +13,9 @@
     "params.primitiveLock": "是否锁定",
     "returns": "焊盘的图元 ID 数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.net": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Pad primitive IDs",
+  "params.layer": "Layer",
+  "params.net": "Net name",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Pad primitive IDs"
 }

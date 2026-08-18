@@ -11,7 +11,7 @@
     "params.primitiveIds": "直线的图元 ID 或直线图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete the line",
+  "params.primitiveIds": "Primitive ID of the line or the line primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

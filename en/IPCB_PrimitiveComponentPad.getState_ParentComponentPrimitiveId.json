@@ -10,6 +10,6 @@
     "title": "获取属性状态：父器件图元 ID",
     "returns": "父器件图元 ID"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: parent device primitive ID",
+  "returns": "Parent device primitive ID"
 }

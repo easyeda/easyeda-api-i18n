@@ -12,8 +12,8 @@
     "params.polygon2": "内部多边形",
     "returns": "polygon1 是否完全包含 polygon2"
   },
-  "title": null,
-  "params.polygon1": null,
-  "params.polygon2": null,
-  "returns": null
+  "title": "Determine whether polygon1 completely contains polygon2",
+  "params.polygon1": "Outer polygon",
+  "params.polygon2": "Internal polygon",
+  "returns": "Whether polygon1 completely contains polygon2"
 }

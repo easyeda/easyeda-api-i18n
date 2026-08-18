@@ -12,9 +12,9 @@
     "properties.primitiveId": "图元 ID（可用于画布跳转定位）",
     "properties.sheet": "所在图页 ID"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.designator": null,
-  "properties.primitiveId": null,
-  "properties.sheet": null
+  "title": "Primitive involved in a DRC error",
+  "properties.name": "Primitive name (pin number / net name / device name, depending on the rule)",
+  "properties.designator": "Designator, e.g. `R1`",
+  "properties.primitiveId": "Primitive ID (can be used for canvas jump positioning)",
+  "properties.sheet": "Sheet ID it is on"
 }

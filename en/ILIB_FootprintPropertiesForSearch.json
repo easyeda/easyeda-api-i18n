@@ -9,6 +9,6 @@
     "title": "可用于精确搜索的封装参数",
     "properties.name": "封装名称"
   },
-  "title": null,
-  "properties.name": null
+  "title": "Footprint parameters that can be used for precise search",
+  "properties.name": "Footprint name"
 }

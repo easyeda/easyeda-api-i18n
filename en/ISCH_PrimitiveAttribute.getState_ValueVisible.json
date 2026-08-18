@@ -10,6 +10,6 @@
     "title": "获取属性状态：值是否显示",
     "returns": "值是否显示"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether the value is visible",
+  "returns": "Whether the value is visible"
 }

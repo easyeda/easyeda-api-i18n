@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Select net",
+  "params.net": "Net name",
+  "returns": "Whether the operation is successful"
 }

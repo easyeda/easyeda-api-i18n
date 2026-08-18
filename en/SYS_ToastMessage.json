@@ -19,7 +19,7 @@
     "remarks.text.0": "在屏幕的边缘弹出简短的消息提醒，会在一定时间后自动消除",
     "deprecated": "即将移除吐司消息类，合并入 {@link SYS_Message | 消息通知类}"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "deprecated": null
+  "title": "System / toast message class",
+  "remarks.text.0": "Pops up a brief message notification at the edge of the screen, which will automatically disappear after a certain period of time",
+  "deprecated": "The toast message class will soon be removed and merged into {@link SYS_Message | the message notification class}"
 }

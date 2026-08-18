@@ -9,6 +9,6 @@
     "title": "系统 / 右键菜单类",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "properties.extensionUuid": null
+  "title": "System / right-click menu class",
+  "properties.extensionUuid": "Extension UUID"
 }

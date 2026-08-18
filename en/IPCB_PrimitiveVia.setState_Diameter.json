@@ -11,7 +11,7 @@
     "params.diameter": "外径",
     "returns": "过孔图元对象"
   },
-  "title": null,
-  "params.diameter": null,
-  "returns": null
+  "title": "Set the property state: outer diameter",
+  "params.diameter": "Outer diameter",
+  "returns": "Via primitive object"
 }

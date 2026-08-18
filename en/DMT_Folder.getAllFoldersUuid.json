@@ -21,8 +21,8 @@
     "params.teamUuid": "团队 UUID",
     "returns": "文件夹 UUID 数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.teamUuid": null,
-  "returns": null
+  "title": "Get the UUIDs of all folders",
+  "remarks.text.0": "This API ignores hierarchy information. It will return the UUIDs of folders at all levels and place them in a one-dimensional array",
+  "params.teamUuid": "Team UUID",
+  "returns": "Folder UUID array"
 }

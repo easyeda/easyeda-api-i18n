@@ -11,7 +11,7 @@
     "params.complexPolygon": "复杂多边形",
     "returns": "覆铜边框图元对象"
   },
-  "title": null,
-  "params.complexPolygon": null,
-  "returns": null
+  "title": "Set the property state: complex polygon",
+  "params.complexPolygon": "Complex polygon",
+  "returns": "Copper border primitive object"
 }

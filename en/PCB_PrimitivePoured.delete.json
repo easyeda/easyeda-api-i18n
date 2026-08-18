@@ -11,7 +11,7 @@
     "params.primitiveIds": "覆铜填充的图元 ID 或覆铜填充图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Copper fill",
+  "params.primitiveIds": "Copper fill primitive ID or Copper fill primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

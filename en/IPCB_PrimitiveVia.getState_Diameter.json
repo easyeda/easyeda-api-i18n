@@ -10,6 +10,6 @@
     "title": "获取属性状态：外径",
     "returns": "外径"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: outer diameter",
+  "returns": "Outer diameter"
 }

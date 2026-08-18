@@ -11,7 +11,7 @@
     "params.x": "BBox 左上点坐标 X",
     "returns": "图像图元对象"
   },
-  "title": null,
-  "params.x": null,
-  "returns": null
+  "title": "Set the property state: BBox top-left point coordinates X",
+  "params.x": "BBox top-left point coordinates X",
+  "returns": "Image primitive object"
 }

@@ -13,10 +13,10 @@
     "properties.range": "快捷键生效页面范围",
     "properties.scene": "快捷键生效场景范围"
   },
-  "title": null,
-  "properties.shortcutKey": null,
-  "properties.title": null,
-  "properties.remark": null,
-  "properties.range": null,
-  "properties.scene": null
+  "title": "Shortcut key data",
+  "properties.shortcutKey": "Shortcut key",
+  "properties.title": "Title",
+  "properties.remark": "Remarks",
+  "properties.range": "Effective page range of the shortcut key",
+  "properties.scene": "Effective scene range of the shortcut key"
 }

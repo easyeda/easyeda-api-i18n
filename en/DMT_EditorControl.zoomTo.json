@@ -24,11 +24,11 @@
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.x": null,
-  "params.y": null,
-  "params.scaleRatio": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Zoom to coordinates",
+  "remarks.text.0": "In the schematic and symbol canvases, the coordinate unit span is 0.01inch; in the PCB and footprint canvases, it is mil",
+  "params.x": "Center X coordinate. If not passed in, the current X coordinate will not be changed",
+  "params.y": "Center Y coordinate. If not passed in, the current Y coordinate will not be changed",
+  "params.scaleRatio": "Zoom ratio. If not passed in, the current zoom ratio will not be changed. The unit span is `1/100`. If `200` is passed in, it means a zoom ratio of `200%`",
+  "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
+  "returns": "Region data after zooming. `false` indicates that the canvas does not support the zoom operation or the `tabId` does not exist"
 }

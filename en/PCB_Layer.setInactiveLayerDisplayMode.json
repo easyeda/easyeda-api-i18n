@@ -11,7 +11,7 @@
     "params.displayMode": "展示模式",
     "returns": "是否设置成功"
   },
-  "title": null,
-  "params.displayMode": null,
-  "returns": null
+  "title": "Set Inactive layer display mode",
+  "params.displayMode": "Display mode",
+  "returns": "Whether Set Successful"
 }

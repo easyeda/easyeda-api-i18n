@@ -38,13 +38,13 @@
     "params.workspaceUuid": "工作区 UUID",
     "returns": "工程 UUID 数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "params.workspaceUuid": null,
-  "returns": null
+  "title": "Get the UUIDs of all projects",
+  "remarks.text.0": "If `teamUuid` is specified, all projects under the specified team are obtained;",
+  "remarks.text.1": "If `folderUuid` is specified, all projects under the specified folder are obtained;",
+  "remarks.text.2": "`teamUuid`, `folderUuid` only one of them may be specified, if both are specified, only `folderUuid`;",
+  "remarks.text.3": "If `workspaceUuid` is specified, all projects under the specified team/folder are obtained in the specified Workspace",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID. If not specified, it defaults to the root folder of the team",
+  "params.workspaceUuid": "Workspace UUID",
+  "returns": "Project UUID array"
 }

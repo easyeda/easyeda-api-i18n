@@ -11,7 +11,7 @@
     "params.dimensionType": "尺寸标注类型",
     "returns": "尺寸标注图元对象"
   },
-  "title": null,
-  "params.dimensionType": null,
-  "returns": null
+  "title": "Set the property state: dimension type",
+  "params.dimensionType": "Dimension type",
+  "returns": "Dimension primitive object"
 }

@@ -10,6 +10,6 @@
     "title": "获取编辑器编译日期",
     "returns": "编辑器编译日期"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the editor compiled date",
+  "returns": "Editor compiled date"
 }

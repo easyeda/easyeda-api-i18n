@@ -11,7 +11,7 @@
     "params.primitiveIds": "矩形的图元 ID 或矩形图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Rectangle",
+  "params.primitiveIds": "Rectangle primitive ID or Rectangle primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

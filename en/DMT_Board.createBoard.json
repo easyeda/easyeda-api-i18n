@@ -12,8 +12,8 @@
     "params.pcbUuid": "关联 PCB UUID",
     "returns": "板子名称，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "params.schematicUuid": null,
-  "params.pcbUuid": null,
-  "returns": null
+  "title": "Create Board",
+  "params.schematicUuid": "Associated schematic UUID",
+  "params.pcbUuid": "Associated PCB UUID",
+  "returns": "Board name, if it is `undefined` creation fails"
 }

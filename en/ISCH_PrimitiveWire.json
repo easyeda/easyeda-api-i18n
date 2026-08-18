@@ -30,14 +30,14 @@
     "properties.lineWidth": "线宽",
     "properties.lineType": "线型"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.line": null,
-  "properties.net": null,
-  "properties.color": null,
-  "properties.lineWidth": null,
-  "properties.lineType": null
+  "title": "Wire primitive",
+  "remarks.text.0": "Unresolved issues:",
+  "remarks.text.1": "The `ISCH_PrimitiveWire.net` global net name property involves multi-sheet refresh, so the currently obtained value may be **incorrect**.\nWhen you try to set multiple names for a wire or bus (by placing multiple net labels), the obtained `net` property may not be the latest.\nYou need to wait for the canvas event to asynchronously refresh the global nets before reading it again.",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.line": "Polyline coordinate group",
+  "properties.net": "Net name",
+  "properties.color": "Wire color",
+  "properties.lineWidth": "Line width",
+  "properties.lineType": "Line type"
 }

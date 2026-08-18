@@ -11,8 +11,8 @@
     "properties.type": "日志类型",
     "properties.message": "日志内容"
   },
-  "title": null,
-  "properties.timestamp": null,
-  "properties.type": null,
-  "properties.message": null
+  "title": "Log line",
+  "properties.timestamp": "Timestamp",
+  "properties.type": "Log type",
+  "properties.message": "Log content"
 }

@@ -27,7 +27,7 @@
     "remarks.text.0": "本接口返回值为结果导向，调用本接口前已启用实时 DRC 检查也将返回 `true`",
     "returns": "是否成功启用实时 DRC 检查"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Start real-time DRC check",
+  "remarks.text.0": "The return value of this API is result-oriented. If real-time DRC check was already enabled before calling this API, `true` will also be returned",
+  "returns": "Whether Successful enable real-time DRC check"
 }

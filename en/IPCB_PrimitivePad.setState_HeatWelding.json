@@ -11,7 +11,7 @@
     "params.heatWelding": "热焊优化参数",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "params.heatWelding": null,
-  "returns": null
+  "title": "Set the property state: thermal relief optimization parameters",
+  "params.heatWelding": "Thermal relief optimization parameters",
+  "returns": "Pad primitive object"
 }

@@ -11,7 +11,7 @@
     "params.primitiveLock": "是否锁定",
     "returns": "二进制内嵌对象图元对象"
   },
-  "title": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Set the property state: whether it is locked",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Binary embedded object primitive object"
 }

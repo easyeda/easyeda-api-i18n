@@ -12,8 +12,8 @@
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.footprintUuid": null,
-  "params.libraryUuid": null,
-  "returns": null
+  "title": "Delete Footprint",
+  "params.footprintUuid": "Footprint UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "returns": "Whether the operation is successful"
 }

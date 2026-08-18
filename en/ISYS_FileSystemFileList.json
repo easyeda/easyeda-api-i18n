@@ -13,10 +13,10 @@
     "properties.relativePath": "相对路径，不包含前面的传入路径和文件名（当没有传入路径时，不存在相对路径），且前后均无斜杠",
     "properties.fullPath": "完整路径，包含文件名的绝对路径"
   },
-  "title": null,
-  "properties.fileName": null,
-  "properties.isDirectory": null,
-  "properties.subFiles": null,
-  "properties.relativePath": null,
-  "properties.fullPath": null
+  "title": "File system file path",
+  "properties.fileName": "File name (no slashes at the beginning or end)",
+  "properties.isDirectory": "Whether it is a directory",
+  "properties.subFiles": "Sub-files of the directory",
+  "properties.relativePath": "Relative path, not including the passed-in path and file name (when no path is passed in, there is no relative path), with no slashes at the beginning or end",
+  "properties.fullPath": "Full path, an absolute path including the file name"
 }

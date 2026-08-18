@@ -11,7 +11,7 @@
     "params.alignMode": "对齐模式",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.alignMode": null,
-  "returns": null
+  "title": "Set the property state: alignment mode",
+  "params.alignMode": "Alignment mode",
+  "returns": "Text primitive object"
 }

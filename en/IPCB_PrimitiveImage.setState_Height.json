@@ -11,7 +11,7 @@
     "params.height": "高",
     "returns": "图像图元对象"
   },
-  "title": null,
-  "params.height": null,
-  "returns": null
+  "title": "Set the property state: height",
+  "params.height": "Height",
+  "returns": "Image primitive object"
 }

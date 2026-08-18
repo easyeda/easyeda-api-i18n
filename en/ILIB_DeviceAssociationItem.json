@@ -13,10 +13,10 @@
     "properties.footprintUuid": "封装 UUID",
     "properties.footprint": "封装"
   },
-  "title": null,
-  "properties.symbolType": null,
-  "properties.symbolUuid": null,
-  "properties.symbol": null,
-  "properties.footprintUuid": null,
-  "properties.footprint": null
+  "title": "Device associated symbol, footprint property",
+  "properties.symbolType": "Symbol type",
+  "properties.symbolUuid": "Symbol UUID",
+  "properties.symbol": "Symbol",
+  "properties.footprintUuid": "Footprint UUID",
+  "properties.footprint": "Footprint"
 }

@@ -32,8 +32,8 @@
     "remarks.text.1": "本接口配置定义还在进行中",
     "returns": "光源配置"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "returns": null
+  "title": "Get the ray tracer light configurations",
+  "remarks.text.0": "The {@link PCB_RayTracerEngine.getRenderConfigurations | get ray tracer render configurations} API contains a light configuration. This API is used to get different light configurations",
+  "remarks.text.1": "The configuration definition of this API is still in progress",
+  "returns": "Light configuration"
 }

@@ -19,15 +19,15 @@
     "params.primitiveLock": "是否锁定",
     "returns": "覆铜边框图元对象"
   },
-  "title": null,
-  "params.net": null,
-  "params.layer": null,
-  "params.complexPolygon": null,
-  "params.pourFillMethod": null,
-  "params.preserveSilos": null,
-  "params.pourName": null,
-  "params.pourPriority": null,
-  "params.lineWidth": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Copper border",
+  "params.net": "Net name",
+  "params.layer": "Layer",
+  "params.complexPolygon": "Complex polygon object",
+  "params.pourFillMethod": "Copper fill method",
+  "params.preserveSilos": "Whether to keep islands",
+  "params.pourName": "Copper name",
+  "params.pourPriority": "Copper priority",
+  "params.lineWidth": "Line width",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Copper border primitive object"
 }

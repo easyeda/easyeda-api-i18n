@@ -10,7 +10,7 @@
     "properties.children": "子节点",
     "properties.flexRatio": "弹性占比（flex 生长因子）"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.flexRatio": null
+  "title": "Flex item: a single child element in a Flex layout",
+  "properties.children": "Child node",
+  "properties.flexRatio": "Flex ratio (flex grow factor)"
 }

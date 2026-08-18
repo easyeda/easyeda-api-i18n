@@ -17,6 +17,6 @@
     "title": "获取页面当前视口大小",
     "returns": "视口宽高（单位：像素）"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the current viewport size of the page",
+  "returns": "Viewport width and height (in pixels)"
 }

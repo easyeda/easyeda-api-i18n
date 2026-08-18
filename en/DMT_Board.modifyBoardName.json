@@ -12,8 +12,8 @@
     "params.boardName": "新板子名称",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "params.originalBoardName": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Modify Board name",
+  "params.originalBoardName": "Original board name",
+  "params.boardName": "New board name",
+  "returns": "Whether Modify Successful"
 }

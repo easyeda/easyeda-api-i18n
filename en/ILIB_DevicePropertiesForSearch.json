@@ -16,13 +16,13 @@
     "properties.partNumber": "料号",
     "properties.partCode": "元件编码"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.value": null,
-  "properties.symbolName": null,
-  "properties.footprintName": null,
-  "properties.supplierFootprint": null,
-  "properties.supplierId": null,
-  "properties.partNumber": null,
-  "properties.partCode": null
+  "title": "Device parameters that can be used for precise search",
+  "properties.name": "Device name",
+  "properties.value": "Value",
+  "properties.symbolName": "Associated symbol name",
+  "properties.footprintName": "Associate footprint name",
+  "properties.supplierFootprint": "Supplier footprint name",
+  "properties.supplierId": "Supplier ID",
+  "properties.partNumber": "Part number",
+  "properties.partCode": "Part code"
 }

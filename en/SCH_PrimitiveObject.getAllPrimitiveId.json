@@ -10,6 +10,6 @@
     "title": "获取所有二进制内嵌对象的图元 ID",
     "returns": "二进制内嵌对象的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Binary embedded object primitive IDs",
+  "returns": "Array of Binary embedded object primitive IDs"
 }

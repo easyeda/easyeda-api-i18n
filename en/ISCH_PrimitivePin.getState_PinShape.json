@@ -10,6 +10,6 @@
     "title": "获取属性状态：引脚形状",
     "returns": "引脚形状"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: pin shape",
+  "returns": "Pin shape"
 }

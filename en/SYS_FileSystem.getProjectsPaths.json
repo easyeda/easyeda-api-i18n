@@ -25,8 +25,8 @@
     "remarks.text.1": "注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
     "returns": "工程目录路径数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "returns": null
+  "title": "Get the project directory paths",
+  "remarks.text.0": "Note 1: This API is only valid for semi-offline and fully offline clients. Calling it in a browser environment will always `throw Error`",
+  "remarks.text.1": "Note 2: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "returns": "Array of project directory paths"
 }

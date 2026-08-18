@@ -10,6 +10,6 @@
     "title": "获取属性状态：值",
     "returns": "值"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: value",
+  "returns": "Value"
 }

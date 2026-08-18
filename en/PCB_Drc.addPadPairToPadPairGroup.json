@@ -14,27 +14,15 @@
         },
         {
           "type": "code",
-          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['e0','e1'])"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1"
+          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['e0','e1']) // 游离焊盘-游离焊盘"
         },
         {
           "type": "code",
-          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['R1:1','R1:2'])"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2"
+          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['R1:1','R1:2']) // 器件焊盘 - 器件焊盘"
         },
         {
           "type": "code",
-          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['R1:1','e1'])"
-        },
-        {
-          "type": "text",
-          "key": "example.text.3"
+          "content": "await eda.pcb_Drc.addPadPairToPadPairGroup('test',['R1:1','e1']) // 器件焊盘 - 游离焊盘"
         }
       ]
     }
@@ -42,19 +30,13 @@
   "_source": {
     "title": "将焊盘对添加到焊盘对组",
     "example.text.0": "有三种不同的用法，确保画布上已有对应的焊盘。 分别是 一，游离焊盘-游离焊盘；二，器件焊盘 - 器件焊盘；三，器件焊盘 - 游离焊盘",
-    "example.text.1": "游离焊盘-游离焊盘",
-    "example.text.2": "器件焊盘 - 器件焊盘",
-    "example.text.3": "器件焊盘 - 游离焊盘",
     "params.padPairGroupName": "焊盘对组名称",
     "params.padPair": "焊盘对",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
-  "example.text.3": null,
-  "params.padPairGroupName": null,
-  "params.padPair": null,
-  "returns": null
+  "title": "Add a pad pair to a pad pair group",
+  "example.text.0": "There are three different usages, and make sure the corresponding pads already exist on the canvas. They are: 1. Free pad - free pad; 2. Device pad - device pad; 3. Device pad - free pad",
+  "params.padPairGroupName": "Pad pair group name",
+  "params.padPair": "Pad for",
+  "returns": "Whether the operation is successful"
 }

@@ -17,12 +17,12 @@
   },
   "_source": {
     "title": "计算多边形面积",
-    "remarks.text.0": "使用 Shoelace 公式计算：\n- 传入单个多边形时，返回该多边形的绝对面积\n- 传入多边形组（{@link TSYS_MathPolygonGroup}，如布尔运算的返回值）时，\n计算所有外环面积之和减去所有孔洞面积之和，得到净面积",
+    "remarks.text.0": "使用 Shoelace 公式计算：\n- 传入单个多边形时，返回该多边形的绝对面积\n- 传入多边形组（{@link TSYS_MathPolygonGroup}，如布尔运算的返回值）时，\n  计算所有外环面积之和减去所有孔洞面积之和，得到净面积",
     "params.polygon": "多边形或多边形组",
     "returns": "面积（单个多边形为绝对面积，多边形组为净面积）"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Calculate the area of a polygon",
+  "remarks.text.0": "Calculated using the Shoelace formula:\n- When a single polygon is passed in, the absolute area of the polygon is returned\n- When a polygon group ({@link TSYS_MathPolygonGroup}, such as the return value of Boolean operations) is passed in,\nthe net area is obtained by subtracting the sum of all hole areas from the sum of all outer ring areas",
+  "params.polygon": "Polygon or polygon group",
+  "returns": "Area (absolute area for a single polygon, net area for a polygon group)"
 }

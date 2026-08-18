@@ -10,6 +10,6 @@
     "title": "获取文档源码",
     "returns": "文档源码数据，`undefined` 表示当前未打开文档或数据获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Document source code",
+  "returns": "Document source code data, `undefined` indicates that it is currently not open document or data retrieval failed"
 }

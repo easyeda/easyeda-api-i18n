@@ -18,7 +18,7 @@
     "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "默认物理叠层配置的名称，`undefined` 为获取失败"
   },
-  "title": null,
-  "params.physicalProps": null,
-  "returns": null
+  "title": "Get the name of the default physical stacking configuration for new PCBs",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "returns": "Default physical stacking configuration name of; `undefined` indicates that the retrieval failed"
 }

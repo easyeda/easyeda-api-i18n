@@ -19,7 +19,7 @@
     "remarks.text.0": "注册与管理系统快捷键",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.extensionUuid": null
+  "title": "System / shortcut key class",
+  "remarks.text.0": "Register and manage system shortcut keys",
+  "properties.extensionUuid": "Extension UUID"
 }

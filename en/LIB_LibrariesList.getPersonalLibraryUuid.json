@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前编辑器工作区下的个人库的 UUID，在私有部署环境下不存在个人库，此接口将永远返回 `undefined`",
     "returns": "个人库的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the UUID of the personal library",
+  "remarks.text.0": "It will get the UUID of the personal library under the current editor workspace. In the private deployment environment, the personal library does not exist, and this API will always return `undefined`",
+  "returns": "UUID of the personal library"
 }

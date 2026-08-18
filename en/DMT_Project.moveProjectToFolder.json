@@ -12,8 +12,8 @@
     "params.folderUuid": "文件夹 UUID，只能为当前工程所在团队或个人下的文件夹，如若为 `undefined` 则移动到当前团队的根文件夹",
     "returns": "是否移动成功"
   },
-  "title": null,
-  "params.projectUuid": null,
-  "params.folderUuid": null,
-  "returns": null
+  "title": "Move a project to a folder",
+  "params.projectUuid": "Project UUID",
+  "params.folderUuid": "Folder UUID, which can only be a folder under the team or personal space where the current project is located. If it is `undefined`, it is moved to the root folder of the current team",
+  "returns": "Whether the move is successful"
 }

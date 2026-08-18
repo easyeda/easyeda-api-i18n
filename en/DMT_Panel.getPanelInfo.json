@@ -11,7 +11,7 @@
     "params.panelUuid": "面板 UUID",
     "returns": "面板的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "params.panelUuid": null,
-  "returns": null
+  "title": "Get detailed properties of Panel",
+  "params.panelUuid": "Panel UUID",
+  "returns": "Panel detailed properties of; if it is `undefined`, the retrieval failed"
 }

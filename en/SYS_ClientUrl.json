@@ -19,7 +19,7 @@
     "remarks.text.0": "向外部服务器发起安全的 cURL 请求",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.extensionUuid": null
+  "title": "System / external request class",
+  "remarks.text.0": "Make secure cURL requests to external servers",
+  "properties.extensionUuid": "Extension UUID"
 }

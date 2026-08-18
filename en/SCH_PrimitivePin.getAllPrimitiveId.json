@@ -10,6 +10,6 @@
     "title": "获取所有引脚的图元 ID",
     "returns": "引脚的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Pin primitive IDs",
+  "returns": "Array of Pin primitive IDs"
 }

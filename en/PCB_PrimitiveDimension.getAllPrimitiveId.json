@@ -12,8 +12,8 @@
     "params.primitiveLock": "是否锁定",
     "returns": "尺寸标注的图元 ID 数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get the primitive IDs of all dimensions",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of dimension primitive IDs"
 }

@@ -32,11 +32,11 @@
     "params.point": "待判断的点",
     "returns": "是否在多边形内部"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "params.polygon": null,
-  "params.point": null,
-  "returns": null
+  "title": "Determine whether the point is inside the polygon",
+  "remarks.text.0": "Use the ray casting method to determine whether the point is inside the polygon",
+  "remarks.text.1": "Due to the characteristics of the ray casting method, points on the boundary behave inconsistently: some boundary points may return `true`, and some may return `false`,\ndepending on the geometric relationship between the ray direction and the boundary",
+  "remarks.text.2": "To strictly determine whether the point is on the boundary, combine {@link SYS_Math.distanceToPoint} to check whether the distance is `0`",
+  "params.polygon": "Polygon",
+  "params.point": "The point to determine",
+  "returns": "Whether In polygon internal"
 }

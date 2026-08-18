@@ -22,9 +22,9 @@
     "params.y": "坐标点 Y",
     "returns": "坐标点的图元，如若坐标点无法找到图元，将返回 `undefined`"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.x": null,
-  "params.y": null,
-  "returns": null
+  "title": "Get The primitive at the coordinate point",
+  "remarks.text.0": "This operation is similar to clicking with the mouse on the front end; it will get the primitive at the specified coordinate point",
+  "params.x": "Coordinate point X",
+  "params.y": "Coordinate point Y",
+  "returns": "The primitive at the coordinate point. If no primitive can be found at the coordinate point, `undefined` will be returned"
 }

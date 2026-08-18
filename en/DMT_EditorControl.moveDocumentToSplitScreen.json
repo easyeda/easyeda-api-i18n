@@ -22,9 +22,9 @@
     "params.splitScreenId": "{@link IDMT_EditorSplitScreenItem.id | 分屏 ID}",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tabId": null,
-  "params.splitScreenId": null,
-  "returns": null
+  "title": "Move a document to the specified split screen",
+  "remarks.text.0": "After moving the document, the editor split screen property tree may change",
+  "params.tabId": "Tab ID",
+  "params.splitScreenId": "{@link IDMT_EditorSplitScreenItem.id | Split screen ID}",
+  "returns": "Whether the operation is successful"
 }

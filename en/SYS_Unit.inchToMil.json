@@ -12,8 +12,8 @@
     "params.numberOfDecimals": "保留小数位数，默认为 `4`",
     "returns": "输出密尔数"
   },
-  "title": null,
-  "params.inch": null,
-  "params.numberOfDecimals": null,
-  "returns": null
+  "title": "Unit conversion: inches to mils",
+  "params.inch": "Input value in inches",
+  "params.numberOfDecimals": "Number of decimal places to keep, default is `4`",
+  "returns": "Output value in mils"
 }

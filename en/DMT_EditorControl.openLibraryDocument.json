@@ -14,10 +14,10 @@
     "params.splitScreenId": "分屏 ID，即 {@link DMT_EditorControl.getSplitScreenTree} 方法获取到的 {@link IDMT_EditorSplitScreenItem.id}",
     "returns": "标签页 ID，如若为 `undefined`，则打开文档失败"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.libraryType": null,
-  "params.uuid": null,
-  "params.splitScreenId": null,
-  "returns": null
+  "title": "Open library symbol, footprint document",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.libraryType": "Library type, support symbol and footprint",
+  "params.uuid": "Symbol, footprint UUID",
+  "params.splitScreenId": "Split screen ID, which is the {@link IDMT_EditorSplitScreenItem.id} obtained by the {@link DMT_EditorControl.getSplitScreenTree} method",
+  "returns": "Tab ID, if it is `undefined`, then open document failed"
 }

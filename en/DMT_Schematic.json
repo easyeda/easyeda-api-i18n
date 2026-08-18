@@ -18,6 +18,6 @@
     "title": "文档树 / 原理图管理类",
     "remarks.text.0": "在当前打开的工程内进行原理图管理的相关操作"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Document tree / Schematic management class",
+  "remarks.text.0": "Operations related to schematic management in the currently open project"
 }

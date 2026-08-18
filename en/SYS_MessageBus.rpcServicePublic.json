@@ -11,7 +11,7 @@
     "params.topic": "主题",
     "params.callbackFn": "接收到消息后的回调"
   },
-  "title": null,
-  "params.topic": null,
-  "params.callbackFn": null
+  "title": "Public message bus: register RPC service",
+  "params.topic": "Theme",
+  "params.callbackFn": "Callback after receiving the message"
 }

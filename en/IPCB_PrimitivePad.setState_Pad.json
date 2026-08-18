@@ -26,9 +26,9 @@
     "params.pad": "焊盘外形",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.pad": null,
-  "returns": null
+  "title": "Set the property state: pad shape",
+  "remarks.text.0": "When setting the pad shape, some other property states will be set in conjunction:",
+  "remarks.text.1": "1. The special pad shape property will be cleared",
+  "params.pad": "Pad shape",
+  "returns": "Pad primitive object"
 }

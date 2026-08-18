@@ -20,7 +20,7 @@
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
     "returns": "扩展所有用户配置信息"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get all user configurations of the extension",
+  "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "returns": "All user configuration information of the extension"
 }

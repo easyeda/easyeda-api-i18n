@@ -12,8 +12,8 @@
     "params.primitiveLock": "是否锁定",
     "returns": "过孔图元对象数组"
   },
-  "title": null,
-  "params.net": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Via",
+  "params.net": "Net name",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Via primitive objects"
 }

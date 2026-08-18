@@ -10,6 +10,6 @@
     "title": "获取属性状态：字体名称",
     "returns": "字体名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: font name",
+  "returns": "Font name"
 }

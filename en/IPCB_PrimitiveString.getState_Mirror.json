@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否镜像",
     "returns": "是否镜像"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether it is mirrored",
+  "returns": "Whether it is mirrored"
 }

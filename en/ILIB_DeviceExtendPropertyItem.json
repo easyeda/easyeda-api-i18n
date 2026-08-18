@@ -18,15 +18,15 @@
     "properties.supplierId": "供应商编号",
     "properties.otherProperty": "其它属性"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.designator": null,
-  "properties.addIntoBom": null,
-  "properties.addIntoPcb": null,
-  "properties.net": null,
-  "properties.manufacturer": null,
-  "properties.manufacturerId": null,
-  "properties.supplier": null,
-  "properties.supplierId": null,
-  "properties.otherProperty": null
+  "title": "Device extension property",
+  "properties.name": "Name",
+  "properties.designator": "Designator",
+  "properties.addIntoBom": "Add to BOM",
+  "properties.addIntoPcb": "Transfer to PCB",
+  "properties.net": "Net",
+  "properties.manufacturer": "Manufacturer",
+  "properties.manufacturerId": "Manufacturer ID",
+  "properties.supplier": "Supplier",
+  "properties.supplierId": "Supplier ID",
+  "properties.otherProperty": "Other property"
 }

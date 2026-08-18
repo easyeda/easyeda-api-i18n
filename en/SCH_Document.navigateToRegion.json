@@ -46,14 +46,14 @@
     "params.bottom": "矩形框第二 Y 坐标",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "params.left": null,
-  "params.right": null,
-  "params.top": null,
-  "params.bottom": null,
-  "returns": null
+  "title": "Locate to canvas region",
+  "remarks.text.0": "This API positions on the front-end canvas to the specified region;",
+  "remarks.text.1": "For example: the passed-in data is `{left: 0, right: 60, top: 100, bottom: -20}` => `navigateToRegion(0, 60, 100, -20)`,\nthen the canvas will be positioned to a rectangular range centered at `[30, 40]` with a length of `60` in the x-axis direction and `120` in the y-axis direction;",
+  "remarks.text.2": "This API does not perform zooming, but it will generate a rectangle frame indicating the positioning center and the region range;",
+  "remarks.text.3": "The unit span here is 0.01inch",
+  "params.left": "First X coordinate of the rectangle",
+  "params.right": "Second X coordinate of the rectangle",
+  "params.top": "First Y coordinate of the rectangle",
+  "params.bottom": "Second Y coordinate of the rectangle",
+  "returns": "Whether the operation is successful"
 }

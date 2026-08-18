@@ -15,11 +15,11 @@
     "params.mirror": "是否镜像",
     "returns": "复用模块符号图元对象"
   },
-  "title": null,
-  "params.cbbSymbol": null,
-  "params.x": null,
-  "params.y": null,
-  "params.rotation": null,
-  "params.mirror": null,
-  "returns": null
+  "title": "Create Reuse block symbol",
+  "params.cbbSymbol": "Associated library reuse block symbol. `libraryUuid` is the UUID of the library where the CBB project is located, `cbbUuid` is the UUID of the CBB project, and `uuid` is the UUID of the symbol in the CBB project",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.rotation": "Rotation angle",
+  "params.mirror": "Whether it is mirrored",
+  "returns": "Reuse block symbol primitive object"
 }

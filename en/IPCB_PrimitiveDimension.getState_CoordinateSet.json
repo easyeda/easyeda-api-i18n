@@ -10,6 +10,6 @@
     "title": "获取属性状态：坐标集",
     "returns": "坐标集"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: coordinate set",
+  "returns": "Coordinate set"
 }

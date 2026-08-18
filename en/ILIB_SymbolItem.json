@@ -17,14 +17,14 @@
     "properties.description": "描述",
     "properties.subPartNames": "子部件名称数组"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.cbbUuid": null,
-  "properties.name": null,
-  "properties.classification": null,
-  "properties.type": null,
-  "properties.description": null,
-  "properties.subPartNames": null
+  "title": "Symbol property",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "Symbol UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.cbbUuid": "UUID of the reuse block it belongs to. Only the reuse block symbol has this property",
+  "properties.name": "Symbol name",
+  "properties.classification": "Classification",
+  "properties.type": "Symbol type",
+  "properties.description": "Description",
+  "properties.subPartNames": "Sub-part name array"
 }

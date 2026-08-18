@@ -10,6 +10,6 @@
     "title": "获取 BOM 模板列表",
     "returns": "BOM 模板列表"
   },
-  "title": null,
-  "returns": null
+  "title": "Get BOM template list",
+  "returns": "BOM template list"
 }

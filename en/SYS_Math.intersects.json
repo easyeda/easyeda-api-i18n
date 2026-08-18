@@ -22,9 +22,9 @@
     "params.polygon2": "多边形 2",
     "returns": "是否相交"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.polygon1": null,
-  "params.polygon2": null,
-  "returns": null
+  "title": "Determine whether two polygons intersect",
+  "remarks.text.0": "Determine whether the regions of two polygons have any overlap (including containment, partial intersection, and boundary contact)",
+  "params.polygon1": "Polygon 1",
+  "params.polygon2": "Polygon 2",
+  "returns": "Whether they intersect"
 }

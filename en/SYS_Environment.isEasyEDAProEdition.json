@@ -10,6 +10,6 @@
     "title": "是否为 EasyEDA Pro 版本",
     "returns": "是否为 EasyEDA Pro 版本"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is the EasyEDA Pro edition",
+  "returns": "Whether it is the EasyEDA Pro edition"
 }

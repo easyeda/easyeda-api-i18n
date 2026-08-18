@@ -22,9 +22,9 @@
     "params.boardName": "新 PCB 所属板子名称，如若不指定则为游离 PCB",
     "returns": "新 PCB UUID，如若为 `undefined` 则复制失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.pcbUuid": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Copy PCB",
+  "remarks.text.0": "Even if the PCB here is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), no new reuse block symbol will be created. This operation logic is consistent with the current editor front end",
+  "params.pcbUuid": "Source PCB UUID",
+  "params.boardName": "Name of the board the new PCB belongs to. If not specified, it is a free PCB",
+  "returns": "New PCB UUID. If it is `undefined`, the copy failed"
 }

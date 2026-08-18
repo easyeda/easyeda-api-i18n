@@ -23,10 +23,10 @@
     "params.buttonTitle": "按钮标题，为空则不显示按钮",
     "deprecated": "请使用 {@link SYS_Dialog.showInformationMessage} 替代"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.content": null,
-  "params.title": null,
-  "params.buttonTitle": null,
-  "deprecated": null
+  "title": "Show a message box",
+  "remarks.text.0": "Show a text message box",
+  "params.content": "Message text. Line breaks can be used with `\\n`",
+  "params.title": "Message box title",
+  "params.buttonTitle": "Button title. If empty, the button is not displayed",
+  "deprecated": "Please use {@link SYS_Dialog.showInformationMessage} instead"
 }

@@ -11,7 +11,7 @@
     "params.manufacturer": "制造商",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.manufacturer": null,
-  "returns": null
+  "title": "Set the property state: manufacturer",
+  "params.manufacturer": "Manufacturer",
+  "returns": "Device primitive object"
 }

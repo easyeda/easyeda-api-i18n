@@ -11,7 +11,7 @@
     "params.ids": "图元 ID 数组",
     "returns": "所有图元的所有属性"
   },
-  "title": null,
-  "params.ids": null,
-  "returns": null
+  "title": "Get all properties of the primitives with the specified IDs",
+  "params.ids": "Primitive ID array",
+  "returns": "All properties of all primitives"
 }

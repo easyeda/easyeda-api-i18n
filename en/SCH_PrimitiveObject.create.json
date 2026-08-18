@@ -18,14 +18,14 @@
     "params.fileName": "文件名称",
     "returns": "二进制内嵌对象图元对象"
   },
-  "title": null,
-  "params.content": null,
-  "params.startX": null,
-  "params.startY": null,
-  "params.width": null,
-  "params.height": null,
-  "params.rotation": null,
-  "params.mirror": null,
-  "params.fileName": null,
-  "returns": null
+  "title": "Create Binary embedded object",
+  "params.content": "Object content",
+  "params.startX": "Start point coordinates X",
+  "params.startY": "Start point coordinates Y",
+  "params.width": "Width",
+  "params.height": "Height",
+  "params.rotation": "Rotation angle",
+  "params.mirror": "Whether it is mirrored",
+  "params.fileName": "File name",
+  "returns": "Binary embedded object primitive object"
 }

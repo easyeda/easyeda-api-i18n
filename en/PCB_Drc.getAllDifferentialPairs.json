@@ -27,7 +27,7 @@
     "remarks.text.0": "- 返回值类型更改为对象",
     "returns": "所有差分对的详细属性"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the detailed properties of all differential pairs",
+  "remarks.text.0": "- The return value type is changed to an object",
+  "returns": "Detailed properties of all differential pairs"
 }

@@ -11,7 +11,7 @@
     "params.pcbUuid": "PCB UUID",
     "returns": "PCB 的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "params.pcbUuid": null,
-  "returns": null
+  "title": "Get detailed properties of PCB",
+  "params.pcbUuid": "PCB UUID",
+  "returns": "PCB detailed properties of; if it is `undefined`, the retrieval failed"
 }

@@ -11,7 +11,7 @@
     "params.boardName": "所属板子名称，如若不指定则为游离 PCB",
     "returns": "PCB UUID，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Create PCB",
+  "params.boardName": "Name of the board it belongs to. If not specified, it is a free PCB",
+  "returns": "PCB UUID, if it is `undefined` creation fails"
 }

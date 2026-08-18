@@ -31,11 +31,11 @@
     "params.bottom": "矩形框第二 Y 坐标",
     "returns": "区域内所有图元"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.left": null,
-  "params.right": null,
-  "params.top": null,
-  "params.bottom": null,
-  "returns": null
+  "title": "Get All primitives in the region",
+  "remarks.text.0": "This API only returns primitives that are completely contained in the region. If a primitive is partially outside the region, it will be ignored",
+  "params.left": "First X coordinate of the rectangle",
+  "params.right": "Second X coordinate of the rectangle",
+  "params.top": "First Y coordinate of the rectangle",
+  "params.bottom": "Second Y coordinate of the rectangle",
+  "returns": "All primitives in the region"
 }

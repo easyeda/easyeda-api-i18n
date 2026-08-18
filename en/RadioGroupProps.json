@@ -13,10 +13,10 @@
     "properties.lineBreak": "是否换行排列",
     "properties.gap": "选项间距（像素）"
   },
-  "title": null,
-  "properties.group": null,
-  "properties.selectedValue": null,
-  "properties.onlyChangeByBox": null,
-  "properties.lineBreak": null,
-  "properties.gap": null
+  "title": "RadioGroup component: a group of mutually exclusive radio options",
+  "properties.group": "Option list (required)",
+  "properties.selectedValue": "Currently selected value",
+  "properties.onlyChangeByBox": "Whether the state can only be changed by clicking the radio button itself",
+  "properties.lineBreak": "Whether to arrange in line breaks",
+  "properties.gap": "Option gap (pixels)"
 }

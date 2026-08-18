@@ -10,6 +10,6 @@
     "title": "获取区域规则",
     "returns": "- 当前 PCB 的所有区域规则"
   },
-  "title": null,
-  "returns": null
+  "title": "Get region rules",
+  "returns": "- All region rules of the current PCB"
 }

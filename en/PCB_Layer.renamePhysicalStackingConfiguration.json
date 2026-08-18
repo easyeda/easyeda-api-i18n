@@ -20,9 +20,9 @@
     "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "重命名是否成功"
   },
-  "title": null,
-  "params.originalConfigurationName": null,
-  "params.configurationName": null,
-  "params.physicalProps": null,
-  "returns": null
+  "title": "Rename the physical stacking configuration",
+  "params.originalConfigurationName": "Original physical stacking configuration name",
+  "params.configurationName": "New physical stacking configuration name",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "returns": "Whether the rename was successful"
 }

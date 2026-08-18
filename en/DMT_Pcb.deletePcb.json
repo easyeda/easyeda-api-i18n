@@ -21,8 +21,8 @@
     "params.pcbUuid": "PCB UUID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.pcbUuid": null,
-  "returns": null
+  "title": "Delete PCB",
+  "remarks.text.0": "If the PCB is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), deleting the PCB will also delete the associated schematic and reuse block symbol. If the reuse block symbol cannot be deleted, it will be skipped",
+  "params.pcbUuid": "PCB UUID",
+  "returns": "Whether the operation is successful"
 }

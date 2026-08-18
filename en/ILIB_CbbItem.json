@@ -15,12 +15,12 @@
     "properties.description": "描述",
     "properties.boards": "下属板子"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.name": null,
-  "properties.classification": null,
-  "properties.description": null,
-  "properties.boards": null
+  "title": "Reuse block property",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "Reuse block UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.name": "Reuse block name",
+  "properties.classification": "Classification",
+  "properties.description": "Description",
+  "properties.boards": "Subordinate boards"
 }

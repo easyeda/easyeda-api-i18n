@@ -12,8 +12,8 @@
     "params.schematicPageName": "原理图图页名称",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "params.schematicPageUuid": null,
-  "params.schematicPageName": null,
-  "returns": null
+  "title": "Modify Schematic sheet name",
+  "params.schematicPageUuid": "Schematic sheet UUID",
+  "params.schematicPageName": "Schematic sheet name",
+  "returns": "Whether Modify Successful"
 }

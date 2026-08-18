@@ -12,8 +12,8 @@
     "params.allSchematicPages": "是否获取所有原理图图页的器件",
     "returns": "器件图元对象数组"
   },
-  "title": null,
-  "params.componentType": null,
-  "params.allSchematicPages": null,
-  "returns": null
+  "title": "Get all Device",
+  "params.componentType": "Device type",
+  "params.allSchematicPages": "Whether to get the devices of all schematic sheets",
+  "returns": "Array of Device primitive objects"
 }

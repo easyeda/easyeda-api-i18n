@@ -14,10 +14,10 @@
     "params.valueVisible": "属性值可见性",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.key": null,
-  "params.value": null,
-  "params.keyVisible": null,
-  "params.valueVisible": null,
-  "returns": null
+  "title": "Set Property",
+  "params.key": "Attribute name. If the device does not have an attribute with this name, the attribute will be added",
+  "params.value": "Property value",
+  "params.keyVisible": "Attribute name visibility",
+  "params.valueVisible": "Attribute value visibility",
+  "returns": "Attribute primitive object"
 }

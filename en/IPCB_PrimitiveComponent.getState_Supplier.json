@@ -10,6 +10,6 @@
     "title": "获取属性状态：供应商",
     "returns": "供应商"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: supplier",
+  "returns": "Supplier"
 }

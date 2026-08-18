@@ -13,9 +13,9 @@
     "params.primitiveLock": "是否锁定",
     "returns": "区域图元对象数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.ruleType": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Region",
+  "params.layer": "Layer",
+  "params.ruleType": "Region rule type. Only primitives whose rule types are all consistent will be matched",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Region primitive objects"
 }

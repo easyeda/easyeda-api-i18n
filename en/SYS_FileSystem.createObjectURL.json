@@ -28,8 +28,8 @@
     "params.blob": "Blob 或 File 对象",
     "returns": "ObjectURL 字符串"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.blob": null,
-  "returns": null
+  "title": "Create ObjectURL",
+  "remarks.text.0": "Create an ObjectURL pointing to the passed-in Blob / File object",
+  "params.blob": "Blob or File object",
+  "returns": "ObjectURL string"
 }

@@ -11,7 +11,7 @@
     "params.id": "定时器 ID",
     "returns": "定时器是否清除成功"
   },
-  "title": null,
-  "params.id": null,
-  "returns": null
+  "title": "Clear the specified timeout timer",
+  "params.id": "Timer ID",
+  "returns": "Whether the timer was cleared successfully"
 }

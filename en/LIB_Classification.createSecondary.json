@@ -15,11 +15,11 @@
     "returns": "分类索引",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.libraryType": null,
-  "params.primaryClassificationUuid": null,
-  "params.secondaryClassificationName": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Create a secondary classification",
+  "params.libraryUuid": "Library UUID",
+  "params.libraryType": "Library type",
+  "params.primaryClassificationUuid": "Primary classification UUID",
+  "params.secondaryClassificationName": "Secondary classification name",
+  "returns": "Classification index",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3"
 }

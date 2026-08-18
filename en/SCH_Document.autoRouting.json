@@ -21,8 +21,8 @@
     "params.props": "自动布线参数",
     "returns": "自动布线结果"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.props": null,
-  "returns": null
+  "title": "Auto routing",
+  "remarks.text.0": "If no parameters are passed in, auto routing will be performed for all unrouted nets",
+  "params.props": "Auto routing parameter",
+  "returns": "Auto routing result"
 }

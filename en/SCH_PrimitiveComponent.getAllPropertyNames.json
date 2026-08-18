@@ -10,6 +10,6 @@
     "title": "获取所有器件的所有属性名称集合",
     "returns": "所有器件的所有属性名称集合"
   },
-  "title": null,
-  "returns": null
+  "title": "Get The set of all property names of all devices",
+  "returns": "The set of all property names of all devices"
 }

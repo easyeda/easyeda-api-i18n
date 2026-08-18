@@ -10,7 +10,7 @@
     "properties.src": "图片地址（必填）",
     "properties.title": "图片标题（alt/text）"
   },
-  "title": null,
-  "properties.src": null,
-  "properties.title": null
+  "title": "Image component: displays a single image",
+  "properties.src": "Image URL (required)",
+  "properties.title": "Image title (alt/text)"
 }

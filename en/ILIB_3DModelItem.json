@@ -14,11 +14,11 @@
     "properties.classification": "分类",
     "properties.description": "描述"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.name": null,
-  "properties.classification": null,
-  "properties.description": null
+  "title": "3D model property",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "3D model UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.name": "3D model name",
+  "properties.classification": "Classification",
+  "properties.description": "Description"
 }

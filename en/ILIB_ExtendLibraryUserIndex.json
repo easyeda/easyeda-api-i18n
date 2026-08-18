@@ -30,10 +30,10 @@
     "properties.name": "用户名称",
     "properties.uuid": "嘉立创 EDA 系统内的用户 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "properties.name": null,
-  "properties.uuid": null
+  "title": "External library user index",
+  "remarks.text.0": "Supports external libraries using a name or the associated user UUID within the EasyEDA system as the unique ID index of the user",
+  "remarks.text.1": "If you want to associate with an EasyEDA user, pass in the user's UUID. The user's name will be automatically read (if the user exists)",
+  "remarks.text.2": "If you only want to display the user name, you can pass in the `name` field",
+  "properties.name": "User name",
+  "properties.uuid": "User UUID within the EasyEDA system"
 }

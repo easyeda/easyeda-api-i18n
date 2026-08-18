@@ -12,9 +12,9 @@
     "properties.border": "是否显示边框",
     "properties.expandEnable": "是否允许展开嵌套子项"
   },
-  "title": null,
-  "properties.list": null,
-  "properties.itemHeight": null,
-  "properties.border": null,
-  "properties.expandEnable": null
+  "title": "List component: a list that supports multi-level nesting, icons, and expansion",
+  "properties.list": "List data ( required)",
+  "properties.itemHeight": "List item height (pixels)",
+  "properties.border": "Whether to show the border",
+  "properties.expandEnable": "Whether nested child items are allowed to expand"
 }

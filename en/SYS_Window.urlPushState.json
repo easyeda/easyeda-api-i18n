@@ -10,6 +10,6 @@
     "title": "追加新的 URL 历史记录栈信息",
     "params.url": "URL"
   },
-  "title": null,
-  "params.url": null
+  "title": "Append new URL history stack information",
+  "params.url": "URL"
 }

@@ -7,20 +7,8 @@
     "codeSegments": {
       "remarks": [
         {
-          "type": "code",
-          "content": "复杂多边形可以包含多个单多边形，通过 {@link https:"
-        },
-        {
           "type": "text",
           "key": "remarks.text.0"
-        },
-        {
-          "type": "code",
-          "content": "目前嘉立创 EDA 专业版固定使用 {@link https:"
-        },
-        {
-          "type": "text",
-          "key": "remarks.text.1"
         }
       ],
       "example": []
@@ -28,10 +16,8 @@
   },
   "_source": {
     "title": "复杂多边形",
-    "remarks.text.0": "developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule | fill-rule} 将其组合，以实现多边形的布尔运算。",
-    "remarks.text.1": "developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero | nonzero} 这个 fill-rule。"
+    "remarks.text.0": "复杂多边形可以包含多个单多边形，通过 {@link https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule | fill-rule} 将其组合，以实现多边形的布尔运算。\n目前嘉立创 EDA 专业版固定使用 {@link https://developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule#nonzero | nonzero} 这个 fill-rule。"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null
+  "title": "Complex polygon",
+  "remarks.text.0": "developer.mozilla.org/zh-CN/docs/Web/SVG/Attribute/fill-rule | fill-rule} to combine them to achieve Boolean operations on polygons."
 }

@@ -20,7 +20,7 @@
     "remarks.text.0": "强制返回复杂多边形格式数据，即使它仅包含单一的单多边形",
     "returns": "复杂多边形数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get Complex polygon data",
+  "remarks.text.0": "Forcibly return data in complex polygon format, even if it only contains a single polygon",
+  "returns": "Complex polygon data"
 }

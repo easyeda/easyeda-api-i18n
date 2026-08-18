@@ -22,9 +22,9 @@
     "params.schematicName": "原理图名称",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.schematicUuid": null,
-  "params.schematicName": null,
-  "returns": null
+  "title": "Modify Schematic name",
+  "remarks.text.0": "If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), modifying the name will also modify the reuse block symbol name and the associated PCB name",
+  "params.schematicUuid": "Schematic UUID",
+  "params.schematicName": "Schematic name",
+  "returns": "Whether Modify Successful"
 }

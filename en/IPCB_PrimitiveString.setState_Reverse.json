@@ -21,8 +21,8 @@
     "params.reverse": "是否反相",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.reverse": null,
-  "returns": null
+  "title": "Set the property state: whether it is inverted",
+  "remarks.text.0": "The default font does not support inversion",
+  "params.reverse": "Whether it is inverted",
+  "returns": "Text primitive object"
 }

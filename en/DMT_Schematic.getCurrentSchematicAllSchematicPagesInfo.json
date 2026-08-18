@@ -10,6 +10,6 @@
     "title": "获取当前原理图内所有原理图图页的详细属性",
     "returns": "所有原理图图页的详细属性的数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of all schematic sheets in the current schematic",
+  "returns": "Array of detailed properties of all schematic sheets"
 }

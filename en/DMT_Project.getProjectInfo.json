@@ -21,8 +21,8 @@
     "params.projectUuid": "工程 UUID",
     "returns": "简略的工程属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.projectUuid": null,
-  "returns": null
+  "title": "Get Project property",
+  "remarks.text.0": "This API can only read brief project properties. For the detailed project tree, use the {@link DMT_Project.getCurrentProjectInfo | getCurrentProjectInfo} API",
+  "params.projectUuid": "Project UUID",
+  "returns": "Brief project properties. If it is `undefined`, the retrieval failed"
 }

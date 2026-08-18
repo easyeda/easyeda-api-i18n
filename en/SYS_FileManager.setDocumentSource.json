@@ -11,7 +11,7 @@
     "params.source": "文档源码",
     "returns": "是否修改成功，如果输入的文档源码格式错误，将返回 `false` 的结果"
   },
-  "title": null,
-  "params.source": null,
-  "returns": null
+  "title": "Modify Document source code",
+  "params.source": "Document source code",
+  "returns": "Whether the modification was successful. If the input document source code format is incorrect, `false` is returned"
 }

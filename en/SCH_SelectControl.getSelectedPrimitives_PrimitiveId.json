@@ -11,7 +11,7 @@
     "returns": "选中图元的图元 ID",
     "deprecated": "请使用 {@link SCH_SelectControl.getAllSelectedPrimitives_PrimitiveId | getAllSelectedPrimitives_PrimitiveId} 替代"
   },
-  "title": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Query the primitive IDs of the selected primitives",
+  "returns": "Primitive IDs of the selected primitives",
+  "deprecated": "Please use {@link SCH_SelectControl.getAllSelectedPrimitives_PrimitiveId | getAllSelectedPrimitives_PrimitiveId} instead"
 }

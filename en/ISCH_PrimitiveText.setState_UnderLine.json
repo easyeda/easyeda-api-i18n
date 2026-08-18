@@ -11,7 +11,7 @@
     "params.underLine": "是否加下划线",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.underLine": null,
-  "returns": null
+  "title": "Set the property state: whether it is underlined",
+  "params.underLine": "Whether it is underlined",
+  "returns": "Text primitive object"
 }

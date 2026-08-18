@@ -15,11 +15,11 @@
     "params.newSymbolName": "新符号名称，如若目标库内存在重名符号将导致复制失败",
     "returns": "目标库内新符号的 UUID"
   },
-  "title": null,
-  "params.symbolUuid": null,
-  "params.libraryUuid": null,
-  "params.targetLibraryUuid": null,
-  "params.targetClassification": null,
-  "params.newSymbolName": null,
-  "returns": null
+  "title": "Copy Symbol",
+  "params.symbolUuid": "Symbol UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.targetLibraryUuid": "Target library UUID",
+  "params.targetClassification": "Classification in the target library",
+  "params.newSymbolName": "New symbol name. If a symbol with the same name exists in the target library, the copy will fail",
+  "returns": "UUID of the new symbol in the target library"
 }

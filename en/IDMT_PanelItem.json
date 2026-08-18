@@ -12,9 +12,9 @@
     "properties.name": "面板名称",
     "properties.parentProjectUuid": "所属工程 UUID"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.name": null,
-  "properties.parentProjectUuid": null
+  "title": "Panel property",
+  "properties.itemType": "Project type",
+  "properties.uuid": "Panel UUID",
+  "properties.name": "Panel name",
+  "properties.parentProjectUuid": "UUID of the project it belongs to"
 }

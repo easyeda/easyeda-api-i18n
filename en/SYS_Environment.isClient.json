@@ -10,6 +10,6 @@
     "title": "是否处于客户端环境",
     "returns": "是否处于客户端环境"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is in the client environment",
+  "returns": "Whether it is in the client environment"
 }

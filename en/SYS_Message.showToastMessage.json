@@ -15,11 +15,11 @@
     "params.buttonTitle": "回调按钮标题",
     "params.buttonCallbackFn": "回调函数内容，字符串形式，会被自动解析并执行"
   },
-  "title": null,
-  "params.message": null,
-  "params.messageType": null,
-  "params.timer": null,
-  "params.bottomPanel": null,
-  "params.buttonTitle": null,
-  "params.buttonCallbackFn": null
+  "title": "Show a toast message",
+  "params.message": "Message content",
+  "params.messageType": "Message type",
+  "params.timer": "Auto-close countdown in seconds. `0` means it will not auto-close",
+  "params.bottomPanel": "Expand the bottom information panel",
+  "params.buttonTitle": "Callback button title",
+  "params.buttonCallbackFn": "Callback function content, in string form. It will be automatically parsed and executed"
 }

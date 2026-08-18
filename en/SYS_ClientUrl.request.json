@@ -12,10 +12,6 @@
           "key": "remarks.text.0"
         },
         {
-          "type": "code",
-          "content": "更多信息，请查阅 {@link https:"
-        },
-        {
           "type": "text",
           "key": "remarks.text.1"
         },
@@ -30,7 +26,7 @@
   "_source": {
     "title": "发起即时请求",
     "remarks.text.0": "请注意，需要在被请求的站点上允许跨源资源共享（CORS），否则接口将始终返回错误结果。",
-    "remarks.text.1": "developer.mozilla.org/docs/Web/HTTP/CORS | 跨源资源共享 (CORS) - MDN}。",
+    "remarks.text.1": "更多信息，请查阅 {@link https://developer.mozilla.org/docs/Web/HTTP/CORS | 跨源资源共享 (CORS) - MDN}。",
     "remarks.text.2": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
     "params.url": "请求地址",
     "params.method": "请求方法",
@@ -39,14 +35,14 @@
     "params.succeedCallFn": "请求成功后回调的函数",
     "returns": "Fetch 的返回结果"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "params.url": null,
-  "params.method": null,
-  "params.data": null,
-  "params.options": null,
-  "params.succeedCallFn": null,
-  "returns": null
+  "title": "Make an immediate request",
+  "remarks.text.0": "Please note that the requested site must allow cross-origin resource sharing (CORS); otherwise, the API will always return an error result.",
+  "remarks.text.1": "developer.mozilla.org/docs/Web/HTTP/CORS | Cross-Origin Resource Sharing (CORS) - MDN}.",
+  "remarks.text.2": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.url": "Request URL",
+  "params.method": "Request method",
+  "params.data": "Data to be sent with the request, which can be direct data or a {@link https://developer.mozilla.org/docs/Web/API/URLSearchParams | URLSearchParams} object. If the method is `HEAD` or `GET`, this parameter will be ignored",
+  "params.options": "Request options",
+  "params.succeedCallFn": "Function to call back after the request succeeds",
+  "returns": "The return result of Fetch"
 }

@@ -11,7 +11,7 @@
     "params.referenceX": "参考点 X",
     "returns": "圆弧图元对象"
   },
-  "title": null,
-  "params.referenceX": null,
-  "returns": null
+  "title": "Set the property state: reference point X",
+  "params.referenceX": "Reference point X",
+  "returns": "Arc primitive object"
 }

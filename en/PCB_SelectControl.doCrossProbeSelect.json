@@ -15,11 +15,11 @@
     "params.select": "操作是否成功",
     "params.canMove": "画布能否移动"
   },
-  "title": null,
-  "params.components": null,
-  "params.pins": null,
-  "params.nets": null,
-  "params.highlight": null,
-  "params.select": null,
-  "params.canMove": null
+  "title": "Perform cross-probe selection",
+  "params.components": "Device designator",
+  "params.pins": "Device designator _ pin number, format is ['U1_1', 'U1_2']",
+  "params.nets": "Net name",
+  "params.highlight": "Whether to highlight",
+  "params.select": "Whether the operation is successful",
+  "params.canMove": "Whether the canvas can be moved"
 }

@@ -10,6 +10,6 @@
     "title": "获取属性状态：边框颜色",
     "returns": "边框颜色"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: border color",
+  "returns": "Border color"
 }

@@ -11,7 +11,7 @@
     "params.polygon": "多边形",
     "returns": "BBox"
   },
-  "title": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Get the minimum bounding rectangle (BBox) of the polygon",
+  "params.polygon": "Polygon",
+  "returns": "BBox"
 }

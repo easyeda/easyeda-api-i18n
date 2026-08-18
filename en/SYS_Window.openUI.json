@@ -21,8 +21,8 @@
     "params.uiName": "UI 名称",
     "params.args": "可选参数对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.uiName": null,
-  "params.args": null
+  "title": "Open UI window",
+  "remarks.text.0": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "params.uiName": "UI name",
+  "params.args": "Optional parameter object"
 }

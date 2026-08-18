@@ -11,7 +11,7 @@
     "params.lineType": "线型",
     "returns": "圆弧图元对象"
   },
-  "title": null,
-  "params.lineType": null,
-  "returns": null
+  "title": "Set the property state: line type",
+  "params.lineType": "Line type",
+  "returns": "Arc primitive object"
 }

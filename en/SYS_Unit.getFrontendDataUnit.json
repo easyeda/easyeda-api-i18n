@@ -20,7 +20,7 @@
     "remarks.text.0": "此处指的是前端用户可以切换的单位，需要同时兼容原理图和 PCB 画布",
     "returns": "单位"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the EDA front-end data unit span",
+  "remarks.text.0": "This refers to the units that front-end users can switch, and it needs to be compatible with both the schematic and PCB canvases",
+  "returns": "Unit"
 }

@@ -15,11 +15,11 @@
     "params.newCbbName": "新复用模块名称，如若目标库内存在重名复用模块将导致复制失败",
     "returns": "目标库内新复用模块的 UUID"
   },
-  "title": null,
-  "params.cbbUuid": null,
-  "params.libraryUuid": null,
-  "params.targetLibraryUuid": null,
-  "params.targetClassification": null,
-  "params.newCbbName": null,
-  "returns": null
+  "title": "Copy Reuse block",
+  "params.cbbUuid": "Reuse block UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.targetLibraryUuid": "Target library UUID",
+  "params.targetClassification": "Classification in the target library",
+  "params.newCbbName": "New reuse block name. If a reuse block with the same name exists in the target library, the copy will fail",
+  "returns": "UUID of the new reuse block in the target library"
 }

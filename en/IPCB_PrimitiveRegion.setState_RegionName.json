@@ -26,9 +26,9 @@
     "params.regionName": "区域名称",
     "returns": "区域图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.regionName": null,
-  "returns": null
+  "title": "Set the property state: region name",
+  "remarks.text.0": "Only valid when `ruleType` is {@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE}, used to match region DRC rules",
+  "remarks.text.1": "If `ruleType` is {@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE} but `regionName` is empty, the system will automatically assign a name",
+  "params.regionName": "Region name",
+  "returns": "Region primitive object"
 }

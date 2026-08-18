@@ -12,8 +12,8 @@
     "returns": "两级分类的名称",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
-  "title": null,
-  "params.classificationIndex": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Get the name of the classification at the specified index",
+  "params.classificationIndex": "Classification index",
+  "returns": "Name of the two-level classification",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3"
 }

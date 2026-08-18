@@ -21,8 +21,8 @@
     "params.metallization": "是否金属化孔壁",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.metallization": null,
-  "returns": null
+  "title": "Set the property state: Whether the hole wall is plated",
+  "remarks.text.0": "If the hole does not exist, the property will not be modified",
+  "params.metallization": "Whether the hole wall is plated",
+  "returns": "Pad primitive object"
 }

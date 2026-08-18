@@ -10,6 +10,6 @@
     "title": "获取属性状态：子部件名称",
     "returns": "子部件名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: sub-part name",
+  "returns": "Sub-part name"
 }

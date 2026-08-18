@@ -15,7 +15,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst ipcFile = await eda.pcb_ManufactureData.getIpcD356AFile('IPC_D356A_Test');\nif (ipcFile) {\nawait eda.sys_FileSystem.saveFile(ipcFile);\n}\n```"
+          "content": "```javascript\nconst ipcFile = await eda.pcb_ManufactureData.getIpcD356AFile('IPC_D356A_Test');\nif (ipcFile) {\n    await eda.sys_FileSystem.saveFile(ipcFile);\n}\n```"
         }
       ]
     }
@@ -26,8 +26,8 @@
     "params.fileName": "文件名",
     "returns": "IPC-D-356A 文件数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.fileName": null,
-  "returns": null
+  "title": "Get IPC-D-356A file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "params.fileName": "File name",
+  "returns": "IPC-D-356A file data"
 }

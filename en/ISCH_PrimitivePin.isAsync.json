@@ -10,6 +10,6 @@
     "title": "查询图元是否为异步图元",
     "returns": "是否为异步图元"
   },
-  "title": null,
-  "returns": null
+  "title": "Query whether the primitive is an async primitive",
+  "returns": "Whether Is async primitive"
 }

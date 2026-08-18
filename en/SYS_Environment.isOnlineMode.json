@@ -10,6 +10,6 @@
     "title": "是否为在线模式",
     "returns": "是否为在线模式"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is online mode",
+  "returns": "Whether it is online mode"
 }

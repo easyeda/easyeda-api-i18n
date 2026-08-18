@@ -13,10 +13,10 @@
     "properties.parentProjectUuid": "所属工程 UUID",
     "properties.parentBoardName": "所属板子名称"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.name": null,
-  "properties.parentProjectUuid": null,
-  "properties.parentBoardName": null
+  "title": "PCB property",
+  "properties.itemType": "Project type",
+  "properties.uuid": "PCB UUID",
+  "properties.name": "PCB name",
+  "properties.parentProjectUuid": "UUID of the project it belongs to",
+  "properties.parentBoardName": "Name of the board it belongs to"
 }

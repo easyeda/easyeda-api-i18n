@@ -18,6 +18,6 @@
     "title": "多边形组",
     "remarks.text.0": "布尔运算的返回类型，由多个带孔洞的多边形组成，保留外环与孔洞的归属关系"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Polygon group",
+  "remarks.text.0": "The return type of Boolean operations, composed of multiple polygons with holes, preserving the association between outer rings and holes"
 }

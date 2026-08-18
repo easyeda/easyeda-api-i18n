@@ -21,8 +21,8 @@
     "params.net": "网络名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.net": null,
-  "returns": null
+  "title": "Unhighlight the net",
+  "remarks.text.0": "The return value of this API is result-oriented. If the net was not highlighted before, `true` will also be returned",
+  "params.net": "Net name",
+  "returns": "Whether the operation is successful"
 }

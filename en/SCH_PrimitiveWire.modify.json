@@ -12,8 +12,8 @@
     "params.property": "修改参数",
     "returns": "导线图元对象"
   },
-  "title": null,
-  "params.primitiveId": null,
-  "params.property": null,
-  "returns": null
+  "title": "Modify Wire",
+  "params.primitiveId": "Wire primitive ID or Wire primitive object",
+  "params.property": "Modify Parameter",
+  "returns": "Wire primitive object"
 }

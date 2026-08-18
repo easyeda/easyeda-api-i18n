@@ -13,9 +13,9 @@
     "params.negativeNet": "负网络名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.differentialPairName": null,
-  "params.positiveNet": null,
-  "params.negativeNet": null,
-  "returns": null
+  "title": "Create a differential pair",
+  "params.differentialPairName": "Differential pair name",
+  "params.positiveNet": "Positive net name",
+  "params.negativeNet": "Negative net name",
+  "returns": "Whether the operation is successful"
 }

@@ -13,9 +13,9 @@
     "params.primitiveLock": "是否锁定",
     "returns": "圆弧线图元对象数组"
   },
-  "title": null,
-  "params.net": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Arc line",
+  "params.net": "Net name",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Arc line primitive objects"
 }

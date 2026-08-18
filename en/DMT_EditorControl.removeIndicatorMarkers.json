@@ -21,8 +21,8 @@
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "指示标记移除是否成功，`false` 表示画布不支持该操作或 `tabId` 不存在"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Remove indicator markers",
+  "remarks.text.0": "This API will remove all generated indicator markers",
+  "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
+  "returns": "Whether the indicator markers were removed successfully, `false` indicates that the canvas does not support this operation or `tabId` does not exist"
 }

@@ -15,15 +15,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0"
-        },
-        {
-          "type": "code",
-          "content": "const adFile = await eda.pcb_ManufactureData.getAltiumDesignerFile('Converted_To_AD');\nif (adFile) {\nawait eda.sys_FileSystem.saveFile(adFile);\n}\n```"
+          "content": "```javascript\n//获取 Altium Designer 格式文件\nconst adFile = await eda.pcb_ManufactureData.getAltiumDesignerFile('Converted_To_AD');\nif (adFile) {\n    await eda.sys_FileSystem.saveFile(adFile);\n}\n```"
         }
       ]
     }
@@ -31,13 +23,11 @@
   "_source": {
     "title": "获取 Altium Designer 文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
-    "example.text.0": "获取 Altium Designer 格式文件",
     "params.fileName": "文件名",
     "returns": "Altium Designer 文件数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "example.text.0": null,
-  "params.fileName": null,
-  "returns": null
+  "title": "Get Altium Designer file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "params.fileName": "File name",
+  "returns": "Altium Designer file data"
 }

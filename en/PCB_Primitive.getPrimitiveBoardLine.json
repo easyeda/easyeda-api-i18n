@@ -12,8 +12,8 @@
     "params.layers": "需要计算的层，在计算器件、焊盘、过孔时能够精确计算指定多个层的边框线的并集",
     "returns": "复杂多边形，如果图元 ID 未匹配或图元在指定层上不存在，则返回 `undefined`"
   },
-  "title": null,
-  "params.primitiveId": null,
-  "params.layers": null,
-  "returns": null
+  "title": "Get the board line of the primitive",
+  "params.primitiveId": "Primitive ID",
+  "params.layers": "Layers to calculate. When calculating devices, pads, and vias, the union of the board lines of the specified multiple layers can be precisely calculated",
+  "returns": "Complex polygon. If the primitive ID does not match or the primitive does not exist on the specified layer, `undefined` is returned"
 }

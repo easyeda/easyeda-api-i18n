@@ -11,7 +11,7 @@
     "returns": "功能状态",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Get the current ratline calculation function status",
+  "returns": "Function state",
+  "deprecated": "since EDA v4.2"
 }

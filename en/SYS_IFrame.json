@@ -9,6 +9,6 @@
     "title": "系统 / 内联框架窗口类",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "properties.extensionUuid": null
+  "title": "System / iframe window class",
+  "properties.extensionUuid": "Extension UUID"
 }

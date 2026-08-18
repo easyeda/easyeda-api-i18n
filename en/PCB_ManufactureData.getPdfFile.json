@@ -19,15 +19,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0"
-        },
-        {
-          "type": "code",
-          "content": "const pdfFile = await eda.pcb_ManufactureData.getPdfFile(\n'PCB_Documentation',\nEPCB_PdfOutputMethod.MULTI_PAGE_PDF\n);\nif (pdfFile) {\nawait eda.sys_FileSystem.saveFile(pdfFile);\n}\n```"
+          "content": "```javascript\n// 导出多页 PDF（包含所有图层）\nconst pdfFile = await eda.pcb_ManufactureData.getPdfFile(\n    'PCB_Documentation',\n    EPCB_PdfOutputMethod.MULTI_PAGE_PDF\n);\nif (pdfFile) {\n    await eda.sys_FileSystem.saveFile(pdfFile);\n}\n```"
         }
       ]
     }
@@ -36,7 +28,6 @@
     "title": "获取 PDF 文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
     "remarks.text.1": "REFACTOR since EDA v4.2",
-    "example.text.0": "导出多页 PDF（包含所有图层）",
     "params.fileName": "文件名",
     "params.outputMethod": "输出方式 ADD since EDA v4.2",
     "params.contentConfig": "内容配置 ADD since EDA v4.2",
@@ -44,14 +35,13 @@
     "params.graphPageConfig": "图页配置 ADD since EDA v4.2",
     "returns": "PDF 文件数据（或压缩包）"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "example.text.0": null,
-  "params.fileName": null,
-  "params.outputMethod": null,
-  "params.contentConfig": null,
-  "params.watermark": null,
-  "params.graphPageConfig": null,
-  "returns": null
+  "title": "Get PDF file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "remarks.text.1": "REFACTOR since EDA v4.2",
+  "params.fileName": "File name",
+  "params.outputMethod": "Output method. ADD since EDA v4.2",
+  "params.contentConfig": "Content configuration. ADD since EDA v4.2",
+  "params.watermark": "Watermark. ADD since EDA v4.2",
+  "params.graphPageConfig": "Graph page configuration. ADD since EDA v4.2",
+  "returns": "PDF file data (or archive)"
 }

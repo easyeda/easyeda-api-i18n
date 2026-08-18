@@ -24,8 +24,8 @@
     "remarks.text.1": "你只能通过 {@link PCB_PrimitiveComponent.getAllPinsByPrimitiveId | 器件类的 getAllPinsByPrimitiveId 方法} 或 {@link IPCB_PrimitiveComponent.getAllPins | 器件图元的 getAllPads 方法} 获取到器件焊盘图元",
     "properties.parentComponentPrimitiveId": "父器件图元 ID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "properties.parentComponentPrimitiveId": null
+  "title": "Device pad primitive",
+  "remarks.text.0": "A device pad primitive is a special primitive. It refers to the pad associated with a footprint on the PCB canvas",
+  "remarks.text.1": "You can only obtain a device pad primitive through {@link PCB_PrimitiveComponent.getAllPinsByPrimitiveId | the getAllPinsByPrimitiveId method of the device class} or {@link IPCB_PrimitiveComponent.getAllPins | the getAllPads method of the device primitive}",
+  "properties.parentComponentPrimitiveId": "Parent device primitive ID"
 }

@@ -20,8 +20,8 @@
     "properties.name": "库名称",
     "properties.uuid": "库 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.name": null,
-  "properties.uuid": null
+  "title": "Library information",
+  "remarks.text.0": "Contains the name of the library and its UUID",
+  "properties.name": "Library name",
+  "properties.uuid": "Library UUID"
 }

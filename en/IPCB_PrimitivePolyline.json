@@ -15,12 +15,12 @@
     "properties.lineWidth": "线宽",
     "properties.primitiveLock": "是否锁定"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.net": null,
-  "properties.layer": null,
-  "properties.polygon": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": "Polyline primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.net": "Net name",
+  "properties.layer": "Layer",
+  "properties.polygon": "Single polygon",
+  "properties.lineWidth": "Line width",
+  "properties.primitiveLock": "Whether it is locked"
 }

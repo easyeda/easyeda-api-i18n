@@ -11,7 +11,7 @@
     "params.component": "关联库器件",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.component": null,
-  "returns": null
+  "title": "Set the device UUID associated with the OUT net port in the extension API",
+  "params.component": "Associate library device",
+  "returns": "Whether the operation is successful"
 }

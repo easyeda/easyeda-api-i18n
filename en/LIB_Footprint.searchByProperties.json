@@ -12,8 +12,8 @@
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "搜索到的封装属性的列表"
   },
-  "title": null,
-  "params.properties": null,
-  "params.libraryUuid": null,
-  "returns": null
+  "title": "Search footprints precisely by properties",
+  "params.properties": "Property",
+  "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
+  "returns": "List of searched footprint properties"
 }

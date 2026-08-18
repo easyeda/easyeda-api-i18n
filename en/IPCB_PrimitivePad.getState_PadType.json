@@ -10,6 +10,6 @@
     "title": "获取属性状态：焊盘类型",
     "returns": "焊盘类型"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: pad type",
+  "returns": "Pad type"
 }

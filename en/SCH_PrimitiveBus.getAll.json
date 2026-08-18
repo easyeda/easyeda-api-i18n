@@ -10,6 +10,6 @@
     "title": "获取所有总线",
     "returns": "总线图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all buses",
+  "returns": "Bus primitive object array"
 }

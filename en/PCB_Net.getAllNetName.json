@@ -11,7 +11,7 @@
     "returns": "网络名称数组",
     "deprecated": "请使用 {@link PCB_Net.getAllNetsName | getAllNetsName} 替代"
   },
-  "title": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Get the net names of all nets",
+  "returns": "Net name array",
+  "deprecated": "Please use {@link PCB_Net.getAllNetsName | getAllNetsName} instead"
 }

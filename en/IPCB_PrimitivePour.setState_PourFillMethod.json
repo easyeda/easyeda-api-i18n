@@ -11,7 +11,7 @@
     "params.pourFillMethod": "覆铜填充方法",
     "returns": "覆铜边框图元对象"
   },
-  "title": null,
-  "params.pourFillMethod": null,
-  "returns": null
+  "title": "Set the property state: copper fill method",
+  "params.pourFillMethod": "Copper fill method",
+  "returns": "Copper border primitive object"
 }

@@ -13,9 +13,9 @@
     "params.parentFolderUuid": "父文件夹 UUID，如若不指定，则默认为根文件夹",
     "returns": "是否移动成功"
   },
-  "title": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "params.parentFolderUuid": null,
-  "returns": null
+  "title": "Move folder",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID",
+  "params.parentFolderUuid": "Parent folder UUID. If not specified, it defaults to the root folder",
+  "returns": "Whether the move is successful"
 }

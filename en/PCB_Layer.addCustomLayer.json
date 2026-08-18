@@ -10,6 +10,6 @@
     "title": "新增自定义层",
     "returns": "新增的自定义层的图层 ID，如若为 `undefined` 则为新增失败，可能是自定义层数量已达到上限"
   },
-  "title": null,
-  "returns": null
+  "title": "Add a custom layer",
+  "returns": "The layer ID of the newly added custom layer. If it is `undefined`, the addition failed, possibly because the number of custom layers has reached the upper limit"
 }

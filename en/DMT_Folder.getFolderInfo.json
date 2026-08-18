@@ -22,9 +22,9 @@
     "params.folderUuid": "文件夹 UUID",
     "returns": "文件夹属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "returns": null
+  "title": "Get Folder detailed properties",
+  "remarks.text.0": "When {@link IDMT_FolderItem.parentFolderUuid | parentFolderUuid} equals {@link IDMT_FolderItem.teamUuid | teamUuid}, it means the current folder is a first-level folder under the specified team",
+  "params.teamUuid": "Team UUID",
+  "params.folderUuid": "Folder UUID",
+  "returns": "Folder property; if it is `undefined`, the retrieval failed"
 }

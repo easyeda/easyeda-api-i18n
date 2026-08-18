@@ -11,7 +11,7 @@
     "params.template": "BOM 模板名称",
     "returns": "BOM 模板文件"
   },
-  "title": null,
-  "params.template": null,
-  "returns": null
+  "title": "Get BOM template file",
+  "params.template": "BOM template name",
+  "returns": "BOM template file"
 }

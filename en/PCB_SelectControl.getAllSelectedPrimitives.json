@@ -10,6 +10,6 @@
     "title": "查询所有已选中图元的图元对象",
     "returns": "所有已选中图元的图元对象"
   },
-  "title": null,
-  "returns": null
+  "title": "Query the primitive objects of all selected primitives",
+  "returns": "Primitive objects of all selected primitives"
 }

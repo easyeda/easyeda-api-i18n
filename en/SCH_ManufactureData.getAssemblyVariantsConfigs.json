@@ -10,6 +10,6 @@
     "title": "获取装配体变量配置列表",
     "returns": "装配体变量配置列表"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the assembly variants configuration list",
+  "returns": "Assembly variants configuration list"
 }

@@ -10,6 +10,6 @@
     "title": "获取属性状态：填充样式",
     "returns": "填充样式"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: fill style",
+  "returns": "Fill style"
 }

@@ -12,9 +12,9 @@
     "properties.uuid": "团队 UUID",
     "properties.identity": "当前用户在团队内的身份（权限组）ID"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.name": null,
-  "properties.uuid": null,
-  "properties.identity": null
+  "title": "Team properties",
+  "properties.itemType": "Project type",
+  "properties.name": "Team name",
+  "properties.uuid": "Team UUID",
+  "properties.identity": "ID of the current user's identity (permission group) in the team"
 }

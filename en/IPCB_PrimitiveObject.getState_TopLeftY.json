@@ -10,6 +10,6 @@
     "title": "获取属性状态：左上点 Y",
     "returns": "左上点 Y"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: top-left point Y",
+  "returns": "Top-left point Y"
 }

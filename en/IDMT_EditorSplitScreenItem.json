@@ -23,11 +23,11 @@
     "properties.direction": "分屏方向",
     "properties.children": "子分屏"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.id": null,
-  "properties.fatherId": null,
-  "properties.tabs": null,
-  "properties.direction": null,
-  "properties.children": null
+  "title": "Editor split screen property",
+  "remarks.text.0": "{@link IDMT_EditorSplitScreenItem.tabs | tabs} and {@link IDMT_EditorSplitScreenItem.children | children} do not exist at the same time. When {@link IDMT_EditorSplitScreenItem.tabs | tabs} exists, it means there is no split screen, and {@link IDMT_EditorSplitScreenItem.children | children} will be `undefined`",
+  "properties.id": "Split screen ID",
+  "properties.fatherId": "Parent split screen ID",
+  "properties.tabs": "Split screen in tab",
+  "properties.direction": "Split screen direction",
+  "properties.children": "Child split screens"
 }

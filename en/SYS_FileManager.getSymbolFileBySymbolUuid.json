@@ -27,10 +27,10 @@
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取，如若不传入，则为系统库",
     "returns": "符号文件数据，`undefined` 表示数据获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.symbolUuid": null,
-  "params.libraryUuid": null,
-  "returns": null
+  "title": "Use symbol UUID get symbol file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "remarks.text.1": "Note: This API requires the **Team Library > Download Library** permission. Calling it without permission will always `throw Error`",
+  "params.symbolUuid": "Symbol UUID or symbol UUID list",
+  "params.libraryUuid": "Library UUID. It can be obtained using the APIs in {@link LIB_LibrariesList}. If not passed in, it is the system library",
+  "returns": "Symbol file data, `undefined` indicates that the data retrieval failed"
 }

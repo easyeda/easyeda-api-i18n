@@ -11,7 +11,7 @@
     "params.schematicUuid": "原理图 UUID",
     "returns": "原理图的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "params.schematicUuid": null,
-  "returns": null
+  "title": "Get detailed properties of Schematic",
+  "params.schematicUuid": "Schematic UUID",
+  "returns": "Schematic detailed properties of; if it is `undefined`, the retrieval failed"
 }

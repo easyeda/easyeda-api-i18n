@@ -21,8 +21,8 @@
     "params.primitiveIds": "多边形的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "多边形图元对象，空数组表示获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Get Polygon",
+  "remarks.text.0": "If multiple primitive IDs are passed in, a primitive ID that is not matched will not affect the return of other primitives; that is, fewer primitive objects than the number of primitive IDs passed in may be returned.",
+  "params.primitiveIds": "Polygon primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
+  "returns": "Polygon primitive object; an empty array indicates that the retrieval failed"
 }

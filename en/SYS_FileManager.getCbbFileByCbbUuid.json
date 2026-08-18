@@ -29,12 +29,12 @@
     "params.password": "加密密码",
     "returns": "复用模块文件数据，`undefined` 表示数据获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.cbbUuid": null,
-  "params.libraryUuid": null,
-  "params.fileName": null,
-  "params.password": null,
-  "returns": null
+  "title": "Use reuse block UUID get reuse block file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "remarks.text.1": "Note: This API requires the **Team Module > Download Module** permission. Calling it without permission will always `throw Error`",
+  "params.cbbUuid": "Reuse block UUID",
+  "params.libraryUuid": "Library UUID. It can be obtained using the APIs in {@link LIB_LibrariesList}. If not passed in, it is the system library",
+  "params.fileName": "Reuse block name",
+  "params.password": "Encrypted password",
+  "returns": "Reuse block file data, `undefined` indicates that the data retrieval failed"
 }

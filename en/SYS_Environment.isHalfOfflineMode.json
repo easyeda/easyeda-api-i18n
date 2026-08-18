@@ -10,6 +10,6 @@
     "title": "是否为半离线模式",
     "returns": "是否为半离线模式"
   },
-  "title": null,
-  "returns": null
+  "title": "Whether it is half-offline mode",
+  "returns": "Whether it is half-offline mode"
 }

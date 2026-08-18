@@ -16,12 +16,12 @@
     "params.primitiveLock": "是否锁定",
     "returns": "区域图元对象"
   },
-  "title": null,
-  "params.layer": null,
-  "params.complexPolygon": null,
-  "params.ruleType": null,
-  "params.regionName": null,
-  "params.lineWidth": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Region",
+  "params.layer": "Layer",
+  "params.complexPolygon": "Complex polygon object",
+  "params.ruleType": "Region rule type",
+  "params.regionName": "Region name",
+  "params.lineWidth": "Line width",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Region primitive object"
 }

@@ -11,8 +11,8 @@
     "properties.text": "选项显示文本（必填）",
     "properties.value": "选项值（必填）"
   },
-  "title": null,
-  "properties.disabled": null,
-  "properties.text": null,
-  "properties.value": null
+  "title": "A single option in the radio group",
+  "properties.disabled": "Whether the option is disabled",
+  "properties.text": "Option display text (required)",
+  "properties.value": "Option value (required)"
 }

@@ -10,6 +10,6 @@
     "title": "获取单多边形数据",
     "returns": "单多边形数据"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Single polygon data",
+  "returns": "Single polygon data"
 }

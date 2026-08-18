@@ -19,6 +19,6 @@
     "title": "显示无进度加载覆盖",
     "remarks.text.0": "没有进度指示，但会存在与进度条一致的灰色覆盖，阻止用户进一步操作"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Show the no-progress loading overlay",
+  "remarks.text.0": "There is no progress indicator, but a gray overlay consistent with the progress bar will appear to prevent further user operations"
 }

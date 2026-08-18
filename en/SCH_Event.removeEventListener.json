@@ -11,7 +11,7 @@
     "params.id": "事件 ID",
     "returns": "是否移除指定事件监听"
   },
-  "title": null,
-  "params.id": null,
-  "returns": null
+  "title": "Remove Event listener",
+  "params.id": "Event ID",
+  "returns": "Whether Remove Specify event listener"
 }

@@ -32,8 +32,8 @@
     "remarks.text.1": "如若不理解该开关的含义，请勿调用本接口进行任何操作",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "returns": null
+  "title": "Trigger a canvas update calculation",
+  "remarks.text.0": "Canvas update calculation includes canvas render updates, property panel updates, etc.",
+  "remarks.text.1": "If you do not understand the meaning of this switch, do not call this API for any operation",
+  "returns": "Whether the operation is successful"
 }

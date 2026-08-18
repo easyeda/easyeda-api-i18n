@@ -13,9 +13,9 @@
     "params.color": "等长网络组颜色",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.equalLengthNetGroupName": null,
-  "params.nets": null,
-  "params.color": null,
-  "returns": null
+  "title": "Create an equal-length net group",
+  "params.equalLengthNetGroupName": "Equal-length net group name",
+  "params.nets": "Net name array",
+  "params.color": "Equal-length net group color",
+  "returns": "Whether the operation is successful"
 }

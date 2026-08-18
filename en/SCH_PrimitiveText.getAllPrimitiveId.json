@@ -10,6 +10,6 @@
     "title": "获取所有文本的图元 ID",
     "returns": "文本的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Text primitive IDs",
+  "returns": "Array of Text primitive IDs"
 }

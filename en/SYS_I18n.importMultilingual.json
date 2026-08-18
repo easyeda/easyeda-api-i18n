@@ -22,9 +22,9 @@
     "params.source": "欲导入的多语言数据对象",
     "returns": "导入是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.language": null,
-  "params.source": null,
-  "returns": null
+  "title": "Import multilingual",
+  "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.language": "Language",
+  "params.source": "The multilingual data object to import",
+  "returns": "Import whether it is successful"
 }

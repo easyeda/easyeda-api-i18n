@@ -21,8 +21,8 @@
     "params.splitScreenId": "分屏 ID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.splitScreenId": null,
-  "returns": null
+  "title": "Activate a split screen",
+  "remarks.text.0": "Give input focus",
+  "params.splitScreenId": "Split screen ID",
+  "returns": "Whether the operation is successful"
 }

@@ -15,11 +15,11 @@
     "params.select": "是否选中",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.components": null,
-  "params.pins": null,
-  "params.nets": null,
-  "params.highlight": null,
-  "params.select": null,
-  "returns": null
+  "title": "Perform cross-probe selection",
+  "params.components": "Device designator",
+  "params.pins": "Device designator _ pin number, format is ['U1_1', 'U1_2']",
+  "params.nets": "Net name",
+  "params.highlight": "Whether to highlight",
+  "params.select": "Whether Select",
+  "returns": "Whether the operation is successful"
 }

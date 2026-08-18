@@ -30,10 +30,10 @@
     "properties.url": "库文件地址",
     "properties.data": "库文件数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "properties.url": null,
-  "properties.data": null
+  "title": "External library item",
+  "remarks.text.0": "Here the `url` or `data` field needs to be passed. If both are passed, the data of `data` is used and the `url` field is ignored",
+  "remarks.text.1": "If only the `url` field is passed in, a request will be made to it to try to obtain its library file",
+  "remarks.text.2": "The data of `data` can be in Blob or DataURL format",
+  "properties.url": "Library file URL",
+  "properties.data": "Library file data"
 }

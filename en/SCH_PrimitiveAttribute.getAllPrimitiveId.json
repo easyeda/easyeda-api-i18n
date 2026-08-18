@@ -21,8 +21,8 @@
     "params.parentPrimitiveId": "父图元 ID",
     "returns": "属性的图元 ID 数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.parentPrimitiveId": null,
-  "returns": null
+  "title": "Get all Property primitive IDs",
+  "remarks.text.0": "If no parent primitive ID is passed, all attribute primitives in the sheet will be obtained",
+  "params.parentPrimitiveId": "Parent primitive ID",
+  "returns": "Array of Property primitive IDs"
 }

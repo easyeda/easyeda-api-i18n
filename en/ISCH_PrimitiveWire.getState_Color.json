@@ -10,6 +10,6 @@
     "title": "获取属性状态：总线颜色",
     "returns": "总线颜色"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: bus color",
+  "returns": "Bus color"
 }

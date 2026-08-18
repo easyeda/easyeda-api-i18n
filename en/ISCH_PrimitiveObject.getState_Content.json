@@ -10,6 +10,6 @@
     "title": "获取属性状态：对象内容",
     "returns": "对象内容"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: object content",
+  "returns": "Object content"
 }

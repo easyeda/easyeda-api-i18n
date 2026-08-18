@@ -12,8 +12,8 @@
     "params.setOtherLayerInvisible": "是否将其它层设置为不可见",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.layer": null,
-  "params.setOtherLayerInvisible": null,
-  "returns": null
+  "title": "Set the layer to visible",
+  "params.layer": "Layer. If no layer is specified, all layers are used by default",
+  "params.setOtherLayerInvisible": "Whether to set other layers to invisible",
+  "returns": "Whether the operation is successful"
 }

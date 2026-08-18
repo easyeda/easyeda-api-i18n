@@ -20,7 +20,7 @@
     "remarks.text.0": "获取当前 EDA 主题，**浅色** 或 **深色**",
     "returns": "当前主题"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get Current theme",
+  "remarks.text.0": "Get the current EDA theme, **light** or **dark**",
+  "returns": "Current theme"
 }

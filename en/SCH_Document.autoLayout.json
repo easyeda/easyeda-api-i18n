@@ -21,8 +21,8 @@
     "params.props": "自动布局参数",
     "returns": "自动布局结果"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.props": null,
-  "returns": null
+  "title": "Auto layout",
+  "remarks.text.0": "If no parameters are passed in, auto layout will be performed for all devices",
+  "params.props": "Auto layout parameter",
+  "returns": "Auto layout result"
 }

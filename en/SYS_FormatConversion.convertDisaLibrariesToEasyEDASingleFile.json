@@ -11,7 +11,7 @@
     "params.file": "T/DISA 4001 库文件",
     "returns": "嘉立创库文件"
   },
-  "title": null,
-  "params.file": null,
-  "returns": null
+  "title": "Convert T/DISA 4001 libraries to a single EasyEDA library file",
+  "params.file": "T/DISA 4001 library file",
+  "returns": "EasyEDA library file"
 }

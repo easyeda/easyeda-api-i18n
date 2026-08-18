@@ -11,7 +11,7 @@
     "params.type": "网表格式",
     "params.netlist": "网表数据"
   },
-  "title": null,
-  "params.type": null,
-  "params.netlist": null
+  "title": "Update the netlist",
+  "params.type": "Netlist format",
+  "params.netlist": "Netlist data"
 }

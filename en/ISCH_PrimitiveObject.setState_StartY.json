@@ -11,7 +11,7 @@
     "params.startY": "起点坐标 Y",
     "returns": "二进制内嵌对象图元对象"
   },
-  "title": null,
-  "params.startY": null,
-  "returns": null
+  "title": "Set the property state: start point coordinates Y",
+  "params.startY": "Start point coordinates Y",
+  "returns": "Binary embedded object primitive object"
 }

@@ -11,7 +11,7 @@
     "params.differentialPairName": "差分对名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.differentialPairName": null,
-  "returns": null
+  "title": "Delete the differential pair",
+  "params.differentialPairName": "Differential pair name",
+  "returns": "Whether the operation is successful"
 }

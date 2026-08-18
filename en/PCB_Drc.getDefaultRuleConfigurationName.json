@@ -10,6 +10,6 @@
     "title": "获取新建 PCB 默认设计规则配置的名称",
     "returns": "默认设计规则配置的名称，`undefined` 为获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the name of the default design rule configuration for new PCBs",
+  "returns": "Default design rule configuration name of; `undefined` indicates that the retrieval failed"
 }

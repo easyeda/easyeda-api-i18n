@@ -11,7 +11,7 @@
     "params.fontSize": "字号",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.fontSize": null,
-  "returns": null
+  "title": "Set the property state: font size",
+  "params.fontSize": "Font size",
+  "returns": "Attribute primitive object"
 }

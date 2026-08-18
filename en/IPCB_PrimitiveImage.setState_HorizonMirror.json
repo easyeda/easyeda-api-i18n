@@ -11,7 +11,7 @@
     "params.horizonMirror": "是否水平镜像",
     "returns": "图像图元对象"
   },
-  "title": null,
-  "params.horizonMirror": null,
-  "returns": null
+  "title": "Set the property state: whether it is horizontally mirrored",
+  "params.horizonMirror": "Whether it is horizontally mirrored",
+  "returns": "Image primitive object"
 }

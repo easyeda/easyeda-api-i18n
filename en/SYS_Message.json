@@ -18,6 +18,6 @@
     "title": "系统 / 消息通知类",
     "remarks.text.0": "生成各种对用户的非侵入式提醒"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "System / message notification class",
+  "remarks.text.0": "Generate various non-intrusive reminders for users"
 }

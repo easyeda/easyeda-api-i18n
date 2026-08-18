@@ -10,6 +10,6 @@
     "title": "在 PCB 画布中创建图元",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "returns": null
+  "title": "In PCB canvas in create primitive",
+  "returns": "Pad primitive object"
 }

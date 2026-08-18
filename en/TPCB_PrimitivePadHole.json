@@ -53,13 +53,13 @@
     "remarks.text.6": "- `{number}` `length` - 长度，长度不能小于直径,长度小于直径的话长度的值跟随直径",
     "remarks.text.7": "- `{number}` `diameter` - 直径"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "remarks.text.5": null,
-  "remarks.text.6": null,
-  "remarks.text.7": null
+  "title": "Pad drilling",
+  "remarks.text.0": "Pad drilling currently has the following two {@link EPCB_PrimitivePadHoleType | types}:",
+  "remarks.text.1": "1. Circle",
+  "remarks.text.2": "`[EPCB_PrimitivePadHoleType.ROUND, diameter]`",
+  "remarks.text.3": "- `{number}` `diameter` - diameter",
+  "remarks.text.4": "2. Slot",
+  "remarks.text.5": "`[EPCB_PrimitivePadHoleType.SLOT, diameter, length]`",
+  "remarks.text.6": "- `{number}` `length` - Length. The length cannot be smaller than the diameter; if it is, the length value follows the diameter",
+  "remarks.text.7": "- `{number}` `diameter` - diameter"
 }

@@ -12,8 +12,8 @@
     "returns": "网表数据",
     "deprecated": "请使用 {@link SCH_ManufactureData.getNetlistFile} 替代"
   },
-  "title": null,
-  "params.type": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Get the netlist",
+  "params.type": "Netlist format",
+  "returns": "Netlist data",
+  "deprecated": "Please use {@link SCH_ManufactureData.getNetlistFile} instead"
 }

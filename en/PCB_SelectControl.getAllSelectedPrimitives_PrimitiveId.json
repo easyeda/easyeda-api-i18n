@@ -10,6 +10,6 @@
     "title": "查询所有已选中图元的图元 ID",
     "returns": "所有已选中图元的图元 ID"
   },
-  "title": null,
-  "returns": null
+  "title": "Query the primitive IDs of all selected primitives",
+  "returns": "Primitive IDs of all selected primitives"
 }

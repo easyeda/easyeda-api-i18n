@@ -14,10 +14,10 @@
     "params.description": "描述",
     "returns": "复用模块 UUID"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.cbbName": null,
-  "params.classification": null,
-  "params.description": null,
-  "returns": null
+  "title": "Create Reuse block",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.cbbName": "Reuse block name",
+  "params.classification": "Classification",
+  "params.description": "Description",
+  "returns": "Reuse block UUID"
 }

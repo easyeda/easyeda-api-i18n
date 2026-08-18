@@ -9,6 +9,6 @@
     "title": "包含 userDefinedShortcutKey 的快捷键数据",
     "properties.userDefinedShortcutKey": "用户定义快捷键"
   },
-  "title": null,
-  "properties.userDefinedShortcutKey": null
+  "title": "Shortcut key data with userDefinedShortcutKey",
+  "properties.userDefinedShortcutKey": "User-defined shortcut key"
 }

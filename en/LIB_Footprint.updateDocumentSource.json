@@ -13,9 +13,9 @@
     "params.documentSource": "文档源码",
     "returns": "是否更新成功"
   },
-  "title": null,
-  "params.footprintUuid": null,
-  "params.libraryUuid": null,
-  "params.documentSource": null,
-  "returns": null
+  "title": "Update the document source code of the footprint",
+  "params.footprintUuid": "Footprint UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.documentSource": "Document source code",
+  "returns": "Whether the update is successful"
 }

@@ -20,7 +20,7 @@
     "remarks.text.0": "将所有 EDA 设置恢复到默认状态，本操作将会丢失所有设置项，在调用时请特别注意",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Restore all default settings",
+  "remarks.text.0": "Restores all EDA settings to their default state. This operation will lose all settings. Please pay special attention when calling it",
+  "returns": "Whether the operation is successful"
 }

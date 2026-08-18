@@ -21,8 +21,8 @@
     "params.boardName": "板子名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Delete Board",
+  "remarks.text.0": "If the specified board does not exist, the API will return `false`, indicating that the operation failed",
+  "params.boardName": "Board name",
+  "returns": "Whether the operation is successful"
 }

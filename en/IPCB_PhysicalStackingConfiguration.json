@@ -11,8 +11,8 @@
     "properties.list": "叠层列表",
     "properties.layerCount": "总叠层数"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.list": null,
-  "properties.layerCount": null
+  "title": "Physical stacking configuration",
+  "properties.name": "Physical stacking configuration name",
+  "properties.list": "Stacking list",
+  "properties.layerCount": "Total layer count"
 }

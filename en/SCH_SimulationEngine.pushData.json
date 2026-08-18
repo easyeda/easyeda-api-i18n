@@ -11,7 +11,7 @@
     "params.eventType": "事件类型",
     "params.props": "数据"
   },
-  "title": null,
-  "params.eventType": null,
-  "params.props": null
+  "title": "Send data to the simulation kernel",
+  "params.eventType": "Event type",
+  "params.props": "Data"
 }

@@ -22,9 +22,9 @@
     "params.tabId": "标签页 ID，该标签页将会被移入新的分屏中",
     "returns": "分屏 ID，`sourceSplitScreenId` 代表源分屏，`newSplitScreenId` 代表新分屏"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.splitScreenType": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Create Split screen",
+  "remarks.text.0": "Please make sure the split screen corresponding to {@link DMT_EditorControl.createSplitScreen | tabId} has more than two tabs; otherwise the split screen will not be executed and `undefined` will be returned",
+  "params.splitScreenType": "Split screen type, `horizontal` horizontal, `vertical` vertical",
+  "params.tabId": "Tab ID. This tab will be moved into the new split screen",
+  "returns": "Split screen ID. `sourceSplitScreenId` represents the source split screen, and `newSplitScreenId` represents the new split screen"
 }

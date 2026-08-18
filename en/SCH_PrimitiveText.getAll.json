@@ -10,6 +10,6 @@
     "title": "获取所有文本",
     "returns": "文本图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Text",
+  "returns": "Array of Text primitive objects"
 }

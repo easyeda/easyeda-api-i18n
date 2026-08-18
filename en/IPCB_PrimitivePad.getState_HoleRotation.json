@@ -10,6 +10,6 @@
     "title": "获取属性状态：孔相对于焊盘的旋转角度",
     "returns": "孔相对于焊盘的旋转角度"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: Rotation angle of the hole relative to the pad",
+  "returns": "Rotation angle of the hole relative to the pad"
 }

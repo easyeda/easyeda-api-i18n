@@ -11,7 +11,7 @@
     "params.netClassName": "网络类名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.netClassName": null,
-  "returns": null
+  "title": "Delete Net class",
+  "params.netClassName": "Net class name",
+  "returns": "Whether the operation is successful"
 }

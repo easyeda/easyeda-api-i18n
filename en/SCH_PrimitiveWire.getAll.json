@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "导线图元对象数组"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Get all Wire",
+  "params.net": "Net name",
+  "returns": "Array of Wire primitive objects"
 }

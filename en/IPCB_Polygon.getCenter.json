@@ -10,6 +10,6 @@
     "title": "获取单多边形中心点",
     "returns": "单多边形中心点"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Single polygon center point",
+  "returns": "Single polygon center point"
 }

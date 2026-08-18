@@ -10,6 +10,6 @@
     "title": "获取属性状态：键",
     "returns": "键"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: key",
+  "returns": "Key"
 }

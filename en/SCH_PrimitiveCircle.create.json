@@ -18,14 +18,14 @@
     "params.fillStyle": "填充样式，`null` 表示默认",
     "returns": "圆图元对象"
   },
-  "title": null,
-  "params.centerX": null,
-  "params.centerY": null,
-  "params.radius": null,
-  "params.color": null,
-  "params.fillColor": null,
-  "params.lineWidth": null,
-  "params.lineType": null,
-  "params.fillStyle": null,
-  "returns": null
+  "title": "Create a circle",
+  "params.centerX": "Center of the circle X",
+  "params.centerY": "Center of the circle Y",
+  "params.radius": "Radius",
+  "params.color": "Color, `null` indicates the default",
+  "params.fillColor": "Fill color. `none` indicates no fill, `null` indicates the default",
+  "params.lineWidth": "Line width, range `1-10`. `null` indicates the default",
+  "params.lineType": "Line type. `null` indicates the default",
+  "params.fillStyle": "Fill style, `null` indicates the default",
+  "returns": "Circle primitive object"
 }

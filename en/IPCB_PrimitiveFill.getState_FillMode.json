@@ -10,6 +10,6 @@
     "title": "获取属性状态：填充模式",
     "returns": "填充模式"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: fill mode",
+  "returns": "Fill mode"
 }

@@ -36,11 +36,11 @@
     "params.pcbType": "PCB 类型",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "params.pcbType": null,
-  "returns": null
+  "title": "Set PCB type",
+  "remarks.text.0": "This is mainly to support FPC flexible board design. If the PCB type is set to FPC flexible board, an FPC stiffener layer will be added.",
+  "remarks.text.1": "Please note:",
+  "remarks.text.2": "1. EasyEDA does not yet support FPC flexible board production with more than 2 copper layers;",
+  "remarks.text.3": "2. When switching the PCB type from FPC flexible board to ordinary board, any primitives on the FPC stiffener layer must be deleted in advance; otherwise, the switch will fail and `false` will be returned.",
+  "params.pcbType": "PCB type",
+  "returns": "Whether the operation is successful"
 }

@@ -12,9 +12,9 @@
     "properties.bgColor": "背景颜色，接受任意 CSS 颜色值",
     "properties.title": "标题文本（必填）"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.padding": null,
-  "properties.bgColor": null,
-  "properties.title": null
+  "title": "Group panel: a collapsible/grouping container with a title",
+  "properties.children": "Panel content child nodes",
+  "properties.padding": "Padding (CSS shorthand array)",
+  "properties.bgColor": "Background color. Accepts any CSS color value",
+  "properties.title": "Title text ( required)"
 }

@@ -10,27 +10,17 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0"
-        },
-        {
-          "type": "code",
-          "content": "const success = await eda.pcb_ManufactureData.deleteBomTemplate('MyCustomTemplate');\nif (success) {\nconsole.log('BOM 模板删除成功');\n} else {\nconsole.log('删除失败，可能是默认模板或模板不存在');\n}\n```"
+          "content": "```javascript\n// 删除指定的 BOM 模板\nconst success = await eda.pcb_ManufactureData.deleteBomTemplate('MyCustomTemplate');\nif (success) {\n    console.log('BOM 模板删除成功');\n} else {\n    console.log('删除失败，可能是默认模板或模板不存在');\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除 BOM 模板",
-    "example.text.0": "删除指定的 BOM 模板",
     "params.template": "BOM 模板名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "example.text.0": null,
-  "params.template": null,
-  "returns": null
+  "title": "Delete BOM template",
+  "params.template": "BOM template name",
+  "returns": "Whether the operation is successful"
 }

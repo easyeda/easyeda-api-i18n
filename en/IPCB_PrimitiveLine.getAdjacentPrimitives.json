@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取与直线两端直接相连的直线、过孔、圆弧线图元对象",
     "returns": "相邻的直线、过孔、圆弧线图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get Adjacent primitive objects",
+  "remarks.text.0": "It will get the line, via, and arc-line primitive objects directly connected to both ends of the line",
+  "returns": "Adjacent line, via, and arc-line primitive objects"
 }

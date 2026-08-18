@@ -11,7 +11,7 @@
     "params.supplierId": "供应商编号",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.supplierId": null,
-  "returns": null
+  "title": "Set the property state: supplier ID",
+  "params.supplierId": "Supplier ID",
+  "returns": "Device primitive object"
 }

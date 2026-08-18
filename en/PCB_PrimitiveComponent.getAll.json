@@ -12,8 +12,8 @@
     "params.primitiveLock": "是否锁定",
     "returns": "器件图元对象数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Device",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Device primitive objects"
 }

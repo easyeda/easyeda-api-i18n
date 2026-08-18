@@ -11,7 +11,7 @@
     "params.footprint": "封装的索引",
     "returns": "封装渲染图"
   },
-  "title": null,
-  "params.footprint": null,
-  "returns": null
+  "title": "Get the footprint render image",
+  "params.footprint": "Index of the footprint",
+  "returns": "Footprint render image"
 }

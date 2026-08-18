@@ -12,9 +12,9 @@
     "properties.rowGap": "行间距（像素）",
     "properties.colGap": "列间距（像素）"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.columns": null,
-  "properties.rowGap": null,
-  "properties.colGap": null
+  "title": "Layout container: a grid layout container with a fixed number of columns",
+  "properties.children": "Child node",
+  "properties.columns": "Number of columns (required)",
+  "properties.rowGap": "Row gap (pixels)",
+  "properties.colGap": "Column gap (pixels)"
 }

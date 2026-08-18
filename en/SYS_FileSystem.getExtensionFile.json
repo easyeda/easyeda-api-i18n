@@ -11,7 +11,7 @@
     "params.uri": "文件路径",
     "returns": "File 格式文件"
   },
-  "title": null,
-  "params.uri": null,
-  "returns": null
+  "title": "Get a file from the extension",
+  "params.uri": "File path",
+  "returns": "File format file"
 }

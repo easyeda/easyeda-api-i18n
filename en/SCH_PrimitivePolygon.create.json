@@ -15,11 +15,11 @@
     "params.lineType": "线型，`null` 表示默认",
     "returns": "多边形图元对象"
   },
-  "title": null,
-  "params.line": null,
-  "params.color": null,
-  "params.fillColor": null,
-  "params.lineWidth": null,
-  "params.lineType": null,
-  "returns": null
+  "title": "Create Polygon",
+  "params.line": "Coordinate group, a continuous set of lines described by `[x1, y1, x2, y2, x3, y3]`",
+  "params.color": "Color, `null` indicates the default",
+  "params.fillColor": "Fill color. `none` indicates no fill, `null` indicates the default",
+  "params.lineWidth": "Line width, range `1-10`. `null` indicates the default",
+  "params.lineType": "Line type. `null` indicates the default",
+  "returns": "Polygon primitive object"
 }

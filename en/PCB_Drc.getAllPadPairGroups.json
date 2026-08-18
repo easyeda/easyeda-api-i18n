@@ -10,6 +10,6 @@
     "title": "获取所有焊盘对组的详细属性",
     "returns": "所有焊盘对组的详细属性"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of all pad pair groups",
+  "returns": "Detailed properties of all pad pair groups"
 }

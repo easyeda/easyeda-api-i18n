@@ -10,6 +10,6 @@
     "title": "获取属性状态：对齐模式",
     "returns": "对齐模式"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: alignment mode",
+  "returns": "Alignment mode"
 }

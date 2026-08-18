@@ -10,6 +10,6 @@
     "title": "获取属性状态：半径",
     "returns": "半径"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: radius",
+  "returns": "Radius"
 }

@@ -18,6 +18,6 @@
     "title": "文档树 / PCB 管理类",
     "remarks.text.0": "在当前打开的工程内进行 PCB 管理的相关操作"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Document tree / PCB management class",
+  "remarks.text.0": "Operations related to PCB management in the currently open project"
 }

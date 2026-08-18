@@ -10,6 +10,6 @@
     "title": "获取属性状态：多段线坐标组",
     "returns": "多段线坐标组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: polyline coordinate group",
+  "returns": "Polyline coordinate group"
 }

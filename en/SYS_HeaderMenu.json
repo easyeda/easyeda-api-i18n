@@ -9,6 +9,6 @@
     "title": "系统 / 顶部菜单类",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "properties.extensionUuid": null
+  "title": "System / header menu class",
+  "properties.extensionUuid": "Extension UUID"
 }

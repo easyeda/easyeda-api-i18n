@@ -20,7 +20,7 @@
     "remarks.text.0": "将相互之间无任何连接的多段线坐标组拆分成多个多段线，无论是否有多个多段线，本函数都会在输入数据的基础上包裹一层数组；\n建议用于 {@link ISCH_PrimitiveBus} 和 {@link ISCH_PrimitiveWire} 等包含多段线的场景",
     "params.lines": "多段线坐标组，每段都是连续的一组 `[x1, y1, x2, y2, x3, y3]` 所描述的线"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.lines": null
+  "title": "Split polyline",
+  "remarks.text.0": "Splits polyline coordinate groups that have no connections to each other into multiple polylines. Regardless of whether there are multiple polylines, this function wraps an extra layer of array around the input data;\nit is recommended for scenarios containing polylines such as {@link ISCH_PrimitiveBus} and {@link ISCH_PrimitiveWire}",
+  "params.lines": "Polyline coordinate group. Each segment is a continuous line described by `[x1, y1, x2, y2, x3, y3]`"
 }

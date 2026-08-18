@@ -10,7 +10,7 @@
     "properties.net": "网络名称",
     "properties.wires": "导线"
   },
-  "title": null,
-  "properties.net": null,
-  "properties.wires": null
+  "title": "Net property",
+  "properties.net": "Net name",
+  "properties.wires": "Wire"
 }

@@ -11,7 +11,7 @@
     "params.cornerRadius": "圆角半径",
     "returns": "矩形图元对象"
   },
-  "title": null,
-  "params.cornerRadius": null,
-  "returns": null
+  "title": "Set the property state: corner radius",
+  "params.cornerRadius": "Corner radius",
+  "returns": "Rectangle primitive object"
 }

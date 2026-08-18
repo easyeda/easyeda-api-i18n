@@ -13,10 +13,10 @@
     "properties.registerFn": "注册方法名称（需要在扩展入口文件导出该方法）",
     "properties.menuItems": "子菜单项"
   },
-  "title": null,
-  "properties.id": null,
-  "properties.title": null,
-  "properties.icon": null,
-  "properties.registerFn": null,
-  "properties.menuItems": null
+  "title": "Right-click menu item",
+  "properties.id": "Menu item ID, cannot be repeated",
+  "properties.title": "Menu item title",
+  "properties.icon": "Menu item icon",
+  "properties.registerFn": "Registration method name (the method needs to be exported in the extension entry file)",
+  "properties.menuItems": "Sub-menu item"
 }

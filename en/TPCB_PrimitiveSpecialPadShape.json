@@ -28,8 +28,8 @@
     "remarks.text.1": "- `{number}` `startLayer` - 起始层",
     "remarks.text.2": "- `{number}` `endLayer` - 结束层"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null
+  "title": "Special pad shape",
+  "remarks.text.0": "`Array<[startLayer, endLayer, TPCB_PrimitivePadShape]>`",
+  "remarks.text.1": "- `{number}` `startLayer` - Start layer",
+  "remarks.text.2": "- `{number}` `endLayer` - End layer"
 }

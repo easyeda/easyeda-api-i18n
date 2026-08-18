@@ -15,11 +15,11 @@
     "params.primitiveLock": "是否锁定",
     "returns": "折线图元对象"
   },
-  "title": null,
-  "params.net": null,
-  "params.layer": null,
-  "params.polygon": null,
-  "params.lineWidth": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create a polyline",
+  "params.net": "Net name",
+  "params.layer": "Layer",
+  "params.polygon": "Single polygon object",
+  "params.lineWidth": "Line width",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Polyline primitive object"
 }

@@ -10,6 +10,6 @@
     "title": "获取属性状态：BBox 左上点坐标 X",
     "returns": "BBox 左上点坐标 X"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: BBox top-left point coordinates X",
+  "returns": "BBox top-left point coordinates X"
 }

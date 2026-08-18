@@ -15,23 +15,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0"
-        },
-        {
-          "type": "code",
-          "content": "const result = await eda.pcb_Document.autoRouting();\nconsole.log(`布线完成：${result.routedNets}/${result.totalNets}`);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1"
-        },
-        {
-          "type": "code",
-          "content": "const result = await eda.pcb_Document.autoRouting({\nnets: ['VCC', 'GND', 'SDA', 'SCL'],\nignoreNets: ['NC'],\ncornerStyle: EPCB_AutoRoutingCornerStyle.DEGREE_45,\noptimization: EPCB_AutoRoutingOptimization.COMPLETION,\n});\n```"
+          "content": "```javascript\n// 对所有未布线的网络进行自动布线\nconst result = await eda.pcb_Document.autoRouting();\nconsole.log(`布线完成：${result.routedNets}/${result.totalNets}`);\n\n// 指定网络进行自动布线，并忽略部分网络\nconst result = await eda.pcb_Document.autoRouting({\n    nets: ['VCC', 'GND', 'SDA', 'SCL'],\n    ignoreNets: ['NC'],\n    cornerStyle: EPCB_AutoRoutingCornerStyle.DEGREE_45,\n    optimization: EPCB_AutoRoutingOptimization.COMPLETION,\n});\n```"
         }
       ]
     },
@@ -46,15 +30,11 @@
   "_source": {
     "title": "自动布线",
     "remarks.text.0": "如不传入任何参数，将对所有未布线的网络进行自动布线",
-    "example.text.0": "对所有未布线的网络进行自动布线",
-    "example.text.1": "指定网络进行自动布线，并忽略部分网络",
     "params.props": "自动布线参数",
     "returns": "自动布线结果"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "example.text.0": null,
-  "example.text.1": null,
-  "params.props": null,
-  "returns": null
+  "title": "Auto routing",
+  "remarks.text.0": "If no parameters are passed in, auto routing will be performed for all unrouted nets",
+  "params.props": "Auto routing parameter",
+  "returns": "Auto routing result"
 }

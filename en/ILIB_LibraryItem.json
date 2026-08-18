@@ -11,8 +11,8 @@
     "properties.libraryType": "库类型",
     "properties.libraryUuid": "所属库 UUID"
   },
-  "title": null,
-  "properties.uuid": null,
-  "properties.libraryType": null,
-  "properties.libraryUuid": null
+  "title": "Library property",
+  "properties.uuid": "UUID",
+  "properties.libraryType": "Library type",
+  "properties.libraryUuid": "UUID of the library it belongs to"
 }

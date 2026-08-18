@@ -19,7 +19,7 @@
     "remarks.text.0": "为了保证安全性，仅提供有限的窗口跳转与监听支持，更多操作请使用内联框架窗口 {@link SYS_IFrame}",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.extensionUuid": null
+  "title": "System / window class",
+  "remarks.text.0": "For security, only limited window navigation and listening support is provided. For more operations, use the iframe window {@link SYS_IFrame}",
+  "properties.extensionUuid": "Extension UUID"
 }

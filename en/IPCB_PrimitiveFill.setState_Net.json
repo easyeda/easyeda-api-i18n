@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "填充图元对象"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Set the property state: net name",
+  "params.net": "Net name",
+  "returns": "Fill primitive object"
 }

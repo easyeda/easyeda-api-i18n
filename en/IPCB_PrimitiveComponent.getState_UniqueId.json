@@ -10,6 +10,6 @@
     "title": "获取属性状态：唯一 ID",
     "returns": "唯一 ID"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: unique ID",
+  "returns": "Unique ID"
 }

@@ -17,6 +17,6 @@
     "title": "获取实时 DRC 检查状态",
     "returns": "实时 DRC 检查状态，实时 DRC 已停止、不处于 PCB 或获取失败均返回 `false`"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Real-time DRC check state",
+  "returns": "Real-time DRC check status. If real-time DRC is stopped, not in a PCB, or the retrieval fails, `false` is returned"
 }

@@ -10,6 +10,6 @@
     "title": "导出日志",
     "params.types": "日志类型"
   },
-  "title": null,
-  "params.types": null
+  "title": "Export the log",
+  "params.types": "Log type"
 }

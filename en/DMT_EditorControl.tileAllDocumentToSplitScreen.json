@@ -20,7 +20,7 @@
     "remarks.text.0": "仅当不存在子分屏时可用，将会自动为所有已打开的文档标签页创建分屏",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Tile all documents",
+  "remarks.text.0": "Only available when no child split screens exist. It will automatically create split screens for all opened document tabs",
+  "returns": "Whether the operation is successful"
 }

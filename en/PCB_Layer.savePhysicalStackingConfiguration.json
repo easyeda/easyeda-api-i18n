@@ -21,10 +21,10 @@
     "params.allowOverwrite": "是否允许覆写同名物理叠层配置，`false` 则将在遇到同名物理叠层配置时返回 `false`，请注意可能的数据丢失风险",
     "returns": "保存是否成功"
   },
-  "title": null,
-  "params.physicalStackingConfiguration": null,
-  "params.configurationName": null,
-  "params.physicalProps": null,
-  "params.allowOverwrite": null,
-  "returns": null
+  "title": "Save Physical stacking configuration",
+  "params.physicalStackingConfiguration": "Physical stacking configuration",
+  "params.configurationName": "Configuration name",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "params.allowOverwrite": "Whether to allow overwriting a physical stacking configuration with the same name. If `false`, `false` will be returned when a configuration with the same name is encountered. Please note the possible risk of data loss",
+  "returns": "Save Whether Successful"
 }

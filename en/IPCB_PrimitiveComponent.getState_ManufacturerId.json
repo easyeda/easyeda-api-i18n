@@ -10,6 +10,6 @@
     "title": "获取属性状态：制造商编号",
     "returns": "制造商编号"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: manufacturer ID",
+  "returns": "Manufacturer ID"
 }

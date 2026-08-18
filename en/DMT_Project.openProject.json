@@ -21,8 +21,8 @@
     "params.projectUuid": "工程 UUID",
     "returns": "是否成功打开工程"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.projectUuid": null,
-  "returns": null
+  "title": "Open project",
+  "remarks.text.0": "This operation will open the specified project in the EDA front end. If another project was previously opened with unsaved changes, executing this operation will directly lose all unsaved data",
+  "params.projectUuid": "Project UUID",
+  "returns": "Whether Successful open project"
 }

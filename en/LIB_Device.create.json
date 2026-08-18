@@ -16,12 +16,12 @@
     "params.property": "其它属性，仅 `designator`、`addIntoBom`、`addIntoPcb` 存在默认值",
     "returns": "器件 UUID"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.deviceName": null,
-  "params.classification": null,
-  "params.association": null,
-  "params.description": null,
-  "params.property": null,
-  "returns": null
+  "title": "Create Device",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.deviceName": "Device name",
+  "params.classification": "Classification",
+  "params.association": "Associate a symbol, footprint, and image. Specifying `symbolType` creates a new symbol; if no new symbol is needed, `symbolType` does not need to be specified. However, note that if no new symbol is created and no symbol association information is specified, the device cannot be created",
+  "params.description": "Description",
+  "params.property": "Other property, only `designator`, `addIntoBom`, `addIntoPcb` exists default value",
+  "returns": "Device UUID"
 }

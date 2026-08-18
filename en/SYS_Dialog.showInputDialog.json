@@ -17,13 +17,13 @@
     "params.callbackFn": "回调函数",
     "returns": "用户输入的值，始终为 `string` 类型，除非用户点击了 **取消** 按钮"
   },
-  "title": null,
-  "params.beforeContent": null,
-  "params.afterContent": null,
-  "params.title": null,
-  "params.type": null,
-  "params.value": null,
-  "params.otherProperty": null,
-  "params.callbackFn": null,
-  "returns": null
+  "title": "Show an input dialog",
+  "params.beforeContent": "Text above the input box",
+  "params.afterContent": "Text below the input box",
+  "params.title": "Popup window title",
+  "params.type": "Input box type",
+  "params.value": "Default value of the input box",
+  "params.otherProperty": "Other parameters. Refer to {@link https://developer.mozilla.org/docs/Web/HTML/Element/input#attributes | The HTML Input element}",
+  "params.callbackFn": "Callback function",
+  "returns": "The value entered by the user, always of type `string`, unless the user clicks the **Cancel** button"
 }

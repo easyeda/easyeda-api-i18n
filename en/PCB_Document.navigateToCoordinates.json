@@ -32,11 +32,11 @@
     "params.y": "坐标 Y",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "params.x": null,
-  "params.y": null,
-  "returns": null
+  "title": "Locate to canvas coordinate",
+  "remarks.text.0": "This API positions on the front-end canvas to the specified data-level coordinate;",
+  "remarks.text.1": "If you want the front-end canvas coordinate to be consistent with the passed-in data during this operation,\nit is recommended to call the {@link PCB_Document.setCanvasOrigin} method and set the offset to zero;",
+  "remarks.text.2": "The units here are data-level units, which are equivalent to mil on the canvas level in span",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "returns": "Whether the operation is successful"
 }

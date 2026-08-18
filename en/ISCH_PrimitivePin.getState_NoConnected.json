@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否存在非连接标识",
     "returns": "是否存在非连接标识"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether there is a no-connect flag",
+  "returns": "Whether there is a no-connect flag"
 }

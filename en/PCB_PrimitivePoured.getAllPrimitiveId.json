@@ -10,6 +10,6 @@
     "title": "获取所有覆铜填充的图元 ID",
     "returns": "覆铜填充的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Copper fill primitive IDs",
+  "returns": "Array of Copper fill primitive IDs"
 }

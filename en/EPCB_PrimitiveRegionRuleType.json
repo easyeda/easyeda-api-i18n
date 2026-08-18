@@ -18,6 +18,6 @@
     "title": "区域图元区域规则类型",
     "remarks.text.0": "{@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE | FOLLOW_REGION_RULE} 即为约束区域"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Region primitive region rule type",
+  "remarks.text.0": "{@link EPCB_PrimitiveRegionRuleType.FOLLOW_REGION_RULE | FOLLOW_REGION_RULE} is the constrained region"
 }

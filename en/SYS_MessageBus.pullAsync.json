@@ -21,8 +21,8 @@
     "params.topic": "主题",
     "returns": "拉取到的消息"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.topic": null,
-  "returns": null
+  "title": "Private message bus: pull a message (Promise version)",
+  "remarks.text.0": "Only one message can be pulled at a time. You can use `await` to wait for the message to be pulled",
+  "params.topic": "Theme",
+  "returns": "The pulled message"
 }

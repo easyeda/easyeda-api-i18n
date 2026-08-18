@@ -10,7 +10,7 @@
     "properties.iconUrl": "图标图片地址",
     "properties.iconClass": "图标 CSS class 名"
   },
-  "title": null,
-  "properties.iconUrl": null,
-  "properties.iconClass": null
+  "title": "Icon configuration: specify the icon via URL or CSS class",
+  "properties.iconUrl": "Icon image URL",
+  "properties.iconClass": "Icon CSS class name"
 }

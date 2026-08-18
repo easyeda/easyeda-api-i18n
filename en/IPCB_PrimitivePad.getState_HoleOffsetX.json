@@ -10,6 +10,6 @@
     "title": "获取属性状态：孔偏移 X",
     "returns": "孔偏移 X"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: hole offset X",
+  "returns": "Hole offset X"
 }

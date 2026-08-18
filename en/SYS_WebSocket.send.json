@@ -22,9 +22,9 @@
     "params.data": "发送的数据",
     "params.extensionUuid": "扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.data": null,
-  "params.extensionUuid": null
+  "title": "Send data to the WebSocket server",
+  "remarks.text.0": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.id": "Custom WebSocket ID",
+  "params.data": "Data to send",
+  "params.extensionUuid": "Extension UUID. Generally it does not need to be specified. It only needs to be specified as another extension's UUID when you need to operate on a WebSocket connection established by another extension"
 }

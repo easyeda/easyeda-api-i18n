@@ -19,7 +19,7 @@
     "remarks.text.0": "生成消息提示框",
     "deprecated": "已更名为 {@link SYS_Dialog}"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "deprecated": null
+  "title": "System / message box class",
+  "remarks.text.0": "Generate message boxes",
+  "deprecated": "Renamed to {@link SYS_Dialog}"
 }

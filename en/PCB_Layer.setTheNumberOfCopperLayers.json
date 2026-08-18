@@ -21,8 +21,8 @@
     "params.numberOfLayers": "铜箔层数",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.numberOfLayers": null,
-  "returns": null
+  "title": "Set Number of copper layers",
+  "remarks.text.0": "A newly created PCB document has two copper layers by default",
+  "params.numberOfLayers": "Number of copper layers",
+  "returns": "Whether the operation is successful"
 }

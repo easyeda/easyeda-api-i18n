@@ -12,8 +12,8 @@
     "params.callbackFn": "接收到消息后的回调",
     "returns": "消息总线任务"
   },
-  "title": null,
-  "params.topic": null,
-  "params.callbackFn": null,
-  "returns": null
+  "title": "Private message bus: subscribe to a message once",
+  "params.topic": "Theme",
+  "params.callbackFn": "Callback after receiving the message",
+  "returns": "Message bus task"
 }

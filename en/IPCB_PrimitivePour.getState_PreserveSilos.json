@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否保留孤岛",
     "returns": "是否保留孤岛"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether to keep islands",
+  "returns": "Whether to keep islands"
 }

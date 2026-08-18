@@ -11,8 +11,8 @@
     "properties.pageSize": "单页条目数",
     "properties.query": "查询参数"
   },
-  "title": null,
-  "properties.page": null,
-  "properties.pageSize": null,
-  "properties.query": null
+  "title": "External library search property",
+  "properties.page": "Page count",
+  "properties.pageSize": "Number of entries per page",
+  "properties.query": "Query parameter"
 }

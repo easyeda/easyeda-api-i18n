@@ -11,7 +11,7 @@
     "params.polygon": "单多边形",
     "returns": "折线图元对象"
   },
-  "title": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Set the property state: single polygon",
+  "params.polygon": "Single polygon",
+  "returns": "Polyline primitive object"
 }

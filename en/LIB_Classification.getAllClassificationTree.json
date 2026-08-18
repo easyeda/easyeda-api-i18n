@@ -13,9 +13,9 @@
     "returns": "分类信息组成的树结构数据",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
-  "title": null,
-  "params.libraryUuid": null,
-  "params.libraryType": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Get the tree composed of all classification information",
+  "params.libraryUuid": "Library UUID",
+  "params.libraryType": "Library type",
+  "returns": "Tree structure data composed of classification information",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3"
 }

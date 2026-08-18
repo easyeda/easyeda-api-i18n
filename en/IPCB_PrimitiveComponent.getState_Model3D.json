@@ -10,6 +10,6 @@
     "title": "获取属性状态：关联库 3D 模型",
     "returns": "关联库 3D 模型"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: associate library 3D model",
+  "returns": "Associate library 3D model"
 }

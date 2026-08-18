@@ -10,6 +10,6 @@
     "title": "获取属性状态：覆铜边框图元 ID",
     "returns": "覆铜边框图元 ID"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: copper border primitive ID",
+  "returns": "Copper border primitive ID"
 }

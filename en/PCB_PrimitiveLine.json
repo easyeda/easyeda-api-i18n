@@ -18,6 +18,6 @@
     "title": "PCB & 封装 / 直线图元类",
     "remarks.text.0": "直线和圆弧线均为导线，对应画布的线条走线和圆弧走线"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "PCB & footprint / line primitive class",
+  "remarks.text.0": "Both lines and arc lines are wires, corresponding to the line traces and arc traces on the canvas"
 }

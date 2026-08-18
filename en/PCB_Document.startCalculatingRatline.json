@@ -21,8 +21,8 @@
     "returns": "操作是否成功",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Start the ratline calculation function",
+  "remarks.text.0": "A ratline calculation will be triggered when starting",
+  "returns": "Whether the operation is successful",
+  "deprecated": "since EDA v4.2"
 }

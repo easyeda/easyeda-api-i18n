@@ -19,7 +19,7 @@
     "remarks.text.0": "控制光线追踪引擎的对接和交互",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.extensionUuid": null
+  "title": "PCB & footprint / ray tracer engine class",
+  "remarks.text.0": "Controls the docking and interaction of the ray tracer engine",
+  "properties.extensionUuid": "Extension UUID"
 }

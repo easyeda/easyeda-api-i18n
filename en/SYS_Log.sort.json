@@ -21,8 +21,8 @@
     "params.types": "日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型",
     "returns": "符合筛选条件的日志条目数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.types": null,
-  "returns": null
+  "title": "Filter and get log entries",
+  "remarks.text.0": "If the log panel is open, the filter operation will also be displayed on the front end",
+  "params.types": "Array of log types. Multiple log types can be specified at the same time. If not specified, all types are used",
+  "returns": "Array of log entries matching the filter criteria"
 }

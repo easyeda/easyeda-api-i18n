@@ -10,7 +10,7 @@
     "properties.padPair": "焊盘对数组",
     "properties.minWireLength": "最短导线长度"
   },
-  "title": null,
-  "properties.padPair": null,
-  "properties.minWireLength": null
+  "title": "Pad pair minimum wire length properties",
+  "properties.padPair": "Pad for array",
+  "properties.minWireLength": "Minimum wire length"
 }

@@ -18,15 +18,15 @@
     "properties.lineType": "线型",
     "properties.fillStyle": "填充样式"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.centerX": null,
-  "properties.centerY": null,
-  "properties.radius": null,
-  "properties.color": null,
-  "properties.fillColor": null,
-  "properties.lineWidth": null,
-  "properties.lineType": null,
-  "properties.fillStyle": null
+  "title": "Circle primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.centerX": "Center of the circle X",
+  "properties.centerY": "Center of the circle Y",
+  "properties.radius": "Radius",
+  "properties.color": "Color",
+  "properties.fillColor": "Fill color",
+  "properties.lineWidth": "Line width",
+  "properties.lineType": "Line type",
+  "properties.fillStyle": "Fill style"
 }

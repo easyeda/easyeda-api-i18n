@@ -10,6 +10,6 @@
     "title": "获取所有引脚",
     "returns": "引脚图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Pin",
+  "returns": "Array of Pin primitive objects"
 }

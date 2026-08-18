@@ -29,16 +29,16 @@
     "params.primitiveLock": "是否锁定",
     "returns": "图像图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.x": null,
-  "params.y": null,
-  "params.complexPolygon": null,
-  "params.layer": null,
-  "params.width": null,
-  "params.height": null,
-  "params.rotation": null,
-  "params.horizonMirror": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Image",
+  "remarks.text.0": "To create a color silkscreen image, use the {@link PCB_PrimitiveObject | binary embedded object primitive class}",
+  "params.x": "BBox top-left point coordinates X",
+  "params.y": "BBox top-left point coordinates Y",
+  "params.complexPolygon": "Image source data (complex polygon). You can use the {@link PCB_MathPolygon.convertImageToComplexPolygon} method to convert an image file into complex polygon data",
+  "params.layer": "Layer",
+  "params.width": "Width",
+  "params.height": "Height",
+  "params.rotation": "Rotation angle",
+  "params.horizonMirror": "Whether it is horizontally mirrored",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Image primitive object"
 }

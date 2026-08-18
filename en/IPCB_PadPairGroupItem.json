@@ -10,7 +10,7 @@
     "properties.name": "焊盘对组名称",
     "properties.padPairs": "焊盘对数组"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.padPairs": null
+  "title": "Pad pair group properties",
+  "properties.name": "Pad pair group name",
+  "properties.padPairs": "Pad for array"
 }

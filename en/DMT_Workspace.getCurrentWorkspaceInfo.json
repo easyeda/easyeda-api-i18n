@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前工作区的详细属性",
     "returns": "工作区的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the detailed properties of the current workspace",
+  "remarks.text.0": "It will get the detailed properties of the current workspace",
+  "returns": "Detailed properties of the workspace. If it is `undefined`, the retrieval failed"
 }

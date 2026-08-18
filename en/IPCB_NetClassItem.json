@@ -11,8 +11,8 @@
     "properties.nets": "网络名称数组",
     "properties.color": "网络类颜色"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.nets": null,
-  "properties.color": null
+  "title": "Net class property",
+  "properties.name": "Net class name",
+  "properties.nets": "Net name array",
+  "properties.color": "Net class color"
 }

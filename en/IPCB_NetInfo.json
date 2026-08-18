@@ -11,8 +11,8 @@
     "properties.color": "颜色",
     "properties.length": "长度"
   },
-  "title": null,
-  "properties.net": null,
-  "properties.color": null,
-  "properties.length": null
+  "title": "Net property",
+  "properties.net": "Net name",
+  "properties.color": "Color",
+  "properties.length": "Length"
 }

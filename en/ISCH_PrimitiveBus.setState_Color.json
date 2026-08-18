@@ -11,7 +11,7 @@
     "params.color": "总线颜色",
     "returns": "总线图元对象"
   },
-  "title": null,
-  "params.color": null,
-  "returns": null
+  "title": "Set the property state: Bus color",
+  "params.color": "Bus color",
+  "returns": "Bus primitive object"
 }

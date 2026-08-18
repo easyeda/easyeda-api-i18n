@@ -11,7 +11,7 @@
     "params.id": "事件 ID",
     "returns": "事件监听是否存在"
   },
-  "title": null,
-  "params.id": null,
-  "returns": null
+  "title": "Query whether the event listener exists",
+  "params.id": "Event ID",
+  "returns": "Whether the event listener exists"
 }

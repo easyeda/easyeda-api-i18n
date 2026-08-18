@@ -11,7 +11,7 @@
     "params.pinColor": "引脚颜色",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.pinColor": null,
-  "returns": null
+  "title": "Set the property state: pin color",
+  "params.pinColor": "Pin color",
+  "returns": "Pin primitive object"
 }

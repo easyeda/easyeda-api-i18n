@@ -11,7 +11,7 @@
     "params.primitiveIds": "图元 ID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Select primitives using primitive IDs",
+  "params.primitiveIds": "Primitive ID",
+  "returns": "Whether the operation is successful"
 }

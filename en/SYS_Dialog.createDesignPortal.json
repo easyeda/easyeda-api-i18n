@@ -20,7 +20,7 @@
     "remarks.text.0": "返回一个 IDesignPortal 对象，扩展结合 lc-editor-design-react 的 VirtualRender / 虚拟机组件使用。\n所有通信（发消息 + 收事件）均封装在对象内部。",
     "returns": "实现 IDesignPortal 的通信对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Create a communication entry for a componentized popup window",
+  "remarks.text.0": "Returns an IDesignPortal object, used by extensions in conjunction with the VirtualRender / virtual machine component of lc-editor-design-react.\nAll communication (sending messages + receiving events) is encapsulated inside the object.",
+  "returns": "A communication object implementing IDesignPortal"
 }

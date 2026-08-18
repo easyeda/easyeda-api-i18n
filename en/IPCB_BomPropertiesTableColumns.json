@@ -13,10 +13,10 @@
     "properties.group": "是否分组",
     "properties.orderWeight": "排列权重（大权重优先在 BOM 的左侧）"
   },
-  "title": null,
-  "properties.property": null,
-  "properties.title": null,
-  "properties.sort": null,
-  "properties.group": null,
-  "properties.orderWeight": null
+  "title": "BOM column properties and sorting rules",
+  "properties.property": "Property",
+  "properties.title": "Show name",
+  "properties.sort": "Sorting rule",
+  "properties.group": "Whether to group",
+  "properties.orderWeight": "Order weight (a larger weight is placed on the left side of the BOM first)"
 }

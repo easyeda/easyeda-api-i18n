@@ -18,15 +18,15 @@
     "properties.mirror": "是否镜像",
     "properties.fileName": "文件名称"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.content": null,
-  "properties.startX": null,
-  "properties.startY": null,
-  "properties.width": null,
-  "properties.height": null,
-  "properties.rotation": null,
-  "properties.mirror": null,
-  "properties.fileName": null
+  "title": "Binary embedded object primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.content": "Object content",
+  "properties.startX": "Start point coordinates X",
+  "properties.startY": "Start point coordinates Y",
+  "properties.width": "Width",
+  "properties.height": "Height",
+  "properties.rotation": "Rotation angle",
+  "properties.mirror": "Whether it is mirrored",
+  "properties.fileName": "File name"
 }

@@ -49,13 +49,13 @@
     "params.props": "快捷键数据",
     "returns": "注册是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "params.id": null,
-  "params.props": null,
-  "returns": null
+  "title": "Register shortcut key",
+  "remarks.text.0": "The `shortcutKey` passed in when registering a shortcut key here is only the default shortcut key. Users can modify it in settings",
+  "remarks.text.1": "If the shortcut key conflicts with a system shortcut key, the system shortcut key will take precedence",
+  "remarks.text.2": "To modify registered shortcut key information, you can call this API directly and pass the complete shortcut key data to be modified in `props`",
+  "remarks.text.3": "This API cannot modify system shortcut keys",
+  "remarks.text.4": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.id": "Shortcut key ID. The extension UUID will be automatically concatenated as a prefix",
+  "params.props": "Shortcut key data",
+  "returns": "Register whether it is successful"
 }

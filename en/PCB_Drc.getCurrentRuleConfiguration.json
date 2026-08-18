@@ -10,6 +10,6 @@
     "title": "获取当前设计规则配置",
     "returns": "当前设计规则配置，`undefined` 为获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Current design rule configuration",
+  "returns": "Current design rule configuration; `undefined` indicates that the retrieval failed"
 }

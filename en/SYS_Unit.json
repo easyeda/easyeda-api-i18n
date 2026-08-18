@@ -18,6 +18,6 @@
     "title": "系统 / 单位类",
     "remarks.text.0": "控制系统数据单位与单位转换基础函数，当前原理图数据单位跨度等效为 `10mil` 或 `0.01inch`，PCB 数据单位跨度等效为 `mil`"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "System / unit class",
+  "remarks.text.0": "Controls the system data units and unit conversion basic functions. Currently, the schematic data unit span is equivalent to `10mil` or `0.01inch`, and the PCB data unit span is equivalent to `mil`"
 }

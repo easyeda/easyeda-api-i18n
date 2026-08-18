@@ -10,6 +10,6 @@
     "title": "获取属性状态：高度",
     "returns": "高度"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: height",
+  "returns": "Height"
 }

@@ -12,8 +12,8 @@
     "params.net": "网络名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.equalLengthNetGroupName": null,
-  "params.net": null,
-  "returns": null
+  "title": "Add a net to an equal-length net group",
+  "params.equalLengthNetGroupName": "Equal-length net group name",
+  "params.net": "Net name",
+  "returns": "Whether the operation is successful"
 }

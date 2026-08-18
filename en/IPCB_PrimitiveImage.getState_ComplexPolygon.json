@@ -10,6 +10,6 @@
     "title": "获取属性状态：图像源数据（复杂多边形）",
     "returns": "图像源数据（复杂多边形）"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: image source data ( complex polygon)",
+  "returns": "Image source data ( complex polygon)"
 }

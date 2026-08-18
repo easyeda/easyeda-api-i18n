@@ -26,9 +26,9 @@
     "params.uri": "文件资源定位符，需要包含完整的文件名称的绝对路径",
     "returns": "File 格式文件"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.uri": null,
-  "returns": null
+  "title": "Read a file from the file system",
+  "remarks.text.0": "Note 1: This API is only valid for clients. Calling it in a browser environment will always `throw Error`",
+  "remarks.text.1": "Note 2: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.uri": "File resource locator. An absolute path containing the complete file name is required",
+  "returns": "File format file"
 }

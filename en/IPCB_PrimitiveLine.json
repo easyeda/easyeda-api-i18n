@@ -28,16 +28,16 @@
     "properties.lineWidth": "线宽",
     "properties.primitiveLock": "是否锁定"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.net": null,
-  "properties.layer": null,
-  "properties.startX": null,
-  "properties.startY": null,
-  "properties.endX": null,
-  "properties.endY": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": "Line primitive",
+  "remarks.text.0": "Both lines and arc lines are wires, corresponding to the line traces and arc traces on the canvas",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.net": "Net name",
+  "properties.layer": "Layer",
+  "properties.startX": "Start position X",
+  "properties.startY": "Start position Y",
+  "properties.endX": "End position X",
+  "properties.endY": "End position Y",
+  "properties.lineWidth": "Line width",
+  "properties.primitiveLock": "Whether it is locked"
 }

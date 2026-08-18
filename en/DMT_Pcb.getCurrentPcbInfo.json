@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的 PCB 的详细属性",
     "returns": "PCB 的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get detailed properties of Current PCB",
+  "remarks.text.0": "It will get the detailed properties of the currently open PCB that has the last input focus",
+  "returns": "PCB detailed properties of; if it is `undefined`, the retrieval failed"
 }

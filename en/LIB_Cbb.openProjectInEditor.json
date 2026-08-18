@@ -21,8 +21,8 @@
     "params.cbbUuid": "复用模块 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.cbbUuid": null,
-  "params.libraryUuid": null
+  "title": "Open in the editor reuse block project",
+  "remarks.text.0": "This operation will open the module project in the EDA front end. If another project was previously opened with unsaved changes, executing this operation will directly lose all unsaved data",
+  "params.cbbUuid": "Reuse block UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in"
 }

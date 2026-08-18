@@ -12,8 +12,8 @@
     "params.polygon2": "减去的多边形",
     "returns": "差集结果的多边形组，保留外环与孔洞的归属关系"
   },
-  "title": null,
-  "params.polygon1": null,
-  "params.polygon2": null,
-  "returns": null
+  "title": "Calculate the difference of two polygons (polygon1 - polygon2)",
+  "params.polygon1": "Minuend polygon",
+  "params.polygon2": "Subtrahend polygon",
+  "returns": "Polygon group of the difference result, preserving the association between outer rings and holes"
 }

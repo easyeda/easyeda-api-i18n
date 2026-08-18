@@ -12,8 +12,8 @@
     "params.ignoreWarning": "在非交互式检查时忽略警告 如果设置为 `true`，将会忽略所有检查警告项并尽可能生成下单资料； 如果设置为 `false`，存在任意警告将中断执行并返回 `false` 的结果",
     "returns": "是否通过下单检查"
   },
-  "title": null,
-  "params.interactive": null,
-  "params.ignoreWarning": null,
-  "returns": null
+  "title": "SMT component ordering",
+  "params.interactive": "Whether to enable interactive checking. If enabled, a popup will wait for user interaction, and the `ignoreWarning` parameter cannot be used to ignore warnings; that is, the `ignoreWarning` parameter will be ignored. If disabled, no EDA internal popup will appear after the call, and the program performs a silent check. If the ordering conditions are met, `true` will be returned and the ordering page will be opened in a new tab",
+  "params.ignoreWarning": "Ignore warnings during non-interactive checking. If set to `true`, all check warning items will be ignored and the ordering data will be generated as much as possible; if set to `false`, any warning will interrupt execution and return `false`",
+  "returns": "Whether the ordering check passed"
 }

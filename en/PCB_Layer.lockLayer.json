@@ -11,7 +11,7 @@
     "params.layer": "层，如若不指定任何层则默认为所有层",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.layer": null,
-  "returns": null
+  "title": "Lock the layer",
+  "params.layer": "Layer. If no layer is specified, all layers are used by default",
+  "returns": "Whether the operation is successful"
 }

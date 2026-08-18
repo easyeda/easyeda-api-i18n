@@ -10,6 +10,6 @@
     "title": "获取属性状态：孔",
     "returns": "孔"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: hole",
+  "returns": "Hole"
 }

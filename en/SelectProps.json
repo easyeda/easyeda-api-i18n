@@ -12,9 +12,9 @@
     "properties.dropDownList": "下拉选项列表",
     "properties.value": "当前选中值"
   },
-  "title": null,
-  "properties.disabled": null,
-  "properties.readonly": null,
-  "properties.dropDownList": null,
-  "properties.value": null
+  "title": "Dropdown selector: a dropdown selection control based on the input box",
+  "properties.disabled": "Whether Disable",
+  "properties.readonly": "Whether it is read-only",
+  "properties.dropDownList": "Dropdown option list",
+  "properties.value": "Current select value"
 }

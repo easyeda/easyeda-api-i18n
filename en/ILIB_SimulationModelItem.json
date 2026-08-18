@@ -18,15 +18,15 @@
     "properties.type": "仿真模型类型",
     "properties.description": "描述"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.name": null,
-  "properties.modelData": null,
-  "properties.modelCategory": null,
-  "properties.modelPin": null,
-  "properties.classification": null,
-  "properties.type": null,
-  "properties.description": null
+  "title": "Simulation model properties",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "Simulation model UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.name": "Simulation model name",
+  "properties.modelData": "Simulation model data",
+  "properties.modelCategory": "Simulation model category",
+  "properties.modelPin": "Simulation model pin",
+  "properties.classification": "Classification",
+  "properties.type": "Simulation model type",
+  "properties.description": "Description"
 }

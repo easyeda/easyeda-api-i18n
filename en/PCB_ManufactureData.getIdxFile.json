@@ -15,7 +15,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst idxFile = await eda.pcb_ManufactureData.getIdxFile('Design_Exchange');\nif (idxFile) {\nawait eda.sys_FileSystem.saveFile(idxFile);\n}\n```"
+          "content": "```javascript\nconst idxFile = await eda.pcb_ManufactureData.getIdxFile('Design_Exchange');\nif (idxFile) {\n    await eda.sys_FileSystem.saveFile(idxFile);\n}\n```"
         }
       ]
     }
@@ -25,7 +25,7 @@
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
     "returns": "IDX 文件"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get IDX file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "returns": "IDX file"
 }

@@ -10,6 +10,6 @@
     "title": "获取 URL 锚点",
     "returns": "URL 锚点值"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the URL anchor",
+  "returns": "URL anchor value"
 }

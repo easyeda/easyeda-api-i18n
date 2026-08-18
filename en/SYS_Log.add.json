@@ -11,7 +11,7 @@
     "params.message": "日志内容",
     "params.type": "日志类型"
   },
-  "title": null,
-  "params.message": null,
-  "params.type": null
+  "title": "Add a log entry",
+  "params.message": "Log content",
+  "params.type": "Log type"
 }

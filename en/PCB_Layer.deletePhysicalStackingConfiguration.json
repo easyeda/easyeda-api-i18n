@@ -19,8 +19,8 @@
     "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "删除是否成功"
   },
-  "title": null,
-  "params.configurationName": null,
-  "params.physicalProps": null,
-  "returns": null
+  "title": "Delete Physical stacking configuration",
+  "params.configurationName": "Configuration name",
+  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
+  "returns": "Delete Whether Successful"
 }

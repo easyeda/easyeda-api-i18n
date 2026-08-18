@@ -13,9 +13,9 @@
     "params.options": "可选参数",
     "returns": "事件监听方法，用于移除事件监听，如若为 `undefined` 则表示创建事件监听失败"
   },
-  "title": null,
-  "params.type": null,
-  "params.listener": null,
-  "params.options": null,
-  "returns": null
+  "title": "Add an event listener",
+  "params.type": "Event type, current support `blur` `focus`",
+  "params.listener": "Event listener callback",
+  "params.options": "Optional parameters",
+  "returns": "Event listener method, used to remove the event listener. If it is `undefined`, it means creating the event listener failed"
 }

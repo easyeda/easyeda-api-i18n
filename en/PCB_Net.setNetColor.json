@@ -12,8 +12,8 @@
     "params.color": "网络颜色",
     "returns": "是否设置成功, `false` 为不存在该网络"
   },
-  "title": null,
-  "params.net": null,
-  "params.color": null,
-  "returns": null
+  "title": "Set the color of the specified net",
+  "params.net": "Net name",
+  "params.color": "Net color",
+  "returns": "Whether Set Successful, `false` is does not exist this net"
 }

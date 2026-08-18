@@ -11,7 +11,7 @@
     "params.value": "Value",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.value": null,
-  "returns": null
+  "title": "Set the property state: Value",
+  "params.value": "Value",
+  "returns": "Attribute primitive object"
 }

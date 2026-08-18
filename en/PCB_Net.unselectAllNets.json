@@ -20,7 +20,7 @@
     "remarks.text.0": "如果希望取消选中所有图元，请使用 {@link PCB_SelectControl.clearSelected} 接口",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Unselect all nets",
+  "remarks.text.0": "If you want to unselect all primitives, use the {@link PCB_SelectControl.clearSelected} API",
+  "returns": "Whether the operation is successful"
 }

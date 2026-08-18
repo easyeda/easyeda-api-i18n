@@ -11,7 +11,7 @@
     "params.primitiveIds": "引脚的图元 ID 或引脚图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Pin",
+  "params.primitiveIds": "Pin primitive ID or Pin primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

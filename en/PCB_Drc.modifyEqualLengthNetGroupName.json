@@ -12,8 +12,8 @@
     "params.equalLengthNetGroupName": "新等长网络组名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.originalEqualLengthNetGroupName": null,
-  "params.equalLengthNetGroupName": null,
-  "returns": null
+  "title": "Modify the name of the equal-length net group",
+  "params.originalEqualLengthNetGroupName": "Original equal-length net group name",
+  "params.equalLengthNetGroupName": "New equal-length net group name",
+  "returns": "Whether the operation is successful"
 }

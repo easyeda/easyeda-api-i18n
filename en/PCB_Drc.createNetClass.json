@@ -13,9 +13,9 @@
     "params.color": "网络类颜色",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.netClassName": null,
-  "params.nets": null,
-  "params.color": null,
-  "returns": null
+  "title": "Create Net class",
+  "params.netClassName": "Net class name",
+  "params.nets": "Net name array",
+  "params.color": "Net class color",
+  "returns": "Whether the operation is successful"
 }

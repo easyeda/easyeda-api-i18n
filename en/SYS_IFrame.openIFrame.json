@@ -45,16 +45,16 @@
     "params.props": "其它参数",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "params.htmlFileName": null,
-  "params.width": null,
-  "params.height": null,
-  "params.id": null,
-  "params.props": null,
-  "returns": null
+  "title": "Open iframe window",
+  "remarks.text.0": "This API can only be called by extension packages. Users need to include an HTML file for embedding in the extension package;",
+  "remarks.text.1": "After this API is called, a Dialog window will open. The title of the Dialog window is the `<title>` of the HTML file, and the title bar has a close button;",
+  "remarks.text.2": "The body is an iframe. `width` and `height` are the width and height of the iframe in the body;",
+  "remarks.text.3": "The iframe needs to display the content of `htmlFileName`. This HTML is obtained from the extension package and has been stored in IndexedDB during installation",
+  "remarks.text.4": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.htmlFileName": "The path of the HTML file to load within the extension package, starting from the extension root directory, e.g. `/iframe/index.html`",
+  "params.width": "Width of the iframe window",
+  "params.height": "Height of the iframe window",
+  "params.id": "Iframe window ID, used to close the iframe window",
+  "params.props": "Other parameters",
+  "returns": "Whether the operation is successful"
 }

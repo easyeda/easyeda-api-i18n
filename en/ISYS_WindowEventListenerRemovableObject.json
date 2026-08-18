@@ -18,6 +18,6 @@
     "title": "窗口事件监听可移除对象",
     "remarks.text.0": "本对象从 {@link SYS_Window.addEventListener | addEventListener} 获取，并可用于移除创建的事件监听，仅需将其传入 {@link SYS_Window.removeEventListener | removeEventListener}"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Window event listener can remove object",
+  "remarks.text.0": "This object is obtained from {@link SYS_Window.addEventListener | addEventListener} and can be used to remove the created event listener by simply passing it to {@link SYS_Window.removeEventListener | removeEventListener}"
 }

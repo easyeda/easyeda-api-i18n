@@ -17,14 +17,14 @@
     "properties.property": "扩展属性",
     "properties.subPartNames": "子部件名称数组"
   },
-  "title": null,
-  "properties.libraryType": null,
-  "properties.uuid": null,
-  "properties.libraryUuid": null,
-  "properties.name": null,
-  "properties.classification": null,
-  "properties.association": null,
-  "properties.description": null,
-  "properties.property": null,
-  "properties.subPartNames": null
+  "title": "Device property",
+  "properties.libraryType": "Library type",
+  "properties.uuid": "Device UUID",
+  "properties.libraryUuid": "UUID of the library it belongs to",
+  "properties.name": "Device name",
+  "properties.classification": "Device classification",
+  "properties.association": "Associate",
+  "properties.description": "Description",
+  "properties.property": "Extension property",
+  "properties.subPartNames": "Sub-part name array"
 }

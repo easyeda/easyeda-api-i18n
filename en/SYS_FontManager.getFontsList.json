@@ -10,6 +10,6 @@
     "title": "获取当前已经配置的字体列表",
     "returns": "字体列表"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the currently configured font list",
+  "returns": "Font list"
 }

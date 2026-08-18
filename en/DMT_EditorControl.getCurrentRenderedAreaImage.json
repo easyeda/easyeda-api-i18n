@@ -11,7 +11,7 @@
     "params.tabId": "标签页 ID，如若未传入，则获取最后输入焦点的画布",
     "returns": "- 画布渲染区域的 Blob 格式图像数据"
   },
-  "title": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Get the canvas rendering region image",
+  "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be obtained",
+  "returns": "- Blob-format image data of the canvas rendering region"
 }

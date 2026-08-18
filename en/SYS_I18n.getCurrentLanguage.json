@@ -20,7 +20,7 @@
     "remarks.text.0": "能够获取到的语言受 EDA 当前支持语言限制，其它 API 支持的语言需要显式指定 `language` 参数才能使用",
     "returns": "语言"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get Current language environment",
+  "remarks.text.0": "The languages that can be obtained are limited by the languages currently supported by EDA. Languages supported by other APIs need to explicitly specify the `language` parameter to be used",
+  "returns": "Language"
 }

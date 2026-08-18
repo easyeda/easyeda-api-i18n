@@ -11,7 +11,7 @@
     "params.color": "导线颜色",
     "returns": "导线图元对象"
   },
-  "title": null,
-  "params.color": null,
-  "returns": null
+  "title": "Set the property state: wire color",
+  "params.color": "Wire color",
+  "returns": "Wire primitive object"
 }

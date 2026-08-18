@@ -17,13 +17,13 @@
     "params.primitiveLock": "是否锁定",
     "returns": "尺寸标注图元对象"
   },
-  "title": null,
-  "params.dimensionType": null,
-  "params.coordinateSet": null,
-  "params.layer": null,
-  "params.unit": null,
-  "params.lineWidth": null,
-  "params.precision": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create a dimension",
+  "params.dimensionType": "Dimension type",
+  "params.coordinateSet": "Dimension coordinate set",
+  "params.layer": "Layer",
+  "params.unit": "Unit",
+  "params.lineWidth": "Line width",
+  "params.precision": "Precision, value range `0`-`4`",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Dimension primitive object"
 }

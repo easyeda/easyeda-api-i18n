@@ -25,12 +25,12 @@
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.left": null,
-  "params.right": null,
-  "params.top": null,
-  "params.bottom": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Zoom to region",
+  "remarks.text.0": "In the schematic and symbol canvases, the coordinate unit span is 0.01inch; in the PCB and footprint canvases, it is mil",
+  "params.left": "First X coordinate of the rectangle",
+  "params.right": "Second X coordinate of the rectangle",
+  "params.top": "First Y coordinate of the rectangle",
+  "params.bottom": "Second Y coordinate of the rectangle",
+  "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
+  "returns": "Whether the operation is successful"
 }

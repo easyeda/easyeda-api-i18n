@@ -10,6 +10,6 @@
     "title": "获取编辑器分屏属性树",
     "returns": "编辑器分屏属性树，如若为 `undefined`，则数据获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the editor split screen property tree",
+  "returns": "The editor split screen property tree. If it is `undefined`, the data retrieval failed"
 }

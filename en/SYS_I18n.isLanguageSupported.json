@@ -11,7 +11,7 @@
     "params.language": "语言",
     "returns": "是否受支持"
   },
-  "title": null,
-  "params.language": null,
-  "returns": null
+  "title": "Check whether the language is supported",
+  "params.language": "Language",
+  "returns": "Whether it is supported"
 }

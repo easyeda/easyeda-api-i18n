@@ -18,6 +18,6 @@
     "title": "文档树 / 编辑器控制类",
     "remarks.text.0": "此处编辑器控制基于当前已打开的工程设计下的图页，其它任何 `documentUuid` 都将被认为是不存在的文档页"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Document tree / Editor control class",
+  "remarks.text.0": "Here the editor control is based on the sheets under the currently open engineering design. Any other `documentUuid` will be considered a non-existent document page"
 }

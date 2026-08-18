@@ -18,6 +18,6 @@
     "title": "系统 / 字体管理类",
     "remarks.text.0": "配置嘉立创 EDA 专业版允许调用的系统字体列表"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "System / font manager class",
+  "remarks.text.0": "Configure the list of system fonts that EasyEDA Pro is allowed to use"
 }

@@ -11,7 +11,7 @@
     "params.keyVisible": "键是否显示",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.keyVisible": null,
-  "returns": null
+  "title": "Set the property state: whether the key is visible",
+  "params.keyVisible": "Whether the key is visible",
+  "returns": "Attribute primitive object"
 }

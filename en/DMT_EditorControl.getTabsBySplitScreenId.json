@@ -21,8 +21,8 @@
     "params.splitScreenId": "分屏 ID",
     "returns": "标签页列表"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.splitScreenId": null,
-  "returns": null
+  "title": "Get all tabs under the specified split screen ID",
+  "remarks.text.0": "If there are no direct tabs under the specified split screen (that is, it still has {@link IDMT_EditorSplitScreenItem.children | children} under it), an empty array will be returned",
+  "params.splitScreenId": "Split screen ID",
+  "returns": "Tab list"
 }

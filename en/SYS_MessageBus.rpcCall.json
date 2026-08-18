@@ -13,9 +13,9 @@
     "params.timeout": "超时",
     "returns": "RPC 服务返回"
   },
-  "title": null,
-  "params.topic": null,
-  "params.message": null,
-  "params.timeout": null,
-  "returns": null
+  "title": "Private message bus: call RPC service",
+  "params.topic": "Theme",
+  "params.message": "Message",
+  "params.timeout": "Timeout",
+  "returns": "RPC service return"
 }

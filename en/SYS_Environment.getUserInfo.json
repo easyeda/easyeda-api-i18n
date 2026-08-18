@@ -10,6 +10,6 @@
     "title": "获取用户信息",
     "returns": "用户信息"
   },
-  "title": null,
-  "returns": null
+  "title": "Get user information",
+  "returns": "User information"
 }

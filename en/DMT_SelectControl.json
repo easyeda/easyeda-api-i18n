@@ -18,6 +18,6 @@
     "title": "文档树 / 选择控制类",
     "remarks.text.0": "在文档树内进行选择焦点的查询、控制"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Document tree / selection control class",
+  "remarks.text.0": "Query and control of the selection focus in the document tree"
 }

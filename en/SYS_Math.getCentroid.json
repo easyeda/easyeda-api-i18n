@@ -11,7 +11,7 @@
     "params.polygon": "多边形",
     "returns": "质心坐标"
   },
-  "title": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Calculate the centroid of the polygon",
+  "params.polygon": "Polygon",
+  "returns": "Centroid coordinate"
 }

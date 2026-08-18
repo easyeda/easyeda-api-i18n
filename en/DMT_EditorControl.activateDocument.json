@@ -21,8 +21,8 @@
     "params.tabId": "标签页 ID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Activate a document",
+  "remarks.text.0": "Switch to the tab of the specified document and place the input focus in it",
+  "params.tabId": "Tab ID",
+  "returns": "Whether the operation is successful"
 }

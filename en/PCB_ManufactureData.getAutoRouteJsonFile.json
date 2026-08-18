@@ -15,7 +15,7 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst autoRouteJson = await eda.pcb_ManufactureData.getAutoRouteJsonFile('AutoRoute_Json');\nif (autoRouteJson) {\nawait eda.sys_FileSystem.saveFile(autoRouteJson);\n}\n```"
+          "content": "```javascript\nconst autoRouteJson = await eda.pcb_ManufactureData.getAutoRouteJsonFile('AutoRoute_Json');\nif (autoRouteJson) {\n    await eda.sys_FileSystem.saveFile(autoRouteJson);\n}\n```"
         }
       ]
     }
@@ -26,8 +26,8 @@
     "params.fileName": "文件名",
     "returns": "自动布线 JSON 文件数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.fileName": null,
-  "returns": null
+  "title": "Get Auto routing file (JSON)",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "params.fileName": "File name",
+  "returns": "Auto routing JSON file data"
 }

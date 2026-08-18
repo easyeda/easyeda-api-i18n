@@ -11,8 +11,8 @@
     "properties.name": "工作区名称",
     "properties.uuid": "工作区 UUID"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.name": null,
-  "properties.uuid": null
+  "title": "Workspace properties",
+  "properties.itemType": "Project type",
+  "properties.name": "Workspace name",
+  "properties.uuid": "Workspace UUID"
 }

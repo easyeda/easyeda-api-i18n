@@ -19,15 +19,15 @@
     "params.inversion": "是否反相",
     "returns": "复杂多边形对象"
   },
-  "title": null,
-  "params.imageBlob": null,
-  "params.imageWidth": null,
-  "params.imageHeight": null,
-  "params.tolerance": null,
-  "params.simplification": null,
-  "params.smoothing": null,
-  "params.despeckling": null,
-  "params.whiteAsBackgroundColor": null,
-  "params.inversion": null,
-  "returns": null
+  "title": "Convert Image to Complex polygon object",
+  "params.imageBlob": "Image Blob file. You can use the {@link SYS_FileSystem.openReadFileDialog} method to read a file from the file system",
+  "params.imageWidth": "Image width",
+  "params.imageHeight": "Image height",
+  "params.tolerance": "Tolerance, value range `0`-`1`",
+  "params.simplification": "Simplification, value range `0`-`1`",
+  "params.smoothing": "Smoothing, value range `0`-`1.33`",
+  "params.despeckling": "Despeckling, value range `0`-`5`",
+  "params.whiteAsBackgroundColor": "Whether to use white as the background color",
+  "params.inversion": "Whether it is inverted",
+  "returns": "Complex polygon object"
 }

@@ -10,6 +10,6 @@
     "title": "获取属性状态：线型",
     "returns": "线型"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: line type",
+  "returns": "Line type"
 }

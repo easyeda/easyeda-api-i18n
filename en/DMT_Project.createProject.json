@@ -16,12 +16,12 @@
     "params.collaborationMode": "工程协作模式，如若团队权限无需工程设置协作模式，则该参数将被忽略",
     "returns": "工程 UUID，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "params.projectFriendlyName": null,
-  "params.projectName": null,
-  "params.teamUuid": null,
-  "params.folderUuid": null,
-  "params.description": null,
-  "params.collaborationMode": null,
-  "returns": null
+  "title": "Create Project",
+  "params.projectFriendlyName": "Project friendly name",
+  "params.projectName": "Project name, which cannot be duplicated. Only letters `a-zA-Z`, digits `0-9`, and hyphens `-` are supported. If not specified, it is automatically generated based on the project friendly name",
+  "params.teamUuid": "Team UUID. If not specified, it defaults to personal. In an environment where personal projects do not exist, a team UUID must be specified",
+  "params.folderUuid": "Folder UUID. If not specified, it is the root folder",
+  "params.description": "Project description",
+  "params.collaborationMode": "Project collaboration mode. If the team permission does not require the project to set a collaboration mode, this parameter will be ignored",
+  "returns": "Project UUID, if it is `undefined` creation fails"
 }

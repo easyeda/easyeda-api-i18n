@@ -20,9 +20,9 @@
     "params.options": "对比参数",
     "returns": "PCB 对比响应：`success = true` 时 `data` 为对比结果；`success = false` 时 `error` 包含错误码与信息"
   },
-  "title": null,
-  "params.pcb1": null,
-  "params.pcb2": null,
-  "params.options": null,
-  "returns": null
+  "title": "PCB comparison",
+  "params.pcb1": "PCB 1, which can be: 1. The UUID of a PCB in the current project; 2. The project UUID and PCB UUID of another project; 3. PCB file data",
+  "params.pcb2": "PCB 2, which can be: 1. The UUID of a PCB in the current project; 2. The project UUID and PCB UUID of another project; 3. PCB file data",
+  "params.options": "Comparison options",
+  "returns": "PCB comparison response: when `success = true`, `data` is the comparison result; when `success = false`, `error` contains the error code and message"
 }

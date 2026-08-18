@@ -10,6 +10,6 @@
     "title": "转换到：填充图元",
     "returns": "填充图元对象，无法转换或 ID 错误将返回 `undefined`"
   },
-  "title": null,
-  "returns": null
+  "title": "Convert to: fill primitive",
+  "returns": "The fill primitive object. If conversion fails or the ID is incorrect, `undefined` is returned"
 }

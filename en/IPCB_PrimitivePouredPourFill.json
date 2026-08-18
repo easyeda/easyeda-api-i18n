@@ -12,9 +12,9 @@
     "properties.fill": "是否填充",
     "properties.id": "ID"
   },
-  "title": null,
-  "properties.path": null,
-  "properties.lineWidth": null,
-  "properties.fill": null,
-  "properties.id": null
+  "title": "Copper fill region",
+  "properties.path": "Complex polygon",
+  "properties.lineWidth": "Line width",
+  "properties.fill": "Whether to fill",
+  "properties.id": "ID"
 }

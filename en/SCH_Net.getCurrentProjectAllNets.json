@@ -17,6 +17,6 @@
     "title": "获取当前工程下所有网络的详细信息",
     "returns": "当前工程下所有网络的详细信息"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed information of all nets under the current project",
+  "returns": "Detailed information of all nets under the current project"
 }

@@ -14,11 +14,11 @@
     "properties.isAbleDelete": "标签页是否可关闭",
     "properties.notUseI18n": "标签页是否不使用 I18n 功能（内部功能）"
   },
-  "title": null,
-  "properties.title": null,
-  "properties.tabId": null,
-  "properties.documentType": null,
-  "properties.draggable": null,
-  "properties.isAbleDelete": null,
-  "properties.notUseI18n": null
+  "title": "Editor tab",
+  "properties.title": "Tab title",
+  "properties.tabId": "Tab ID",
+  "properties.documentType": "Document type",
+  "properties.draggable": "Whether the tab is draggable",
+  "properties.isAbleDelete": "Whether the tab can be closed",
+  "properties.notUseI18n": "Whether the tab does not use the I18n feature (internal feature)"
 }

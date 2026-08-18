@@ -28,15 +28,15 @@
     "params.assemblyVariantsConfig": "装配体变量配置",
     "returns": "BOM 文件数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.fileName": null,
-  "params.fileType": null,
-  "params.template": null,
-  "params.filterOptions": null,
-  "params.statistics": null,
-  "params.property": null,
-  "params.columns": null,
-  "params.assemblyVariantsConfig": null,
-  "returns": null
+  "title": "Get BOM file",
+  "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "params.fileName": "File name",
+  "params.fileType": "File type",
+  "params.template": "Template name",
+  "params.filterOptions": "Filter rules, which should only contain the rules to be enabled. `property` is the rule name, and `includeValue` is the matched value",
+  "params.statistics": "Statistics, containing the names of all statistic items to be enabled",
+  "params.property": "Properties, containing the names of all properties to be enabled",
+  "params.columns": "Column properties and sorting. If `title`, `sort`, `group`, and `orderWeight` are not passed in, default values are used. `null` means **none** or **empty**",
+  "params.assemblyVariantsConfig": "Assembly variants configuration",
+  "returns": "BOM file data"
 }

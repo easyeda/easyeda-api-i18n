@@ -11,7 +11,7 @@
     "params.polygon": "多边形",
     "returns": "周长"
   },
-  "title": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Calculate the perimeter of a polygon",
+  "params.polygon": "Polygon",
+  "returns": "Perimeter"
 }

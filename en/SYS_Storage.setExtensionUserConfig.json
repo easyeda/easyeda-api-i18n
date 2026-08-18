@@ -27,10 +27,10 @@
     "params.value": "值",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.key": null,
-  "params.value": null,
-  "returns": null
+  "title": "Set Extension user configuration",
+  "remarks.text.0": "This API is also used to create a new extension user configuration. If it does not exist when setting, it will be created automatically",
+  "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.key": "Configuration item",
+  "params.value": "Value",
+  "returns": "Whether the operation is successful"
 }

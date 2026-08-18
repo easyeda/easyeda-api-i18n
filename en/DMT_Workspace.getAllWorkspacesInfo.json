@@ -10,6 +10,6 @@
     "title": "获取所有工作区的详细属性",
     "returns": "所有工作区的详细属性"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of all workspaces",
+  "returns": "Detailed properties of all workspaces"
 }

@@ -10,6 +10,6 @@
     "title": "清除布线",
     "params.type": "清除类型，如若需要指定清除类型，请提前选择指定图元"
   },
-  "title": null,
-  "params.type": null
+  "title": "Clear routing",
+  "params.type": "Clear type. If you need to specify a clear type, select the specified primitive in advance"
 }

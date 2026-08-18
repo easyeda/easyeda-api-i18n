@@ -11,7 +11,7 @@
     "params.primitiveIds": "填充的图元 ID 或填充图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete the fill",
+  "params.primitiveIds": "Primitive ID of the fill or the fill primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

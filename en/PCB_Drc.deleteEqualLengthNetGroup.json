@@ -11,7 +11,7 @@
     "params.equalLengthNetGroupName": "等长网络组名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.equalLengthNetGroupName": null,
-  "returns": null
+  "title": "Delete the equal-length net group",
+  "params.equalLengthNetGroupName": "Equal-length net group name",
+  "returns": "Whether the operation is successful"
 }

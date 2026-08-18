@@ -17,13 +17,13 @@
     "params.callbackFn": "回调函数",
     "returns": "用户选择的值的集合数组，对应传入的 `options` 中的 `value` 字段"
   },
-  "title": null,
-  "params.options": null,
-  "params.beforeContent": null,
-  "params.afterContent": null,
-  "params.title": null,
-  "params.defaultOption": null,
-  "params.multiple": null,
-  "params.callbackFn": null,
-  "returns": null
+  "title": "Show a multi-select dialog",
+  "params.options": "Option list, which can be an array of strings or an array of objects. When `defaultOption` is not specified, the default value is the first item of the list. If it is an array of strings, the value and display content of the option remain the same. If it is an array of objects, `value` represents the value of the option, and `displayContent` represents the display content of the option",
+  "params.beforeContent": "Text above the multi-select box",
+  "params.afterContent": "Text below the multi-select box",
+  "params.title": "Multi-select box title",
+  "params.defaultOption": "Default option array, using the option values as matching parameters",
+  "params.multiple": "Whether multiple selection is supported",
+  "params.callbackFn": "Callback function",
+  "returns": "Array of the set of values selected by the user, corresponding to the `value` fields in the passed-in `options`"
 }

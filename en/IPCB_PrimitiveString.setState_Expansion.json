@@ -11,7 +11,7 @@
     "params.expansion": "反相扩展",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.expansion": null,
-  "returns": null
+  "title": "Set the property state: inverted expansion",
+  "params.expansion": "Inverted expansion",
+  "returns": "Text primitive object"
 }

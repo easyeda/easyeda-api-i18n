@@ -11,7 +11,7 @@
     "params.polygon": "单多边形数据",
     "returns": "单多边形对象，`undefined` 表示数据不合法"
   },
-  "title": null,
-  "params.polygon": null,
-  "returns": null
+  "title": "Create Single polygon",
+  "params.polygon": "Single polygon data",
+  "returns": "Single polygon object. `undefined` indicates that the data is invalid"
 }

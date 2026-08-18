@@ -21,8 +21,8 @@
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tabId": null,
-  "returns": null
+  "title": "Zoom to the selected primitives (fit selection)",
+  "remarks.text.0": "In the returned data, the coordinate unit span of the schematic and symbol canvases is 0.01inch, and that of the PCB and footprint canvases is mil",
+  "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
+  "returns": "Region data after zooming. `false` indicates that the canvas does not support the zoom operation or the `tabId` does not exist"
 }

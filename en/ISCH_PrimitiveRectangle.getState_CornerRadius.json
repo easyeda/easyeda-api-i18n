@@ -10,6 +10,6 @@
     "title": "获取属性状态：圆角半径",
     "returns": "圆角半径"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: corner radius",
+  "returns": "Corner radius"
 }

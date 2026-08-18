@@ -25,12 +25,12 @@
     "params.description": "描述",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.symbolUuid": null,
-  "params.libraryUuid": null,
-  "params.symbolName": null,
-  "params.classification": null,
-  "params.description": null,
-  "returns": null
+  "title": "Modify Symbol",
+  "remarks.text.0": "If you want to clear certain properties, set their values to `null`",
+  "params.symbolUuid": "Symbol UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.symbolName": "Symbol name",
+  "params.classification": "Classification",
+  "params.description": "Description",
+  "returns": "Whether the operation is successful"
 }

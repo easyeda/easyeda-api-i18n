@@ -10,6 +10,6 @@
     "title": "获取文档封装源码",
     "returns": "文档封装源码数据，数据获取失败将返回空数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the document footprint source code",
+  "returns": "Document footprint source code data. An empty array is returned if the data retrieval fails"
 }

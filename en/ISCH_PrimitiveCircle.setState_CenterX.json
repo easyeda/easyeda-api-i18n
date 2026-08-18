@@ -11,7 +11,7 @@
     "params.centerX": "圆心 X",
     "returns": "圆图元对象"
   },
-  "title": null,
-  "params.centerX": null,
-  "returns": null
+  "title": "Set the property state: center of the circle X",
+  "params.centerX": "Center of the circle X",
+  "returns": "Circle primitive object"
 }

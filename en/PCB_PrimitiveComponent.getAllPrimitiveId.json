@@ -12,8 +12,8 @@
     "params.primitiveLock": "是否锁定",
     "returns": "器件的图元 ID 数组"
   },
-  "title": null,
-  "params.layer": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Get all Device primitive IDs",
+  "params.layer": "Layer",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Array of Device primitive IDs"
 }

@@ -10,6 +10,6 @@
     "title": "获取器件关联的所有引脚",
     "returns": "器件引脚图元数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all pins associated with the device",
+  "returns": "Device pin primitive array"
 }

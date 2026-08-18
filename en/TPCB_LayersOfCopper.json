@@ -18,6 +18,6 @@
     "title": "铜箔所属层",
     "remarks.text.0": "此处为方便单层铜箔层设计，不包含 {@link EPCB_LayerId.MULTI}"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Layers of copper",
+  "remarks.text.0": "This is for the convenience of single-layer copper design and does not include {@link EPCB_LayerId.MULTI}"
 }

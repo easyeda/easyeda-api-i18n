@@ -10,6 +10,6 @@
     "title": "获取属性状态：键是否显示",
     "returns": "键是否显示"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether the key is visible",
+  "returns": "Whether the key is visible"
 }

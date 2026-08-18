@@ -20,8 +20,8 @@
     "properties.outer": "外环",
     "properties.holes": "孔洞（内环）数组"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "properties.outer": null,
-  "properties.holes": null
+  "title": "Polygon with holes",
+  "remarks.text.0": "Contains one outer ring and zero to multiple holes (inner rings), preserving the complete topology",
+  "properties.outer": "Outer ring",
+  "properties.holes": "Array of holes (inner rings)"
 }

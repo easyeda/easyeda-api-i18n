@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否金属化孔壁",
     "returns": "是否金属化孔壁"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: Whether the hole wall is plated",
+  "returns": "Whether the hole wall is plated"
 }

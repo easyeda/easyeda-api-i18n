@@ -20,7 +20,7 @@
     "remarks.text.0": "个人本质上也是一个名为 **个人** 的团队",
     "returns": "所有团队的详细属性"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the detailed properties of all direct teams",
+  "remarks.text.0": "A personal space is essentially a team named **Personal**",
+  "returns": "Detailed properties of all teams"
 }

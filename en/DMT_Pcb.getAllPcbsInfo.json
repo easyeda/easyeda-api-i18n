@@ -10,6 +10,6 @@
     "title": "获取工程内所有 PCB 的详细属性",
     "returns": "所有 PCB 的详细属性的数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all in the project PCB detailed properties of",
+  "returns": "Array of detailed properties of all PCBs"
 }

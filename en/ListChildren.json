@@ -15,12 +15,12 @@
     "properties.selected": "是否选中",
     "properties.icons": "列表项图标列表"
   },
-  "title": null,
-  "properties.title": null,
-  "properties.id": null,
-  "properties.value": null,
-  "properties.clearBtn": null,
-  "properties.children": null,
-  "properties.selected": null,
-  "properties.icons": null
+  "title": "List item: supports multi-level nested grouping",
+  "properties.title": "List item title (required)",
+  "properties.id": "Unique ID of the list item",
+  "properties.value": "Associated value of the list item",
+  "properties.clearBtn": "Whether Show clear button",
+  "properties.children": "Child list items, used for multi-level nesting",
+  "properties.selected": "Whether Select",
+  "properties.icons": "List of list item icons"
 }

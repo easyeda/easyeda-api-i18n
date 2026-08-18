@@ -21,8 +21,8 @@
     "params.tip": "提示内容",
     "params.msTimeout": "展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 {@link SYS_Message.removeFollowMouseTip | removeFollowMouseTip} 或被其它提示覆盖"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.tip": null,
-  "params.msTimeout": null
+  "title": "Show the follow-mouse tip",
+  "remarks.text.0": "Only one tip can be shown at a time. If a new tip is shown, the previous tip will be automatically removed",
+  "params.tip": "Tip content",
+  "params.msTimeout": "Display duration in milliseconds (ms). If not passed in, the tip is displayed continuously until {@link SYS_Message.removeFollowMouseTip | removeFollowMouseTip} is called or it is covered by another tip"
 }

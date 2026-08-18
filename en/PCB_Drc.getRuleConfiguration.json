@@ -11,7 +11,7 @@
     "params.configurationName": "配置名称",
     "returns": "设计规则配置，`undefined` 为不存在该设计规则"
   },
-  "title": null,
-  "params.configurationName": null,
-  "returns": null
+  "title": "Get Specify design rule configuration",
+  "params.configurationName": "Configuration name",
+  "returns": "Design rule configuration, `undefined` is does not exist this design rules"
 }

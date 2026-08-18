@@ -18,6 +18,6 @@
     "title": "原理图 & 符号 / 网表类",
     "remarks.text.0": "获取、更新网表"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Schematic & symbol / netlist class",
+  "remarks.text.0": "Get, update the netlist"
 }

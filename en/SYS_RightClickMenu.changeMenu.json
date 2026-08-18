@@ -46,13 +46,13 @@
     "params.menuId": "菜单 ID",
     "params.menuItems": "菜单项，`null` 代表分隔符"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "remarks.text.5": null,
-  "params.menuId": null,
-  "params.menuItems": null
+  "title": "Modify the right-click menu",
+  "remarks.text.0": "Currently, only right-click menu modifications for **bottom menu device list item right-click**, **bottom menu symbol list item right-click**, **bottom menu footprint list item right-click**, and **bottom menu reuse block list item right-click** are supported",
+  "remarks.text.1": "If you want to reorder or remove some menu items, only the menu item IDs need to be passed in `menuItems`; other properties will remain unchanged automatically",
+  "remarks.text.2": "To register a new right-click menu, the complete {@link ISYS_RightClickMenuItem} data needs to be passed in",
+  "remarks.text.3": "This API forces the ID of the newly created right-click menu to include the extension UUID. For example, an input `id = 'example'` will be automatically rewritten to `e143d88179874e7f851cc890cd22fc71|example`",
+  "remarks.text.4": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.5": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "params.menuId": "Menu ID",
+  "params.menuItems": "Menu items. `null` represents a separator"
 }

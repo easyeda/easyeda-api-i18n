@@ -11,7 +11,7 @@
     "params.primitiveIds": "导线的图元 ID 或导线图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete Wire",
+  "params.primitiveIds": "Wire primitive ID or Wire primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

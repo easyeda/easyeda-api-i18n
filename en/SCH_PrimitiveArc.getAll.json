@@ -10,6 +10,6 @@
     "title": "获取所有圆弧",
     "returns": "圆弧图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Arc",
+  "returns": "Array of Arc primitive objects"
 }

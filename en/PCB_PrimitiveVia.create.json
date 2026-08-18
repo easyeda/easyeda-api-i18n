@@ -19,15 +19,15 @@
     "params.primitiveLock": "是否锁定",
     "returns": "过孔图元对象"
   },
-  "title": null,
-  "params.net": null,
-  "params.x": null,
-  "params.y": null,
-  "params.holeDiameter": null,
-  "params.diameter": null,
-  "params.viaType": null,
-  "params.designRuleBlindViaName": null,
-  "params.solderMaskExpansion": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Via",
+  "params.net": "Net name",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.holeDiameter": "Hole diameter",
+  "params.diameter": "Outer diameter",
+  "params.viaType": "Via type",
+  "params.designRuleBlindViaName": "Blind/buried via design rule item name, which defines the start and end layers of the via. `null` means it is not a blind/buried via",
+  "params.solderMaskExpansion": "Solder mask/paste mask expansion. `null` means following the rules",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Via primitive object"
 }

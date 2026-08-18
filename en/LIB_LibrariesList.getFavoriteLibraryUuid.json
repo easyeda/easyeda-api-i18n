@@ -20,7 +20,7 @@
     "remarks.text.0": "将会获取当前编辑器工作区下的收藏库的 UUID",
     "returns": "收藏库的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the UUID of the favorite library",
+  "remarks.text.0": "It will get the UUID of the favorite library under the current editor workspace",
+  "returns": "UUID of the favorite library"
 }

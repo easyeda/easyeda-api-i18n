@@ -27,7 +27,7 @@
     "remarks.text.0": "本接口配置定义还在进行中",
     "returns": "渲染配置"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Get the ray tracer render configurations",
+  "remarks.text.0": "The configuration definition of this API is still in progress",
+  "returns": "Render configuration"
 }

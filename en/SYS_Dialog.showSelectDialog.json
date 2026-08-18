@@ -17,13 +17,13 @@
     "params.callbackFn": "回调函数",
     "returns": "用户选择的值，对应传入的 `options` 中的 `value` 字段"
   },
-  "title": null,
-  "params.options": null,
-  "params.beforeContent": null,
-  "params.afterContent": null,
-  "params.title": null,
-  "params.defaultOption": null,
-  "params.multiple": null,
-  "params.callbackFn": null,
-  "returns": null
+  "title": "Show a select dialog",
+  "params.options": "Option list, which can be an array of strings or an array of objects. When `defaultOption` is not specified, the default value is the first item of the list. If it is an array of strings, the value and display content of the option remain the same. If it is an array of objects, `value` represents the value of the option, and `displayContent` represents the display content of the option",
+  "params.beforeContent": "Text above the select box",
+  "params.afterContent": "Text below the select box",
+  "params.title": "Select box title",
+  "params.defaultOption": "Default option, using the option value as the matching parameter. If the `multiple` parameter is `true`, an array of strings needs to be passed here",
+  "params.multiple": "Whether multiple selection is supported. By default, it is a single-select box",
+  "params.callbackFn": "Callback function",
+  "returns": "The value selected by the user, corresponding to the `value` field in the passed-in `options`"
 }

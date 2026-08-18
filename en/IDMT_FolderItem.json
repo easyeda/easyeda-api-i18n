@@ -15,12 +15,12 @@
     "properties.parentFolderUuid": "父文件夹 UUID",
     "properties.childrenFoldersUuid": "子文件夹 UUID 列表"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.name": null,
-  "properties.teamUuid": null,
-  "properties.description": null,
-  "properties.parentFolderUuid": null,
-  "properties.childrenFoldersUuid": null
+  "title": "Folder property",
+  "properties.itemType": "Project type",
+  "properties.uuid": "Folder UUID",
+  "properties.name": "Folder name",
+  "properties.teamUuid": "UUID of the team it belongs to",
+  "properties.description": "Folder description",
+  "properties.parentFolderUuid": "Parent folder UUID",
+  "properties.childrenFoldersUuid": "List of child folder UUIDs"
 }

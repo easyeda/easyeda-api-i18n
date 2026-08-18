@@ -9,5 +9,5 @@
   "_source": {
     "title": "对网络按自然排序后转换为 ISCH_NetInfo 数组"
   },
-  "title": null
+  "title": "Sort the nets naturally and convert them to an ISCH_NetInfo array"
 }

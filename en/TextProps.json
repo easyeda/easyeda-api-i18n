@@ -13,10 +13,10 @@
     "properties.fontSize": "字号（像素）",
     "properties.color": "文本颜色"
   },
-  "title": null,
-  "properties.value": null,
-  "properties.fontFamily": null,
-  "properties.textAlign": null,
-  "properties.fontSize": null,
-  "properties.color": null
+  "title": "Text component: static text display",
+  "properties.value": "Text content ( required)",
+  "properties.fontFamily": "Font family",
+  "properties.textAlign": "Horizontal alignment",
+  "properties.fontSize": "Font size ( pixels)",
+  "properties.color": "Text color"
 }

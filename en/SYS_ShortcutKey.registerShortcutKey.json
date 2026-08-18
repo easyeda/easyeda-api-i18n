@@ -14,10 +14,10 @@
     "returns": "注册操作是否成功",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "params.shortcutKey": null,
-  "params.title": null,
-  "params.callbackFn": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Register shortcut key",
+  "params.shortcutKey": "Shortcut key. If the array contains multiple elements, it is parsed as a combined shortcut key and sorted by rules before being stored in the cache",
+  "params.title": "Shortcut key title, the friendly name of the shortcut key",
+  "params.callbackFn": "Callback function",
+  "returns": "Register whether the operation is successful",
+  "deprecated": "since EDA v4.2"
 }

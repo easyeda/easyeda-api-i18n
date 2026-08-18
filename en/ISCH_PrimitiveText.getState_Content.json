@@ -10,6 +10,6 @@
     "title": "获取属性状态：文本内容",
     "returns": "文本内容"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: text content",
+  "returns": "Text content"
 }

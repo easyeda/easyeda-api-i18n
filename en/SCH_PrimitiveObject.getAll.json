@@ -10,6 +10,6 @@
     "title": "获取所有二进制内嵌对象",
     "returns": "二进制内嵌对象图元对象数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Binary embedded object",
+  "returns": "Array of Binary embedded object primitive objects"
 }

@@ -11,7 +11,7 @@
     "params.key": "参数名",
     "returns": "参数值"
   },
-  "title": null,
-  "params.key": null,
-  "returns": null
+  "title": "Get URL parameter",
+  "params.key": "Parameter name",
+  "returns": "Parameter value"
 }

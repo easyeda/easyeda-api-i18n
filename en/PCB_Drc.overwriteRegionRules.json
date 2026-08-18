@@ -21,8 +21,8 @@
     "params.regionRules": "区域规则",
     "returns": "覆写是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.regionRules": null,
-  "returns": null
+  "title": "Overwrite region rules",
+  "remarks.text.0": "It will overwrite all region rules of the current PCB. Please note the risk of data loss",
+  "params.regionRules": "Region rules",
+  "returns": "Overwrite whether it is successful"
 }

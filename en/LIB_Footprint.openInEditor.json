@@ -13,9 +13,9 @@
     "params.splitScreenId": "分屏 ID，不填写则默认在最后输入焦点的分屏内打开，可以使用 {@link DMT_EditorControl} 内的接口获取",
     "returns": "标签页 ID，对应 {@link IDMT_EditorTabItem.tabId}，可使用 {@link DMT_EditorControl.getSplitScreenIdByTabId} 获取到分屏 ID"
   },
-  "title": null,
-  "params.footprintUuid": null,
-  "params.libraryUuid": null,
-  "params.splitScreenId": null,
-  "returns": null
+  "title": "Open in the editor document",
+  "params.footprintUuid": "Footprint UUID",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.splitScreenId": "Split screen ID. If not filled in, it opens in the split screen with the last input focus by default. It can be obtained using the APIs in {@link DMT_EditorControl}",
+  "returns": "Tab ID, corresponding to {@link IDMT_EditorTabItem.tabId}. You can use {@link DMT_EditorControl.getSplitScreenIdByTabId} to get the split screen ID"
 }

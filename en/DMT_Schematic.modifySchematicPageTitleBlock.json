@@ -22,9 +22,9 @@
     "params.titleBlockData": "需要修改的明细项及其修改的值",
     "returns": "修改操作是否成功，如若未传入 `showTitleBlock` 和 `titleBlockData` 将返回 `false`；请注意，如若存在无法识别的明细项但程序并未出错，将返回 `true` 的结果，因为无法识别的明细项被忽略"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.showTitleBlock": null,
-  "params.titleBlockData": null,
-  "returns": null
+  "title": "Modify the title block of a schematic sheet",
+  "remarks.text.0": "`titleBlockData` only needs to pass in any title block items to be modified as `key`, along with the values to modify them to. Any unrecognized title block items will be ignored, and any unpassed items and values will remain in their default state",
+  "params.showTitleBlock": "Whether to show the title block. If undefined, the current state will be kept",
+  "params.titleBlockData": "The title block items to be modified and their modified values",
+  "returns": "Whether the modification was successful. If `showTitleBlock` and `titleBlockData` are not passed in, `false` will be returned. Note that if unrecognized title block items exist but the program does not report an error, `true` will be returned because the unrecognized items are ignored"
 }

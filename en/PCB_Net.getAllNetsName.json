@@ -10,6 +10,6 @@
     "title": "获取所有网络的网络名称",
     "returns": "网络名称数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the net names of all nets",
+  "returns": "Net name array"
 }

@@ -11,7 +11,7 @@
     "params.complexPolygon": "复杂多边形数据",
     "returns": "复杂多边形对象"
   },
-  "title": null,
-  "params.complexPolygon": null,
-  "returns": null
+  "title": "Add Polygon data",
+  "params.complexPolygon": "Complex polygon data",
+  "returns": "Complex polygon object"
 }

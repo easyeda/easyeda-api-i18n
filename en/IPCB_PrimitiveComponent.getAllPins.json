@@ -10,6 +10,6 @@
     "title": "获取器件关联的所有焊盘",
     "returns": "器件焊盘图元数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all pads associated with the device",
+  "returns": "Device pad primitive array"
 }

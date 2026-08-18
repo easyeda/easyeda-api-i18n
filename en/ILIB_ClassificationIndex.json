@@ -23,11 +23,11 @@
     "properties.primaryClassificationUuid": "一级分类 UUID",
     "properties.secondaryClassificationUuid": "二级分类 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "deprecated": null,
-  "properties.libraryUuid": null,
-  "properties.libraryType": null,
-  "properties.primaryClassificationUuid": null,
-  "properties.secondaryClassificationUuid": null
+  "title": "Classification index",
+  "remarks.text.0": "This classification index is used to index the classifications in the specified library. The library UUID and library type are only used for identification purposes of this index, to prevent indexes in different libraries from referencing each other and causing errors",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3",
+  "properties.libraryUuid": "Library UUID",
+  "properties.libraryType": "Library type",
+  "properties.primaryClassificationUuid": "Primary classification UUID",
+  "properties.secondaryClassificationUuid": "Secondary classification UUID"
 }

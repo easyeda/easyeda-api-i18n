@@ -11,7 +11,7 @@
     "params.primitiveIds": "图元 ID 数组或图元对象数组",
     "returns": "图元的 BBox，如若图元不存在或没有 BBox，将会返回 `undefined` 的结果"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Get The BBox of the primitive",
+  "params.primitiveIds": "Array of Primitive ID array or primitive objects",
+  "returns": "The BBox of the primitive. If the primitive does not exist or has no BBox, `undefined` will be returned"
 }

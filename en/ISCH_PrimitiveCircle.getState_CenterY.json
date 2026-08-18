@@ -10,6 +10,6 @@
     "title": "获取属性状态：圆心 Y",
     "returns": "圆心 Y"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: center of the circle Y",
+  "returns": "Center of the circle Y"
 }

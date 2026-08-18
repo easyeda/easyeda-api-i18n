@@ -21,8 +21,8 @@
     "params.topic": "主题",
     "params.message": "消息"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.topic": null,
-  "params.message": null
+  "title": "Public message bus: push a message",
+  "remarks.text.0": "Each message can only be received by one Puller",
+  "params.topic": "Theme",
+  "params.message": "Message"
 }

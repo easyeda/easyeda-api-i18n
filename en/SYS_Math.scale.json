@@ -15,11 +15,11 @@
     "params.centerY": "缩放中心 Y 坐标，默认为质心",
     "returns": "缩放后的离散点数组"
   },
-  "title": null,
-  "params.polygon": null,
-  "params.scaleX": null,
-  "params.scaleY": null,
-  "params.centerX": null,
-  "params.centerY": null,
-  "returns": null
+  "title": "Scale the polygon",
+  "params.polygon": "Polygon",
+  "params.scaleX": "X direction scale ratio",
+  "params.scaleY": "Y direction scale ratio, defaulting to the same as scaleX",
+  "params.centerX": "X coordinate of the scaling center, defaulting to the centroid",
+  "params.centerY": "Y coordinate of the scaling center, defaulting to the centroid",
+  "returns": "Array of discrete points after scaling"
 }

@@ -11,7 +11,7 @@
     "params.x": "坐标 X",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.x": null,
-  "returns": null
+  "title": "Set the property state: X coordinate",
+  "params.x": "X coordinate",
+  "returns": "Pin primitive object"
 }

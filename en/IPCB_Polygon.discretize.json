@@ -21,8 +21,8 @@
     "params.options": "离散化选项",
     "returns": "离散化点数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.options": null,
-  "returns": null
+  "title": "Discretize a single polygon into point data",
+  "remarks.text.0": "Discretize the boundary of a single polygon into a series of points",
+  "params.options": "Discretization options",
+  "returns": "Discretized point data"
 }

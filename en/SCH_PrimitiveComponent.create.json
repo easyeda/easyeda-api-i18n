@@ -18,14 +18,14 @@
     "params.addIntoPcb": "是否转到 PCB",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.component": null,
-  "params.subPartName": null,
-  "params.x": null,
-  "params.y": null,
-  "params.rotation": null,
-  "params.mirror": null,
-  "params.addIntoBom": null,
-  "params.addIntoPcb": null,
-  "returns": null
+  "title": "Create Device",
+  "params.component": "Associate library device",
+  "params.subPartName": "Sub-part name",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.rotation": "Rotation angle",
+  "params.mirror": "Whether it is mirrored",
+  "params.addIntoBom": "Whether Add to BOM",
+  "params.addIntoPcb": "Whether Transfer to PCB",
+  "returns": "Device primitive object"
 }

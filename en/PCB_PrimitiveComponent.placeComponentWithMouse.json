@@ -26,9 +26,9 @@
     "params.component": "关联库器件",
     "returns": "是否找到器件"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.component": null,
-  "returns": null
+  "title": "Place with the mouse device",
+  "remarks.text.0": "This API simulates clicking the placement button on the front end. The specified device will be bound to the current mouse and placed on the canvas when the user clicks subsequently",
+  "remarks.text.1": "The return timing of this API does not wait for the user's placement operation. Once the device is bound to the mouse, this API will immediately return `true`",
+  "params.component": "Associate library device",
+  "returns": "Whether the device was found"
 }

@@ -22,9 +22,9 @@
     "params.schematicPageItemsArray": "所有原理图图页属性的数组",
     "returns": "排序操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.schematicUuid": null,
-  "params.schematicPageItemsArray": null,
-  "returns": null
+  "title": "Reorder schematic sheets",
+  "remarks.text.0": "Here, the array of source schematic sheet properties needs to be obtained through {@link DMT_Schematic.getAllSchematicPagesInfo} or other upstream methods. After sorting the array, pass it in",
+  "params.schematicUuid": "The UUID of the schematic associated with the sheets being sorted",
+  "params.schematicPageItemsArray": "Array of all schematic sheet properties",
+  "returns": "Sorting whether the operation is successful"
 }

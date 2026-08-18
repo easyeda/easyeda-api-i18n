@@ -13,10 +13,10 @@
     "properties.failedComponents": "未能完成布局的器件图元 ID 列表",
     "properties.duration": "自动布局耗时（毫秒）"
   },
-  "title": null,
-  "properties.success": null,
-  "properties.totalComponentsCount": null,
-  "properties.successComponentsCount": null,
-  "properties.failedComponents": null,
-  "properties.duration": null
+  "title": "Auto layout result",
+  "properties.success": "Whether auto layout started successfully",
+  "properties.totalComponentsCount": "Total number of devices participating in auto layout",
+  "properties.successComponentsCount": "Number of devices that were laid out successfully",
+  "properties.failedComponents": "List of device primitive IDs that failed to be laid out",
+  "properties.duration": "Auto layout duration (milliseconds)"
 }

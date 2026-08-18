@@ -11,7 +11,7 @@
     "params.arcAngle": "圆弧角度",
     "returns": "圆弧线图元对象"
   },
-  "title": null,
-  "params.arcAngle": null,
-  "returns": null
+  "title": "Set the property state: arc angle",
+  "params.arcAngle": "Arc angle",
+  "returns": "Arc line primitive object"
 }

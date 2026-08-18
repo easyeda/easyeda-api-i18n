@@ -11,7 +11,7 @@
     "params.transparency": "透明度，范围 `0-100`",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.transparency": null,
-  "returns": null
+  "title": "Set the inactive layer transparency",
+  "params.transparency": "Transparency, range `0-100`",
+  "returns": "Whether the operation is successful"
 }

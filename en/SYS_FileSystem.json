@@ -9,6 +9,6 @@
     "title": "系统 / 文件系统交互类",
     "properties.extensionUuid": "扩展 UUID"
   },
-  "title": null,
-  "properties.extensionUuid": null
+  "title": "System / file system interaction class",
+  "properties.extensionUuid": "Extension UUID"
 }

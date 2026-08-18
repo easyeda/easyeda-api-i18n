@@ -17,6 +17,6 @@
     "title": "获取当前画布过滤器配置",
     "returns": "当前画布过滤器配置，`undefined` 为获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Current canvas filter configuration",
+  "returns": "Current canvas filter configuration; `undefined` indicates that the retrieval failed"
 }

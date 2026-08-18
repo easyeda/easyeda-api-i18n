@@ -10,6 +10,6 @@
     "title": "获取属性状态：层",
     "returns": "层"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: Layer",
+  "returns": "Layer"
 }

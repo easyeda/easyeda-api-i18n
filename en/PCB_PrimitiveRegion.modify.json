@@ -12,8 +12,8 @@
     "params.property": "修改参数",
     "returns": "区域图元对象，`undefined` 表示修改失败"
   },
-  "title": null,
-  "params.primitiveId": null,
-  "params.property": null,
-  "returns": null
+  "title": "Modify Region",
+  "params.primitiveId": "Primitive ID",
+  "params.property": "Modify Parameter",
+  "returns": "Region primitive object, `undefined` indicates that the modification failed"
 }

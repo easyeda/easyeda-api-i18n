@@ -10,7 +10,7 @@
     "properties.children": "插槽内容子节点",
     "properties.name": "插槽名称（必填）"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.name": null
+  "title": "Slot component: provides named content placeholders for the parent component",
+  "properties.children": "Slot content child nodes",
+  "properties.name": "Slot name (required)"
 }

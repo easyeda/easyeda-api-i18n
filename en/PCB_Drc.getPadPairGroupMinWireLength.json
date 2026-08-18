@@ -11,7 +11,7 @@
     "params.padPairGroupName": "焊盘对组名称",
     "returns": "所有焊盘对的最短导线长度"
   },
-  "title": null,
-  "params.padPairGroupName": null,
-  "returns": null
+  "title": "Get the minimum wire length of a pad pair group",
+  "params.padPairGroupName": "Pad pair group name",
+  "returns": "The minimum wire lengths of all pad pairs"
 }

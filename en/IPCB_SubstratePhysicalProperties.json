@@ -10,7 +10,7 @@
     "properties.numberOfLayers": "铜箔层数",
     "properties.substrateMaterial": "基板材料"
   },
-  "title": null,
-  "properties.numberOfLayers": null,
-  "properties.substrateMaterial": null
+  "title": "Substrate physical properties",
+  "properties.numberOfLayers": "Number of copper layers",
+  "properties.substrateMaterial": "Substrate material"
 }

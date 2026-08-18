@@ -11,7 +11,7 @@
     "params.pinShape": "引脚形状",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.pinShape": null,
-  "returns": null
+  "title": "Set the property state: pin shape",
+  "params.pinShape": "Pin shape",
+  "returns": "Pin primitive object"
 }

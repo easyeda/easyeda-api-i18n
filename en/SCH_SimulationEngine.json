@@ -18,6 +18,6 @@
     "title": "原理图 & 符号 / 仿真引擎类",
     "remarks.text.0": "控制仿真引擎的对接和交互"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Schematic & symbol / simulation engine class",
+  "remarks.text.0": "Controls the docking and interaction of the simulation engine"
 }

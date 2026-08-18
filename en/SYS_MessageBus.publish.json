@@ -21,8 +21,8 @@
     "params.topic": "主题",
     "params.message": "消息"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.topic": null,
-  "params.message": null
+  "title": "Private message bus: publish a message",
+  "remarks.text.0": "Broadcast the message to every Subscriber",
+  "params.topic": "Theme",
+  "params.message": "Message"
 }

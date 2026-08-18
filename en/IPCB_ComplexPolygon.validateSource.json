@@ -10,6 +10,6 @@
     "title": "校验复杂多边形",
     "returns": "复杂多边形数据"
   },
-  "title": null,
-  "returns": null
+  "title": "Validate the complex polygon",
+  "returns": "Complex polygon data"
 }

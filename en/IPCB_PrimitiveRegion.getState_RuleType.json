@@ -10,6 +10,6 @@
     "title": "获取属性状态：区域规则类型",
     "returns": "区域规则类型"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: region rule type",
+  "returns": "Region rule type"
 }

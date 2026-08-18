@@ -33,12 +33,12 @@
     "params.allowMultiMatch": "是否允许单个立创 C 编号匹配多个结果",
     "returns": "搜索到的器件属性的列表"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "params.lcscIds": null,
-  "params.libraryUuid": null,
-  "params.allowMultiMatch": null,
-  "returns": null
+  "title": "Batch get devices using LCSC C numbers",
+  "remarks.text.0": "By default, if multiple devices with the same C number are matched in the same library, only the first result will be returned;",
+  "remarks.text.1": "If you want to return multiple results, set `allowMultiMatch` to `true`;",
+  "remarks.text.2": "This API is temporarily unavailable in the private deployment environment",
+  "params.lcscIds": "Array of LCSC C numbers",
+  "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
+  "params.allowMultiMatch": "Whether a single LCSC C number is allowed to match multiple results",
+  "returns": "List of searched device properties"
 }

@@ -11,7 +11,7 @@
     "params.addIntoPcb": "是否转到 PCB",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.addIntoPcb": null,
-  "returns": null
+  "title": "Set the property state: whether to switch to PCB",
+  "params.addIntoPcb": "Whether Transfer to PCB",
+  "returns": "Device primitive object"
 }

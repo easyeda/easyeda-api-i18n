@@ -10,6 +10,6 @@
     "title": "添加：阻焊区域",
     "returns": "阻焊区域填充图元对象，无法转换或 ID 错误将返回 `undefined`"
   },
-  "title": null,
-  "returns": null
+  "title": "Add: solder mask region",
+  "returns": "The solder mask region fill primitive object. If conversion fails or the ID is incorrect, `undefined` is returned"
 }

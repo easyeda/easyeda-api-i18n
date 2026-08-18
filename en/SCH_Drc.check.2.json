@@ -13,9 +13,9 @@
     "params.includeVerboseError": "是否在返回值中包含详细错误信息，如若为 `true`，则返回值将始终为数组 ADD since EDA v4.2",
     "returns": "DRC 检查的详细结果"
   },
-  "title": null,
-  "params.strict": null,
-  "params.userInterface": null,
-  "params.includeVerboseError": null,
-  "returns": null
+  "title": "Check DRC",
+  "params.strict": "Whether strict checking is enabled. The current schematic is uniformly in strict checking mode",
+  "params.userInterface": "Whether to show the UI (open the bottom DRC window)",
+  "params.includeVerboseError": "Whether to include detailed error information in the return value. If it is `true`, the return value will always be an array. ADD since EDA v4.2",
+  "returns": "Detailed results of the DRC check"
 }

@@ -11,7 +11,7 @@
     "params.boardName": "板子名称",
     "returns": "板子的详细属性，如若为 `undefined` 则获取失败"
   },
-  "title": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Get detailed properties of Board",
+  "params.boardName": "Board name",
+  "returns": "Board detailed properties of; if it is `undefined`, the retrieval failed"
 }

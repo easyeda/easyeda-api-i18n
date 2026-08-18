@@ -12,8 +12,8 @@
     "params.property": "修改参数",
     "returns": "直线图元对象"
   },
-  "title": null,
-  "params.primitiveId": null,
-  "params.property": null,
-  "returns": null
+  "title": "Modify the line",
+  "params.primitiveId": "Primitive ID",
+  "params.property": "Modify Parameter",
+  "returns": "Line primitive object"
 }

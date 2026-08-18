@@ -30,9 +30,9 @@
     "remarks.text.2": "注意：本接口仅私有化部署版本有效，如若在其他版本调用将始终 `throw Error`",
     "returns": "制造文件"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "returns": null
+  "title": "Export the manufacture data",
+  "remarks.text.0": "This API corresponds to the one-click manufacture data export function of the private deployment edition",
+  "remarks.text.1": "It will obtain the file data according to the configuration of the one-click manufacture data export popup on the front end",
+  "remarks.text.2": "Note: This API is only valid for the private deployment edition. Calling it in other editions will always `throw Error`",
+  "returns": "Manufacture data"
 }

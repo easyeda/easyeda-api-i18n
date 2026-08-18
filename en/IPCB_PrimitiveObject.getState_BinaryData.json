@@ -25,8 +25,8 @@
     "remarks.text.1": "对象存储以 `hashId` 作为索引，需要完整取回数据将会造成额外请求消耗性能",
     "returns": "二进制数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "returns": null
+  "title": "Get the property state: binary data",
+  "remarks.text.0": "The `binaryData` retrieved from the canvas may be a `hashId`, because our backend stores binary embedded object data in object storage,",
+  "remarks.text.1": "The object storage uses `hashId` as the index. Fully retrieving the data will cause additional requests and consume performance",
+  "returns": "Binary data"
 }

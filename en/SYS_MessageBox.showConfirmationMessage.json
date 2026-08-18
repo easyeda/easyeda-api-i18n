@@ -25,12 +25,12 @@
     "params.callbackFn": "回调函数，如需调用扩展内的函数，请在函数名前加上扩展的唯一 ID，以西文句号 `.` 分隔",
     "deprecated": "请使用 {@link SYS_Dialog.showConfirmationMessage} 替代"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.content": null,
-  "params.title": null,
-  "params.mainButtonTitle": null,
-  "params.buttonTitle": null,
-  "params.callbackFn": null,
-  "deprecated": null
+  "title": "Show a confirmation box",
+  "remarks.text.0": "Show a confirmation box with confirm and cancel buttons",
+  "params.content": "Message text. Line breaks can be used with `\\n`",
+  "params.title": "Confirmation box title",
+  "params.mainButtonTitle": "Primary button title",
+  "params.buttonTitle": "Primary button title",
+  "params.callbackFn": "Callback function. To call a function inside the extension, prefix the function name with the extension's unique ID, separated by a Western period `.`",
+  "deprecated": "Please use {@link SYS_Dialog.showConfirmationMessage} instead"
 }

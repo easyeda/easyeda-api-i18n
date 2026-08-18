@@ -19,6 +19,6 @@
     "title": "创建私有消息总线",
     "remarks.text.0": "一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Create Private message bus",
+  "remarks.text.0": "Generally, there is no need to call this method. The private message bus is automatically created when listening or sending messages"
 }

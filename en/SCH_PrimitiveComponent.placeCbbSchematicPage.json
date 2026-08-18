@@ -14,10 +14,10 @@
     "params.props": "放置参数：`reimportWhenNameRepeated` 当存在重名模块时是否重新引入，默认 `true` ADD since EDA v4.2",
     "returns": "放置操作是否成功"
   },
-  "title": null,
-  "params.cbbSchematicPage": null,
-  "params.x": null,
-  "params.y": null,
-  "params.props": null,
-  "returns": null
+  "title": "Place reuse block schematic sheet",
+  "params.cbbSchematicPage": "Reuse block schematic sheet. `libraryUuid` is the UUID of the library where the CBB project is located, `cbbUuid` is the UUID of the CBB project, and `uuid` is the UUID of the schematic sheet in the CBB project",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.props": "Placement parameters: `reimportWhenNameRepeated` - whether to re-import when a module with the same name exists, default `true`. ADD since EDA v4.2",
+  "returns": "Place whether the operation is successful"
 }

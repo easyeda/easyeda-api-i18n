@@ -20,7 +20,7 @@
     "remarks.text.0": "本接口相当于同时执行了 {@link SYS_HeaderMenu.removeHeaderMenus | 移除} 和 {@link SYS_HeaderMenu.insertHeaderMenus | 导入} 操作",
     "params.headerMenus": "顶部菜单数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.headerMenus": null
+  "title": "Replace top menu data",
+  "remarks.text.0": "This API is equivalent to executing the {@link SYS_HeaderMenu.removeHeaderMenus | remove} and {@link SYS_HeaderMenu.insertHeaderMenus | insert} operations at the same time",
+  "params.headerMenus": "Top menu data"
 }

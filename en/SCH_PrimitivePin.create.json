@@ -19,15 +19,15 @@
     "params.pinType": "引脚类型",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.x": null,
-  "params.y": null,
-  "params.pinNumber": null,
-  "params.pinName": null,
-  "params.rotation": null,
-  "params.pinLength": null,
-  "params.pinColor": null,
-  "params.pinShape": null,
-  "params.pinType": null,
-  "returns": null
+  "title": "Create Pin",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.pinNumber": "Pin number",
+  "params.pinName": "Pin name",
+  "params.rotation": "Rotation angle. Options: `0` `90` `180` `270`",
+  "params.pinLength": "Pin length",
+  "params.pinColor": "Pin color, `null` indicates the default",
+  "params.pinShape": "Pin shape",
+  "params.pinType": "Pin type",
+  "returns": "Pin primitive object"
 }

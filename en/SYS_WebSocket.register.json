@@ -29,12 +29,12 @@
     "params.connectedCallFn": "连接建立时的回调函数",
     "params.protocols": "子协议"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.id": null,
-  "params.serviceUri": null,
-  "params.receiveMessageCallFn": null,
-  "params.connectedCallFn": null,
-  "params.protocols": null
+  "title": "Register a WebSocket connection",
+  "remarks.text.0": "It can be used to detect whether the WebSocket connection is normal before execution, but note that **do not attempt connections with the same ID but different parameters**, as this will cause confusion:\nif a WebSocket connection with the specified ID is active, changes to other parameters will not be applied",
+  "remarks.text.1": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.id": "Custom WebSocket ID",
+  "params.serviceUri": "WebSocket service URI",
+  "params.receiveMessageCallFn": "Callback function when a message is received",
+  "params.connectedCallFn": "Callback function when the connection is established",
+  "params.protocols": "Sub-protocols"
 }

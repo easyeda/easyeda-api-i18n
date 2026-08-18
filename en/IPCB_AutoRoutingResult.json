@@ -13,10 +13,10 @@
     "properties.failedNets": "未能完成布线的网络名称列表",
     "properties.duration": "自动布线耗时（毫秒）"
   },
-  "title": null,
-  "properties.success": null,
-  "properties.totalNetsCount": null,
-  "properties.successNetsCount": null,
-  "properties.failedNets": null,
-  "properties.duration": null
+  "title": "Auto routing result",
+  "properties.success": "Whether auto routing started successfully",
+  "properties.totalNetsCount": "Total number of nets participating in auto routing",
+  "properties.successNetsCount": "Number of nets that were routed successfully",
+  "properties.failedNets": "List of net names that failed to be routed",
+  "properties.duration": "Auto routing duration (milliseconds)"
 }

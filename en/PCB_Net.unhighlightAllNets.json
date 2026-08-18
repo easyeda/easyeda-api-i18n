@@ -10,6 +10,6 @@
     "title": "取消高亮所有网络",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "returns": null
+  "title": "Unhighlight all nets",
+  "returns": "Whether the operation is successful"
 }

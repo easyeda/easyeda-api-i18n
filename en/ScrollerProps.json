@@ -12,9 +12,9 @@
     "properties.itemHeight": "每行高度（像素，必填）",
     "properties.buffer": "额外缓冲渲染的行数"
   },
-  "title": null,
-  "properties.children": null,
-  "properties.itemCount": null,
-  "properties.itemHeight": null,
-  "properties.buffer": null
+  "title": "Scroll component: a virtual scrolling list that only renders visible rows",
+  "properties.children": "Child node",
+  "properties.itemCount": "Total row count (required)",
+  "properties.itemHeight": "Height of each row (pixels, required)",
+  "properties.buffer": "Number of extra buffered rows to render"
 }

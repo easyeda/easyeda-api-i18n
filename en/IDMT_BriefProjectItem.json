@@ -13,10 +13,10 @@
     "properties.teamUuid": "所属团队 UUID",
     "properties.folderUuid": "所属文件夹 UUID"
   },
-  "title": null,
-  "properties.itemType": null,
-  "properties.uuid": null,
-  "properties.friendlyName": null,
-  "properties.teamUuid": null,
-  "properties.folderUuid": null
+  "title": "Brief project properties",
+  "properties.itemType": "Project type",
+  "properties.uuid": "Project UUID",
+  "properties.friendlyName": "Project friendly name",
+  "properties.teamUuid": "UUID of the team it belongs to",
+  "properties.folderUuid": "UUID of the folder it belongs to"
 }

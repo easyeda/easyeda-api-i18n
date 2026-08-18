@@ -16,12 +16,12 @@
     "params.primitiveLock": "是否锁定",
     "returns": "器件图元对象"
   },
-  "title": null,
-  "params.component": null,
-  "params.layer": null,
-  "params.x": null,
-  "params.y": null,
-  "params.rotation": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Device",
+  "params.component": "Associate library device",
+  "params.layer": "Layer",
+  "params.x": "X coordinate",
+  "params.y": "Y coordinate",
+  "params.rotation": "Rotation angle",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Device primitive object"
 }

@@ -11,7 +11,7 @@
     "params.net": "网络名称",
     "returns": "网络颜色，`undefined` 为不存在该网络"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Get the color of the specified net",
+  "params.net": "Net name",
+  "returns": "Net color, `undefined` is does not exist this net"
 }

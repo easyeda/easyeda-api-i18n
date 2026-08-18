@@ -11,7 +11,7 @@
     "params.panelUuid": "源面板 UUID",
     "returns": "新面板 UUID，如若为 `undefined` 则复制失败"
   },
-  "title": null,
-  "params.panelUuid": null,
-  "returns": null
+  "title": "Copy Panel",
+  "params.panelUuid": "Source panel UUID",
+  "returns": "New panel UUID. If it is `undefined`, the copy failed"
 }

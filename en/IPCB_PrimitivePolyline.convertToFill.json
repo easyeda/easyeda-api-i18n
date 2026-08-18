@@ -10,6 +10,6 @@
     "title": "转换到：填充图元",
     "returns": "填充图元对象"
   },
-  "title": null,
-  "returns": null
+  "title": "Convert to: fill primitive",
+  "returns": "Fill primitive object"
 }

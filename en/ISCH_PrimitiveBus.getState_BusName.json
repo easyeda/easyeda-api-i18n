@@ -10,6 +10,6 @@
     "title": "获取属性状态：总线名称",
     "returns": "总线名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: bus name",
+  "returns": "Bus name"
 }

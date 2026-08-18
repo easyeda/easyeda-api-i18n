@@ -12,8 +12,8 @@
     "returns": "反注册操作是否成功",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "params.shortcutKey": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Unregister a shortcut key",
+  "params.shortcutKey": "Shortcut key. The order of the passed-in elements is not distinguished; it will be sorted automatically and the matching shortcut key will be queried",
+  "returns": "Whether the unregistration operation was successful",
+  "deprecated": "since EDA v4.2"
 }

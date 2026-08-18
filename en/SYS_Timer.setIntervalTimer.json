@@ -24,11 +24,11 @@
     "params.args": "传给定时调用函数的参数",
     "returns": "定时器是否设置成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.timeout": null,
-  "params.callFn": null,
-  "params.args": null,
-  "returns": null
+  "title": "Set an interval timer",
+  "remarks.text.0": "If a timer with a duplicate ID is encountered, the previously set timer will be cleared",
+  "params.id": "Timer ID, used to locate and delete the timer",
+  "params.timeout": "Timer duration, unit ms",
+  "params.callFn": "Function called by the timer",
+  "params.args": "Arguments passed to the timer callback function",
+  "returns": "Whether the timer was set successfully"
 }

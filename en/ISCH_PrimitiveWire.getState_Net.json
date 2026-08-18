@@ -10,6 +10,6 @@
     "title": "获取属性状态：网络名称",
     "returns": "网络名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: net name",
+  "returns": "Net name"
 }

@@ -19,16 +19,16 @@
     "properties.lineWidth": "线宽",
     "properties.primitiveLock": "是否锁定"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.net": null,
-  "properties.layer": null,
-  "properties.complexPolygon": null,
-  "properties.pourFillMethod": null,
-  "properties.preserveSilos": null,
-  "properties.pourName": null,
-  "properties.pourPriority": null,
-  "properties.lineWidth": null,
-  "properties.primitiveLock": null
+  "title": "Copper border primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.net": "Net name",
+  "properties.layer": "Layer",
+  "properties.complexPolygon": "Complex polygon",
+  "properties.pourFillMethod": "Copper fill method",
+  "properties.preserveSilos": "Whether to keep islands",
+  "properties.pourName": "Copper border name",
+  "properties.pourPriority": "Copper priority",
+  "properties.lineWidth": "Line width",
+  "properties.primitiveLock": "Whether it is locked"
 }

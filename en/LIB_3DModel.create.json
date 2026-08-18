@@ -24,11 +24,11 @@
     "params.unit": "单位",
     "returns": "创建的所有 3D 模型的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.libraryUuid": null,
-  "params.modelFile": null,
-  "params.classification": null,
-  "params.unit": null,
-  "returns": null
+  "title": "Create 3D model",
+  "remarks.text.0": "The passed-in `modelFile` can be an archive of multiple model files. EDA will automatically extract the multiple models",
+  "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
+  "params.modelFile": "3D model file data",
+  "params.classification": "Classification",
+  "params.unit": "Unit",
+  "returns": "UUIDs of all created 3D models"
 }

@@ -35,11 +35,11 @@
     "properties.uuid": "库 UUID",
     "properties.name": "库名称"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "properties.uuid": null,
-  "properties.name": null
+  "title": "External library item index",
+  "remarks.text.0": "Supports external libraries using a name or UUID as the unique ID index of the item",
+  "remarks.text.1": "Under normal circumstances, each library is expected to have a UUID, but some systems may not have a UUID field (or a field that can serve a similar purpose) at development time",
+  "remarks.text.2": "When only the `name` field is passed here, `name` will be used as the unique ID, and duplicate names are not allowed",
+  "remarks.text.3": "If both the `uuid` and `name` fields are passed, only `uuid` cannot be duplicated",
+  "properties.uuid": "Library UUID",
+  "properties.name": "Library name"
 }

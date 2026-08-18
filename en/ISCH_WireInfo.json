@@ -13,10 +13,10 @@
     "properties.pageName": "原理图图页名称",
     "properties.pageUuid": "原理图图页 UUID"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.id": null,
-  "properties.globalNetName": null,
-  "properties.pageName": null,
-  "properties.pageUuid": null
+  "title": "Wire property",
+  "properties.name": "Wire name",
+  "properties.id": "ID",
+  "properties.globalNetName": "Global net name",
+  "properties.pageName": "Schematic sheet name",
+  "properties.pageUuid": "Schematic sheet UUID"
 }

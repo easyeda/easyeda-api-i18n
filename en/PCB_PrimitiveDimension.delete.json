@@ -11,7 +11,7 @@
     "params.primitiveIds": "尺寸标注的图元 ID 或尺寸标注图元对象",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.primitiveIds": null,
-  "returns": null
+  "title": "Delete the dimension",
+  "params.primitiveIds": "Primitive ID of the dimension or the dimension primitive object",
+  "returns": "Delete Whether the operation is successful"
 }

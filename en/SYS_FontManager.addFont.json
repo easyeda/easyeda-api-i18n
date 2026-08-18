@@ -11,7 +11,7 @@
     "params.fontName": "字体名称",
     "returns": "添加操作是否成功"
   },
-  "title": null,
-  "params.fontName": null,
-  "returns": null
+  "title": "Add Font to font list",
+  "params.fontName": "Font name",
+  "returns": "Add Whether the operation is successful"
 }

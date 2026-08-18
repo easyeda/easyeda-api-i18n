@@ -11,7 +11,7 @@
     "params.italic": "是否斜体",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.italic": null,
-  "returns": null
+  "title": "Set the property state: whether it is italic",
+  "params.italic": "Whether it is italic",
+  "returns": "Text primitive object"
 }

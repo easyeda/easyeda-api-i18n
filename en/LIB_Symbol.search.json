@@ -16,12 +16,12 @@
     "params.page": "页数",
     "returns": "搜索到的符号属性列表"
   },
-  "title": null,
-  "params.key": null,
-  "params.libraryUuid": null,
-  "params.classification": null,
-  "params.symbolType": null,
-  "params.itemsOfPage": null,
-  "params.page": null,
-  "returns": null
+  "title": "Search symbol",
+  "params.key": "Search keyword",
+  "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
+  "params.classification": "Classification, defaults to all",
+  "params.symbolType": "Symbol type, defaults to all",
+  "params.itemsOfPage": "Number of search results per page",
+  "params.page": "Page count",
+  "returns": "List of searched symbol properties"
 }

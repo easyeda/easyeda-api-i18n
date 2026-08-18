@@ -29,9 +29,9 @@
     "params.callFn": "事件触发时的回调函数",
     "params.onlyOnce": "是否仅监听一次"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.callFn": null,
-  "params.onlyOnce": null
+  "title": "Add a ray tracer engine 3D preview material click event listener",
+  "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "params.id": "Event ID, used to prevent duplicate event registration",
+  "params.callFn": "The callback function triggered when the event fires",
+  "params.onlyOnce": "Whether to listen only once"
 }

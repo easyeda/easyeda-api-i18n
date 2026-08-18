@@ -11,7 +11,7 @@
     "params.startX": "起始位置 X",
     "returns": "直线图元对象"
   },
-  "title": null,
-  "params.startX": null,
-  "returns": null
+  "title": "Set the property state: start position X",
+  "params.startX": "Start position X",
+  "returns": "Line primitive object"
 }

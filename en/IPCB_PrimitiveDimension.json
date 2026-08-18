@@ -18,15 +18,15 @@
     "properties.textFollow": "文字跟随",
     "properties.primitiveLock": "是否锁定"
   },
-  "title": null,
-  "properties.async": null,
-  "properties.primitiveId": null,
-  "properties.dimensionType": null,
-  "properties.coordinateSet": null,
-  "properties.layer": null,
-  "properties.unit": null,
-  "properties.lineWidth": null,
-  "properties.precision": null,
-  "properties.textFollow": null,
-  "properties.primitiveLock": null
+  "title": "Dimension primitive",
+  "properties.async": "Async",
+  "properties.primitiveId": "Primitive ID",
+  "properties.dimensionType": "Dimension type",
+  "properties.coordinateSet": "Coordinate set",
+  "properties.layer": "Layer",
+  "properties.unit": "Unit",
+  "properties.lineWidth": "Line width",
+  "properties.precision": "Precision",
+  "properties.textFollow": "Text follows",
+  "properties.primitiveLock": "Whether it is locked"
 }

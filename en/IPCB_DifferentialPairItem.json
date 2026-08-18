@@ -11,8 +11,8 @@
     "properties.positiveNet": "正网络",
     "properties.negativeNet": "负网络"
   },
-  "title": null,
-  "properties.name": null,
-  "properties.positiveNet": null,
-  "properties.negativeNet": null
+  "title": "Differential pair properties",
+  "properties.name": "Differential pair name",
+  "properties.positiveNet": "Positive net",
+  "properties.negativeNet": "Negative net"
 }

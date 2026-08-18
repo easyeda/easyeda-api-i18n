@@ -10,6 +10,6 @@
     "title": "获取所有图层的详细属性",
     "returns": "所有图层的详细属性"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of all layers",
+  "returns": "Detailed properties of all layers"
 }

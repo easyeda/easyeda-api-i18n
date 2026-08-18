@@ -11,7 +11,7 @@
     "params.padNumber": "焊盘编号",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "params.padNumber": null,
-  "returns": null
+  "title": "Set the property state: pad number",
+  "params.padNumber": "Pad number",
+  "returns": "Pad primitive object"
 }

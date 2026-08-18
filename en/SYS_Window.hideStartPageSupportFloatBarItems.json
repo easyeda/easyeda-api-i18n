@@ -37,9 +37,9 @@
     "remarks.text.2": "注意 2：本接口为私有化部署版本专用接口，如若在其它版本调用将始终 `throw Error`",
     "returns": "是否隐藏成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "returns": null
+  "title": "Hide the start page support information floating components",
+  "remarks.text.0": "Hide the floating components on the right side of the start page (WeChat, customer service, phone, feedback)",
+  "remarks.text.1": "Note 1: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.2": "Note 2: This API is dedicated to the private deployment edition. Calling it in other editions will always `throw Error`",
+  "returns": "Whether Hide successful"
 }

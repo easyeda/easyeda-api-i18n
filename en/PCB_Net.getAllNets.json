@@ -10,6 +10,6 @@
     "title": "获取所有网络的详细信息",
     "returns": "所有网络的详细信息"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Detailed information of the net",
+  "returns": "Detailed information of all nets"
 }

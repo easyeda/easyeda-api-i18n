@@ -12,9 +12,9 @@
     "properties.primitives": "涉及的图元",
     "properties.net": "涉及网络（若有）"
   },
-  "title": null,
-  "properties.type": null,
-  "properties.rule": null,
-  "properties.primitives": null,
-  "properties.net": null
+  "title": "DRC error item",
+  "properties.type": "Error level",
+  "properties.rule": "Triggered rule key, e.g. `IN-IN`, `OUT-OUT`",
+  "properties.primitives": "Involved primitives",
+  "properties.net": "Involved net (if any)"
 }

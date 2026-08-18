@@ -11,7 +11,7 @@
     "returns": "操作是否成功",
     "deprecated": "since EDA v4.2"
   },
-  "title": null,
-  "returns": null,
-  "deprecated": null
+  "title": "Stop the ratline calculation function",
+  "returns": "Whether the operation is successful",
+  "deprecated": "since EDA v4.2"
 }

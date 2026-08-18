@@ -11,7 +11,7 @@
     "params.textColor": "文本颜色",
     "returns": "文本图元对象"
   },
-  "title": null,
-  "params.textColor": null,
-  "returns": null
+  "title": "Set the property state: text color",
+  "params.textColor": "Text color",
+  "returns": "Text primitive object"
 }

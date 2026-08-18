@@ -19,6 +19,6 @@
     "title": "移除私有消息总线",
     "remarks.text.0": "一般无需调用该方法，除非你知道自己在做什么"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Remove Private message bus",
+  "remarks.text.0": "Generally, there is no need to call this method unless you know what you are doing"
 }

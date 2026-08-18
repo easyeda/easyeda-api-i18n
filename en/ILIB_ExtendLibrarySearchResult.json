@@ -13,10 +13,10 @@
     "properties.pageSize": "单页条目数",
     "properties.totalPage": "总页数"
   },
-  "title": null,
-  "properties.count": null,
-  "properties.lists": null,
-  "properties.page": null,
-  "properties.pageSize": null,
-  "properties.totalPage": null
+  "title": "External library search result",
+  "properties.count": "Total item count",
+  "properties.lists": "Result list",
+  "properties.page": "Current page count",
+  "properties.pageSize": "Number of entries per page",
+  "properties.totalPage": "Total page count"
 }

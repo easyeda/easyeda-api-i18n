@@ -18,7 +18,7 @@
     "params.net": "网络名称",
     "returns": "网络的详细信息, `undefined` 为不存在该网络"
   },
-  "title": null,
-  "params.net": null,
-  "returns": null
+  "title": "Get Specify detailed information of the net",
+  "params.net": "Net name",
+  "returns": "Detailed information of the net, `undefined` is does not exist this net"
 }

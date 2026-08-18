@@ -11,7 +11,7 @@
     "params.type": "网表格式",
     "returns": "网表数据"
   },
-  "title": null,
-  "params.type": null,
-  "returns": null
+  "title": "Get the netlist",
+  "params.type": "Netlist format",
+  "returns": "Netlist data"
 }

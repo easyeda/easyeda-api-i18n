@@ -10,6 +10,6 @@
     "title": "清除选中",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "returns": null
+  "title": "Clear the selection",
+  "returns": "Whether the operation is successful"
 }

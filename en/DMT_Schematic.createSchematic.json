@@ -11,7 +11,7 @@
     "params.boardName": "所属板子名称，如若不指定则为游离原理图",
     "returns": "原理图 UUID，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "params.boardName": null,
-  "returns": null
+  "title": "Create Schematic",
+  "params.boardName": "Name of the board it belongs to. If not specified, it is a free schematic",
+  "returns": "Schematic UUID, if it is `undefined` creation fails"
 }

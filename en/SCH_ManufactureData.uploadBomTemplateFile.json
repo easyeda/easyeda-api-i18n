@@ -12,8 +12,8 @@
     "params.template": "BOM 模板名称，如若为 `undefined` 则自动从 `templateFile` 中取值",
     "returns": "BOM 模板名称"
   },
-  "title": null,
-  "params.templateFile": null,
-  "params.template": null,
-  "returns": null
+  "title": "Upload a BOM template file",
+  "params.templateFile": "BOM template file",
+  "params.template": "BOM template name. If it is `undefined`, the value is automatically taken from `templateFile`",
+  "returns": "BOM template name"
 }

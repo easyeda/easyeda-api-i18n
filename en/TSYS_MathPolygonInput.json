@@ -18,6 +18,6 @@
     "title": "多边形输入类型",
     "remarks.text.0": "支持以下输入格式：\n- 离散点数组：`[{x, y}, {x, y}, ...]`\n- 单多边形源数组：{@link TPCB_PolygonSourceArray}\n- 单多边形对象：{@link IPCB_Polygon}\n- 复杂多边形对象：{@link IPCB_ComplexPolygon}\n- 多边形组：{@link TSYS_MathPolygonGroup}"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Polygon input type",
+  "remarks.text.0": "The following input formats are supported:\n- Discrete point array: `[{x, y}, {x, y}, ...]`\n- Single polygon source array: {@link TPCB_PolygonSourceArray}\n- Single polygon object: {@link IPCB_Polygon}\n- Complex polygon object: {@link IPCB_ComplexPolygon}\n- Polygon group: {@link TSYS_MathPolygonGroup}"
 }

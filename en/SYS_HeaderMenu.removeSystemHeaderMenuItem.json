@@ -53,16 +53,16 @@
     "params.props": "其它参数，是否移除菜单项之前、之后的分隔线（仅在移除子菜单项时生效）",
     "returns": "移除操作是否成功，菜单已移除但分隔线未找到也会返回 `true` 的结果"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "remarks.text.4": null,
-  "remarks.text.5": null,
-  "remarks.text.6": null,
-  "params.env": null,
-  "params.id": null,
-  "params.props": null,
-  "returns": null
+  "title": "Remove a system header menu item",
+  "remarks.text.0": "Once a menu is removed, restarting the EasyEDA software is required to restore it",
+  "remarks.text.1": "This API cannot remove the system header menu items imported by the {@link SYS_HeaderMenu.insertSystemHeaderMenus | import system header menu} API",
+  "remarks.text.2": "When the `id` array contains only one element, the corresponding first-level menu is removed; when it contains multiple elements, the menu items are matched by hierarchy in array order, and the sub-menu item corresponding to the last element is removed",
+  "remarks.text.3": "This API cannot remove the **Advanced** menu itself or any sub-menu under it",
+  "remarks.text.4": "Note 1: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.5": "Note 2: The **remove first-level menu** function of this API is exclusive to the private deployment edition. Calling it in other editions will always `throw Error`",
+  "remarks.text.6": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "params.env": "Environment",
+  "params.id": "Menu item ID tree. It will match menu items by hierarchy in array order and remove the menu item corresponding to the last element; when only one element is passed, the corresponding first-level menu is removed",
+  "params.props": "Other parameters. Whether to remove the separators before and after the menu item (only takes effect when removing a sub-menu item)",
+  "returns": "Whether the removal operation was successful. If the menu is removed but the separator is not found, `true` is also returned"
 }

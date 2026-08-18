@@ -10,6 +10,6 @@
     "title": "获取属性状态：是否斜体",
     "returns": "是否斜体"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: whether it is italic",
+  "returns": "Whether it is italic"
 }

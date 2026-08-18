@@ -17,6 +17,6 @@
     "title": "获取当前图层的详细属性",
     "returns": "当前图层的详细属性，无激活层或无 PCB 画布时返回 `undefined`"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the detailed properties of the current layer",
+  "returns": "Detailed properties of the current layer. `undefined` is returned when there is no active layer or no PCB canvas"
 }

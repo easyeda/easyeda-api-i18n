@@ -11,8 +11,8 @@
     "properties.title": "菜单项标题",
     "properties.menuItems": "子菜单项"
   },
-  "title": null,
-  "properties.id": null,
-  "properties.title": null,
-  "properties.menuItems": null
+  "title": "Top-level primary menu item",
+  "properties.id": "Menu item ID, cannot be repeated",
+  "properties.title": "Menu item title",
+  "properties.menuItems": "Sub-menu item"
 }

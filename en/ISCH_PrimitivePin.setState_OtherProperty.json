@@ -11,7 +11,7 @@
     "params.otherProperty": "其它参数",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.otherProperty": null,
-  "returns": null
+  "title": "Set the property state: other parameters",
+  "params.otherProperty": "Other parameters",
+  "returns": "Pin primitive object"
 }

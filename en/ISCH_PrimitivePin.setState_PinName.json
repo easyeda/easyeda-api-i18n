@@ -11,7 +11,7 @@
     "params.pinName": "引脚名称",
     "returns": "引脚图元对象"
   },
-  "title": null,
-  "params.pinName": null,
-  "returns": null
+  "title": "Set the property state: pin name",
+  "params.pinName": "Pin name",
+  "returns": "Pin primitive object"
 }

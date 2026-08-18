@@ -11,7 +11,7 @@
     "params.valueVisible": "值是否显示",
     "returns": "属性图元对象"
   },
-  "title": null,
-  "params.valueVisible": null,
-  "returns": null
+  "title": "Set the property state: whether the value is visible",
+  "params.valueVisible": "Whether the value is visible",
+  "returns": "Attribute primitive object"
 }

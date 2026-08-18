@@ -10,6 +10,6 @@
     "title": "查询所有支持的语言",
     "returns": "所有支持的语言列表"
   },
-  "title": null,
-  "returns": null
+  "title": "Query all supported languages",
+  "returns": "List of all supported languages"
 }

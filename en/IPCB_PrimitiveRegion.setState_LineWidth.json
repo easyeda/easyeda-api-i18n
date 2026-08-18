@@ -11,7 +11,7 @@
     "params.lineWidth": "线宽",
     "returns": "区域图元对象"
   },
-  "title": null,
-  "params.lineWidth": null,
-  "returns": null
+  "title": "Set the property state: Line width",
+  "params.lineWidth": "Line width",
+  "returns": "Region primitive object"
 }

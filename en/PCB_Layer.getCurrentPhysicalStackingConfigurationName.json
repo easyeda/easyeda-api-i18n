@@ -17,6 +17,6 @@
     "title": "获取当前物理叠层配置名称",
     "returns": "当前物理叠层配置名称，`undefined` 为获取失败"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Current physical stacking configuration name",
+  "returns": "Current physical stacking configuration name; `undefined` indicates that the retrieval failed"
 }

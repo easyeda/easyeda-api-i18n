@@ -10,6 +10,6 @@
     "title": "获取属性状态：文件名称",
     "returns": "文件名称"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: file name",
+  "returns": "File name"
 }

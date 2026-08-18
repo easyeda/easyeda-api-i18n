@@ -11,7 +11,7 @@
     "params.pourFillIds": "覆铜填充区域 ID",
     "returns": "删除操作是否成功"
   },
-  "title": null,
-  "params.pourFillIds": null,
-  "returns": null
+  "title": "Delete Copper fill region",
+  "params.pourFillIds": "Copper fill region ID",
+  "returns": "Delete Whether the operation is successful"
 }

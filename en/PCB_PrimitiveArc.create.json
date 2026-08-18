@@ -20,16 +20,16 @@
     "params.primitiveLock": "是否锁定",
     "returns": "圆弧线图元对象"
   },
-  "title": null,
-  "params.net": null,
-  "params.layer": null,
-  "params.startX": null,
-  "params.startY": null,
-  "params.endX": null,
-  "params.endY": null,
-  "params.arcAngle": null,
-  "params.lineWidth": null,
-  "params.interactiveMode": null,
-  "params.primitiveLock": null,
-  "returns": null
+  "title": "Create Arc line",
+  "params.net": "Net name",
+  "params.layer": "Layer",
+  "params.startX": "Start position X",
+  "params.startY": "Start position Y",
+  "params.endX": "End position X",
+  "params.endY": "End position Y",
+  "params.arcAngle": "Arc angle",
+  "params.lineWidth": "Line width",
+  "params.interactiveMode": "Interaction mode",
+  "params.primitiveLock": "Whether it is locked",
+  "returns": "Arc line primitive object"
 }

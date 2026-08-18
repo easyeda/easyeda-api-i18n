@@ -11,7 +11,7 @@
     "params.fillMode": "填充模式",
     "returns": "填充图元对象"
   },
-  "title": null,
-  "params.fillMode": null,
-  "returns": null
+  "title": "Set the property state: fill mode",
+  "params.fillMode": "Fill mode",
+  "returns": "Fill primitive object"
 }

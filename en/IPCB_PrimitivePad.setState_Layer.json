@@ -36,11 +36,11 @@
     "params.layer": "层",
     "returns": "焊盘图元对象"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "remarks.text.3": null,
-  "params.layer": null,
-  "returns": null
+  "title": "Set the property state: Layer",
+  "remarks.text.0": "When setting the layer, some other property states will be set in conjunction:",
+  "remarks.text.1": "1. When switching between the top and bottom layers: the solder mask/paste mask expansion properties will switch accordingly, and the data values remain unchanged",
+  "remarks.text.2": "2. When switching from multi-layer to single layer: it determines whether to switch to the top or bottom layer, and the solder mask/paste mask expansion properties will only keep the data corresponding to the specified layer. If a special pad exists, it will be converted to a normal pad property, and only the data corresponding to the specified layer will be kept. Hole-related properties will be reset to their default values",
+  "remarks.text.3": "3. When switching from single layer to multi-layer: the solder mask/paste mask expansion properties will only keep the solder mask expansion, and the original data will be copied and applied to the top and bottom layers. The pad drilling property will be assigned a specified value: a rounded rectangle whose length and width are 60% of the pad diameter (for rounded or regular polygon pads) or the pad width (for rectangular pads). Data-wise it is a rounded rectangle, but actually it is a circle. If the pad is a polyline complex polygon, the data is calculated through a dedicated algorithm (usually abstract; it is recommended to modify it later)",
+  "params.layer": "Layer",
+  "returns": "Pad primitive object"
 }

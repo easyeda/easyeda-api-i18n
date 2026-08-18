@@ -20,7 +20,7 @@
     "remarks.text.0": "仅当存在子分屏时可用，将会取消所有子分屏，并将所有文档标签页合并到初始分屏内",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "returns": null
+  "title": "Merge all split screens",
+  "remarks.text.0": "Only available when child split screens exist. It will cancel all child split screens and merge all document tabs into the initial split screen",
+  "returns": "Whether the operation is successful"
 }

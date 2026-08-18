@@ -10,6 +10,6 @@
     "title": "获取属性状态：位置 X",
     "returns": "位置 X"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: X position",
+  "returns": "X position"
 }

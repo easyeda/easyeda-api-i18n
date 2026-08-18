@@ -11,7 +11,7 @@
     "params.precision": "精度",
     "returns": "尺寸标注图元对象"
   },
-  "title": null,
-  "params.precision": null,
-  "returns": null
+  "title": "Set the property state: precision",
+  "params.precision": "Precision",
+  "returns": "Dimension primitive object"
 }

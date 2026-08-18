@@ -21,8 +21,8 @@
     "params.schematicUuid": "原理图 UUID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.schematicUuid": null,
-  "returns": null
+  "title": "Delete Schematic",
+  "remarks.text.0": "If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), deleting the schematic will also delete the associated PCB and reuse block symbol. If the reuse block symbol cannot be deleted, it will be skipped",
+  "params.schematicUuid": "Schematic UUID",
+  "returns": "Whether the operation is successful"
 }

@@ -22,9 +22,9 @@
     "params.y": "数据原点 Y",
     "returns": "画布原点坐标"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.x": null,
-  "params.y": null,
-  "returns": null
+  "title": "Input a data coordinate and return the canvas coordinate corresponding to that coordinate",
+  "remarks.text.0": "The coordinates displayed on the EasyEDA front end are all relative to the canvas origin; the EasyEDA API uses the data origin; when creating a PCB, the default canvas origin equals the data origin",
+  "params.x": "Data origin X",
+  "params.y": "Data origin Y",
+  "returns": "Canvas origin coordinate"
 }

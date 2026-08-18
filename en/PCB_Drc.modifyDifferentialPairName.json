@@ -12,8 +12,8 @@
     "params.differentialPairName": "新差分对名称",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.originalDifferentialPairName": null,
-  "params.differentialPairName": null,
-  "returns": null
+  "title": "Modify the name of the differential pair",
+  "params.originalDifferentialPairName": "Original differential pair name",
+  "params.differentialPairName": "New differential pair name",
+  "returns": "Whether the operation is successful"
 }

@@ -18,6 +18,6 @@
     "title": "填充所属层",
     "remarks.text.0": "填充所属层为 {@link EPCB_LayerId.MULTI} 时代表挖槽区域"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Layers of the fill",
+  "remarks.text.0": "When the fill layer is {@link EPCB_LayerId.MULTI}, it represents a slot region"
 }

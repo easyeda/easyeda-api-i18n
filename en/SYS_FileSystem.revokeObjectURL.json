@@ -27,7 +27,7 @@
     "remarks.text.0": "吊销指定的 ObjectURL",
     "params.url": "ObjectURL 字符串"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.url": null
+  "title": "Revoke the ObjectURL",
+  "remarks.text.0": "Revoke the specified ObjectURL",
+  "params.url": "ObjectURL string"
 }

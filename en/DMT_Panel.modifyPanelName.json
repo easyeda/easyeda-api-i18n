@@ -12,8 +12,8 @@
     "params.panelName": "面板名称",
     "returns": "是否修改成功"
   },
-  "title": null,
-  "params.panelUuid": null,
-  "params.panelName": null,
-  "returns": null
+  "title": "Modify Panel name",
+  "params.panelUuid": "Panel UUID",
+  "params.panelName": "Panel name",
+  "returns": "Whether Modify Successful"
 }

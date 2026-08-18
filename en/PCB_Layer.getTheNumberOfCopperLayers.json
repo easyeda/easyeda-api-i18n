@@ -10,6 +10,6 @@
     "title": "获取铜箔层数",
     "returns": "层数"
   },
-  "title": null,
-  "returns": null
+  "title": "Get Number of copper layers",
+  "returns": "Layer count"
 }

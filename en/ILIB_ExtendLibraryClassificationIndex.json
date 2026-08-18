@@ -23,11 +23,11 @@
     "properties.secondaryClassificationName": "二级分类名称",
     "properties.secondaryClassificationUuid": "二级分类 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "deprecated": null,
-  "properties.primaryClassificationName": null,
-  "properties.primaryClassificationUuid": null,
-  "properties.secondaryClassificationName": null,
-  "properties.secondaryClassificationUuid": null
+  "title": "External library classification index",
+  "remarks.text.0": "Supports external libraries using a name or UUID as the unique ID index of the classification",
+  "deprecated": "since EDA v3.2; dropped EDA v3.3",
+  "properties.primaryClassificationName": "Primary classification name",
+  "properties.primaryClassificationUuid": "Primary classification UUID",
+  "properties.secondaryClassificationName": "Secondary classification name",
+  "properties.secondaryClassificationUuid": "Secondary classification UUID"
 }

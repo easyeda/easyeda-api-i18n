@@ -29,12 +29,12 @@
     "params.args": "语言文本中替换占位符的参数",
     "returns": "语言文本"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "params.tag": null,
-  "params.namespace": null,
-  "params.language": null,
-  "params.args": null,
-  "returns": null
+  "title": "Output language text",
+  "remarks.text.0": "Placeholders in the `${1}` format can be used to represent parameters;",
+  "remarks.text.1": "Language priority: current display language > system default language > the first language in the data set that contains the text tag > the text tag",
+  "params.tag": "Text tag, corresponding to the key in the multilingual file key-value pairs",
+  "params.namespace": "Text namespace. In the extension runtime environment, it defaults to the extension UUID; otherwise, it is the system default namespace",
+  "params.language": "Language. `undefined` is the current display language of EDA",
+  "params.args": "Arguments for replacing placeholders in the language text",
+  "returns": "Language text"
 }

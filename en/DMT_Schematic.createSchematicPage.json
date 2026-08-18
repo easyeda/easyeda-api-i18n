@@ -11,7 +11,7 @@
     "params.schematicUuid": "所属原理图 UUID",
     "returns": "原理图图页 UUID，如若为 `undefined` 则创建失败"
   },
-  "title": null,
-  "params.schematicUuid": null,
-  "returns": null
+  "title": "Create Schematic sheet",
+  "params.schematicUuid": "UUID of the schematic it belongs to",
+  "returns": "Schematic sheet UUID, if it is `undefined` creation fails"
 }

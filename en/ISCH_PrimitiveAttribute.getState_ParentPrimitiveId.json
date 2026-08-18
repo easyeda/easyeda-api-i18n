@@ -10,6 +10,6 @@
     "title": "获取属性状态：父图元 ID",
     "returns": "父图元 ID"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: parent primitive ID",
+  "returns": "Parent primitive ID"
 }

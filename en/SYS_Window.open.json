@@ -11,7 +11,7 @@
     "params.url": "欲加载资源的 URL 或路径",
     "params.target": "上下文目标"
   },
-  "title": null,
-  "params.url": null,
-  "params.target": null
+  "title": "Open a resource window",
+  "params.url": "URL or path of the resource to load",
+  "params.target": "Context target"
 }

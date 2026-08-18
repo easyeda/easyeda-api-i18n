@@ -23,10 +23,10 @@
     "params.reason": "一个人类可读的字符串，解释连接关闭的原因",
     "params.extensionUuid": "扩展 UUID，一般不需要指定，仅当需要操作其它扩展建立的 WebSocket 连接时才需要指定为其它扩展的 UUID"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.id": null,
-  "params.code": null,
-  "params.reason": null,
-  "params.extensionUuid": null
+  "title": "Close the WebSocket connection",
+  "remarks.text.0": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "params.id": "Custom WebSocket ID",
+  "params.code": "Numeric status code, corresponding to the codes allowed in {@link https://developer.mozilla.org/docs/Web/API/CloseEvent/code | WebSocket.CloseEvent}",
+  "params.reason": "A human-readable string explaining why the connection was closed",
+  "params.extensionUuid": "Extension UUID. Generally it does not need to be specified. It only needs to be specified as another extension's UUID when you need to operate on a WebSocket connection established by another extension"
 }

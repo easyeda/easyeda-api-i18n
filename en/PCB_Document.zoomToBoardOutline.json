@@ -10,6 +10,6 @@
     "title": "缩放到板框（适应板框）",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "returns": null
+  "title": "Zoom to the board outline (fit the board outline)",
+  "returns": "Whether the operation is successful"
 }

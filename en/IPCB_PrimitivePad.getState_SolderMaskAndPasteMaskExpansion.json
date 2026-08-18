@@ -10,6 +10,6 @@
     "title": "获取属性状态：阻焊/助焊扩展",
     "returns": "阻焊/助焊扩展"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: solder mask / paste mask expansion",
+  "returns": "Solder mask / paste mask expansion"
 }

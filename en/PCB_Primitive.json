@@ -18,6 +18,6 @@
     "title": "PCB & 封装 / 图元类",
     "remarks.text.0": "图元的统一操作"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "PCB & footprint / primitive class",
+  "remarks.text.0": "Unified operations on primitives"
 }

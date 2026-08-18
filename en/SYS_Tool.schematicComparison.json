@@ -12,8 +12,8 @@
     "params.schematic2": "原理图 2，可以为：①当前工程内的原理图的 UUID；②其它工程的工程 UUID 和原理图 UUID；③原理图文件数据",
     "returns": "原理图对比结果"
   },
-  "title": null,
-  "params.schematic1": null,
-  "params.schematic2": null,
-  "returns": null
+  "title": "Schematic comparison",
+  "params.schematic1": "Schematic 1, which can be: 1. The UUID of a schematic in the current project; 2. The project UUID and schematic UUID of another project; 3. Schematic file data",
+  "params.schematic2": "Schematic 2, which can be: 1. The UUID of a schematic in the current project; 2. The project UUID and schematic UUID of another project; 3. Schematic file data",
+  "returns": "Schematic comparison result"
 }

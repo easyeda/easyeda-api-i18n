@@ -10,6 +10,6 @@
     "title": "获取属性状态：引脚颜色",
     "returns": "引脚颜色"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: pin color",
+  "returns": "Pin color"
 }

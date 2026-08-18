@@ -23,10 +23,10 @@
     "params.allowOverwrite": "是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false`，请注意可能的数据丢失风险",
     "returns": "保存是否成功"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.ruleConfiguration": null,
-  "params.configurationName": null,
-  "params.allowOverwrite": null,
-  "returns": null
+  "title": "Save Design rule configuration",
+  "remarks.text.0": "Only custom configurations can be overwritten and saved. System configurations cannot be modified or overwritten",
+  "params.ruleConfiguration": "Design rule configuration",
+  "params.configurationName": "Configuration name",
+  "params.allowOverwrite": "Whether to allow overwriting a design rule configuration with the same name. If `false`, `false` will be returned when a configuration with the same name is encountered. Please note the possible risk of data loss",
+  "returns": "Save Whether Successful"
 }

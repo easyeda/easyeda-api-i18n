@@ -11,7 +11,7 @@
     "params.panelUuid": "面板 UUID",
     "returns": "操作是否成功"
   },
-  "title": null,
-  "params.panelUuid": null,
-  "returns": null
+  "title": "Delete Panel",
+  "params.panelUuid": "Panel UUID",
+  "returns": "Whether the operation is successful"
 }

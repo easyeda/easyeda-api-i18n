@@ -10,6 +10,6 @@
     "title": "导入顶部菜单数据",
     "params.headerMenus": "顶部菜单数据"
   },
-  "title": null,
-  "params.headerMenus": null
+  "title": "Import top menu data",
+  "params.headerMenus": "Top menu data"
 }

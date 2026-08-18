@@ -11,7 +11,7 @@
     "params.data": "库文件",
     "returns": "库配置信息"
   },
-  "title": null,
-  "params.data": null,
-  "returns": null
+  "title": "Extract the library configuration information from the file",
+  "params.data": "Library file",
+  "returns": "Library configuration information"
 }

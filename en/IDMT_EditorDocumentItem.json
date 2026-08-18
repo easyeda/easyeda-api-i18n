@@ -13,10 +13,10 @@
     "properties.parentProjectUuid": "文档所属工程 UUID",
     "properties.parentLibraryUuid": "库文档所属库 UUID"
   },
-  "title": null,
-  "properties.documentType": null,
-  "properties.uuid": null,
-  "properties.tabId": null,
-  "properties.parentProjectUuid": null,
-  "properties.parentLibraryUuid": null
+  "title": "Editor document object",
+  "properties.documentType": "Document type",
+  "properties.uuid": "Document UUID",
+  "properties.tabId": "Tab ID of the document",
+  "properties.parentProjectUuid": "Document UUID of the project it belongs to",
+  "properties.parentLibraryUuid": "Library document UUID of the library it belongs to"
 }

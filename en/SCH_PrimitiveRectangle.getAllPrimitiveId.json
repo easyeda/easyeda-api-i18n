@@ -10,6 +10,6 @@
     "title": "获取所有矩形的图元 ID",
     "returns": "矩形的图元 ID 数组"
   },
-  "title": null,
-  "returns": null
+  "title": "Get all Rectangle primitive IDs",
+  "returns": "Array of Rectangle primitive IDs"
 }

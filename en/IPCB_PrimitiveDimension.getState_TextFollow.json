@@ -10,6 +10,6 @@
     "title": "获取属性状态：文字跟随",
     "returns": "文字跟随"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: text follows",
+  "returns": "Text follows"
 }

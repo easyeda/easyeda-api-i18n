@@ -10,6 +10,6 @@
     "title": "获取属性状态：起始位置 X",
     "returns": "起始位置 X"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: start position X",
+  "returns": "Start position X"
 }

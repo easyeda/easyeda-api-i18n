@@ -37,9 +37,9 @@
     "remarks.text.2": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
     "returns": "获取到的快捷键数据"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "remarks.text.1": null,
-  "remarks.text.2": null,
-  "returns": null
+  "title": "Get all Shortcut key data",
+  "remarks.text.0": "This API will get all shortcut key data of this extension",
+  "remarks.text.1": "This API cannot get system shortcut key data",
+  "remarks.text.2": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "returns": "The obtained shortcut key data"
 }

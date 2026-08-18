@@ -10,6 +10,6 @@
     "title": "获取属性状态：关联库器件",
     "returns": "关联库器件"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: associate library device",
+  "returns": "Associate library device"
 }

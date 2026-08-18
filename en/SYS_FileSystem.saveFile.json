@@ -21,8 +21,8 @@
     "params.fileData": "文件数据",
     "params.fileName": "文件名称"
   },
-  "title": null,
-  "remarks.text.0": null,
-  "params.fileData": null,
-  "params.fileName": null
+  "title": "Save File",
+  "remarks.text.0": "Calls the browser download API or the Electron save-file API to save the passed-in file stream locally",
+  "params.fileData": "File data",
+  "params.fileName": "File name"
 }

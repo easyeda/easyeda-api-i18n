@@ -10,6 +10,6 @@
     "title": "获取属性状态：坐标 X",
     "returns": "坐标 X"
   },
-  "title": null,
-  "returns": null
+  "title": "Get the property state: X coordinate",
+  "returns": "X coordinate"
 }

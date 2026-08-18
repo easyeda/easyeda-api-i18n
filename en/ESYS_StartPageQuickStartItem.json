@@ -18,6 +18,6 @@
     "title": "开始页快速启动项",
     "remarks.text.0": "对应开始页快速启动模块中的各个项"
   },
-  "title": null,
-  "remarks.text.0": null
+  "title": "Start page quick start item",
+  "remarks.text.0": "Corresponds to the items in the quick start module of the start page"
 }
