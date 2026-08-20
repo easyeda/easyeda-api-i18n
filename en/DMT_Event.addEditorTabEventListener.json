@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_tab_add';\n\n// 1. 打开一个原理图页，保证编辑器里存在可切换的标签页\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 注册 toggle 事件监听（回调里拿到事件类型与标签页属性）\nlet fired = null;\neda.dmt_Event.addEditorTabEventListener(\n  listenerId,\n  'toggle',\n  (eventType, props) => {\n    fired = { eventType, title: props?.title, tabId: props?.tabId };\n  }\n);\n\n// 3. 回读确认注册成功（同 id 再注册也会被防重机制忽略）\nconst registered = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 4. 切换一次标签页触发 toggle 事件，观察回调被调用\nif (pages[1]) {\n  await eda.dmt_EditorControl.openDocument(pages[1].uuid);\n  await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n} else {\n  await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n}\nawait new Promise(r => setTimeout(r, 500));\nconsole.log('fired:', fired ? JSON.stringify(fired) : 'null');\n\n// 5. 清理监听，避免会话内残留\nconst removed = eda.dmt_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

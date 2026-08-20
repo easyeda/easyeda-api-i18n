@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createDifferentialPair",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的网络名和差分对名（差分对名和网络名不能与其他差分对重复）\nconst ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\n\n// 2. 放两个带差分网络的焊盘，让网络进入网表\nconst x = 3000 + Math.floor(Math.random() * 20000);\nconst padP = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nconst padN = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\n\n// 3. 创建差分对（保留现场供观察）\nconst created = await eda.pcb_Drc.createDifferentialPair('嘉立创示例_差分对_' + ts, netP, netN);\n\nconsole.log('pairName:', '嘉立创示例_差分对_' + ts);\nconsole.log('created:', created);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建差分对",

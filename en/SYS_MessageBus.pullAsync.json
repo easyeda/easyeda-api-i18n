@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先发起拉取（Promise 挂起等待消息）\nconst pending = eda.sys_MessageBus.pullAsync('嘉立创示例_异步拉取');\n\n// 2. 推送消息，挂起的 Promise 随即满足\neda.sys_MessageBus.push('嘉立创示例_异步拉取', { task: '导出 BOM', done: true });\n\n// 3. await 直接拿到拉到的消息\nconst message = await pending;\nconsole.log('拉到的消息：', message);\n```"
+        }
+      ]
     }
   },
   "_source": {

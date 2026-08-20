@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_X",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 读取修改前的锚点 X 坐标\nconst before = comp.getState_X();\n\n// 4. 异步模式向右移动 300mil 并提交\nconst asyncComp = comp.toAsync();\nasyncComp.setState_X(before + 300);\nawait asyncComp.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveComponent.get([compId]);\n\nconsole.log('x:', before, '→', refetched[0].getState_X());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：坐标 X",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取当前显示语言\nconst current = await eda.sys_I18n.getCurrentLanguage();\n\n// 2. 判断当前是否中文环境\nconsole.log('当前语言：', current);\nconsole.log('是否中文环境：', current.startsWith('zh'));\n```"
+        }
+      ]
     }
   },
   "_source": {

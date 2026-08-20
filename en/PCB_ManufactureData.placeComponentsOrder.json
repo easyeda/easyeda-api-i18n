@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 交互式下单检查：弹出检查弹窗等待确认，确认后打开购买页面\n// const passed = await eda.pcb_ManufactureData.placeComponentsOrder(true);\n\n// 2. 静默检查：不弹任何弹窗，忽略警告并直接生成下单资料\n// const passed = await eda.pcb_ManufactureData.placeComponentsOrder(false, true);\n// console.log('下单检查结果 ' + passed);\n\n// 下单会真实打开订单页面并产生订单数据，案例中不实际执行\nconsole.log('演示调用：placeComponentsOrder(true) 交互式检查，或 placeComponentsOrder(false, true) 静默下单');\n```"
+        }
+      ]
     }
   },
   "_source": {

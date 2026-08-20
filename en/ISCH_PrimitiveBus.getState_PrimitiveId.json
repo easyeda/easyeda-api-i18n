@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "ISCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000]);\n\n// 2. 读取图元 ID\nconst primitiveId = bus.getState_PrimitiveId();\n\n// 3. 用该 ID 反查同一图元，验证 ID 有效（查询类案例不留测试对象）\nconst refetched = await eda.sch_PrimitiveBus.get(primitiveId);\nawait eda.sch_PrimitiveBus.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetch matched:', refetched.getState_PrimitiveId() === primitiveId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

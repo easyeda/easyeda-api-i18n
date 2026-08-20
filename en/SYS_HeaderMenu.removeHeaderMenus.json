@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "removeHeaderMenus",
     "className": "SYS_HeaderMenu",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先导入一份菜单数据，让移除操作有实际对象\nawait eda.sys_HeaderMenu.insertHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单', title: '嘉立创示例', menuItems: [{ id: '嘉立创示例_子项', title: '示例子项' }] }],\n});\nconsole.log('已导入菜单数据');\n\n// 2. 移除全部已导入的顶部菜单数据（同步方法，无需 await）\neda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已移除导入的顶部菜单数据');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "移除顶部菜单数据"

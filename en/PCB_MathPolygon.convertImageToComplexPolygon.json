@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "convertImageToComplexPolygon",
     "className": "PCB_MathPolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 用 canvas 画一张测试图：白色背景，中间 10×10 像素的黑色方块\nconst canvas = document.createElement('canvas');\ncanvas.width = 20;\ncanvas.height = 20;\nconst ctx = canvas.getContext('2d');\nctx.fillStyle = '#ffffff';\nctx.fillRect(0, 0, 20, 20);\nctx.fillStyle = '#000000';\nctx.fillRect(5, 5, 10, 10);\n\n// 2. 导出为 PNG Blob\nconst imageBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));\n\n// 3. 描摹为复杂多边形（全部可选参数走默认值）\nconst complexPolygon = await eda.pcb_MathPolygon.convertImageToComplexPolygon(imageBlob, 20, 20);\n\n// 4. 读取描摹结果：分块数量与第一块的源数据（描摹出的轮廓点，坐标由算法生成）\nconst sources = complexPolygon.getSourceStrictComplex();\nconsole.log('polygonCount:', sources.length);\nconsole.log('firstSource:', JSON.stringify(sources[0]).slice(0, 120));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图像转换为复杂多边形对象",

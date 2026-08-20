@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_NoConnected",
     "className": "ISCH_PrimitivePin",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 0. 确保当前文档是符号编辑器：优先复用测试符号，没有则新建后打开\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('嘉立创示例_Pin测试符号', libUuid);\nconst symUuid = found[0] ? found[0].uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试引脚重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 在符号画布上创建一个测试引脚，默认无非连接标识\nconst pin = await eda.sch_PrimitivePin.create(x, y, '1', 'NC', 0, 10, null, 'None', 'Passive');\nconst before = pin.getState_NoConnected();\n\n// 3. 切换异步模式，打上非连接标识后提交画布\nconst asyncPin = pin.toAsync();\nasyncPin.setState_NoConnected(true);\nawait asyncPin.done();\n\n// 4. 从画布重新取引脚，确认标识已更新（保留现场供观察）\nconst refetched = await eda.sch_PrimitivePin.get(pin.getState_PrimitiveId());\n\nconsole.log('noConnected:', before, '→', refetched.getState_NoConnected());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：是否存在非连接标识",

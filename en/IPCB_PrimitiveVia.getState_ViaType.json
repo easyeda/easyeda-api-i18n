@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_ViaType",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个通孔类型的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_ViaType();\n\n// 2. 把第二个过孔切换为缝合孔类型后读取对比\nconst suture = await eda.pcb_PrimitiveVia.create('', x + 500, 3000, 20, 40);\nconst a = suture.toAsync();\na.setState_ViaType(2);\nawait a.done();\nconst sutureType = suture.getState_ViaType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId(), suture.getState_PrimitiveId()]);\n\nconsole.log('viaType:', before, '→', sutureType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：过孔类型",

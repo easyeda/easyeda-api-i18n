@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createFolder",
     "className": "DMT_Folder",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 取当前工程所属团队，作为文件夹的归属\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 在团队根目录下创建测试文件夹\nconst folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_文件夹', teamUuid);\n\n// 3. 等待工作区同步后回读，确认文件夹已落地\nawait new Promise(r => setTimeout(r, 1500));\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('name:', folderInfo?.name);\nconsole.log('parentFolderUuid:', folderInfo?.parentFolderUuid === teamUuid ? '(团队根目录)' : folderInfo?.parentFolderUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建文件夹",

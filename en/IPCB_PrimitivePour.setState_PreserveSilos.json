@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_PreserveSilos",
     "className": "IPCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个不保留孤岛的覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_改孤岛', 5, 10, false);\nconst before = pour.getState_PreserveSilos();\n\n// 3. 异步模式开启保留孤岛\nconst asyncPour = pour.toAsync();\nasyncPour.setState_PreserveSilos(true);\nawait asyncPour.done();\n\n// 4. 从画布重新读取，确认设置已更新（保留现场供观察）\nconst refetched = await eda.pcb_PrimitivePour.get(pour.getState_PrimitiveId());\n\nconsole.log('preserveSilos:', before, '→', refetched.getState_PreserveSilos());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：是否保留孤岛",

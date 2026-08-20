@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个 10mil 线宽的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3,\n  undefined,\n  10\n);\n\n// 3. 切换异步模式，累计一处未提交的线宽修改（10 → 99）\nconst asyncDim = dim.toAsync();\nasyncDim.setState_LineWidth(99);\n\n// 4. 重置：丢弃未提交的修改，回到画布当前状态\nawait asyncDim.reset();\n\n// 5. 从画布重新读取，线宽仍是 10（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('lineWidth after reset:', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

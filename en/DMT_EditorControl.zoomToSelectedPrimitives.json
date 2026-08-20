@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开原理图页，创建一个文本图元作为选中目标\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst text = await eda.sch_PrimitiveText.create(100, 80, '嘉立创示例_缩放目标');\n\n// 2. 以图元 ID 建立选中状态\nconst selected = await eda.sch_SelectControl.doSelectPrimitives([text.getState_PrimitiveId()]);\nconsole.log('selected:', selected);\n\n// 3. 缩放到选中的图元，返回可视区域边界\nconst bounds = await eda.dmt_EditorControl.zoomToSelectedPrimitives(tabId);\nconsole.log('bounds:', bounds);\n\n// 4. 清理：取消选中并删除测试图元\nawait eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\nconsole.log('cleaned');\n```"
+        }
+      ]
     }
   },
   "_source": {

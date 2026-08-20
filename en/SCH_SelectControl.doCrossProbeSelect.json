@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "doCrossProbeSelect",
     "className": "SCH_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建挂测试网络的导线，作为交叉选择的目标\nconst netName = '嘉立创示例_NET';\nconst wire = await eda.sch_PrimitiveWire.create([800, 300, 1200, 300], netName);\nconst wireId = wire.getState_PrimitiveId();\n\n// 2. 按网络名交叉选择（highlight=true 高亮，select=true 选中；同步方法直接返回结果）\nconst crossProbed = eda.sch_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n\n// 3. 交叉探针作用于原理图与 PCB 的联动定位，返回 true 表示已触发；\n//    需要选中当前文档图元时改用 doSelectPrimitives\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveWire.delete([wireId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "进行交叉选择",

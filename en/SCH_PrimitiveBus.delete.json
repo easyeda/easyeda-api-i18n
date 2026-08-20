@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "SCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两条待删除的测试总线（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst bus1 = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\nconst bus2 = await eda.sch_PrimitiveBus.create('ADDR[0..15]', [x, y + 200, x + 400, y + 200]);\n\n// 2. 记录删除前的总线数量\nconst beforeCount = (await eda.sch_PrimitiveBus.getAll()).length;\n\n// 3. 分别以 ID 字符串和图元对象两种形式删除两条总线\nconst deleted1 = await eda.sch_PrimitiveBus.delete(bus1.getState_PrimitiveId());\nconst deleted2 = await eda.sch_PrimitiveBus.delete(bus2);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.sch_PrimitiveBus.getAll()).length;\n\nconsole.log('deleted by id:', deleted1);\nconsole.log('deleted by object:', deleted2);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除总线",

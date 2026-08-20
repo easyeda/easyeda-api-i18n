@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "closeBottomPanel",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先展开底部面板制造“已打开”状态，便于观察关闭效果\neda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开');\n\n// 2. 收起底部面板（同步调用，无返回值）\neda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "关闭底部面板"

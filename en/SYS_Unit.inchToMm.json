@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "inchToMm",
     "className": "SYS_Unit",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 基本换算：1 英寸 = 25.4 mm（同步返回数值，无需 await）\nconsole.log('1 英寸 =', eda.sys_Unit.inchToMm(1), 'mm');\n\n// 2. 常用节距换算：0.1 英寸栅格即 2.54 mm\nconsole.log('0.1 英寸 =', eda.sys_Unit.inchToMm(0.1), 'mm');\n\n// 3. 指定保留 3 位小数（默认 4 位）\nconsole.log('1.25 英寸保留 3 位小数 =', eda.sys_Unit.inchToMm(1.25, 3), 'mm');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "单位转换：英寸到毫米",

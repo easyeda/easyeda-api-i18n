@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PourPrimitiveId",
     "className": "IPCB_PrimitivePoured",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 读取关联的覆铜边框图元 ID\nconst pourPrimitiveId = poured.getState_PourPrimitiveId();\nconsole.log('pourPrimitiveId:', pourPrimitiveId);\n\n// 3. 用该 ID 反查覆铜边框，验证关联有效\nconst pour = await eda.pcb_PrimitivePour.get(pourPrimitiveId);\nconsole.log('对应覆铜边框：', pour ? pour.getState_PourName() : '（边框已被删除）');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：覆铜边框图元 ID",

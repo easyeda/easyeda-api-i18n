@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Model3D",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置一个测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n\n// 2. 读取关联的 3D 模型信息（未关联时返回 undefined）\nconst model3d = comp.getState_Model3D();\n\n// 3. 清理测试器件\nawait eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('model3dName:', model3d ? model3d.name : '(未关联 3D 模型)');\nconsole.log('model3dUuid:', model3d ? model3d.uuid : '(未关联 3D 模型)');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：关联库 3D 模型",

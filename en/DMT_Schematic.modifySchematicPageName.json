@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifySchematicPageName",
     "className": "DMT_Schematic",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建专用测试原理图（自带图页 p1 作为改名目标）并等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst pageUuid = info.page[0].uuid;\n\n// 2. 修改图页名称（只对本例创建的测试图页改名）\nconst newName = '嘉立创示例_电源页';\nconst renamed = await eda.dmt_Schematic.modifySchematicPageName(pageUuid, newName);\nconsole.log('renamed:', renamed);\n\n// 3. 等 1.5s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）\nawait new Promise(r => setTimeout(r, 1500));\nconst after = await eda.dmt_Schematic.getSchematicPageInfo(pageUuid);\nconsole.log('renamedTo:', after?.name);\nconsole.log('renameVerified:', (after?.name ?? '').toLowerCase() === newName.toLowerCase());\n\n// 4. 清理测试原理图，保持工程整洁\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改原理图图页名称",

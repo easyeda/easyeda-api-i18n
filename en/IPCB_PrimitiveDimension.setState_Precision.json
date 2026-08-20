@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Precision",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个精度为 2 位的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3,\n  undefined,\n  undefined,\n  2\n);\nconst before = dim.getState_Precision();\n\n// 3. 切换异步模式，精度提高到 3 位\nconst asyncDim = dim.toAsync();\nasyncDim.setState_Precision(3);\nawait asyncDim.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('precision:', before, '→', refetched.getState_Precision());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：精度",

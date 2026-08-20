@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveString",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试文本（随机坐标避免重合），内容不同便于区分\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst text1 = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_文本A', 'default', 45, 6, 3, 0, false, 0, false, false);\nconst text2 = await eda.pcb_PrimitiveString.create(3, x, y + 500, '嘉立创示例_文本B', 'default', 60, 6, 3, 0, false, 0, false, false);\n\n// 2. 传单个 ID 字符串，返回单个文本对象\nconst single = await eda.pcb_PrimitiveString.get(text1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回文本对象数组\nconst arr = await eda.pcb_PrimitiveString.get([text1.getState_PrimitiveId(), text2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveString.delete([text1.getState_PrimitiveId(), text2.getState_PrimitiveId()]);\n\nconsole.log('single text:', single.getState_Text());\nconsole.log('array length:', arr.length);\nconsole.log('text2 fontSize:', arr[1].getState_FontSize());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取文本",

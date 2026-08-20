@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getPrimitivesBBox",
     "className": "SCH_Primitive",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试矩形：左上角（1000,1000）尺寸 200x100，左上角（1600,1400）尺寸 150x80\nconst rect1 = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst rect2 = await eda.sch_PrimitiveRectangle.create(1600, 1400, 150, 80);\n\n// 2. 计算两个矩形整体的 BBox（传图元 ID 数组，也支持直接传图元对象数组）\nconst bbox = await eda.sch_Primitive.getPrimitivesBBox([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n\nconsole.log('minX:', bbox.minX);\nconsole.log('minY:', bbox.minY);\nconsole.log('maxX:', bbox.maxX);\nconsole.log('maxY:', bbox.maxY);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取图元的 BBox",

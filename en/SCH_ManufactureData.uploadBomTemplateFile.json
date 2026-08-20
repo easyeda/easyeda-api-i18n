@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "uploadBomTemplateFile",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 从本地选择模板文件（弹窗需要用户交互）\n// const templateFile = await eda.sys_FileSystem.openReadFileDialog('.xlsx');\n\n// 2. 上传为新的 BOM 模板（第二参数指定模板名，不传则从文件名取）\n// const templateName = await eda.sch_ManufactureData.uploadBomTemplateFile(templateFile, '嘉立创示例_模板');\n// console.log('上传后的模板名 ' + templateName);\n\n// 3. 上传后用 getBomTemplates 查看列表确认，不再需要时用 deleteBomTemplate 删除\nconsole.log('演示流程：openReadFileDialog 读取 xlsx → uploadBomTemplateFile 上传 → getBomTemplates 确认');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "上传 BOM 模板文件",

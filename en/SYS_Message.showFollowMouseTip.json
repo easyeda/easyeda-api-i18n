@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 限时提示：2000 毫秒后自动消失，无需手动清理\neda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示 2 秒后自动消失', 2000);\nconsole.log('限时鼠标提示已显示，2 秒后自动消失');\n\n// 2. 持续提示：不传时间参数则一直展示，直到被移除或被新提示覆盖\neda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示会一直跟随鼠标');\nconsole.log('持续鼠标提示已显示（新提示覆盖了上一条）');\n\n// 3. 持续提示必须手动收尾，避免遗留（自建自删，保证案例可重复运行）\nawait new Promise(r => setTimeout(r, 1000));\neda.sys_Message.removeFollowMouseTip();\nconsole.log('持续鼠标提示已手动移除');\n```"
+        }
+      ]
     }
   },
   "_source": {

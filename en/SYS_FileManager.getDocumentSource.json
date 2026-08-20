@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getDocumentSource",
     "className": "SYS_FileManager",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前文档源码\nconst source = await eda.sys_FileManager.getDocumentSource();\n\n// 2. 输出源码长度与前 60 字符预览（DOCHEAD 开头的 JSON 分段结构）\nconsole.log('源码长度：', source.length);\nconsole.log('源码预览：', source.slice(0, 60));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取文档源码",

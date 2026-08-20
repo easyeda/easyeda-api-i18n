@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 归一化布局：先合并既有分屏，保证两个标签页落在同一分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n\n// 2. 打开两个文档，让当前分屏持有两个标签页\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n\n// 3. 把 PCB 标签页拆到一个新的水平分屏\nconst split = await eda.dmt_EditorControl.createSplitScreen('horizontal', tabPcb);\nconsole.log('source split:', split?.sourceSplitScreenId);\nconsole.log('new split:', split?.newSplitScreenId);\n\n// 4. 回读新分屏的标签页，确认 PCB 已在其中\nconst tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(split.newSplitScreenId);\nconsole.log('tabs in new split:', tabs.map(t => t.title));\n\n// 5. 合并所有分屏，恢复单屏布局\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "SCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试圆（随机坐标避免与画布已有圆重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst circle = await eda.sch_PrimitiveCircle.create(x, y, 100, '#FF0000', 'none', 6, 1);\nconst circleId = circle.getState_PrimitiveId();\n\n// 2. 读取修改前的半径、线宽与填充样式\nconst beforeRadius = circle.getState_Radius();\nconst beforeWidth = circle.getState_LineWidth();\nconst beforeFillStyle = circle.getState_FillStyle();\n\n// 3. 批量修改：半径 100 → 200、线宽 6 → 10、填充样式改为实心\nawait eda.sch_PrimitiveCircle.modify(circleId, { radius: 200, lineWidth: 10, fillStyle: 'Solid' });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitiveCircle.get(circleId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', circleId);\nconsole.log('radius:', beforeRadius, '→', refreshed.getState_Radius());\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('fillStyle:', beforeFillStyle, '→', refreshed.getState_FillStyle());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改圆",

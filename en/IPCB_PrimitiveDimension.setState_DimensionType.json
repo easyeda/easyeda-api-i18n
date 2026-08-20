@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_DimensionType",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个长度标注（8 元素坐标集）\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3\n);\nconst before = dim.getState_DimensionType();\n\n// 3. 切换异步模式：换成半径标注，坐标集同步换成 6 元素格式（圆上端点、标注线尾、文字位置）\nconst asyncDim = dim.toAsync();\nasyncDim.setState_DimensionType('Radius Dimension');\nasyncDim.setState_CoordinateSet([x + 1500, 3500, x + 3500, 3500, x + 2500, 4200]);\nawait asyncDim.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('dimensionType:', before, '→', refetched.getState_DimensionType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：尺寸标注类型",

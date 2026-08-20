@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开（导入作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 构造布局 JSON 文件对象（真实场景：readFileFromFileSystem 读取外部导出的文件）\nconst layoutFile = new File([JSON.stringify({})], 'auto-layout.json', { type: 'application/json' });\n\n// 3. 导入自动布局文件\nconst imported = await eda.pcb_Document.importAutoLayoutJsonFile(layoutFile);\nconsole.log('imported:', imported);\n\n// 4. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

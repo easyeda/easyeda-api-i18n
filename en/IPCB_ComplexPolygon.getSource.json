@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 用单个单多边形构建：getSource 会化简最外层数组\nconst single = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 用多个单多边形构建：getSource 返回二维数组\nconst multi = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 2000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n\nconsole.log('singleSource:', JSON.stringify(single.getSource()));\nconsole.log('multiSource:', JSON.stringify(multi.getSource()));\n```"
+        }
+      ]
     }
   },
   "_source": {

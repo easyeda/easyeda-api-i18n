@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveImage",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试图像（随机坐标避免与画布已有图像重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst cp = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, cp, 1, 400, 300, 0, false, false);\nconst imageId = image.getState_PrimitiveId();\n\n// 2. 读取修改前的层与旋转角度\nconst beforeLayer = image.getState_Layer();\nconst beforeRotation = image.getState_Rotation();\n\n// 3. 批量修改：顶层铜层（1）→ 顶层丝印（3），旋转 0° → 90°\nawait eda.pcb_PrimitiveImage.modify(imageId, { layer: 3, rotation: 90 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveImage.get(imageId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', imageId);\nconsole.log('layer:', beforeLayer, '→', refreshed.getState_Layer());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改图像",

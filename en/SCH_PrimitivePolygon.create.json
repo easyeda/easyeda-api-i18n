@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitivePolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的多边形重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个 4 顶点矩形多边形：顶点依次为左下、右下、右上、左上，红色虚线边线、黄色填充、线宽 6\nconst line = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000', '#FFFF00', 6, 1);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', polygon.getState_PrimitiveId());\nconsole.log('primitiveType:', polygon.getState_PrimitiveType());\nconsole.log('line:', JSON.stringify(polygon.getState_Line()));\nconsole.log('color:', polygon.getState_Color());\nconsole.log('fillColor:', polygon.getState_FillColor());\nconsole.log('lineWidth:', polygon.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建多边形",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "inchToMil",
     "className": "SYS_Unit",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 基本换算：1 英寸 = 1000 mil（同步返回数值，无需 await）\nconsole.log('1 英寸 =', eda.sys_Unit.inchToMil(1), 'mil');\n\n// 2. 常用节距换算：0.1 英寸（2.54mm 栅格）与 0.02 英寸（50mil 节距）\nconsole.log('0.1 英寸 =', eda.sys_Unit.inchToMil(0.1), 'mil');\nconsole.log('0.02 英寸 =', eda.sys_Unit.inchToMil(0.02), 'mil');\n\n// 3. 指定保留 2 位小数（默认 4 位）\nconsole.log('0.0254 英寸保留 2 位小数 =', eda.sys_Unit.inchToMil(0.0254, 2), 'mil');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "单位转换：英寸到密尔",

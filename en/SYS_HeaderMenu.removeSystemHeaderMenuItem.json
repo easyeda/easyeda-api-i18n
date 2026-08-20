@@ -36,7 +36,12 @@
           "key": "remarks.text.6"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先插入一个待移除的子菜单项（id 树：[一级菜单 ID, 新项 ID]）\nconst menuId = await eda.sys_HeaderMenu.insertSystemHeaderMenuItem('pcb', ['Tools', '嘉立创示例_待移除项'], {\n  title: '嘉立创示例 待移除项',\n});\nconsole.log('待移除的菜单 ID：', menuId);\n\n// 2. 移除该菜单项（id 树：[一级菜单 ID, insert 返回的重写 ID]）\nconst removed = await eda.sys_HeaderMenu.removeSystemHeaderMenuItem(['Tools', menuId]);\nconsole.log('移除结果：', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个 4x4 图片的内嵌对象\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst oldImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\n// 8x8 纯色 PNG 的 data URI，作为替换用的新图\nconst newImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAEklEQVR4nGOQi7rzHx9mGBkKAFPclMHPGdtKAAAAAElFTkSuQmCC';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, oldImage, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_BinaryData().length;\n\n// 2. 异步模式替换为新图片数据\nconst asyncObj = obj.toAsync();\nasyncObj.setState_BinaryData(newImage);\nawait asyncObj.done();\n\n// 3. 从画布重新读取，确认数据已更新（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('binaryData 长度：', before, '→', refetched.getState_BinaryData().length);\n```"
+        }
+      ]
     }
   },
   "_source": {

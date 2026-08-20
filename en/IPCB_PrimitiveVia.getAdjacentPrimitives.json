@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 在过孔两侧各拉一条顶层导线，端点落在过孔中心构成连接\nconst line1 = await eda.pcb_PrimitiveLine.create('', 1, x - 600, 3000, x, 3000, 10);\nconst line2 = await eda.pcb_PrimitiveLine.create('', 1, x, 3000, x + 600, 3000, 10);\n\n// 3. 获取与过孔直接相连的图元，并读出各自的类型\nconst adjacent = await via.getAdjacentPrimitives();\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveLine.delete([line1.getState_PrimitiveId(), line2.getState_PrimitiveId()]);\n\nconsole.log('adjacent count:', adjacent.length);\nadjacent.forEach((p, i) => {\n  console.log(`adjacent[${i}] type:`, p.getState_PrimitiveType());\n});\n```"
+        }
+      ]
     }
   },
   "_source": {

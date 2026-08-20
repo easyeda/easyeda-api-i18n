@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setDocumentSource",
     "className": "SYS_FileManager",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前文档源码\nconst source = await eda.sys_FileManager.getDocumentSource();\n\n// 2. 把源码原样写回文档（源码格式合法，返回 true 表示修改成功）\nconst modified = await eda.sys_FileManager.setDocumentSource(source);\n\n// 3. 输出修改结果\nconsole.log('修改结果：', modified);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改文档源码",

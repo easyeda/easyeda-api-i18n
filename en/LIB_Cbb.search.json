@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "search",
     "className": "LIB_Cbb",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 空关键字列出系统库全部复用模块，每页 5 条\nconst results = await eda.lib_Cbb.search('', undefined, undefined, 5);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "搜索复用模块",

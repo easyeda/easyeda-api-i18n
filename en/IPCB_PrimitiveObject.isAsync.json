@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isAsync",
     "className": "IPCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\n\n// 2. 查询异步模式\nconst isAsync = obj.isAsync();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveObject.delete([obj.getState_PrimitiveId()]);\n\nconsole.log('isAsync:', isAsync);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询图元是否为异步图元",

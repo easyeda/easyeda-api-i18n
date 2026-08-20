@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAssemblyVariantsConfigs",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取全部装配体变量配置\nconst variantsConfigs = await eda.sch_ManufactureData.getAssemblyVariantsConfigs();\n\n// 2. 逐个查看\nconsole.log('配置数量：', variantsConfigs.length);\nvariantsConfigs.forEach((config, index) => console.log(`配置 ${index + 1}：`, config.text, config.value));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取装配体变量配置列表",

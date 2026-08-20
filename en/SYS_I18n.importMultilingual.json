@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 向默认命名空间导入简体中文文案（${1} 是占位符，取文案时传实际参数）\nconst imported = eda.sys_I18n.importMultilingual('zh-Hans', {\n  '嘉立创示例_问候': '你好，${1}！欢迎回来',\n});\n\n// 2. 用 text() 按标签取回文案，占位符由参数替换\nconst message = eda.sys_I18n.text('嘉立创示例_问候', undefined, 'zh-Hans', '工程师');\n\nconsole.log('导入结果：', imported);\nconsole.log('取回文案：', message);\n```"
+        }
+      ]
     }
   },
   "_source": {

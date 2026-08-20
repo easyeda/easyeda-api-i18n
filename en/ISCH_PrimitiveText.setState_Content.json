@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Content",
     "className": "ISCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个测试文本（SCH 坐标单位 10mil）\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_初版');\n\n// 3. 切换异步模式，改写文字内容\nconst asyncText = text.toAsync();\nasyncText.setState_Content('嘉立创示例_定稿');\nawait asyncText.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveText.get(text.getState_PrimitiveId());\n\nconsole.log('content:', '嘉立创示例_初版', '→', refetched.getState_Content());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：文本内容",

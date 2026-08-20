@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先注册一条连接用于演示\neda.sys_WebSocket.register('嘉立创示例_关闭', 'ws://127.0.0.1:49620',\n  () => {},\n  () => {\n    console.log('连接已建立');\n  });\n\n// 2. 等待握手完成\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 以「正常关闭」状态码 1000 关闭连接，并附带原因\neda.sys_WebSocket.close('嘉立创示例_关闭', 1000, '演示完毕');\nconsole.log('已关闭连接（code 1000）');\n```"
+        }
+      ]
     }
   },
   "_source": {

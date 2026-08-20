@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取图元 ID\nconst primitiveId = arc.getState_PrimitiveId();\n\n// 3. 用该 ID 从画布重新取回圆弧，验证 ID 有效\nconst refetched = await eda.pcb_PrimitiveArc.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched type:', refetched.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

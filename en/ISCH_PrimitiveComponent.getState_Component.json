@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Component",
     "className": "ISCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置一个测试器件（SCH 坐标单位 10mil）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 读取关联的库器件（含所属库 uuid 和器件 uuid）\nconst component = comp.getState_Component();\n\n// 3. 清理测试器件（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('component:', JSON.stringify(component));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：关联库器件",

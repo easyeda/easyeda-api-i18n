@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试直线（随机坐标避免与画布已有直线重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10, false);\nconst lineId = line.getState_PrimitiveId();\n\n// 2. 读取修改前的线宽与终点 X\nconst beforeWidth = line.getState_LineWidth();\nconst beforeEndX = line.getState_EndX();\n\n// 3. 批量修改：线宽 10 → 24，终点右移 400mil\nawait eda.pcb_PrimitiveLine.modify(lineId, { lineWidth: 24, endX: x + 1000 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveLine.get(lineId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', lineId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('endX:', beforeEndX, '→', refreshed.getState_EndX());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改直线",

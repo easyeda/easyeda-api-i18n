@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "ISCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个测试圆，圆心 (x, y)、半径 150（SCH 坐标单位 10mil）\nconst circle = await eda.sch_PrimitiveCircle.create(x, y, 150);\n\n// 3. 切换异步模式，累计两处修改（半径扩大 + 改颜色）\nconst asyncCircle = circle.toAsync();\nasyncCircle.setState_Radius(250);\nasyncCircle.setState_Color('#00AA00');\n\n// 4. 一次性提交到画布\nawait asyncCircle.done();\n\n// 5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveCircle.get(circle.getState_PrimitiveId());\n\nconsole.log('radius:', 150, '→', refetched.getState_Radius());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

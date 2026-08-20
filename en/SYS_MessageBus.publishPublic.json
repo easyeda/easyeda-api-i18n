@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 两个公共订阅者 + 一个私有订阅者（用于对照隔离性）\nconst publicTaskA = eda.sys_MessageBus.subscribePublic('嘉立创示例_公共发布', (message) => {\n  console.log('公共订阅者 A 收到：', message);\n});\nconst publicTaskB = eda.sys_MessageBus.subscribePublic('嘉立创示例_公共发布', (message) => {\n  console.log('公共订阅者 B 收到：', message);\n});\nconst privateTask = eda.sys_MessageBus.subscribe('嘉立创示例_公共发布', (message) => {\n  console.log('私有订阅者收到：', message);\n});\n\n// 2. 在公共总线发布广播，只有公共订阅者会收到\neda.sys_MessageBus.publishPublic('嘉立创示例_公共发布', '工程已保存');\n\n// 3. 取消订阅，恢复原状\npublicTaskA.cancel();\npublicTaskB.cancel();\nprivateTask.cancel();\nconsole.log('已取消全部订阅');\n```"
+        }
+      ]
     }
   },
   "_source": {

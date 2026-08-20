@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "rpcCallPublic",
     "className": "SYS_MessageBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在公共总线注册一个库查询服务\neda.sys_MessageBus.rpcServicePublic('嘉立创示例_公共RPC调用', (message) => {\n  return { name: message, stock: 1200 };\n});\n\n// 2. 调用公共 RPC 服务，await 拿到返回值\nconst reply = await eda.sys_MessageBus.rpcCallPublic('嘉立创示例_公共RPC调用', '0402 电阻');\nconsole.log('查询结果：', reply.name, '库存', reply.stock);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "公共消息总线：调用 RPC 服务",

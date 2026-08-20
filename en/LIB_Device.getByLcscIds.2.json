@@ -20,7 +20,12 @@
           "key": "remarks.text.2"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 单个 C 编号查询（默认搜索系统库）\nconst one = await eda.lib_Device.getByLcscIds('C1523');\nconsole.log('single count:', one.length);\nconsole.log('[0] uuid:', one[0].uuid, 'supplierId:', one[0].supplierId);\n\n// 2. 批量查询多个 C 编号\nconst many = await eda.lib_Device.getByLcscIds(['C1523', 'C17168']);\nconsole.log('batch count:', many.length);\nmany.forEach((item, i) => {\n  console.log('[' + i + '] uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
+        }
+      ]
     }
   },
   "_source": {

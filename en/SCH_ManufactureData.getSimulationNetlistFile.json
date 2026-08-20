@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 导出 Ngspice 仿真网表（'Ngspice' 对应 ESCH_SimulationNetlistType.NGSPICE）\n// const simNetlistFile = await eda.sch_ManufactureData.getSimulationNetlistFile('嘉立创示例_仿真网表', 'Ngspice');\n// console.log('导出文件名：', simNetlistFile?.name);\n// console.log('文件大小：', simNetlistFile?.size);\n\n// 2. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地，或交给仿真工具直接使用\nconsole.log('演示调用：getSimulationNetlistFile(文件名, 网表类型)');\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isEventListenerAlreadyExist",
     "className": "PCB_Event",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_event_exist';\n\n// 1. 注册前查询：应为 false\nconst before = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('before:', before);\n\n// 2. 注册一个鼠标事件监听使 id 生效\neda.pcb_Event.addMouseEventListener(listenerId, 'all', () => {}, false);\n\n// 3. 注册后查询：应为 true\nconst after = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('after:', after);\n\n// 4. 移除后查询：应回到 false\neda.pcb_Event.removeEventListener(listenerId);\nconst afterRemove = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('afterRemove:', afterRemove);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询事件监听是否存在",

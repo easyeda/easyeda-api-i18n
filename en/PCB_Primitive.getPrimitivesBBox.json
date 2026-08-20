@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getPrimitivesBBox",
     "className": "PCB_Primitive",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个顶层测试焊盘：一个 80x80 放在（2000,2000），一个 60x60 放在（3000,3000）\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 80, 80], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 计算两个焊盘整体的 BBox（传图元 ID 数组，也支持直接传图元对象数组）\nconst bbox = await eda.pcb_Primitive.getPrimitivesBBox([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePad.delete([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n\nconsole.log('minX:', bbox.minX);\nconsole.log('minY:', bbox.minY);\nconsole.log('maxX:', bbox.maxX);\nconsole.log('maxY:', bbox.maxY);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取图元的 BBox",

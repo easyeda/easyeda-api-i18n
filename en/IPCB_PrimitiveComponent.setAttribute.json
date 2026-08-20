@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setAttribute",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 设置自定义属性（属性名、属性值、名称可见、值可见）\nawait comp.setAttribute('嘉立创示例_Tolerance', '1%', true, true);\n\n// 4. 通过属性图元接口确认属性已写入（保留现场供观察）\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst added = attrs.find(a => a.getState_Key() === '嘉立创示例_Tolerance');\n\nconsole.log('attrKey:', added.getState_Key());\nconsole.log('attrValue:', added.getState_Value());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性",

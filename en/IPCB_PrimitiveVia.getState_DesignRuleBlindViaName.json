@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_DesignRuleBlindViaName",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个普通通孔（无设计规则项）\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_DesignRuleBlindViaName();\n\n// 2. 异步模式下设置一个规则项名称并提交\nconst a = via.toAsync();\na.setState_DesignRuleBlindViaName('嘉立创示例_盲孔');\nawait a.done();\n\n// 3. 名称需与设计规则中的盲埋孔项匹配才落画布，未匹配时从图元对象本地读取\nconst after = via.getState_DesignRuleBlindViaName();\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('designRuleBlindViaName:', before, '→', after);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：盲埋孔设计规则项名称",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "updateDocumentSource",
     "className": "LIB_Footprint",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建封装\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_源码封装_' + Date.now(),\n  []\n);\n\n// 2. 在编辑器中打开封装，等待文档加载完成\nconst tabId = await eda.lib_Footprint.openInEditor(footprintUuid, libraryUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 读取当前打开封装的文档源码\nconst documentSource = await eda.sys_FileManager.getDocumentSource();\n\n// 4. 把源码写回库中的封装（此处原样写回；实际使用时可先改写 documentSource）\nconst updated = await eda.lib_Footprint.updateDocumentSource(footprintUuid, libraryUuid, documentSource);\n\n// 5. 关闭编辑器标签页（封装本体保留在库中）\nawait eda.dmt_EditorControl.closeDocument(tabId);\n\n// 修改类保留现场\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('sourceLength:', documentSource.length);\nconsole.log('updated:', updated);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "更新封装的文档源码",

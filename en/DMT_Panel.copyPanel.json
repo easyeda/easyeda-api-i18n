@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "copyPanel",
     "className": "DMT_Panel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个专用源面板并等 1.5s 同步（复制前源面板必须已在工作区落地）\nconst sourceUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 复制源面板，返回副本 UUID\nconst copiedUuid = await eda.dmt_Panel.copyPanel(sourceUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 回读副本，确认名称与所属工程\nconst copyInfo = await eda.dmt_Panel.getPanelInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyName:', copyInfo?.name);\n\n// 4. 清理本例创建的两个面板（先删副本再删源），保持工程整洁\nconst deletedCopy = await eda.dmt_Panel.deletePanel(copiedUuid);\nconsole.log('deleted:', deletedCopy);\nconst deletedSource = await eda.dmt_Panel.deletePanel(sourceUuid);\nconsole.log('deleted:', deletedSource);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "复制面板",

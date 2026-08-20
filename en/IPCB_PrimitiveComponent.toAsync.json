@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 转换为异步图元\nconst asyncComp = comp.toAsync();\nconst isAsyncNow = asyncComp.isAsync();\n\n// 4. 在异步模式下修改位号并提交\nasyncComp.setState_Designator('C102');\nawait asyncComp.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveComponent.get([compId]);\n\nconsole.log('isAsync:', isAsyncNow);\nconsole.log('designator:', refetched[0].getState_Designator());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toSync",
     "className": "IPCB_PrimitiveImage",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个 400 x 300 的顶层图像\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\nconst before = image.isAsync();\n\n// 2. 转换为同步图元（保留现场供观察）\nconst syncImage = image.toSync();\nconst after = syncImage.isAsync();\n\n// 3. 同步图元直接读取属性，无需提交\nconsole.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncImage.getState_PrimitiveType());\nconsole.log('layer:', syncImage.getState_Layer());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为同步图元",

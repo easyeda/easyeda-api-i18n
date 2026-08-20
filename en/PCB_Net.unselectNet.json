@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "unselectNet",
     "className": "PCB_Net",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可操作的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 先选中该网络\nawait eda.pcb_Net.selectNet('嘉立创示例_NET1');\n\n// 3. 取消该网络的选中\nconst unselected = await eda.pcb_Net.unselectNet('嘉立创示例_NET1');\n\n// 4. 清理测试图元（操作类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('unselected:', unselected);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "取消选中网络",

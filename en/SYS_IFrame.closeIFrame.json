@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开两个内联框架窗口（自建 fixture，演示按 ID 定向关闭）\nawait eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口A', { title: '嘉立创示例 窗口A' });\nawait eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口B', { title: '嘉立创示例 窗口B' });\nconsole.log('已打开两个窗口：嘉立创示例_窗口A / 嘉立创示例_窗口B');\n\n// 2. 按 ID 关闭指定窗口\nconst closedById = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('按 ID 关闭窗口 A 结果：', closedById);\n\n// 3. 不传 id，关闭本扩展打开的全部剩余窗口（清理窗口 B，还原界面）\nconst closedAll = await eda.sys_IFrame.closeIFrame();\nconsole.log('关闭全部剩余窗口结果：', closedAll);\n\n// 4. 对已不存在的窗口再关闭一次，验证幂等语义（返回 true 而非 false）\nconst closedAgain = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('重复关闭已关窗口结果：', closedAgain);\n```"
+        }
+      ]
     }
   },
   "_source": {

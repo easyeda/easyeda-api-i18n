@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_LineWidth",
     "className": "ISCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条线宽 6 的测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000], null, 6, null);\n\n// 2. 读取线宽\nconst lineWidth = bus.getState_LineWidth();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveBus.delete([bus.getState_PrimitiveId()]);\n\nconsole.log('lineWidth:', lineWidth);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：线宽",

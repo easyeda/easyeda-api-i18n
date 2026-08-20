@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前设计规则配置作为数据源（规则数据在 config 字段里）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n\n// 2. 另存为自定义配置，允许同名覆盖（保留现场供观察）\nconst saved = await eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_规则配置', true);\n\nconsole.log('saved:', saved);\n```"
+        }
+      ]
     }
   },
   "_source": {

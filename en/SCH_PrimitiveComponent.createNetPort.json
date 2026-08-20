@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createNetPort",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建输入方向的端口，网络名为 SIG_IN\nconst port = await eda.sch_PrimitiveComponent.createNetPort(\n  'IN',               // 端口方向：'IN' / 'OUT' / 'BI'\n  '嘉立创示例_SIG',   // 网络名称\n  x,                  // 坐标 X\n  y,                  // 坐标 Y\n  0,                  // 旋转角度\n  false               // 是否镜像\n);\n\n// 3. 创建类保留现场，供在画布上观察端口样式\nconsole.log('primitiveId:', port.getState_PrimitiveId());\nconsole.log('net:', port.getState_Net());\nconsole.log('componentType:', port.getState_ComponentType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建网络端口",

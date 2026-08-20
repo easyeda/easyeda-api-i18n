@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 订阅一个主题并验证能收到消息\nlet received = null;\neda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除前的消息');\nconsole.log('移除前收到：', received);\n\n// 2. 移除私有消息总线，原有订阅全部失效\neda.sys_MessageBus.removePrivateMessageBus();\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除后的消息');\nconsole.log('移除后订阅者是否还收到：', received);\n\n// 3. 再次订阅，总线自动重建恢复正常\neda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '重建后的消息');\nconsole.log('重建后收到：', received);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveString",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机放置坐标，避免与画布上已有的文本重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 在顶层丝印层（3）创建文本：默认字体、字号 45、线宽 6、左下对齐（3）、不旋转、不反相、不镜像、不锁定\nconst text = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_版本V1.0', 'default', 45, 6, 3, 0, false, 0, false, false);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', text.getState_PrimitiveId());\nconsole.log('primitiveType:', text.getState_PrimitiveType());\nconsole.log('layer:', text.getState_Layer());\nconsole.log('text:', text.getState_Text());\nconsole.log('fontSize:', text.getState_FontSize());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建文本",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机基准坐标，避免与画布上已有的图像重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 构造折线多边形轮廓（局部坐标 200×150 的五边形），图像轮廓必须是 ComplexPolygon 对象\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  0, 0, 'L', 200, 0, 200, 150, 100, 220, 0, 150\n]);\n\n// 3. 在顶层铜层（1）创建图像，宽 400、高 300，不旋转、不镜像、不锁定\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', image.getState_PrimitiveId());\nconsole.log('layer:', image.getState_Layer());\nconsole.log('width:', image.getState_Width());\nconsole.log('height:', image.getState_Height());\nconsole.log('primitiveType:', image.getState_PrimitiveType());\n```"
+        }
+      ]
     }
   },
   "_source": {

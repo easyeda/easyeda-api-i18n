@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "SCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试导线（随机坐标避免与画布已有导线重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A', '#FF0000', 6, 1);\nconst wireId = wire.getState_PrimitiveId();\n\n// 2. 读取修改前的网络、线宽与颜色\nconst beforeNet = wire.getState_Net();\nconst beforeWidth = wire.getState_LineWidth();\nconst beforeColor = wire.getState_Color();\n\n// 3. 批量修改：网络 SIG_A → SIG_B、线宽 6 → 10、颜色改为绿色，路径改为向右再向上的 L 形\nawait eda.sch_PrimitiveWire.modify(wireId, {\n  line: [[x, y, x + 400, y], [x + 400, y, x + 400, y + 200]],\n  net: 'SIG_B',\n  lineWidth: 10,\n  color: '#00AA00',\n});\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值（Line 是规格化坐标，只打印不断言）\nconst refreshed = await eda.sch_PrimitiveWire.get(wireId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', wireId);\nconsole.log('net:', beforeNet, '→', refreshed.getState_Net());\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\nconsole.log('line:', JSON.stringify(refreshed.getState_Line()));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改导线",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "removeEventListener",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先注册一个 blur 监听，拿到可移除对象（removeEventListener 的入参）\nlet fired = 0;\nconst removable = eda.sys_Window.addEventListener('blur', () => {\n  fired++;\n});\nconsole.log('已注册 blur 监听，事件类型：', removable.type);\n\n// 2. 移除监听\neda.sys_Window.removeEventListener(removable);\n\n// 3. 再触发一次失去焦点事件，验证回调不再执行\nwindow.dispatchEvent(new Event('blur'));\nconsole.log('移除后回调触发次数：', fired);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "移除事件监听",

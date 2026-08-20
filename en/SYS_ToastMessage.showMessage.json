@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "showMessage",
     "className": "SYS_ToastMessage",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 最简调用：默认信息类型，倒计时结束后自动消失\neda.sys_ToastMessage.showMessage('嘉立创示例 工程已自动保存');\nconsole.log('信息吐司已显示');\n\n// 2. 指定消息类型与倒计时秒数：成功图标，2 秒后自动关闭\neda.sys_ToastMessage.showMessage('嘉立创示例 导出完成', 'success', 2);\nconsole.log('成功吐司已显示，2 秒后自动关闭');\n\n// 3. 带回调按钮与底部面板联动：点击按钮执行回调并展开日志面板\neda.sys_ToastMessage.showMessage(\n  '嘉立创示例 检查完成，详见日志面板',\n  'warn',\n  5,\n  'log',\n  '查看日志',\n  'console.log(\"嘉立创示例 按钮回调被执行\")'\n);\nconsole.log('警告吐司已显示，附带查看日志按钮，5 秒后自动关闭');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "显示吐司消息",

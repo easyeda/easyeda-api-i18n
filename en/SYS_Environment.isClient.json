@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isClient",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断当前是否为客户端环境（同步返回布尔值）\nconst isClient = eda.sys_Environment.isClient();\n\n// 2. 输出判断结果（桌面客户端为 true，网页版为 false）\nconsole.log('是否客户端环境：', isClient);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否处于客户端环境",

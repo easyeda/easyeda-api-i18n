@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录当前工程，便于演示结束后恢复\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\n\n// 2. 复制一个系统库模块到个人库作为打开对象\nconst systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_打开工程_' + Date.now());\n\n// 3. 在编辑器打开模块工程\nconst opened = await eda.lib_Cbb.openProjectInEditor(cbbUuid, personalLib);\n\n// 4. 恢复原来打开的工程\nawait new Promise((r) => setTimeout(r, 1000));\nawait eda.dmt_Project.openProject(projectInfo.uuid);\n\nconsole.log('source:', source.name, source.uuid);\nconsole.log('opened:', opened);\nconsole.log('restored:', projectInfo.uuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

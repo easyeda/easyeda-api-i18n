@@ -32,7 +32,12 @@
           "key": "remarks.text.5"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在 PCB 环境的 工具（Tools）菜单下插入子菜单项，并带上两个三级菜单项\nconst menuId = await eda.sys_HeaderMenu.insertSystemHeaderMenuItem('pcb', ['Tools', '嘉立创示例_扩展工具'], {\n  title: '嘉立创示例 扩展工具',\n  menuItems: [\n    { id: '嘉立创示例_打开面板', title: '打开扩展面板' },\n    { id: '嘉立创示例_扩展设置', title: '扩展设置' },\n  ],\n});\n\n// 2. 输出重写后的菜单 ID（真实扩展中通过 registerFn 指定点击回调）\nconsole.log('插入的菜单 ID：', menuId);\n\n// 3. 移除刚插入的菜单项还原菜单栏（同一 ID 重复插入会返回 undefined，\n//    自建自删保证案例可重复运行）\nconst removed = await eda.sys_HeaderMenu.removeSystemHeaderMenuItem(['Tools', menuId]);\nconsole.log('移除结果：', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

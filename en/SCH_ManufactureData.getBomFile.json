@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 导出 xlsx 格式 BOM，只包含标记了加入 BOM 的元件\nconst bomFile = await eda.sch_ManufactureData.getBomFile(\n    '嘉立创示例_BOM',\n    'xlsx',\n    undefined,\n    [{ property: 'Add into BOM', includeValue: 'yes' }]\n);\n\n// 2. 查看导出结果\nconsole.log('导出文件名：', bomFile?.name);\nconsole.log('文件大小：', bomFile?.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "deleteByUuid",
     "className": "LIB_Classification",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建一个测试分类作为删除对象（复用模块库，ELIB_LibraryType.CBB = '1'）\nconst name = '嘉立创示例_待删除UUID分类_' + Date.now();\nconst index = await eda.lib_Classification.createPrimary(libraryUuid, '1', name);\n\n// 3. 按分类 UUID 删除\nconst deleted = await eda.lib_Classification.deleteByUuid(\n  libraryUuid,\n  index.primaryClassificationUuid\n);\n\n// 删除类保留现场（分类已不存在，库面板中可确认）\n\nconsole.log('name:', name);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除指定 UUID 的分类",

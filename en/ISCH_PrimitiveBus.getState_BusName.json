@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_BusName",
     "className": "ISCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条名为 DATA[0..7] 的测试总线（总线名称必须是合法切片格式，SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000]);\n\n// 2. 读取总线名称\nconst busName = bus.getState_BusName();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveBus.delete([bus.getState_PrimitiveId()]);\n\nconsole.log('busName:', busName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：总线名称",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "SCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两条测试导线，分别属于不同网络（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst wire1 = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\nconst wire2 = await eda.sch_PrimitiveWire.create([x, y + 200, x + 400, y + 200], 'SIG_B');\nconst wire1Id = wire1.getState_PrimitiveId();\n\n// 2. 不传参数，获取当前原理图页上的全部导线\nconst all = await eda.sch_PrimitiveWire.getAll();\n\n// 3. 传网络名称，只获取该网络的导线\nconst onlyA = await eda.sch_PrimitiveWire.getAll('SIG_A');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveWire.delete([wire1.getState_PrimitiveId(), wire2.getState_PrimitiveId()]);\n\nconsole.log('total wires:', all.length);\nconsole.log('marker wire found:', all.some(w => w.getState_PrimitiveId() === wire1Id));\nconsole.log('SIG_A wires:', onlyA.length);\nconsole.log('SIG_A all same net:', onlyA.every(w => w.getState_Net() === 'SIG_A'));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有导线",

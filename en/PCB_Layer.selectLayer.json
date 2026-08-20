@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "selectLayer",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 切换当前工作层到底层（BOTTOM=2）\nconst selectResult = await eda.pcb_Layer.selectLayer(2);\n\n// 2. 再切回顶层（TOP=1），恢复常用工作层\nconst restoreResult = await eda.pcb_Layer.selectLayer(1);\n\nconsole.log('selectResult:', selectResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "选中图层",

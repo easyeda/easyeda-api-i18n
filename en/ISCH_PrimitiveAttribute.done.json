@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "ISCH_PrimitiveAttribute",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 记录修改前的字号和旋转角度\nconst fontSizeBefore = designator.getState_FontSize();\nconst rotationBefore = designator.getState_Rotation();\n\n// 4. 批量修改两个属性，一次 done() 提交\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_FontSize(50);\nasyncAttr.setState_Rotation(90);\nawait asyncAttr.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('fontSize:', fontSizeBefore, '→', refetched.getState_FontSize());\nconsole.log('rotation:', rotationBefore, '→', refetched.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

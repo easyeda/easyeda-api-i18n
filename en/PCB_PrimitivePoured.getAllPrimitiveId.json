@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "PCB_PrimitivePoured",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取画布上全部覆铜填充的图元 ID\nconst ids = await eda.pcb_PrimitivePoured.getAllPrimitiveId();\nif (!ids || ids.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\n\n// 2. 任取一个 ID 反查覆铜填充对象，验证列表有效\nconst poured = await eda.pcb_PrimitivePoured.get(ids[0]);\n\nconsole.log('total poured ids:', ids.length);\nconsole.log('refetched primitiveType:', poured.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有覆铜填充的图元 ID",

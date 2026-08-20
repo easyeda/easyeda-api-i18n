@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "deleteNetClass",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 建一个待删除的网络类（重名创建是幂等的，重复运行也安全）\nawait eda.pcb_Drc.createNetClass('嘉立创示例_待删网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 2. 删除该网络类\nconst result = await eda.pcb_Drc.deleteNetClass('嘉立创示例_待删网络类');\n\nconsole.log('result:', result);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除网络类",

@@ -12,8 +12,20 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
-    }
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 把当前图页导出为 PDF（'PDF' 对应 ESCH_ExportDocumentFileType.PDF）\n// const pdfFile = await eda.sch_ManufactureData.getExportDocumentFile(\n//     '嘉立创示例_原理图',\n//     'PDF',\n//     undefined,\n//     'Current Schematic Page'\n// );\n// console.log('导出文件名：', pdfFile?.name);\n\n// 2. 也可以导出 PNG 位图，并通过类型特定参数控制主题和线宽\n// const pngFile = await eda.sch_ManufactureData.getExportDocumentFile(\n//     '嘉立创示例_原理图',\n//     'PNG',\n//     { theme: 'Black on White', lineWidth: 'Always 1px' },\n//     'All Schematic',\n//     { outputMethod: 'Separated sheet' }  // 多图页时逐页分张输出\n// );\n// console.log('导出文件名：', pngFile?.name);\n\n// 3. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地\nconsole.log('演示调用：getExportDocumentFile(文件名, 文件类型, 显示参数, 导出范围, 多页参数)');\n```"
+        }
+      ]
+    },
+    "versionTags": [
+      {
+        "tag": "DEPRECATED since EDA v4.1",
+        "position": "inline",
+        "field": "deprecated"
+      }
+    ]
   },
   "_source": {
     "title": "获取导出文档文件",
@@ -23,7 +35,8 @@
     "params.typeSpecificParams": "类型特定参数",
     "params.object": "对象",
     "params.objectSpecificParams": "对象特定参数",
-    "returns": "导出文档文件数据（或压缩包）"
+    "returns": "导出文档文件数据（或压缩包）",
+    "deprecated": "-"
   },
   "title": "Get Export document file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
@@ -32,5 +45,6 @@
   "params.typeSpecificParams": "Type-specific parameters",
   "params.object": "Object",
   "params.objectSpecificParams": "Object-specific parameters",
-  "returns": "Exported document file data (or archive)"
+  "returns": "Exported document file data (or archive)",
+  "deprecated": null
 }

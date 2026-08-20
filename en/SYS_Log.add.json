@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "add",
     "className": "SYS_Log",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 写入三条不同类型的日志（同步调用，立即生效）\neda.sys_Log.add('嘉立创示例_插件启动，开始处理任务');\neda.sys_Log.add('嘉立创示例_检测到网络波动，将自动重试', 'warn');\neda.sys_Log.add('嘉立创示例_文件解析失败', 'error');\n\n// 2. 查询日志面板，确认条目已写入（find 返回 Promise，需要 await）\nconst found = await eda.sys_Log.find('嘉立创示例_');\nconsole.log('写入的日志条目数：', found.length);\nconsole.log('其中一条：', found[0].message, '（类型：', found[0].type + '）');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "添加日志条目",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_LineType",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个虚线边框的测试矩形（末参 1 = 虚线，SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100, 0, 0, '#FF0000', null, 6, 1);\n\n// 2. 读取线型\nconst lineType = rect.getState_LineType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('lineType:', lineType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：线型",

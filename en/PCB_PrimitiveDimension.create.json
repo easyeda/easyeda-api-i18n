@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机基准坐标，避免与画布上已有的标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 在顶层丝印（3）创建长度标注：测量 (x, y) 到 (x+2000, y) 的水平距离，\n//    箭头端点向内收 200mil，单位毫米（mm），线宽 10mil，精度 2 位小数\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm',\n  10,\n  2,\n  false\n);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', dim.getState_PrimitiveId());\nconsole.log('dimensionType:', dim.getState_DimensionType());\nconsole.log('layer:', dim.getState_Layer());\nconsole.log('unit:', dim.getState_Unit());\nconsole.log('lineWidth:', dim.getState_LineWidth());\nconsole.log('precision:', dim.getState_Precision());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建尺寸标注",

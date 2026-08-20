@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试焊盘（随机坐标避免与画布已有焊盘重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n\n// 2. 读取修改前的编号与旋转\nconst beforeNumber = pad.getState_PadNumber();\nconst beforeRotation = pad.getState_Rotation();\n\n// 3. 批量修改：编号 '1' → 'A1'，旋转 0 → 45 度\nawait eda.pcb_PrimitivePad.modify(padId, { padNumber: 'A1', rotation: 45 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitivePad.get(padId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', padId);\nconsole.log('padNumber:', beforeNumber, '→', refreshed.getState_PadNumber());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改焊盘",

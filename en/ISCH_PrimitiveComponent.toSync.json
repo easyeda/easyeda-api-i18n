@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toSync",
     "className": "ISCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 放置一个测试器件（创建后默认处于异步模式）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 转换为同步图元\nconst syncComp = comp.toSync();\n\n// 4. 同步模式下写位号，立即生效，无需 done()\nsyncComp.setState_Designator('C400');\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveComponent.get(compId);\n\nconsole.log('isAsync after toSync:', syncComp.isAsync());\nconsole.log('designator: C? →', refetched.getState_Designator());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为同步图元",

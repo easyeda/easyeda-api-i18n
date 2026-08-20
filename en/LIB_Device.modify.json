@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建修改对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst deviceUuid = await eda.lib_Device.create(\n  libraryUuid,\n  '嘉立创示例_修改前_' + Date.now(),\n  [],\n  { symbolType: 2 },\n  '修改前的描述'\n);\n\n// 2. 修改名称和描述（分类保持不变传 []）\nconst newName = '嘉立创示例_修改后_' + Date.now();\nconst modified = await eda.lib_Device.modify(deviceUuid, libraryUuid, newName, [], '修改后的描述');\n\n// 3. 再补充修改扩展属性（位号、制造商）\nawait eda.lib_Device.modify(deviceUuid, libraryUuid, undefined, [], undefined, { designator: 'R', manufacturer: '嘉立创' });\n\n// 修改类保留现场\n\nconsole.log('deviceUuid:', deviceUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
+        }
+      ]
     }
   },
   "_source": {

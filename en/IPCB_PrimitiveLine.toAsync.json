@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合\nconst x = 52000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一条测试直线，切换到同步模式，让模式变化可观察\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\nline.toSync();\n\n// 3. 转换为异步图元\nconst asyncLine = line.toAsync();\n\n// 4. 异步模式下累计修改并提交\nasyncLine.setState_LineWidth(24);\nawait asyncLine.done();\n\n// 5. 从画布重新读取，确认提交生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', line.isAsync());\nconsole.log('lineWidth:', 10, '→', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

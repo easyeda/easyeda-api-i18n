@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "IPCB_PrimitiveComponentPad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置一个测试器件并取第一个焊盘（随机坐标，避免与历史保留图元重合）\nconst x = 5000 + Math.floor(Math.random() * 50000);\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, 5000);\nconst pin = (await comp.getAllPins())[0];\n\n// 2. 读取修改前的位置\nconst before = pin.getState_X();\n\n// 3. 异步模式修改焊盘 X 坐标后一次提交\nconst asyncPin = pin.toAsync();\nasyncPin.setState_X(before + 100);\nawait asyncPin.done();\n\n// 4. 重新获取器件焊盘，验证修改已在画布生效\nconst refreshed = (await eda.pcb_PrimitiveComponent.get([comp.getState_PrimitiveId()]))[0];\nconst after = (await refreshed.getAllPins())[0].getState_X();\n\nconsole.log('before:', before, '→ after:', after);\nconsole.log('moved:', after === before + 100);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条顶层测试覆铜边框作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_覆铜', 5, 10, false);\nconst pourId = pour.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部覆铜边框\nconst all = await eda.pcb_PrimitivePour.getAll();\n\n// 3. 按网络和层过滤：只取 GND 网络顶层（1）的覆铜边框\nconst gndTop = await eda.pcb_PrimitivePour.getAll('GND', 1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pourId]);\n\nconsole.log('total pours:', all.length);\nconsole.log('GND top layer pours:', gndTop.length);\nconsole.log('marker pour found in GND top layer:', gndTop.some(p => p.getState_PrimitiveId() === pourId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有覆铜边框图元",

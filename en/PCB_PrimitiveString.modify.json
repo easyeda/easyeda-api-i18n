@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveString",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试文本：顶层丝印（3），字号 45（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst text = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_待修改', 'default', 45, 6, 3, 0, false, 0, false, false);\nconst textId = text.getState_PrimitiveId();\n\n// 2. 读取修改前的内容与字号\nconst beforeText = text.getState_Text();\nconst beforeSize = text.getState_FontSize();\n\n// 3. 批量修改：更换文字内容并把字号从 45 调大到 60\nawait eda.pcb_PrimitiveString.modify(textId, { text: '嘉立创示例_已更新', fontSize: 60 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveString.get(textId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', textId);\nconsole.log('text:', beforeText, '→', refreshed.getState_Text());\nconsole.log('fontSize:', beforeSize, '→', refreshed.getState_FontSize());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改文本",

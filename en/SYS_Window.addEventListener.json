@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "addEventListener",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 注册 focus 监听（真实场景由用户切换窗口焦点触发，这里用合成事件模拟）\nconst removable = eda.sys_Window.addEventListener('focus', () => {\n  console.log('窗口获得焦点');\n});\n\n// 2. 检查返回的可移除对象，其中的 type 字段记录了监听的事件类型\nconsole.log('监听注册成功：', removable !== undefined, '，事件类型：', removable.type);\n\n// 3. 模拟一次获得焦点事件，回调同步触发\nwindow.dispatchEvent(new Event('focus'));\n\n// 4. 注销监听，恢复原状\neda.sys_Window.removeEventListener(removable);\nconsole.log('监听已注销');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "新增事件监听",

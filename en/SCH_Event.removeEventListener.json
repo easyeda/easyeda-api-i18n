@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "removeEventListener",
     "className": "SCH_Event",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_sch_event_remove';\n\n// 1. 先注册一个鼠标事件监听作为移除目标\neda.sch_Event.addMouseEventListener(listenerId, 'all', () => {}, false);\nconst registered = eda.sch_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 2. 移除该监听\nconst removed = eda.sch_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n\n// 3. 回读确认已不存在\nconst existAfter = eda.sch_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('existAfter:', existAfter);\n\n// 4. 重复移除同一 id：返回 false（本就未注册）\nconst removedAgain = eda.sch_Event.removeEventListener(listenerId);\nconsole.log('removedAgain:', removedAgain);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "移除事件监听",

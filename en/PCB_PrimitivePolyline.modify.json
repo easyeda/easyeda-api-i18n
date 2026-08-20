@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitivePolyline",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试折线（随机坐标避免与画布已有折线重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\nconst polylineId = polyline.getState_PrimitiveId();\n\n// 2. 读取修改前的线宽与层\nconst beforeWidth = polyline.getState_LineWidth();\nconst beforeLayer = polyline.getState_Layer();\n\n// 3. 批量修改：线宽 10 → 24，层从顶层（1）换到底层（2）\nawait eda.pcb_PrimitivePolyline.modify(polylineId, { lineWidth: 24, layer: 2 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitivePolyline.get(polylineId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', polylineId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('layer:', beforeLayer, '→', refreshed.getState_Layer());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改折线",

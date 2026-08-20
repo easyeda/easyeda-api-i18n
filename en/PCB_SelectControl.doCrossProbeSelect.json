@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "doCrossProbeSelect",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建 2 个挂同一网络的测试焊盘，作为交叉选择的目标\nconst netName = '嘉立创示例_NET';\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\n\n// 2. 按网络名交叉选择（highlight=true 高亮，select=true 选中）\nconst crossProbed = await eda.pcb_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n\n// 3. 确认该网络上的焊盘已进入选中集\nconst selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\n\n// 4. 清理选中状态和测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "进行交叉选择",

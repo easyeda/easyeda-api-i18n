@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试填充（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst fill1 = await eda.pcb_PrimitiveFill.create(\n  1,\n  eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]),\n  '',\n  0,\n  10,\n  false\n);\nconst fill2 = await eda.pcb_PrimitiveFill.create(\n  2,\n  eda.pcb_MathPolygon.createPolygon(['R', x, y + 1000, 500, 300, 0, 0]),\n  '',\n  0,\n  10,\n  false\n);\n\n// 2. 传单个 ID 字符串，返回单个填充对象\nconst single = await eda.pcb_PrimitiveFill.get(fill1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回填充对象数组\nconst arr = await eda.pcb_PrimitiveFill.get([\n  fill1.getState_PrimitiveId(),\n  fill2.getState_PrimitiveId()\n]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveFill.delete([\n  fill1.getState_PrimitiveId(),\n  fill2.getState_PrimitiveId()\n]);\n\nconsole.log('single layer:', single.getState_Layer());\nconsole.log('single fillMode:', single.getState_FillMode());\nconsole.log('array length:', arr.length);\nconsole.log('fill2 layer:', arr[1].getState_Layer());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取填充",

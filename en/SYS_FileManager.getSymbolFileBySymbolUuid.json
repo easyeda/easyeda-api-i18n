@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 列出系统库符号，取第一个的 UUID\nconst symbolList = await eda.lib_Symbol.search('', undefined, [], undefined, 5, 1);\nconst symbol = symbolList[0];\n\n// 2. 按符号 UUID 获取符号文件\nconst symbolFile = await eda.sys_FileManager.getSymbolFileBySymbolUuid(symbol.uuid);\n\n// 3. 输出符号与文件信息（size 单位为字节）\nconsole.log('符号名：', symbol.name);\nconsole.log('文件名：', symbolFile.name);\nconsole.log('文件大小：', symbolFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

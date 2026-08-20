@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "rotate",
     "className": "SYS_Math",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 定义一个矩形安装座\nconst mount = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n\n// 2. 不传中心：绕质心 (50, 40) 逆时针旋转 90 度，占位原地转身\nconst selfRotated = eda.sys_Math.rotate(mount, 90);\nconsole.log('绕质心旋转后的顶点：', JSON.stringify(selfRotated));\n\n// 3. 传中心参数：绕坐标原点 (0, 0) 旋转 90 度，图形整体公转\n//    逆时针 90 度把 (x, y) 映射为 (-y, x)\nconst originRotated = eda.sys_Math.rotate(mount, 90, 0, 0);\nconsole.log('绕原点旋转后的顶点：', JSON.stringify(originRotated));\n\n// 4. 负角度顺时针旋转，与正角度互为逆变换\nconst back = eda.sys_Math.rotate(originRotated, -90, 0, 0);\nconsole.log('再顺时针转回后的第一个点：', JSON.stringify(back[0]));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "旋转多边形",

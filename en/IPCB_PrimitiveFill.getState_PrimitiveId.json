@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "IPCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个矩形填充\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n\n// 2. 读取图元 ID\nconst primitiveId = fill.getState_PrimitiveId();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveFill.delete([fill.getState_PrimitiveId()]);\n\nconsole.log('primitiveId:', primitiveId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

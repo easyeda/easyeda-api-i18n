@@ -20,7 +20,12 @@
           "key": "remarks.text.2"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个无孔的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', null, 0, 0, 0, false, 0);\nconst beforeHole = pad.getState_Hole();\n\n// 2. 异步模式下设置 35mil 圆孔并提交\nconst a = pad.toAsync();\na.setState_Hole(['ROUND', 35]);\nawait a.done();\n\n// 3. 从画布重新读取，确认孔已生效且层被联动切到多层（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('hole:', beforeHole, '→', ref.getState_Hole());\nconsole.log('layer:', ref.getState_Layer());\n```"
+        }
+      ]
     }
   },
   "_source": {

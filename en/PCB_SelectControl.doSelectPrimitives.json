@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "doSelectPrimitives",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试焊盘\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n\n// 2. 用图元 ID 选中焊盘\nconst selected = await eda.pcb_SelectControl.doSelectPrimitives([padId]);\nconsole.log('selected:', selected);\n\n// 3. 确认焊盘已在选中集里\nconst selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中数量：', selectedIds.length);\nconsole.log('包含测试焊盘：', selectedIds.includes(padId));\n\n// 4. 清理：清除选中并删除测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete([padId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "使用图元 ID 选中图元",

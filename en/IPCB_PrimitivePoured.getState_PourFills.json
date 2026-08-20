@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PourFills",
     "className": "IPCB_PrimitivePoured",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 读取全部填充子区域\nconst pourFills = poured.getState_PourFills();\nconsole.log('pourFillCount:', pourFills.length);\n\n// 3. 输出第一个子区域的关键属性（path 是复杂多边形对象，只输出有无）\nif (pourFills.length > 0) {\n  const first = pourFills[0];\n  console.log('第一个子区域 fill：', first.fill, 'lineWidth:', first.lineWidth);\n  console.log('第一个子区域 path：', first.path ? '已包含' : '未包含');\n}\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：覆铜填充区域",

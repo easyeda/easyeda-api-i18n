@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getUrlParam",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 备份当前完整地址（用于演示后还原）\nconst originalHref = location.href;\n\n// 2. 用 URL 对象追加示例参数并写入地址栏\nconst url = new URL(location.href);\nurl.searchParams.set('嘉立创示例_参数', '演示值');\neda.sys_Window.urlPushState(url.href);\n\n// 3. 读取刚写入的参数，以及一个不存在的参数\nconsole.log('参数值：', eda.sys_Window.getUrlParam('嘉立创示例_参数'));\nconsole.log('不存在的参数返回：', eda.sys_Window.getUrlParam('嘉立创示例_不存在'));\n\n// 4. 还原原地址\neda.sys_Window.urlReplaceState(originalHref);\nconsole.log('地址已还原');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取 URL 参数",

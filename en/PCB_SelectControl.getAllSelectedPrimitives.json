@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllSelectedPrimitives",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试焊盘并选中\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\nawait eda.pcb_SelectControl.doSelectPrimitives([padId]);\n\n// 2. 获取所有已选中图元的图元对象\nconst primitives = await eda.pcb_SelectControl.getAllSelectedPrimitives();\nconsole.log('选中图元数量：', primitives.length);\n\n// 3. 图元对象可直接调用图元方法读取属性\nconst first = primitives[0];\nconsole.log('primitiveId:', first.getState_PrimitiveId());\nconsole.log('layer:', first.getState_Layer());\n\n// 4. 清理：清除选中并删除测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete([padId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询所有已选中图元的图元对象",

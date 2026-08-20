@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifyPanelName",
     "className": "DMT_Panel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 改名目标优先用当前面板（它必然已打开），其次用列表里的现有面板，都没有时创建一个\nlet target = await eda.dmt_Panel.getCurrentPanelInfo();\nif (!target) {\n  const panels = await eda.dmt_Panel.getAllPanelsInfo();\n  target = panels[0];\n}\nlet createdHere = false;\nif (!target) {\n  createdHere = true;\n  const uuid = await eda.dmt_Panel.createPanel();\n  await new Promise(r => setTimeout(r, 1500));\n  target = await eda.dmt_Panel.getPanelInfo(uuid);\n}\n\n// 2. 打开目标面板（改名只对已打开的面板生效）\nawait eda.dmt_EditorControl.openDocument(target.uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 3. 修改面板名称\nconst newName = '嘉立创示例_面板新名称';\nconst renamed = await eda.dmt_Panel.modifyPanelName(target.uuid, newName);\nconsole.log('renamed:', renamed);\n\n// 4. 等 1s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）\nawait new Promise(r => setTimeout(r, 1000));\nconst info = await eda.dmt_Panel.getPanelInfo(target.uuid);\nconsole.log('renamedTo:', info?.name);\nconsole.log('renameVerified:', (info?.name ?? '').toLowerCase() === newName.toLowerCase());\n\n// 5. 本例创建的测试面板验证后删除清理；现有面板保留改名现场，人工验收后可改回原名\nif (createdHere) {\n  await eda.dmt_Panel.deletePanel(target.uuid);\n}\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改面板名称",

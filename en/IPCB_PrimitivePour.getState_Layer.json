@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Layer",
     "className": "IPCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个顶层铜层（1）的覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_读层', 5, 10, false);\n\n// 3. 读取层号\nconst layer = pour.getState_Layer();\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('layer:', layer);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：层",

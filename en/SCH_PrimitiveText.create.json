@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机坐标，避免与画布上已有的文本重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一段完整样式的文本：旋转 90 度、红色、Arial 字体、字号 20、加粗、带下划线、居中对齐（CENTER = 5）\nconst text = await eda.sch_PrimitiveText.create(\n  x,\n  y,\n  '嘉立创示例_设计说明',\n  90,\n  '#FF0000',\n  'Arial',\n  20,\n  true,\n  false,\n  true,\n  5\n);\n\n// 3. 创建类保留现场，不删除图元；读回各属性确认样式已生效\nconsole.log('primitiveId:', text.getState_PrimitiveId());\nconsole.log('primitiveType:', text.getState_PrimitiveType());\nconsole.log('position:', text.getState_X(), text.getState_Y());\nconsole.log('content:', text.getState_Content());\nconsole.log('rotation:', text.getState_Rotation());\nconsole.log('textColor:', text.getState_TextColor());\nconsole.log('fontName:', text.getState_FontName());\nconsole.log('fontSize:', text.getState_FontSize());\nconsole.log('bold:', text.getState_Bold());\nconsole.log('italic:', text.getState_Italic());\nconsole.log('underLine:', text.getState_UnderLine());\nconsole.log('alignMode:', text.getState_AlignMode());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建文本",

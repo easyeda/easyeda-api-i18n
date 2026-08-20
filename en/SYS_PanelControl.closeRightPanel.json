@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "closeRightPanel",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先展开右侧面板制造“已打开”状态（不传 tab 则保持当前标签页）\neda.sys_PanelControl.openRightPanel();\nconsole.log('右侧面板已展开');\n\n// 2. 收起右侧面板（同步调用，无返回值）\neda.sys_PanelControl.closeRightPanel();\nconsole.log('右侧面板已收起');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "关闭右侧面板"

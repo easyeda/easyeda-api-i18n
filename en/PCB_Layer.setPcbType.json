@@ -24,7 +24,12 @@
           "key": "remarks.text.3"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录切换前的图层总数\nconst before = await eda.pcb_Layer.getAllLayers();\n\n// 2. 切换为 FPC 软板（FPC=2），自动新增补强层\nconst fpcResult = await eda.pcb_Layer.setPcbType(2);\n\n// 3. 查看切换后的图层总数变化\nconst fpcLayers = await eda.pcb_Layer.getAllLayers();\n\n// 4. 切回普通板材（NORMAL=1），恢复原板材类型\nconst restoreResult = await eda.pcb_Layer.setPcbType(1);\n\nconsole.log('fpcResult:', fpcResult);\nconsole.log('layerCountBefore:', before.length, '→ layerCountAfter:', fpcLayers.length);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
     }
   },
   "_source": {

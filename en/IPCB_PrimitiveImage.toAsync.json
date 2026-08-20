@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveImage",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个 400 x 300 的顶层图像\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n\n// 2. 切换异步模式后批量修改：放大到 600 x 450\nconst asyncImage = image.toAsync();\nasyncImage.setState_Width(600);\nasyncImage.setState_Height(450);\nawait asyncImage.done();\n\n// 3. 从画布重新读取，确认批量修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveImage.get(image.getState_PrimitiveId());\n\nconsole.log('width:', refetched.getState_Width());\nconsole.log('height:', refetched.getState_Height());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

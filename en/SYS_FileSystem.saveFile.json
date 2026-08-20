@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 构造要保存的 CSV 内容\nconst content = '编号,器件,数量\\n1,C0402,10\\n2,C0603,20';\nconst blob = new Blob([content], { type: 'text/csv' });\n\n// 2. 保存到本地（完成后 Promise 才结束）\nawait eda.sys_FileSystem.saveFile(blob, '嘉立创示例_BOM导出.csv');\n\nconsole.log('已保存文件：', '嘉立创示例_BOM导出.csv', blob.size, '字节');\n```"
+        }
+      ]
     }
   },
   "_source": {

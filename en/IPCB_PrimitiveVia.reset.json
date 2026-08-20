@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试过孔重合\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 切换异步模式，累计一处未提交的外径修改（40 → 99）\nconst asyncVia = via.toAsync();\nasyncVia.setState_Diameter(99);\n\n// 3. 重置：丢弃未提交的修改，回到画布当前状态\nawait asyncVia.reset();\n\n// 4. 从画布重新读取，外径仍是 40（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('diameter after reset:', refetched.getState_Diameter());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 部分重叠的两个矩形 → true\nconst trace = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst keepout = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\nconsole.log('走线闯入禁布区：', eda.sys_Math.intersects(trace, keepout));\n\n// 2. 完全分离 → false\nconst far = [{ x: 200, y: 0 }, { x: 280, y: 0 }, { x: 280, y: 40 }, { x: 200, y: 40 }];\nconsole.log('走线远离另一区域：', eda.sys_Math.intersects(trace, far));\n\n// 3. 完全包含也是相交的一种 → true\nconst small = [{ x: 20, y: 20 }, { x: 60, y: 20 }, { x: 60, y: 50 }, { x: 20, y: 50 }];\nconsole.log('小区域整体在走线范围内：', eda.sys_Math.intersects(trace, small));\n\n// 4. 仅边界贴合同样算相交 → true\nconst touching = [{ x: 100, y: 0 }, { x: 180, y: 0 }, { x: 180, y: 40 }, { x: 100, y: 40 }];\nconsole.log('两区域边界贴合：', eda.sys_Math.intersects(trace, touching));\n```"
+        }
+      ]
     }
   },
   "_source": {

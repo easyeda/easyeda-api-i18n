@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 列出系统库中的复用模块，取第一个的 UUID\nconst cbbList = await eda.lib_Cbb.search('', undefined, undefined, 5);\nconst cbb = cbbList[0];\n\n// 2. 按复用模块 UUID 获取文件，props.fileName 指定导出文件名\nconst cbbFile = await eda.sys_FileManager.getCbbFileByCbbUuid(cbb.uuid, undefined, {\n  fileName: '嘉立创示例_复用模块',\n});\n\n// 3. 输出复用模块与文件信息（size 单位为字节）\nconsole.log('复用模块名：', cbb.name);\nconsole.log('文件名：', cbbFile.name);\nconsole.log('文件大小：', cbbFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

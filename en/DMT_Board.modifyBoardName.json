@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifyBoardName",
     "className": "DMT_Board",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 取第一块板子，记录原名称\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst originalName = boards[0].name;\nconst newName = originalName + '_tmp';\n\n// 2. 改名并输出结果\nconst modified = await eda.dmt_Board.modifyBoardName(originalName, newName);\nconsole.log('original:', originalName);\nconsole.log('new:', newName);\nconsole.log('modified:', modified);\n\n// 3. 等待改名生效后改回原名称（改名是异步提交，紧跟的第二次改名会返回 false）\nawait new Promise(r => setTimeout(r, 1000));\nconst restored = await eda.dmt_Board.modifyBoardName(newName, originalName);\nconsole.log('restored:', restored);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改板子名称",

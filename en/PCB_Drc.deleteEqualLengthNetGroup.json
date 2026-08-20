@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "deleteEqualLengthNetGroup",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 建一个待删除的等长网络组（重名创建是幂等的，重复运行也安全）\nawait eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_待删等长组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\n// 2. 删除该等长网络组\nconst result = await eda.pcb_Drc.deleteEqualLengthNetGroup('嘉立创示例_待删等长组');\n\nconsole.log('result:', result);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除等长网络组",

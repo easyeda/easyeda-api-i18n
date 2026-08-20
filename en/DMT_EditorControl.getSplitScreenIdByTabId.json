@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getSplitScreenIdByTabId",
     "className": "DMT_EditorControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个原理图页，拿到它的标签页 ID\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 查询该标签页所在的分屏\nconst splitScreenId = await eda.dmt_EditorControl.getSplitScreenIdByTabId(tabId);\nconsole.log('tabId:', tabId);\nconsole.log('splitScreenId:', splitScreenId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "使用标签页 ID 获取分屏 ID",

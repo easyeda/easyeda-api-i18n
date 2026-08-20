@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 制造\"存在子分屏\"的前提：归一化布局后打开两个文档并拆出一个分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nawait eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n\n// 2. 合并所有分屏，标签页全部回到初始分屏\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n\n// 3. 回读分屏树，确认已无子分屏\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\nconsole.log('child splits left:', tree.children?.length ?? 0);\n```"
+        }
+      ]
     }
   },
   "_source": {

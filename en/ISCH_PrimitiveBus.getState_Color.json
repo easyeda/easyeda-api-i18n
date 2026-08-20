@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Color",
     "className": "ISCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条红色测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000], '#FF0000', 6, 1);\n\n// 2. 读取总线颜色\nconst color = bus.getState_Color();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveBus.delete([bus.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：总线颜色",

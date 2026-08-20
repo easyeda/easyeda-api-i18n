@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getCurrentRenderedAreaImage",
     "className": "DMT_EditorControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个原理图页，确定截图的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 获取该画布当前渲染区域的图像\nconst image = await eda.dmt_EditorControl.getCurrentRenderedAreaImage(tabId);\n\n// 3. 读取 Blob 的基本信息（字节数与 MIME 类型）\nconsole.log('isBlob:', image instanceof Blob);\nconsole.log('size:', image.size);\nconsole.log('mimeType:', image.type);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取画布渲染区域图像",

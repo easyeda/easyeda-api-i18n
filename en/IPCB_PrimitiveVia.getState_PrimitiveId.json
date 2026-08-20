@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 读取图元 ID\nconst primitiveId = via.getState_PrimitiveId();\n\n// 3. 用该 ID 从画布重新读取过孔，验证 ID 有效\nconst refetched = await eda.pcb_PrimitiveVia.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched type:', refetched.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

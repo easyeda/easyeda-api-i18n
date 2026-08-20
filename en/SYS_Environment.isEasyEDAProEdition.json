@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isEasyEDAProEdition",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断是否为 EasyEDA Pro 国际版（同步返回布尔值）\nconst isEasyEDAPro = eda.sys_Environment.isEasyEDAProEdition();\n\n// 2. 输出判断结果（国际版为 true，嘉立创 EDA 专业版为 false）\nconsole.log('是否 EasyEDA Pro 国际版：', isEasyEDAPro);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否为 EasyEDA Pro 版本",

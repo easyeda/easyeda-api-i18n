@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Net",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段指定网络的测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('嘉立创示例_NET', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取网络名称\nconst net = arc.getState_Net();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：网络名称",

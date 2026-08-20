@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "moveProjectToFolder",
     "className": "DMT_Project",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录当前工程的位置，作为移动后恢复的锚点\nconst info = await eda.dmt_Project.getCurrentProjectInfo();\nconst projectUuid = info.uuid;\nconst teamUuid = info.teamUuid;\nconst originalFolderUuid = info.folderUuid; // 可能为 undefined（团队根目录）\n\n// 2. 创建目标文件夹，等待 1.5s 让工作区同步\nconst targetFolderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_目标文件夹', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 把当前工程移到目标文件夹下\nconst moved = await eda.dmt_Project.moveProjectToFolder(projectUuid, targetFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 4. 回读验证工程已落到目标文件夹\nconst after = await eda.dmt_Project.getCurrentProjectInfo();\nconst folderChanged = after?.folderUuid === targetFolderUuid;\n\n// 5. 恢复：移回原位置（原为根目录时传 undefined）\nconst restored = await eda.dmt_Project.moveProjectToFolder(projectUuid, originalFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\nconsole.log('moved:', moved);\nconsole.log('folderChanged:', folderChanged);\nconsole.log('restored:', restored);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "移动工程到文件夹",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "IPCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，在顶层丝印层放置一个内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\n\n// 2. 读取图元 ID\nconst primitiveId = obj.getState_PrimitiveId();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveObject.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

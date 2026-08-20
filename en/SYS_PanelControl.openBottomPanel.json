@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openBottomPanel",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开底部面板并切换到日志标签页（'log' 不依赖文档类型，最通用）\neda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开，并切换到日志标签页');\n\n// 2. 收起面板还原界面（自建自删，保证案例可重复运行）\neda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起，界面还原');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开底部面板",

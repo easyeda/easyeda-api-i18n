@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Rotation",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试矩形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个未旋转的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 200, 100);\n\n// 3. 切换异步模式，提交旋转 30°\nconst asyncRect = rect.toAsync();\nasyncRect.setState_Rotation(30);\nawait asyncRect.done();\n\n// 4. 从画布重新读取：形状已旋转（左上角坐标变化），角度读数仍为 0\nconst refetched = await eda.sch_PrimitiveRectangle.get(rect.getState_PrimitiveId());\n\nconsole.log('rotation:', 0, '→', refetched.getState_Rotation());\nconsole.log('topLeft moved by rotate:', x, '→', refetched.getState_TopLeftX());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：旋转角度",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveType",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000]);\n\n// 2. 读取图元类型\nconst primitiveType = wire.getState_PrimitiveType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元类型",

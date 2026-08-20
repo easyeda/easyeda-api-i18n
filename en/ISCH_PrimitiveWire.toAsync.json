@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试导线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条测试导线（创建后默认处于异步模式）\nconst wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], null, null, 6, null);\n\n// 3. 转换为异步图元\nconst asyncWire = wire.toAsync();\n\n// 4. 异步模式下累计修改并提交\nasyncWire.setState_LineWidth(10);\nawait asyncWire.done();\n\n// 5. 从画布重新读取，确认提交生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveWire.get(wire.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', wire.isAsync());\nconsole.log('lineWidth:', 6, '→', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

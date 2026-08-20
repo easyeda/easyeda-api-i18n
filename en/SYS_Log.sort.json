@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 写入三种不同类型的示例日志，便于观察筛选效果\neda.sys_Log.add('嘉立创示例_筛选演示：常规信息');\neda.sys_Log.add('嘉立创示例_筛选演示：电压偏高', 'warn');\neda.sys_Log.add('嘉立创示例_筛选演示：铺铜失败', 'error');\n\n// 2. 不传参数，获取全部类型的日志（返回 Promise，需要 await）\nconst all = await eda.sys_Log.sort();\nconsole.log('全部日志条目数：', all.length);\n\n// 3. 传入类型数组，只筛选警告和错误两类\nconst problems = await eda.sys_Log.sort(['warn', 'error']);\nconsole.log('警告和错误条目数：', problems.length);\nconsole.log('问题明细：', problems.map(line => `[${line.type}] ${line.message}`).join('；'));\n```"
+        }
+      ]
     }
   },
   "_source": {

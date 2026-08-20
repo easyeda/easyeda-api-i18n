@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveType",
     "className": "IPCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个矩形区域\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\n\n// 2. 读取图元类型\nconst primitiveType = region.getState_PrimitiveType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元类型",

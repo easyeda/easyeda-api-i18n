@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的导线重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条两段相连的 L 形导线：先向右再向上，段与段必须首尾相连且各自水平或垂直\nconst wire = await eda.sch_PrimitiveWire.create(\n  [[x, y, x + 400, y], [x + 400, y, x + 400, y + 200]],\n  'SIG_A',    // 网络名称（自由字符串，未指定时按落点自动推断）\n  '#FF0000',  // 导线颜色\n  6,          // 线宽（范围 1-10）\n  1           // 线型：1 = DASHED（虚线）\n);\n\n// 3. 创建类保留现场，不删除图元；Line 读回是画布规格化坐标（端点顺序可能与传入相反），只打印不做断言\nconsole.log('primitiveId:', wire.getState_PrimitiveId());\nconsole.log('primitiveType:', wire.getState_PrimitiveType());\nconsole.log('net:', wire.getState_Net());\nconsole.log('color:', wire.getState_Color());\nconsole.log('lineWidth:', wire.getState_LineWidth());\nconsole.log('line:', JSON.stringify(wire.getState_Line()));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建导线",

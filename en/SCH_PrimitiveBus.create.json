@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的总线重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条两段相连的 L 形总线：先向右再向上，段与段必须首尾相连且各自水平或垂直\nconst bus = await eda.sch_PrimitiveBus.create(\n  'DATA[0..7]',\n  [[x, y, x + 400, y], [x + 400, y, x + 400, y + 200]],\n  '#FF0000',  // 总线颜色\n  6,          // 线宽（范围 1-10）\n  1           // 线型：1 = DASHED（虚线）\n);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', bus.getState_PrimitiveId());\nconsole.log('primitiveType:', bus.getState_PrimitiveType());\nconsole.log('busName:', bus.getState_BusName());\nconsole.log('color:', bus.getState_Color());\nconsole.log('lineWidth:', bus.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建总线",

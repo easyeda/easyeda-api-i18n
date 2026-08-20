@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 复制一块板子作为删除目标，避免误删工程里有用的板子\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst tempName = await eda.dmt_Board.copyBoard(boards[0].name);\nconsole.log('temp board:', tempName);\n\n// 2. 删除该板子\nconst deleted = await eda.dmt_Board.deleteBoard(tempName);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
     }
   },
   "_source": {

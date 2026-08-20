@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "export",
     "className": "SYS_Log",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先写入几条不同类型的日志，保证导出内容可辨识\neda.sys_Log.add('嘉立创示例_导出演示：信息条目');\neda.sys_Log.add('嘉立创示例_导出演示：警告条目', 'warn');\n\n// 2. 导出全部日志（同步调用，触发一次文件保存）\neda.sys_Log.export();\nconsole.log('已导出全部日志');\n\n// 3. 按类型筛选导出，只导出警告和错误级别（数组可同时指定多种类型）\neda.sys_Log.export(['warn', 'error']);\nconsole.log('已导出 warn 和 error 类型的日志');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "导出日志",

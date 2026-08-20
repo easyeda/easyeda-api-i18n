@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_X",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 读取中心点横坐标\nconst viaX = via.getState_X();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('x:', viaX);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：坐标 X",

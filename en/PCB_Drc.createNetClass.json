@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createNetClass",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放两个带网络的测试焊盘，让 JLC_DEMO_P / JLC_DEMO_N 进入网表\nconst x = 3000 + Math.floor(Math.random() * 20000);\nconst padP = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], 'JLC_DEMO_P', null, 0, 0, 0, false, 0);\nconst padN = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], 'JLC_DEMO_N', null, 0, 0, 0, false, 0);\n\n// 2. 创建网络类并纳入这两个网络，颜色用于面板区分（保留现场供观察）\nconst created = await eda.pcb_Drc.createNetClass('嘉立创示例_网络类', ['JLC_DEMO_P', 'JLC_DEMO_N'], { r: 255, g: 0, b: 0, alpha: 1 });\n\nconsole.log('created:', created);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建网络类",

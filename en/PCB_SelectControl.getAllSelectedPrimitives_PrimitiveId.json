@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllSelectedPrimitives_PrimitiveId",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建 2 个测试焊盘并选中\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\nawait eda.pcb_SelectControl.doSelectPrimitives(padIds);\n\n// 2. 查询所有已选中图元的图元 ID\nconst selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\nconsole.log('包含全部测试焊盘：', padIds.every(id => selectedIds.includes(id)));\n\n// 3. 清理：清除选中并删除测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询所有已选中图元的图元 ID",

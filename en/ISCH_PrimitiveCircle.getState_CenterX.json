@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_CenterX",
     "className": "ISCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个测试圆，圆心 (400, 300)、半径 150（SCH 坐标单位 10mil）\nconst circle = await eda.sch_PrimitiveCircle.create(400, 300, 150);\n\n// 2. 读取圆心 X\nconst centerX = circle.getState_CenterX();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('centerX:', centerX);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：圆心 X",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "clearTimeoutTimer",
     "className": "SYS_Timer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 挂一个 2 秒后才触发的定时器\nlet fired = false;\neda.sys_Timer.setTimeoutTimer('嘉立创示例_取消单次', 2000, () => { fired = true; });\n\n// 2. 在触发前清除它\nconst cleared = eda.sys_Timer.clearTimeoutTimer('嘉立创示例_取消单次');\n\n// 3. 对已清除的 ID 再清除一次，返回 false（定时器已不存在）\nconst again = eda.sys_Timer.clearTimeoutTimer('嘉立创示例_取消单次');\n\n// 4. 等过原定触发时间，确认回调没有被触发\nawait new Promise(resolve => setTimeout(resolve, 1000));\n\nconsole.log('清除结果：', cleared);\nconsole.log('再次清除同一 ID：', again);\nconsole.log('回调是否仍被触发：', fired);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "清除指定单次定时器",

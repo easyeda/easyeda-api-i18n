@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_EndY",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段测试圆弧，终点 (1500, 1300)（PCB 坐标单位 mil）\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取终止位置 Y\nconst endY = arc.getState_EndY();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('endY:', endY);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：终止位置 Y",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getSchematicInfo",
     "className": "DMT_Schematic",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试原理图并等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 按 UUID 查询原理图详细属性\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\n\n// 3. 输出属性\nconsole.log('name:', info?.name);\nconsole.log('itemType:', info?.itemType);\nconsole.log('parentProjectUuid:', info?.parentProjectUuid);\nconsole.log('pages:', (info?.page || []).map(p => p.name).join(', '));\n\n// 4. 清理测试原理图\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取原理图的详细属性",

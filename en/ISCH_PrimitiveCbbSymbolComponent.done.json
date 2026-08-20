@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "ISCH_PrimitiveCbbSymbolComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试符号重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置一个测试复用模块符号（SCH 坐标单位 10mil）\nconst cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\nconst symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  { libraryUuid: cbb.libraryUuid, cbbUuid: cbb.uuid },\n  x, y\n);\n\n// 3. 切换异步模式，把符号向右移动 200（约 5mm）\nconst asyncSymbol = symbol.toAsync();\nasyncSymbol.setState_X(x + 200);\n\n// 4. 一次性提交到画布\nawait asyncSymbol.done();\n\n// 5. 从画布重新读取，确认位置修改已生效（保留现场供观察）\nconst refetched = await eda.sch_Primitive.getPrimitiveByPrimitiveId(symbol.getState_PrimitiveId());\n\nconsole.log('x:', x, '→', refetched.getState_X());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

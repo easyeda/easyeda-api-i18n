@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "extractProjectInfo",
     "className": "SYS_FileManager",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 导出当前工程为文件\nconst projectFile = await eda.sys_FileManager.getProjectFile();\n\n// 2. 从工程文件中提取工程配置信息\nconst projectInfo = await eda.sys_FileManager.extractProjectInfo(projectFile);\n\n// 3. 输出工程配置（title 是工程标题，editorVersion 是导出时的编辑器版本）\nconsole.log('工程标题：', projectInfo.title);\nconsole.log('编辑器版本：', projectInfo.editorVersion);\nconsole.log('是否复用模块工程：', projectInfo.cbbProject);\n\n// 4. 输出标签（工程未设置标签时 tags 为 undefined，兜底为空数组）\nconsole.log('标签：', (projectInfo.tags ?? []).join('、'));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "提取文件内的工程配置信息",

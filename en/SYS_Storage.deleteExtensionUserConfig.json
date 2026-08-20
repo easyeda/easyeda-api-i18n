@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 写入一条待删除的演示配置\nawait eda.sys_Storage.setExtensionUserConfig('嘉立创示例_临时项', '待删除数据');\n\n// 2. 删除该配置\nconst deleted = await eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_临时项');\n\n// 3. 复查：删除后再读取该 key，应为 undefined\nconst after = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_临时项');\n\nconsole.log('删除结果：', deleted);\nconsole.log('删除后再读取：', after);\n```"
+        }
+      ]
     }
   },
   "_source": {

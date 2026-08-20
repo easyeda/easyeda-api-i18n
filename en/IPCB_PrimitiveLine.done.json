@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合\nconst x = 42000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一条测试直线走线\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n\n// 3. 切换异步模式，连续累计两处修改（线宽 + 换层）\nconst asyncLine = line.toAsync();\nasyncLine.setState_LineWidth(24);\nasyncLine.setState_Layer(2);\n\n// 4. 一次性提交到画布\nawait asyncLine.done();\n\n// 5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\n\nconsole.log('lineWidth:', 10, '→', refetched.getState_LineWidth());\nconsole.log('layer:', 1, '→', refetched.getState_Layer());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

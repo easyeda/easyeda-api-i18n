@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试内嵌对象（随机坐标避免重合），使用 4x4 像素 PNG 的 data URI\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst binaryData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj1 = await eda.pcb_PrimitiveObject.create(3, x, y, binaryData, 400, 300, 0, false, 'logo1.png', false);\nconst obj2 = await eda.pcb_PrimitiveObject.create(3, x, y + 500, binaryData, 200, 150, 0, false, 'logo2.png', false);\n\n// 2. 传单个 ID 字符串，返回单个内嵌对象\nconst single = await eda.pcb_PrimitiveObject.get(obj1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回内嵌对象数组（混入未匹配的 ID 不影响其它图元返回）\nconst arr = await eda.pcb_PrimitiveObject.get([obj1.getState_PrimitiveId(), obj2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveObject.delete([obj1.getState_PrimitiveId(), obj2.getState_PrimitiveId()]);\n\nconsole.log('single width:', single.getState_Width());\nconsole.log('array length:', arr.length);\nconsole.log('obj2 fileName:', arr[1].getState_FileName());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取二进制内嵌对象",

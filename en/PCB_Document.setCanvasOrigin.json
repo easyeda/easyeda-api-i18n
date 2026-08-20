@@ -24,7 +24,12 @@
           "key": "remarks.text.3"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开（原点设置作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 设置画布原点偏移为 (50, 100)\nconst set = await eda.pcb_Document.setCanvasOrigin(50, 100);\nconsole.log('set:', set);\n\n// 3. 读回偏移验证已生效\nconst origin = await eda.pcb_Document.getCanvasOrigin();\nconsole.log('origin:', JSON.stringify(origin));\n\n// 4. 清理测试 PCB（偏移随文档一起删除）\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

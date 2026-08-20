@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_ValueVisible",
     "className": "IPCB_PrimitiveAttribute",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 取出器件的属性图元，定位 Designator（编号）属性\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取 Value 可见性\nconst valueVisible = designator.getState_ValueVisible();\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('valueVisible:', valueVisible);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：Value 是否可见",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllWorkspacesInfo",
     "className": "DMT_Workspace",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取所有工作区\nconst workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\n\n// 2. 输出工作区数量与每个工作区的属性（name/uuid/itemType）\nconsole.log('工作区数量：', workspaces.length);\nworkspaces.forEach((ws, i) => {\n  console.log(`工作区${i + 1}：`, ws.name, 'uuid:', ws.uuid);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有工作区的详细属性",

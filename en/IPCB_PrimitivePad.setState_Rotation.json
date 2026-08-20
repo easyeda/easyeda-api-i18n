@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Rotation",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个未旋转的长圆形焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['OVAL', 80, 40], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Rotation();\n\n// 2. 异步模式下旋转 90 度并提交\nconst a = pad.toAsync();\na.setState_Rotation(90);\nawait a.done();\n\n// 3. 从画布重新读取，确认角度已更新（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('rotation:', before, '→', ref.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：旋转角度",

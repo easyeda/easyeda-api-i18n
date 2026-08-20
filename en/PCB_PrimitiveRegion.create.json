@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的区域重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 用 pcb_MathPolygon.createPolygon 构造矩形边界：宽 500、高 300\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\n\n// 3. 在顶层铜层创建禁止区域：规则 [2, 5] 即禁止元件 + 禁止布线，线宽 10mil，不锁定\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2, 5], '嘉立创示例_禁布区', 10, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', region.getState_PrimitiveId());\nconsole.log('primitiveType:', region.getState_PrimitiveType());\nconsole.log('layer:', region.getState_Layer());\nconsole.log('ruleType:', region.getState_RuleType());\nconsole.log('regionName:', region.getState_RegionName());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建区域",

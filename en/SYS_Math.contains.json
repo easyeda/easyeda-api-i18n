@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "contains",
     "className": "SYS_Math",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 小矩形完全落在大矩形内部 → true\nconst board = [{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 120 }, { x: 0, y: 120 }];\nconst device = [{ x: 50, y: 40 }, { x: 90, y: 40 }, { x: 90, y: 70 }, { x: 50, y: 70 }];\nconsole.log('板框完全包含器件：', eda.sys_Math.contains(board, device));\n\n// 2. 器件跨越板框边界（部分重叠，不是完全包含）→ false\nconst overhang = [{ x: 150, y: 40 }, { x: 250, y: 40 }, { x: 250, y: 70 }, { x: 150, y: 70 }];\nconsole.log('板框完全包含越界器件：', eda.sys_Math.contains(board, overhang));\n\n// 3. 只关心区域重叠不关心完全包含时，配合 intersects 使用\nconsole.log('两器件区域有重叠：', eda.sys_Math.intersects(device, overhang));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "判断 polygon1 是否完全包含 polygon2",

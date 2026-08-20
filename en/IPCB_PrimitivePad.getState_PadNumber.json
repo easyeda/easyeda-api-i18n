@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PadNumber",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个编号为 '1' 的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 读取焊盘编号\nconst padNumber = pad.getState_PadNumber();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('padNumber:', padNumber);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：焊盘编号",

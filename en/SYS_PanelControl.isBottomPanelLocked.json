@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isBottomPanelLocked",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 查询底部面板当前锁定状态（异步方法，需要 await）\nconst locked = await eda.sys_PanelControl.isBottomPanelLocked();\n\n// 2. 输出查询结果（true 表示已锁定，false 表示未锁定）\nconsole.log('底部面板锁定状态：', locked);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询底部面板是否已锁定",

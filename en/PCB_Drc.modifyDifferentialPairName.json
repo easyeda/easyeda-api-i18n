@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifyDifferentialPairName",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的网络名和差分对名（网络不能属于其他差分对）\nconst ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\n\n// 2. 放带差分网络的焊盘并创建差分对\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\nconst pairName = '嘉立创示例_差分对_' + ts;\nawait eda.pcb_Drc.createDifferentialPair(pairName, netP, netN);\n\n// 3. 改名（保留现场供观察）\nconst newName = '嘉立创示例_差分对_改_' + ts;\nconst result = await eda.pcb_Drc.modifyDifferentialPairName(pairName, newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改差分对的名称",

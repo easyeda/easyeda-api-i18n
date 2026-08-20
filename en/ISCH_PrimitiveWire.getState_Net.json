@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Net",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条属于 SIG_A 网络的测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000], 'SIG_A');\n\n// 2. 读取网络名称\nconst net = wire.getState_Net();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：网络名称",

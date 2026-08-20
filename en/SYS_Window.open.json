@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "open",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在新标签页打开目标地址（同步方法，无返回值）\neda.sys_Window.open('http://localhost:49620/health', '_blank');\n\n// 2. 打开的标签页由用户自行关闭\nconsole.log('已在新标签页打开资源窗口');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开资源窗口",

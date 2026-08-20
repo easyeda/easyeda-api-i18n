@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "LIB_PanelLibrary",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建面板库（分类传 [] = 不分类）\nconst panelLibraryName = '嘉立创示例_新面板库_' + Date.now();\nconst panelLibraryUuid = await eda.lib_PanelLibrary.create(libraryUuid, panelLibraryName, [], '示例面板库描述');\n\n// 创建类保留现场（新面板库留在个人库中供观察）\n\nconsole.log('panelLibraryUuid:', panelLibraryUuid);\nconsole.log('panelLibraryName:', panelLibraryName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建面板库",

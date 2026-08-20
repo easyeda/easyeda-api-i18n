@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 发起导出（XML 格式、毫米单位、OEM 编号取元件的 Device 属性），\n//    25 秒内完成就输出文件信息\nconst ipcFile = await Promise.race([\n    eda.pcb_ManufactureData.getIpc2581CFile('嘉立创示例_IPC2581C', 'xml', 'mm', 'Device'),\n    new Promise(resolve => setTimeout(() => resolve(undefined), 25000))\n]);\n\n// 2. 查看导出结果\nif (ipcFile) {\n    console.log('导出文件名：', ipcFile.name);\n    console.log('文件大小：', ipcFile.size);\n} else {\n    console.log('导出超过 25 秒仍在后台进行，真实使用直接 await 等待完成即可');\n}\n```"
+        }
+      ]
     }
   },
   "_source": {

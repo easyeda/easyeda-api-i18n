@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层测试区域作为过滤目标：规则 [2] 即禁止元件（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2], '嘉立创示例_过滤目标');\nconst regionId = region.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部区域\nconst all = await eda.pcb_PrimitiveRegion.getAll();\n\n// 3. 按层过滤：只取顶层（1）的区域\nconst topLayer = await eda.pcb_PrimitiveRegion.getAll(1);\n\n// 4. 按规则类型过滤：只取规则为 [2]（禁止元件）的区域，要求规则完全一致\nconst noComponents = await eda.pcb_PrimitiveRegion.getAll(undefined, [2]);\n\n// 5. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveRegion.delete([regionId]);\n\nconsole.log('total regions:', all.length);\nconsole.log('top layer regions:', topLayer.length);\nconsole.log('no-component regions:', noComponents.length);\nconsole.log('marker region found:', noComponents.some(r => r.getState_PrimitiveId() === regionId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有区域",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllSupportedLanguages",
     "className": "SYS_I18n",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取所有支持的语言代码\nconst languages = eda.sys_I18n.getAllSupportedLanguages();\n\n// 2. 输出语言总数，并确认常用语言在列表中\nconsole.log('支持的语言数量：', languages.length);\nconsole.log(\n  '常用语言受支持：',\n  ['zh-Hans', 'zh-Hant', 'en', 'ja'].every((lang) => languages.includes(lang)),\n);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询所有支持的语言",

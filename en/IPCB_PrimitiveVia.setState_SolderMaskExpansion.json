@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_SolderMaskExpansion",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个默认扩展（遵循规则）的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_SolderMaskExpansion();\n\n// 2. 异步模式下自定义顶层阻焊扩展并提交\nconst a = via.toAsync();\na.setState_SolderMaskExpansion({ topSolderMask: 4 });\nawait a.done();\n\n// 3. 从画布重新读取，确认扩展已生效（未设置的底层项返回 null）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('expansion:', before, '→', ref.getState_SolderMaskExpansion());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：阻焊/助焊扩展",

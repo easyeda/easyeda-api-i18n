@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前设计规则配置（返回 { config, name }，规则数据在 config 里）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n\n// 2. 整体写回当前配置（原样写回演示覆写成功，实际使用时可先修改 config 中的字段）\nconst result = await eda.pcb_Drc.overwriteCurrentRuleConfiguration(current.config);\n\nconsole.log('configName:', current.name);\nconsole.log('result:', result);\n```"
+        }
+      ]
     }
   },
   "_source": {

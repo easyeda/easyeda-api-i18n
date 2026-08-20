@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getBomTemplates",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取全部 BOM 模板名\nconst templates = await eda.sch_ManufactureData.getBomTemplates();\n\n// 2. 逐个查看\nconsole.log('模板数量：', templates.length);\ntemplates.forEach((name, index) => console.log(`模板 ${index + 1}：`, name));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取 BOM 模板列表",

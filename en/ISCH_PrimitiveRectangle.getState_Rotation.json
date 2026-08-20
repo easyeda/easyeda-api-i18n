@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Rotation",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个旋转 45° 的测试矩形（第 6 参是旋转角，SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100, 0, 45);\n\n// 2. 读取旋转角度\nconst rotation = rect.getState_Rotation();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('rotation:', rotation);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：旋转角度",

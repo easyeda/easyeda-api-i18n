@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先创建一个 ObjectURL\nconst blob = new Blob(['嘉立创示例数据']);\nconst url = eda.sys_FileSystem.createObjectURL(blob);\nconsole.log('创建的 ObjectURL：', url);\n\n// 2. 用完后吊销（同步方法，无返回值）\neda.sys_FileSystem.revokeObjectURL(url);\nconsole.log('已吊销');\n```"
+        }
+      ]
     },
     "versionTags": [
       {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getNet",
     "className": "PCB_Net",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可查询的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 查询指定网络的详细信息\nconst netInfo = await eda.pcb_Net.getNet('嘉立创示例_NET1');\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('netName:', netInfo?.net);\nconsole.log('netColor:', netInfo?.color);\nconsole.log('netLength:', netInfo?.length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取指定网络的详细信息",

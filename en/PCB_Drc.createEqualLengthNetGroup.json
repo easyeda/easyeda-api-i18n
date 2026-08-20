@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createEqualLengthNetGroup",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个空的等长网络组，指定面板显示颜色（保留现场供观察）\nconst created = await eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_等长网络组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\nconsole.log('created:', created);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建等长网络组",

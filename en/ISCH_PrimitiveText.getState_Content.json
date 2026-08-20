@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Content",
     "className": "ISCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个测试文本（SCH 坐标单位 10mil，第 3 参是文字内容）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_标题');\n\n// 2. 读取文字内容\nconst content = text.getState_Content();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('content:', content);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：文本内容",

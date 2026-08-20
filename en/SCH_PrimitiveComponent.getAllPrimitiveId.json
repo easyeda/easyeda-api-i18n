@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个网络标识作为查找目标（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst flag = await eda.sch_PrimitiveComponent.createNetFlag('Power', '嘉立创示例_VCC', x, y);\nconst flagId = flag.getState_PrimitiveId();\n\n// 2. 不传参数，取当前图页全部器件的图元 ID\nconst allIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId();\n\n// 3. 传入类型 'netflag' 只取网络标识的图元 ID\nconst flagIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId('netflag');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([flagId]);\n\nconsole.log('total ids:', allIds.length);\nconsole.log('netflag ids:', flagIds.length);\nconsole.log('marker flag found:', flagIds.includes(flagId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有器件的图元 ID",

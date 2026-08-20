@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getCurrentMousePosition",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 查询鼠标当前位置\nconst position = await eda.pcb_SelectControl.getCurrentMousePosition();\n\n// 2. 鼠标在画布上时输出坐标，不在画布上时返回 undefined\nif (position) {\n  console.log('x:', position.x);\n  console.log('y:', position.y);\n} else {\n  console.log('鼠标当前不在画布上');\n}\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取当前鼠标在画布上的位置",

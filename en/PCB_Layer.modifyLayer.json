@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 新增一个自定义层作为修改对象\nconst customLayerId = await eda.pcb_Layer.addCustomLayer();\n\n// 2. 读取修改前的名称与颜色\nconst before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n\n// 3. 修改名称、颜色与透明度（保留现场供观察）\nconst modifyResult = await eda.pcb_Layer.modifyLayer(customLayerId, {\n  name: '嘉立创示例_工艺说明',\n  color: '#FF6600',\n  transparency: 30,\n});\n\n// 4. 重新读取图层列表确认修改生效\nconst after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n\nconsole.log('modifyResult:', modifyResult);\nconsole.log('nameBefore:', before?.name, '→ nameAfter:', after?.name);\nconsole.log('colorBefore:', before?.color, '→ colorAfter:', after?.color);\n```"
+        }
+      ]
     }
   },
   "_source": {

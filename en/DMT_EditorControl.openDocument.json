@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openDocument",
     "className": "DMT_EditorControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 取工程里第一个原理图页作为打开目标\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconsole.log('target:', pages[0].name);\n\n// 2. 打开该页面，返回标签页 ID\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconsole.log('tabId:', tabId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开文档",

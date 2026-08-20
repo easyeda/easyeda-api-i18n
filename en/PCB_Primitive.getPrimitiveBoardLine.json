@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getPrimitiveBoardLine",
     "className": "PCB_Primitive",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建顶层圆形焊盘作为测试图元\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 80, 80], '', null, 0, 0, 0, false, 0);\nconst primitiveId = pad.getState_PrimitiveId();\n\n// 2. 计算边框线：文档签名为同步返回，实测返回 Promise（第二参数可指定参与计算的层）\nconst pending = eda.pcb_Primitive.getPrimitiveBoardLine(primitiveId, [1]);\n\n// 3. 等待 3 秒观察结果状态（当前版本 Promise 不 settle，用超时保护避免卡住）\nconst settled = await Promise.race([\n  Promise.resolve(pending).then(() => 'fulfilled', () => 'rejected'),\n  new Promise(resolve => setTimeout(() => resolve('pending（3 秒内未返回）'), 3000)),\n]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePad.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('returns:', typeof pending.then === 'function' ? 'Promise' : typeof pending);\nconsole.log('settled:', settled);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取图元的边框线",

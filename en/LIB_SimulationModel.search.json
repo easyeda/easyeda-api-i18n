@@ -5,6 +5,15 @@
     "name": "search",
     "className": "LIB_SimulationModel",
     "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按空关键字列出系统库中的仿真模型，每页 5 条，只看 Ngspice 类型（换成 '2N3904' 等关键字即为按名称过滤）\nconst results = await eda.lib_SimulationModel.search('', undefined, undefined, 'Ngspice', 5, 1);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+        }
+      ]
+    },
     "versionTags": [
       {
         "tag": "ADD since EDA v3.2.167",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条测试直线\nconst line = await eda.pcb_PrimitiveLine.create('', 1, 1000, 1000, 1600, 1000, 10);\n\n// 2. 读取图元 ID\nconst primitiveId = line.getState_PrimitiveId();\n\n// 3. 用该 ID 从画布重新取回直线，验证 ID 有效\nconst refetched = await eda.pcb_PrimitiveLine.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched type:', refetched.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

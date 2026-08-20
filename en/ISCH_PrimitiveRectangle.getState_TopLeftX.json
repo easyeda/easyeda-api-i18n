@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_TopLeftX",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个左上角在 (400, 300) 的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\n\n// 2. 读取左上角 X 坐标\nconst topLeftX = rect.getState_TopLeftX();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('topLeftX:', topLeftX);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：左上点 X",

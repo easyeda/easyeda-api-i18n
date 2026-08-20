@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllClassificationTree",
     "className": "LIB_Classification",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建一个测试分类，让树里有可见数据（复用模块库，ELIB_LibraryType.CBB = '1'）\nconst name = '嘉立创示例_树查询_' + Date.now();\nconst index = await eda.lib_Classification.createPrimary(libraryUuid, '1', name);\n\n// 3. 读取完整分类树\nconst tree = await eda.lib_Classification.getAllClassificationTree(libraryUuid, '1');\n\n// 4. 清理测试分类（查询类需要清理）\nawait eda.lib_Classification.deleteByUuid(libraryUuid, index.primaryClassificationUuid);\n\n// 5. 输出树结构\nconsole.log('total:', tree.length);\ntree.forEach((node, i) => {\n  console.log('[' + i + '] name:', node.name, 'uuid:', node.uuid, 'children:', (node.children || []).length);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有分类信息组成的树",

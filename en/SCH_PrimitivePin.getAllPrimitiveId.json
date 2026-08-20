@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "SCH_PrimitivePin",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n//    （当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 创建一个测试引脚作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin = await eda.sch_PrimitivePin.create(x, y, '8', 'IDS', 0, 10, null, 'None', 'Passive');\nconst pinId = pin.getState_PrimitiveId();\n\n// 2. 获取全部引脚的图元 ID\nconst allIds = await eda.sch_PrimitivePin.getAllPrimitiveId();\n\n// 3. 清理测试引脚（查询类需要清理）\nawait eda.sch_PrimitivePin.delete([pinId]);\n\nconsole.log('total pin ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(pinId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有引脚的图元 ID",

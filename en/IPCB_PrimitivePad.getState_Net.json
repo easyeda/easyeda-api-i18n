@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Net",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个挂网络的焊盘和一个无网络焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst netted = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '嘉立创示例_NET1', null, 0, 0, 0, false, 0);\nconst free = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 分别读取网络名称\nconst nettedNet = netted.getState_Net();\nconst freeNet = free.getState_Net();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([netted.getState_PrimitiveId(), free.getState_PrimitiveId()]);\n\nconsole.log('nettedNet:', nettedNet);\nconsole.log('freeNet:', freeNet);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：网络名称",

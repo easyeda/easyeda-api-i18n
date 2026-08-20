@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前前端单位（返回 Promise，需要 await；结果为 ESYS_Unit 值，如 'mm'、'mil'、'in'）\nconst unit = await eda.sys_Unit.getFrontendDataUnit();\n\n// 2. 输出当前单位\nconsole.log('前端当前单位：', unit);\n```"
+        }
+      ]
     }
   },
   "_source": {

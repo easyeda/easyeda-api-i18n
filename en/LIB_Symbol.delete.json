@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, '嘉立创示例_待删除符号_' + Date.now(), []);\n\n// 2. 删除该符号\nconst deleted = await eda.lib_Symbol.delete(symbolUuid, libraryUuid);\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除符号",

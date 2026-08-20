@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "calculateWidth",
     "className": "PCB_MathPolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 矩形源数组（宽 100、高 50），BBox 宽度为 100\nconsole.log('rectWidth:', eda.pcb_MathPolygon.calculateWidth(['R', 0, 0, 100, 50, 0, 0]));\n\n// 2. 圆心在原点、半径 50 的圆，BBox 宽度为直径 100\nconsole.log('circleWidth:', eda.pcb_MathPolygon.calculateWidth(['CIRCLE', 0, 0, 50]));\n\n// 3. 传复杂多边形对象：矩形 X 范围 0～100，圆 X 范围 170～230，整体跨度 230\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 0, 0, 100, 50, 0, 0],\n  ['CIRCLE', 200, 200, 30],\n]);\nconsole.log('complexWidth:', eda.pcb_MathPolygon.calculateWidth(complexPolygon));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "计算复杂多边形 BBox 宽度",

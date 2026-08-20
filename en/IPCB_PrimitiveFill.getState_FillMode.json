@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_FillMode",
     "className": "IPCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个实心填充的矩形\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n\n// 2. 读取填充模式（0=SOLID 实心，1=MESH 网格，2=INNER_ELECTRICAL_LAYER 内电层）\nconst fillMode = fill.getState_FillMode();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveFill.delete([fill.getState_PrimitiveId()]);\n\nconsole.log('fillMode:', fillMode);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：填充模式",

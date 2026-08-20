@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPinsByPrimitiveId",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个带引脚的测试器件（随机坐标避免重合，SCH 坐标单位 10mil）\nconst devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 按图元 ID 取出该器件的全部引脚（返回纯数据对象，字段直接可读）\nconst pins = await eda.sch_PrimitiveComponent.getAllPinsByPrimitiveId(compId);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('pin count:', pins.length);\nconsole.log('first pin number:', pins[0].pinNumber);\nconsole.log('first pin type:', pins[0].pinType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取器件关联的所有引脚",

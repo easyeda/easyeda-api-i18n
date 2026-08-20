@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建修改对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_封装修改前_' + Date.now(),\n  [],\n  '修改前的描述'\n);\n\n// 2. 修改名称和描述（分类保持不变传 []）\nconst newName = '嘉立创示例_封装修改后_' + Date.now();\nconst modified = await eda.lib_Footprint.modify(footprintUuid, libraryUuid, newName, [], '修改后的描述');\n\n// 修改类保留现场\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "SCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个测试圆作为查找目标（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst circle = await eda.sch_PrimitiveCircle.create(x, y, 120, '#FF0000');\nconst circleId = circle.getState_PrimitiveId();\n\n// 2. 获取全部圆的图元 ID\nconst allIds = await eda.sch_PrimitiveCircle.getAllPrimitiveId();\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveCircle.delete([circleId]);\n\nconsole.log('total circle ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(circleId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有圆的图元 ID",

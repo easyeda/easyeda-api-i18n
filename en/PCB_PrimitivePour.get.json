@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两条测试覆铜边框（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon1 = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst polygon2 = eda.pcb_MathPolygon.createPolygon(['R', x, y + 500, 500, 300, 0, 0]);\nconst pour1 = await eda.pcb_PrimitivePour.create('GND', 1, polygon1, 'solid', false, '嘉立创示例_覆铜1', 5, 10, false);\nconst pour2 = await eda.pcb_PrimitivePour.create('GND', 1, polygon2, '90grid', false, '嘉立创示例_覆铜2', 6, 10, false);\n\n// 2. 传单个 ID 字符串，返回单个覆铜边框对象\nconst single = await eda.pcb_PrimitivePour.get(pour1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回覆铜边框对象数组\nconst arr = await eda.pcb_PrimitivePour.get([pour1.getState_PrimitiveId(), pour2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour1.getState_PrimitiveId(), pour2.getState_PrimitiveId()]);\n\nconsole.log('single pourName:', single.getState_PourName());\nconsole.log('array length:', arr.length);\nconsole.log('pour2 fillMethod:', arr[1].getState_PourFillMethod());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取覆铜边框",

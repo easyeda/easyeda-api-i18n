@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条顶层测试直线作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10, false);\nconst lineId = line.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部直线\nconst all = await eda.pcb_PrimitiveLine.getAll();\n\n// 3. 按层过滤：只取顶层（1）的直线\nconst topLayer = await eda.pcb_PrimitiveLine.getAll('', 1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveLine.delete([lineId]);\n\nconsole.log('total lines:', all.length);\nconsole.log('top layer lines:', topLayer.length);\nconsole.log('marker line found in top layer:', topLayer.some(l => l.getState_PrimitiveId() === lineId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有直线",

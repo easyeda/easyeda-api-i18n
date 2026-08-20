@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个原理图页，确定缩放的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 缩放到 (0,0)-(400,300) 的矩形区域\nconst zoomed = await eda.dmt_EditorControl.zoomToRegion(0, 400, 0, 300, tabId);\nconsole.log('zoomed:', zoomed);\n```"
+        }
+      ]
     }
   },
   "_source": {

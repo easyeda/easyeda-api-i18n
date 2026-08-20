@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllLayers",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 一次性取回当前 PCB 的全部图层\nconst layers = await eda.pcb_Layer.getAllLayers();\n\n// 2. 查看顶层（TOP=1）的典型属性\nconst top = layers.find(l => l.id === 1);\n\n// 3. 统计信号层（铜箔层）数量\nconst copperCount = layers.filter(l => l.type === 'SIGNAL').length;\n\nconsole.log('totalCount:', layers.length);\nconsole.log('topLayerName:', top?.name);\nconsole.log('topLayerColor:', top?.color);\nconsole.log('topLayerLocked:', top?.locked);\nconsole.log('copperLayerCount:', copperCount);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有图层的详细属性",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建专用测试 PCB（避免误删工程里的现有 PCB），等 1.5s 同步\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 删除该 PCB\nconst deleted = await eda.dmt_Pcb.deletePcb(pcbUuid);\nconsole.log('deleted:', deleted);\n\n// 3. 回读确认已删除（返回 undefined 说明 PCB 已不存在）\nconst info = await eda.dmt_Pcb.getPcbInfo(pcbUuid);\nconsole.log('info after delete:', info === undefined ? '已不存在' : info.name);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前配置并保存为待删除的自定义配置\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_待删配置', true);\n\n// 2. 删除该自定义配置\nconst result = await eda.pcb_Drc.deleteRuleConfiguration('嘉立创示例_待删配置');\n\nconsole.log('result:', result);\n```"
+        }
+      ]
     }
   },
   "_source": {

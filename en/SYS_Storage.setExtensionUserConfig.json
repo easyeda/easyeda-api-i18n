@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 写入一条新配置（key 不存在时自动新建）\nconst created = await eda.sys_Storage.setExtensionUserConfig('嘉立创示例_主题', '深色');\n\n// 2. 用同一个 key 再次写入，覆盖旧值\nconst updated = await eda.sys_Storage.setExtensionUserConfig('嘉立创示例_主题', '浅色');\n\n// 3. 清理演示配置，还原存储现场\nawait eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_主题');\n\nconsole.log('新建配置结果：', created);\nconsole.log('覆盖写入结果：', updated);\n```"
+        }
+      ]
     }
   },
   "_source": {

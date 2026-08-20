@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试导线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\n\n// 3. 切换异步模式，累计两处修改（改网络 + 改颜色）\nconst asyncWire = wire.toAsync();\nasyncWire.setState_Net('SIG_B');\nasyncWire.setState_Color('#00AA00');\n\n// 4. 一次性提交到画布\nawait asyncWire.done();\n\n// 5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveWire.get(wire.getState_PrimitiveId());\n\nconsole.log('net:', 'SIG_A', '→', refetched.getState_Net());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

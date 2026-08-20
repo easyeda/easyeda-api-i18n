@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getRenderImage",
     "className": "LIB_Footprint",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 搜索系统库，取一个封装作为渲染来源\nconst [source] = await eda.lib_Footprint.search('0402', undefined, undefined, 1, 1);\n\n// 2. 获取渲染图（PNG Blob）\nconst blob = await eda.lib_Footprint.getRenderImage({\n  footprintUuid: source.uuid,\n  libraryUuid: source.libraryUuid,\n});\n\n// 3. Blob 可转成 URL 直接展示：URL.createObjectURL(blob)\nconsole.log('sourceName:', source.name);\nconsole.log('imageSize:', blob.size);\nconsole.log('imageType:', blob.type);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取封装渲染图",

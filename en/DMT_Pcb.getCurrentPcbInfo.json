@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开它，让焦点落到 PCB 文档上（原理图焦点下返回 undefined）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 获取当前焦点 PCB 的详细属性\nconst pcb = await eda.dmt_Pcb.getCurrentPcbInfo();\n\n// 3. 输出 PCB 的名称、UUID 与所属工程\nconsole.log('name:', pcb?.name);\nconsole.log('pcbUuid:', pcb?.uuid);\nconsole.log('parentProjectUuid:', pcb?.parentProjectUuid);\n\n// 4. 清理测试 PCB（PCB 处于打开状态也可以直接删除）\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

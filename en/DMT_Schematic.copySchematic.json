@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建专用源原理图（自带图页 p1），等 1.5s 同步\nconst sourceUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 复制源原理图，返回副本 UUID\nconst copiedUuid = await eda.dmt_Schematic.copySchematic(sourceUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 回读副本，确认名称与图页被完整复制\nconst copyInfo = await eda.dmt_Schematic.getSchematicInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyName:', copyInfo?.name);\nconsole.log('copyPages:', (copyInfo?.page || []).map(p => p.name).join(', '));\n\n// 4. 清理本例创建的两个原理图（先删副本再删源），保持工程整洁\nawait new Promise(r => setTimeout(r, 1000));\nconst deletedCopy = await eda.dmt_Schematic.deleteSchematic(copiedUuid);\nconsole.log('deleted:', deletedCopy);\nawait new Promise(r => setTimeout(r, 1000));\nconst deletedSource = await eda.dmt_Schematic.deleteSchematic(sourceUuid);\nconsole.log('deleted:', deletedSource);\n```"
+        }
+      ]
     }
   },
   "_source": {

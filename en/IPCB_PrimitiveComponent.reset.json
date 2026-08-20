@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件（默认 0 度）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 记录画布上的原始旋转角度\nconst original = comp.getState_Rotation();\n\n// 4. 异步模式下改一个错误值，但不提交，直接 reset() 丢弃\nconst asyncComp = comp.toAsync();\nasyncComp.setState_Rotation(270);\nawait asyncComp.reset();\n\n// 5. 从画布重新读取，确认值仍是原始值（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveComponent.get([compId]);\n\nconsole.log('rotation:', original, '→', refetched[0].getState_Rotation(), '(修改已丢弃)');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

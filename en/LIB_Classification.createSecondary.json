@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createSecondary",
     "className": "LIB_Classification",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 先创建一级分类作为父目录（复用已有分类时可用 getIndexByName 查 UUID）\nconst primaryName = '嘉立创示例_二级演示一级_' + Date.now();\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\n\n// 3. 在该一级分类下创建二级分类\nconst secondaryName = '嘉立创示例_二级分类_' + Date.now();\nconst secondaryIndex = await eda.lib_Classification.createSecondary(\n  libraryUuid,\n  '1',\n  primaryIndex.primaryClassificationUuid,\n  secondaryName\n);\n\n// 创建类保留现场\n\nconsole.log('primaryName:', primaryName);\nconsole.log('secondaryName:', secondaryName);\nconsole.log('secondaryClassificationUuid:', secondaryIndex.secondaryClassificationUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建二级分类",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "ISCH_PrimitivePolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试多边形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst line = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\n\n// 2. 创建一个测试多边形（创建后默认已处于异步模式）\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000');\n\n// 3. 转换为异步图元，修改边线颜色后提交\nconst asyncPolygon = polygon.toAsync();\nasyncPolygon.setState_Color('#00AA00');\nawait asyncPolygon.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitivePolygon.get(polygon.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', polygon.isAsync());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

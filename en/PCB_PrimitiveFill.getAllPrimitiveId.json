@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "PCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层铜层（1）测试填充作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\nconst fillId = fill.getState_PrimitiveId();\n\n// 2. 获取全部填充的图元 ID\nconst allIds = await eda.pcb_PrimitiveFill.getAllPrimitiveId();\n\n// 3. 按层过滤：只取顶层铜层（1）填充的图元 ID\nconst topCopperIds = await eda.pcb_PrimitiveFill.getAllPrimitiveId(1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveFill.delete([fillId]);\n\nconsole.log('total fill ids:', allIds.length);\nconsole.log('top copper fill ids:', topCopperIds.length);\nconsole.log('marker id in top copper list:', topCopperIds.includes(fillId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有填充的图元 ID",

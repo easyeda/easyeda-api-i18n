@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitivePolyline",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的折线重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 用 pcb_MathPolygon.createPolygon 构造折线路径：起点 → 右移 500 → 上移 300 的 L 形三顶点折线\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\n\n// 3. 在顶层铜层创建折线：空网络，线宽 10mil，不锁定\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', polyline.getState_PrimitiveId());\nconsole.log('primitiveType:', polyline.getState_PrimitiveType());\nconsole.log('lineWidth:', polyline.getState_LineWidth());\nconsole.log('layer:', polyline.getState_Layer());\nconsole.log('polygon source:', polyline.getState_Polygon().getSource().join(', '));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建折线",

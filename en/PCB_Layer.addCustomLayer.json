@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "addCustomLayer",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先移除历史运行遗留的自定义层，保证案例可以反复执行\nconst layers = await eda.pcb_Layer.getAllLayers();\nfor (const item of layers.filter(l => l.type === 'CUSTOM')) {\n  await eda.pcb_Layer.removeLayer(item.id);\n}\n\n// 2. 新增自定义层，返回新层的图层 ID（CUSTOM_1=71 起顺延分配）\nconst customLayerId = await eda.pcb_Layer.addCustomLayer();\n\n// 3. 从图层列表确认新层已存在（保留现场，可在图层面板观察）\nconst after = await eda.pcb_Layer.getAllLayers();\nconst newLayer = after.find(l => l.id === customLayerId);\n\nconsole.log('customLayerId:', customLayerId);\nconsole.log('newLayerName:', newLayer?.name);\nconsole.log('customLayerCount:', after.filter(l => l.type === 'CUSTOM').length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "新增自定义层",

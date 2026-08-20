@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先导入一份多语言数据作为取文本的数据源\neda.sys_I18n.importMultilingualNamespace('嘉立创示例_取文本', {\n  'zh-Hans': { '示例_问候': '你好，${1}！今天是${2}' },\n  en: { '示例_问候': 'Hello, ${1}! Today is ${2}' },\n});\n\n// 2. 指定语言取文案，占位符按参数顺序替换\nconst greeting = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', 'en', 'Tom', 'Monday');\n\n// 3. 不传语言则用 EDA 当前显示语言；缺参的占位符原样保留\nconst current = await eda.sys_I18n.getCurrentLanguage();\nconst localized = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', undefined, '嘉立创');\n\n// 4. 标签不存在时回退为标签本身\nconst missing = eda.sys_I18n.text('示例_不存在的标签', '嘉立创示例_取文本');\n\nconsole.log('当前语言：', current);\nconsole.log('英文文案：', greeting);\nconsole.log('当前语言文案：', localized);\nconsole.log('缺失标签回退：', missing);\n```"
+        }
+      ]
     }
   },
   "_source": {

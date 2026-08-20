@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "SCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试文本：默认样式（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_原始文本');\nconst textId = text.getState_PrimitiveId();\n\n// 2. 记录修改前的内容、颜色与字号\nconst beforeContent = text.getState_Content();\nconst beforeColor = text.getState_TextColor();\nconst beforeFontSize = text.getState_FontSize();\n\n// 3. 批量修改：平移位置、内容更新、颜色改蓝、字号 20、加粗\nawait eda.sch_PrimitiveText.modify(textId, {\n  x: x + 200,\n  y: y + 100,\n  content: '嘉立创示例_修改后的文本',\n  textColor: '#0000FF',\n  fontSize: 20,\n  bold: true,\n});\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitiveText.get(textId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', textId);\nconsole.log('content:', beforeContent, '→', refreshed.getState_Content());\nconsole.log('textColor:', beforeColor, '→', refreshed.getState_TextColor());\nconsole.log('fontSize:', beforeFontSize, '→', refreshed.getState_FontSize());\nconsole.log('bold:', refreshed.getState_Bold());\nconsole.log('position:', x, y, '→', refreshed.getState_X(), refreshed.getState_Y());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改文本",

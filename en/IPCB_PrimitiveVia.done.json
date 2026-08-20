@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "done",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个孔径 20mil、外径 40mil 的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 异步模式下连续修改外径和挂网络（此时画布尚未变化）\nconst a = via.toAsync();\na.setState_Diameter(60);\na.setState_Net('GND');\n\n// 3. 一次性提交到画布\nawait a.done();\n\n// 4. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('diameter:', 40, '→', ref.getState_Diameter());\nconsole.log('net:', '', '→', ref.getState_Net());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getPrimitiveByPrimitiveId",
     "className": "SCH_Primitive",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个测试矩形作为查询目标（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst id = rect.getState_PrimitiveId();\n\n// 2. 用图元 ID 反查，返回该图元的完整属性对象（图元实例）\nconst primitive = await eda.sch_Primitive.getPrimitiveByPrimitiveId(id);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([id]);\n\nconsole.log('primitiveType:', primitive.getState_PrimitiveType());\nconsole.log('width:', primitive.getState_Width());\nconsole.log('height:', primitive.getState_Height());\nconsole.log('id match:', primitive.getState_PrimitiveId() === id);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取指定 ID 的图元的所有属性",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Width",
     "className": "IPCB_PrimitiveImage",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个 400 x 300 的顶层图像\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n\n// 2. 读取图像宽度\nconst width = image.getState_Width();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveImage.delete([image.getState_PrimitiveId()]);\n\nconsole.log('width:', width);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：宽",

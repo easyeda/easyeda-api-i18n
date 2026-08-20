@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两条测试直线（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst line1 = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10, false);\nconst line2 = await eda.pcb_PrimitiveLine.create('', 1, x, y + 500, x + 600, y + 500, 16, false);\n\n// 2. 传单个 ID 字符串，返回单个直线对象\nconst single = await eda.pcb_PrimitiveLine.get(line1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回直线对象数组\nconst arr = await eda.pcb_PrimitiveLine.get([line1.getState_PrimitiveId(), line2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveLine.delete([line1.getState_PrimitiveId(), line2.getState_PrimitiveId()]);\n\nconsole.log('single lineWidth:', single.getState_LineWidth());\nconsole.log('array length:', arr.length);\nconsole.log('line2 lineWidth:', arr[1].getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取直线",

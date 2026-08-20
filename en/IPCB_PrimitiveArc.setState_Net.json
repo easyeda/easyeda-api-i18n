@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Net",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 30000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一段无网络的测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\n\n// 3. 读取修改前的网络名称\nconst before = arc.getState_Net();\n\n// 4. 切换异步模式并指定网络（'' → '嘉立创示例_NET'）\nconst asyncArc = arc.toAsync();\nasyncArc.setState_Net('嘉立创示例_NET');\nawait asyncArc.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveArc.get(arc.getState_PrimitiveId());\nconst after = refetched.getState_Net();\n\nconsole.log('net:', before, '→', after);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：网络名称",

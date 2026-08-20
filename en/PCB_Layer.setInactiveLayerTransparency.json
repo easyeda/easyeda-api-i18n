@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setInactiveLayerTransparency",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 将非激活层透明度设为 60，让当前编辑层更突出\nconst setResult = await eda.pcb_Layer.setInactiveLayerTransparency(60);\n\n// 2. 恢复为 0（不透明），避免影响日常查看\nconst restoreResult = await eda.pcb_Layer.setInactiveLayerTransparency(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置非激活层透明度",

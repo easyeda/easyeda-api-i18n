@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "ISCH_PrimitiveAttribute",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 记录画布上的原始值\nconst original = designator.getState_Value();\n\n// 4. 异步模式下改一个错误值，但不提交，直接 reset() 丢弃\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_Value('SHOULD-DISCARD');\nawait asyncAttr.reset();\n\n// 5. 从画布重新读取，确认值仍是原始值（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('value:', original, '→', refetched.getState_Value(), '(修改已丢弃)');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

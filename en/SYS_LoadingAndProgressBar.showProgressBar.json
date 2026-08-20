@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 显示进度条并指定标题（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.showProgressBar(30, '嘉立创示例 正在处理');\nconsole.log('进度条已显示，当前进度 30%');\n\n// 2. 重复调用刷新进度（分批任务逐步推进的典型方式）\nawait new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(70, '嘉立创示例 正在处理');\nconsole.log('进度已更新到 70%');\n\n// 3. 进度达到 100，进度条自动销毁（自清理，无需手动 destroy）\nawait new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(100, '嘉立创示例 正在处理');\nconsole.log('进度达到 100%，进度条已自动销毁');\n```"
+        }
+      ]
     }
   },
   "_source": {

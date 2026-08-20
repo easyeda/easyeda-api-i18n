@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "clear",
     "className": "SYS_Log",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先写入几条示例日志，让清空效果可见\neda.sys_Log.add('嘉立创示例_清空前日志 1');\neda.sys_Log.add('嘉立创示例_清空前日志 2', 'warn');\nconst before = await eda.sys_Log.sort();\nconsole.log('清空前的日志条目数：', before.length);\n\n// 2. 清空日志面板（同步调用，立即生效）\neda.sys_Log.clear();\n\n// 3. 再次查询，确认面板已清空\nconst after = await eda.sys_Log.sort();\nconsole.log('清空后的日志条目数：', after.length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "清空日志"

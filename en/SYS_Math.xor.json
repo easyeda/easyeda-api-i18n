@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "xor",
     "className": "SYS_Math",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 新旧两版部分重叠的板框轮廓\nconst oldOutline = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst newOutline = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\n\n// 2. 异或：重叠的中间区域被扣除，剩下两侧不重叠的部分\nconst diff = eda.sys_Math.xor(oldOutline, newOutline);\nconsole.log('差异区域多边形个数：', diff.length);\n\n// 3. 异或面积：8000 + 4000 - 2 x 重叠 2000 = 8000（重叠部分两次都不算）\nconsole.log('差异区域总面积：', eda.sys_Math.calculateArea(diff));\n\n// 4. 完全相同的两个多边形异或结果为空数组（无差异；空组不能再传给\n//    calculateArea，空输入会抛『无法识别的多边形输入格式』）\nconsole.log('自身与自身异或的差异区域个数：', eda.sys_Math.xor(oldOutline, oldOutline).length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "计算两个多边形的对称差集（异或）",

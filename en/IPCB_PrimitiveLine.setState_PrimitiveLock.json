@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_PrimitiveLock",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合\nconst x = 34000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一条测试直线（默认不锁定）\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n\n// 3. 读取修改前的锁定状态\nconst before = line.getState_PrimitiveLock();\n\n// 4. 切换异步模式并锁定（false → true）\nconst asyncLine = line.toAsync();\nasyncLine.setState_PrimitiveLock(true);\nawait asyncLine.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\nconst after = refetched.getState_PrimitiveLock();\n\nconsole.log('locked:', before, '→', after);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：是否锁定",

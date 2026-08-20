@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveId",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\n\n// 2. 读取图元 ID\nconst primitiveId = rect.getState_PrimitiveId();\n\n// 3. 用 ID 从画布重取矩形，验证 ID 有效\nconst refetched = await eda.sch_PrimitiveRectangle.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched width:', refetched.getState_Width());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",

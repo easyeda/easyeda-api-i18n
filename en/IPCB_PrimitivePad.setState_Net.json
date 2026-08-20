@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个无网络的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Net();\n\n// 2. 异步模式下挂载网络并提交\nconst a = pad.toAsync();\na.setState_Net('嘉立创示例_NET1');\nawait a.done();\n\n// 3. 从画布重新读取，确认网络已挂载（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('net:', before, '→', ref.getState_Net());\n```"
+        }
+      ]
     }
   },
   "_source": {

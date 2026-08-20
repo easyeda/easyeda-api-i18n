@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个原理图页，确定缩放的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 适应全部图元，返回缩放后的可视区域边界\nconst bounds = await eda.dmt_EditorControl.zoomToAllPrimitives(tabId);\nconsole.log('bounds:', bounds);\n```"
+        }
+      ]
     }
   },
   "_source": {

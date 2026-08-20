@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机圆心坐标，避免与画布上已有的圆重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个红色虚线边框、绿色网格填充的圆\nconst circle = await eda.sch_PrimitiveCircle.create(\n  x,            // 圆心 X\n  y,            // 圆心 Y\n  150,          // 半径\n  '#FF0000',    // 边框颜色\n  '#00FF00',    // 填充颜色（'none' 表示无填充）\n  6,            // 线宽（范围 1-10）\n  1,            // 线型：1 = DASHED（虚线）\n  'Grid'        // 填充样式（'Solid'/'Grid' 等字符串枚举）\n);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', circle.getState_PrimitiveId());\nconsole.log('primitiveType:', circle.getState_PrimitiveType());\nconsole.log('center:', circle.getState_CenterX(), ',', circle.getState_CenterY());\nconsole.log('radius:', circle.getState_Radius());\nconsole.log('color:', circle.getState_Color());\nconsole.log('fillStyle:', circle.getState_FillStyle());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建圆",

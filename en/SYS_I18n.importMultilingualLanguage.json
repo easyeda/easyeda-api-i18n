@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "importMultilingualLanguage",
     "className": "SYS_I18n",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 向命名空间导入繁体中文文案\nconst imported = eda.sys_I18n.importMultilingualLanguage('嘉立创示例_语言包', 'zh-Hant', {\n  '示例_问候': '妳好，${1}',\n});\n\n// 2. 用 text() 指定命名空间和语言取回文案\nconst message = eda.sys_I18n.text('示例_问候', '嘉立创示例_语言包', 'zh-Hant', '用戶');\n\nconsole.log('导入结果：', imported);\nconsole.log('繁体文案：', message);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "导入多语言：指定命名空间和语言",

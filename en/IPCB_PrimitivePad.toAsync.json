@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在顶层放置一个圆形贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 切换为异步图元（返回同一图元的异步形态）\nconst asyncPad = pad.toAsync();\n\n// 3. 在异步模式下修改位置并提交\nasyncPad.setState_X(x + 200);\nawait asyncPad.done();\n\n// 4. 从画布重新读取，确认修改已落画布（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('isAsync:', asyncPad.isAsync());\nconsole.log('x:', x, '→', ref.getState_X());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

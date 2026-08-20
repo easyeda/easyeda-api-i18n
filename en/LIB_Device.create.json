@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "LIB_Device",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建器件：新建元件符号（symbolType: 2）并设置默认属性\nconst deviceName = '嘉立创示例_新器件_' + Date.now();\nconst deviceUuid = await eda.lib_Device.create(\n  libraryUuid,\n  deviceName,\n  [],\n  { symbolType: 2 },\n  '示例器件描述',\n  { designator: 'R', addIntoBom: true, addIntoPcb: true }\n);\n\n// 创建类保留现场（新器件留在个人库中供观察）\n\nconsole.log('deviceUuid:', deviceUuid);\nconsole.log('deviceName:', deviceName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建器件",

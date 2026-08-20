@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitivePoured",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 记录重置前的子区域数量\nconst before = poured.getState_PourFills().length;\n\n// 3. 重置为当前画布状态（丢弃未提交的修改）\nconst resetResult = await poured.reset();\n\n// 4. 重置返回的对象仍可正常读取状态\nconst after = resetResult.getState_PourFills().length;\nconsole.log('pourFillCount:', before, '→', after);\nconsole.log('primitiveType:', resetResult.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

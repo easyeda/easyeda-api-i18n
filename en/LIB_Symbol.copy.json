@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "copy",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 列出系统库符号（关键字传空 = 列出全部），取一个作为复制来源\nconst [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\n\n// 2. 获取个人库 UUID\nconst targetLibraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 3. 从系统库复制到个人库，指定新名称避免同名冲突（分类传 [] = 不分类）\nconst newName = '嘉立创示例_符号副本_' + Date.now();\nconst copiedUuid = await eda.lib_Symbol.copy(\n  source.uuid,\n  source.libraryUuid,\n  targetLibraryUuid,\n  [],\n  newName\n);\n\n// 创建类保留现场（副本留在个人库中供观察）\n\nconsole.log('sourceUuid:', source.uuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('newName:', newName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "复制符号",

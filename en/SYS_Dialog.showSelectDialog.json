@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "showSelectDialog",
     "className": "SYS_Dialog",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 单选：对象数组让 value 与展示文案分离，默认选中 TOP\neda.sys_Dialog.showSelectDialog(\n  [\n    { value: 'TOP', displayContent: '顶层' },\n    { value: 'BOTTOM', displayContent: '底层' }\n  ],\n  '请选择丝印放置的层',   // 选择框上方文字\n  '设置会应用到全部丝印', // 选择框下方文字\n  '丝印层设置',           // 窗口标题\n  'TOP',                  // 默认选项（匹配选项的 value）\n  false,                  // 单选\n  (value) => {\n    console.log('单选结果：', value);\n  }\n);\n\n// 2. 多选：字符串数组作选项，multiple 传 true，默认选中两项\neda.sys_Dialog.showSelectDialog(\n  ['DRC', 'BOM', 'Gerber'],\n  '请选择需要导出的内容', // 多选框上方文字\n  '',                    // 多选框下方文字\n  '导出设置',            // 窗口标题\n  ['DRC', 'BOM'],        // 默认选项数组\n  true,                  // 多选\n  (values) => {\n    console.log('多选结果：', values);\n  }\n);\n\n// 3. 两个窗口已弹出；回调需用户点击确认后才会触发\nconsole.log('已弹出选择窗口（单选 + 多选）');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "弹出选择窗口",

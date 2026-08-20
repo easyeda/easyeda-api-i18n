@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setNetColor",
     "className": "PCB_Net",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可操作的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 记录修改前的颜色\nconst before = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n\n// 3. 将网络设置为红色（修改类保留现场，便于在画布上观察效果）\nconst colorSet = await eda.pcb_Net.setNetColor('嘉立创示例_NET1', { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 4. 重新读取颜色，验证修改已生效\nconst after = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n\nconsole.log('colorSet:', colorSet);\nconsole.log('before:', before);\nconsole.log('after:', after);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置指定网络的颜色",

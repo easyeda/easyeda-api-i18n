@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个挂网络的测试过孔作为过滤目标（网络不存在会自动创建，随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', x, y, 20, 40);\nconst viaId = via.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部过孔\nconst all = await eda.pcb_PrimitiveVia.getAll();\n\n// 3. 按网络过滤：只取挂在该网络下的过孔\nconst netVias = await eda.pcb_PrimitiveVia.getAll('嘉立创示例_NET1');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([viaId]);\n\nconsole.log('total vias:', all.length);\nconsole.log('vias on demo net:', netVias.length);\nconsole.log('marker via found:', netVias.some(v => v.getState_PrimitiveId() === viaId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有过孔",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_ComplexPolygon",
     "className": "IPCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个已知轮廓的矩形填充（500 x 300 mil）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n\n// 2. 读取复杂多边形对象，再取它的轮廓源数组\nconst complexPolygon = fill.getState_ComplexPolygon();\nconst source = complexPolygon.getSource();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveFill.delete([fill.getState_PrimitiveId()]);\n\nconsole.log('polygonSource:', JSON.stringify(source));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：复杂多边形",

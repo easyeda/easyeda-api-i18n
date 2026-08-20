@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "lockLayer",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 锁定顶层（TOP=1）与底层（BOTTOM=2），传入层数组\nconst lockResult = await eda.pcb_Layer.lockLayer([1, 2]);\n\n// 2. 从图层列表确认锁定状态\nconst layers = await eda.pcb_Layer.getAllLayers();\nconst top = layers.find(l => l.id === 1);\n\n// 3. 恢复现场：解锁这两层，避免影响后续编辑\nconst restoreResult = await eda.pcb_Layer.unlockLayer([1, 2]);\n\nconsole.log('lockResult:', lockResult);\nconsole.log('topLockedNow:', top?.locked);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "锁定层",

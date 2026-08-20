@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Net",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条指定网络的测试直线\nconst line = await eda.pcb_PrimitiveLine.create('嘉立创示例_NET', 1, 1000, 1000, 1600, 1000, 10);\n\n// 2. 读取网络名称\nconst net = line.getState_Net();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：网络名称",

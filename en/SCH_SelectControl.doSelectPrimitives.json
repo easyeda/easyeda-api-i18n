@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "doSelectPrimitives",
     "className": "SCH_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试矩形\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\n\n// 2. 用图元 ID 选中矩形\nconst selected = await eda.sch_SelectControl.doSelectPrimitives([rectId]);\nconsole.log('selected:', selected);\n\n// 3. 确认矩形已在选中集里\nconst selectedIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中数量：', selectedIds.length);\nconsole.log('包含测试矩形：', selectedIds.includes(rectId));\n\n// 4. 清理：清除选中并删除测试图元\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "使用图元 ID 选中图元",

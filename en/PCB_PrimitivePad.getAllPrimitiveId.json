@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPrimitiveId",
     "className": "PCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层测试焊盘作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n\n// 2. 获取全部焊盘的图元 ID\nconst allIds = await eda.pcb_PrimitivePad.getAllPrimitiveId();\n\n// 3. 按层过滤：只取顶层（1）焊盘的图元 ID\nconst topLayerIds = await eda.pcb_PrimitivePad.getAllPrimitiveId(1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePad.delete([padId]);\n\nconsole.log('total pad ids:', allIds.length);\nconsole.log('top layer pad ids:', topLayerIds.length);\nconsole.log('marker id in top layer list:', topLayerIds.includes(padId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有焊盘的图元 ID",

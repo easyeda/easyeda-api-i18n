@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "importChanges",
     "className": "SCH_Document",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试原理图和测试 PCB\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 创建板子把原理图与 PCB 关联起来（返回板子名称）\nconst boardName = await eda.dmt_Board.createBoard(schematicUuid, pcbUuid);\nawait new Promise(r => setTimeout(r, 1500));\nconsole.log('boardName:', boardName);\n\n// 3. 打开原理图（图页级 UUID），从关联 PCB 导入变更\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\nconst imported = await eda.sch_Document.importChanges();\nconsole.log('imported:', imported);\n\n// 4. 清理：删板子、删 PCB、删原理图\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Board.deleteBoard(boardName);\nawait new Promise(r => setTimeout(r, 1000));\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\nawait new Promise(r => setTimeout(r, 500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "从 PCB 导入变更",

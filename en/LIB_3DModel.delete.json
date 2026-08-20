@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "LIB_3DModel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 复制一个系统库模型到个人库作为删除对象\nconst results = await eda.lib_3DModel.search('0402', undefined, undefined, 1);\nconst source = results[0];\nconst copiedUuid = await eda.lib_3DModel.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  undefined,\n  'ToDelete_' + Date.now()\n);\n\n// 3. 删除复制品\nconst deleted = await eda.lib_3DModel.delete(copiedUuid, libraryUuid);\n\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除 3D 模型",

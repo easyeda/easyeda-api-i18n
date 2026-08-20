@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "deletePanel",
     "className": "DMT_Panel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建专用测试面板（避免误删工程里的现有面板），等 1.5s 同步\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 删除该面板\nconst deleted = await eda.dmt_Panel.deletePanel(panelUuid);\nconsole.log('deleted:', deleted);\n\n// 3. 回读确认已删除（返回 undefined 说明面板已不存在）\nconst info = await eda.dmt_Panel.getPanelInfo(panelUuid);\nconsole.log('info after delete:', info === undefined ? '已不存在' : info.name);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除面板",

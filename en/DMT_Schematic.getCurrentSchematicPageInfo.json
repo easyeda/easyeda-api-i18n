@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建专用测试原理图（自带图页 p1）并打开该页，让焦点落到测试页上\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst pageUuid = info.page[0].uuid;\nawait eda.dmt_EditorControl.openDocument(pageUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 获取当前焦点图页的详细属性\nconst currentPage = await eda.dmt_Schematic.getCurrentSchematicPageInfo();\n\n// 3. 输出图页名称、UUID、所属原理图与明细表开关，确认正是测试页\nconsole.log('name:', currentPage?.name);\nconsole.log('pageUuid:', currentPage?.uuid);\nconsole.log('parentSchematicUuid:', currentPage?.parentSchematicUuid);\nconsole.log('showTitleBlock:', currentPage?.showTitleBlock);\nconsole.log('isFocusedPage:', currentPage?.uuid === pageUuid);\n\n// 4. 清理测试原理图（处于打开状态也可以直接删除）\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
     }
   },
   "_source": {

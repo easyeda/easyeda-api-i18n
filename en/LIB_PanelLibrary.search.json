@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "search",
     "className": "LIB_PanelLibrary",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按空关键字列出系统库中的面板库，每页 5 条（换成 '三角' 等关键字即为按名称过滤）\nconst results = await eda.lib_PanelLibrary.search('', undefined, undefined, 5, 1);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "搜索面板库",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getSchematicPageInfo",
     "className": "DMT_Schematic",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试原理图（自带图页 p1）并等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst pageUuid = info.page[0].uuid;\n\n// 2. 按 UUID 查询图页详细属性\nconst pageInfo = await eda.dmt_Schematic.getSchematicPageInfo(pageUuid);\n\n// 3. 输出属性\nconsole.log('name:', pageInfo?.name);\nconsole.log('itemType:', pageInfo?.itemType);\nconsole.log('parentSchematicUuid:', pageInfo?.parentSchematicUuid);\nconsole.log('showTitleBlock:', pageInfo?.showTitleBlock);\nconsole.log('titleBlockFields:', Object.keys(pageInfo?.titleBlockData || {}).length);\n\n// 4. 清理测试原理图\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取原理图图页的详细属性",

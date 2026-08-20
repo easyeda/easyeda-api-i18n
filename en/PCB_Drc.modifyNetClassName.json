@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifyNetClassName",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 建一个待改名的网络类\nawait eda.pcb_Drc.createNetClass('嘉立创示例_网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 2. 改名（用时间戳后缀避免与之前保留的现场重名，保留现场供观察）\nconst newName = '嘉立创示例_网络类_改_' + Date.now();\nconst result = await eda.pcb_Drc.modifyNetClassName('嘉立创示例_网络类', newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改网络类的名称",

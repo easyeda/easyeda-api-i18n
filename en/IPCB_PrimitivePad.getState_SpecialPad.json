@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_SpecialPad",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建普通焊盘与创建时尝试带特殊外形的焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst plain = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst attempted = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0, [[1, 1, ['ELLIPSE', 40, 40]]]);\n\n// 2. 分别读取特殊焊盘外形\nconst plainSpecial = plain.getState_SpecialPad();\nconst attemptedSpecial = attempted.getState_SpecialPad();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([plain.getState_PrimitiveId(), attempted.getState_PrimitiveId()]);\n\nconsole.log('plainSpecial:', plainSpecial);\nconsole.log('attemptedSpecial:', attemptedSpecial);\nconsole.log('normalShapeKept:', JSON.stringify(attempted.getState_Pad()) === JSON.stringify(['ELLIPSE', 60, 60]));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：特殊焊盘外形",

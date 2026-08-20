@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getShortcutKeys",
     "className": "SYS_ShortcutKey",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 只查非系统快捷键（扩展注册的），列表精简便于观察\nconst custom = await eda.sys_ShortcutKey.getShortcutKeys();\nconsole.log('非系统快捷键数量：', custom.length);\n\n// 2. 连同系统快捷键一起查（用于完整键位冲突检测）\nconst all = await eda.sys_ShortcutKey.getShortcutKeys(true);\nconsole.log('含系统快捷键总数：', all.length);\n\n// 3. 观察单条数据结构：shortcutKey 是键位数组，title 是名称，\n//    documentType 是生效页面，scene 是生效场景\nconst sample = all[0];\nconsole.log('首条快捷键：', JSON.stringify(sample));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询快捷键列表",

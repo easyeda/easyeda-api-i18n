@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试过孔（随机坐标避免重合），尺寸不同便于区分\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via1 = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\nconst via2 = await eda.pcb_PrimitiveVia.create('', x, y + 500, 30, 60);\n\n// 2. 传单个 ID 字符串，返回单个过孔对象\nconst single = await eda.pcb_PrimitiveVia.get(via1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回过孔对象数组\nconst arr = await eda.pcb_PrimitiveVia.get([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n\nconsole.log('single holeDiameter:', single.getState_HoleDiameter());\nconsole.log('array length:', arr.length);\nconsole.log('via2 diameter:', arr[1].getState_Diameter());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取过孔",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 弹出确认窗口，等待用户点击\neda.sys_Dialog.showConfirmationMessage(\n  '即将删除选中的 3 个图元，是否继续？',\n  '删除确认',   // 窗口标题\n  '删除',       // 主按钮（确认）\n  '取消',       // 次按钮（取消）\n  (mainButtonClicked) => {\n    if (mainButtonClicked) {\n      console.log('用户点击了主按钮（删除）');\n    } else {\n      console.log('用户点击了次按钮（取消）');\n    }\n  }\n);\n\n// 2. 窗口已弹出，本方法无返回值；回调需用户点击按钮后才会触发\nconsole.log('已弹出确认窗口');\n```"
+        }
+      ]
     }
   },
   "_source": {

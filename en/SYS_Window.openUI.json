@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开指定名称的内置 UI 窗口（异步方法，需要 await；这里用占位名称演示调用方式）\nawait eda.sys_Window.openUI('嘉立创示例_UI窗口');\n\n// 2. 调用完成（未知 uiName 静默无效，不抛错）\nconsole.log('openUI 调用完成');\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllPadPairGroups",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 查询所有焊盘对组\nconst groups = await eda.pcb_Drc.getAllPadPairGroups();\n\n// 2. 输出每个组的名称和焊盘对\nconsole.log('count:', groups.length);\ngroups.forEach((g, i) => {\n  console.log('[' + i + '] name:', g.name);\n  g.padPairs.forEach((pair, j) => {\n    console.log('    pair[' + j + ']:', pair[0], '↔', pair[1]);\n  });\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有焊盘对组的详细属性",

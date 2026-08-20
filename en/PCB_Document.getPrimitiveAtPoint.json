@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 在 (500, 500) 放一个测试焊盘作为拾取目标\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 500, 500, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n\n// 3. 拾取焊盘中心点，返回该焊盘图元\nconst hit = await eda.pcb_Document.getPrimitiveAtPoint(500, 500);\nconsole.log('hitPrimitiveId:', hit.getState_PrimitiveId());\n\n// 4. 拾取空白坐标点，返回 undefined\nconst miss = await eda.pcb_Document.getPrimitiveAtPoint(90000, 90000);\nconsole.log('空白坐标点：', miss === undefined ? '未找到图元' : '找到图元');\n\n// 5. 清理测试图元和测试 PCB\nawait eda.pcb_PrimitivePad.delete([padId]);\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

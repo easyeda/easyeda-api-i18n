@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先写入一条演示配置\nawait eda.sys_Storage.setExtensionUserConfig('嘉立创示例_单位', 'mm');\n\n// 2. 按 key 读取该配置\nconst value = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_单位');\n\n// 3. 读取不存在的 key，返回 undefined\nconst missing = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_不存在的键');\n\n// 4. 清理演示配置，还原存储现场\nawait eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_单位');\n\nconsole.log('读取到的值：', value);\nconsole.log('不存在的 key 返回：', missing);\n```"
+        }
+      ]
     }
   },
   "_source": {

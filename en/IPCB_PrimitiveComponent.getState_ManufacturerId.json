@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_ManufacturerId",
     "className": "IPCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置一个测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n\n// 2. 读取制造商编号\nconst manufacturerId = comp.getState_ManufacturerId();\n\n// 3. 清理测试器件\nawait eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('manufacturerId:', manufacturerId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：制造商编号",

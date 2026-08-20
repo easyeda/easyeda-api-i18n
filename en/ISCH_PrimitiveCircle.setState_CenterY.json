@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_CenterY",
     "className": "ISCH_PrimitiveCircle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个测试圆，圆心 (x, y)、半径 150（SCH 坐标单位 10mil）\nconst circle = await eda.sch_PrimitiveCircle.create(x, y, 150);\n\n// 3. 切换异步模式并把圆心上移 200\nconst asyncCircle = circle.toAsync();\nasyncCircle.setState_CenterY(y + 200);\nawait asyncCircle.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveCircle.get(circle.getState_PrimitiveId());\n\nconsole.log('centerY:', y, '→', refetched.getState_CenterY());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：圆心 Y",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "search",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 尝试按关键字搜索（当前版本非空关键字会抛错，如实展示）\ntry {\n  const keywordResults = await eda.lib_Symbol.search('0402');\n  console.log('关键字搜索返回', keywordResults.length, '条');\n} catch (e) {\n  // 剥掉错误类型前缀；注意：正则写法尾部会产生星号+斜杠序列，会闭掉 tsdoc 注释，故用 split\n  console.log('关键字搜索当前版本抛错：', String(e.message).split('Error: ').pop());\n}\n\n// 2. 改用空关键字列出系统库符号，每页 5 条\nconst results = await eda.lib_Symbol.search('', undefined, [], undefined, 5, 1);\n\n// 3. 输出搜索结果（需要过滤时可按 item.name 自行筛选）\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "搜索符号",

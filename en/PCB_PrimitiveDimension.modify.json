@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试标注（随机坐标避免与画布已有标注重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm',\n  10,\n  2\n);\nconst dimId = dim.getState_PrimitiveId();\n\n// 2. 读取修改前的线宽与精度\nconst beforeWidth = dim.getState_LineWidth();\nconst beforePrecision = dim.getState_Precision();\n\n// 3. 批量修改：线宽 10 → 20，精度 2 → 3\nawait eda.pcb_PrimitiveDimension.modify(dimId, { lineWidth: 20, precision: 3 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveDimension.get(dimId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', dimId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('precision:', beforePrecision, '→', refreshed.getState_Precision());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改尺寸标注",

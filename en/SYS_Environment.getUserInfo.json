@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getUserInfo",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取当前用户信息（同步返回对象）\nconst userInfo = eda.sys_Environment.getUserInfo();\n\n// 2. 输出用户信息（uuid 是账号的唯一标识，可作为业务数据的关联键）\nconsole.log('用户名：', userInfo?.username);\nconsole.log('昵称：', userInfo?.nickname);\nconsole.log('用户 uuid：', userInfo?.uuid);\nconsole.log('客户编号：', userInfo?.customerCode);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取用户信息",

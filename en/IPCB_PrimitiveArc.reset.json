@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 46000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一段 10mil 线宽的测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\n\n// 3. 切换异步模式，累计一处未提交的线宽修改（10 → 99）\nconst asyncArc = arc.toAsync();\nasyncArc.setState_LineWidth(99);\n\n// 4. 重置：丢弃未提交的修改，回到画布当前状态\nawait asyncArc.reset();\n\n// 5. 从画布重新读取，线宽仍是 10（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('lineWidth after reset:', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

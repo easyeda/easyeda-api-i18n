@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建临时原理图并给它加一页（新建的原理图没有页面，需显式创建）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic('嘉立创示例_关闭文档');\nconst pageUuid = await eda.dmt_Schematic.createSchematicPage(schematicUuid);\n\n// 2. 打开该页面作为关闭目标\nconst tabId = await eda.dmt_EditorControl.openDocument(pageUuid);\nconsole.log('opened tab:', tabId);\n\n// 3. 关闭该标签页（空白文档，无未保存内容）\nconst closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n\n// 4. 删除临时原理图，保持工程整洁\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
     }
   },
   "_source": {

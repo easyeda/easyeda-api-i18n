@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可操作的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 高亮该网络（画布上此网络的图元高亮显示）\nconst highlighted = await eda.pcb_Net.highlightNet('嘉立创示例_NET1');\n\n// 3. 清理测试图元（操作类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('highlighted:', highlighted);\n```"
+        }
+      ]
     }
   },
   "_source": {

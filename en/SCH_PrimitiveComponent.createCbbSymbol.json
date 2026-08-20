@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createCbbSymbol",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 从系统库搜索可用的复用模块\nconst cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\n\n// 2. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 3. 创建复用模块符号（cbbUuid 传模块工程 UUID，符号 uuid 可省略由模块默认提供）\nconst symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  {\n    libraryUuid: cbb.libraryUuid,  // CBB 工程所在库的 UUID\n    cbbUuid: cbb.uuid              // CBB 工程的 UUID\n  },\n  x,      // 坐标 X\n  y,      // 坐标 Y\n  0,      // 旋转角度\n  false   // 是否镜像\n);\n\n// 4. 创建类保留现场，供在画布上观察模块符号\nconsole.log('primitiveId:', symbol.getState_PrimitiveId());\nconsole.log('primitiveType:', symbol.getState_PrimitiveType());\nconsole.log('position:', symbol.getState_X(), ',', symbol.getState_Y());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建复用模块符号",

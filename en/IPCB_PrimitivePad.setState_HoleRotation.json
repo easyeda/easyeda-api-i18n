@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个插槽通孔焊盘（槽未旋转）\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['SLOT', 30, 80], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleRotation();\n\n// 2. 异步模式下把孔旋转 45 度并提交\nconst a = pad.toAsync();\na.setState_HoleRotation(45);\nawait a.done();\n\n// 3. 从画布重新读取，确认旋转已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeRotation:', before, '→', ref.getState_HoleRotation());\n```"
+        }
+      ]
     }
   },
   "_source": {

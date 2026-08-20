@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_InteractiveMode",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段两点圆弧（交互模式 1）的测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取交互模式\nconst interactiveMode = arc.getState_InteractiveMode();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('interactiveMode:', interactiveMode);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：交互模式",

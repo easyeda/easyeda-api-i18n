@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按立创编号从系统库精确反查器件，返回项不含 libraryUuid，需补上才能用于 create\n//    坐标取随机值，避免与画布上已有的器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\nconst devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\n\n// 2. 放置到顶层（1），旋转 90°，不锁定\nconst comp = await eda.pcb_PrimitiveComponent.create({ libraryUuid: sysLibUuid, uuid: devices[0].uuid }, 1, x, y, 90, false);\n\n// 3. 创建类保留现场，不删除器件\nconsole.log('primitiveId:', comp.getState_PrimitiveId());\nconsole.log('designator:', comp.getState_Designator());\nconsole.log('name:', comp.getState_Name());\nconsole.log('footprint:', comp.getState_Footprint());\nconsole.log('layer:', comp.getState_Layer());\nconsole.log('x:', comp.getState_X(), 'y:', comp.getState_Y());\nconsole.log('rotation:', comp.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建器件",

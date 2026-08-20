@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openSymbolInEditor",
     "className": "LIB_Cbb",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录当前工程，便于演示结束后恢复\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\n\n// 2. 复制一个系统库模块到个人库作为演示对象\nconst systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_打开符号_' + Date.now());\n\n// 3. 先打开模块工程（openSymbolInEditor 的前置条件）\nawait eda.lib_Cbb.openProjectInEditor(cbbUuid, personalLib);\nawait new Promise((r) => setTimeout(r, 1000));\n\n// 4. 在编辑器打开模块符号，返回标签页 ID\nconst tabId = await eda.lib_Cbb.openSymbolInEditor(cbbUuid, personalLib);\n\n// 5. 恢复原来打开的工程\nawait eda.dmt_Project.openProject(projectInfo.uuid);\n\nconsole.log('source:', source.name, source.uuid);\nconsole.log('tabId:', tabId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "在编辑器打开复用模块符号",

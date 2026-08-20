@@ -24,7 +24,12 @@
           "key": "remarks.text.3"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 取当前工程所属团队\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 获取该团队下所有工程的 UUID\nconst projectUuids = await eda.dmt_Project.getAllProjectsUuid(teamUuid);\n\nconsole.log('projectCount:', projectUuids.length);\nconsole.log('projectUuids:', projectUuids.join(', '));\n```"
+        }
+      ]
     }
   },
   "_source": {

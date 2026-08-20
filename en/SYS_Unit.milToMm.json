@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "milToMm",
     "className": "SYS_Unit",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 基本换算：100 mil = 2.54 mm（同步返回数值，无需 await）\nconsole.log('100 mil =', eda.sys_Unit.milToMm(100), 'mm');\n\n// 2. 常用工艺值换算：6 mil 线宽与 1181 mil（约 30 mm 板宽）\nconsole.log('6 mil =', eda.sys_Unit.milToMm(6), 'mm');\nconsole.log('1181 mil =', eda.sys_Unit.milToMm(1181), 'mm');\n\n// 3. 指定保留 2 位小数（默认 4 位）\nconsole.log('3937 mil 保留 2 位小数 =', eda.sys_Unit.milToMm(3937, 2), 'mm');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "单位转换：密尔到毫米",

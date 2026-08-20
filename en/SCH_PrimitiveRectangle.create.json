@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机左上角坐标，避免与画布上已有的矩形重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个宽 400 高 300 的圆角矩形：圆角 20、旋转 90 度（绕左上点）、红色虚线边线、黄色网格填充、线宽 6\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 20, 90, '#FF0000', '#FFFF00', 6, 1, 'Grid');\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', rect.getState_PrimitiveId());\nconsole.log('primitiveType:', rect.getState_PrimitiveType());\nconsole.log('topLeft:', rect.getState_TopLeftX(), rect.getState_TopLeftY());\nconsole.log('size:', rect.getState_Width(), 'x', rect.getState_Height());\nconsole.log('cornerRadius:', rect.getState_CornerRadius());\nconsole.log('rotation:', rect.getState_Rotation());\nconsole.log('color:', rect.getState_Color());\nconsole.log('fillColor:', rect.getState_FillColor());\nconsole.log('fillStyle:', rect.getState_FillStyle());\nconsole.log('lineWidth:', rect.getState_LineWidth());\nconsole.log('lineType:', rect.getState_LineType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建矩形",

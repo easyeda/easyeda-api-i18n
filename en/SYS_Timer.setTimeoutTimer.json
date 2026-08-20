@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 设置 200ms 后触发一次的定时器，并给回调传参\nlet received = null;\nconst created = eda.sys_Timer.setTimeoutTimer('嘉立创示例_单次', 200, (msg) => { received = msg; }, '延时任务完成');\n\n// 2. 等待定时器到期（单次定时器触发后自动结束，无需手动清理）\nawait new Promise(resolve => setTimeout(resolve, 1500));\n\nconsole.log('设置结果：', created);\nconsole.log('回调收到的参数：', received);\n```"
+        }
+      ]
     }
   },
   "_source": {

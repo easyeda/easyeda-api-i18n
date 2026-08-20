@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "check",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 详细模式：返回全部违规项（含描述），无违规则为空数组\nconst details = await eda.pcb_Drc.check(true, false, true);\nconsole.log('violationCount:', details.length);\ndetails.forEach((d, i) => {\n  console.log('[' + i + ']', typeof d === 'string' ? d : JSON.stringify(d));\n});\n\n// 2. 布尔模式：只返回是否全部通过\nconst passed = await eda.pcb_Drc.check(true, false, false);\nconsole.log('allPassed:', passed);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "检查 DRC",

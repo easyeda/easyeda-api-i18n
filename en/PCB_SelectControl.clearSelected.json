@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "clearSelected",
     "className": "PCB_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试焊盘并选中它\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\nawait eda.pcb_SelectControl.doSelectPrimitives([padId]);\n\n// 2. 确认清除前有选中图元\nconst beforeIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除前选中数量：', beforeIds.length);\n\n// 3. 清除选中\nconst cleared = await eda.pcb_SelectControl.clearSelected();\nconsole.log('cleared:', cleared);\n\n// 4. 确认选中集已清空\nconst afterIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除后选中数量：', afterIds.length);\n\n// 5. 清理测试图元\nawait eda.pcb_PrimitivePad.delete([padId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "清除选中",

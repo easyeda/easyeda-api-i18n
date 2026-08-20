@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层丝印（3）测试标注作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3\n);\nconst dimId = dim.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部尺寸标注\nconst all = await eda.pcb_PrimitiveDimension.getAll();\n\n// 3. 按层过滤：只取顶层丝印（3）的标注\nconst topSilk = await eda.pcb_PrimitiveDimension.getAll(3);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveDimension.delete([dimId]);\n\nconsole.log('total dimensions:', all.length);\nconsole.log('top silkscreen dimensions:', topSilk.length);\nconsole.log('marker dimension found:', topSilk.some(d => d.getState_PrimitiveId() === dimId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有尺寸标注",

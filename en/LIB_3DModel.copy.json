@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "copy",
     "className": "LIB_3DModel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID（复制目标库）\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 从系统库找一个 3D 模型作为复制来源\nconst results = await eda.lib_3DModel.search('0402', undefined, undefined, 1);\nconst source = results[0];\n\n// 3. 复制到个人库，指定新名称避免同名冲突\nconst newName = 'CopyOf_' + source.name + '_' + Date.now();\nconst copiedUuid = await eda.lib_3DModel.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  undefined,\n  newName\n);\n\n// 创建类保留现场\n\nconsole.log('source:', source.name, source.uuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('newName:', newName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "复制 3D 模型",

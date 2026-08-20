@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createBoard",
     "className": "DMT_Board",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 无参调用，由系统自动创建一对原理图/PCB 文档并关联\nconst boardName = await eda.dmt_Board.createBoard();\nconsole.log('create:', boardName);\n\n// 2. 删除新板子（其关联文档是本例新建的，删除不影响其他板子），保持工程整洁\nconst deleted = await eda.dmt_Board.deleteBoard(boardName);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建板子",

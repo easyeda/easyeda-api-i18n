@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toSync",
     "className": "ISCH_PrimitiveAttribute",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取修改前的属性值\nconst before = designator.getState_Value();\n\n// 4. 转换为同步图元后直接修改，立即生效（无需 done()）\nconst syncAttr = designator.toSync();\nsyncAttr.setState_Value(before + '-SYNC');\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('value:', before, '→', refetched.getState_Value());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为同步图元",

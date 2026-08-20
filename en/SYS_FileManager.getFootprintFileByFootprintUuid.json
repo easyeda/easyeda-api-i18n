@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 列出系统库封装，取第一个的 UUID\nconst footprintList = await eda.lib_Footprint.search('', undefined, [], undefined, 5, 1);\nconst footprint = footprintList[0];\n\n// 2. 按封装 UUID 获取封装文件\nconst footprintFile = await eda.sys_FileManager.getFootprintFileByFootprintUuid(footprint.uuid);\n\n// 3. 输出封装与文件信息（size 单位为字节）\nconsole.log('封装名：', footprint.name);\nconsole.log('文件名：', footprintFile.name);\nconsole.log('文件大小：', footprintFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

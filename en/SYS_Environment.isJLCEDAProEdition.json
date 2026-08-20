@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isJLCEDAProEdition",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断是否为嘉立创 EDA 专业版（同步返回布尔值）\nconst isJLCEDAPro = eda.sys_Environment.isJLCEDAProEdition();\n\n// 2. 输出判断结果（嘉立创 EDA 专业版为 true）\nconsole.log('是否嘉立创 EDA 专业版：', isJLCEDAPro);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否为 嘉立创EDA 专业版本",

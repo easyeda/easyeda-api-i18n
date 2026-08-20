@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Polygon",
     "className": "IPCB_PrimitivePolyline",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条已知轮廓的折线（500 → 拐弯 → 300）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\n\n// 2. 读取多边形对象，再取它的轮廓源数组\nconst currentPolygon = polyline.getState_Polygon();\nconst source = currentPolygon.getSource();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePolyline.delete([polyline.getState_PrimitiveId()]);\n\nconsole.log('polygonSource:', JSON.stringify(source));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：单多边形",

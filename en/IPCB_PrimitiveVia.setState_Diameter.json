@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Diameter",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个外径 40mil 的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_Diameter();\n\n// 2. 异步模式下加大外径并提交\nconst a = via.toAsync();\na.setState_Diameter(60);\nawait a.done();\n\n// 3. 从画布重新读取，确认外径已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('diameter:', before, '→', ref.getState_Diameter());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：外径",

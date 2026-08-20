@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 注册连接，挂上「连接成功」与「收到消息」两个回调\neda.sys_WebSocket.register('嘉立创示例_注册', 'ws://127.0.0.1:49620',\n  (event) => {\n    // 服务器推送的每条消息都会进入这个回调（event.data 是消息内容）\n    console.log('收到服务器消息：', event.data);\n  },\n  () => {\n    console.log('连接已建立');\n  });\n\n// 2. register 是同步调用，只登记意图，握手需要一点时间，等待回调触发\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 演示完毕后关闭连接，避免残留\neda.sys_WebSocket.close('嘉立创示例_注册');\nconsole.log('已关闭连接');\n```"
+        }
+      ]
     }
   },
   "_source": {

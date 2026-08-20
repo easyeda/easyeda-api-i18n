@@ -5,6 +5,15 @@
     "name": "create",
     "className": "LIB_SimulationModel",
     "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建 Ngspice 仿真模型（modelData 传 .model 语句文本，分类传 [] = 不分类）\nconst modelName = '嘉立创示例_新仿真模型_' + Date.now();\nconst simulationModelUuid = await eda.lib_SimulationModel.create(\n  libraryUuid,\n  {\n    modelType: 'Ngspice',\n    modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n    modelName: modelName,\n    modelPin: '1,2',\n  },\n  [],\n  '示例仿真模型描述'\n);\n\n// 创建类保留现场（新仿真模型留在个人库中供观察）\n\nconsole.log('simulationModelUuid:', simulationModelUuid);\nconsole.log('modelName:', modelName);\n```"
+        }
+      ]
+    },
     "versionTags": [
       {
         "tag": "ADD since EDA v3.2.167",

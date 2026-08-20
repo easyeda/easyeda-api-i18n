@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "SCH_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两段测试圆弧（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst arc1 = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y);\nconst arc2 = await eda.sch_PrimitiveArc.create(x, y + 200, x + 100, y + 300, x + 200, y + 200);\n\n// 2. 传单个 ID 字符串，返回单个圆弧对象\nconst single = await eda.sch_PrimitiveArc.get(arc1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回圆弧对象数组（任一 ID 未匹配不影响其它图元的返回）\nconst arr = await eda.sch_PrimitiveArc.get([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveArc.delete([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\nconsole.log('single startX:', single.getState_StartX());\nconsole.log('array length:', arr.length);\nconsole.log('arc2 endX:', arr[1].getState_EndX());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取圆弧",

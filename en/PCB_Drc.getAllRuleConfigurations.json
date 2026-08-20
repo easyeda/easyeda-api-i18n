@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllRuleConfigurations",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 查询全部设计规则配置（含系统配置）\nconst all = await eda.pcb_Drc.getAllRuleConfigurations(true);\n\n// 2. 输出配置数量和名称\nconsole.log('count:', all.length);\nall.forEach((c, i) => {\n  console.log('[' + i + '] name:', c.name);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有设计规则配置",

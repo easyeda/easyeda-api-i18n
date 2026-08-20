@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个普通贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 调用设置接口（当前版本不产生任何效果）\npad.setState_SpecialPad([[1, 1, ['ELLIPSE', 40, 40]]]);\n\n// 3. 读取确认特殊外形未生效、普通外形保持不变\nconst special = pad.getState_SpecialPad();\nconst normalShape = pad.getState_Pad();\n\nconsole.log('specialPadApplied:', special !== undefined);\nconsole.log('normalShapeKept:', JSON.stringify(normalShape) === JSON.stringify(['ELLIPSE', 60, 60]));\n```"
+        }
+      ]
     }
   },
   "_source": {

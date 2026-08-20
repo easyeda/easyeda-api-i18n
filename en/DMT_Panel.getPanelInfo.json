@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getPanelInfo",
     "className": "DMT_Panel",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试面板并等 1.5s 同步\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 按 UUID 查询面板详细属性\nconst panelInfo = await eda.dmt_Panel.getPanelInfo(panelUuid);\n\n// 3. 输出属性\nconsole.log('name:', panelInfo?.name);\nconsole.log('itemType:', panelInfo?.itemType);\nconsole.log('parentProjectUuid:', panelInfo?.parentProjectUuid);\n\n// 4. 清理测试面板（查询类案例不留测试对象）\nawait eda.dmt_Panel.deletePanel(panelUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取面板的详细属性",

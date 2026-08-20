@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Layer",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层丝印层（3）的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\n\n// 2. 读取所在层\nconst layer = dim.getState_Layer();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('layer:', layer);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：层",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_FillStyle",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试矩形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个无填充的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 200, 100);\n\n// 3. 切换异步模式，设置网格填充样式\nconst asyncRect = rect.toAsync();\nasyncRect.setState_FillStyle('Grid');\nawait asyncRect.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveRectangle.get(rect.getState_PrimitiveId());\n\nconsole.log('fillStyle:', null, '→', refetched.getState_FillStyle());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：填充样式",

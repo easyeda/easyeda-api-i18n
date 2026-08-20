@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，在顶层放置一个圆形贴片焊盘（直径 60mil）\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 读取创建结果，确认层、编号与外形（保留现场供画布观察）\nconsole.log('created:', !!pad);\nconsole.log('layer:', pad.getState_Layer());\nconsole.log('padNumber:', pad.getState_PadNumber());\nconsole.log('padShape:', pad.getState_Pad());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "在 PCB 画布中创建图元",

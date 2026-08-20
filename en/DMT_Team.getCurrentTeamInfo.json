@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取当前团队属性\nconst team = await eda.dmt_Team.getCurrentTeamInfo();\n\n// 2. 输出当前团队属性（uuid 常用作后续 DMT_Folder/Project API 的 teamUuid 参数）\nconsole.log('当前团队名称：', team?.name);\nconsole.log('当前团队 uuid：', team?.uuid);\nconsole.log('当前团队身份 ID：', team?.identity);\n```"
+        }
+      ]
     }
   },
   "_source": {

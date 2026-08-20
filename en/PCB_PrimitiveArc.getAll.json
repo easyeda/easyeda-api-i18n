@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段顶层测试圆弧作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\nconst arcId = arc.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部圆弧\nconst all = await eda.pcb_PrimitiveArc.getAll();\n\n// 3. 按层过滤：只取顶层（1）的圆弧\nconst topLayer = await eda.pcb_PrimitiveArc.getAll('', 1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveArc.delete([arcId]);\n\nconsole.log('total arcs:', all.length);\nconsole.log('top layer arcs:', topLayer.length);\nconsole.log('marker arc found in top layer:', topLayer.some(a => a.getState_PrimitiveId() === arcId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有圆弧线",

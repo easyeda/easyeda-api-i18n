@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_SolderMaskAndPasteMaskExpansion",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个自定义扩展的贴片焊盘和一个默认焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst customized = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0, undefined, { topSolderMask: 4, topPasteMask: 2 });\nconst plain = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 分别读取扩展配置\nconst customizedExpansion = customized.getState_SolderMaskAndPasteMaskExpansion();\nconst plainExpansion = plain.getState_SolderMaskAndPasteMaskExpansion();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([customized.getState_PrimitiveId(), plain.getState_PrimitiveId()]);\n\nconsole.log('customizedExpansion:', customizedExpansion);\nconsole.log('plainExpansion:', plainExpansion);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：阻焊/助焊扩展",

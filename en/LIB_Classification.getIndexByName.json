@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建两级测试分类（复用模块库，ELIB_LibraryType.CBB = '1'）\nconst tag = Date.now();\nconst primaryName = '嘉立创示例_按名索引一级_' + tag;\nconst secondaryName = '嘉立创示例_按名索引二级_' + tag;\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\nawait eda.lib_Classification.createSecondary(\n  libraryUuid, '1', primaryIndex.primaryClassificationUuid, secondaryName\n);\n\n// 3. 只按一级名称查索引\nconst primaryOnly = await eda.lib_Classification.getIndexByName(libraryUuid, '1', primaryName);\n\n// 4. 按一级 + 二级名称查索引（secondaryClassificationName 可选）\nconst withSecondary = await eda.lib_Classification.getIndexByName(\n  libraryUuid, '1', primaryName, secondaryName\n);\n\n// 5. 清理测试分类（查询类需要清理）\nawait eda.lib_Classification.deleteByUuid(libraryUuid, primaryIndex.primaryClassificationUuid);\n\nconsole.log('primaryOnly.primaryClassificationUuid:', primaryOnly.primaryClassificationUuid);\nconsole.log('withSecondary.secondaryClassificationUuid:', withSecondary.secondaryClassificationUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

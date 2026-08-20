@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isOfflineMode",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断是否为全离线模式（同步返回布尔值）\nconst isOffline = eda.sys_Environment.isOfflineMode();\n\n// 2. 输出判断结果（全离线模式为 true）\nconsole.log('是否全离线模式：', isOffline);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否为全离线模式",

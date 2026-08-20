@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 列出系统库面板库，取第一个的 UUID\nconst panelList = await eda.lib_PanelLibrary.search('', undefined, undefined, 5);\nconst panel = panelList[0];\n\n// 2. 按面板库 UUID 获取面板库文件\nconst panelFile = await eda.sys_FileManager.getPanelLibraryFileByPanelLibraryUuid(panel.uuid);\n\n// 3. 输出面板库与文件信息（size 单位为字节）\nconsole.log('面板库名：', panel.name);\nconsole.log('文件名：', panelFile.name);\nconsole.log('文件大小：', panelFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

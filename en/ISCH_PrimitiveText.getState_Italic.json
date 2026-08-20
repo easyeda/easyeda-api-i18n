@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Italic",
     "className": "ISCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个斜体的测试文本（第 9 参是是否斜体）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_注释', 0, null, null, null, false, true);\n\n// 2. 读取是否斜体\nconst italic = text.getState_Italic();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('italic:', italic);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：是否斜体",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitivePolyline",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条顶层测试折线作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\nconst polylineId = polyline.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部折线\nconst all = await eda.pcb_PrimitivePolyline.getAll();\n\n// 3. 按层过滤：只取顶层（1）的折线\nconst topLayer = await eda.pcb_PrimitivePolyline.getAll('', 1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePolyline.delete([polylineId]);\n\nconsole.log('total polylines:', all.length);\nconsole.log('top layer polylines:', topLayer.length);\nconsole.log('marker polyline found in top layer:', topLayer.some(p => p.getState_PrimitiveId() === polylineId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有折线",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试区域：顶层，规则 [2] 即禁止元件（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2], '嘉立创示例_待修改');\nconst regionId = region.getState_PrimitiveId();\n\n// 2. 读取修改前的层与规则类型\nconst beforeLayer = region.getState_Layer();\nconst beforeRuleType = region.getState_RuleType();\n\n// 3. 批量修改：层从顶层（1）换到底层（2），规则 [2] 禁止元件扩展为 [2, 5] 禁止元件 + 禁止布线\nawait eda.pcb_PrimitiveRegion.modify(regionId, { layer: 2, ruleType: [2, 5] });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveRegion.get(regionId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', regionId);\nconsole.log('layer:', beforeLayer, '→', refreshed.getState_Layer());\nconsole.log('ruleType:', JSON.stringify(beforeRuleType), '→', JSON.stringify(refreshed.getState_RuleType()));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改区域",

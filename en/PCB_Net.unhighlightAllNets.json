@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "unhighlightAllNets",
     "className": "PCB_Net",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建带网络名的过孔并高亮，让画布存在高亮网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\nawait eda.pcb_Net.highlightNet('嘉立创示例_NET1');\n\n// 2. 取消所有网络的高亮\nconst cleared = await eda.pcb_Net.unhighlightAllNets();\n\n// 3. 清理测试图元（操作类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('allHighlightsCleared:', cleared);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "取消高亮所有网络",

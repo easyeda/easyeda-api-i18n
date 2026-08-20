@@ -20,7 +20,12 @@
           "key": "remarks.text.2"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 定义一块禁布区，测试三个典型位置的点\nconst keepout = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst inside = { x: 50, y: 40 };    // 区域中心，明显在内部\nconst outside = { x: 150, y: 40 };  // 区域右侧，明显在外部\nconst corner = { x: 0, y: 0 };      // 顶点，落在边界上\n\nconsole.log('中心点在禁布区内：', eda.sys_Math.containsPoint(keepout, inside));\nconsole.log('外部点在禁布区内：', eda.sys_Math.containsPoint(keepout, outside));\nconsole.log('顶点在禁布区内：', eda.sys_Math.containsPoint(keepout, corner));\n\n// 2. 严格判断边界点：距离为 0 说明点恰好在边界上\nconsole.log('顶点到边界的距离：', eda.sys_Math.distanceToPoint(keepout, corner));\n```"
+        }
+      ]
     }
   },
   "_source": {

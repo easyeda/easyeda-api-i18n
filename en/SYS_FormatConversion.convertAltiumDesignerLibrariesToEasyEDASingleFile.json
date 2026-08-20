@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "convertAltiumDesignerLibrariesToEasyEDASingleFile",
     "className": "SYS_FormatConversion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 准备 Altium Designer 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n//    选取用户文件，此处直接构造 File 对象演示调用）\nconst schLib = new File(['占位内容，真实场景为 .SchLib 文件内容'], '嘉立创示例_元件库.SchLib');\n\n// 2. 转换为单个嘉立创库文件\nconst easyedaLib = await eda.sys_FormatConversion.convertAltiumDesignerLibrariesToEasyEDASingleFile(schLib);\n\n// 3. 输出转换得到的库文件信息\nconsole.log('库文件名：', easyedaLib.name);\nconsole.log('文件大小：', easyedaLib.size, '字节');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "转换 Altium Designer 库到单个嘉立创库文件",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试内嵌对象（随机坐标避免重合），使用 4x4 像素 PNG 的 data URI\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst binaryData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, binaryData, 400, 300, 0, false, 'logo.png', false);\nconst objId = obj.getState_PrimitiveId();\n\n// 2. 读取修改前的宽与旋转角\nconst beforeWidth = obj.getState_Width();\nconst beforeRotation = obj.getState_Rotation();\n\n// 3. 批量修改：宽 400 → 500，旋转 0 → 90 度\nawait eda.pcb_PrimitiveObject.modify(objId, { width: 500, rotation: 90 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveObject.get(objId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', objId);\nconsole.log('width:', beforeWidth, '→', refreshed.getState_Width());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改二进制内嵌对象",

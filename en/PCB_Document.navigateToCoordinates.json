@@ -20,7 +20,12 @@
           "key": "remarks.text.2"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开（视口操作作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 定位到数据坐标 (1000, 800)\nconst navigated = await eda.pcb_Document.navigateToCoordinates(1000, 800);\nconsole.log('navigated:', navigated);\n\n// 3. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PadType",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个普通焊盘和一个标识点\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst normal = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst mark = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 2);\n\n// 2. 分别读取焊盘类型（0=普通 1=测试点 2=标识点）\nconst normalType = normal.getState_PadType();\nconst markType = mark.getState_PadType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([normal.getState_PrimitiveId(), mark.getState_PrimitiveId()]);\n\nconsole.log('normalType:', normalType);\nconsole.log('markType:', markType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：焊盘类型",

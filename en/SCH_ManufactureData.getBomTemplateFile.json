@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getBomTemplateFile",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先拿到账号下可用的 BOM 模板列表\nconst templates = await eda.sch_ManufactureData.getBomTemplates();\nconsole.log('可用模板：', templates.join('、'));\n\n// 2. 导出第一个模板的文件\nconst templateFile = await eda.sch_ManufactureData.getBomTemplateFile(templates[0]);\n\n// 3. 查看导出结果\nconsole.log('模板文件大小：', templateFile?.size);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取 BOM 模板文件",

@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试面板并打开它，让焦点落到面板文档上（原理图/PCB 焦点下返回 undefined）\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(panelUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 获取当前焦点面板的详细属性\nconst panel = await eda.dmt_Panel.getCurrentPanelInfo();\n\n// 3. 输出面板的名称、UUID 与所属工程\nconsole.log('name:', panel?.name);\nconsole.log('panelUuid:', panel?.uuid);\nconsole.log('parentProjectUuid:', panel?.parentProjectUuid);\n\n// 4. 清理测试面板（面板处于打开状态也可以直接删除）\nawait eda.dmt_Panel.deletePanel(panelUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

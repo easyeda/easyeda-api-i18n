@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveType",
     "className": "IPCB_PrimitivePolyline",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条折线\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\n\n// 2. 读取图元类型\nconst primitiveType = polyline.getState_PrimitiveType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePolyline.delete([polyline.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：图元类型",

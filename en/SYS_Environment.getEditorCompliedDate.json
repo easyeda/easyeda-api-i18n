@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getEditorCompliedDate",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取编辑器编译日期（同步返回字符串）\nconst compliedDate = eda.sys_Environment.getEditorCompliedDate();\n\n// 2. 输出编译日期（如 2024-06-01，具体以当前环境为准）\nconsole.log('编辑器编译日期：', compliedDate);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取编辑器编译日期",

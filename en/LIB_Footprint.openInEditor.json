@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openInEditor",
     "className": "LIB_Footprint",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建封装\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_编辑封装_' + Date.now(),\n  []\n);\n\n// 2. 在编辑器中打开该封装，返回标签页 ID（uuid@libraryUuid 格式）\nconst tabId = await eda.lib_Footprint.openInEditor(footprintUuid, libraryUuid);\n\n// 打开后保留现场（编辑器停留在新封装页供观察；不需要时可传 tabId 给\n// dmt_EditorControl.closeDocument 关闭）\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('tabId:', tabId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "在编辑器打开文档",

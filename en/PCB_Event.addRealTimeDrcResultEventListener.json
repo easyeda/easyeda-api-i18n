@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_drc_result';\n\n// 1. 注册实时 DRC 结果监听，eventType 固定为 'all'\neda.pcb_Event.addRealTimeDrcResultEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    // 回调在实时 DRC 检出违规时触发；props 是 DRC 结果数组\n    console.log('drcResult:', JSON.stringify(props));\n  }\n);\n\n// 2. 回读确认注册成功\nconst registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 3. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

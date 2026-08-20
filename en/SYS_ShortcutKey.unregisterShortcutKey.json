@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "unregisterShortcutKey",
     "className": "SYS_ShortcutKey",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先注册一个演示快捷键作为操作对象\nawait eda.sys_ShortcutKey.registerShortcutKey(\n  ['CONTROL', 'ALT', 'F9'],\n  '嘉立创示例_待移除快捷键',\n  () => {}\n);\n\n// 2. 反注册：故意打乱键序传入，验证不区分排列顺序的匹配规则\nconst ok = await eda.sys_ShortcutKey.unregisterShortcutKey(['F9', 'ALT', 'CONTROL']);\nconsole.log('反注册返回：', ok);\n\n// 3. 复查快捷键列表，确认演示键位已被移除\nconst list = await eda.sys_ShortcutKey.getShortcutKeys();\nconst still = list.some(item => item.title === '嘉立创示例_待移除快捷键');\nconsole.log('反注册后仍在列表中：', still);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "反注册快捷键",

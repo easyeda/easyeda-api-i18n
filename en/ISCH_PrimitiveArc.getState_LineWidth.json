@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_LineWidth",
     "className": "ISCH_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段线宽 6 的测试圆弧（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, null, null, 6, 1);\n\n// 2. 读取线宽\nconst lineWidth = arc.getState_LineWidth();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('lineWidth:', lineWidth);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：线宽",

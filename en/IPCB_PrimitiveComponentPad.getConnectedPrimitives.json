@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 放置测试器件，取第一个焊盘的中心坐标\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\nconst pin = (await comp.getAllPins())[0];\nconst padX = pin.getState_X();\nconst padY = pin.getState_Y();\n\n// 2. 从焊盘中心拉一段走线（起点正好落在中心 → 属于中心连接）\nconst line = await eda.pcb_PrimitiveLine.create('', 1, padX, padY, padX + 600, padY, 10);\nconst lineId = line.getState_PrimitiveId();\n\n// 3. 只查中心连接的图元\nconst centreConnected = await pin.getConnectedPrimitives(true);\n\n// 4. 查所有接触的图元\nconst allConnected = await pin.getConnectedPrimitives(false);\n\n// 5. 清理测试图元\nawait eda.pcb_PrimitiveLine.delete([lineId]);\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('centreConnectedCount:', centreConnected.length);\nconsole.log('centreContainsLine:', centreConnected.some(p => p.getState_PrimitiveId() === lineId));\nconsole.log('allConnectedCount:', allConnected.length);\n```"
+        }
+      ]
     }
   },
   "_source": {

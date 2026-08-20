@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机放置坐标，避免与画布上已有的内嵌对象重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 准备 4x4 像素 PNG 的 data URI（content 实测也接受裸 base64，data URI 带格式头更易读）\nconst png = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\n\n// 3. 在起点（x, y）放置图片：宽 400、高 300，不旋转、不镜像，文件名 logo.png\nconst obj = await eda.sch_PrimitiveObject.create(png, x, y, 400, 300, 0, false, 'logo.png');\n\n// 4. 创建类保留现场，不删除图元（getState_Content 返回数据内容，用长度表示）\nconsole.log('primitiveId:', obj.getState_PrimitiveId());\nconsole.log('primitiveType:', obj.getState_PrimitiveType());\nconsole.log('startX:', obj.getState_StartX(), 'startY:', obj.getState_StartY());\nconsole.log('width:', obj.getState_Width(), 'height:', obj.getState_Height());\nconsole.log('fileName:', obj.getState_FileName());\nconsole.log('content length:', obj.getState_Content().length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建二进制内嵌对象",

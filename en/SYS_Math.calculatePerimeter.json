@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "calculatePerimeter",
     "className": "SYS_Math",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 矩形 100 x 80，周长应为 360\nconst rect = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconsole.log('矩形周长：', eda.sys_Math.calculatePerimeter(rect));\n\n// 2. L 形轮廓（缺口裁掉一个角，周长按实际边界累加）\nconst lShape = [\n  { x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 40 },\n  { x: 40, y: 40 }, { x: 40, y: 80 }, { x: 0, y: 80 },\n];\nconsole.log('L 形轮廓周长：', eda.sys_Math.calculatePerimeter(lShape));\n\n// 3. 布尔运算返回的多边形组同样可以作为输入\nconst hole = [{ x: 30, y: 20 }, { x: 70, y: 20 }, { x: 70, y: 60 }, { x: 30, y: 60 }];\nconst cut = eda.sys_Math.subtract(rect, hole);\nconsole.log('挖孔后多边形组的周长：', eda.sys_Math.calculatePerimeter(cut));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "计算多边形周长",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的圆弧重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 在顶层铜层创建一段 90° 圆弧：起点（x, y），终点（x+500, y+300），线宽 10mil，两点圆弧交互（1）\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', arc.getState_PrimitiveId());\nconsole.log('primitiveType:', arc.getState_PrimitiveType());\nconsole.log('startX:', arc.getState_StartX(), 'startY:', arc.getState_StartY());\nconsole.log('endX:', arc.getState_EndX(), 'endY:', arc.getState_EndY());\nconsole.log('arcAngle:', arc.getState_ArcAngle());\nconsole.log('lineWidth:', arc.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建圆弧线",

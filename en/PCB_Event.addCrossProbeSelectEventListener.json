@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_cross_probe';\n\n// 1. 注册交叉选择事件监听（回调在用户执行交叉选中时触发，本例不依赖实际触发）\neda.pcb_Event.addCrossProbeSelectEventListener(listenerId, (props) => {\n  console.log('crossProbeSelect:', JSON.stringify(props));\n});\n\n// 2. 回读确认注册成功（同 id 重复注册会被防重机制忽略）\nconst registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 3. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

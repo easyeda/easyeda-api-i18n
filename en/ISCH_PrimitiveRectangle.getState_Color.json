@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Color",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个红色边框的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100, 0, 0, '#FF0000');\n\n// 2. 读取边框颜色\nconst color = rect.getState_Color();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：边框颜色",

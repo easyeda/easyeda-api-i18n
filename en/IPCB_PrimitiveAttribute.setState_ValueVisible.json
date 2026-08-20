@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_ValueVisible",
     "className": "IPCB_PrimitiveAttribute",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取修改前的 Value 可见性\nconst before = designator.getState_ValueVisible();\n\n// 4. 切换异步模式隐藏编号文本并提交\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_ValueVisible(false);\nawait asyncAttr.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('valueVisible:', before, '→', refetched.getState_ValueVisible());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：Value 是否可见",

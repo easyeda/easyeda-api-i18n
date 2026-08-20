@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_CoordinateSet",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个长度标注（8 元素坐标集：测量端点、箭头端点各两组）\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\n\n// 2. 读取坐标集\nconst coordinateSet = dim.getState_CoordinateSet();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('coordinateSet:', JSON.stringify(coordinateSet));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：坐标集",

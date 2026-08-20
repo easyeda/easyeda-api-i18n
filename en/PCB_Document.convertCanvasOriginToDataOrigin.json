@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开（文档级 API 作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 换算画布坐标 (300, 400)。新建 PCB 画布原点与数据原点重合，换算值不变\nconst before = await eda.pcb_Document.convertCanvasOriginToDataOrigin(300, 400);\nconsole.log('before:', JSON.stringify(before));\n\n// 3. 设置画布原点偏移后再换算同一坐标，观察映射随之变化\nawait eda.pcb_Document.setCanvasOrigin(50, 100);\nconst after = await eda.pcb_Document.convertCanvasOriginToDataOrigin(300, 400);\nconsole.log('after:', JSON.stringify(after));\n\n// 4. 清理测试 PCB（偏移随文档一起删除）\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

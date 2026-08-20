@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "searchByProperties",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按名称精确搜索（官方属性集合目前仅支持 name）\n//    当前版本该接口不稳定：可能抛错，也可能正常返回 undefined，两种都要兼容\nlet results;\ntry {\n  results = await eda.lib_Symbol.searchByProperties({ name: '0402' });\n} catch (e) {\n  console.log('当前版本按 name 搜索抛错：', e.message);\n}\nif (!Array.isArray(results)) results = [];\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "使用属性精确搜索符号",

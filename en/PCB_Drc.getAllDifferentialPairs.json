@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的网络名和差分对名，创建测试差分对\nconst ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\nconst pairName = '嘉立创示例_查询差分对_' + ts;\nawait eda.pcb_Drc.createDifferentialPair(pairName, netP, netN);\n\n// 2. 查询所有差分对（v3.4 起返回结构可能为数组或对象，先按数组遍历）\nconst pairs = await eda.pcb_Drc.getAllDifferentialPairs();\nconst list = Array.isArray(pairs) ? pairs : Object.values(pairs);\nconsole.log('count:', list.length);\nlist.forEach((p, i) => {\n  console.log('[' + i + '] name:', p.name, 'positiveNet:', p.positiveNet, 'negativeNet:', p.negativeNet);\n});\n\n// 3. 清理测试差分对（查询类清理现场）\nawait eda.pcb_Drc.deleteDifferentialPair(pairName);\n```"
+        }
+      ]
     },
     "versionTags": [
       {

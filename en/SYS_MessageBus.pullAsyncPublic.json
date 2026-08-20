@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在公共总线发起拉取（Promise 挂起等待消息）\nconst pending = eda.sys_MessageBus.pullAsyncPublic('嘉立创示例_公共异步拉取');\n\n// 2. 用 pushPublic 投递消息（私有总线的 push 到不了这里）\neda.sys_MessageBus.pushPublic('嘉立创示例_公共异步拉取', '跨扩展结果已就绪');\n\n// 3. await 直接拿到拉到的消息\nconst message = await pending;\nconsole.log('拉到的公共消息：', message);\n```"
+        }
+      ]
     }
   },
   "_source": {

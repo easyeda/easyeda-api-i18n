@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toggleBottomPanelLockState",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录当前锁定状态（异步查询，需要 await）\nconst before = await eda.sys_PanelControl.isBottomPanelLocked();\n\n// 2. 切换到相反状态（显式传目标值；不传参数则直接反转当前状态）\neda.sys_PanelControl.toggleBottomPanelLockState(!before);\n\n// 3. 验证切换已生效\nconst after = await eda.sys_PanelControl.isBottomPanelLocked();\nconsole.log('切换前：', before, '切换后：', after);\n\n// 4. 恢复原始锁定状态（不留痕迹，保证案例可重复运行）\neda.sys_PanelControl.toggleBottomPanelLockState(before);\nconsole.log('已恢复原锁定状态：', before);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "切换底部面板锁定状态",

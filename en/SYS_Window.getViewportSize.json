@@ -5,6 +5,15 @@
     "name": "getViewportSize",
     "className": "SYS_Window",
     "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取视口大小（同步方法，直接取值）\nconst size = eda.sys_Window.getViewportSize();\n\n// 2. 展示宽高\nconsole.log('视口宽：', size.width, 'px，视口高：', size.height, 'px');\n```"
+        }
+      ]
+    },
     "versionTags": [
       {
         "tag": "ADD since EDA v3.2.162",

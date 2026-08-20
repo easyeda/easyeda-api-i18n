@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "get",
     "className": "PCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两个测试标注（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim1 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm'\n);\nconst dim2 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y + 1000, x, y + 800, x + 2000, y + 800, x + 2000, y + 1000],\n  3,\n  'mil'\n);\n\n// 2. 传单个 ID 字符串，返回单个标注对象\nconst single = await eda.pcb_PrimitiveDimension.get(dim1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回标注对象数组\nconst arr = await eda.pcb_PrimitiveDimension.get([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveDimension.delete([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\nconsole.log('single dimensionType:', single.getState_DimensionType());\nconsole.log('single unit:', single.getState_Unit());\nconsole.log('array length:', arr.length);\nconsole.log('dim2 unit:', arr[1].getState_Unit());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取尺寸标注",

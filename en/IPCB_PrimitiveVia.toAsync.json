@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 切换为异步图元（返回同一图元的异步形态）\nconst asyncVia = via.toAsync();\n\n// 3. 在异步模式下平移位置并提交\nasyncVia.setState_X(x + 200);\nawait asyncVia.done();\n\n// 4. 从画布重新读取，确认修改已落画布（保留现场供观察）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('isAsync:', asyncVia.isAsync());\nconsole.log('x:', x, '→', ref.getState_X());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按立创编号精确搜索系统库器件，取第一个的 UUID\nconst deviceList = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst device = deviceList[0];\n\n// 2. 按器件 UUID 获取器件文件\nconst deviceFile = await eda.sys_FileManager.getDeviceFileByDeviceUuid(device.uuid);\n\n// 3. 输出器件与文件信息（size 单位为字节）\nconsole.log('器件名：', device.name);\nconsole.log('文件名：', deviceFile.name);\nconsole.log('文件大小：', deviceFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "save",
     "className": "SCH_Document",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试原理图并打开（保存作用于当前激活的原理图，openDocument 传图页级 UUID）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 保存当前原理图\nconst saved = await eda.sch_Document.save();\nconsole.log('saved:', saved);\n\n// 3. 清理测试原理图（删除前等 1.5s 让保存变更同步落地）\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "保存文档",

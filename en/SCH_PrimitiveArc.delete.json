@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "SCH_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建两段待删除的测试圆弧（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst arc1 = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y);\nconst arc2 = await eda.sch_PrimitiveArc.create(x, y + 200, x + 100, y + 300, x + 200, y + 200);\n\n// 2. 记录删除前的圆弧数量\nconst beforeCount = (await eda.sch_PrimitiveArc.getAll()).length;\n\n// 3. 以 ID 数组形式批量删除两段圆弧\nconst deleted = await eda.sch_PrimitiveArc.delete([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.sch_PrimitiveArc.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除圆弧",

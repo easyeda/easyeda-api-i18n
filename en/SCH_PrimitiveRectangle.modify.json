@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "SCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试矩形：宽 400 高 300 直角、红色边线（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 0, 0, '#FF0000');\nconst rectId = rect.getState_PrimitiveId();\n\n// 2. 记录修改前的尺寸、圆角与颜色\nconst beforeWidth = rect.getState_Width();\nconst beforeRadius = rect.getState_CornerRadius();\nconst beforeColor = rect.getState_Color();\n\n// 3. 批量修改：左上角平移、宽 400 → 600、直角 → 圆角 40、边线改绿色、填充改蓝色实心\nawait eda.sch_PrimitiveRectangle.modify(rectId, {\n  topLeftX: x + 200,\n  topLeftY: y + 100,\n  width: 600,\n  cornerRadius: 40,\n  color: '#00AA00',\n  fillColor: '#0000FF',\n  fillStyle: 'Solid',\n});\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitiveRectangle.get(rectId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', rectId);\nconsole.log('width:', beforeWidth, '→', refreshed.getState_Width());\nconsole.log('cornerRadius:', beforeRadius, '→', refreshed.getState_CornerRadius());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\nconsole.log('topLeft:', x, y, '→', refreshed.getState_TopLeftX(), refreshed.getState_TopLeftY());\nconsole.log('fillStyle:', refreshed.getState_FillStyle());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改矩形",

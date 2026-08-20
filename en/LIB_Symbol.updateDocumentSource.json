@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "updateDocumentSource",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID，从系统库复制一个符号（有内容，源码链路才完整）\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\nconst symbolUuid = await eda.lib_Symbol.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  [],\n  '嘉立创示例_源码符号_' + Date.now()\n);\n\n// 2. 在编辑器中打开符号，等待文档加载完成\nconst tabId = await eda.lib_Symbol.openInEditor(symbolUuid, libraryUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 读取当前打开符号的文档源码\nconst documentSource = await eda.sys_FileManager.getDocumentSource();\n\n// 4. 把源码写回库中的符号（此处原样写回；实际使用时可先改写 documentSource）\nconst updated = await eda.lib_Symbol.updateDocumentSource(symbolUuid, libraryUuid, documentSource);\n\n// 5. 关闭编辑器标签页（符号本体保留在库中）\nawait eda.dmt_EditorControl.closeDocument(tabId);\n\n// 修改类保留现场\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('sourceLength:', documentSource.length);\nconsole.log('updated:', updated);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "更新符号的文档源码",

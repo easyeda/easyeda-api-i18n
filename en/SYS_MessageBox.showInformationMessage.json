@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 弹出消息窗口（content 用 \\n 换行展示两行内容）\neda.sys_MessageBox.showInformationMessage('DRC 检查完成\\n 共检查 128 个图元，未发现违规', '检查结果', '知道了');\n\n// 2. 窗口立即弹出；本方法无返回值，也不阻塞后续代码\nconsole.log('已弹出消息窗口');\n```"
+        }
+      ]
     }
   },
   "_source": {

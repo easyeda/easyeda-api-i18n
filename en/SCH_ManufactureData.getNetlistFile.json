@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 导出 Altium Designer 格式的网表（'Protel2' 对应 ESYS_NetlistType.ALTIUM_DESIGNER）\ntry {\n    const netlistFile = await eda.sch_ManufactureData.getNetlistFile('嘉立创示例_网表', 'Protel2');\n    console.log('导出文件名：', netlistFile?.name);\n    console.log('文件大小：', netlistFile?.size);\n} catch (e) {\n    // 原理图数据不满足网表校验（如引脚编号重复）时会抛错\n    console.log('当前原理图数据不满足网表导出要求，导出未完成');\n}\n```"
+        }
+      ]
     }
   },
   "_source": {

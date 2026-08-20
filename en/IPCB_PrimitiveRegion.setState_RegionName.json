@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个带名称的约束区域（ruleType=9 即 FOLLOW_REGION_RULE）\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [9], '嘉立创示例_旧区域名');\nconst before = region.getState_RegionName();\n\n// 3. 异步模式修改区域名称\nconst asyncRegion = region.toAsync();\nasyncRegion.setState_RegionName('嘉立创示例_电源约束区');\nawait asyncRegion.done();\n\n// 4. 从图元对象读回新值（保留现场供观察）\n// 注：当前版本名称修改画布侧不落（重新 get() 仍是旧名），修改在图元对象上生效\nconst after = region.getState_RegionName();\n\nconsole.log('regionName:', before, '→', after);\n```"
+        }
+      ]
     }
   },
   "_source": {

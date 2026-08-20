@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个原理图页并读取分屏树，定位一个直接持有标签页的分屏\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\nlet leaf = null;\n(function find(node) {\n  if (node.tabs?.length) { leaf = node; return; }\n  (node.children || []).forEach(find);\n})(tree);\n\n// 2. 查询该分屏下的所有标签页\nconst tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(leaf.id);\nconsole.log('splitScreenId:', leaf.id);\nconsole.log('tab count:', tabs.length);\nconsole.log('titles:', tabs.map(t => t.title));\n```"
+        }
+      ]
     }
   },
   "_source": {

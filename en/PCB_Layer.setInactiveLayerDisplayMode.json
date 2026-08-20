@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setInactiveLayerDisplayMode",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 将非激活层设为置灰模式（TURN_GRAY=1）\nconst setResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(1);\n\n// 2. 恢复为正常亮度（NORMAL_BRIGHTNESS=0），避免影响日常查看\nconst restoreResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置非激活层展示模式",

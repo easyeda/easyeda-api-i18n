@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_PinLength",
     "className": "ISCH_PrimitivePin",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 0. 确保当前文档是符号编辑器：优先复用测试符号，没有则新建后打开\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('嘉立创示例_Pin测试符号', libUuid);\nconst symUuid = found[0] ? found[0].uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试引脚重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 在符号画布上创建一个测试引脚，引脚长度 10\nconst pin = await eda.sch_PrimitivePin.create(x, y, '1', 'CLK', 0, 10, null, 'None', 'IN');\nconst before = pin.getState_PinLength();\n\n// 3. 切换异步模式，把长度改成 20 后提交画布\nconst asyncPin = pin.toAsync();\nasyncPin.setState_PinLength(20);\nawait asyncPin.done();\n\n// 4. 从画布重新取引脚，确认长度已更新（保留现场供观察）\nconst refetched = await eda.sch_PrimitivePin.get(pin.getState_PrimitiveId());\n\nconsole.log('pinLength:', before, '→', refetched.getState_PinLength());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：引脚长度",

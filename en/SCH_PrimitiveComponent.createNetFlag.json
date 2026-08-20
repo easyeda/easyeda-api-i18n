@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createNetFlag",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建 Power 类型的网络标识，网络名为 VCC\nconst flag = await eda.sch_PrimitiveComponent.createNetFlag(\n  'Power',            // 标识类型：'Power' / 'Ground' / 'AnalogGround' / 'ProtectGround'\n  '嘉立创示例_VCC',   // 网络名称\n  x,                  // 坐标 X\n  y,                  // 坐标 Y\n  0,                  // 旋转角度\n  false               // 是否镜像\n);\n\n// 3. 创建类保留现场，供在画布上观察标识样式\nconsole.log('primitiveId:', flag.getState_PrimitiveId());\nconsole.log('net:', flag.getState_Net());\nconsole.log('componentType:', flag.getState_ComponentType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建网络标识",

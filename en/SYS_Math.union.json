@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "union",
     "className": "SYS_Math",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 两块部分重叠的铺铜区域\nconst copperA = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst copperB = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\n\n// 2. 合并：结果是一个多边形组（重叠区域融合成单一外环，无孔洞）\nconst merged = eda.sys_Math.union(copperA, copperB);\nconsole.log('合并后多边形个数：', merged.length);\nconsole.log('合并后外环顶点数：', merged[0].outer.length);\nconsole.log('合并后孔洞数：', merged[0].holes.length);\n\n// 3. 合并后的净面积：8000 + 4000 - 重叠的 2000 = 10000（重叠只算一次）\nconsole.log('合并后面积：', eda.sys_Math.calculateArea(merged));\n\n// 4. 完全分离的两个多边形合并时仍是两个独立多边形\nconst far = [{ x: 200, y: 0 }, { x: 280, y: 0 }, { x: 280, y: 40 }, { x: 200, y: 40 }];\nconsole.log('分离区域合并后个数：', eda.sys_Math.union(copperA, far).length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "计算两个多边形的并集",

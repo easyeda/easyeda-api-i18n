@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "removeNetFromNetClass",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 准备两个真实网络（放带网络的测试焊盘）\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], 'JLC_DEMO_P', null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], 'JLC_DEMO_N', null, 0, 0, 0, false, 0);\n\n// 2. 建网络类并纳入网络\nawait eda.pcb_Drc.createNetClass('嘉立创示例_网络类', ['JLC_DEMO_P', 'JLC_DEMO_N'], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 3. 先单个移除，再批量移除\nconst removedOne = await eda.pcb_Drc.removeNetFromNetClass('嘉立创示例_网络类', 'JLC_DEMO_P');\nconst removedBatch = await eda.pcb_Drc.removeNetFromNetClass('嘉立创示例_网络类', ['JLC_DEMO_N']);\n\nconsole.log('removedOne:', removedOne);\nconsole.log('removedBatch:', removedBatch);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "从网络类中移除网络",

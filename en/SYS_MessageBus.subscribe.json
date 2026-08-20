@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 持久订阅主题\nconst received = [];\nconst task = eda.sys_MessageBus.subscribe('嘉立创示例_订阅', (message) => {\n  received.push(message);\n});\n\n// 2. 连续发布多条消息，每条都能收到\neda.sys_MessageBus.publish('嘉立创示例_订阅', '第一条');\neda.sys_MessageBus.publish('嘉立创示例_订阅', '第二条');\nconsole.log('已收到：', received.join('、'));\n\n// 3. cancel 之后不再接收\ntask.cancel();\neda.sys_MessageBus.publish('嘉立创示例_订阅', '取消后的消息');\nconsole.log('cancel 后仍停留在：', received.join('、'));\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_BusName",
     "className": "ISCH_PrimitiveBus",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试总线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条名为 DATA[0..7] 的测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\n\n// 3. 读取修改前的名称\nconst before = bus.getState_BusName();\n\n// 4. 切换异步模式并改名为 ADDR[0..15]\nconst asyncBus = bus.toAsync();\nasyncBus.setState_BusName('ADDR[0..15]');\nawait asyncBus.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveBus.get(bus.getState_PrimitiveId());\n\nconsole.log('busName:', before, '→', refetched.getState_BusName());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：总线名称",

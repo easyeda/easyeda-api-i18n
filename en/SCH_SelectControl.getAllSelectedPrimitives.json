@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAllSelectedPrimitives",
     "className": "SCH_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试矩形并选中\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n\n// 2. 获取所有已选中图元的图元对象\nconst primitives = await eda.sch_SelectControl.getAllSelectedPrimitives();\nconsole.log('选中图元数量：', primitives.length);\n\n// 3. 图元对象可直接调用图元方法读取属性\nconst first = primitives[0];\nconsole.log('primitiveId:', first.getState_PrimitiveId());\nconsole.log('primitiveType:', first.getState_PrimitiveType());\n\n// 4. 清理：清除选中并删除测试图元\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "查询所有已选中图元的图元对象",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_ComplexPolygon",
     "className": "IPCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个 500 x 300 的矩形区域\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\nconst before = JSON.stringify(region.getState_ComplexPolygon().getSource());\n\n// 3. 构造新轮廓（放大到 800 x 400），异步模式提交\nconst newPolygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 800, 400, 0, 0]);\nconst asyncRegion = region.toAsync();\nasyncRegion.setState_ComplexPolygon(newPolygon);\nawait asyncRegion.done();\n\n// 4. 从画布重新读取，确认轮廓已替换（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveRegion.get(region.getState_PrimitiveId());\nconst after = JSON.stringify(refetched.getState_ComplexPolygon().getSource());\n\nconsole.log('polygonSource:', before, '→', after);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：复杂多边形",

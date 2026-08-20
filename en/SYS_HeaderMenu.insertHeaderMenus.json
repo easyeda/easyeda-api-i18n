@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "insertHeaderMenus",
     "className": "SYS_HeaderMenu",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 组装菜单数据：环境键 → 一级菜单数组（title / id / menuItems）\nconst headerMenus = {\n  blank: [\n    {\n      id: '嘉立创示例_菜单',\n      title: '嘉立创示例',\n      menuItems: [{ id: '嘉立创示例_子项', title: '打开示例面板' }],\n    },\n  ],\n};\n\n// 2. 导入顶部菜单数据（blank 环境的顶部菜单被替换为上述内容）\nawait eda.sys_HeaderMenu.insertHeaderMenus(headerMenus);\nconsole.log('已导入 blank 环境的顶部菜单数据');\n\n// 3. 还原：移除导入的数据，恢复系统默认菜单\neda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已还原系统默认菜单');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "导入顶部菜单数据",

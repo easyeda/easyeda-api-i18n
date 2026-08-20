@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Layer",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，分别在顶层和多层创建焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst top = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst multi = await eda.pcb_PrimitivePad.create(12, '2', x + 500, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\n\n// 2. 分别读取层属性\nconst topLayer = top.getState_Layer();\nconst multiLayer = multi.getState_Layer();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([top.getState_PrimitiveId(), multi.getState_PrimitiveId()]);\n\nconsole.log('topLayer:', topLayer);\nconsole.log('multiLayer:', multiLayer);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：层",

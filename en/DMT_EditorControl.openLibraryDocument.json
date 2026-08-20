@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openLibraryDocument",
     "className": "DMT_EditorControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 搜索库符号，拿到其所在库 UUID 与符号 UUID\nconst results = await eda.lib_Symbol.search('0603');\nconsole.log('symbol:', results[0].name);\n\n// 2. 打开该符号的编辑画布，返回标签页 ID（'2' = ELIB_LibraryType.SYMBOL）\nconst tabId = await eda.dmt_EditorControl.openLibraryDocument(results[0].libraryUuid, '2', results[0].uuid);\nconsole.log('tabId:', tabId);\n\n// 3. 看完关闭标签页\nconst closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开库符号、封装文档",

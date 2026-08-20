@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveLock",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个未锁定的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\n\n// 2. 读取锁定状态\nconst primitiveLock = dim.getState_PrimitiveLock();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', primitiveLock);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：是否锁定",

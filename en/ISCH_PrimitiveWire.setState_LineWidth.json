@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_LineWidth",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试导线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条线宽 6 的测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], null, null, 6, null);\n\n// 3. 读取修改前的线宽\nconst before = wire.getState_LineWidth();\n\n// 4. 切换异步模式并加粗到 10\nconst asyncWire = wire.toAsync();\nasyncWire.setState_LineWidth(10);\nawait asyncWire.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveWire.get(wire.getState_PrimitiveId());\n\nconsole.log('lineWidth:', before, '→', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：线宽",

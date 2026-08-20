@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "LIB_Footprint",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_待删除封装_' + Date.now(),\n  []\n);\n\n// 2. 删除该封装\nconst deleted = await eda.lib_Footprint.delete(footprintUuid, libraryUuid);\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除封装",

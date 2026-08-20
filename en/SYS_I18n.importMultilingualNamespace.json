@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "importMultilingualNamespace",
     "className": "SYS_I18n",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 组装多语言数据：语言代码 → 键值对\nconst languagesData = {\n  'zh-Hans': { '示例_问候': '你好，${1}' },\n  en: { '示例_问候': 'Hello, ${1}' },\n};\n\n// 2. 一次性导入整个命名空间\nconst imported = eda.sys_I18n.importMultilingualNamespace('嘉立创示例_多语言', languagesData);\n\n// 3. 同一标签分别取中英文文案\nconst zhText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'zh-Hans', '工程师');\nconst enText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'en', 'engineer');\n\nconsole.log('导入结果：', imported);\nconsole.log('中文文案：', zhText);\nconsole.log('英文文案：', enText);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "导入多语言：指定命名空间",

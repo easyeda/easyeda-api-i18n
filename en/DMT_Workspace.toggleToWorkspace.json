@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toggleToWorkspace",
     "className": "DMT_Workspace",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录切换前的工作区（演示结束后切回，恢复现场）\nconst before = await eda.dmt_Workspace.getCurrentWorkspaceInfo();\n\n// 2. 获取所有工作区，选一个非当前的作为切换目标；只有当前一个时切换自身\nconst workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\nconst target = workspaces.find((ws) => ws.uuid !== before.uuid) || before;\n\n// 3. 切换到目标工作区\nconst toggled = await eda.dmt_Workspace.toggleToWorkspace(target.uuid);\nconsole.log('切换是否成功：', toggled);\n\n// 4. 回读当前工作区，确认已切换到目标\nconst now = await eda.dmt_Workspace.getCurrentWorkspaceInfo();\nconsole.log('切换后工作区：', now.name, 'uuid:', now.uuid);\n\n// 5. 切回原工作区，恢复现场\nconst restored = await eda.dmt_Workspace.toggleToWorkspace(before.uuid);\nconsole.log('切回是否成功：', restored);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "切换到工作区",

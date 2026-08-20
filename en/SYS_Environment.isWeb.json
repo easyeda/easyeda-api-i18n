@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isWeb",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断当前是否为浏览器环境（同步返回布尔值）\nconst isWeb = eda.sys_Environment.isWeb();\n\n// 2. 输出判断结果（网页版为 true，桌面客户端为 false）\nconsole.log('是否浏览器环境：', isWeb);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否处于浏览器环境",

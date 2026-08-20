@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_PrimitiveLock",
     "className": "IPCB_PrimitiveRegion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个未锁定的矩形区域\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\nconst before = region.getState_PrimitiveLock();\n\n// 3. 切换异步模式并锁定区域\nconst asyncRegion = region.toAsync();\nasyncRegion.setState_PrimitiveLock(true);\nawait asyncRegion.done();\n\n// 4. 从画布重新读取，确认已锁定（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveRegion.get(region.getState_PrimitiveId());\n\nconsole.log('primitiveLock:', before, '→', refetched.getState_PrimitiveLock());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：是否锁定",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toSync",
     "className": "ISCH_PrimitiveWire",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条测试导线（创建后默认处于异步模式）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000]);\n\n// 2. 转换为同步图元，isAsync() 变为 false\nconst syncWire = wire.toSync();\nconst isAsyncAfterToSync = syncWire.isAsync();\n\n// 3. 清理测试图元（本案例只演示模式转换，不修改画布）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('isAsync after toSync:', isAsyncAfterToSync);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为同步图元",

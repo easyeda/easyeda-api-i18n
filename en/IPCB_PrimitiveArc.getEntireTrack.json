@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getEntireTrack",
     "className": "IPCB_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条直线走线，终点落在 (7500, 7000)\nconst line = await eda.pcb_PrimitiveLine.create('', 1, 7000, 7000, 7500, 7000, 10);\n\n// 2. 创建一段圆弧，起点与直线终点重合，两段构成一整段导线\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 7500, 7000, 7800, 7300, 90, 10, 1, false);\n\n// 3. 只取导线内的直线和圆弧\nconst trackOnly = await arc.getEntireTrack(false);\n\n// 4. 连两端过孔一起取（本例两端没有过孔，数量不变）\nconst trackWithVias = await arc.getEntireTrack(true);\n\n// 5. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([line]);\nawait eda.pcb_PrimitiveArc.delete([arc]);\n\nconsole.log('track(false) count:', trackOnly.length);\ntrackOnly.forEach((p, i) => {\n  console.log(`track(false)[${i}] type:`, p.getState_PrimitiveType());\n});\nconsole.log('track(true) count:', trackWithVias.length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取整段导线",

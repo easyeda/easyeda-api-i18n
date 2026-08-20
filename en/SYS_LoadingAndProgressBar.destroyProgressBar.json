@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "destroyProgressBar",
     "className": "SYS_LoadingAndProgressBar",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先显示一个进度未满的进度条作为销毁对象\neda.sys_LoadingAndProgressBar.showProgressBar(50, '嘉立创示例 正在处理');\nconsole.log('进度条已显示，当前进度 50%');\nawait new Promise(r => setTimeout(r, 800));\n\n// 2. 销毁进度条（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.destroyProgressBar();\nconsole.log('进度条已销毁');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "销毁进度条"

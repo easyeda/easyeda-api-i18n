@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getDocumentFootprintSources",
     "className": "SYS_FileManager",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取当前文档全部封装源码\nconst sources = await eda.sys_FileManager.getDocumentFootprintSources();\n\n// 2. 输出封装数量与每个封装的源码长度\nconsole.log('封装数量：', sources.length);\nsources.forEach((item, i) => {\n  console.log('[' + i + '] footprintUuid：', item.footprintUuid, '源码长度：', item.documentSource.length);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取文档封装源码",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getSource",
     "className": "IPCB_Polygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 用矩形模式（R x y width height rot round）创建一块单多边形\nconst rectPolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 再用圆形模式（CIRCLE x y radius）创建一块，展示不同模式的源数据形态\nconst circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 2000, 1150, 100]);\n\n// 3. 读取源数组：矩形是 \"R\" 打头的参数序列，圆形是 \"CIRCLE\" 打头\nconsole.log('rectSource:', JSON.stringify(rectPolygon.getSource()));\nconsole.log('circleSource:', JSON.stringify(circlePolygon.getSource()));\n\n// 4. 源数组可以直接喂回 createPolygon 复制出一块等价的多边形（数据回环）\nconst copied = eda.pcb_MathPolygon.createPolygon(rectPolygon.getSource());\nconsole.log('roundTripMatch:', JSON.stringify(copied.getSource()) === JSON.stringify(rectPolygon.getSource()));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取单多边形数据",

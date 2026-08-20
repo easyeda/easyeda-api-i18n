@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 导出当前工程为文件（文件名自动带上 epro2 扩展名）\nconst projectFile = await eda.sys_FileManager.getProjectFile('嘉立创示例_工程导出');\n\n// 2. 输出文件信息（size 单位为字节）\nconsole.log('文件名：', projectFile.name);\nconsole.log('文件大小：', projectFile.size);\n```"
+        }
+      ]
     }
   },
   "_source": {

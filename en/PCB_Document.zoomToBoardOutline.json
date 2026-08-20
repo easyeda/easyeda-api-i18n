@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "zoomToBoardOutline",
     "className": "PCB_Document",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试 PCB 并打开（视口操作作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 缩放到板框\nconst zoomed = await eda.pcb_Document.zoomToBoardOutline();\nconsole.log('zoomed:', zoomed);\n\n// 3. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "缩放到板框（适应板框）",

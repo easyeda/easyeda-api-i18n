@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "LIB_PanelLibrary",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst panelLibraryUuid = await eda.lib_PanelLibrary.create(\n  libraryUuid,\n  '嘉立创示例_待删除面板库_' + Date.now(),\n  []\n);\n\n// 2. 删除该面板库\nconst deleted = await eda.lib_PanelLibrary.delete(panelLibraryUuid, libraryUuid);\n\nconsole.log('panelLibraryUuid:', panelLibraryUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除面板库",

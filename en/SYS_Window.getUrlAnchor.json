@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getUrlAnchor",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 备份当前完整地址（用于演示后还原）\nconst originalHref = location.href;\n\n// 2. 写入一个示例锚点（地址栏会临时变成示例锚点）\neda.sys_Window.urlPushState(location.href.split('#')[0] + '#嘉立创示例_锚点');\n\n// 3. 读取锚点（返回的是编码后的字符串，解码后展示）\nconst anchor = decodeURIComponent(eda.sys_Window.getUrlAnchor());\nconsole.log('当前锚点：', anchor);\n\n// 4. 还原原地址，保证编辑器锚点状态不受影响\neda.sys_Window.urlReplaceState(originalHref);\nconsole.log('地址已还原');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取 URL 锚点",

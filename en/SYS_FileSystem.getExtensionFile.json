@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getExtensionFile",
     "className": "SYS_FileSystem",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 读取扩展安装目录下的 extension.json\nconst file = await eda.sys_FileSystem.getExtensionFile('extension.json');\n\n// 2. 输出文件信息（size 单位为字节，内容可用 file.text() 读取）\nconsole.log('文件名：', file.name);\nconsole.log('文件大小：', file.size);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取扩展内的文件",

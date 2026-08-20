@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个 400 x 300 的内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\n\n// 2. 切换异步模式后批量修改：放大到 600 x 450 并重命名\nconst asyncObj = obj.toAsync();\nasyncObj.setState_Width(600);\nasyncObj.setState_Height(450);\nasyncObj.setState_FileName('logo-large.png');\nawait asyncObj.done();\n\n// 3. 从画布重新读取，确认批量修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('width:', refetched.getState_Width());\nconsole.log('height:', refetched.getState_Height());\nconsole.log('fileName:', refetched.getState_FileName());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

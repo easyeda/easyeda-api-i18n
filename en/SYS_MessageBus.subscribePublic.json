@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 在公共总线持久订阅主题\nconst received = [];\nconst task = eda.sys_MessageBus.subscribePublic('嘉立创示例_公共订阅', (message) => {\n  received.push(message);\n});\n\n// 2. 公共广播两条都能收到；私有 publish 不会到达\neda.sys_MessageBus.publishPublic('嘉立创示例_公共订阅', '公共甲');\neda.sys_MessageBus.publishPublic('嘉立创示例_公共订阅', '公共乙');\neda.sys_MessageBus.publish('嘉立创示例_公共订阅', '私有丙');\nconsole.log('已收到：', received.join('、'));\n\n// 3. cancel 之后不再接收\ntask.cancel();\neda.sys_MessageBus.publishPublic('嘉立创示例_公共订阅', '取消后广播');\nconsole.log('cancel 后仍停留在：', received.join('、'));\n```"
+        }
+      ]
     }
   },
   "_source": {

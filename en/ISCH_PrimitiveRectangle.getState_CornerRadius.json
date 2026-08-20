@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_CornerRadius",
     "className": "ISCH_PrimitiveRectangle",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个圆角半径 10 的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100, 10);\n\n// 2. 读取圆角半径\nconst cornerRadius = rect.getState_CornerRadius();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('cornerRadius:', cornerRadius);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：圆角半径",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "convertDisaLibrariesToEasyEDAMultiFiles",
     "className": "SYS_FormatConversion",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 准备 T/DISA 4001 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n//    选取用户文件，此处直接构造 File 对象演示调用）\nconst disaLib = new File(['占位内容，真实场景为 T/DISA 4001 库文件内容'], '嘉立创示例_旧版器件库.lib');\n\n// 2. 转换为多个嘉立创库文件（每个器件一个文件）\nconst libFiles = await eda.sys_FormatConversion.convertDisaLibrariesToEasyEDAMultiFiles(disaLib);\n\n// 3. 输出转换得到的库文件列表（空数组表示没有可转换的器件）\nconsole.log('转换得到库文件数：', libFiles.length);\nlibFiles.forEach((file, index) => {\n  console.log(`第 ${index + 1} 个文件：`, file.name);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "转换 T/DISA 4001 库到多个嘉立创库文件（每个器件一个文件）",

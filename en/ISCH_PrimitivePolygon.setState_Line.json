@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_Line",
     "className": "ISCH_PrimitivePolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试多边形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个 4 顶点矩形测试多边形（SCH 坐标单位 10mil）\nconst rect = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\nconst polygon = await eda.sch_PrimitivePolygon.create(rect, '#FF0000');\n\n// 3. 切换异步模式，改为 3 顶点三角形\nconst asyncPolygon = polygon.toAsync();\nasyncPolygon.setState_Line([x, y, x + 400, y, x + 200, y + 350]);\nawait asyncPolygon.done();\n\n// 4. 从画布重新读取，确认形状已替换（保留现场供观察）\nconst refetched = await eda.sch_PrimitivePolygon.get(polygon.getState_PrimitiveId());\n\nconsole.log('line:', JSON.stringify(rect), '→', JSON.stringify(refetched.getState_Line()));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：坐标组",

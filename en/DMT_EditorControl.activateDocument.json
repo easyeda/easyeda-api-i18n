@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先后打开原理图页与 PCB，此时焦点在最后打开的 PCB 上\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nconst tabSch = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nawait eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n\n// 2. 激活原理图标签页（真实切换回原理图画布）\nconst activated = await eda.dmt_EditorControl.activateDocument(tabSch);\nconsole.log('activated:', activated);\n```"
+        }
+      ]
     }
   },
   "_source": {

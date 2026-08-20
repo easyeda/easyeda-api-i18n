@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "clearSelected",
     "className": "SCH_SelectControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试矩形并选中它\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n\n// 2. 确认清除前有选中图元\nconst beforeIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除前选中数量：', beforeIds.length);\n\n// 3. 清除选中（同步方法，直接返回结果）\nconst cleared = eda.sch_SelectControl.clearSelected();\nconsole.log('cleared:', cleared);\n\n// 4. 确认选中集已清空\nconst afterIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除后选中数量：', afterIds.length);\n\n// 5. 清理测试图元\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "清除选中",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "clearIntervalTimer",
     "className": "SYS_Timer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 挂一个每 200ms 触发的循环定时器\nlet tickCount = 0;\nconst created = eda.sys_Timer.setIntervalTimer('嘉立创示例_停表', 200, () => { tickCount++; });\n\n// 2. 让它运行约 1.5 秒\nawait new Promise(resolve => setTimeout(resolve, 1500));\nconst ticksAtClear = tickCount;\n\n// 3. 清除定时器，回调不再触发\nconst cleared = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\nawait new Promise(resolve => setTimeout(resolve, 600));\n\n// 4. 清除不存在的 ID 返回 false（该定时器已在上一步被清除）\nconst again = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\n\nconsole.log('定时器设置结果：', created);\nconsole.log('清除结果：', cleared);\nconsole.log('清除前触发次数：', ticksAtClear, '，清除后新增：', tickCount - ticksAtClear);\nconsole.log('再次清除同一 ID：', again);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "清除指定循环定时器",

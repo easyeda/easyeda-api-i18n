@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "LIB_Cbb",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 在个人库创建复用模块（分类传空数组 = 不分类）\nconst cbbName = '嘉立创示例_新建模块_' + Date.now();\nconst cbbUuid = await eda.lib_Cbb.create(libraryUuid, cbbName, [], '示例描述');\n\n// 创建类保留现场\n\nconsole.log('libraryUuid:', libraryUuid);\nconsole.log('cbbName:', cbbName);\nconsole.log('cbbUuid:', cbbUuid);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建复用模块",

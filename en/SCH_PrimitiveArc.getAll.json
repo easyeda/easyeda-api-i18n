@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "SCH_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一段测试圆弧作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y);\nconst arcId = arc.getState_PrimitiveId();\n\n// 2. 获取当前原理图页上的全部圆弧\nconst all = await eda.sch_PrimitiveArc.getAll();\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveArc.delete([arcId]);\n\nconsole.log('total arcs:', all.length);\nconsole.log('marker arc found:', all.some(a => a.getState_PrimitiveId() === arcId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有圆弧",

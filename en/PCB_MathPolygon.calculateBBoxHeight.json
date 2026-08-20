@@ -4,7 +4,19 @@
     "kind": "method",
     "name": "calculateBBoxHeight",
     "className": "PCB_MathPolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 单个矩形源数组（宽 100、高 50），BBox 高度为 50\nconsole.log('rectHeight:', eda.pcb_MathPolygon.calculateBBoxHeight(['R', 0, 0, 100, 50, 0, 0]));\n\n// 2. 单个圆源数组（圆心在原点、半径 50），BBox 高度为直径 100\nconsole.log('circleHeight:', eda.pcb_MathPolygon.calculateBBoxHeight(['CIRCLE', 0, 0, 50]));\n\n// 3. 多块组合：矩形 Y 范围 0～50，圆 Y 范围 170～230，整体跨度 230\nconsole.log('multiHeight:', eda.pcb_MathPolygon.calculateBBoxHeight([\n  ['R', 0, 0, 100, 50, 0, 0],\n  ['CIRCLE', 200, 200, 30],\n]));\n```"
+        }
+      ]
+    }
   },
-  "_source": {}
+  "_source": {
+    "title": "计算多边形源数组的 BBox 高度"
+  },
+  "title": null
 }

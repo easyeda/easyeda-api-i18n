@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "delete",
     "className": "LIB_Device",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst deviceUuid = await eda.lib_Device.create(\n  libraryUuid,\n  '嘉立创示例_待删除_' + Date.now(),\n  [],\n  { symbolType: 2 }\n);\n\n// 2. 删除该器件\nconst deleted = await eda.lib_Device.delete(deviceUuid, libraryUuid);\n\nconsole.log('deviceUuid:', deviceUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "删除器件",

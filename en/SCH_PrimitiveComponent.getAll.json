@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个普通元件和一个网络标识作为查找目标（随机坐标避免重合）\nconst devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst flag = await eda.sch_PrimitiveComponent.createNetFlag('Power', '嘉立创示例_VCC', x + 600, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 不传参数，取当前图页全部器件\nconst all = await eda.sch_PrimitiveComponent.getAll();\n\n// 3. 传入类型 'netflag' 只取网络标识（ESCH_PrimitiveComponentType 值）\nconst flags = await eda.sch_PrimitiveComponent.getAll('netflag');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([compId, flag.getState_PrimitiveId()]);\n\nconsole.log('total components:', all.length);\nconsole.log('marker comp found:', all.some(c => c.getState_PrimitiveId() === compId));\nconsole.log('netflag count:', flags.length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有器件",

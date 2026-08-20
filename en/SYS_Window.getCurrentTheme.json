@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取当前主题（异步方法，需要 await）\nconst theme = await eda.sys_Window.getCurrentTheme();\n\n// 2. 展示结果\nconsole.log('当前主题：', theme === 'light' ? '浅色（light）' : '深色（dark）');\n```"
+        }
+      ]
     }
   },
   "_source": {

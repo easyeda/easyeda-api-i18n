@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getAll",
     "className": "PCB_PrimitiveString",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个顶层丝印（3）测试文本作为过滤目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst text = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_过滤目标', 'default', 45, 6, 3, 0, false, 0, false, false);\nconst textId = text.getState_PrimitiveId();\n\n// 2. 不带参数：获取 PCB 上全部文本\nconst all = await eda.pcb_PrimitiveString.getAll();\n\n// 3. 按层过滤：只取顶层丝印（3）的文本\nconst topSilk = await eda.pcb_PrimitiveString.getAll(3);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveString.delete([textId]);\n\nconsole.log('total strings:', all.length);\nconsole.log('top silkscreen strings:', topSilk.length);\nconsole.log('marker string found:', topSilk.some(s => s.getState_PrimitiveId() === textId));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取所有文本",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "ISCH_PrimitiveArc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一段测试圆弧，切换到同步模式，让模式变化可观察\nconst arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y, null, null, 6, 1);\narc.toSync();\n\n// 3. 转换为异步图元\nconst asyncArc = arc.toAsync();\n\n// 4. 异步模式下累计修改并提交\nasyncArc.setState_LineWidth(12);\nawait asyncArc.done();\n\n// 5. 从画布重新读取，确认提交生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', arc.isAsync());\nconsole.log('lineWidth:', 6, '→', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

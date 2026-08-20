@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试原理图并打开\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1000));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 800));\n\n// 2. 放置两个测试器件并取第一个引脚的坐标（关键字搜索当前版本异常，按 C 编号反查器件）\nconst devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst device = { libraryUuid: sysLibUuid, uuid: devices[0].uuid };\nconst comp1 = await eda.sch_PrimitiveComponent.create(device, 800, 800);\nconst comp2 = await eda.sch_PrimitiveComponent.create(device, 1600, 800);\nconst pin1 = (await comp1.getAllPins())[0];\nconst pin2 = (await comp2.getAllPins())[0];\n\n// 3. 在两个引脚上放同名接地标志，构成一个跨器件的 GND 网络\nconst flag1 = await eda.sch_PrimitiveComponent.createNetFlag('Ground', 'GND', pin1.getState_X(), pin1.getState_Y());\nconst flag2 = await eda.sch_PrimitiveComponent.createNetFlag('Ground', 'GND', pin2.getState_X(), pin2.getState_Y());\nconsole.log('netFlagIds:', flag1.getState_PrimitiveId(), flag2.getState_PrimitiveId());\n\n// 4. 统计布线前导线数，执行自动布线后再统计一次\nconst wiresBefore = (await eda.sch_PrimitiveWire.getAllPrimitiveId()).length;\nconst result = await eda.sch_Document.autoRouting();\nconst wiresAfter = (await eda.sch_PrimitiveWire.getAllPrimitiveId()).length;\nconsole.log('result:', result);\nconsole.log('wiresBefore:', wiresBefore, 'wiresAfter:', wiresAfter);\n\n// 5. 清理测试原理图（器件与网络标志随文档一起删除）\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

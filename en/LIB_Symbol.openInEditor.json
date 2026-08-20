@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openInEditor",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID，从系统库复制一个符号作为编辑对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\nconst symbolUuid = await eda.lib_Symbol.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  [],\n  '嘉立创示例_编辑符号_' + Date.now()\n);\n\n// 2. 在编辑器中打开该符号，返回标签页 ID（uuid@libraryUuid 格式）\nconst tabId = await eda.lib_Symbol.openInEditor(symbolUuid, libraryUuid);\n\n// 打开后保留现场（编辑器停留在新符号页供观察；不需要时可传 tabId 给\n// dmt_EditorControl.closeDocument 关闭）\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('tabId:', tabId);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "在编辑器打开文档",

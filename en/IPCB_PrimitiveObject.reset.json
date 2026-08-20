@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "IPCB_PrimitiveObject",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个未旋转的内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_Rotation();\n\n// 2. 异步模式下把图片旋转 90 度，随后反悔\nconst asyncObj = obj.toAsync();\nasyncObj.setState_Rotation(90);\n\n// 3. reset 丢弃未提交的修改（保留现场供观察）\nawait asyncObj.reset();\n\n// 4. 从画布重新读取，确认旋转没有变\nconst refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('rotation:', before, '→', refetched.getState_Rotation());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

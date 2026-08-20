@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 显示无进度加载覆盖（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.showLoading();\nconsole.log('加载覆盖已显示，编辑器被灰色覆盖锁定');\n\n// 2. 停留片刻便于观察，随后销毁覆盖还原界面（自建自删，保证案例可重复运行）\nawait new Promise(r => setTimeout(r, 1000));\neda.sys_LoadingAndProgressBar.destroyLoading();\nconsole.log('加载覆盖已销毁，编辑器恢复可操作');\n```"
+        }
+      ]
     }
   },
   "_source": {

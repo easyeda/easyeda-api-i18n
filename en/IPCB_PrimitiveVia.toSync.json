@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toSync",
     "className": "IPCB_PrimitiveVia",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试过孔重合\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\n\n// 2. 转换为同步图元\nconst syncVia = via.toSync();\n\n// 3. 同步模式下加大外径，立即生效（无需 done()）\nsyncVia.setState_Diameter(55);\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('isSync after toSync:', !syncVia.isAsync());\nconsole.log('diameter:', 40, '→', refetched.getState_Diameter());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为同步图元",

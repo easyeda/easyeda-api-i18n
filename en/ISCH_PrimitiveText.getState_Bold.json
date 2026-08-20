@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_Bold",
     "className": "ISCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个加粗的测试文本（第 8 参是是否加粗）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_重点', 0, null, null, null, true);\n\n// 2. 读取是否加粗\nconst bold = text.getState_Bold();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('bold:', bold);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：是否加粗",

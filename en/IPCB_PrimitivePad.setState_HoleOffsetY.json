@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个中心孔的通孔焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleOffsetY();\n\n// 2. 异步模式下把孔向上偏移 20mil 并提交\nconst a = pad.toAsync();\na.setState_HoleOffsetY(20);\nawait a.done();\n\n// 3. 从画布重新读取，确认偏移已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeOffsetY:', before, '→', ref.getState_HoleOffsetY());\n```"
+        }
+      ]
     }
   },
   "_source": {

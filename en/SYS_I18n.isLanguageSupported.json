@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isLanguageSupported",
     "className": "SYS_I18n",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 检查受支持的语言代码\nconsole.log('en 是否受支持：', eda.sys_I18n.isLanguageSupported('en'));\nconsole.log('zh-Hans 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-Hans'));\n\n// 2. 检查不受支持的写法（zh-CN 不是 EDA 的语言代码风格）\nconsole.log('zh-CN 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-CN'));\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "检查语言是否受支持",

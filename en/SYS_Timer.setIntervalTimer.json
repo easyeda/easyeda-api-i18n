@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 设置每 200ms 触发一次的循环定时器，统计触发次数\nlet tickCount = 0;\nconst created = eda.sys_Timer.setIntervalTimer('嘉立创示例_循环', 200, () => { tickCount++; });\n\n// 2. 让它运行约 1.5 秒\nawait new Promise(resolve => setTimeout(resolve, 1500));\nconst ticksAtClear = tickCount;\n\n// 3. 用完清除，定时器停止（净零收尾，可重复运行）\nconst cleared = eda.sys_Timer.clearIntervalTimer('嘉立创示例_循环');\n\n// 4. 再等一会，确认清除后没有继续触发\nawait new Promise(resolve => setTimeout(resolve, 600));\n\nconsole.log('设置结果：', created);\nconsole.log('清除结果：', cleared);\nconsole.log('运行期间触发次数：', ticksAtClear, '，清除后新增：', tickCount - ticksAtClear);\n```"
+        }
+      ]
     }
   },
   "_source": {

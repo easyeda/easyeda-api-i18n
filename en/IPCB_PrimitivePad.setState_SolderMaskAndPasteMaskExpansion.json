@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setState_SolderMaskAndPasteMaskExpansion",
     "className": "IPCB_PrimitivePad",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个默认扩展（遵循规则）的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_SolderMaskAndPasteMaskExpansion();\n\n// 2. 异步模式下自定义顶层扩展并提交\nconst a = pad.toAsync();\na.setState_SolderMaskAndPasteMaskExpansion({ topSolderMask: 4, topPasteMask: 2 });\nawait a.done();\n\n// 3. 从画布重新读取，确认扩展已生效（未显式设置的项由后端补默认值）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('expansion:', before, '→', ref.getState_SolderMaskAndPasteMaskExpansion());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置属性状态：阻焊/助焊扩展",

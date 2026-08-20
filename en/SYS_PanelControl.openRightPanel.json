@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openRightPanel",
     "className": "SYS_PanelControl",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开右侧面板并切换到批注标签页（'annotation' 不依赖文档类型）\neda.sys_PanelControl.openRightPanel('annotation');\nconsole.log('右侧面板已展开，并切换到批注标签页');\n\n// 2. 收起面板还原界面（自建自删，保证案例可重复运行）\neda.sys_PanelControl.closeRightPanel();\nconsole.log('右侧面板已收起，界面还原');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开右侧面板",

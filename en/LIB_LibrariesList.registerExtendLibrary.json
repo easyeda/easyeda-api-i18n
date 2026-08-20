@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 实现外部库的符号数据回调（真实场景中在此对接自己的数据源）\nconst symbolFunctions = {\n  // 分类树：库面板左侧的分类目录\n  getClassificationTree: async () => [\n    { name: '电阻', uuid: 'resistor' },\n    { name: '电容', uuid: 'capacitor' }\n  ],\n  // 列表搜索：响应用户的关键字搜索与分页，返回分页结构\n  getList: async (props) => {\n    const all = [{ uuid: 'demo_0402', title: '示例符号 0402' }];\n    return {\n      count: all.length,\n      lists: all,\n      page: props.page || 1,\n      pageSize: props.pageSize || 10,\n      totalPage: 1\n    };\n  },\n  // 详情：用户选中条目后获取完整信息\n  getDetail: async (uuid) => {\n    return { uuid, title: '示例符号 0402' };\n  }\n};\n\n// 2. 以指定标题注册外部库，挂载符号类型资源\nconst libUuid = await eda.lib_LibrariesList.registerExtendLibrary('嘉立创示例_外部库', {\n  symbol: symbolFunctions\n});\n\n// 3. 输出注册结果，库面板中即可看到「嘉立创示例_外部库」\nconsole.log('libUuid:', libUuid);\n```"
+        }
+      ]
     }
   },
   "_source": {

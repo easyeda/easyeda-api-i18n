@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "search",
     "className": "LIB_Device",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 按关键字搜索系统库中的器件，每页 5 条\nconst results = await eda.lib_Device.search('0402', undefined, undefined, undefined, 5, 1);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "搜索器件",

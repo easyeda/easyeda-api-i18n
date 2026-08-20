@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "toAsync",
     "className": "IPCB_PrimitiveDimension",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个长度标注（创建后处于同步模式）\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3,\n  undefined,\n  10\n);\n\n// 3. 转换为异步图元\nconst asyncDim = dim.toAsync();\n\n// 4. 异步模式下累计修改并提交\nasyncDim.setState_LineWidth(20);\nawait asyncDim.done();\n\n// 5. 从画布重新读取，确认提交生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', dim.isAsync());\nconsole.log('lineWidth:', 10, '→', refetched.getState_LineWidth());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将图元转换为异步图元",

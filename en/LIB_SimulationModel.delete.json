@@ -5,6 +5,15 @@
     "name": "delete",
     "className": "LIB_SimulationModel",
     "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst simulationModelUuid = await eda.lib_SimulationModel.create(\n  libraryUuid,\n  {\n    modelType: 'Ngspice',\n    modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n    modelName: '嘉立创示例_待删除仿真模型_' + Date.now(),\n  },\n  []\n);\n\n// 2. 删除该仿真模型\nconst deleted = await eda.lib_SimulationModel.delete(simulationModelUuid, libraryUuid);\n\nconsole.log('simulationModelUuid:', simulationModelUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    },
     "versionTags": [
       {
         "tag": "ADD since EDA v3.2.167",

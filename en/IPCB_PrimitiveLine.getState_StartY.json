@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_StartY",
     "className": "IPCB_PrimitiveLine",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一条测试直线，起点 (1000, 1000)\nconst line = await eda.pcb_PrimitiveLine.create('', 1, 1000, 1000, 1600, 1000, 10);\n\n// 2. 读取起点 Y\nconst startY = line.getState_StartY();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\n\nconsole.log('startY:', startY);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：起始位置 Y",

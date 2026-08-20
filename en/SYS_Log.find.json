@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 写入待查找的示例日志（一条 info、一条 error）\neda.sys_Log.add('嘉立创示例_查找演示：任务开始');\neda.sys_Log.add('嘉立创示例_查找演示：网络请求失败', 'error');\n\n// 2. 按关键字查找全部匹配条目（返回 Promise，需要 await）\nconst all = await eda.sys_Log.find('嘉立创示例_查找演示');\nconsole.log('关键字匹配条目数：', all.length);\n\n// 3. 限定只在 error 类型中查找，缩小搜索范围\nconst errors = await eda.sys_Log.find('嘉立创示例_查找演示', 'error');\nconsole.log('error 类型匹配条目数：', errors.length);\nconsole.log('匹配内容：', errors.map(line => line.message).join('；'));\n```"
+        }
+      ]
     }
   },
   "_source": {

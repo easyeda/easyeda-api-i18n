@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录调整前的信号层（铜箔层）数量\nconst before = (await eda.pcb_Layer.getAllLayers()).filter(l => l.type === 'SIGNAL').length;\n\n// 2. 将铜箔层数调整为 4 层，新增 INNER_1（15）、INNER_2（16）两个内层\nconst setResult = await eda.pcb_Layer.setTheNumberOfCopperLayers(4);\n\n// 3. 确认内层已加入图层列表\nconst afterLayers = await eda.pcb_Layer.getAllLayers();\nconst after = afterLayers.filter(l => l.type === 'SIGNAL').length;\nconst inner1 = afterLayers.find(l => l.id === 15);\n\n// 4. 恢复为 2 层板，移除空的内层（内层上有图元时无法减少层数）\nconst restoreResult = await eda.pcb_Layer.setTheNumberOfCopperLayers(2);\n\nconsole.log('setResult:', setResult);\nconsole.log('copperCountBefore:', before, '→ copperCountAfter:', after);\nconsole.log('inner1Name:', inner1?.name);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "openReadFileDialog",
     "className": "SYS_FileSystem",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开选择窗口（限定 .json 文件，单选；用户选择前 Promise 一直挂起）\neda.sys_FileSystem.openReadFileDialog('.json').then(file => {\n  // 用户完成选择后触发；直接关闭窗口时 file 为 undefined\n  if (file) {\n    console.log('已选择文件：', file.name);\n  }\n});\n\n// 2. 窗口已弹出，主流程不等待用户操作\nconsole.log('已打开文件选择窗口');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "打开读入文件窗口",

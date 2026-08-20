@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "PCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成随机基准坐标，避免与画布上已有的填充重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 构造矩形轮廓（宽 500mil、高 300mil），填充轮廓必须是 MathPolygon 对象\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\n\n// 3. 在顶层铜层（1）创建实心填充（SOLID=0），不挂网络，不锁定\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', fill.getState_PrimitiveId());\nconsole.log('layer:', fill.getState_Layer());\nconsole.log('fillMode:', fill.getState_FillMode());\nconsole.log('net:', fill.getState_Net());\nconsole.log('primitiveType:', fill.getState_PrimitiveType());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建填充",

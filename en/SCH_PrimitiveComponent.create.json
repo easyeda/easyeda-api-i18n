@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "SCH_PrimitiveComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 从系统库搜索器件，随机坐标避免与画布已有器件重合（SCH 坐标单位 10mil）\nconst devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建器件：搜索结果直接作为关联库器件传入，加入 BOM 并转到 PCB\nconst comp = await eda.sch_PrimitiveComponent.create(\n  devices[0],  // 关联库器件\n  x,           // 坐标 X\n  y,           // 坐标 Y\n  undefined,   // 子部件名称（多子部件器件才需要指定）\n  0,           // 旋转角度\n  false,       // 是否镜像\n  true,        // 是否加入 BOM\n  true         // 是否转到 PCB\n);\n\n// 3. 创建类保留现场，供在画布上观察摆放结果\nconsole.log('primitiveId:', comp.getState_PrimitiveId());\nconsole.log('designator:', comp.getState_Designator());\nconsole.log('position:', comp.getState_X(), ',', comp.getState_Y());\nconsole.log('addIntoBom:', comp.getState_AddIntoBom());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建器件",

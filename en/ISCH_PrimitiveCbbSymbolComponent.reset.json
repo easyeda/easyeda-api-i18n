@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "reset",
     "className": "ISCH_PrimitiveCbbSymbolComponent",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试符号重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置一个测试复用模块符号（SCH 坐标单位 10mil）\nconst cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\nconst symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  { libraryUuid: cbb.libraryUuid, cbbUuid: cbb.uuid },\n  x, y\n);\n\n// 3. 异步模式下改一个错误坐标，但不提交，直接 reset() 丢弃\nconst asyncSymbol = symbol.toAsync();\nasyncSymbol.setState_X(x + 9999);\nawait asyncSymbol.reset();\n\n// 4. 从画布重新读取，确认位置仍是放置时的值（保留现场供观察）\nconst refetched = await eda.sch_Primitive.getPrimitiveByPrimitiveId(symbol.getState_PrimitiveId());\n\nconsole.log('x:', refetched.getState_X(), '(修改已丢弃)');\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",

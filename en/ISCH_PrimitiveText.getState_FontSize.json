@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_FontSize",
     "className": "ISCH_PrimitiveText",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建一个字号 20 的测试文本（第 7 参是字体大小）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_大标题', 0, null, null, 20);\n\n// 2. 读取字体大小\nconst fontSize = text.getState_FontSize();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('fontSize:', fontSize);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：字体大小",

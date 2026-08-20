@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "create",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建符号（分类传 [] = 不分类；符号类型 '1' = 原理图符号，见 ELIB_SymbolType）\nconst symbolName = '嘉立创示例_新符号_' + Date.now();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, symbolName, [], '1', '示例符号描述');\n\n// 创建类保留现场（新符号留在个人库中供观察）\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('symbolName:', symbolName);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建符号",

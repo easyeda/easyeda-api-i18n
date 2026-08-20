@@ -28,7 +28,12 @@
           "key": "remarks.text.4"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 打开一个带标题和最大化/最小化按钮的内联框架窗口（自建 ID 便于后续定位）\nconst opened = await eda.sys_IFrame.openIFrame('/extension.json', 360, 240, '嘉立创示例_窗口', {\n  title: '嘉立创示例 内联框架窗口',\n  minimizeButton: true,\n  maximizeButton: true,\n  grayscaleMask: false,\n});\nconsole.log('打开结果：', opened);\n\n// 2. 关闭刚才打开的窗口还原界面（自建自删，保证案例可重复运行）\nconst closed = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口');\nconsole.log('关闭结果：', closed);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "getState_PrimitiveLock",
     "className": "IPCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个锁定状态的覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_读锁定', 5, 10, true);\n\n// 3. 读取锁定状态\nconst locked = pour.getState_PrimitiveLock();\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', locked);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "获取属性状态：是否锁定",

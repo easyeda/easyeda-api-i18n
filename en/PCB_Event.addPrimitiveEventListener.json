@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\nconst listenerId = '嘉立创示例_primitive_event';\nconst events = [];\n\n// 1. 注册图元事件监听，eventType 用 'all' 接收全部图元事件\neda.pcb_Event.addPrimitiveEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    events.push({ eventType, primitiveType: props?.[0]?.primitiveType });\n  },\n  false\n);\n\n// 2. 创建一个测试焊盘，触发图元 add 事件\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 5000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nawait new Promise(r => setTimeout(r, 500));\n\n// 3. 删除测试焊盘，再触发一次图元删除事件（同时清理测试图元）\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\nawait new Promise(r => setTimeout(r, 500));\n\n// 4. 观察两次操作分别触发的事件\nconsole.log('events:', JSON.stringify(events));\n\n// 5. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+        }
+      ]
     }
   },
   "_source": {

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "addSource",
     "className": "IPCB_ComplexPolygon",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 先创建一个矩形外框复杂多边形（纯数据对象，此时画布上还看不到）\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 再创建一个圆形单多边形对象，作为要追加的第二块数据\nconst circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 1250, 1150, 80]);\n\n// 3. 追加进复杂多边形（返回对象本身，支持链式调用）\ncomplexPolygon.addSource(circlePolygon);\n\n// 4. 用组合后的复杂多边形创建填充图元，让结果在画布上可见\nconst fill = await eda.pcb_PrimitiveFill.create(1, complexPolygon, '', 0, 10, false);\n\n// 修改类保留现场，供观察填充结果\nconsole.log('primitiveId:', fill.getState_PrimitiveId());\nconsole.log('polygonCount:', complexPolygon.getSourceStrictComplex().length);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "添加多边形数据",

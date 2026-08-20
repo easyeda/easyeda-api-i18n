@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modify",
     "className": "PCB_PrimitiveFill",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建待修改的测试填充（随机坐标避免与画布已有填充重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\nconst fillId = fill.getState_PrimitiveId();\n\n// 2. 读取修改前的层与锁定状态\nconst beforeLayer = fill.getState_Layer();\nconst beforeLock = fill.getState_PrimitiveLock();\n\n// 3. 批量修改：顶层铜层（1）→ 底层铜层（2），未锁定 → 锁定\nawait eda.pcb_PrimitiveFill.modify(fillId, { layer: 2, primitiveLock: true });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveFill.get(fillId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', fillId);\nconsole.log('layer:', beforeLayer, '→', refreshed.getState_Layer());\nconsole.log('primitiveLock:', beforeLock, '→', refreshed.getState_PrimitiveLock());\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改填充",

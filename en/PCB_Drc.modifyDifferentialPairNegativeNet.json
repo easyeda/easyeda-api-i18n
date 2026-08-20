@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "modifyDifferentialPairNegativeNet",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 生成本次运行专用的网络名（避免与其他差分对冲突）\nconst ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\nconst newNetN = 'JLC_DEMO_DP_N2_' + ts;\n\n// 2. 放三个带网络的焊盘并创建差分对\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '3', x + 1000, 3000, 0, ['ELLIPSE', 60, 60], newNetN, null, 0, 0, 0, false, 0);\nconst pairName = '嘉立创示例_差分对_' + ts;\nawait eda.pcb_Drc.createDifferentialPair(pairName, netP, netN);\n\n// 3. 把负网络替换为 newNetN（保留现场供观察）\nconst result = await eda.pcb_Drc.modifyDifferentialPairNegativeNet(pairName, newNetN);\n\nconsole.log('newNegativeNet:', newNetN);\nconsole.log('result:', result);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "修改差分对负网络",

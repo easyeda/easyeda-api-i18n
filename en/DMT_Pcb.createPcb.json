@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createPcb",
     "className": "DMT_Pcb",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建 PCB（不指定 boardName，得到游离 PCB），返回新 PCB UUID\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nconsole.log('pcbUuid:', pcbUuid);\n\n// 2. 等 1.5s 让 PCB 在工作区落地，回读确认\nawait new Promise(r => setTimeout(r, 1500));\nconst pcbInfo = await eda.dmt_Pcb.getPcbInfo(pcbUuid);\nconsole.log('name:', pcbInfo?.name);\nconsole.log('parentBoardName:', pcbInfo?.parentBoardName);\n\n// 3. 删除本例创建的 PCB，保持工程整洁\nconst deleted = await eda.dmt_Pcb.deletePcb(pcbUuid);\nconsole.log('deleted:', deleted);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建 PCB",

@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "createProject",
     "className": "DMT_Project",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 创建测试工程（友好名带时间戳避免重名，名称与团队留空走默认）\nconst projectUuid = await eda.dmt_Project.createProject(\n  '嘉立创示例_工程 ' + Date.now(),\n  undefined,\n  undefined,\n  undefined,\n  '嘉立创示例：工程创建演示',\n);\n\n// 2. 等待工作区同步后回读，确认工程已落地\nawait new Promise(r => setTimeout(r, 1500));\nconst brief = await eda.dmt_Project.getProjectInfo(projectUuid);\n\nconst folderLabel = !brief?.folderUuid ? '(根目录)' : brief.folderUuid;\n\nconsole.log('projectUuid:', projectUuid);\nconsole.log('friendlyName:', brief?.friendlyName);\nconsole.log('folderUuid:', folderLabel);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "创建工程",

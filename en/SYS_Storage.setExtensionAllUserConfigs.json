@@ -16,7 +16,12 @@
           "key": "remarks.text.1"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 备份当前全部配置（整体覆盖前必做）\nconst backup = eda.sys_Storage.getExtensionAllUserConfigs();\n\n// 2. 整体写入一份新配置，原有配置被覆盖\nconst ok = await eda.sys_Storage.setExtensionAllUserConfigs({\n  '嘉立创示例_单位': 'mil',\n  '嘉立创示例_检查更新': true,\n});\n\n// 3. 把备份的原配置写回，还原存储现场\nconst restored = await eda.sys_Storage.setExtensionAllUserConfigs(backup);\n\nconsole.log('整体写入结果：', ok);\nconsole.log('恢复备份结果：', restored);\nconsole.log('备份配置条数：', Object.keys(backup).length);\n```"
+        }
+      ]
     }
   },
   "_source": {

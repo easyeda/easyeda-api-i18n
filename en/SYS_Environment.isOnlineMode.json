@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isOnlineMode",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断是否为在线模式（同步返回布尔值）\nconst isOnline = eda.sys_Environment.isOnlineMode();\n\n// 2. 输出判断结果（在线模式为 true）\nconsole.log('是否在线模式：', isOnline);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否为在线模式",

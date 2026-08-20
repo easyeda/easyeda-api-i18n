@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "setLayerColorConfiguration",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 记录切换前顶层的颜色\nconst before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n\n// 2. 切换为 Altium Designer 配色（ALTIUM_DESIGNER=2）\nconst setResult = await eda.pcb_Layer.setLayerColorConfiguration(2);\n\n// 3. 查看切换后顶层的颜色\nconst after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n\n// 4. 恢复嘉立创 EDA 默认配色（EASYEDA=1）\nconst restoreResult = await eda.pcb_Layer.setLayerColorConfiguration(1);\n\nconsole.log('setResult:', setResult);\nconsole.log('topColorBefore:', before?.color, '→ topColorAfter:', after?.color);\nconsole.log('restoreResult:', restoreResult);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "设置层颜色配置",

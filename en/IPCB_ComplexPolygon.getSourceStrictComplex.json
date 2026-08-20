@@ -12,7 +12,12 @@
           "key": "remarks.text.0"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 只放入一个单多边形构建复杂多边形\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 对比两种读取方式：区别在嵌套深度，不在是否为数组\nconst simplified = complexPolygon.getSource();              // 一维：首元素是模式标记 \"R\"\nconst strict = complexPolygon.getSourceStrictComplex();     // 二维：首元素是单多边形数组\n\nconsole.log('simplifiedFirstItem:', typeof simplified[0]);\nconsole.log('strictFirstItemIsArray:', Array.isArray(strict[0]));\nconsole.log('strictPolygonCount:', strict.length);\n```"
+        }
+      ]
     }
   },
   "_source": {

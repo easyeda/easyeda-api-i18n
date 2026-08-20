@@ -4,7 +4,16 @@
     "kind": "method",
     "name": "isProPrivateEdition",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript\n// 1. 判断是否为私有化部署版本（同步返回布尔值）\nconst isPrivateEdition = eda.sys_Environment.isProPrivateEdition();\n\n// 2. 输出判断结果（私有化部署版为 true）\nconsole.log('是否私有化部署版本：', isPrivateEdition);\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "是否为私有化部署版本",
