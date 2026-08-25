@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在新标签页打开目标地址（同步方法，无返回值）\neda.sys_Window.open('http://localhost:49620/health', '_blank');\n\n// 2. 打开的标签页由用户自行关闭\nconsole.log('已在新标签页打开资源窗口');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Window.open('http://localhost:49620/health', '_blank');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('已在新标签页打开资源窗口');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "打开资源窗口",
+    "example.text.0": "1. 在新标签页打开目标地址（同步方法，无返回值）",
+    "example.text.1": "2. 打开的标签页由用户自行关闭",
     "params.url": "欲加载资源的 URL 或路径",
     "params.target": "上下文目标"
   },
   "title": "Open a resource window",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.url": "URL or path of the resource to load",
   "params.target": "Context target"
 }

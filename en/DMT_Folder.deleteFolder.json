@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程所属团队\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 创建专用测试文件夹（避免动到用户现有目录）\nconst folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_待删除', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 删除该文件夹\nconst deleted = await eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n\n// 4. 回读确认已删除（返回 undefined 说明文件夹已不存在）\nawait new Promise(r => setTimeout(r, 1000));\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('deleted:', deleted);\nconsole.log('folderInfo after delete:', folderInfo === undefined ? '已不存在' : '仍存在');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_待删除', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('deleted:', deleted);\nconsole.log('folderInfo after delete:', folderInfo === undefined ? '已不存在' : '仍存在');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除文件夹",
+    "example.text.0": "1. 取当前工程所属团队",
+    "example.text.1": "2. 创建专用测试文件夹（避免动到用户现有目录）",
+    "example.text.2": "3. 删除该文件夹",
+    "example.text.3": "4. 回读确认已删除（返回 undefined 说明文件夹已不存在）",
     "params.teamUuid": "团队 UUID",
     "params.folderUuid": "文件夹 UUID",
     "returns": "操作是否成功"
   },
   "title": "Delete Folder",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.teamUuid": "Team UUID",
   "params.folderUuid": "Folder UUID",
   "returns": "Whether the operation is successful"

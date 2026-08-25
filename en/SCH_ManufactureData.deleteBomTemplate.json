@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 查看当前账号下的 BOM 模板\nconst templates = await eda.sch_ManufactureData.getBomTemplates();\nconsole.log('当前模板：', templates.join('、'));\n\n// 2. 删除一个不存在的模板名，验证 API 的返回行为（不影响任何已有模板）\nconst success = await eda.sch_ManufactureData.deleteBomTemplate('嘉立创示例_不存在的模板');\nconsole.log('删除不存在模板的返回值：', success);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const templates = await eda.sch_ManufactureData.getBomTemplates();\nconsole.log('当前模板：', templates.join('、'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const success = await eda.sch_ManufactureData.deleteBomTemplate('嘉立创示例_不存在的模板');\nconsole.log('删除不存在模板的返回值：', success);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除 BOM 模板",
+    "example.text.0": "1. 查看当前账号下的 BOM 模板",
+    "example.text.1": "2. 删除一个不存在的模板名，验证 API 的返回行为（不影响任何已有模板）",
     "params.template": "BOM 模板名称",
     "returns": "操作是否成功"
   },
   "title": "Delete BOM template",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.template": "BOM template name",
   "returns": "Whether the operation is successful"
 }

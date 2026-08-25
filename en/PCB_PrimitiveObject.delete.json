@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个待删除的测试内嵌对象（随机坐标避免重合），使用 4x4 像素 PNG 的 data URI\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst binaryData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj1 = await eda.pcb_PrimitiveObject.create(3, x, y, binaryData, 400, 300, 0, false, 'logo1.png', false);\nconst obj2 = await eda.pcb_PrimitiveObject.create(3, x, y + 500, binaryData, 400, 300, 0, false, 'logo2.png', false);\n\n// 2. 记录删除前的内嵌对象数量\nconst beforeCount = (await eda.pcb_PrimitiveObject.getAll()).length;\n\n// 3. 以 ID 数组形式批量删除两个内嵌对象\nconst deleted = await eda.pcb_PrimitiveObject.delete([obj1.getState_PrimitiveId(), obj2.getState_PrimitiveId()]);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.pcb_PrimitiveObject.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst binaryData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj1 = await eda.pcb_PrimitiveObject.create(3, x, y, binaryData, 400, 300, 0, false, 'logo1.png', false);\nconst obj2 = await eda.pcb_PrimitiveObject.create(3, x, y + 500, binaryData, 400, 300, 0, false, 'logo2.png', false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeCount = (await eda.pcb_PrimitiveObject.getAll()).length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.pcb_PrimitiveObject.delete([obj1.getState_PrimitiveId(), obj2.getState_PrimitiveId()]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterCount = (await eda.pcb_PrimitiveObject.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除二进制内嵌对象",
+    "example.text.0": "1. 创建两个待删除的测试内嵌对象（随机坐标避免重合），使用 4x4 像素 PNG 的 data URI",
+    "example.text.1": "2. 记录删除前的内嵌对象数量",
+    "example.text.2": "3. 以 ID 数组形式批量删除两个内嵌对象",
+    "example.text.3": "4. 删除类保留现场（图元已删除，不恢复）",
     "params.primitiveIds": "二进制内嵌对象的图元 ID 或二进制内嵌对象图元对象",
     "returns": "删除操作是否成功"
   },
   "title": "Delete Binary embedded object",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Binary embedded object primitive ID or Binary embedded object primitive object",
   "returns": "Delete Whether the operation is successful"
 }

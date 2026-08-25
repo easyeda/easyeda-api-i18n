@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在画布空白处创建两个测试矩形（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect1 = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 0, 0, '#FF0000');\nconst rect2 = await eda.sch_PrimitiveRectangle.create(x, y + 400, 500, 200, 30, 0, '#0000FF');\nconst id1 = rect1.getState_PrimitiveId();\nconst id2 = rect2.getState_PrimitiveId();\n\n// 2. 传单个 ID 字符串，返回单个矩形对象\nconst single = await eda.sch_PrimitiveRectangle.get(id1);\n\n// 3. 传 ID 数组，返回矩形对象数组（任一 ID 未匹配不影响其它图元的返回）\nconst arr = await eda.sch_PrimitiveRectangle.get([id1, id2]);\n\n// 4. 清理测试矩形（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([id1, id2]);\n\nconsole.log('single primitiveType:', single.getState_PrimitiveType());\nconsole.log('single size:', single.getState_Width(), 'x', single.getState_Height());\nconsole.log('array length:', arr.length);\nconsole.log('rect2 color:', arr[1].getState_Color());\nconsole.log('rect2 cornerRadius:', arr[1].getState_CornerRadius());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect1 = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 0, 0, '#FF0000');\nconst rect2 = await eda.sch_PrimitiveRectangle.create(x, y + 400, 500, 200, 30, 0, '#0000FF');\nconst id1 = rect1.getState_PrimitiveId();\nconst id2 = rect2.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.sch_PrimitiveRectangle.get(id1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.sch_PrimitiveRectangle.get([id1, id2]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([id1, id2]);\n\nconsole.log('single primitiveType:', single.getState_PrimitiveType());\nconsole.log('single size:', single.getState_Width(), 'x', single.getState_Height());\nconsole.log('array length:', arr.length);\nconsole.log('rect2 color:', arr[1].getState_Color());\nconsole.log('rect2 cornerRadius:', arr[1].getState_CornerRadius());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取矩形",
+    "example.text.0": "1. 在画布空白处创建两个测试矩形（随机坐标避免重合）",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个矩形对象",
+    "example.text.2": "3. 传 ID 数组，返回矩形对象数组（任一 ID 未匹配不影响其它图元的返回）",
+    "example.text.3": "4. 清理测试矩形（查询类需要清理）",
     "params.primitiveIds": "矩形的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "矩形图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Rectangle",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Rectangle primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Rectangle primitive object, `undefined` indicates that the retrieval failed"
 }

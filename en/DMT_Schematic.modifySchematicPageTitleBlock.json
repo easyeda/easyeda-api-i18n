@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建专用测试原理图并打开自带图页 p1，让焦点落到目标页上\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst pageUuid = info.page[0].uuid;\nawait eda.dmt_EditorControl.openDocument(pageUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 修改明细表：显示明细表，并把\"公司\"改为示例值（三个字段缺一不可）\nconst modified = await eda.dmt_Schematic.modifySchematicPageTitleBlock(true, {\n  Company: { showTitle: true, showValue: true, value: '嘉立创示例科技' },\n});\nconsole.log('modified:', modified);\n\n// 3. 等 1.5s 同步，回读验证明细项已更新\nawait new Promise(r => setTimeout(r, 1500));\nconst after = await eda.dmt_Schematic.getSchematicPageInfo(pageUuid);\nconsole.log('showTitleBlock:', after?.showTitleBlock);\nconsole.log('company:', after?.titleBlockData?.Company?.value);\nconsole.log('modifyVerified:', after?.titleBlockData?.Company?.value === '嘉立创示例科技');\n\n// 4. 清理测试原理图，保持工程整洁\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst pageUuid = info.page[0].uuid;\nawait eda.dmt_EditorControl.openDocument(pageUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const modified = await eda.dmt_Schematic.modifySchematicPageTitleBlock(true, {\n  Company: { showTitle: true, showValue: true, value: '嘉立创示例科技' },\n});\nconsole.log('modified:', modified);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst after = await eda.dmt_Schematic.getSchematicPageInfo(pageUuid);\nconsole.log('showTitleBlock:', after?.showTitleBlock);\nconsole.log('company:', after?.titleBlockData?.Company?.value);\nconsole.log('modifyVerified:', after?.titleBlockData?.Company?.value === '嘉立创示例科技');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "修改原理图图页明细表",
     "remarks.text.0": "`titleBlockData` 仅需要传入任何需要修改的明细项作为 `key`，并传入其需要修改的值，任何无法识别的明细项将被忽略，任何未传入的项和值将保持默认状态",
+    "example.text.0": "1. 创建专用测试原理图并打开自带图页 p1，让焦点落到目标页上",
+    "example.text.1": "2. 修改明细表：显示明细表，并把\"公司\"改为示例值（三个字段缺一不可）",
+    "example.text.2": "3. 等 1.5s 同步，回读验证明细项已更新",
+    "example.text.3": "4. 清理测试原理图，保持工程整洁",
     "params.showTitleBlock": "是否显示明细表，不定义将保持当前状态",
     "params.titleBlockData": "需要修改的明细项及其修改的值",
     "returns": "修改操作是否成功，如若未传入 `showTitleBlock` 和 `titleBlockData` 将返回 `false`；请注意，如若存在无法识别的明细项但程序并未出错，将返回 `true` 的结果，因为无法识别的明细项被忽略"
   },
   "title": "Modify the title block of a schematic sheet",
   "remarks.text.0": "`titleBlockData` only needs to pass in any title block items to be modified as `key`, along with the values to modify them to. Any unrecognized title block items will be ignored, and any unpassed items and values will remain in their default state",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.showTitleBlock": "Whether to show the title block. If undefined, the current state will be kept",
   "params.titleBlockData": "The title block items to be modified and their modified values",
   "returns": "Whether the modification was successful. If `showTitleBlock` and `titleBlockData` are not passed in, `false` will be returned. Note that if unrecognized title block items exist but the program does not report an error, `true` will be returned because the unrecognized items are ignored"

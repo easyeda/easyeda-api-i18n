@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 新增一个自定义层作为修改对象\nconst customLayerId = await eda.pcb_Layer.addCustomLayer();\n\n// 2. 读取修改前的名称与颜色\nconst before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n\n// 3. 修改名称、颜色与透明度（保留现场供观察）\nconst modifyResult = await eda.pcb_Layer.modifyLayer(customLayerId, {\n  name: '嘉立创示例_工艺说明',\n  color: '#FF6600',\n  transparency: 30,\n});\n\n// 4. 重新读取图层列表确认修改生效\nconst after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n\nconsole.log('modifyResult:', modifyResult);\nconsole.log('nameBefore:', before?.name, '→ nameAfter:', after?.name);\nconsole.log('colorBefore:', before?.color, '→ colorAfter:', after?.color);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const customLayerId = await eda.pcb_Layer.addCustomLayer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const modifyResult = await eda.pcb_Layer.modifyLayer(customLayerId, {\n  name: '嘉立创示例_工艺说明',\n  color: '#FF6600',\n  transparency: 30,\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === customLayerId);\n\nconsole.log('modifyResult:', modifyResult);\nconsole.log('nameBefore:', before?.name, '→ nameAfter:', after?.name);\nconsole.log('colorBefore:', before?.color, '→ colorAfter:', after?.color);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "修改图层属性",
     "remarks.text.0": "仅内层和自定义层允许修改名称；仅内层允许修改类型, 透明度仅支持0-100之间的数",
+    "example.text.0": "1. 新增一个自定义层作为修改对象",
+    "example.text.1": "2. 读取修改前的名称与颜色",
+    "example.text.2": "3. 修改名称、颜色与透明度（保留现场供观察）",
+    "example.text.3": "4. 重新读取图层列表确认修改生效",
     "params.layer": "层",
     "params.property": "属性",
     "returns": "修改后的图层属性，如若为 `undefined` 则代表修改失败或图层不存在"
   },
   "title": "Modify Layer properties",
   "remarks.text.0": "Only inner layers and custom layers can have their names modified; only inner layers can have their types modified. Transparency only supports values between 0-100",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.layer": "Layer",
   "params.property": "Property",
   "returns": "The modified layer properties. If it is `undefined`, the modification failed or the layer does not exist"

@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "id": "SYS_FileManager.getSchematicFile",
+    "kind": "method",
+    "name": "getSchematicFile",
+    "className": "SYS_FileManager",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.183",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取原理图文件",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.1": "注意：本接口需要启用 **工程设计图 \\> 文件导出** 权限，没有权限调用将始终 `throw Error`",
+    "remarks.text.2": "/ EDA v4.1.23",
+    "params.fileName": "文件名",
+    "params.password": "加密密码",
+    "params.fileType": "文件格式",
+    "returns": "原理图文件数据，`undefined` 表示当前未打开原理图图页或数据获取失败"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "params.fileName": null,
+  "params.password": null,
+  "params.fileType": null,
+  "returns": null
+}

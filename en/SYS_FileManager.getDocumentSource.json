@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前文档源码\nconst source = await eda.sys_FileManager.getDocumentSource();\n\n// 2. 输出源码长度与前 60 字符预览（DOCHEAD 开头的 JSON 分段结构）\nconsole.log('源码长度：', source.length);\nconsole.log('源码预览：', source.slice(0, 60));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const source = await eda.sys_FileManager.getDocumentSource();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('源码长度：', source.length);\nconsole.log('源码预览：', source.slice(0, 60));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取文档源码",
+    "example.text.0": "1. 读取当前文档源码",
+    "example.text.1": "2. 输出源码长度与前 60 字符预览（DOCHEAD 开头的 JSON 分段结构）",
     "returns": "文档源码数据，`undefined` 表示当前未打开文档或数据获取失败"
   },
   "title": "Get Document source code",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Document source code data, `undefined` indicates that it is currently not open document or data retrieval failed"
 }

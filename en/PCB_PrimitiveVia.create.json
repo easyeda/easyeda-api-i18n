@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机放置坐标，避免与画布上已有的过孔重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建通孔：孔径 20mil、外径 40mil，不挂网络、不锁定（viaType 省略时默认通孔 0）\nconst via = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', via.getState_PrimitiveId());\nconsole.log('primitiveType:', via.getState_PrimitiveType());\nconsole.log('net:', via.getState_Net());\nconsole.log('holeDiameter:', via.getState_HoleDiameter());\nconsole.log('diameter:', via.getState_Diameter());\nconsole.log('x:', via.getState_X(), 'y:', via.getState_Y());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', via.getState_PrimitiveId());\nconsole.log('primitiveType:', via.getState_PrimitiveType());\nconsole.log('net:', via.getState_Net());\nconsole.log('holeDiameter:', via.getState_HoleDiameter());\nconsole.log('diameter:', via.getState_Diameter());\nconsole.log('x:', via.getState_X(), 'y:', via.getState_Y());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建过孔",
+    "example.text.0": "1. 生成随机放置坐标，避免与画布上已有的过孔重合",
+    "example.text.1": "2. 创建通孔：孔径 20mil、外径 40mil，不挂网络、不锁定（viaType 省略时默认通孔 0）",
+    "example.text.2": "3. 创建类保留现场，不删除图元",
     "params.net": "网络名称",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
@@ -29,6 +59,9 @@
     "returns": "过孔图元对象"
   },
   "title": "Create Via",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.net": "Net name",
   "params.x": "X coordinate",
   "params.y": "Y coordinate",

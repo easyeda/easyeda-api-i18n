@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个金属化孔焊盘和一个非金属化孔焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst plated = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, true, 0);\nconst nonPlated = await eda.pcb_PrimitivePad.create(12, '2', x + 500, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\n\n// 2. 分别读取金属化状态\nconst platedMetallization = plated.getState_Metallization();\nconst nonPlatedMetallization = nonPlated.getState_Metallization();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([plated.getState_PrimitiveId(), nonPlated.getState_PrimitiveId()]);\n\nconsole.log('platedMetallization:', platedMetallization);\nconsole.log('nonPlatedMetallization:', nonPlatedMetallization);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst plated = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, true, 0);\nconst nonPlated = await eda.pcb_PrimitivePad.create(12, '2', x + 500, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const platedMetallization = plated.getState_Metallization();\nconst nonPlatedMetallization = nonPlated.getState_Metallization();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([plated.getState_PrimitiveId(), nonPlated.getState_PrimitiveId()]);\n\nconsole.log('platedMetallization:', platedMetallization);\nconsole.log('nonPlatedMetallization:', nonPlatedMetallization);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：是否金属化孔壁",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个金属化孔焊盘和一个非金属化孔焊盘",
+    "example.text.1": "2. 分别读取金属化状态",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "是否金属化孔壁"
   },
   "title": "Get the property state: Whether the hole wall is plated",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the hole wall is plated"
 }

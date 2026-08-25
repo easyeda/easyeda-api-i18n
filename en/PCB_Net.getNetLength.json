@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建带网络名的过孔和导线（导线长 1000mil，让网络有实际长度）\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\nconst line = await eda.pcb_PrimitiveLine.create('嘉立创示例_NET1', 1, 2000, 2000, 3000, 2000, 10);\n\n// 2. 获取该网络的布线总长\nconst netLength = await eda.pcb_Net.getNetLength('嘉立创示例_NET1');\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\n\nconsole.log('netLength:', netLength);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\nconst line = await eda.pcb_PrimitiveLine.create('嘉立创示例_NET1', 1, 2000, 2000, 3000, 2000, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const netLength = await eda.pcb_Net.getNetLength('嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\n\nconsole.log('netLength:', netLength);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取指定网络的长度",
+    "example.text.0": "1. 创建带网络名的过孔和导线（导线长 1000mil，让网络有实际长度）",
+    "example.text.1": "2. 获取该网络的布线总长",
+    "example.text.2": "3. 清理测试图元（查询类需要清理）",
     "params.net": "网络名称",
     "returns": "网络长度，`undefined` 为不存在该网络，`0` 为网络无长度"
   },
   "title": "Get the length of the specified net",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.net": "Net name",
   "returns": "Net length. `undefined` means the net does not exist; `0` means the net has no length"
 }

@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取系统库与个人库 UUID\nconst systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 复制一个系统库模块到个人库作为修改对象\nconst results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_修改_' + Date.now());\n\n// 3. 修改名称和描述（分类保持不变传 []）\nconst newName = '嘉立创示例_重命名_' + Date.now();\nconst modified = await eda.lib_Cbb.modify(cbbUuid, personalLib, newName, [], '修改后的描述');\n\n// 修改类保留现场\n\nconsole.log('cbbUuid:', cbbUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_修改_' + Date.now());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_重命名_' + Date.now();\nconst modified = await eda.lib_Cbb.modify(cbbUuid, personalLib, newName, [], '修改后的描述');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('cbbUuid:', cbbUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
         }
       ]
     }
@@ -23,6 +59,10 @@
   "_source": {
     "title": "修改复用模块",
     "remarks.text.0": "如希望清除某些属性，则将其的值设置为 `null`",
+    "example.text.0": "1. 获取系统库与个人库 UUID",
+    "example.text.1": "2. 复制一个系统库模块到个人库作为修改对象",
+    "example.text.2": "3. 修改名称和描述（分类保持不变传 []）",
+    "example.text.3": "修改类保留现场",
     "params.cbbUuid": "复用模块 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.cbbName": "复用模块名称",
@@ -32,6 +72,10 @@
   },
   "title": "Modify Reuse block",
   "remarks.text.0": "If you want to clear certain properties, set their values to `null`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.cbbUuid": "Reuse block UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.cbbName": "Reuse block name",

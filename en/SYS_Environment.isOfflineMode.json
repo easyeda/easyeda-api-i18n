@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断是否为全离线模式（同步返回布尔值）\nconst isOffline = eda.sys_Environment.isOfflineMode();\n\n// 2. 输出判断结果（全离线模式为 true）\nconsole.log('是否全离线模式：', isOffline);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isOffline = eda.sys_Environment.isOfflineMode();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否全离线模式：', isOffline);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否为全离线模式",
+    "example.text.0": "1. 判断是否为全离线模式（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（全离线模式为 true）",
     "returns": "是否为全离线模式"
   },
   "title": "Whether it is fully-offline mode",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is fully-offline mode"
 }

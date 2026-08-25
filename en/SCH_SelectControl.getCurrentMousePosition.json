@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 查询鼠标当前位置\nconst position = await eda.sch_SelectControl.getCurrentMousePosition();\n\n// 2. 鼠标在画布上时输出坐标，不在画布上时返回 undefined\nif (position) {\n  console.log('x:', position.x);\n  console.log('y:', position.y);\n} else {\n  console.log('鼠标当前不在画布上');\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const position = await eda.sch_SelectControl.getCurrentMousePosition();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "if (position) {\n  console.log('x:', position.x);\n  console.log('y:', position.y);\n} else {\n  console.log('鼠标当前不在画布上');\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取当前鼠标在画布上的位置",
+    "example.text.0": "1. 查询鼠标当前位置",
+    "example.text.1": "2. 鼠标在画布上时输出坐标，不在画布上时返回 undefined",
     "returns": "鼠标在画布上的位置，`undefined` 代表当前鼠标不在画布上"
   },
   "title": "Get Current the mouse position on the canvas",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "The mouse position on the canvas. `undefined` means the current mouse is not on the canvas"
 }

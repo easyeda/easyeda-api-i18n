@@ -10,18 +10,84 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n//    （当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 创建待修改的测试引脚（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin = await eda.sch_PrimitivePin.create(x, y, '1', 'CLK', 0, 10, null, 'None', 'IN');\nconst pinId = pin.getState_PrimitiveId();\n\n// 2. 记录修改前的编号、名称与长度\nconst beforeNumber = pin.getState_PinNumber();\nconst beforeName = pin.getState_PinName();\nconst beforeLength = pin.getState_PinLength();\n\n// 3. 批量修改：编号 1 → 7、名称 CLK → XTAL、长度 10 → 20、朝向 0 → 90 度\nawait eda.sch_PrimitivePin.modify(pinId, { pinNumber: '7', pinName: 'XTAL', pinLength: 20, rotation: 90 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitivePin.get(pinId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', pinId);\nconsole.log('pinNumber:', beforeNumber, '→', refreshed.getState_PinNumber());\nconsole.log('pinName:', beforeName, '→', refreshed.getState_PinName());\nconsole.log('pinLength:', beforeLength, '→', refreshed.getState_PinLength());\nconsole.log('rotation:', pin.getState_Rotation(), '→', refreshed.getState_Rotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin = await eda.sch_PrimitivePin.create(x, y, '1', 'CLK', 0, 10, null, 'None', 'IN');\nconst pinId = pin.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeNumber = pin.getState_PinNumber();\nconst beforeName = pin.getState_PinName();\nconst beforeLength = pin.getState_PinLength();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePin.modify(pinId, { pinNumber: '7', pinName: 'XTAL', pinLength: 20, rotation: 90 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.sch_PrimitivePin.get(pinId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.5",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', pinId);\nconsole.log('pinNumber:', beforeNumber, '→', refreshed.getState_PinNumber());\nconsole.log('pinName:', beforeName, '→', refreshed.getState_PinName());\nconsole.log('pinLength:', beforeLength, '→', refreshed.getState_PinLength());\nconsole.log('rotation:', pin.getState_Rotation(), '→', refreshed.getState_Rotation());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改引脚",
+    "example.text.0": "0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n（当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）",
+    "example.text.1": "1. 创建待修改的测试引脚（随机坐标避免重合）",
+    "example.text.2": "2. 记录修改前的编号、名称与长度",
+    "example.text.3": "3. 批量修改：编号 1 → 7、名称 CLK → XTAL、长度 10 → 20、朝向 0 → 90 度",
+    "example.text.4": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.5": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "引脚图元对象"
   },
   "title": "Modify Pin",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
+  "example.text.5": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Pin primitive object"

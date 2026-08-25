@@ -19,7 +19,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 导出当前文档为文件（文件名自动带上 epro2 扩展名）\nconst documentFile = await eda.sys_FileManager.getDocumentFile('嘉立创示例_文档导出');\n\n// 2. 输出文件信息（size 单位为字节）\nconsole.log('文件名：', documentFile.name);\nconsole.log('文件大小：', documentFile.size);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const documentFile = await eda.sys_FileManager.getDocumentFile('嘉立创示例_文档导出');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('文件名：', documentFile.name);\nconsole.log('文件大小：', documentFile.size);\n```"
         }
       ]
     }
@@ -28,6 +46,8 @@
     "title": "获取文档文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
     "remarks.text.1": "注意：本接口需要启用 **工程设计图 \\> 文件导出** 权限，没有权限调用将始终 `throw Error`",
+    "example.text.0": "1. 导出当前文档为文件（文件名自动带上 epro2 扩展名）",
+    "example.text.1": "2. 输出文件信息（size 单位为字节）",
     "params.fileName": "文件名",
     "params.password": "加密密码",
     "params.fileType": "文件格式",
@@ -36,6 +56,8 @@
   "title": "Get Document file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
   "remarks.text.1": "Note: This API requires the **Engineering Design > File Export** permission. Calling it without permission will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.fileName": "File name",
   "params.password": "Encrypted password",
   "params.fileType": "File format",

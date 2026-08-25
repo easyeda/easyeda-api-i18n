@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试总线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\n\n// 3. 切换异步模式，累计两处修改（改名称 + 改颜色）\nconst asyncBus = bus.toAsync();\nasyncBus.setState_BusName('ADDR[0..15]');\nasyncBus.setState_Color('#00AA00');\n\n// 4. 一次性提交到画布\nawait asyncBus.done();\n\n// 5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveBus.get(bus.getState_PrimitiveId());\n\nconsole.log('busName:', 'DATA[0..7]', '→', refetched.getState_BusName());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncBus = bus.toAsync();\nasyncBus.setState_BusName('ADDR[0..15]');\nasyncBus.setState_Color('#00AA00');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await asyncBus.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveBus.get(bus.getState_PrimitiveId());\n\nconsole.log('busName:', 'DATA[0..7]', '→', refetched.getState_BusName());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试总线重合",
+    "example.text.1": "2. 创建一条测试总线（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 切换异步模式，累计两处修改（改名称 + 改颜色）",
+    "example.text.3": "4. 一次性提交到画布",
+    "example.text.4": "5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）",
     "returns": "总线图元对象"
   },
   "title": "Apply the changes to the primitives to the canvas",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Bus primitive object"
 }

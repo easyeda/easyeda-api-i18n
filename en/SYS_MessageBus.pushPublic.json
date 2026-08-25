@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在公共总线注册两个取件方（竞争关系）\nlet receivedByA = false;\nconst taskA = eda.sys_MessageBus.pullPublic('嘉立创示例_公共推送', () => {\n  receivedByA = true;\n});\nconst taskB = eda.sys_MessageBus.pullPublic('嘉立创示例_公共推送', (message) => {\n  console.log('取件方 B 拉到：', message);\n});\n\n// 2. 推送一条消息：先注册的取件方 A 拿走，B 收不到\neda.sys_MessageBus.pushPublic('嘉立创示例_公共推送', '跨扩展任务');\n\nconsole.log('取件方 A 是否收到：', receivedByA);\n\n// 3. 取消任务，恢复原状\ntaskA.cancel();\ntaskB.cancel();\nconsole.log('已取消公共拉取任务');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let receivedByA = false;\nconst taskA = eda.sys_MessageBus.pullPublic('嘉立创示例_公共推送', () => {\n  receivedByA = true;\n});\nconst taskB = eda.sys_MessageBus.pullPublic('嘉立创示例_公共推送', (message) => {\n  console.log('取件方 B 拉到：', message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.pushPublic('嘉立创示例_公共推送', '跨扩展任务');\n\nconsole.log('取件方 A 是否收到：', receivedByA);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "taskA.cancel();\ntaskB.cancel();\nconsole.log('已取消公共拉取任务');\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "公共消息总线：推消息",
     "remarks.text.0": "每个消息只有一个 Puller 可以收到",
+    "example.text.0": "1. 在公共总线注册两个取件方（竞争关系）",
+    "example.text.1": "2. 推送一条消息：先注册的取件方 A 拿走，B 收不到",
+    "example.text.2": "3. 取消任务，恢复原状",
     "params.topic": "主题",
     "params.message": "消息"
   },
   "title": "Public message bus: push a message",
   "remarks.text.0": "Each message can only be received by one Puller",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.message": "Message"
 }

@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建 2 个挂同一网络的测试焊盘，作为交叉选择的目标\nconst netName = '嘉立创示例_NET';\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\n\n// 2. 按网络名交叉选择（highlight=true 高亮，select=true 选中）\nconst crossProbed = await eda.pcb_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n\n// 3. 确认该网络上的焊盘已进入选中集\nconst selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\n\n// 4. 清理选中状态和测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const netName = '嘉立创示例_NET';\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], netName, null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const crossProbed = await eda.pcb_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "进行交叉选择",
+    "example.text.0": "1. 创建 2 个挂同一网络的测试焊盘，作为交叉选择的目标",
+    "example.text.1": "2. 按网络名交叉选择（highlight=true 高亮，select=true 选中）",
+    "example.text.2": "3. 确认该网络上的焊盘已进入选中集",
+    "example.text.3": "4. 清理选中状态和测试图元",
     "params.components": "器件位号",
     "params.pins": "器件位号_引脚编号，格式为 ['U1_1', 'U1_2']",
     "params.nets": "网络名称",
@@ -25,6 +65,10 @@
     "params.canMove": "画布能否移动"
   },
   "title": "Perform cross-probe selection",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.components": "Device designator",
   "params.pins": "Device designator _ pin number, format is ['U1_1', 'U1_2']",
   "params.nets": "Net name",

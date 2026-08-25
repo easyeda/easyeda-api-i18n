@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个中心孔的通孔焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleOffsetX();\n\n// 2. 异步模式下把孔向右偏移 10mil 并提交\nconst a = pad.toAsync();\na.setState_HoleOffsetX(10);\nawait a.done();\n\n// 3. 从画布重新读取，确认偏移已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeOffsetX:', before, '→', ref.getState_HoleOffsetX());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleOffsetX();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_HoleOffsetX(10);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeOffsetX:', before, '→', ref.getState_HoleOffsetX());\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "设置属性状态：孔偏移 X",
     "remarks.text.0": "如若孔不存在，则属性将不会被修改",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个中心孔的通孔焊盘",
+    "example.text.1": "2. 异步模式下把孔向右偏移 10mil 并提交",
+    "example.text.2": "3. 从画布重新读取，确认偏移已生效（保留现场供观察）",
     "params.holeOffsetX": "孔偏移 X",
     "returns": "焊盘图元对象"
   },
   "title": "Set the property state: hole offset X",
   "remarks.text.0": "If the hole does not exist, the property will not be modified",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.holeOffsetX": "Hole offset X",
   "returns": "Pad primitive object"
 }

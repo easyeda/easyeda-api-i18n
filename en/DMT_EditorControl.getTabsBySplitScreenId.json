@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页并读取分屏树，定位一个直接持有标签页的分屏\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\nlet leaf = null;\n(function find(node) {\n  if (node.tabs?.length) { leaf = node; return; }\n  (node.children || []).forEach(find);\n})(tree);\n\n// 2. 查询该分屏下的所有标签页\nconst tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(leaf.id);\nconsole.log('splitScreenId:', leaf.id);\nconsole.log('tab count:', tabs.length);\nconsole.log('titles:', tabs.map(t => t.title));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\nlet leaf = null;\n(function find(node) {\n  if (node.tabs?.length) { leaf = node; return; }\n  (node.children || []).forEach(find);\n})(tree);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(leaf.id);\nconsole.log('splitScreenId:', leaf.id);\nconsole.log('tab count:', tabs.length);\nconsole.log('titles:', tabs.map(t => t.title));\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "获取指定分屏 ID 下的所有标签页",
     "remarks.text.0": "如果指定分屏下不存在直接标签页（即它属下还存在 {@link IDMT_EditorSplitScreenItem.children | children}），则返回空数组",
+    "example.text.0": "1. 打开一个原理图页并读取分屏树，定位一个直接持有标签页的分屏",
+    "example.text.1": "2. 查询该分屏下的所有标签页",
     "params.splitScreenId": "分屏 ID",
     "returns": "标签页列表"
   },
   "title": "Get all tabs under the specified split screen ID",
   "remarks.text.0": "If there are no direct tabs under the specified split screen (that is, it still has {@link IDMT_EditorSplitScreenItem.children | children} under it), an empty array will be returned",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.splitScreenId": "Split screen ID",
   "returns": "Tab list"
 }

@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 展示一条持续提示（不传时间参数，不会自动消失）\neda.sys_Message.showFollowMouseTip('嘉立创示例_待移除的提示');\nconsole.log('鼠标提示已显示');\n\n// 2. 传入不匹配的内容：当前提示内容不同，不会被移除\neda.sys_Message.removeFollowMouseTip('嘉立创示例_另一条提示');\nconsole.log('传入内容与当前提示不匹配，提示仍在显示');\n\n// 3. 传入匹配的内容：内容一致时移除\neda.sys_Message.removeFollowMouseTip('嘉立创示例_待移除的提示');\nconsole.log('传入内容与当前提示一致，提示已移除');\n\n// 4. 不传参数：无论内容直接移除当前提示\neda.sys_Message.showFollowMouseTip('嘉立创示例_新的提示');\neda.sys_Message.removeFollowMouseTip();\nconsole.log('不传参数已直接移除当前提示');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showFollowMouseTip('嘉立创示例_待移除的提示');\nconsole.log('鼠标提示已显示');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.removeFollowMouseTip('嘉立创示例_另一条提示');\nconsole.log('传入内容与当前提示不匹配，提示仍在显示');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.removeFollowMouseTip('嘉立创示例_待移除的提示');\nconsole.log('传入内容与当前提示一致，提示已移除');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showFollowMouseTip('嘉立创示例_新的提示');\neda.sys_Message.removeFollowMouseTip();\nconsole.log('不传参数已直接移除当前提示');\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "移除跟随鼠标的提示",
     "remarks.text.0": "移除当前或指定的跟随鼠标的提示",
+    "example.text.0": "1. 展示一条持续提示（不传时间参数，不会自动消失）",
+    "example.text.1": "2. 传入不匹配的内容：当前提示内容不同，不会被移除",
+    "example.text.2": "3. 传入匹配的内容：内容一致时移除",
+    "example.text.3": "4. 不传参数：无论内容直接移除当前提示",
     "params.tip": "提示内容，如若传入，则仅当当前提示为指定内容时才移除"
   },
   "title": "Remove the follow-mouse tip",
   "remarks.text.0": "Remove the current or specified follow-mouse tip",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.tip": "Tip content. If passed in, the tip is only removed when the current tip matches the specified content"
 }

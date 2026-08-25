@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_sch_primitive_event';\n\n// 1. 注册图元事件监听，eventType 用 'all' 接收全部图元事件\neda.sch_Event.addPrimitiveEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    // 回调在画布图元变化时触发\n    console.log('primitiveEvent:', eventType, JSON.stringify(props?.primitiveIds));\n  },\n  false\n);\n\n// 2. 回读确认注册成功\nconst registered = eda.sch_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 3. 清理监听\nconst removed = eda.sch_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_sch_primitive_event';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_Event.addPrimitiveEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    console.log('primitiveEvent:', eventType, JSON.stringify(props?.primitiveIds));\n  },\n  false\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const registered = eda.sch_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.sch_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
         }
       ]
     }
@@ -23,6 +59,10 @@
   "_source": {
     "title": "新增图元事件监听",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 注册图元事件监听，eventType 用 'all' 接收全部图元事件",
+    "example.text.1": "回调在画布图元变化时触发",
+    "example.text.2": "2. 回读确认注册成功",
+    "example.text.3": "3. 清理监听",
     "params.id": "事件 ID，用以防止重复注册事件",
     "params.eventType": "事件类型",
     "params.callFn": "事件触发时的回调函数",
@@ -30,6 +70,10 @@
   },
   "title": "Add a primitive event listener",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Event ID, used to prevent duplicate event registration",
   "params.eventType": "Event type",
   "params.callFn": "The callback function triggered when the event fires",

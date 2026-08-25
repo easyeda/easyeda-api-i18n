@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试矩形\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\n\n// 2. 用图元 ID 选中矩形\nconst selected = await eda.sch_SelectControl.doSelectPrimitives([rectId]);\nconsole.log('selected:', selected);\n\n// 3. 确认矩形已在选中集里\nconst selectedIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中数量：', selectedIds.length);\nconsole.log('包含测试矩形：', selectedIds.includes(rectId));\n\n// 4. 清理：清除选中并删除测试图元\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selected = await eda.sch_SelectControl.doSelectPrimitives([rectId]);\nconsole.log('selected:', selected);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selectedIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中数量：', selectedIds.length);\nconsole.log('包含测试矩形：', selectedIds.includes(rectId));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "使用图元 ID 选中图元",
+    "example.text.0": "1. 创建测试矩形",
+    "example.text.1": "2. 用图元 ID 选中矩形",
+    "example.text.2": "3. 确认矩形已在选中集里",
+    "example.text.3": "4. 清理：清除选中并删除测试图元",
     "params.primitiveIds": "图元 ID",
     "returns": "操作是否成功"
   },
   "title": "Select primitives using primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Primitive ID",
   "returns": "Whether the operation is successful"
 }

@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 推送动态仿真的会话状态（SESSION_STATE：RUNNING/PAUSED/STOPPED 等）\neda.sch_SimulationEngine.pushData('SESSION_STATE', {\n  state: 'RUNNING',\n});\n\n// 2. 推送动态仿真的实时数据帧（STREAM_DATA：波形点/节点电压等内部量）\neda.sch_SimulationEngine.pushData('STREAM_DATA', {\n  time: 0.001,\n  signals: { VOUT: 3.3, ILOAD: 0.02 },\n});\n\n// 3. 推送 SPICE 仿真的仿真结果（SIMULATION_RESULT：分析类型 + 数据点）\neda.sch_SimulationEngine.pushData('SIMULATION_RESULT', {\n  analysis: 'tran',\n  points: [\n    { t: 0, v: 0 },\n    { t: 0.001, v: 3.3 },\n  ],\n});\n\nconsole.log('已向仿真内核推送 3 组数据：SESSION_STATE、STREAM_DATA、SIMULATION_RESULT');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SimulationEngine.pushData('SESSION_STATE', {\n  state: 'RUNNING',\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SimulationEngine.pushData('STREAM_DATA', {\n  time: 0.001,\n  signals: { VOUT: 3.3, ILOAD: 0.02 },\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SimulationEngine.pushData('SIMULATION_RESULT', {\n  analysis: 'tran',\n  points: [\n    { t: 0, v: 0 },\n    { t: 0.001, v: 3.3 },\n  ],\n});\n\nconsole.log('已向仿真内核推送 3 组数据：SESSION_STATE、STREAM_DATA、SIMULATION_RESULT');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "向仿真内核发送数据",
+    "example.text.0": "1. 推送动态仿真的会话状态（SESSION_STATE：RUNNING/PAUSED/STOPPED 等）",
+    "example.text.1": "2. 推送动态仿真的实时数据帧（STREAM_DATA：波形点/节点电压等内部量）",
+    "example.text.2": "3. 推送 SPICE 仿真的仿真结果（SIMULATION_RESULT：分析类型 + 数据点）",
     "params.eventType": "事件类型",
     "params.props": "数据"
   },
   "title": "Send data to the simulation kernel",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.eventType": "Event type",
   "params.props": "Data"
 }

@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试文本作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_查找目标', 0, '#FF0000');\nconst textId = text.getState_PrimitiveId();\n\n// 2. 获取当前原理图页的全部文本\nconst all = await eda.sch_PrimitiveText.getAll();\n\n// 3. 清理测试文本（查询类需要清理）\nawait eda.sch_PrimitiveText.delete([textId]);\n\nconsole.log('total texts:', all.length);\nconsole.log('marker text found:', all.some(t => t.getState_PrimitiveId() === textId));\nconsole.log('marker content:', all.find(t => t.getState_PrimitiveId() === textId).getState_Content());\nconsole.log('marker color:', all.find(t => t.getState_PrimitiveId() === textId).getState_TextColor());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_查找目标', 0, '#FF0000');\nconst textId = text.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const all = await eda.sch_PrimitiveText.getAll();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveText.delete([textId]);\n\nconsole.log('total texts:', all.length);\nconsole.log('marker text found:', all.some(t => t.getState_PrimitiveId() === textId));\nconsole.log('marker content:', all.find(t => t.getState_PrimitiveId() === textId).getState_Content());\nconsole.log('marker color:', all.find(t => t.getState_PrimitiveId() === textId).getState_TextColor());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有文本",
+    "example.text.0": "1. 创建一个测试文本作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取当前原理图页的全部文本",
+    "example.text.2": "3. 清理测试文本（查询类需要清理）",
     "returns": "文本图元对象数组"
   },
   "title": "Get all Text",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Array of Text primitive objects"
 }

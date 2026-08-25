@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试原理图并打开（保存作用于当前激活的原理图，openDocument 传图页级 UUID）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 保存当前原理图\nconst saved = await eda.sch_Document.save();\nconsole.log('saved:', saved);\n\n// 3. 清理测试原理图（删除前等 1.5s 让保存变更同步落地）\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const saved = await eda.sch_Document.save();\nconsole.log('saved:', saved);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "保存文档",
+    "example.text.0": "1. 创建测试原理图并打开（保存作用于当前激活的原理图，openDocument 传图页级 UUID）",
+    "example.text.1": "2. 保存当前原理图",
+    "example.text.2": "3. 清理测试原理图（删除前等 1.5s 让保存变更同步落地）",
     "returns": "保存操作是否成功，保存失败、上传失败等错误均返回 `false`"
   },
   "title": "Save Document",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the save operation was successful. Errors such as save failure and upload failure all return `false`"
 }

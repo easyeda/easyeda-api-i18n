@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前配置并保存为待改名的自定义配置（allowOverwrite=true 重复运行安全）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_待改配置', true);\n\n// 2. 静默清掉上次运行保留的目标名（首次运行时目标不存在，删除返回 false 属正常）\nawait eda.pcb_Drc.deleteRuleConfiguration('嘉立创示例_改名后配置');\n\n// 3. 重命名（保留现场供观察）\nconst result = await eda.pcb_Drc.renameRuleConfiguration('嘉立创示例_待改配置', '嘉立创示例_改名后配置');\n\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_待改配置', true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.deleteRuleConfiguration('嘉立创示例_改名后配置');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.renameRuleConfiguration('嘉立创示例_待改配置', '嘉立创示例_改名后配置');\n\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,12 +50,18 @@
   "_source": {
     "title": "重命名设计规则配置",
     "remarks.text.0": "只有自定义配置可以重命名，系统配置不允许重命名",
+    "example.text.0": "1. 读取当前配置并保存为待改名的自定义配置（allowOverwrite=true 重复运行安全）",
+    "example.text.1": "2. 静默清掉上次运行保留的目标名（首次运行时目标不存在，删除返回 false 属正常）",
+    "example.text.2": "3. 重命名（保留现场供观察）",
     "params.originalConfigurationName": "原设计规则配置名称",
     "params.configurationName": "新设计规则配置名称",
     "returns": "重命名是否成功"
   },
   "title": "Rename the design rule configuration",
   "remarks.text.0": "Only custom configurations can be renamed. System configurations cannot be renamed",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.originalConfigurationName": "Original design rule configuration name",
   "params.configurationName": "New design rule configuration name",
   "returns": "Whether the rename was successful"

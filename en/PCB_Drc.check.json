@@ -10,19 +10,41 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 详细模式：返回全部违规项（含描述），无违规则为空数组\nconst details = await eda.pcb_Drc.check(true, false, true);\nconsole.log('violationCount:', details.length);\ndetails.forEach((d, i) => {\n  console.log('[' + i + ']', typeof d === 'string' ? d : JSON.stringify(d));\n});\n\n// 2. 布尔模式：只返回是否全部通过\nconst passed = await eda.pcb_Drc.check(true, false, false);\nconsole.log('allPassed:', passed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const details = await eda.pcb_Drc.check(true, false, true);\nconsole.log('violationCount:', details.length);\ndetails.forEach((d, i) => {\n  console.log('[' + i + ']', typeof d === 'string' ? d : JSON.stringify(d));\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const passed = await eda.pcb_Drc.check(true, false, false);\nconsole.log('allPassed:', passed);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "检查 DRC",
+    "example.text.0": "1. 详细模式：返回全部违规项（含描述），无违规则为空数组",
+    "example.text.1": "2. 布尔模式：只返回是否全部通过",
     "params.strict": "是否严格检查，当前 PCB 统一为严格检查模式",
     "params.userInterface": "是否显示 UI（呼出底部 DRC 窗口）",
     "params.includeVerboseError": "是否在返回值中包含详细错误信息，如若为 `true`，则返回值将始终为数组",
     "returns": "DRC 检查是否通过"
   },
   "title": "Check DRC",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.strict": "Whether strict checking is enabled. The current PCB is uniformly in strict checking mode",
   "params.userInterface": "Whether to show the UI (open the bottom DRC window)",
   "params.includeVerboseError": "Whether to include detailed error information in the return value. If it is `true`, the return value will always be an array",

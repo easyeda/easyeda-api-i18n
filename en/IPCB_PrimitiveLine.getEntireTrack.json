@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条直线走线，终点落在 (7500, 7000)\nconst line = await eda.pcb_PrimitiveLine.create('', 1, 7000, 7000, 7500, 7000, 10);\n\n// 2. 创建一段圆弧，起点与直线终点重合，两段构成一整段导线\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 7500, 7000, 7800, 7300, 90, 10, 1, false);\n\n// 3. 只取导线内的直线和圆弧\nconst trackOnly = await line.getEntireTrack(false);\n\n// 4. 连两端过孔一起取（本例两端没有过孔，数量不变）\nconst trackWithVias = await line.getEntireTrack(true);\n\n// 5. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('track(false) count:', trackOnly.length);\ntrackOnly.forEach((p, i) => {\n  console.log(`track(false)[${i}] type:`, p.getState_PrimitiveType());\n});\nconsole.log('track(true) count:', trackWithVias.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = await eda.pcb_PrimitiveLine.create('', 1, 7000, 7000, 7500, 7000, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, 7500, 7000, 7800, 7300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const trackOnly = await line.getEntireTrack(false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const trackWithVias = await line.getEntireTrack(true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('track(false) count:', trackOnly.length);\ntrackOnly.forEach((p, i) => {\n  console.log(`track(false)[${i}] type:`, p.getState_PrimitiveType());\n});\nconsole.log('track(true) count:', trackWithVias.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取整段导线",
+    "example.text.0": "1. 创建一条直线走线，终点落在 (7500, 7000)",
+    "example.text.1": "2. 创建一段圆弧，起点与直线终点重合，两段构成一整段导线",
+    "example.text.2": "3. 只取导线内的直线和圆弧",
+    "example.text.3": "4. 连两端过孔一起取（本例两端没有过孔，数量不变）",
+    "example.text.4": "5. 清理测试图元（查询类案例不留测试对象）",
     "params.includeVias": "是否包含导线两端的过孔",
     "returns": "整段导线内的所有直线和圆弧线"
   },
   "title": "Get the entire wire",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.includeVias": "Whether to include the vias at both ends of the wire",
   "returns": "All lines and arc lines in the entire wire"
 }

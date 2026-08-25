@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断是否为在线模式（同步返回布尔值）\nconst isOnline = eda.sys_Environment.isOnlineMode();\n\n// 2. 输出判断结果（在线模式为 true）\nconsole.log('是否在线模式：', isOnline);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isOnline = eda.sys_Environment.isOnlineMode();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否在线模式：', isOnline);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否为在线模式",
+    "example.text.0": "1. 判断是否为在线模式（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（在线模式为 true）",
     "returns": "是否为在线模式"
   },
   "title": "Whether it is online mode",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is online mode"
 }

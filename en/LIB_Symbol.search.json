@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 尝试按关键字搜索（当前版本非空关键字会抛错，如实展示）\ntry {\n  const keywordResults = await eda.lib_Symbol.search('0402');\n  console.log('关键字搜索返回', keywordResults.length, '条');\n} catch (e) {\n  // 剥掉错误类型前缀；注意：正则写法尾部会产生星号+斜杠序列，会闭掉 tsdoc 注释，故用 split\n  console.log('关键字搜索当前版本抛错：', String(e.message).split('Error: ').pop());\n}\n\n// 2. 改用空关键字列出系统库符号，每页 5 条\nconst results = await eda.lib_Symbol.search('', undefined, [], undefined, 5, 1);\n\n// 3. 输出搜索结果（需要过滤时可按 item.name 自行筛选）\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "try {\n  const keywordResults = await eda.lib_Symbol.search('0402');\n  console.log('关键字搜索返回', keywordResults.length, '条');\n} catch (e) {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  console.log('关键字搜索当前版本抛错：', String(e.message).split('Error: ').pop());\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const results = await eda.lib_Symbol.search('', undefined, [], undefined, 5, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "搜索符号",
+    "example.text.0": "1. 尝试按关键字搜索（当前版本非空关键字会抛错，如实展示）",
+    "example.text.1": "剥掉错误类型前缀；注意：正则写法尾部会产生星号+斜杠序列，会闭掉 tsdoc 注释，故用 split",
+    "example.text.2": "2. 改用空关键字列出系统库符号，每页 5 条",
+    "example.text.3": "3. 输出搜索结果（需要过滤时可按 item.name 自行筛选）",
     "params.key": "搜索关键字",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.classification": "分类，默认为全部",
@@ -26,6 +66,10 @@
     "returns": "搜索到的符号属性列表"
   },
   "title": "Search symbol",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.key": "Search keyword",
   "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
   "params.classification": "Classification, defaults to all",

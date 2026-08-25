@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试矩形并选中它\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n\n// 2. 确认清除前有选中图元\nconst beforeIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除前选中数量：', beforeIds.length);\n\n// 3. 清除选中（同步方法，直接返回结果）\nconst cleared = eda.sch_SelectControl.clearSelected();\nconsole.log('cleared:', cleared);\n\n// 4. 确认选中集已清空\nconst afterIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除后选中数量：', afterIds.length);\n\n// 5. 清理测试图元\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除前选中数量：', beforeIds.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cleared = eda.sch_SelectControl.clearSelected();\nconsole.log('cleared:', cleared);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterIds = await eda.sch_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('清除后选中数量：', afterIds.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "清除选中",
+    "example.text.0": "1. 创建测试矩形并选中它",
+    "example.text.1": "2. 确认清除前有选中图元",
+    "example.text.2": "3. 清除选中（同步方法，直接返回结果）",
+    "example.text.3": "4. 确认选中集已清空",
+    "example.text.4": "5. 清理测试图元",
     "returns": "操作是否成功"
   },
   "title": "Clear the selection",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Whether the operation is successful"
 }

@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先制造一个可观察的自定义设置：向字体白名单加入演示字体\nawait eda.sys_FontManager.addFont('嘉立创示例_恢复默认演示字体');\nconst before = await eda.sys_FontManager.getFontsList();\nconsole.log('恢复前演示字体在列表中：', before.includes('嘉立创示例_恢复默认演示字体'));\n\n// 2. 全局恢复默认设置（异步操作，返回是否成功；所有自定义设置将被清除）\nconst ok = await eda.sys_Setting.restoreDefault();\nconsole.log('恢复默认设置返回：', ok);\n\n// 3. 复查演示字体是否已随设置一起被清除\nconst after = await eda.sys_FontManager.getFontsList();\nconsole.log('恢复后演示字体在列表中：', after.includes('嘉立创示例_恢复默认演示字体'));\n\n// 4. 兜底清理：若字体白名单不受本接口影响，手动移除演示字体，保证净零变更\nawait eda.sys_FontManager.deleteFont('嘉立创示例_恢复默认演示字体');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_FontManager.addFont('嘉立创示例_恢复默认演示字体');\nconst before = await eda.sys_FontManager.getFontsList();\nconsole.log('恢复前演示字体在列表中：', before.includes('嘉立创示例_恢复默认演示字体'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ok = await eda.sys_Setting.restoreDefault();\nconsole.log('恢复默认设置返回：', ok);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = await eda.sys_FontManager.getFontsList();\nconsole.log('恢复后演示字体在列表中：', after.includes('嘉立创示例_恢复默认演示字体'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_FontManager.deleteFont('嘉立创示例_恢复默认演示字体');\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "全局恢复默认设置",
     "remarks.text.0": "将所有 EDA 设置恢复到默认状态，本操作将会丢失所有设置项，在调用时请特别注意",
+    "example.text.0": "1. 先制造一个可观察的自定义设置：向字体白名单加入演示字体",
+    "example.text.1": "2. 全局恢复默认设置（异步操作，返回是否成功；所有自定义设置将被清除）",
+    "example.text.2": "3. 复查演示字体是否已随设置一起被清除",
+    "example.text.3": "4. 兜底清理：若字体白名单不受本接口影响，手动移除演示字体，保证净零变更",
     "returns": "操作是否成功"
   },
   "title": "Restore all default settings",
   "remarks.text.0": "Restores all EDA settings to their default state. This operation will lose all settings. Please pay special attention when calling it",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Whether the operation is successful"
 }

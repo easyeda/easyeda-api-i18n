@@ -10,19 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段顶层测试圆弧作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\nconst arcId = arc.getState_PrimitiveId();\n\n// 2. 获取全部圆弧的图元 ID\nconst allIds = await eda.pcb_PrimitiveArc.getAllPrimitiveId();\n\n// 3. 按层过滤：只取顶层（1）圆弧的图元 ID\nconst topLayerIds = await eda.pcb_PrimitiveArc.getAllPrimitiveId('', 1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveArc.delete([arcId]);\n\nconsole.log('total arc ids:', allIds.length);\nconsole.log('top layer arc ids:', topLayerIds.length);\nconsole.log('marker id in top layer list:', topLayerIds.includes(arcId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\nconst arcId = arc.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveArc.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const topLayerIds = await eda.pcb_PrimitiveArc.getAllPrimitiveId('', 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveArc.delete([arcId]);\n\nconsole.log('total arc ids:', allIds.length);\nconsole.log('top layer arc ids:', topLayerIds.length);\nconsole.log('marker id in top layer list:', topLayerIds.includes(arcId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有圆弧线的图元 ID",
+    "example.text.0": "1. 创建一段顶层测试圆弧作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部圆弧的图元 ID",
+    "example.text.2": "3. 按层过滤：只取顶层（1）圆弧的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.net": "网络名称",
     "params.layer": "层",
     "params.primitiveLock": "是否锁定",
     "returns": "圆弧线的图元 ID 数组"
   },
   "title": "Get all Arc line primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "params.layer": "Layer",
   "params.primitiveLock": "Whether it is locked",

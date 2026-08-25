@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个默认扩展（遵循规则）的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst plain = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst plainExpansion = plain.getState_SolderMaskExpansion();\n\n// 2. 异步模式下给第二个过孔自定义顶层阻焊扩展并提交\nconst customized = await eda.pcb_PrimitiveVia.create('', x + 500, 3000, 20, 40);\nconst a = customized.toAsync();\na.setState_SolderMaskExpansion({ topSolderMask: 4 });\nawait a.done();\n\n// 3. 从画布重新读取自定义扩展（未设置的底层项返回 null）\nconst customizedExpansion = customized.getState_SolderMaskExpansion();\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([plain.getState_PrimitiveId(), customized.getState_PrimitiveId()]);\n\nconsole.log('plainExpansion:', plainExpansion);\nconsole.log('customizedExpansion:', customizedExpansion);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst plain = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst plainExpansion = plain.getState_SolderMaskExpansion();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const customized = await eda.pcb_PrimitiveVia.create('', x + 500, 3000, 20, 40);\nconst a = customized.toAsync();\na.setState_SolderMaskExpansion({ topSolderMask: 4 });\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const customizedExpansion = customized.getState_SolderMaskExpansion();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([plain.getState_PrimitiveId(), customized.getState_PrimitiveId()]);\n\nconsole.log('plainExpansion:', plainExpansion);\nconsole.log('customizedExpansion:', customizedExpansion);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：阻焊/助焊扩展",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个默认扩展（遵循规则）的测试过孔",
+    "example.text.1": "2. 异步模式下给第二个过孔自定义顶层阻焊扩展并提交",
+    "example.text.2": "3. 从画布重新读取自定义扩展（未设置的底层项返回 null）",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "阻焊/助焊扩展"
   },
   "title": "Get the property state: solder mask / paste mask expansion",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Solder mask / paste mask expansion"
 }

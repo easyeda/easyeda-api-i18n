@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个红色文字的测试文本（第 5 参是文字颜色）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_警示', 0, '#FF0000');\n\n// 2. 读取文字颜色\nconst textColor = text.getState_TextColor();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('textColor:', textColor);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_警示', 0, '#FF0000');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const textColor = text.getState_TextColor();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('textColor:', textColor);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：文本颜色",
+    "example.text.0": "1. 创建一个红色文字的测试文本（第 5 参是文字颜色）",
+    "example.text.1": "2. 读取文字颜色",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "文本颜色"
   },
   "title": "Get the property state: text color",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Text color"
 }

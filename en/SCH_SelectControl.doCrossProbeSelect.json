@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建挂测试网络的导线，作为交叉选择的目标\nconst netName = '嘉立创示例_NET';\nconst wire = await eda.sch_PrimitiveWire.create([800, 300, 1200, 300], netName);\nconst wireId = wire.getState_PrimitiveId();\n\n// 2. 按网络名交叉选择（highlight=true 高亮，select=true 选中；同步方法直接返回结果）\nconst crossProbed = eda.sch_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n\n// 3. 交叉探针作用于原理图与 PCB 的联动定位，返回 true 表示已触发；\n//    需要选中当前文档图元时改用 doSelectPrimitives\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveWire.delete([wireId]);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const netName = '嘉立创示例_NET';\nconst wire = await eda.sch_PrimitiveWire.create([800, 300, 1200, 300], netName);\nconst wireId = wire.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const crossProbed = eda.sch_SelectControl.doCrossProbeSelect(undefined, undefined, [netName], true, true);\nconsole.log('crossProbed:', crossProbed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveWire.delete([wireId]);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "进行交叉选择",
+    "example.text.0": "1. 创建挂测试网络的导线，作为交叉选择的目标",
+    "example.text.1": "2. 按网络名交叉选择（highlight=true 高亮，select=true 选中；同步方法直接返回结果）",
+    "example.text.2": "3. 交叉探针作用于原理图与 PCB 的联动定位，返回 true 表示已触发；\n需要选中当前文档图元时改用 doSelectPrimitives",
     "params.components": "器件位号",
     "params.pins": "器件位号_引脚编号，格式为 ['U1_1', 'U1_2']",
     "params.nets": "网络名称",
@@ -25,6 +55,9 @@
     "returns": "操作是否成功"
   },
   "title": "Perform cross-probe selection",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.components": "Device designator",
   "params.pins": "Device designator _ pin number, format is ['U1_1', 'U1_2']",
   "params.nets": "Net name",

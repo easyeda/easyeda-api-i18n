@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_查异步', 5, 10, false);\n\n// 3. 查询异步状态（create 返回的即异步图元，修改需 toAsync + done）\nconst asyncMode = pour.isAsync();\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('isAsync:', asyncMode);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_查异步', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncMode = pour.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('isAsync:', asyncMode);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询图元是否为异步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个覆铜边框",
+    "example.text.2": "3. 查询异步状态（create 返回的即异步图元，修改需 toAsync + done）",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "returns": "是否为异步图元"
   },
   "title": "Query whether the primitive is an async primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Whether Is async primitive"
 }

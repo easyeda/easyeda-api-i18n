@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 限时提示：2000 毫秒后自动消失，无需手动清理\neda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示 2 秒后自动消失', 2000);\nconsole.log('限时鼠标提示已显示，2 秒后自动消失');\n\n// 2. 持续提示：不传时间参数则一直展示，直到被移除或被新提示覆盖\neda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示会一直跟随鼠标');\nconsole.log('持续鼠标提示已显示（新提示覆盖了上一条）');\n\n// 3. 持续提示必须手动收尾，避免遗留（自建自删，保证案例可重复运行）\nawait new Promise(r => setTimeout(r, 1000));\neda.sys_Message.removeFollowMouseTip();\nconsole.log('持续鼠标提示已手动移除');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示 2 秒后自动消失', 2000);\nconsole.log('限时鼠标提示已显示，2 秒后自动消失');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showFollowMouseTip('嘉立创示例_这条提示会一直跟随鼠标');\nconsole.log('持续鼠标提示已显示（新提示覆盖了上一条）');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\neda.sys_Message.removeFollowMouseTip();\nconsole.log('持续鼠标提示已手动移除');\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "展示跟随鼠标的提示",
     "remarks.text.0": "同一时间只能展示一条提示，如果展示新的提示，则之前的提示将被自动移除",
+    "example.text.0": "1. 限时提示：2000 毫秒后自动消失，无需手动清理",
+    "example.text.1": "2. 持续提示：不传时间参数则一直展示，直到被移除或被新提示覆盖",
+    "example.text.2": "3. 持续提示必须手动收尾，避免遗留（自建自删，保证案例可重复运行）",
     "params.tip": "提示内容",
     "params.msTimeout": "展示时间，以毫秒（ms）为单位，如若不传入则持续展示，直到调用 {@link SYS_Message.removeFollowMouseTip | removeFollowMouseTip} 或被其它提示覆盖"
   },
   "title": "Show the follow-mouse tip",
   "remarks.text.0": "Only one tip can be shown at a time. If a new tip is shown, the previous tip will be automatically removed",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.tip": "Tip content",
   "params.msTimeout": "Display duration in milliseconds (ms). If not passed in, the tip is displayed continuously until {@link SYS_Message.removeFollowMouseTip | removeFollowMouseTip} is called or it is covered by another tip"
 }

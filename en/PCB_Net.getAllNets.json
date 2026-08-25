@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可查询的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 一次性取回当前 PCB 的全部网络详情\nconst nets = await eda.pcb_Net.getAllNets();\n\n// 3. 查看示例网络的典型属性\nconst target = nets.find(n => n.net === '嘉立创示例_NET1');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('totalNetCount:', nets.length);\nconsole.log('targetNetName:', target?.net);\nconsole.log('targetNetColor:', target?.color);\nconsole.log('targetNetLength:', target?.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const nets = await eda.pcb_Net.getAllNets();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const target = nets.find(n => n.net === '嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('totalNetCount:', nets.length);\nconsole.log('targetNetName:', target?.net);\nconsole.log('targetNetColor:', target?.color);\nconsole.log('targetNetLength:', target?.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有网络的详细信息",
+    "example.text.0": "1. 创建带网络名的过孔，让 PCB 中出现可查询的网络",
+    "example.text.1": "2. 一次性取回当前 PCB 的全部网络详情",
+    "example.text.2": "3. 查看示例网络的典型属性",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "returns": "所有网络的详细信息"
   },
   "title": "Get all Detailed information of the net",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Detailed information of all nets"
 }

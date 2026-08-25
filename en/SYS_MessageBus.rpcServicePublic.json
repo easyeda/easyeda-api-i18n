@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在公共总线注册一个工程信息服务\neda.sys_MessageBus.rpcServicePublic('嘉立创示例_公共RPC服务', (message) => {\n  return '当前工程《示例工程》的' + message + '已就绪';\n});\n\n// 2. 用 rpcCallPublic 调用自己注册的公共服务（跨扩展调用同理）\nconst reply = await eda.sys_MessageBus.rpcCallPublic('嘉立创示例_公共RPC服务', '原理图数据');\nconsole.log('公共服务返回：', reply);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.rpcServicePublic('嘉立创示例_公共RPC服务', (message) => {\n  return '当前工程《示例工程》的' + message + '已就绪';\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const reply = await eda.sys_MessageBus.rpcCallPublic('嘉立创示例_公共RPC服务', '原理图数据');\nconsole.log('公共服务返回：', reply);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "公共消息总线：注册 RPC 服务",
+    "example.text.0": "1. 在公共总线注册一个工程信息服务",
+    "example.text.1": "2. 用 rpcCallPublic 调用自己注册的公共服务（跨扩展调用同理）",
     "params.topic": "主题",
     "params.callbackFn": "接收到消息后的回调"
   },
   "title": "Public message bus: register RPC service",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.topic": "Theme",
   "params.callbackFn": "Callback after receiving the message"
 }

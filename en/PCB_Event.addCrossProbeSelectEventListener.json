@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_cross_probe';\n\n// 1. 注册交叉选择事件监听（回调在用户执行交叉选中时触发，本例不依赖实际触发）\neda.pcb_Event.addCrossProbeSelectEventListener(listenerId, (props) => {\n  console.log('crossProbeSelect:', JSON.stringify(props));\n});\n\n// 2. 回读确认注册成功（同 id 重复注册会被防重机制忽略）\nconst registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 3. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_cross_probe';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.pcb_Event.addCrossProbeSelectEventListener(listenerId, (props) => {\n  console.log('crossProbeSelect:', JSON.stringify(props));\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "新增交叉选择事件监听",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 注册交叉选择事件监听（回调在用户执行交叉选中时触发，本例不依赖实际触发）",
+    "example.text.1": "2. 回读确认注册成功（同 id 重复注册会被防重机制忽略）",
+    "example.text.2": "3. 清理监听",
     "params.id": "事件 ID，用以防止重复注册事件",
     "params.callFn": "事件触发时的回调函数"
   },
   "title": "Add a cross-probe selection event listener",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.id": "Event ID, used to prevent duplicate event registration",
   "params.callFn": "The callback function triggered when the event fires"
 }

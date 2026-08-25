@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个挂 GND 网络的覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_读网络', 5, 10, false);\n\n// 3. 读取网络名称\nconst net = pour.getState_Net();\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_读网络', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const net = pour.getState_Net();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：网络名称",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个挂 GND 网络的覆铜边框",
+    "example.text.2": "3. 读取网络名称",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "returns": "网络名称"
   },
   "title": "Get the property state: net name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Net name"
 }

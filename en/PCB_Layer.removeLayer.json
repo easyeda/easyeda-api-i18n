@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 新增一个自定义层作为移除对象\nconst customLayerId = await eda.pcb_Layer.addCustomLayer();\n\n// 2. 移除该自定义层，返回操作是否成功\nconst removeResult = await eda.pcb_Layer.removeLayer(customLayerId);\n\n// 3. 确认该层已从图层列表消失\nconst rest = (await eda.pcb_Layer.getAllLayers()).filter(l => l.type === 'CUSTOM');\n\nconsole.log('removeResult:', removeResult);\nconsole.log('removedLayerId:', customLayerId);\nconsole.log('customLayerLeft:', rest.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const customLayerId = await eda.pcb_Layer.addCustomLayer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removeResult = await eda.pcb_Layer.removeLayer(customLayerId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rest = (await eda.pcb_Layer.getAllLayers()).filter(l => l.type === 'CUSTOM');\n\nconsole.log('removeResult:', removeResult);\nconsole.log('removedLayerId:', customLayerId);\nconsole.log('customLayerLeft:', rest.length);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "移除层",
     "remarks.text.0": "当前仅支持移除自定义层",
+    "example.text.0": "1. 新增一个自定义层作为移除对象",
+    "example.text.1": "2. 移除该自定义层，返回操作是否成功",
+    "example.text.2": "3. 确认该层已从图层列表消失",
     "params.layer": "层",
     "returns": "操作是否成功"
   },
   "title": "Remove Layer",
   "remarks.text.0": "Currently only custom layers can be removed",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.layer": "Layer",
   "returns": "Whether the operation is successful"
 }

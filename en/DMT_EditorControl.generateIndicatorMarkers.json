@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页，确定标记作用的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 生成一组标记：点 + 圆 + 矩形（原理图画布坐标单位 0.01inch）\nconst generated = await eda.dmt_EditorControl.generateIndicatorMarkers(\n  [\n    { type: 'point', x: 100, y: 100 },\n    { type: 'circle', x: 250, y: 150, r: 50 },\n    { type: 'rectangle', left: 350, right: 550, top: 100, bottom: 250 },\n  ],\n  { r: 255, g: 60, b: 60, alpha: 1 }, // 标记颜色\n  2,     // 线宽\n  false, // 不自动缩放定位到标记\n  tabId,\n);\nconsole.log('generated:', generated);\n\n// 3. 用完即清，保持画布干净\nconst removed = await eda.dmt_EditorControl.removeIndicatorMarkers(tabId);\nconsole.log('removed:', removed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const generated = await eda.dmt_EditorControl.generateIndicatorMarkers(\n  [\n    { type: 'point', x: 100, y: 100 },\n    { type: 'circle', x: 250, y: 150, r: 50 },\n    { type: 'rectangle', left: 350, right: 550, top: 100, bottom: 250 },\n  ],\n  { r: 255, g: 60, b: 60, alpha: 1 }, // 标记颜色\n  2,     // 线宽\n  false, // 不自动缩放定位到标记\n  tabId,\n);\nconsole.log('generated:', generated);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = await eda.dmt_EditorControl.removeIndicatorMarkers(tabId);\nconsole.log('removed:', removed);\n```"
         }
       ]
     }
@@ -23,6 +50,9 @@
   "_source": {
     "title": "生成指示标记",
     "remarks.text.0": "指示标记外形数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil",
+    "example.text.0": "1. 打开一个原理图页，确定标记作用的画布",
+    "example.text.1": "2. 生成一组标记：点 + 圆 + 矩形（原理图画布坐标单位 0.01inch）",
+    "example.text.2": "3. 用完即清，保持画布干净",
     "params.markers": "指示标记外形对象数组",
     "params.color": "指示标记颜色",
     "params.lineWidth": "线宽",
@@ -32,6 +62,9 @@
   },
   "title": "Generate indicator markers",
   "remarks.text.0": "In the indicator marker shape data, the coordinate unit span of the schematic and symbol canvases is 0.01inch, and that of the PCB and footprint canvases is mil",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.markers": "Array of indicator marker shape objects",
   "params.color": "Indicator marker color",
   "params.lineWidth": "Line width",

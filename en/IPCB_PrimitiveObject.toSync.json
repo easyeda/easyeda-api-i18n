@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.isAsync();\n\n// 2. 转换为同步图元（保留现场供观察）\nconst syncObj = obj.toSync();\nconst after = syncObj.isAsync();\n\n// 3. 同步图元直接读取属性，无需提交\nconsole.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncObj.getState_PrimitiveType());\nconsole.log('layer:', syncObj.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncObj = obj.toSync();\nconst after = syncObj.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncObj.getState_PrimitiveType());\nconsole.log('layer:', syncObj.getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个内嵌图片",
+    "example.text.1": "4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）",
+    "example.text.2": "2. 转换为同步图元（保留现场供观察）",
+    "example.text.3": "3. 同步图元直接读取属性，无需提交",
     "returns": "二进制内嵌对象图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Binary embedded object primitive object"
 }

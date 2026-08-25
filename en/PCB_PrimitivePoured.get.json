@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst ids = pouredList.slice(0, 2).map(p => p.getState_PrimitiveId());\n\n// 2. 传单个 ID 字符串，返回单个覆铜填充对象\nconst single = await eda.pcb_PrimitivePoured.get(ids[0]);\n\n// 3. 传 ID 数组，返回覆铜填充对象数组（未匹配到的 ID 不影响其它项返回）\nconst arr = await eda.pcb_PrimitivePoured.get(ids);\nconst partial = await eda.pcb_PrimitivePoured.get([ids[0], 'unknown-id']);\n\nconsole.log('single primitiveType:', single.getState_PrimitiveType());\nconsole.log('array length:', arr.length);\nconsole.log('含未匹配 ID 时返回数量：', partial.length);\nconsole.log('关联覆铜边框 ID：', single.getState_PourPrimitiveId());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst ids = pouredList.slice(0, 2).map(p => p.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.pcb_PrimitivePoured.get(ids[0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.pcb_PrimitivePoured.get(ids);\nconst partial = await eda.pcb_PrimitivePoured.get([ids[0], 'unknown-id']);\n\nconsole.log('single primitiveType:', single.getState_PrimitiveType());\nconsole.log('array length:', arr.length);\nconsole.log('含未匹配 ID 时返回数量：', partial.length);\nconsole.log('关联覆铜边框 ID：', single.getState_PourPrimitiveId());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取覆铜填充",
+    "example.text.0": "1. 获取画布上已有的覆铜填充图元",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个覆铜填充对象",
+    "example.text.2": "3. 传 ID 数组，返回覆铜填充对象数组（未匹配到的 ID 不影响其它项返回）",
     "params.primitiveIds": "覆铜填充的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "覆铜填充图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Copper fill",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.primitiveIds": "Copper fill primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Copper fill primitive object, `undefined` indicates that the retrieval failed"
 }

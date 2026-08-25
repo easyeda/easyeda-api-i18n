@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 准备 T/DISA 4001 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n//    选取用户文件，此处直接构造 File 对象演示调用）\nconst disaLib = new File(['占位内容，真实场景为 T/DISA 4001 库文件内容'], '嘉立创示例_旧版器件库.lib');\n\n// 2. 转换为多个嘉立创库文件（每个器件一个文件）\nconst libFiles = await eda.sys_FormatConversion.convertDisaLibrariesToEasyEDAMultiFiles(disaLib);\n\n// 3. 输出转换得到的库文件列表（空数组表示没有可转换的器件）\nconsole.log('转换得到库文件数：', libFiles.length);\nlibFiles.forEach((file, index) => {\n  console.log(`第 ${index + 1} 个文件：`, file.name);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const disaLib = new File(['占位内容，真实场景为 T/DISA 4001 库文件内容'], '嘉立创示例_旧版器件库.lib');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libFiles = await eda.sys_FormatConversion.convertDisaLibrariesToEasyEDAMultiFiles(disaLib);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('转换得到库文件数：', libFiles.length);\nlibFiles.forEach((file, index) => {\n  console.log(`第 ${index + 1} 个文件：`, file.name);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "转换 T/DISA 4001 库到多个嘉立创库文件（每个器件一个文件）",
+    "example.text.0": "1. 准备 T/DISA 4001 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n选取用户文件，此处直接构造 File 对象演示调用）",
+    "example.text.1": "2. 转换为多个嘉立创库文件（每个器件一个文件）",
+    "example.text.2": "3. 输出转换得到的库文件列表（空数组表示没有可转换的器件）",
     "params.file": "T/DISA 4001 库文件",
     "returns": "多个嘉立创库文件"
   },
   "title": "Convert T/DISA 4001 libraries to multiple EasyEDA library files (one file per device)",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.file": "T/DISA 4001 library file",
   "returns": "Multiple EasyEDA library files"
 }

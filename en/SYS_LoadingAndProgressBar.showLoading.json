@@ -15,15 +15,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 显示无进度加载覆盖（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.showLoading();\nconsole.log('加载覆盖已显示，编辑器被灰色覆盖锁定');\n\n// 2. 停留片刻便于观察，随后销毁覆盖还原界面（自建自删，保证案例可重复运行）\nawait new Promise(r => setTimeout(r, 1000));\neda.sys_LoadingAndProgressBar.destroyLoading();\nconsole.log('加载覆盖已销毁，编辑器恢复可操作');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_LoadingAndProgressBar.showLoading();\nconsole.log('加载覆盖已显示，编辑器被灰色覆盖锁定');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\neda.sys_LoadingAndProgressBar.destroyLoading();\nconsole.log('加载覆盖已销毁，编辑器恢复可操作');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "显示无进度加载覆盖",
-    "remarks.text.0": "没有进度指示，但会存在与进度条一致的灰色覆盖，阻止用户进一步操作"
+    "remarks.text.0": "没有进度指示，但会存在与进度条一致的灰色覆盖，阻止用户进一步操作",
+    "example.text.0": "1. 显示无进度加载覆盖（同步调用，无返回值）",
+    "example.text.1": "2. 停留片刻便于观察，随后销毁覆盖还原界面（自建自删，保证案例可重复运行）"
   },
   "title": "Show the no-progress loading overlay",
-  "remarks.text.0": "There is no progress indicator, but a gray overlay consistent with the progress bar will appear to prevent further user operations"
+  "remarks.text.0": "There is no progress indicator, but a gray overlay consistent with the progress bar will appear to prevent further user operations",
+  "example.text.0": null,
+  "example.text.1": null
 }

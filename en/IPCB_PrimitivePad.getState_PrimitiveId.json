@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 读取图元 ID\nconst primitiveId = pad.getState_PrimitiveId();\n\n// 3. 用 ID 从画布重新获取焊盘，验证句柄有效\nconst refetched = await eda.pcb_PrimitivePad.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetchSamePad:', refetched.getState_PrimitiveId() === primitiveId);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = pad.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitivePad.get(primitiveId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetchSamePad:', refetched.getState_PrimitiveId() === primitiveId);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个贴片焊盘",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 用 ID 从画布重新获取焊盘，验证句柄有效",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Primitive ID"
 }

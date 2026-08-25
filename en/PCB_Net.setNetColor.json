@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可操作的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 记录修改前的颜色\nconst before = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n\n// 3. 将网络设置为红色（修改类保留现场，便于在画布上观察效果）\nconst colorSet = await eda.pcb_Net.setNetColor('嘉立创示例_NET1', { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 4. 重新读取颜色，验证修改已生效\nconst after = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n\nconsole.log('colorSet:', colorSet);\nconsole.log('before:', before);\nconsole.log('after:', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const colorSet = await eda.pcb_Net.setNetColor('嘉立创示例_NET1', { r: 255, g: 0, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = await eda.pcb_Net.getNetColor('嘉立创示例_NET1');\n\nconsole.log('colorSet:', colorSet);\nconsole.log('before:', before);\nconsole.log('after:', after);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置指定网络的颜色",
+    "example.text.0": "1. 创建带网络名的过孔，让 PCB 中出现可操作的网络",
+    "example.text.1": "2. 记录修改前的颜色",
+    "example.text.2": "3. 将网络设置为红色（修改类保留现场，便于在画布上观察效果）",
+    "example.text.3": "4. 重新读取颜色，验证修改已生效",
     "params.net": "网络名称",
     "params.color": "网络颜色",
     "returns": "是否设置成功, `false` 为不存在该网络"
   },
   "title": "Set the color of the specified net",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "params.color": "Net color",
   "returns": "Whether Set Successful, `false` is does not exist this net"

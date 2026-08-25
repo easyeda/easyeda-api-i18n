@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 从系统库搜索可用的复用模块\nconst cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\n\n// 2. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 3. 创建复用模块符号（cbbUuid 传模块工程 UUID，符号 uuid 可省略由模块默认提供）\nconst symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  {\n    libraryUuid: cbb.libraryUuid,  // CBB 工程所在库的 UUID\n    cbbUuid: cbb.uuid              // CBB 工程的 UUID\n  },\n  x,      // 坐标 X\n  y,      // 坐标 Y\n  0,      // 旋转角度\n  false   // 是否镜像\n);\n\n// 4. 创建类保留现场，供在画布上观察模块符号\nconsole.log('primitiveId:', symbol.getState_PrimitiveId());\nconsole.log('primitiveType:', symbol.getState_PrimitiveType());\nconsole.log('position:', symbol.getState_X(), ',', symbol.getState_Y());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  {\n    libraryUuid: cbb.libraryUuid,  // CBB 工程所在库的 UUID\n    cbbUuid: cbb.uuid              // CBB 工程的 UUID\n  },\n  x,      // 坐标 X\n  y,      // 坐标 Y\n  0,      // 旋转角度\n  false   // 是否镜像\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', symbol.getState_PrimitiveId());\nconsole.log('primitiveType:', symbol.getState_PrimitiveType());\nconsole.log('position:', symbol.getState_X(), ',', symbol.getState_Y());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建复用模块符号",
+    "example.text.0": "1. 从系统库搜索可用的复用模块",
+    "example.text.1": "2. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 创建复用模块符号（cbbUuid 传模块工程 UUID，符号 uuid 可省略由模块默认提供）",
+    "example.text.3": "4. 创建类保留现场，供在画布上观察模块符号",
     "params.cbbSymbol": "关联库复用模块符号，`libraryUuid` 是 CBB 工程所在库的 UUID，`cbbUuid` 是 CBB 工程的 UUID，`uuid` 是 CBB 工程内符号的 UUID",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
@@ -25,6 +65,10 @@
     "returns": "复用模块符号图元对象"
   },
   "title": "Create Reuse block symbol",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.cbbSymbol": "Associated library reuse block symbol. `libraryUuid` is the UUID of the library where the CBB project is located, `cbbUuid` is the UUID of the CBB project, and `uuid` is the UUID of the symbol in the CBB project",
   "params.x": "X coordinate",
   "params.y": "Y coordinate",

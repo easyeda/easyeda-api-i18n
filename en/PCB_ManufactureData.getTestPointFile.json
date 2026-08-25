@@ -15,7 +15,16 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 保存测试点报告文件到本地\nconst testPointFile = await eda.pcb_ManufactureData.getTestPointFile('Test_Point_Report', 'xlsx');\nif (testPointFile) {\n    await eda.sys_FileSystem.saveFile(testPointFile);\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const testPointFile = await eda.pcb_ManufactureData.getTestPointFile('Test_Point_Report', 'xlsx');\nif (testPointFile) {\n    await eda.sys_FileSystem.saveFile(testPointFile);\n}\n```"
         }
       ]
     }
@@ -23,12 +32,14 @@
   "_source": {
     "title": "获取测试点报告文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "保存测试点报告文件到本地",
     "params.fileName": "文件名",
     "params.fileType": "文件类型",
     "returns": "测试点报告文件数据"
   },
   "title": "Get the test point report file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
   "params.fileName": "File name",
   "params.fileType": "File type",
   "returns": "Test point report file data"

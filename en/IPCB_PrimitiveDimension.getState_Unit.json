@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个默认单位（毫米）的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\n\n// 2. 读取显示单位（'mm' / 'cm' / 'inch' / 'mil'）\nconst unit = dim.getState_Unit();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('unit:', unit);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const unit = dim.getState_Unit();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('unit:', unit);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：单位",
+    "example.text.0": "1. 创建一个默认单位（毫米）的长度标注",
+    "example.text.1": "2. 读取显示单位（'mm' / 'cm' / 'inch' / 'mil'）",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "单位"
   },
   "title": "Get the property state: unit",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Unit"
 }

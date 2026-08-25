@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个网络标识作为查找目标（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst flag = await eda.sch_PrimitiveComponent.createNetFlag('Power', '嘉立创示例_VCC', x, y);\nconst flagId = flag.getState_PrimitiveId();\n\n// 2. 不传参数，取当前图页全部器件的图元 ID\nconst allIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId();\n\n// 3. 传入类型 'netflag' 只取网络标识的图元 ID\nconst flagIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId('netflag');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([flagId]);\n\nconsole.log('total ids:', allIds.length);\nconsole.log('netflag ids:', flagIds.length);\nconsole.log('marker flag found:', flagIds.includes(flagId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst flag = await eda.sch_PrimitiveComponent.createNetFlag('Power', '嘉立创示例_VCC', x, y);\nconst flagId = flag.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const flagIds = await eda.sch_PrimitiveComponent.getAllPrimitiveId('netflag');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([flagId]);\n\nconsole.log('total ids:', allIds.length);\nconsole.log('netflag ids:', flagIds.length);\nconsole.log('marker flag found:', flagIds.includes(flagId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有器件的图元 ID",
+    "example.text.0": "1. 创建一个网络标识作为查找目标（随机坐标避免重合，SCH 坐标单位 10mil）",
+    "example.text.1": "2. 不传参数，取当前图页全部器件的图元 ID",
+    "example.text.2": "3. 传入类型 'netflag' 只取网络标识的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.componentType": "器件类型",
     "params.allSchematicPages": "是否获取所有原理图图页的器件",
     "returns": "器件的图元 ID 数组"
   },
   "title": "Get all Device primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.componentType": "Device type",
   "params.allSchematicPages": "Whether to get the devices of all schematic sheets",
   "returns": "Array of Device primitive IDs"

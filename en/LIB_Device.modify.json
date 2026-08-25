@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID 并新建修改对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst deviceUuid = await eda.lib_Device.create(\n  libraryUuid,\n  '嘉立创示例_修改前_' + Date.now(),\n  [],\n  { symbolType: 2 },\n  '修改前的描述'\n);\n\n// 2. 修改名称和描述（分类保持不变传 []）\nconst newName = '嘉立创示例_修改后_' + Date.now();\nconst modified = await eda.lib_Device.modify(deviceUuid, libraryUuid, newName, [], '修改后的描述');\n\n// 3. 再补充修改扩展属性（位号、制造商）\nawait eda.lib_Device.modify(deviceUuid, libraryUuid, undefined, [], undefined, { designator: 'R', manufacturer: '嘉立创' });\n\n// 修改类保留现场\n\nconsole.log('deviceUuid:', deviceUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst deviceUuid = await eda.lib_Device.create(\n  libraryUuid,\n  '嘉立创示例_修改前_' + Date.now(),\n  [],\n  { symbolType: 2 },\n  '修改前的描述'\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_修改后_' + Date.now();\nconst modified = await eda.lib_Device.modify(deviceUuid, libraryUuid, newName, [], '修改后的描述');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.lib_Device.modify(deviceUuid, libraryUuid, undefined, [], undefined, { designator: 'R', manufacturer: '嘉立创' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('deviceUuid:', deviceUuid);\nconsole.log('modified:', modified);\nconsole.log('newName:', newName);\n```"
         }
       ]
     }
@@ -23,6 +59,10 @@
   "_source": {
     "title": "修改器件",
     "remarks.text.0": "如希望清除某些属性，则将其的值设置为 `null`",
+    "example.text.0": "1. 获取个人库 UUID 并新建修改对象",
+    "example.text.1": "2. 修改名称和描述（分类保持不变传 []）",
+    "example.text.2": "3. 再补充修改扩展属性（位号、制造商）",
+    "example.text.3": "修改类保留现场",
     "params.deviceUuid": "器件 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.deviceName": "器件名称",
@@ -34,6 +74,10 @@
   },
   "title": "Modify Device",
   "remarks.text.0": "If you want to clear certain properties, set their values to `null`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.deviceUuid": "Device UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.deviceName": "Device name",

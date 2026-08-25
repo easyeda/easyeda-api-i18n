@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前所有网络规则（数组）\nconst netRules = await eda.pcb_Drc.getNetRules();\n\n// 2. 整体写回（原样写回演示覆写成功，实际使用时可先增删改数组元素）\nconst result = await eda.pcb_Drc.overwriteNetRules(netRules);\n\nconsole.log('ruleCount:', netRules.length);\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const netRules = await eda.pcb_Drc.getNetRules();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.overwriteNetRules(netRules);\n\nconsole.log('ruleCount:', netRules.length);\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "覆写网络规则",
     "remarks.text.0": "将会覆写当前 PCB 的所有网络规则，请注意数据丢失风险",
+    "example.text.0": "1. 读取当前所有网络规则（数组）",
+    "example.text.1": "2. 整体写回（原样写回演示覆写成功，实际使用时可先增删改数组元素）",
     "params.netRules": "网络规则",
     "returns": "覆写是否成功"
   },
   "title": "Overwrite net rules",
   "remarks.text.0": "It will overwrite all net rules of the current PCB. Please note the risk of data loss",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.netRules": "Net rules",
   "returns": "Overwrite whether it is successful"
 }

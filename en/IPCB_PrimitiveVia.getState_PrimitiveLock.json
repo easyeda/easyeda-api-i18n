@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，分别放置未锁定和已锁定的两个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst normal = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40, 0, null, null, false);\nconst locked = await eda.pcb_PrimitiveVia.create('', x + 500, 3000, 20, 40, 0, null, null, true);\n\n// 2. 分别读取锁定状态\nconst normalLock = normal.getState_PrimitiveLock();\nconst lockedLock = locked.getState_PrimitiveLock();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([normal.getState_PrimitiveId(), locked.getState_PrimitiveId()]);\n\nconsole.log('normalLock:', normalLock);\nconsole.log('lockedLock:', lockedLock);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst normal = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40, 0, null, null, false);\nconst locked = await eda.pcb_PrimitiveVia.create('', x + 500, 3000, 20, 40, 0, null, null, true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const normalLock = normal.getState_PrimitiveLock();\nconst lockedLock = locked.getState_PrimitiveLock();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([normal.getState_PrimitiveId(), locked.getState_PrimitiveId()]);\n\nconsole.log('normalLock:', normalLock);\nconsole.log('lockedLock:', lockedLock);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：是否锁定",
+    "example.text.0": "1. 生成本次运行专用的坐标，分别放置未锁定和已锁定的两个测试过孔",
+    "example.text.1": "2. 分别读取锁定状态",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "是否锁定"
   },
   "title": "Get the property state: whether it is locked",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether it is locked"
 }

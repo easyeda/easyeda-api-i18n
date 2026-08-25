@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 取出器件的属性图元，定位 Designator（编号）属性\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取文本对齐模式\nconst alignMode = designator.getState_AlignMode();\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('alignMode:', alignMode);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const alignMode = designator.getState_AlignMode();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('alignMode:', alignMode);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：对齐模式",
+    "example.text.0": "1. 放置一个测试器件（属性图元随器件生成，无法单独创建）",
+    "example.text.1": "2. 取出器件的属性图元，定位 Designator（编号）属性",
+    "example.text.2": "3. 读取文本对齐模式",
+    "example.text.3": "4. 清理测试器件（属性图元随器件一起删除）",
     "returns": "对齐模式"
   },
   "title": "Get the property state: alignment mode",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Alignment mode"
 }

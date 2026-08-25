@@ -15,7 +15,26 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 把当前图页导出为 PDF（'PDF' 对应 ESCH_ExportDocumentFileType.PDF）\n// const pdfFile = await eda.sch_ManufactureData.getExportDocumentFile(\n//     '嘉立创示例_原理图',\n//     'PDF',\n//     undefined,\n//     'Current Schematic Page'\n// );\n// console.log('导出文件名：', pdfFile?.name);\n\n// 2. 也可以导出 PNG 位图，并通过类型特定参数控制主题和线宽\n// const pngFile = await eda.sch_ManufactureData.getExportDocumentFile(\n//     '嘉立创示例_原理图',\n//     'PNG',\n//     { theme: 'Black on White', lineWidth: 'Always 1px' },\n//     'All Schematic',\n//     { outputMethod: 'Separated sheet' }  // 多图页时逐页分张输出\n// );\n// console.log('导出文件名：', pngFile?.name);\n\n// 3. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地\nconsole.log('演示调用：getExportDocumentFile(文件名, 文件类型, 显示参数, 导出范围, 多页参数)');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('演示调用：getExportDocumentFile(文件名, 文件类型, 显示参数, 导出范围, 多页参数)');\n```"
         }
       ]
     },
@@ -30,6 +49,9 @@
   "_source": {
     "title": "获取导出文档文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "1. 把当前图页导出为 PDF（'PDF' 对应 ESCH_ExportDocumentFileType.PDF）\nconst pdfFile = await eda.sch_ManufactureData.getExportDocumentFile(\n'嘉立创示例_原理图',\n'PDF',\nundefined,\n'Current Schematic Page'\n);\nconsole.log('导出文件名：', pdfFile?.name);",
+    "example.text.1": "2. 也可以导出 PNG 位图，并通过类型特定参数控制主题和线宽\nconst pngFile = await eda.sch_ManufactureData.getExportDocumentFile(\n'嘉立创示例_原理图',\n'PNG',\n{ theme: 'Black on White', lineWidth: 'Always 1px' },\n'All Schematic',\n{ outputMethod: 'Separated sheet' }  // 多图页时逐页分张输出\n);\nconsole.log('导出文件名：', pngFile?.name);",
+    "example.text.2": "3. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地",
     "params.fileName": "文件名",
     "params.fileType": "文件类型",
     "params.typeSpecificParams": "类型特定参数",
@@ -40,6 +62,9 @@
   },
   "title": "Get Export document file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.fileName": "File name",
   "params.fileType": "File type",
   "params.typeSpecificParams": "Type-specific parameters",

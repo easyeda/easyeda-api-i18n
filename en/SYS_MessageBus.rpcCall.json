@@ -10,19 +10,41 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 注册一个 DRC 检查服务（message 是单个参数，用对象打包请求字段）\neda.sys_MessageBus.rpcService('嘉立创示例_RPC调用', (message) => {\n  return '检查完成：' + message.rule + '，发现 ' + message.count + ' 处问题';\n});\n\n// 2. 发起 RPC 调用，await 直接拿到服务返回值\nconst reply = await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC调用', {\n  rule: '间距约束',\n  count: 2,\n});\nconsole.log('服务返回：', reply);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.rpcService('嘉立创示例_RPC调用', (message) => {\n  return '检查完成：' + message.rule + '，发现 ' + message.count + ' 处问题';\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const reply = await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC调用', {\n  rule: '间距约束',\n  count: 2,\n});\nconsole.log('服务返回：', reply);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "私有消息总线：调用 RPC 服务",
+    "example.text.0": "1. 注册一个 DRC 检查服务（message 是单个参数，用对象打包请求字段）",
+    "example.text.1": "2. 发起 RPC 调用，await 直接拿到服务返回值",
     "params.topic": "主题",
     "params.message": "消息",
     "params.timeout": "超时",
     "returns": "RPC 服务返回"
   },
   "title": "Private message bus: call RPC service",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.topic": "Theme",
   "params.message": "Message",
   "params.timeout": "Timeout",

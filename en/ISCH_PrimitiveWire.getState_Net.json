@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条属于 SIG_A 网络的测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000], 'SIG_A');\n\n// 2. 读取网络名称\nconst net = wire.getState_Net();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000], 'SIG_A');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const net = wire.getState_Net();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('net:', net);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：网络名称",
+    "example.text.0": "1. 创建一条属于 SIG_A 网络的测试导线（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取网络名称",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "网络名称"
   },
   "title": "Get the property state: net name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Net name"
 }

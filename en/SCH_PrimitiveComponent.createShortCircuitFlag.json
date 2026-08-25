@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建短接标识（无网络名参数，仅位置与姿态）\nconst flag = await eda.sch_PrimitiveComponent.createShortCircuitFlag(\n  x,      // 坐标 X\n  y,      // 坐标 Y\n  0,      // 旋转角度\n  false   // 是否镜像\n);\n\n// 3. 创建类保留现场，供在画布上观察标识样式\nconsole.log('primitiveId:', flag.getState_PrimitiveId());\nconsole.log('componentType:', flag.getState_ComponentType());\nconsole.log('position:', flag.getState_X(), ',', flag.getState_Y());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const flag = await eda.sch_PrimitiveComponent.createShortCircuitFlag(\n  x,      // 坐标 X\n  y,      // 坐标 Y\n  0,      // 旋转角度\n  false   // 是否镜像\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', flag.getState_PrimitiveId());\nconsole.log('componentType:', flag.getState_ComponentType());\nconsole.log('position:', flag.getState_X(), ',', flag.getState_Y());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建短接标识",
+    "example.text.0": "1. 随机坐标避免与画布已有图元重合（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 创建短接标识（无网络名参数，仅位置与姿态）",
+    "example.text.2": "3. 创建类保留现场，供在画布上观察标识样式",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
     "params.rotation": "旋转角度",
@@ -24,6 +54,9 @@
     "returns": "器件图元对象"
   },
   "title": "Create a short circuit flag",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.x": "X coordinate",
   "params.y": "Y coordinate",
   "params.rotation": "Rotation angle",

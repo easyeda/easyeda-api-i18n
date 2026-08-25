@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 基本换算：1000 mil = 1 英寸（同步返回数值，无需 await）\nconsole.log('1000 mil =', eda.sys_Unit.milToInch(1000), '英寸');\n\n// 2. 常用线宽换算：6 mil 与 10 mil\nconsole.log('6 mil =', eda.sys_Unit.milToInch(6), '英寸');\nconsole.log('10 mil =', eda.sys_Unit.milToInch(10), '英寸');\n\n// 3. 指定保留 6 位小数（默认 4 位，小尺寸需要更多位才不损失精度）\nconsole.log('6 mil 保留 6 位小数 =', eda.sys_Unit.milToInch(6, 6), '英寸');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('1000 mil =', eda.sys_Unit.milToInch(1000), '英寸');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('6 mil =', eda.sys_Unit.milToInch(6), '英寸');\nconsole.log('10 mil =', eda.sys_Unit.milToInch(10), '英寸');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('6 mil 保留 6 位小数 =', eda.sys_Unit.milToInch(6, 6), '英寸');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "单位转换：密尔到英寸",
+    "example.text.0": "1. 基本换算：1000 mil = 1 英寸（同步返回数值，无需 await）",
+    "example.text.1": "2. 常用线宽换算：6 mil 与 10 mil",
+    "example.text.2": "3. 指定保留 6 位小数（默认 4 位，小尺寸需要更多位才不损失精度）",
     "params.mil": "输入密尔数",
     "params.numberOfDecimals": "保留小数位数，默认为 `4`",
     "returns": "输出英寸数"
   },
   "title": "Unit conversion: mils to inches",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.mil": "Input value in mils",
   "params.numberOfDecimals": "Number of decimal places to keep, default is `4`",
   "returns": "Output value in inches"

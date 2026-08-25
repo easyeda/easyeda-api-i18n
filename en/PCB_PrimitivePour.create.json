@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的覆铜边框重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 用 pcb_MathPolygon.createPolygon 构造覆铜轮廓：500×300 的矩形区域\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\n\n// 3. 在顶层铜层创建覆铜边框：挂 GND 网络、实心填充、不保留孤岛、优先级 5、线宽 10mil、不锁定\n//    注意：net 不能传空字符串（会报参数不正确），需传已有网络名\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_覆铜', 5, 10, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', pour.getState_PrimitiveId());\nconsole.log('primitiveType:', pour.getState_PrimitiveType());\nconsole.log('pourName:', pour.getState_PourName());\nconsole.log('pourFillMethod:', pour.getState_PourFillMethod());\nconsole.log('pourPriority:', pour.getState_PourPriority());\nconsole.log('layer:', pour.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_覆铜', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', pour.getState_PrimitiveId());\nconsole.log('primitiveType:', pour.getState_PrimitiveType());\nconsole.log('pourName:', pour.getState_PourName());\nconsole.log('pourFillMethod:', pour.getState_PourFillMethod());\nconsole.log('pourPriority:', pour.getState_PourPriority());\nconsole.log('layer:', pour.getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建覆铜边框",
+    "example.text.0": "1. 生成随机起点坐标，避免与画布上已有的覆铜边框重合",
+    "example.text.1": "2. 用 pcb_MathPolygon.createPolygon 构造覆铜轮廓：500×300 的矩形区域",
+    "example.text.2": "3. 在顶层铜层创建覆铜边框：挂 GND 网络、实心填充、不保留孤岛、优先级 5、线宽 10mil、不锁定\n注意：net 不能传空字符串（会报参数不正确），需传已有网络名",
+    "example.text.3": "4. 创建类保留现场，不删除图元",
     "params.net": "网络名称",
     "params.layer": "层",
     "params.complexPolygon": "复杂多边形对象",
@@ -29,6 +69,10 @@
     "returns": "覆铜边框图元对象"
   },
   "title": "Create Copper border",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "params.layer": "Layer",
   "params.complexPolygon": "Complex polygon object",

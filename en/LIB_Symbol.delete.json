@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, '嘉立创示例_待删除符号_' + Date.now(), []);\n\n// 2. 删除该符号\nconst deleted = await eda.lib_Symbol.delete(symbolUuid, libraryUuid);\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, '嘉立创示例_待删除符号_' + Date.now(), []);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.lib_Symbol.delete(symbolUuid, libraryUuid);\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除符号",
+    "example.text.0": "1. 获取个人库 UUID 并新建删除对象",
+    "example.text.1": "2. 删除该符号",
     "params.symbolUuid": "符号 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "操作是否成功"
   },
   "title": "Delete Symbol",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.symbolUuid": "Symbol UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "returns": "Whether the operation is successful"

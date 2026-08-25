@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段红色测试圆弧（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, '#FF0000', null, 6, 1);\n\n// 2. 读取圆弧颜色\nconst color = arc.getState_Color();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, '#FF0000', null, 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const color = arc.getState_Color();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：颜色",
+    "example.text.0": "1. 创建一段红色测试圆弧（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取圆弧颜色",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "颜色"
   },
   "title": "Get the property state: color",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Color"
 }

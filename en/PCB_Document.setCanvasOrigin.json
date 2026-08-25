@@ -27,7 +27,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开（原点设置作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 设置画布原点偏移为 (50, 100)\nconst set = await eda.pcb_Document.setCanvasOrigin(50, 100);\nconsole.log('set:', set);\n\n// 3. 读回偏移验证已生效\nconst origin = await eda.pcb_Document.getCanvasOrigin();\nconsole.log('origin:', JSON.stringify(origin));\n\n// 4. 清理测试 PCB（偏移随文档一起删除）\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const set = await eda.pcb_Document.setCanvasOrigin(50, 100);\nconsole.log('set:', set);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const origin = await eda.pcb_Document.getCanvasOrigin();\nconsole.log('origin:', JSON.stringify(origin));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
@@ -38,6 +74,10 @@
     "remarks.text.1": "嘉立创 EDA 专业版 API 使用的均为数据原点；",
     "remarks.text.2": "如果希望在 API 操作时前端画布坐标能与数据一致，\n建议调用本方法并设置偏移量为零，\n即 `setCanvasOrigin(0, 0)`；",
     "remarks.text.3": "此处的单位为数据层面单位，在跨度上等同于画布层面的 mil",
+    "example.text.0": "1. 创建测试 PCB 并打开（原点设置作用于当前激活的 PCB）",
+    "example.text.1": "2. 设置画布原点偏移为 (50, 100)",
+    "example.text.2": "3. 读回偏移验证已生效",
+    "example.text.3": "4. 清理测试 PCB（偏移随文档一起删除）",
     "params.offsetX": "画布原点相对于数据原点的 X 坐标偏移",
     "params.offsetY": "画布原点相对于数据原点的 Y 坐标偏移",
     "returns": "操作是否成功"
@@ -47,6 +87,10 @@
   "remarks.text.1": "The EasyEDA Pro API uses the data origin;",
   "remarks.text.2": "If you want the front-end canvas coordinate to be consistent with the data during API operations,\nit is recommended to call this method and set the offset to zero,\ni.e. `setCanvasOrigin(0, 0)`;",
   "remarks.text.3": "The units here are data-level units, which are equivalent to mil on the canvas level in span",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.offsetX": "X coordinate offset of the canvas origin relative to the data origin",
   "params.offsetY": "Y coordinate offset of the canvas origin relative to the data origin",
   "returns": "Whether the operation is successful"

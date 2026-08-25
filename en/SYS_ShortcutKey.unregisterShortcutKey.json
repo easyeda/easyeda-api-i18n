@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先注册一个演示快捷键作为操作对象\nawait eda.sys_ShortcutKey.registerShortcutKey(\n  ['CONTROL', 'ALT', 'F9'],\n  '嘉立创示例_待移除快捷键',\n  () => {}\n);\n\n// 2. 反注册：故意打乱键序传入，验证不区分排列顺序的匹配规则\nconst ok = await eda.sys_ShortcutKey.unregisterShortcutKey(['F9', 'ALT', 'CONTROL']);\nconsole.log('反注册返回：', ok);\n\n// 3. 复查快捷键列表，确认演示键位已被移除\nconst list = await eda.sys_ShortcutKey.getShortcutKeys();\nconst still = list.some(item => item.title === '嘉立创示例_待移除快捷键');\nconsole.log('反注册后仍在列表中：', still);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_ShortcutKey.registerShortcutKey(\n  ['CONTROL', 'ALT', 'F9'],\n  '嘉立创示例_待移除快捷键',\n  () => {}\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ok = await eda.sys_ShortcutKey.unregisterShortcutKey(['F9', 'ALT', 'CONTROL']);\nconsole.log('反注册返回：', ok);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const list = await eda.sys_ShortcutKey.getShortcutKeys();\nconst still = list.some(item => item.title === '嘉立创示例_待移除快捷键');\nconsole.log('反注册后仍在列表中：', still);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "反注册快捷键",
+    "example.text.0": "1. 先注册一个演示快捷键作为操作对象",
+    "example.text.1": "2. 反注册：故意打乱键序传入，验证不区分排列顺序的匹配规则",
+    "example.text.2": "3. 复查快捷键列表，确认演示键位已被移除",
     "params.shortcutKey": "快捷键，不区分传入的排列顺序，将自动排序并查询匹配的快捷键",
     "returns": "反注册操作是否成功",
     "deprecated": "since EDA v4.2"
   },
   "title": "Unregister a shortcut key",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.shortcutKey": "Shortcut key. The order of the passed-in elements is not distinguished; it will be sorted automatically and the matching shortcut key will be queried",
   "returns": "Whether the unregistration operation was successful",
   "deprecated": "since EDA v4.2"

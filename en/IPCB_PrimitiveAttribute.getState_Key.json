@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 取出器件的全部属性图元\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\n\n// 3. 读取每个属性的 Key（属性名）\nconst keys = attrs.map(a => a.getState_Key());\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('keys:', keys.join(', '));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const keys = attrs.map(a => a.getState_Key());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('keys:', keys.join(', '));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：Key",
+    "example.text.0": "1. 放置一个测试器件（属性图元随器件生成，无法单独创建）",
+    "example.text.1": "2. 取出器件的全部属性图元",
+    "example.text.2": "3. 读取每个属性的 Key（属性名）",
+    "example.text.3": "4. 清理测试器件（属性图元随器件一起删除）",
     "returns": "Key"
   },
   "title": "Get the property state: Key",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Key"
 }

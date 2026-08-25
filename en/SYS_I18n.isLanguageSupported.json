@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 检查受支持的语言代码\nconsole.log('en 是否受支持：', eda.sys_I18n.isLanguageSupported('en'));\nconsole.log('zh-Hans 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-Hans'));\n\n// 2. 检查不受支持的写法（zh-CN 不是 EDA 的语言代码风格）\nconsole.log('zh-CN 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-CN'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('en 是否受支持：', eda.sys_I18n.isLanguageSupported('en'));\nconsole.log('zh-Hans 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-Hans'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('zh-CN 是否受支持：', eda.sys_I18n.isLanguageSupported('zh-CN'));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "检查语言是否受支持",
+    "example.text.0": "1. 检查受支持的语言代码",
+    "example.text.1": "2. 检查不受支持的写法（zh-CN 不是 EDA 的语言代码风格）",
     "params.language": "语言",
     "returns": "是否受支持"
   },
   "title": "Check whether the language is supported",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.language": "Language",
   "returns": "Whether it is supported"
 }

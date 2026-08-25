@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取当前主题（异步方法，需要 await）\nconst theme = await eda.sys_Window.getCurrentTheme();\n\n// 2. 展示结果\nconsole.log('当前主题：', theme === 'light' ? '浅色（light）' : '深色（dark）');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const theme = await eda.sys_Window.getCurrentTheme();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('当前主题：', theme === 'light' ? '浅色（light）' : '深色（dark）');\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取当前主题",
     "remarks.text.0": "获取当前 EDA 主题，**浅色** 或 **深色**",
+    "example.text.0": "1. 获取当前主题（异步方法，需要 await）",
+    "example.text.1": "2. 展示结果",
     "returns": "当前主题"
   },
   "title": "Get Current theme",
   "remarks.text.0": "Get the current EDA theme, **light** or **dark**",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Current theme"
 }

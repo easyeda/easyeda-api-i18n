@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 查询底部面板当前锁定状态（异步方法，需要 await）\nconst locked = await eda.sys_PanelControl.isBottomPanelLocked();\n\n// 2. 输出查询结果（true 表示已锁定，false 表示未锁定）\nconsole.log('底部面板锁定状态：', locked);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const locked = await eda.sys_PanelControl.isBottomPanelLocked();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('底部面板锁定状态：', locked);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询底部面板是否已锁定",
+    "example.text.0": "1. 查询底部面板当前锁定状态（异步方法，需要 await）",
+    "example.text.1": "2. 输出查询结果（true 表示已锁定，false 表示未锁定）",
     "returns": "是否已锁定"
   },
   "title": "Query whether the bottom panel is locked",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether Already lock"
 }

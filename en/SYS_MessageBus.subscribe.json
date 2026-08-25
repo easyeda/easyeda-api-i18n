@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 持久订阅主题\nconst received = [];\nconst task = eda.sys_MessageBus.subscribe('嘉立创示例_订阅', (message) => {\n  received.push(message);\n});\n\n// 2. 连续发布多条消息，每条都能收到\neda.sys_MessageBus.publish('嘉立创示例_订阅', '第一条');\neda.sys_MessageBus.publish('嘉立创示例_订阅', '第二条');\nconsole.log('已收到：', received.join('、'));\n\n// 3. cancel 之后不再接收\ntask.cancel();\neda.sys_MessageBus.publish('嘉立创示例_订阅', '取消后的消息');\nconsole.log('cancel 后仍停留在：', received.join('、'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const received = [];\nconst task = eda.sys_MessageBus.subscribe('嘉立创示例_订阅', (message) => {\n  received.push(message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.publish('嘉立创示例_订阅', '第一条');\neda.sys_MessageBus.publish('嘉立创示例_订阅', '第二条');\nconsole.log('已收到：', received.join('、'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "task.cancel();\neda.sys_MessageBus.publish('嘉立创示例_订阅', '取消后的消息');\nconsole.log('cancel 后仍停留在：', received.join('、'));\n```"
         }
       ]
     }
@@ -23,12 +50,18 @@
   "_source": {
     "title": "私有消息总线：订阅消息",
     "remarks.text.0": "持久性订阅消息",
+    "example.text.0": "1. 持久订阅主题",
+    "example.text.1": "2. 连续发布多条消息，每条都能收到",
+    "example.text.2": "3. cancel 之后不再接收",
     "params.topic": "主题",
     "params.callbackFn": "接收到消息后的回调",
     "returns": "消息总线任务"
   },
   "title": "Private message bus: subscribe to a message",
   "remarks.text.0": "Persistent subscription message",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.callbackFn": "Callback after receiving the message",
   "returns": "Message bus task"

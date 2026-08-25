@@ -19,7 +19,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先导入一份多语言数据作为取文本的数据源\neda.sys_I18n.importMultilingualNamespace('嘉立创示例_取文本', {\n  'zh-Hans': { '示例_问候': '你好，${1}！今天是${2}' },\n  en: { '示例_问候': 'Hello, ${1}! Today is ${2}' },\n});\n\n// 2. 指定语言取文案，占位符按参数顺序替换\nconst greeting = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', 'en', 'Tom', 'Monday');\n\n// 3. 不传语言则用 EDA 当前显示语言；缺参的占位符原样保留\nconst current = await eda.sys_I18n.getCurrentLanguage();\nconst localized = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', undefined, '嘉立创');\n\n// 4. 标签不存在时回退为标签本身\nconst missing = eda.sys_I18n.text('示例_不存在的标签', '嘉立创示例_取文本');\n\nconsole.log('当前语言：', current);\nconsole.log('英文文案：', greeting);\nconsole.log('当前语言文案：', localized);\nconsole.log('缺失标签回退：', missing);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_I18n.importMultilingualNamespace('嘉立创示例_取文本', {\n  'zh-Hans': { '示例_问候': '你好，${1}！今天是${2}' },\n  en: { '示例_问候': 'Hello, ${1}! Today is ${2}' },\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const greeting = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', 'en', 'Tom', 'Monday');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.sys_I18n.getCurrentLanguage();\nconst localized = eda.sys_I18n.text('示例_问候', '嘉立创示例_取文本', undefined, '嘉立创');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const missing = eda.sys_I18n.text('示例_不存在的标签', '嘉立创示例_取文本');\n\nconsole.log('当前语言：', current);\nconsole.log('英文文案：', greeting);\nconsole.log('当前语言文案：', localized);\nconsole.log('缺失标签回退：', missing);\n```"
         }
       ]
     }
@@ -28,6 +64,10 @@
     "title": "输出语言文本",
     "remarks.text.0": "可以使用 `${1}` 格式的占位符表示参数；",
     "remarks.text.1": "语言优先级：当前显示语言 \\> 系统默认语言 \\> 数据集中第一个搜索到的包含该文本标签的语言 \\> 文本标签(tag)",
+    "example.text.0": "1. 先导入一份多语言数据作为取文本的数据源",
+    "example.text.1": "2. 指定语言取文案，占位符按参数顺序替换",
+    "example.text.2": "3. 不传语言则用 EDA 当前显示语言；缺参的占位符原样保留",
+    "example.text.3": "4. 标签不存在时回退为标签本身",
     "params.tag": "文本标签，对应多语言文件键值对中的键",
     "params.namespace": "文本命名空间，在扩展运行环境内默认为扩展的 UUID，否则为系统默认命名空间",
     "params.language": "语言，`undefined` 为 EDA 当前的显示语言",
@@ -37,6 +77,10 @@
   "title": "Output language text",
   "remarks.text.0": "Placeholders in the `${1}` format can be used to represent parameters;",
   "remarks.text.1": "Language priority: current display language > system default language > the first language in the data set that contains the text tag > the text tag",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.tag": "Text tag, corresponding to the key in the multilingual file key-value pairs",
   "params.namespace": "Text namespace. In the extension runtime environment, it defaults to the extension UUID; otherwise, it is the system default namespace",
   "params.language": "Language. `undefined` is the current display language of EDA",

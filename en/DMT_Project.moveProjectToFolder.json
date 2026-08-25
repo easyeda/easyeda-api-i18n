@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 记录当前工程的位置，作为移动后恢复的锚点\nconst info = await eda.dmt_Project.getCurrentProjectInfo();\nconst projectUuid = info.uuid;\nconst teamUuid = info.teamUuid;\nconst originalFolderUuid = info.folderUuid; // 可能为 undefined（团队根目录）\n\n// 2. 创建目标文件夹，等待 1.5s 让工作区同步\nconst targetFolderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_目标文件夹', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 把当前工程移到目标文件夹下\nconst moved = await eda.dmt_Project.moveProjectToFolder(projectUuid, targetFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 4. 回读验证工程已落到目标文件夹\nconst after = await eda.dmt_Project.getCurrentProjectInfo();\nconst folderChanged = after?.folderUuid === targetFolderUuid;\n\n// 5. 恢复：移回原位置（原为根目录时传 undefined）\nconst restored = await eda.dmt_Project.moveProjectToFolder(projectUuid, originalFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\nconsole.log('moved:', moved);\nconsole.log('folderChanged:', folderChanged);\nconsole.log('restored:', restored);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const info = await eda.dmt_Project.getCurrentProjectInfo();\nconst projectUuid = info.uuid;\nconst teamUuid = info.teamUuid;\nconst originalFolderUuid = info.folderUuid; // 可能为 undefined（团队根目录）\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const targetFolderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_目标文件夹', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const moved = await eda.dmt_Project.moveProjectToFolder(projectUuid, targetFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = await eda.dmt_Project.getCurrentProjectInfo();\nconst folderChanged = after?.folderUuid === targetFolderUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restored = await eda.dmt_Project.moveProjectToFolder(projectUuid, originalFolderUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\nconsole.log('moved:', moved);\nconsole.log('folderChanged:', folderChanged);\nconsole.log('restored:', restored);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "移动工程到文件夹",
+    "example.text.0": "1. 记录当前工程的位置，作为移动后恢复的锚点",
+    "example.text.1": "2. 创建目标文件夹，等待 1.5s 让工作区同步",
+    "example.text.2": "3. 把当前工程移到目标文件夹下",
+    "example.text.3": "4. 回读验证工程已落到目标文件夹",
+    "example.text.4": "5. 恢复：移回原位置（原为根目录时传 undefined）",
     "params.projectUuid": "工程 UUID",
     "params.folderUuid": "文件夹 UUID，只能为当前工程所在团队或个人下的文件夹，如若为 `undefined` 则移动到当前团队的根文件夹",
     "returns": "是否移动成功"
   },
   "title": "Move a project to a folder",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.projectUuid": "Project UUID",
   "params.folderUuid": "Folder UUID, which can only be a folder under the team or personal space where the current project is located. If it is `undefined`, it is moved to the root folder of the current team",
   "returns": "Whether the move is successful"

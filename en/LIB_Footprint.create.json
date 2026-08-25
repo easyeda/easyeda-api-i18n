@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建封装（分类传 [] = 不分类）\nconst footprintName = '嘉立创示例_新封装_' + Date.now();\nconst footprintUuid = await eda.lib_Footprint.create(libraryUuid, footprintName, [], '示例封装描述');\n\n// 创建类保留现场（新封装留在个人库中供观察）\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('footprintName:', footprintName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const footprintName = '嘉立创示例_新封装_' + Date.now();\nconst footprintUuid = await eda.lib_Footprint.create(libraryUuid, footprintName, [], '示例封装描述');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('footprintName:', footprintName);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建封装",
+    "example.text.0": "1. 获取个人库 UUID",
+    "example.text.1": "2. 创建封装（分类传 [] = 不分类）",
+    "example.text.2": "创建类保留现场（新封装留在个人库中供观察）",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.footprintName": "封装名称",
     "params.classification": "分类",
@@ -24,6 +54,9 @@
     "returns": "封装 UUID"
   },
   "title": "Create Footprint",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.footprintName": "Footprint name",
   "params.classification": "Classification",

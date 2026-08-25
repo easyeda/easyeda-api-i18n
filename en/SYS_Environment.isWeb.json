@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断当前是否为浏览器环境（同步返回布尔值）\nconst isWeb = eda.sys_Environment.isWeb();\n\n// 2. 输出判断结果（网页版为 true，桌面客户端为 false）\nconsole.log('是否浏览器环境：', isWeb);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isWeb = eda.sys_Environment.isWeb();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否浏览器环境：', isWeb);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否处于浏览器环境",
+    "example.text.0": "1. 判断当前是否为浏览器环境（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（网页版为 true，桌面客户端为 false）",
     "returns": "是否处于浏览器环境"
   },
   "title": "Whether it is in the browser environment",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is in the browser environment"
 }

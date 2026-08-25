@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个待删除的测试标注（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim1 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3\n);\nconst dim2 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y + 1000, x, y + 800, x + 2000, y + 800, x + 2000, y + 1000],\n  3\n);\n\n// 2. 记录删除前的标注数量\nconst beforeCount = (await eda.pcb_PrimitiveDimension.getAll()).length;\n\n// 3. 以 ID 数组形式批量删除两个标注\nconst deleted = await eda.pcb_PrimitiveDimension.delete([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.pcb_PrimitiveDimension.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim1 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3\n);\nconst dim2 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y + 1000, x, y + 800, x + 2000, y + 800, x + 2000, y + 1000],\n  3\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeCount = (await eda.pcb_PrimitiveDimension.getAll()).length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.pcb_PrimitiveDimension.delete([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterCount = (await eda.pcb_PrimitiveDimension.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除尺寸标注",
+    "example.text.0": "1. 创建两个待删除的测试标注（随机坐标避免重合）",
+    "example.text.1": "2. 记录删除前的标注数量",
+    "example.text.2": "3. 以 ID 数组形式批量删除两个标注",
+    "example.text.3": "4. 删除类保留现场（图元已删除，不恢复）",
     "params.primitiveIds": "尺寸标注的图元 ID 或尺寸标注图元对象",
     "returns": "删除操作是否成功"
   },
   "title": "Delete the dimension",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Primitive ID of the dimension or the dimension primitive object",
   "returns": "Delete Whether the operation is successful"
 }

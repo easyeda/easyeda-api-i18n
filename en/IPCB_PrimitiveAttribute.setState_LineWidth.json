@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取修改前的线宽\nconst before = designator.getState_LineWidth();\n\n// 4. 切换异步模式加粗笔画并提交\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_LineWidth(10);\nawait asyncAttr.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('lineWidth:', before, '→', refetched.getState_LineWidth());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = designator.getState_LineWidth();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncAttr = designator.toAsync();\nasyncAttr.setState_LineWidth(10);\nawait asyncAttr.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('lineWidth:', before, '→', refetched.getState_LineWidth());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：线宽",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置测试器件并取出 Designator（编号）属性",
+    "example.text.2": "3. 读取修改前的线宽",
+    "example.text.3": "4. 切换异步模式加粗笔画并提交",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.lineWidth": "线宽",
     "returns": "属性图元对象"
   },
   "title": "Set the property state: Line width",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.lineWidth": "Line width",
   "returns": "Attribute primitive object"
 }

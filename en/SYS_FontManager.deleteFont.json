@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 准备一个待删除的测试字体\nawait eda.sys_FontManager.addFont('嘉立创示例_测试字体');\n\n// 2. 从字体列表删除该字体\nconst deleted = await eda.sys_FontManager.deleteFont('嘉立创示例_测试字体');\n\n// 3. 确认字体已不在列表中\nconst fonts = await eda.sys_FontManager.getFontsList();\n\nconsole.log('删除结果：', deleted);\nconsole.log('已不在字体列表：', !fonts.includes('嘉立创示例_测试字体'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_FontManager.addFont('嘉立创示例_测试字体');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.sys_FontManager.deleteFont('嘉立创示例_测试字体');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fonts = await eda.sys_FontManager.getFontsList();\n\nconsole.log('删除结果：', deleted);\nconsole.log('已不在字体列表：', !fonts.includes('嘉立创示例_测试字体'));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除字体列表内的指定字体",
+    "example.text.0": "1. 准备一个待删除的测试字体",
+    "example.text.1": "2. 从字体列表删除该字体",
+    "example.text.2": "3. 确认字体已不在列表中",
     "params.fontName": "字体名称",
     "returns": "删除操作是否成功"
   },
   "title": "Delete the specified font from the font list",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.fontName": "Font name",
   "returns": "Delete Whether the operation is successful"
 }

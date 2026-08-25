@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取当前文档全部封装源码\nconst sources = await eda.sys_FileManager.getDocumentFootprintSources();\n\n// 2. 输出封装数量与每个封装的源码长度\nconsole.log('封装数量：', sources.length);\nsources.forEach((item, i) => {\n  console.log('[' + i + '] footprintUuid：', item.footprintUuid, '源码长度：', item.documentSource.length);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const sources = await eda.sys_FileManager.getDocumentFootprintSources();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('封装数量：', sources.length);\nsources.forEach((item, i) => {\n  console.log('[' + i + '] footprintUuid：', item.footprintUuid, '源码长度：', item.documentSource.length);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取文档封装源码",
+    "example.text.0": "1. 获取当前文档全部封装源码",
+    "example.text.1": "2. 输出封装数量与每个封装的源码长度",
     "returns": "文档封装源码数据，数据获取失败将返回空数组"
   },
   "title": "Get the document footprint source code",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Document footprint source code data. An empty array is returned if the data retrieval fails"
 }

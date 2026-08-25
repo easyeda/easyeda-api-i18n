@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 使用默认配置导出 BOM\nconst bomFile = await eda.pcb_ManufactureData.getBomFile('MyBOM', 'xlsx');\nif (bomFile) {\n    await eda.sys_FileSystem.saveFile(bomFile);\n}\n\n// 自定义 BOM 过滤和列配置\nconst bomFile = await eda.pcb_ManufactureData.getBomFile(\n    'Custom_Production_BOM',\n    'xlsx',\n    undefined,\n    [\n        { property: 'Add into BOM', includeValue: 'yes' },\n        { property: 'Convert to PCB', includeValue: 'yes' }\n    ],\n    ['No.', 'Quantity', 'Comment'],\n    ['Name', 'Device', 'Designator', 'Supplier'],\n    [\n        { property: 'Designator', title: '位号', sort: 'asc', group: 'No', orderWeight: 10 },\n        { property: 'Quantity', title: '数量', sort: 'desc', group: 'Yes', orderWeight: 9 }\n    ]\n);\n\n// 导出 CSV 格式 BOM\nconst csvBomFile = await eda.pcb_ManufactureData.getBomFile(\n    'Simple_BOM',\n    'csv',\n    undefined,\n    [{ property: 'Add into BOM', includeValue: 'yes' }],\n    ['No.', 'Quantity'],\n    ['Designator', 'Footprint', 'Value']\n);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bomFile = await eda.pcb_ManufactureData.getBomFile('MyBOM', 'xlsx');\nif (bomFile) {\n    await eda.sys_FileSystem.saveFile(bomFile);\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bomFile = await eda.pcb_ManufactureData.getBomFile(\n    'Custom_Production_BOM',\n    'xlsx',\n    undefined,\n    [\n        { property: 'Add into BOM', includeValue: 'yes' },\n        { property: 'Convert to PCB', includeValue: 'yes' }\n    ],\n    ['No.', 'Quantity', 'Comment'],\n    ['Name', 'Device', 'Designator', 'Supplier'],\n    [\n        { property: 'Designator', title: '位号', sort: 'asc', group: 'No', orderWeight: 10 },\n        { property: 'Quantity', title: '数量', sort: 'desc', group: 'Yes', orderWeight: 9 }\n    ]\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const csvBomFile = await eda.pcb_ManufactureData.getBomFile(\n    'Simple_BOM',\n    'csv',\n    undefined,\n    [{ property: 'Add into BOM', includeValue: 'yes' }],\n    ['No.', 'Quantity'],\n    ['Designator', 'Footprint', 'Value']\n);\n```"
         }
       ]
     }
@@ -23,6 +50,9 @@
   "_source": {
     "title": "获取 BOM 文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "使用默认配置导出 BOM",
+    "example.text.1": "自定义 BOM 过滤和列配置",
+    "example.text.2": "导出 CSV 格式 BOM",
     "params.fileName": "文件名",
     "params.fileType": "文件类型",
     "params.template": "模板名称",
@@ -34,6 +64,9 @@
   },
   "title": "Get BOM file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.fileName": "File name",
   "params.fileType": "File type",
   "params.template": "Template name",

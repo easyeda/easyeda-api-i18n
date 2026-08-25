@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 取填充子区域列表（本方法按 pourFillId 定位，不是图元 ID）\nconst pourFills = poured.getState_PourFills();\nif (pourFills.length === 0) {\n  console.log('说明：该覆铜填充没有子区域');\n  return;\n}\nconsole.log('删除前子区域数量：', pourFills.length);\n\n// 3. 删除第一个子区域（传单个 ID；也可以传 ID 数组批量删除）\nconst deleted = await poured.deletePourFills(pourFills[0].id);\n\n// 4. 从画布重新读取，确认删除结果\nconst refreshed = await eda.pcb_PrimitivePoured.get(poured.getState_PrimitiveId());\nconst after = refreshed ? refreshed.getState_PourFills().length : 0;\nconsole.log('deleted:', deleted);\nconsole.log('删除后子区域数量：', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pourFills = poured.getState_PourFills();\nif (pourFills.length === 0) {\n  console.log('说明：该覆铜填充没有子区域');\n  return;\n}\nconsole.log('删除前子区域数量：', pourFills.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await poured.deletePourFills(pourFills[0].id);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.pcb_PrimitivePoured.get(poured.getState_PrimitiveId());\nconst after = refreshed ? refreshed.getState_PourFills().length : 0;\nconsole.log('deleted:', deleted);\nconsole.log('删除后子区域数量：', after);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除覆铜填充区域",
+    "example.text.0": "1. 获取画布上已有的覆铜填充图元",
+    "example.text.1": "2. 取填充子区域列表（本方法按 pourFillId 定位，不是图元 ID）",
+    "example.text.2": "3. 删除第一个子区域（传单个 ID；也可以传 ID 数组批量删除）",
+    "example.text.3": "4. 从画布重新读取，确认删除结果",
     "params.pourFillIds": "覆铜填充区域 ID",
     "returns": "删除操作是否成功"
   },
   "title": "Delete Copper fill region",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.pourFillIds": "Copper fill region ID",
   "returns": "Delete Whether the operation is successful"
 }

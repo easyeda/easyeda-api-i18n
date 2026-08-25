@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 用矩形模式源数组创建单多边形对象（x、y、宽、高、旋转、圆角）\nconst rectPolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 用圆形模式源数组再创建一个（圆心 x、y、半径）\nconst circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 1250, 1150, 80]);\n\n// 3. 读取单多边形的源数据，确认数据被完整解析\nconsole.log('rectSource:', JSON.stringify(rectPolygon.getSource()));\nconsole.log('circleSource:', JSON.stringify(circlePolygon.getSource()));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rectPolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 1250, 1150, 80]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('rectSource:', JSON.stringify(rectPolygon.getSource()));\nconsole.log('circleSource:', JSON.stringify(circlePolygon.getSource()));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建单多边形",
+    "example.text.0": "1. 用矩形模式源数组创建单多边形对象（x、y、宽、高、旋转、圆角）",
+    "example.text.1": "2. 用圆形模式源数组再创建一个（圆心 x、y、半径）",
+    "example.text.2": "3. 读取单多边形的源数据，确认数据被完整解析",
     "params.polygon": "单多边形数据",
     "returns": "单多边形对象，`undefined` 表示数据不合法"
   },
   "title": "Create Single polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.polygon": "Single polygon data",
   "returns": "Single polygon object. `undefined` indicates that the data is invalid"
 }

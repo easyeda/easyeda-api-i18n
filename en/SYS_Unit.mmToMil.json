@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 基本换算：1 mm ≈ 39.37 mil（同步返回数值，无需 await）\nconsole.log('1 mm =', eda.sys_Unit.mmToMil(1), 'mil');\n\n// 2. 常用尺寸换算：5 mm 安装孔与 100 mm 板宽\nconsole.log('5 mm =', eda.sys_Unit.mmToMil(5), 'mil');\nconsole.log('100 mm =', eda.sys_Unit.mmToMil(100), 'mil');\n\n// 3. 指定保留 0 位小数取整（默认 4 位）\nconsole.log('19.685 mm 取整 =', eda.sys_Unit.mmToMil(19.685, 0), 'mil');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('1 mm =', eda.sys_Unit.mmToMil(1), 'mil');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('5 mm =', eda.sys_Unit.mmToMil(5), 'mil');\nconsole.log('100 mm =', eda.sys_Unit.mmToMil(100), 'mil');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('19.685 mm 取整 =', eda.sys_Unit.mmToMil(19.685, 0), 'mil');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "单位转换：毫米到密尔",
+    "example.text.0": "1. 基本换算：1 mm ≈ 39.37 mil（同步返回数值，无需 await）",
+    "example.text.1": "2. 常用尺寸换算：5 mm 安装孔与 100 mm 板宽",
+    "example.text.2": "3. 指定保留 0 位小数取整（默认 4 位）",
     "params.mm": "输入毫米数",
     "params.numberOfDecimals": "保留小数位数，默认为 `4`",
     "returns": "输出密尔数"
   },
   "title": "Unit conversion: millimeters to mils",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.mm": "Input value in millimeters",
   "params.numberOfDecimals": "Number of decimal places to keep, default is `4`",
   "returns": "Output value in mils"

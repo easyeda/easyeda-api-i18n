@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 注册同步服务：直接返回计算结果\neda.sys_MessageBus.rpcService('嘉立创示例_RPC服务_同步', (message) => {\n  return '同步响应：' + message;\n});\n\n// 2. 注册异步服务：返回 Promise，处理完才响应\neda.sys_MessageBus.rpcService('嘉立创示例_RPC服务_异步', async (message) => {\n  await new Promise((resolve) => setTimeout(resolve, 200));\n  return '异步响应：' + message;\n});\n\n// 3. 分别调用两种服务验证\nconsole.log(await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC服务_同步', '参数甲'));\nconsole.log(await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC服务_异步', '参数乙'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.rpcService('嘉立创示例_RPC服务_同步', (message) => {\n  return '同步响应：' + message;\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.rpcService('嘉立创示例_RPC服务_异步', async (message) => {\n  await new Promise((resolve) => setTimeout(resolve, 200));\n  return '异步响应：' + message;\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log(await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC服务_同步', '参数甲'));\nconsole.log(await eda.sys_MessageBus.rpcCall('嘉立创示例_RPC服务_异步', '参数乙'));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "私有消息总线：注册 RPC 服务",
+    "example.text.0": "1. 注册同步服务：直接返回计算结果",
+    "example.text.1": "2. 注册异步服务：返回 Promise，处理完才响应",
+    "example.text.2": "3. 分别调用两种服务验证",
     "params.topic": "主题",
     "params.callbackFn": "接收到消息后的回调"
   },
   "title": "Private message bus: register RPC service",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.callbackFn": "Callback after receiving the message"
 }

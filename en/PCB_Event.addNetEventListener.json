@@ -31,7 +31,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_net_event';\n\n// 1. 注册网络事件监听，eventType 用 'all' 接收全部网络事件\neda.pcb_Event.addNetEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    // 回调在网络选中变化时触发；props 是网络信息数组\n    console.log('netEvent:', eventType, JSON.stringify(props));\n  },\n  false\n);\n\n// 2. 回读确认注册成功\nconst registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 3. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_net_event';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.pcb_Event.addNetEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    console.log('netEvent:', eventType, JSON.stringify(props));\n  },\n  false\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const registered = eda.pcb_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
         }
       ]
     }
@@ -43,6 +79,10 @@
     "remarks.text.2": "②在工程设计 -\\> 网络内选中网络时",
     "remarks.text.3": "会被触发",
     "remarks.text.4": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 注册网络事件监听，eventType 用 'all' 接收全部网络事件",
+    "example.text.1": "回调在网络选中变化时触发；props 是网络信息数组",
+    "example.text.2": "2. 回读确认注册成功",
+    "example.text.3": "3. 清理监听",
     "params.id": "事件 ID，用以防止重复注册事件",
     "params.eventType": "事件类型",
     "params.callFn": "事件触发时的回调函数",
@@ -54,6 +94,10 @@
   "remarks.text.2": "2. When a net is selected in Engineering Design -> Nets",
   "remarks.text.3": "the event will be triggered",
   "remarks.text.4": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Event ID, used to prevent duplicate event registration",
   "params.eventType": "Event type",
   "params.callFn": "The callback function triggered when the event fires",

@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先创建一个 ObjectURL\nconst blob = new Blob(['嘉立创示例数据']);\nconst url = eda.sys_FileSystem.createObjectURL(blob);\nconsole.log('创建的 ObjectURL：', url);\n\n// 2. 用完后吊销（同步方法，无返回值）\neda.sys_FileSystem.revokeObjectURL(url);\nconsole.log('已吊销');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const blob = new Blob(['嘉立创示例数据']);\nconst url = eda.sys_FileSystem.createObjectURL(blob);\nconsole.log('创建的 ObjectURL：', url);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_FileSystem.revokeObjectURL(url);\nconsole.log('已吊销');\n```"
         }
       ]
     },
@@ -30,9 +48,13 @@
   "_source": {
     "title": "吊销 ObjectURL",
     "remarks.text.0": "吊销指定的 ObjectURL",
+    "example.text.0": "1. 先创建一个 ObjectURL",
+    "example.text.1": "2. 用完后吊销（同步方法，无返回值）",
     "params.url": "ObjectURL 字符串"
   },
   "title": "Revoke the ObjectURL",
   "remarks.text.0": "Revoke the specified ObjectURL",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.url": "ObjectURL string"
 }

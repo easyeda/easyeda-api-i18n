@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 构造一段文本数据\nconst blob = new Blob(['嘉立创示例数据'], { type: 'text/plain' });\n\n// 2. 创建 ObjectURL（同步方法，直接返回字符串）\nconst url = eda.sys_FileSystem.createObjectURL(blob);\n\nconsole.log('ObjectURL：', url);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const blob = new Blob(['嘉立创示例数据'], { type: 'text/plain' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const url = eda.sys_FileSystem.createObjectURL(blob);\n\nconsole.log('ObjectURL：', url);\n```"
         }
       ]
     },
@@ -30,11 +48,15 @@
   "_source": {
     "title": "创建 ObjectURL",
     "remarks.text.0": "创建一个指向传入 Blob / File 对象的 ObjectURL",
+    "example.text.0": "1. 构造一段文本数据",
+    "example.text.1": "2. 创建 ObjectURL（同步方法，直接返回字符串）",
     "params.blob": "Blob 或 File 对象",
     "returns": "ObjectURL 字符串"
   },
   "title": "Create ObjectURL",
   "remarks.text.0": "Create an ObjectURL pointing to the passed-in Blob / File object",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.blob": "Blob or File object",
   "returns": "ObjectURL string"
 }

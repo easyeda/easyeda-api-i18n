@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 组装多语言数据：语言代码 → 键值对\nconst languagesData = {\n  'zh-Hans': { '示例_问候': '你好，${1}' },\n  en: { '示例_问候': 'Hello, ${1}' },\n};\n\n// 2. 一次性导入整个命名空间\nconst imported = eda.sys_I18n.importMultilingualNamespace('嘉立创示例_多语言', languagesData);\n\n// 3. 同一标签分别取中英文文案\nconst zhText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'zh-Hans', '工程师');\nconst enText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'en', 'engineer');\n\nconsole.log('导入结果：', imported);\nconsole.log('中文文案：', zhText);\nconsole.log('英文文案：', enText);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const languagesData = {\n  'zh-Hans': { '示例_问候': '你好，${1}' },\n  en: { '示例_问候': 'Hello, ${1}' },\n};\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imported = eda.sys_I18n.importMultilingualNamespace('嘉立创示例_多语言', languagesData);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zhText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'zh-Hans', '工程师');\nconst enText = eda.sys_I18n.text('示例_问候', '嘉立创示例_多语言', 'en', 'engineer');\n\nconsole.log('导入结果：', imported);\nconsole.log('中文文案：', zhText);\nconsole.log('英文文案：', enText);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "导入多语言：指定命名空间",
+    "example.text.0": "1. 组装多语言数据：语言代码 → 键值对",
+    "example.text.1": "2. 一次性导入整个命名空间",
+    "example.text.2": "3. 同一标签分别取中英文文案",
     "params.namespace": "命名空间",
     "params.source": "欲导入的多语言数据对象",
     "returns": "导入是否成功"
   },
   "title": "Import multilingual: specify namespace",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.namespace": "Namespace",
   "params.source": "The multilingual data object to import",
   "returns": "Import whether it is successful"

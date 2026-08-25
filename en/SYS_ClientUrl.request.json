@@ -23,7 +23,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 发起 GET 请求（本例用本机桥接地址演示，实际使用时换成自己的服务地址）\nconst response = await eda.sys_ClientUrl.request('http://localhost:49620/health', 'GET');\n\n// 2. 读取响应状态码\nconsole.log('状态码：', response.status);\n\n// 3. 读取响应内容（Response 是标准 fetch 返回值，用法与浏览器一致）\nconst body = await response.text();\nconsole.log('响应内容：', body);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const response = await eda.sys_ClientUrl.request('http://localhost:49620/health', 'GET');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('状态码：', response.status);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const body = await response.text();\nconsole.log('响应内容：', body);\n```"
         }
       ]
     }
@@ -33,6 +60,9 @@
     "remarks.text.0": "请注意，需要在被请求的站点上允许跨源资源共享（CORS），否则接口将始终返回错误结果。",
     "remarks.text.1": "更多信息，请查阅 {@link https://developer.mozilla.org/docs/Web/HTTP/CORS | 跨源资源共享 (CORS) - MDN}。",
     "remarks.text.2": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "example.text.0": "1. 发起 GET 请求（本例用本机桥接地址演示，实际使用时换成自己的服务地址）",
+    "example.text.1": "2. 读取响应状态码",
+    "example.text.2": "3. 读取响应内容（Response 是标准 fetch 返回值，用法与浏览器一致）",
     "params.url": "请求地址",
     "params.method": "请求方法",
     "params.data": "请求发送的数据，可以是直接数据或 {@link https://developer.mozilla.org/docs/Web/API/URLSearchParams | URLSearchParams} 对象，如果 method 为 `HEAD` 或 `GET`，本参数将被忽略",
@@ -44,6 +74,9 @@
   "remarks.text.0": "Please note that the requested site must allow cross-origin resource sharing (CORS); otherwise, the API will always return an error result.",
   "remarks.text.1": "developer.mozilla.org/docs/Web/HTTP/CORS | Cross-Origin Resource Sharing (CORS) - MDN}.",
   "remarks.text.2": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.url": "Request URL",
   "params.method": "Request method",
   "params.data": "Data to be sent with the request, which can be direct data or a {@link https://developer.mozilla.org/docs/Web/API/URLSearchParams | URLSearchParams} object. If the method is `HEAD` or `GET`, this parameter will be ignored",

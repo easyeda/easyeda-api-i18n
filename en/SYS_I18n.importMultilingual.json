@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 向默认命名空间导入简体中文文案（${1} 是占位符，取文案时传实际参数）\nconst imported = eda.sys_I18n.importMultilingual('zh-Hans', {\n  '嘉立创示例_问候': '你好，${1}！欢迎回来',\n});\n\n// 2. 用 text() 按标签取回文案，占位符由参数替换\nconst message = eda.sys_I18n.text('嘉立创示例_问候', undefined, 'zh-Hans', '工程师');\n\nconsole.log('导入结果：', imported);\nconsole.log('取回文案：', message);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imported = eda.sys_I18n.importMultilingual('zh-Hans', {\n  '嘉立创示例_问候': '你好，${1}！欢迎回来',\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const message = eda.sys_I18n.text('嘉立创示例_问候', undefined, 'zh-Hans', '工程师');\n\nconsole.log('导入结果：', imported);\nconsole.log('取回文案：', message);\n```"
         }
       ]
     }
@@ -23,12 +41,16 @@
   "_source": {
     "title": "导入多语言",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 向默认命名空间导入简体中文文案（${1} 是占位符，取文案时传实际参数）",
+    "example.text.1": "2. 用 text() 按标签取回文案，占位符由参数替换",
     "params.language": "语言",
     "params.source": "欲导入的多语言数据对象",
     "returns": "导入是否成功"
   },
   "title": "Import multilingual",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.language": "Language",
   "params.source": "The multilingual data object to import",
   "returns": "Import whether it is successful"

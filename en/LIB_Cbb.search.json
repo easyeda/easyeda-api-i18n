@@ -10,13 +10,33 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 空关键字列出系统库全部复用模块，每页 5 条\nconst results = await eda.lib_Cbb.search('', undefined, undefined, 5);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const results = await eda.lib_Cbb.search('', undefined, undefined, 5);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "搜索复用模块",
+    "example.text.0": "1. 空关键字列出系统库全部复用模块，每页 5 条",
+    "example.text.1": "2. 输出搜索结果",
     "params.key": "搜索关键字",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.classification": "分类，默认为全部",
@@ -25,6 +45,8 @@
     "returns": "搜索到的复用模块属性列表"
   },
   "title": "Search reuse block",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.key": "Search keyword",
   "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
   "params.classification": "Classification, defaults to all",

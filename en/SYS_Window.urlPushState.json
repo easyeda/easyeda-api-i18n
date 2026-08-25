@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 备份当前完整地址\nconst originalHref = location.href;\n\n// 2. 追加一条带示例锚点的新历史记录\neda.sys_Window.urlPushState(location.href.split('#')[0] + '#嘉立创示例_新状态');\n\n// 3. 验证地址栏已更新为新的锚点\nconsole.log('追加后的锚点：', decodeURIComponent(eda.sys_Window.getUrlAnchor()));\n\n// 4. 还原地址栏\neda.sys_Window.urlReplaceState(originalHref);\nconsole.log('地址已还原');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const originalHref = location.href;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Window.urlPushState(location.href.split('#')[0] + '#嘉立创示例_新状态');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('追加后的锚点：', decodeURIComponent(eda.sys_Window.getUrlAnchor()));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Window.urlReplaceState(originalHref);\nconsole.log('地址已还原');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "追加新的 URL 历史记录栈信息",
+    "example.text.0": "1. 备份当前完整地址",
+    "example.text.1": "2. 追加一条带示例锚点的新历史记录",
+    "example.text.2": "3. 验证地址栏已更新为新的锚点",
+    "example.text.3": "4. 还原地址栏",
     "params.url": "URL"
   },
   "title": "Append new URL history stack information",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.url": "URL"
 }

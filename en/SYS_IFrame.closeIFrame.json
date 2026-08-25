@@ -19,7 +19,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开两个内联框架窗口（自建 fixture，演示按 ID 定向关闭）\nawait eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口A', { title: '嘉立创示例 窗口A' });\nawait eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口B', { title: '嘉立创示例 窗口B' });\nconsole.log('已打开两个窗口：嘉立创示例_窗口A / 嘉立创示例_窗口B');\n\n// 2. 按 ID 关闭指定窗口\nconst closedById = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('按 ID 关闭窗口 A 结果：', closedById);\n\n// 3. 不传 id，关闭本扩展打开的全部剩余窗口（清理窗口 B，还原界面）\nconst closedAll = await eda.sys_IFrame.closeIFrame();\nconsole.log('关闭全部剩余窗口结果：', closedAll);\n\n// 4. 对已不存在的窗口再关闭一次，验证幂等语义（返回 true 而非 false）\nconst closedAgain = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('重复关闭已关窗口结果：', closedAgain);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口A', { title: '嘉立创示例 窗口A' });\nawait eda.sys_IFrame.openIFrame('/extension.json', 300, 200, '嘉立创示例_窗口B', { title: '嘉立创示例 窗口B' });\nconsole.log('已打开两个窗口：嘉立创示例_窗口A / 嘉立创示例_窗口B');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closedById = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('按 ID 关闭窗口 A 结果：', closedById);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closedAll = await eda.sys_IFrame.closeIFrame();\nconsole.log('关闭全部剩余窗口结果：', closedAll);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closedAgain = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口A');\nconsole.log('重复关闭已关窗口结果：', closedAgain);\n```"
         }
       ]
     }
@@ -28,12 +64,20 @@
     "title": "关闭内联框架窗口",
     "remarks.text.0": "关闭指定 ID 的内联框架窗口",
     "remarks.text.1": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 打开两个内联框架窗口（自建 fixture，演示按 ID 定向关闭）",
+    "example.text.1": "2. 按 ID 关闭指定窗口",
+    "example.text.2": "3. 不传 id，关闭本扩展打开的全部剩余窗口（清理窗口 B，还原界面）",
+    "example.text.3": "4. 对已不存在的窗口再关闭一次，验证幂等语义（返回 true 而非 false）",
     "params.id": "内联框架窗口 ID，未传入时将关闭由本扩展打开的所有内联框架窗口",
     "returns": "操作是否成功"
   },
   "title": "Close iframe window",
   "remarks.text.0": "Close the iframe window with the specified ID",
   "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Iframe window ID. If not passed in, all iframe windows opened by this extension will be closed",
   "returns": "Whether the operation is successful"
 }

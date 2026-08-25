@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 0. 确保当前文档是符号编辑器：优先复用测试符号，没有则新建后打开\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('嘉立创示例_Pin测试符号', libUuid);\nconst symUuid = found[0] ? found[0].uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 在符号画布上创建一个测试引脚\nconst pin = await eda.sch_PrimitivePin.create(400, 300, '1', 'CLK', 0, 10, null, 'None', 'IN');\n\n// 2. 读取图元类型\nconst primitiveType = pin.getState_PrimitiveType();\n\n// 3. 清理测试引脚（查询类需要清理）\nawait eda.sch_PrimitivePin.delete([pin.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('嘉立创示例_Pin测试符号', libUuid);\nconst symUuid = found[0] ? found[0].uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pin = await eda.sch_PrimitivePin.create(400, 300, '1', 'CLK', 0, 10, null, 'None', 'IN');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveType = pin.getState_PrimitiveType();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePin.delete([pin.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元类型",
+    "example.text.0": "0. 确保当前文档是符号编辑器：优先复用测试符号，没有则新建后打开",
+    "example.text.1": "1. 在符号画布上创建一个测试引脚",
+    "example.text.2": "2. 读取图元类型",
+    "example.text.3": "3. 清理测试引脚（查询类需要清理）",
     "returns": "图元类型"
   },
   "title": "Get the property state: primitive type",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Primitive type"
 }

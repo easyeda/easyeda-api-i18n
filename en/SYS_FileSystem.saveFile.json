@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 构造要保存的 CSV 内容\nconst content = '编号,器件,数量\\n1,C0402,10\\n2,C0603,20';\nconst blob = new Blob([content], { type: 'text/csv' });\n\n// 2. 保存到本地（完成后 Promise 才结束）\nawait eda.sys_FileSystem.saveFile(blob, '嘉立创示例_BOM导出.csv');\n\nconsole.log('已保存文件：', '嘉立创示例_BOM导出.csv', blob.size, '字节');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const content = '编号,器件,数量\\n1,C0402,10\\n2,C0603,20';\nconst blob = new Blob([content], { type: 'text/csv' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_FileSystem.saveFile(blob, '嘉立创示例_BOM导出.csv');\n\nconsole.log('已保存文件：', '嘉立创示例_BOM导出.csv', blob.size, '字节');\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "保存文件",
     "remarks.text.0": "调用浏览器下载接口或 Electron 保存文件接口，将传入的文件流保存到本地",
+    "example.text.0": "1. 构造要保存的 CSV 内容",
+    "example.text.1": "2. 保存到本地（完成后 Promise 才结束）",
     "params.fileData": "文件数据",
     "params.fileName": "文件名称"
   },
   "title": "Save File",
   "remarks.text.0": "Calls the browser download API or the Electron save-file API to save the passed-in file stream locally",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.fileData": "File data",
   "params.fileName": "File name"
 }

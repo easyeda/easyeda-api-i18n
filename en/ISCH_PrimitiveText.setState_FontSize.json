@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个默认字号的测试文本（SCH 坐标单位 10mil）\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_标题');\n\n// 3. 切换异步模式，把字号增大到 20\nconst asyncText = text.toAsync();\nasyncText.setState_FontSize(20);\nawait asyncText.done();\n\n// 4. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveText.get(text.getState_PrimitiveId());\n\nconsole.log('fontSize:', text.getState_FontSize(), '→', refetched.getState_FontSize());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_标题');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncText = text.toAsync();\nasyncText.setState_FontSize(20);\nawait asyncText.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveText.get(text.getState_PrimitiveId());\n\nconsole.log('fontSize:', text.getState_FontSize(), '→', refetched.getState_FontSize());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：字体大小",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合",
+    "example.text.1": "2. 创建一个默认字号的测试文本（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 切换异步模式，把字号增大到 20",
+    "example.text.3": "4. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.fontSize": "字体大小",
     "returns": "文本图元对象"
   },
   "title": "Set the property state: font size",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.fontSize": "Font size",
   "returns": "Text primitive object"
 }

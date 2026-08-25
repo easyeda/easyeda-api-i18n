@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 导出 xlsx 格式 BOM，只包含标记了加入 BOM 的元件\nconst bomFile = await eda.sch_ManufactureData.getBomFile(\n    '嘉立创示例_BOM',\n    'xlsx',\n    undefined,\n    [{ property: 'Add into BOM', includeValue: 'yes' }]\n);\n\n// 2. 查看导出结果\nconsole.log('导出文件名：', bomFile?.name);\nconsole.log('文件大小：', bomFile?.size);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bomFile = await eda.sch_ManufactureData.getBomFile(\n    '嘉立创示例_BOM',\n    'xlsx',\n    undefined,\n    [{ property: 'Add into BOM', includeValue: 'yes' }]\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('导出文件名：', bomFile?.name);\nconsole.log('文件大小：', bomFile?.size);\n```"
         }
       ]
     }
@@ -23,6 +41,8 @@
   "_source": {
     "title": "获取 BOM 文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "1. 导出 xlsx 格式 BOM，只包含标记了加入 BOM 的元件",
+    "example.text.1": "2. 查看导出结果",
     "params.fileName": "文件名",
     "params.fileType": "文件类型",
     "params.template": "模板名称",
@@ -35,6 +55,8 @@
   },
   "title": "Get BOM file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.fileName": "File name",
   "params.fileType": "File type",
   "params.template": "Template name",

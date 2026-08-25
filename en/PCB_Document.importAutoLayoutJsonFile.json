@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开（导入作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 构造布局 JSON 文件对象（真实场景：readFileFromFileSystem 读取外部导出的文件）\nconst layoutFile = new File([JSON.stringify({})], 'auto-layout.json', { type: 'application/json' });\n\n// 3. 导入自动布局文件\nconst imported = await eda.pcb_Document.importAutoLayoutJsonFile(layoutFile);\nconsole.log('imported:', imported);\n\n// 4. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layoutFile = new File([JSON.stringify({})], 'auto-layout.json', { type: 'application/json' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imported = await eda.pcb_Document.importAutoLayoutJsonFile(layoutFile);\nconsole.log('imported:', imported);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "导入自动布局文件（JSON）",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.openReadFileDialog} 读入文件",
+    "example.text.0": "1. 创建测试 PCB 并打开（导入作用于当前激活的 PCB）",
+    "example.text.1": "2. 构造布局 JSON 文件对象（真实场景：readFileFromFileSystem 读取外部导出的文件）",
+    "example.text.2": "3. 导入自动布局文件",
+    "example.text.3": "4. 清理测试 PCB",
     "params.autoLayoutFile": "欲导入的 JSON 文件",
     "returns": "导入操作是否成功"
   },
   "title": "Import auto layout file (JSON)",
   "remarks.text.0": "You can use {@link SYS_FileSystem.openReadFileDialog} to read in a file",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.autoLayoutFile": "The JSON file to import",
   "returns": "Whether the import operation is successful"
 }

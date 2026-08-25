@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个 200×100 的测试矩形（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\n\n// 2. 读取矩形的高\nconst height = rect.getState_Height();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('height:', height);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const height = rect.getState_Height();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([rect.getState_PrimitiveId()]);\n\nconsole.log('height:', height);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：高",
+    "example.text.0": "1. 创建一个 200×100 的测试矩形（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取矩形的高",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "高"
   },
   "title": "Get the property state: height",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Height"
 }

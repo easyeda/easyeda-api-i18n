@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 按名称精确搜索（官方属性集合目前仅支持 name）\n//    当前版本该接口不稳定：可能抛错，也可能正常返回 undefined，两种都要兼容\nlet results;\ntry {\n  results = await eda.lib_Symbol.searchByProperties({ name: '0402' });\n} catch (e) {\n  console.log('当前版本按 name 搜索抛错：', e.message);\n}\nif (!Array.isArray(results)) results = [];\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let results;\ntry {\n  results = await eda.lib_Symbol.searchByProperties({ name: '0402' });\n} catch (e) {\n  console.log('当前版本按 name 搜索抛错：', e.message);\n}\nif (!Array.isArray(results)) results = [];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'libraryUuid:', item.libraryUuid);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "使用属性精确搜索符号",
+    "example.text.0": "1. 按名称精确搜索（官方属性集合目前仅支持 name）\n当前版本该接口不稳定：可能抛错，也可能正常返回 undefined，两种都要兼容",
+    "example.text.1": "2. 输出搜索结果",
     "params.properties": "属性",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "搜索到的符号属性的列表"
   },
   "title": "Search symbols precisely by properties",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.properties": "Property",
   "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
   "returns": "List of searched symbol properties"

@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个矩形区域\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\nconst before = region.isAsync();\n\n// 3. 转换为同步图元（保留现场供观察）\nconst syncRegion = region.toSync();\nconst after = syncRegion.isAsync();\n\n// 4. 同步图元直接读取属性，无需提交\nconsole.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncRegion.getState_PrimitiveType());\nconsole.log('layer:', syncRegion.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\nconst before = region.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncRegion = region.toSync();\nconst after = syncRegion.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncRegion.getState_PrimitiveType());\nconsole.log('layer:', syncRegion.getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个矩形区域",
+    "example.text.2": "3. 转换为同步图元（保留现场供观察）",
+    "example.text.3": "4. 同步图元直接读取属性，无需提交",
     "returns": "区域图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Region primitive object"
 }

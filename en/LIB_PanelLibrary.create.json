@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建面板库（分类传 [] = 不分类）\nconst panelLibraryName = '嘉立创示例_新面板库_' + Date.now();\nconst panelLibraryUuid = await eda.lib_PanelLibrary.create(libraryUuid, panelLibraryName, [], '示例面板库描述');\n\n// 创建类保留现场（新面板库留在个人库中供观察）\n\nconsole.log('panelLibraryUuid:', panelLibraryUuid);\nconsole.log('panelLibraryName:', panelLibraryName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelLibraryName = '嘉立创示例_新面板库_' + Date.now();\nconst panelLibraryUuid = await eda.lib_PanelLibrary.create(libraryUuid, panelLibraryName, [], '示例面板库描述');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('panelLibraryUuid:', panelLibraryUuid);\nconsole.log('panelLibraryName:', panelLibraryName);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建面板库",
+    "example.text.0": "1. 获取个人库 UUID",
+    "example.text.1": "2. 创建面板库（分类传 [] = 不分类）",
+    "example.text.2": "创建类保留现场（新面板库留在个人库中供观察）",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.panelLibraryName": "面板库名称",
     "params.classification": "分类",
@@ -24,6 +54,9 @@
     "returns": "面板库 UUID"
   },
   "title": "Create Panel library",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.panelLibraryName": "Panel library name",
   "params.classification": "Classification",

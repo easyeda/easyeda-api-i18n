@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 两块铺铜区域的外接矩形（部分重叠）\nconst zoneA = { minX: 0, minY: 0, maxX: 100, maxY: 80 };\nconst zoneB = { minX: 50, minY: 20, maxX: 150, maxY: 60 };\nconsole.log('区域 A 与区域 B 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneB));\n\n// 2. 完全分离的两个矩形（不相交，粗筛即可排除）\nconst zoneC = { minX: 200, minY: 200, maxX: 300, maxY: 280 };\nconsole.log('区域 A 与区域 C 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneC));\n\n// 3. 仅有边界接触也算相交（贴合的两个矩形）\nconst zoneD = { minX: 100, minY: 0, maxX: 180, maxY: 40 };\nconsole.log('区域 A 与区域 D 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneD));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zoneA = { minX: 0, minY: 0, maxX: 100, maxY: 80 };\nconst zoneB = { minX: 50, minY: 20, maxX: 150, maxY: 60 };\nconsole.log('区域 A 与区域 B 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneB));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zoneC = { minX: 200, minY: 200, maxX: 300, maxY: 280 };\nconsole.log('区域 A 与区域 C 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneC));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zoneD = { minX: 100, minY: 0, maxX: 180, maxY: 40 };\nconsole.log('区域 A 与区域 D 相交：', eda.sys_Math.bboxIntersects(zoneA, zoneD));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "快速判断两个 BBox 是否相交",
+    "example.text.0": "1. 两块铺铜区域的外接矩形（部分重叠）",
+    "example.text.1": "2. 完全分离的两个矩形（不相交，粗筛即可排除）",
+    "example.text.2": "3. 仅有边界接触也算相交（贴合的两个矩形）",
     "params.bbox1": "BBox 1",
     "params.bbox2": "BBox 2",
     "returns": "是否相交"
   },
   "title": "Quickly determine whether two BBoxes intersect",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.bbox1": "BBox 1",
   "params.bbox2": "BBox 2",
   "returns": "Whether they intersect"

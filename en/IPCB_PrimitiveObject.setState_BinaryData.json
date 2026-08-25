@@ -19,7 +19,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个 4x4 图片的内嵌对象\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst oldImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\n// 8x8 纯色 PNG 的 data URI，作为替换用的新图\nconst newImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAEklEQVR4nGOQi7rzHx9mGBkKAFPclMHPGdtKAAAAAElFTkSuQmCC';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, oldImage, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_BinaryData().length;\n\n// 2. 异步模式替换为新图片数据\nconst asyncObj = obj.toAsync();\nasyncObj.setState_BinaryData(newImage);\nawait asyncObj.done();\n\n// 3. 从画布重新读取，确认数据已更新（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('binaryData 长度：', before, '→', refetched.getState_BinaryData().length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const oldImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newImage = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAEklEQVR4nGOQi7rzHx9mGBkKAFPclMHPGdtKAAAAAElFTkSuQmCC';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, oldImage, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_BinaryData().length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncObj = obj.toAsync();\nasyncObj.setState_BinaryData(newImage);\nawait asyncObj.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('binaryData 长度：', before, '→', refetched.getState_BinaryData().length);\n```"
         }
       ]
     }
@@ -28,12 +73,22 @@
     "title": "设置属性状态：二进制数据",
     "remarks.text.0": "从画布重新取回的 `binaryData` 数据可能为 `hashId`，这是由于我们后端存储二进制内嵌对象数据的是对象存储，",
     "remarks.text.1": "对象存储以 `hashId` 作为索引，需要完整取回数据将会造成额外请求消耗性能",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个 4x4 图片的内嵌对象",
+    "example.text.1": "4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）",
+    "example.text.2": "8x8 纯色 PNG 的 data URI，作为替换用的新图",
+    "example.text.3": "2. 异步模式替换为新图片数据",
+    "example.text.4": "3. 从画布重新读取，确认数据已更新（保留现场供观察）",
     "params.binaryData": "二进制数据",
     "returns": "二进制内嵌对象图元对象"
   },
   "title": "Set the property state: binary data",
   "remarks.text.0": "The `binaryData` re-retrieved from the canvas may be a `hashId`, because our backend stores binary embedded object data in object storage,",
   "remarks.text.1": "The object storage uses `hashId` as the index. Fully retrieving the data will cause additional requests and consume performance",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.binaryData": "Binary data",
   "returns": "Binary embedded object primitive object"
 }

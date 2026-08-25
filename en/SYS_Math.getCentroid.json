@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 规则矩形：质心就是几何中心 (50, 40)\nconst rect = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconsole.log('矩形质心：', JSON.stringify(eda.sys_Math.getCentroid(rect)));\n\n// 2. L 形轮廓：质心向材料厚的一侧偏移，不再等于外接矩形中心 (50, 40)\nconst lShape = [\n  { x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 40 },\n  { x: 40, y: 40 }, { x: 40, y: 80 }, { x: 0, y: 80 },\n];\nconst centroid = eda.sys_Math.getCentroid(lShape);\nconsole.log('L 形质心：', JSON.stringify(centroid));\n\n// 3. 以质心为中心做旋转，图形绕自身几何中心原地转动\nconst rotated = eda.sys_Math.rotate(rect, 90);\nconsole.log('绕质心旋转 90 度后的第一个点：', JSON.stringify(rotated[0]));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconsole.log('矩形质心：', JSON.stringify(eda.sys_Math.getCentroid(rect)));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const lShape = [\n  { x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 40 },\n  { x: 40, y: 40 }, { x: 40, y: 80 }, { x: 0, y: 80 },\n];\nconst centroid = eda.sys_Math.getCentroid(lShape);\nconsole.log('L 形质心：', JSON.stringify(centroid));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rotated = eda.sys_Math.rotate(rect, 90);\nconsole.log('绕质心旋转 90 度后的第一个点：', JSON.stringify(rotated[0]));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "计算多边形质心",
+    "example.text.0": "1. 规则矩形：质心就是几何中心 (50, 40)",
+    "example.text.1": "2. L 形轮廓：质心向材料厚的一侧偏移，不再等于外接矩形中心 (50, 40)",
+    "example.text.2": "3. 以质心为中心做旋转，图形绕自身几何中心原地转动",
     "params.polygon": "多边形",
     "returns": "质心坐标"
   },
   "title": "Calculate the centroid of the polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.polygon": "Polygon",
   "returns": "Centroid coordinate"
 }

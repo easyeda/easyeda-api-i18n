@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 最简调用：默认信息类型，默认 3 秒后自动关闭\neda.sys_Message.showToastMessage('嘉立创示例 工程已自动保存');\nconsole.log('信息吐司已显示，3 秒后自动关闭');\n\n// 2. 指定消息类型与倒计时秒数：成功图标，2 秒后自动关闭\neda.sys_Message.showToastMessage('嘉立创示例 导出完成', 'success', 2);\nconsole.log('成功吐司已显示，2 秒后自动关闭');\n\n// 3. 带回调按钮与底部面板联动：点击按钮执行回调并展开日志面板\neda.sys_Message.showToastMessage(\n  '嘉立创示例 检查完成，详见日志面板',\n  'warn',\n  5,\n  'log',\n  '查看日志',\n  'console.log(\"嘉立创示例 按钮回调被执行\")'\n);\nconsole.log('警告吐司已显示，附带查看日志按钮，5 秒后自动关闭');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showToastMessage('嘉立创示例 工程已自动保存');\nconsole.log('信息吐司已显示，3 秒后自动关闭');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showToastMessage('嘉立创示例 导出完成', 'success', 2);\nconsole.log('成功吐司已显示，2 秒后自动关闭');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Message.showToastMessage(\n  '嘉立创示例 检查完成，详见日志面板',\n  'warn',\n  5,\n  'log',\n  '查看日志',\n  'console.log(\"嘉立创示例 按钮回调被执行\")'\n);\nconsole.log('警告吐司已显示，附带查看日志按钮，5 秒后自动关闭');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "显示吐司消息",
+    "example.text.0": "1. 最简调用：默认信息类型，默认 3 秒后自动关闭",
+    "example.text.1": "2. 指定消息类型与倒计时秒数：成功图标，2 秒后自动关闭",
+    "example.text.2": "3. 带回调按钮与底部面板联动：点击按钮执行回调并展开日志面板",
     "params.message": "消息内容",
     "params.messageType": "消息类型",
     "params.timer": "自动关闭倒计时秒数，`0` 为不自动关闭",
@@ -25,6 +55,9 @@
     "params.buttonCallbackFn": "回调函数内容，字符串形式，会被自动解析并执行"
   },
   "title": "Show a toast message",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.message": "Message content",
   "params.messageType": "Message type",
   "params.timer": "Auto-close countdown in seconds. `0` means it will not auto-close",

@@ -10,13 +10,33 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 弹出数字输入窗口（默认值 5，范围 1～100）\neda.sys_Dialog.showInputDialog(\n  '请输入铺铜间距',               // 输入框上方文字\n  '输入 1～100 之间的整数（单位 mil）', // 输入框下方文字\n  '铺铜设置',                     // 窗口标题\n  'number',                       // 输入类型（同 HTML input 的 type）\n  5,                              // 默认值\n  { min: 1, max: 100, step: 1 },  // 其它输入属性（min、max、step 等）\n  (value) => {\n    console.log('用户输入的间距：', value);\n  }\n);\n\n// 2. 窗口已弹出；回调需用户点击确认后才会触发\nconsole.log('已弹出输入窗口');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Dialog.showInputDialog(\n  '请输入铺铜间距',               // 输入框上方文字\n  '输入 1～100 之间的整数（单位 mil）', // 输入框下方文字\n  '铺铜设置',                     // 窗口标题\n  'number',                       // 输入类型（同 HTML input 的 type）\n  5,                              // 默认值\n  { min: 1, max: 100, step: 1 },  // 其它输入属性（min、max、step 等）\n  (value) => {\n    console.log('用户输入的间距：', value);\n  }\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('已弹出输入窗口');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "弹出输入窗口",
+    "example.text.0": "1. 弹出数字输入窗口（默认值 5，范围 1～100）",
+    "example.text.1": "2. 窗口已弹出；回调需用户点击确认后才会触发",
     "params.beforeContent": "输入框上方文字",
     "params.afterContent": "输入框下方文字",
     "params.title": "弹出窗口标题",
@@ -27,6 +47,8 @@
     "returns": "用户输入的值，始终为 `string` 类型，除非用户点击了 **取消** 按钮"
   },
   "title": "Show an input dialog",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.beforeContent": "Text above the input box",
   "params.afterContent": "Text below the input box",
   "params.title": "Popup window title",

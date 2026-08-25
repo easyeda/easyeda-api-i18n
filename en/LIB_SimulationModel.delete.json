@@ -10,7 +10,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst simulationModelUuid = await eda.lib_SimulationModel.create(\n  libraryUuid,\n  {\n    modelType: 'Ngspice',\n    modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n    modelName: '嘉立创示例_待删除仿真模型_' + Date.now(),\n  },\n  []\n);\n\n// 2. 删除该仿真模型\nconst deleted = await eda.lib_SimulationModel.delete(simulationModelUuid, libraryUuid);\n\nconsole.log('simulationModelUuid:', simulationModelUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst simulationModelUuid = await eda.lib_SimulationModel.create(\n  libraryUuid,\n  {\n    modelType: 'Ngspice',\n    modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n    modelName: '嘉立创示例_待删除仿真模型_' + Date.now(),\n  },\n  []\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.lib_SimulationModel.delete(simulationModelUuid, libraryUuid);\n\nconsole.log('simulationModelUuid:', simulationModelUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     },
@@ -24,11 +42,15 @@
   },
   "_source": {
     "title": "删除仿真模型",
+    "example.text.0": "1. 获取个人库 UUID 并新建删除对象",
+    "example.text.1": "2. 删除该仿真模型",
     "params.simulationModelUuid": "仿真模型 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "操作是否成功"
   },
   "title": "Delete the simulation model",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.simulationModelUuid": "Simulation model UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "returns": "Whether the operation is successful"

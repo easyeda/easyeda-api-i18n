@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试总线（随机坐标避免与画布已有总线重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y], '#FF0000', 6, 1);\nconst busId = bus.getState_PrimitiveId();\n\n// 2. 读取修改前的名称、线宽与颜色\nconst beforeName = bus.getState_BusName();\nconst beforeWidth = bus.getState_LineWidth();\nconst beforeColor = bus.getState_Color();\n\n// 3. 批量修改：名称 DATA[0..7] → ADDR[0..15]、线宽 6 → 10、颜色改为绿色\nawait eda.sch_PrimitiveBus.modify(busId, { busName: 'ADDR[0..15]', lineWidth: 10, color: '#00AA00' });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitiveBus.get(busId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', busId);\nconsole.log('busName:', beforeName, '→', refreshed.getState_BusName());\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y], '#FF0000', 6, 1);\nconst busId = bus.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeName = bus.getState_BusName();\nconst beforeWidth = bus.getState_LineWidth();\nconst beforeColor = bus.getState_Color();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveBus.modify(busId, { busName: 'ADDR[0..15]', lineWidth: 10, color: '#00AA00' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.sch_PrimitiveBus.get(busId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', busId);\nconsole.log('busName:', beforeName, '→', refreshed.getState_BusName());\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改总线",
+    "example.text.0": "1. 创建待修改的测试总线（随机坐标避免与画布已有总线重合）",
+    "example.text.1": "2. 读取修改前的名称、线宽与颜色",
+    "example.text.2": "3. 批量修改：名称 DATA[0..7] → ADDR[0..15]、线宽 6 → 10、颜色改为绿色",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "总线的图元 ID 或总线图元对象",
     "params.property": "修改参数",
     "returns": "总线图元对象"
   },
   "title": "Modify the bus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID of the bus or the bus primitive object",
   "params.property": "Modify Parameter",
   "returns": "Bus primitive object"

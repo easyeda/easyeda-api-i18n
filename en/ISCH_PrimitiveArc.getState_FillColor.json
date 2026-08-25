@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段带填充色的测试圆弧（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, null, '#DDEEFF', 6, 1);\n\n// 2. 读取填充颜色\nconst fillColor = arc.getState_FillColor();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('fillColor:', fillColor);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, null, '#DDEEFF', 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fillColor = arc.getState_FillColor();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('fillColor:', fillColor);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：填充颜色",
+    "example.text.0": "1. 创建一段带填充色的测试圆弧（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取填充颜色",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "填充颜色"
   },
   "title": "Get the property state: fill color",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Fill color"
 }

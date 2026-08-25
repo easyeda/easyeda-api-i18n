@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先注册一个测试监听作为移除对象\neda.sys_I18n.addLanguageChangedEventListener('嘉立创示例_移除监听', () => {}, false);\n\n// 2. 第一次移除：ID 存在，返回 true\nconsole.log('第一次移除成功：', eda.sys_I18n.removeEventListener('嘉立创示例_移除监听'));\n\n// 3. 第二次移除：ID 已不存在，返回 false\nconsole.log('第二次移除成功：', eda.sys_I18n.removeEventListener('嘉立创示例_移除监听'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_I18n.addLanguageChangedEventListener('嘉立创示例_移除监听', () => {}, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('第一次移除成功：', eda.sys_I18n.removeEventListener('嘉立创示例_移除监听'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('第二次移除成功：', eda.sys_I18n.removeEventListener('嘉立创示例_移除监听'));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "移除事件监听",
+    "example.text.0": "1. 先注册一个测试监听作为移除对象",
+    "example.text.1": "2. 第一次移除：ID 存在，返回 true",
+    "example.text.2": "3. 第二次移除：ID 已不存在，返回 false",
     "params.id": "事件 ID",
     "returns": "是否移除指定事件监听"
   },
   "title": "Remove Event listener",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.id": "Event ID",
   "returns": "Whether Remove Specify event listener"
 }

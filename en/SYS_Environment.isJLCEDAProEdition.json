@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断是否为嘉立创 EDA 专业版（同步返回布尔值）\nconst isJLCEDAPro = eda.sys_Environment.isJLCEDAProEdition();\n\n// 2. 输出判断结果（嘉立创 EDA 专业版为 true）\nconsole.log('是否嘉立创 EDA 专业版：', isJLCEDAPro);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isJLCEDAPro = eda.sys_Environment.isJLCEDAProEdition();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否嘉立创 EDA 专业版：', isJLCEDAPro);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否为 嘉立创EDA 专业版本",
+    "example.text.0": "1. 判断是否为嘉立创 EDA 专业版（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（嘉立创 EDA 专业版为 true）",
     "returns": "是否为嘉立创EDA 专业版本"
   },
   "title": "Whether it is the EasyEDA Pro edition",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is the EasyEDA Pro edition"
 }

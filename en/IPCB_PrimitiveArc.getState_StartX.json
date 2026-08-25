@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段测试圆弧，起点 (1000, 1000)（PCB 坐标单位 mil）\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取起始位置 X\nconst startX = arc.getState_StartX();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('startX:', startX);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const startX = arc.getState_StartX();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('startX:', startX);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：起始位置 X",
+    "example.text.0": "1. 创建一段测试圆弧，起点 (1000, 1000)（PCB 坐标单位 mil）",
+    "example.text.1": "2. 读取起始位置 X",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "起始位置 X"
   },
   "title": "Get the property state: start position X",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Start position X"
 }

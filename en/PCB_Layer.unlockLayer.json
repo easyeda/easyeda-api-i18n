@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先锁定顶层（TOP=1）制造初始状态\nawait eda.pcb_Layer.lockLayer(1);\n\n// 2. 解锁顶层，返回操作是否成功\nconst unlockResult = await eda.pcb_Layer.unlockLayer(1);\n\n// 3. 从图层列表确认锁定已解除\nconst layers = await eda.pcb_Layer.getAllLayers();\nconst top = layers.find(l => l.id === 1);\n\nconsole.log('unlockResult:', unlockResult);\nconsole.log('topStillLocked:', top?.locked);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Layer.lockLayer(1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const unlockResult = await eda.pcb_Layer.unlockLayer(1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layers = await eda.pcb_Layer.getAllLayers();\nconst top = layers.find(l => l.id === 1);\n\nconsole.log('unlockResult:', unlockResult);\nconsole.log('topStillLocked:', top?.locked);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "取消锁定层",
+    "example.text.0": "1. 先锁定顶层（TOP=1）制造初始状态",
+    "example.text.1": "2. 解锁顶层，返回操作是否成功",
+    "example.text.2": "3. 从图层列表确认锁定已解除",
     "params.layer": "层，如若不指定任何层则默认为所有层",
     "returns": "操作是否成功"
   },
   "title": "Unlock the layer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.layer": "Layer. If no layer is specified, all layers are used by default",
   "returns": "Whether the operation is successful"
 }

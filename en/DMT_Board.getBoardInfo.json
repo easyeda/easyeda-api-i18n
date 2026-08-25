@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先盘点所有板子，取第一块的名称作为查询目标\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst targetName = boards[0].name;\n\n// 2. 按名称查询该板子的详细属性\nconst board = await eda.dmt_Board.getBoardInfo(targetName);\n\n// 3. 输出板子属性\nconsole.log('name:', board.name);\nconsole.log('parentProjectUuid:', board.parentProjectUuid);\nconsole.log('schematic:', board.schematic?.uuid);\nconsole.log('pcb:', board.pcb?.uuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\nconst targetName = boards[0].name;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const board = await eda.dmt_Board.getBoardInfo(targetName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('name:', board.name);\nconsole.log('parentProjectUuid:', board.parentProjectUuid);\nconsole.log('schematic:', board.schematic?.uuid);\nconsole.log('pcb:', board.pcb?.uuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取板子的详细属性",
+    "example.text.0": "1. 先盘点所有板子，取第一块的名称作为查询目标",
+    "example.text.1": "2. 按名称查询该板子的详细属性",
+    "example.text.2": "3. 输出板子属性",
     "params.boardName": "板子名称",
     "returns": "板子的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get detailed properties of Board",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.boardName": "Board name",
   "returns": "Board detailed properties of; if it is `undefined`, the retrieval failed"
 }

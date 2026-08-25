@@ -39,7 +39,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先插入一个待移除的子菜单项（id 树：[一级菜单 ID, 新项 ID]）\nconst menuId = await eda.sys_HeaderMenu.insertSystemHeaderMenuItem('pcb', ['Tools', '嘉立创示例_待移除项'], {\n  title: '嘉立创示例 待移除项',\n});\nconsole.log('待移除的菜单 ID：', menuId);\n\n// 2. 移除该菜单项（id 树：[一级菜单 ID, insert 返回的重写 ID]）\nconst removed = await eda.sys_HeaderMenu.removeSystemHeaderMenuItem(['Tools', menuId]);\nconsole.log('移除结果：', removed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const menuId = await eda.sys_HeaderMenu.insertSystemHeaderMenuItem('pcb', ['Tools', '嘉立创示例_待移除项'], {\n  title: '嘉立创示例 待移除项',\n});\nconsole.log('待移除的菜单 ID：', menuId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = await eda.sys_HeaderMenu.removeSystemHeaderMenuItem(['Tools', menuId]);\nconsole.log('移除结果：', removed);\n```"
         }
       ]
     }
@@ -53,6 +71,8 @@
     "remarks.text.4": "注意 1：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
     "remarks.text.5": "注意 2：本接口 **移除一级菜单** 为私有化部署版本专用功能，如若在其它版本调用将始终 `throw Error`",
     "remarks.text.6": "非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+    "example.text.0": "1. 先插入一个待移除的子菜单项（id 树：[一级菜单 ID, 新项 ID]）",
+    "example.text.1": "2. 移除该菜单项（id 树：[一级菜单 ID, insert 返回的重写 ID]）",
     "params.env": "环境",
     "params.id": "菜单项 ID 树，将会按照数组顺序按层级匹配菜单项，并移除数组最后一位对应的菜单项；仅传递一个元素时移除对应的一级菜单",
     "params.props": "其它参数，是否移除菜单项之前、之后的分隔线（仅在移除子菜单项时生效）",
@@ -66,6 +86,8 @@
   "remarks.text.4": "Note 1: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
   "remarks.text.5": "Note 2: The **remove first-level menu** function of this API is exclusive to the private deployment edition. Calling it in other editions will always `throw Error`",
   "remarks.text.6": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.env": "Environment",
   "params.id": "Menu item ID tree. It will match menu items by hierarchy in array order and remove the menu item corresponding to the last element; when only one element is passed, the corresponding first-level menu is removed",
   "params.props": "Other parameters. Whether to remove the separators before and after the menu item (only takes effect when removing a sub-menu item)",

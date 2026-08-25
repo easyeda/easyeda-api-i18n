@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 读取图元 ID\nconst primitiveId = poured.getState_PrimitiveId();\nconsole.log('primitiveId:', primitiveId);\n\n// 3. 用该 ID 通过管理类重新读取，验证 ID 有效\nconst again = await eda.pcb_PrimitivePoured.get(primitiveId);\nconsole.log('按 ID 重新读取：', again ? '成功' : '未找到');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = poured.getState_PrimitiveId();\nconsole.log('primitiveId:', primitiveId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const again = await eda.pcb_PrimitivePoured.get(primitiveId);\nconsole.log('按 ID 重新读取：', again ? '成功' : '未找到');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 获取画布上已有的覆铜填充图元",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 用该 ID 通过管理类重新读取，验证 ID 有效",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Primitive ID"
 }

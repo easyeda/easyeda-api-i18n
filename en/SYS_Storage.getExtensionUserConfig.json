@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先写入一条演示配置\nawait eda.sys_Storage.setExtensionUserConfig('嘉立创示例_单位', 'mm');\n\n// 2. 按 key 读取该配置\nconst value = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_单位');\n\n// 3. 读取不存在的 key，返回 undefined\nconst missing = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_不存在的键');\n\n// 4. 清理演示配置，还原存储现场\nawait eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_单位');\n\nconsole.log('读取到的值：', value);\nconsole.log('不存在的 key 返回：', missing);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_Storage.setExtensionUserConfig('嘉立创示例_单位', 'mm');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const value = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_单位');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const missing = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_不存在的键');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_单位');\n\nconsole.log('读取到的值：', value);\nconsole.log('不存在的 key 返回：', missing);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "获取扩展用户配置",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 先写入一条演示配置",
+    "example.text.1": "2. 按 key 读取该配置",
+    "example.text.2": "3. 读取不存在的 key，返回 undefined",
+    "example.text.3": "4. 清理演示配置，还原存储现场",
     "params.key": "配置项",
     "returns": "配置项对应的值，不存在将返回 `undefined`"
   },
   "title": "Get Extension user configuration",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.key": "Configuration item",
   "returns": "The value corresponding to the configuration item. `undefined` is returned if it does not exist"
 }

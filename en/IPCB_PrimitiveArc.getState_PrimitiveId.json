@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取图元 ID\nconst primitiveId = arc.getState_PrimitiveId();\n\n// 3. 用该 ID 从画布重新取回圆弧，验证 ID 有效\nconst refetched = await eda.pcb_PrimitiveArc.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched type:', refetched.getState_PrimitiveType());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = arc.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveArc.get(primitiveId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveArc.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched type:', refetched.getState_PrimitiveType());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 创建一段测试圆弧",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 用该 ID 从画布重新取回圆弧，验证 ID 有效",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Primitive ID"
 }

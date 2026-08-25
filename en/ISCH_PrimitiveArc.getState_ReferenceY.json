@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段测试圆弧，参考点 (500, 400)（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, null, null, 6, 1);\n\n// 2. 读取参考点 Y\nconst referenceY = arc.getState_ReferenceY();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('referenceY:', referenceY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.sch_PrimitiveArc.create(400, 300, 500, 400, 600, 300, null, null, 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const referenceY = arc.getState_ReferenceY();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('referenceY:', referenceY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：参考点 Y",
+    "example.text.0": "1. 创建一段测试圆弧，参考点 (500, 400)（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取参考点 Y",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "参考点 Y"
   },
   "title": "Get the property state: reference point Y",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Reference point Y"
 }

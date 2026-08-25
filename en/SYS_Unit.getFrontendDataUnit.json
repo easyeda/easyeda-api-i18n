@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前前端单位（返回 Promise，需要 await；结果为 ESYS_Unit 值，如 'mm'、'mil'、'in'）\nconst unit = await eda.sys_Unit.getFrontendDataUnit();\n\n// 2. 输出当前单位\nconsole.log('前端当前单位：', unit);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const unit = await eda.sys_Unit.getFrontendDataUnit();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('前端当前单位：', unit);\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取 EDA 前端数据单位跨度",
     "remarks.text.0": "此处指的是前端用户可以切换的单位，需要同时兼容原理图和 PCB 画布",
+    "example.text.0": "1. 读取当前前端单位（返回 Promise，需要 await；结果为 ESYS_Unit 值，如 'mm'、'mil'、'in'）",
+    "example.text.1": "2. 输出当前单位",
     "returns": "单位"
   },
   "title": "Get the EDA front-end data unit span",
   "remarks.text.0": "This refers to the units that front-end users can switch, and it needs to be compatible with both the schematic and PCB canvases",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Unit"
 }

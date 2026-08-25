@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 导出当前工程为文件\nconst projectFile = await eda.sys_FileManager.getProjectFile();\n\n// 2. 从工程文件中提取库配置信息\nconst libInfo = await eda.sys_FileManager.extractLibInfo(projectFile);\n\n// 3. 输出各类型库的引用数量（字段：devices / symbols / footprints / panelLibs）\nconsole.log('器件数：', libInfo.devices.length);\nconsole.log('符号数：', libInfo.symbols.length);\nconsole.log('封装数：', libInfo.footprints.length);\nconsole.log('面板库数：', libInfo.panelLibs.length);\n\n// 4. 列出第一个封装的库信息（uuid 可用于后续按 UUID 下载封装文件）\nconst firstFootprint = libInfo.footprints[0];\nconsole.log('首个封装标题：', firstFootprint?.title);\nconsole.log('首个封装 uuid：', firstFootprint?.uuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectFile = await eda.sys_FileManager.getProjectFile();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libInfo = await eda.sys_FileManager.extractLibInfo(projectFile);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('器件数：', libInfo.devices.length);\nconsole.log('符号数：', libInfo.symbols.length);\nconsole.log('封装数：', libInfo.footprints.length);\nconsole.log('面板库数：', libInfo.panelLibs.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const firstFootprint = libInfo.footprints[0];\nconsole.log('首个封装标题：', firstFootprint?.title);\nconsole.log('首个封装 uuid：', firstFootprint?.uuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "提取文件内的库配置信息",
+    "example.text.0": "1. 导出当前工程为文件",
+    "example.text.1": "2. 从工程文件中提取库配置信息",
+    "example.text.2": "3. 输出各类型库的引用数量（字段：devices / symbols / footprints / panelLibs）",
+    "example.text.3": "4. 列出第一个封装的库信息（uuid 可用于后续按 UUID 下载封装文件）",
     "params.data": "库文件",
     "returns": "库配置信息"
   },
   "title": "Extract the library configuration information from the file",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.data": "Library file",
   "returns": "Library configuration information"
 }

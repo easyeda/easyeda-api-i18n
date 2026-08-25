@@ -10,17 +10,28 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 获取指定模板的文件\nconst templateFile = await eda.pcb_ManufactureData.getBomTemplateFile('MyCustomTemplate');\nif (templateFile) {\n    await eda.sys_FileSystem.saveFile(templateFile);\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const templateFile = await eda.pcb_ManufactureData.getBomTemplateFile('MyCustomTemplate');\nif (templateFile) {\n    await eda.sys_FileSystem.saveFile(templateFile);\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取 BOM 模板文件",
+    "example.text.0": "获取指定模板的文件",
     "params.template": "BOM 模板名称",
     "returns": "BOM 模板文件"
   },
   "title": "Get BOM template file",
+  "example.text.0": null,
   "params.template": "BOM template name",
   "returns": "BOM template file"
 }

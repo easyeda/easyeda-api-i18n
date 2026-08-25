@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 取出器件的属性图元，定位 Designator（编号）属性\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取编号文本的 Y 坐标（原理图单位，1 单位 = 10mil）\nconst attrY = designator.getState_Y();\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('attrY:', attrY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrY = designator.getState_Y();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('attrY:', attrY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：坐标 Y",
+    "example.text.0": "1. 放置一个测试器件（属性图元随器件生成，无法单独创建）",
+    "example.text.1": "2. 取出器件的属性图元，定位 Designator（编号）属性",
+    "example.text.2": "3. 读取编号文本的 Y 坐标（原理图单位，1 单位 = 10mil）",
+    "example.text.3": "4. 清理测试器件（属性图元随器件一起删除）",
     "returns": "坐标 Y"
   },
   "title": "Get the property state: Y coordinate",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Y coordinate"
 }

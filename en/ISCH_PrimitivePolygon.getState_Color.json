@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个红色轮廓的测试多边形（SCH 坐标单位 10mil）\nconst line = [400, 300, 800, 300, 800, 600, 400, 600];\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000');\n\n// 2. 读取轮廓颜色\nconst color = polygon.getState_Color();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitivePolygon.delete([polygon.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = [400, 300, 800, 300, 800, 600, 400, 600];\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const color = polygon.getState_Color();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePolygon.delete([polygon.getState_PrimitiveId()]);\n\nconsole.log('color:', color);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：颜色",
+    "example.text.0": "1. 创建一个红色轮廓的测试多边形（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取轮廓颜色",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "颜色"
   },
   "title": "Get the property state: color",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Color"
 }

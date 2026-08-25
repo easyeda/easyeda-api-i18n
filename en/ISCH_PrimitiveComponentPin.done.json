@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 放置一个测试器件并取其引脚\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst pins = await comp.getAllPins();\nconst before = pins[0].getState_PinNumber();\n\n// 3. 异步模式改两个引脚的编号（此时画布尚未变化）\nconst pin1 = pins[0].toAsync();\npin1.setState_PinNumber('A1');\nconst pin2 = pins[1].toAsync();\npin2.setState_PinNumber('A2');\n\n// 4. 逐个提交，修改写入画布（保留现场供观察）\nawait pin1.done();\nawait pin2.done();\n\n// 5. 从画布重新取引脚，确认两脚编号都已更新\nconst pinsAfter = await comp.getAllPins();\n\nconsole.log('pin1:', before, '→', pinsAfter[0].getState_PinNumber());\nconsole.log('pin2:', pinsAfter[1].getState_PinNumber());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst pins = await comp.getAllPins();\nconst before = pins[0].getState_PinNumber();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pin1 = pins[0].toAsync();\npin1.setState_PinNumber('A1');\nconst pin2 = pins[1].toAsync();\npin2.setState_PinNumber('A2');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await pin1.done();\nawait pin2.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pinsAfter = await comp.getAllPins();\n\nconsole.log('pin1:', before, '→', pinsAfter[0].getState_PinNumber());\nconsole.log('pin2:', pinsAfter[1].getState_PinNumber());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置一个测试器件并取其引脚",
+    "example.text.2": "3. 异步模式改两个引脚的编号（此时画布尚未变化）",
+    "example.text.3": "4. 逐个提交，修改写入画布（保留现场供观察）",
+    "example.text.4": "5. 从画布重新取引脚，确认两脚编号都已更新",
     "returns": "器件引脚图元对象"
   },
   "title": "Apply the changes to the primitives to the canvas",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Device pin primitive object"
 }

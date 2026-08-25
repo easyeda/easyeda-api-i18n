@@ -23,7 +23,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 单个 C 编号查询（默认搜索系统库）\nconst one = await eda.lib_Device.getByLcscIds('C1523');\nconsole.log('single count:', one.length);\nconsole.log('[0] uuid:', one[0].uuid, 'supplierId:', one[0].supplierId);\n\n// 2. 批量查询多个 C 编号\nconst many = await eda.lib_Device.getByLcscIds(['C1523', 'C17168']);\nconsole.log('batch count:', many.length);\nmany.forEach((item, i) => {\n  console.log('[' + i + '] uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const one = await eda.lib_Device.getByLcscIds('C1523');\nconsole.log('single count:', one.length);\nconsole.log('[0] uuid:', one[0].uuid, 'supplierId:', one[0].supplierId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const many = await eda.lib_Device.getByLcscIds(['C1523', 'C17168']);\nconsole.log('batch count:', many.length);\nmany.forEach((item, i) => {\n  console.log('[' + i + '] uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
         }
       ]
     }
@@ -33,6 +51,8 @@
     "remarks.text.0": "默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；",
     "remarks.text.1": "如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true`；",
     "remarks.text.2": "私有化部署环境暂无法使用本接口",
+    "example.text.0": "1. 单个 C 编号查询（默认搜索系统库）",
+    "example.text.1": "2. 批量查询多个 C 编号",
     "params.lcscIds": "立创 C 编号数组",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.allowMultiMatch": "是否允许单个立创 C 编号匹配多个结果",
@@ -42,6 +62,8 @@
   "remarks.text.0": "By default, if multiple devices with the same C number are matched in the same library, only the first result will be returned;",
   "remarks.text.1": "If you want to return multiple results, set `allowMultiMatch` to `true`;",
   "remarks.text.2": "This API is temporarily unavailable in the private deployment environment",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.lcscIds": "Array of LCSC C numbers",
   "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
   "params.allowMultiMatch": "Whether a single LCSC C number is allowed to match multiple results",

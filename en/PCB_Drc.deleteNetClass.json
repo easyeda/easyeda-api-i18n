@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 建一个待删除的网络类（重名创建是幂等的，重复运行也安全）\nawait eda.pcb_Drc.createNetClass('嘉立创示例_待删网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 2. 删除该网络类\nconst result = await eda.pcb_Drc.deleteNetClass('嘉立创示例_待删网络类');\n\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.createNetClass('嘉立创示例_待删网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.deleteNetClass('嘉立创示例_待删网络类');\n\nconsole.log('result:', result);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除网络类",
+    "example.text.0": "1. 建一个待删除的网络类（重名创建是幂等的，重复运行也安全）",
+    "example.text.1": "2. 删除该网络类",
     "params.netClassName": "网络类名称",
     "returns": "操作是否成功"
   },
   "title": "Delete Net class",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.netClassName": "Net class name",
   "returns": "Whether the operation is successful"
 }

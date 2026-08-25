@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试过孔：孔径 20mil、外径 40mil（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\nconst viaId = via.getState_PrimitiveId();\n\n// 2. 读取修改前的孔径与外径\nconst beforeHole = via.getState_HoleDiameter();\nconst beforeDiameter = via.getState_Diameter();\n\n// 3. 批量修改：孔径从 20 调大到 30，外径从 40 调大到 60\nawait eda.pcb_PrimitiveVia.modify(viaId, { holeDiameter: 30, diameter: 60 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveVia.get(viaId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', viaId);\nconsole.log('holeDiameter:', beforeHole, '→', refreshed.getState_HoleDiameter());\nconsole.log('diameter:', beforeDiameter, '→', refreshed.getState_Diameter());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\nconst viaId = via.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeHole = via.getState_HoleDiameter();\nconst beforeDiameter = via.getState_Diameter();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.modify(viaId, { holeDiameter: 30, diameter: 60 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.pcb_PrimitiveVia.get(viaId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', viaId);\nconsole.log('holeDiameter:', beforeHole, '→', refreshed.getState_HoleDiameter());\nconsole.log('diameter:', beforeDiameter, '→', refreshed.getState_Diameter());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改过孔",
+    "example.text.0": "1. 创建待修改的测试过孔：孔径 20mil、外径 40mil（随机坐标避免重合）",
+    "example.text.1": "2. 读取修改前的孔径与外径",
+    "example.text.2": "3. 批量修改：孔径从 20 调大到 30，外径从 40 调大到 60",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "过孔图元对象"
   },
   "title": "Modify Via",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Via primitive object"

@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试文本\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_文本');\n\n// 2. 读取图元 ID\nconst primitiveId = text.getState_PrimitiveId();\n\n// 3. 用 ID 从画布重取实例，验证 ID 有效\nconst refetched = await eda.sch_PrimitiveText.get(primitiveId);\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched content:', refetched.getState_Content());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_文本');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = text.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveText.get(primitiveId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveText.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetched content:', refetched.getState_Content());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 创建一个测试文本",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 用 ID 从画布重取实例，验证 ID 有效",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Primitive ID"
 }

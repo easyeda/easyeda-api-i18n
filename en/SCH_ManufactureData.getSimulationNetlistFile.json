@@ -15,7 +15,21 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 导出 Ngspice 仿真网表（'Ngspice' 对应 ESCH_SimulationNetlistType.NGSPICE）\n// const simNetlistFile = await eda.sch_ManufactureData.getSimulationNetlistFile('嘉立创示例_仿真网表', 'Ngspice');\n// console.log('导出文件名：', simNetlistFile?.name);\n// console.log('文件大小：', simNetlistFile?.size);\n\n// 2. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地，或交给仿真工具直接使用\nconsole.log('演示调用：getSimulationNetlistFile(文件名, 网表类型)');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('演示调用：getSimulationNetlistFile(文件名, 网表类型)');\n```"
         }
       ]
     }
@@ -23,12 +37,16 @@
   "_source": {
     "title": "获取仿真网表文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "1. 导出 Ngspice 仿真网表（'Ngspice' 对应 ESCH_SimulationNetlistType.NGSPICE）\nconst simNetlistFile = await eda.sch_ManufactureData.getSimulationNetlistFile('嘉立创示例_仿真网表', 'Ngspice');\nconsole.log('导出文件名：', simNetlistFile?.name);\nconsole.log('文件大小：', simNetlistFile?.size);",
+    "example.text.1": "2. 拿到文件后用 sys_FileSystem.saveFile() 保存到本地，或交给仿真工具直接使用",
     "params.fileName": "文件名",
     "params.netlistType": "网表类型",
     "returns": "仿真网表文件数据"
   },
   "title": "Get the simulation netlist file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.fileName": "File name",
   "params.netlistType": "Netlist type",
   "returns": "Simulation netlist file data"

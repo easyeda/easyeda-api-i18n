@@ -27,7 +27,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程所属团队\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 获取该团队下所有工程的 UUID\nconst projectUuids = await eda.dmt_Project.getAllProjectsUuid(teamUuid);\n\nconsole.log('projectCount:', projectUuids.length);\nconsole.log('projectUuids:', projectUuids.join(', '));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectUuids = await eda.dmt_Project.getAllProjectsUuid(teamUuid);\n\nconsole.log('projectCount:', projectUuids.length);\nconsole.log('projectUuids:', projectUuids.join(', '));\n```"
         }
       ]
     }
@@ -38,6 +56,8 @@
     "remarks.text.1": "如若指定 `folderUuid`，则获取指定文件夹下的所有工程；",
     "remarks.text.2": "`teamUuid`、`folderUuid` 需要且仅允许指定其一，如若都指定则只取 `folderUuid`；",
     "remarks.text.3": "如若指定 `workspaceUuid`，则在指定 Workspace 下获取指定团队/文件夹下的所有工程",
+    "example.text.0": "1. 取当前工程所属团队",
+    "example.text.1": "2. 获取该团队下所有工程的 UUID",
     "params.teamUuid": "团队 UUID",
     "params.folderUuid": "文件夹 UUID，如若不指定，则默认为团队的根文件夹",
     "params.workspaceUuid": "工作区 UUID",
@@ -48,6 +68,8 @@
   "remarks.text.1": "If `folderUuid` is specified, all projects under the specified folder are obtained;",
   "remarks.text.2": "`teamUuid`, `folderUuid` only one of them may be specified, if both are specified, only `folderUuid`;",
   "remarks.text.3": "If `workspaceUuid` is specified, all projects under the specified team/folder are obtained in the specified Workspace",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.teamUuid": "Team UUID",
   "params.folderUuid": "Folder UUID. If not specified, it defaults to the root folder of the team",
   "params.workspaceUuid": "Workspace UUID",

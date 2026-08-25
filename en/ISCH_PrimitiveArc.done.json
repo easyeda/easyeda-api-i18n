@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一段测试圆弧：起点 (x,y)、参考点 (x+100,y+100)、终点 (x+200,y)（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y, null, null, 6, 1);\n\n// 3. 切换异步模式，累计两处修改（终点右移 + 改颜色）\nconst asyncArc = arc.toAsync();\nasyncArc.setState_EndX(x + 300);\nasyncArc.setState_Color('#00AA00');\n\n// 4. 一次性提交到画布\nawait asyncArc.done();\n\n// 5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('endX:', x + 200, '→', refetched.getState_EndX());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y, null, null, 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncArc = arc.toAsync();\nasyncArc.setState_EndX(x + 300);\nasyncArc.setState_Color('#00AA00');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await asyncArc.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('endX:', x + 200, '→', refetched.getState_EndX());\nconsole.log('color:', '#00AA00', '→', refetched.getState_Color());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将对图元的更改应用到画布",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合",
+    "example.text.1": "2. 创建一段测试圆弧：起点 (x,y)、参考点 (x+100,y+100)、终点 (x+200,y)（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 切换异步模式，累计两处修改（终点右移 + 改颜色）",
+    "example.text.3": "4. 一次性提交到画布",
+    "example.text.4": "5. 从画布重新读取，确认两处修改都已生效（保留现场供观察）",
     "returns": "圆弧图元对象"
   },
   "title": "Apply the changes to the primitives to the canvas",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Arc primitive object"
 }

@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断是否为 EasyEDA Pro 国际版（同步返回布尔值）\nconst isEasyEDAPro = eda.sys_Environment.isEasyEDAProEdition();\n\n// 2. 输出判断结果（国际版为 true，嘉立创 EDA 专业版为 false）\nconsole.log('是否 EasyEDA Pro 国际版：', isEasyEDAPro);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isEasyEDAPro = eda.sys_Environment.isEasyEDAProEdition();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否 EasyEDA Pro 国际版：', isEasyEDAPro);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否为 EasyEDA Pro 版本",
+    "example.text.0": "1. 判断是否为 EasyEDA Pro 国际版（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（国际版为 true，嘉立创 EDA 专业版为 false）",
     "returns": "是否为 EasyEDA Pro 版本"
   },
   "title": "Whether it is the EasyEDA Pro edition",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is the EasyEDA Pro edition"
 }

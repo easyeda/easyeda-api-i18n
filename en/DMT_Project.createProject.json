@@ -10,13 +10,33 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试工程（友好名带时间戳避免重名，名称与团队留空走默认）\nconst projectUuid = await eda.dmt_Project.createProject(\n  '嘉立创示例_工程 ' + Date.now(),\n  undefined,\n  undefined,\n  undefined,\n  '嘉立创示例：工程创建演示',\n);\n\n// 2. 等待工作区同步后回读，确认工程已落地\nawait new Promise(r => setTimeout(r, 1500));\nconst brief = await eda.dmt_Project.getProjectInfo(projectUuid);\n\nconst folderLabel = !brief?.folderUuid ? '(根目录)' : brief.folderUuid;\n\nconsole.log('projectUuid:', projectUuid);\nconsole.log('friendlyName:', brief?.friendlyName);\nconsole.log('folderUuid:', folderLabel);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectUuid = await eda.dmt_Project.createProject(\n  '嘉立创示例_工程 ' + Date.now(),\n  undefined,\n  undefined,\n  undefined,\n  '嘉立创示例：工程创建演示',\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst brief = await eda.dmt_Project.getProjectInfo(projectUuid);\n\nconst folderLabel = !brief?.folderUuid ? '(根目录)' : brief.folderUuid;\n\nconsole.log('projectUuid:', projectUuid);\nconsole.log('friendlyName:', brief?.friendlyName);\nconsole.log('folderUuid:', folderLabel);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建工程",
+    "example.text.0": "1. 创建测试工程（友好名带时间戳避免重名，名称与团队留空走默认）",
+    "example.text.1": "2. 等待工作区同步后回读，确认工程已落地",
     "params.projectFriendlyName": "工程友好名称",
     "params.projectName": "工程名称，不可重复，仅支持字母 `a-zA-Z`、数字 `0-9`、中划线 `-`，如若不指定，则根据工程友好名称自动生成",
     "params.teamUuid": "团队 UUID，如若不指定，则默认为个人；在不存在个人工程的环境下必须指定团队 UUID",
@@ -26,6 +46,8 @@
     "returns": "工程 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Project",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.projectFriendlyName": "Project friendly name",
   "params.projectName": "Project name, which cannot be duplicated. Only letters `a-zA-Z`, digits `0-9`, and hyphens `-` are supported. If not specified, it is automatically generated based on the project friendly name",
   "params.teamUuid": "Team UUID. If not specified, it defaults to personal. In an environment where personal projects do not exist, a team UUID must be specified",

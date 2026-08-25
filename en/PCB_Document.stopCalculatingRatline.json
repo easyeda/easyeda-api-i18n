@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开（飞线开关作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 停止飞线计算\nconst stopped = await eda.pcb_Document.stopCalculatingRatline();\nconsole.log('stopped:', stopped);\n\n// 3. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const stopped = await eda.pcb_Document.stopCalculatingRatline();\nconsole.log('stopped:', stopped);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "停止飞线计算功能",
+    "example.text.0": "1. 创建测试 PCB 并打开（飞线开关作用于当前激活的 PCB）",
+    "example.text.1": "2. 停止飞线计算",
+    "example.text.2": "3. 清理测试 PCB",
     "returns": "操作是否成功",
     "deprecated": "since EDA v4.2"
   },
   "title": "Stop the ratline calculation function",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the operation is successful",
   "deprecated": "since EDA v4.2"
 }

@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 单选：对象数组让 value 与展示文案分离，默认选中 TOP\neda.sys_Dialog.showSelectDialog(\n  [\n    { value: 'TOP', displayContent: '顶层' },\n    { value: 'BOTTOM', displayContent: '底层' }\n  ],\n  '请选择丝印放置的层',   // 选择框上方文字\n  '设置会应用到全部丝印', // 选择框下方文字\n  '丝印层设置',           // 窗口标题\n  'TOP',                  // 默认选项（匹配选项的 value）\n  false,                  // 单选\n  (value) => {\n    console.log('单选结果：', value);\n  }\n);\n\n// 2. 多选：字符串数组作选项，multiple 传 true，默认选中两项\neda.sys_Dialog.showSelectDialog(\n  ['DRC', 'BOM', 'Gerber'],\n  '请选择需要导出的内容', // 多选框上方文字\n  '',                    // 多选框下方文字\n  '导出设置',            // 窗口标题\n  ['DRC', 'BOM'],        // 默认选项数组\n  true,                  // 多选\n  (values) => {\n    console.log('多选结果：', values);\n  }\n);\n\n// 3. 两个窗口已弹出；回调需用户点击确认后才会触发\nconsole.log('已弹出选择窗口（单选 + 多选）');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Dialog.showSelectDialog(\n  [\n    { value: 'TOP', displayContent: '顶层' },\n    { value: 'BOTTOM', displayContent: '底层' }\n  ],\n  '请选择丝印放置的层',   // 选择框上方文字\n  '设置会应用到全部丝印', // 选择框下方文字\n  '丝印层设置',           // 窗口标题\n  'TOP',                  // 默认选项（匹配选项的 value）\n  false,                  // 单选\n  (value) => {\n    console.log('单选结果：', value);\n  }\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Dialog.showSelectDialog(\n  ['DRC', 'BOM', 'Gerber'],\n  '请选择需要导出的内容', // 多选框上方文字\n  '',                    // 多选框下方文字\n  '导出设置',            // 窗口标题\n  ['DRC', 'BOM'],        // 默认选项数组\n  true,                  // 多选\n  (values) => {\n    console.log('多选结果：', values);\n  }\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('已弹出选择窗口（单选 + 多选）');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "弹出选择窗口",
+    "example.text.0": "1. 单选：对象数组让 value 与展示文案分离，默认选中 TOP",
+    "example.text.1": "2. 多选：字符串数组作选项，multiple 传 true，默认选中两项",
+    "example.text.2": "3. 两个窗口已弹出；回调需用户点击确认后才会触发",
     "params.options": "选项列表，可以为字符串数组或对象数组，在未指定 `defaultOption` 时，默认值为列表的第一项； 如若为字符串数组，则选项的值和选项的展示内容将保持一致； 如若为对象数组，则 `value` 表示选项的值，`displayContent` 表示选项的展示内容",
     "params.beforeContent": "选择框上方文字",
     "params.afterContent": "选择框下方文字",
@@ -27,6 +57,9 @@
     "returns": "用户选择的值，对应传入的 `options` 中的 `value` 字段"
   },
   "title": "Show a select dialog",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.options": "Option list, which can be an array of strings or an array of objects. When `defaultOption` is not specified, the default value is the first item of the list. If it is an array of strings, the value and display content of the option remain the same. If it is an array of objects, `value` represents the value of the option, and `displayContent` represents the display content of the option",
   "params.beforeContent": "Text above the select box",
   "params.afterContent": "Text below the select box",

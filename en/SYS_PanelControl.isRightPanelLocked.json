@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 查询右侧面板当前锁定状态（异步方法，需要 await）\nconst locked = await eda.sys_PanelControl.isRightPanelLocked();\n\n// 2. 输出查询结果（true 表示已锁定，false 表示未锁定）\nconsole.log('右侧面板锁定状态：', locked);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const locked = await eda.sys_PanelControl.isRightPanelLocked();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('右侧面板锁定状态：', locked);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询右侧面板是否已锁定",
+    "example.text.0": "1. 查询右侧面板当前锁定状态（异步方法，需要 await）",
+    "example.text.1": "2. 输出查询结果（true 表示已锁定，false 表示未锁定）",
     "returns": "是否已锁定"
   },
   "title": "Query whether the right panel is locked",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether Already lock"
 }

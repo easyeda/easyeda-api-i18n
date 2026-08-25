@@ -10,13 +10,35 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先导入一份菜单数据，让移除操作有实际对象\nawait eda.sys_HeaderMenu.insertHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单', title: '嘉立创示例', menuItems: [{ id: '嘉立创示例_子项', title: '示例子项' }] }],\n});\nconsole.log('已导入菜单数据');\n\n// 2. 移除全部已导入的顶部菜单数据（同步方法，无需 await）\neda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已移除导入的顶部菜单数据');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_HeaderMenu.insertHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单', title: '嘉立创示例', menuItems: [{ id: '嘉立创示例_子项', title: '示例子项' }] }],\n});\nconsole.log('已导入菜单数据');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已移除导入的顶部菜单数据');\n```"
         }
       ]
     }
   },
   "_source": {
-    "title": "移除顶部菜单数据"
+    "title": "移除顶部菜单数据",
+    "example.text.0": "1. 先导入一份菜单数据，让移除操作有实际对象",
+    "example.text.1": "2. 移除全部已导入的顶部菜单数据（同步方法，无需 await）"
   },
-  "title": "Remove Top menu data"
+  "title": "Remove Top menu data",
+  "example.text.0": null,
+  "example.text.1": null
 }

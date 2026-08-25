@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建带网络名的过孔，让 PCB 中出现可查询的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n\n// 2. 获取该网络关联的全部图元\nconst primitives = await eda.pcb_Net.getAllPrimitivesByNet('嘉立创示例_NET1');\n\n// 3. 查看图元数据对象的典型字段（pcbItemPrimitiveType 为图元类型名称）\nconst first = primitives[0];\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('primitiveCount:', primitives.length);\nconsole.log('firstItemPrimitiveType:', first?.pcbItemPrimitiveType);\nconsole.log('firstNet:', first?.net);\nconsole.log('firstCenter:', first?.center);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitives = await eda.pcb_Net.getAllPrimitivesByNet('嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const first = primitives[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('primitiveCount:', primitives.length);\nconsole.log('firstItemPrimitiveType:', first?.pcbItemPrimitiveType);\nconsole.log('firstNet:', first?.net);\nconsole.log('firstCenter:', first?.center);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取关联指定网络的所有图元",
+    "example.text.0": "1. 创建带网络名的过孔，让 PCB 中出现可查询的网络",
+    "example.text.1": "2. 获取该网络关联的全部图元",
+    "example.text.2": "3. 查看图元数据对象的典型字段（pcbItemPrimitiveType 为图元类型名称）",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.net": "网络名称",
     "params.primitiveTypes": "图元类型数组，如若指定图元类型不存在网络属性，返回的数据将恒为空",
     "returns": "图元对象数组"
   },
   "title": "Get all primitives associated with the specified net",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "params.primitiveTypes": "Array of primitive types. If the specified primitive type has no net property, the returned data will always be empty",
   "returns": "Array of primitive objects"

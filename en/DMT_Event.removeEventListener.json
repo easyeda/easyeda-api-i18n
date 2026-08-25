@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_tab_remove';\n\n// 1. 先注册一个监听作为移除目标\neda.dmt_Event.addEditorTabEventListener(\n  listenerId,\n  'toggle',\n  () => {}\n);\nconst registered = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n\n// 2. 移除该监听\nconst removed = eda.dmt_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n\n// 3. 回读确认已不存在\nconst existAfter = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('existAfter:', existAfter);\n\n// 4. 重复移除同一 id：返回 false（本就未注册）\nconst removedAgain = eda.dmt_Event.removeEventListener(listenerId);\nconsole.log('removedAgain:', removedAgain);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_tab_remove';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.dmt_Event.addEditorTabEventListener(\n  listenerId,\n  'toggle',\n  () => {}\n);\nconst registered = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('registered:', registered);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.dmt_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const existAfter = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('existAfter:', existAfter);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removedAgain = eda.dmt_Event.removeEventListener(listenerId);\nconsole.log('removedAgain:', removedAgain);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "移除事件监听",
+    "example.text.0": "1. 先注册一个监听作为移除目标",
+    "example.text.1": "2. 移除该监听",
+    "example.text.2": "3. 回读确认已不存在",
+    "example.text.3": "4. 重复移除同一 id：返回 false（本就未注册）",
     "params.id": "事件 ID",
     "returns": "是否移除指定事件监听"
   },
   "title": "Remove Event listener",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Event ID",
   "returns": "Whether Remove Specify event listener"
 }

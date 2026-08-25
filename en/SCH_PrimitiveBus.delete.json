@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两条待删除的测试总线（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst bus1 = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\nconst bus2 = await eda.sch_PrimitiveBus.create('ADDR[0..15]', [x, y + 200, x + 400, y + 200]);\n\n// 2. 记录删除前的总线数量\nconst beforeCount = (await eda.sch_PrimitiveBus.getAll()).length;\n\n// 3. 分别以 ID 字符串和图元对象两种形式删除两条总线\nconst deleted1 = await eda.sch_PrimitiveBus.delete(bus1.getState_PrimitiveId());\nconst deleted2 = await eda.sch_PrimitiveBus.delete(bus2);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.sch_PrimitiveBus.getAll()).length;\n\nconsole.log('deleted by id:', deleted1);\nconsole.log('deleted by object:', deleted2);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst bus1 = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\nconst bus2 = await eda.sch_PrimitiveBus.create('ADDR[0..15]', [x, y + 200, x + 400, y + 200]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeCount = (await eda.sch_PrimitiveBus.getAll()).length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted1 = await eda.sch_PrimitiveBus.delete(bus1.getState_PrimitiveId());\nconst deleted2 = await eda.sch_PrimitiveBus.delete(bus2);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterCount = (await eda.sch_PrimitiveBus.getAll()).length;\n\nconsole.log('deleted by id:', deleted1);\nconsole.log('deleted by object:', deleted2);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除总线",
+    "example.text.0": "1. 创建两条待删除的测试总线（随机坐标避免重合，SCH 坐标单位 10mil）",
+    "example.text.1": "2. 记录删除前的总线数量",
+    "example.text.2": "3. 分别以 ID 字符串和图元对象两种形式删除两条总线",
+    "example.text.3": "4. 删除类保留现场（图元已删除，不恢复）",
     "params.primitiveIds": "总线的图元 ID 或总线图元对象",
     "returns": "删除操作是否成功"
   },
   "title": "Delete the bus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Primitive ID of the bus or the bus primitive object",
   "returns": "Delete Whether the operation is successful"
 }

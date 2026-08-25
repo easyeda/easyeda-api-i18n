@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个无网络的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Net();\n\n// 2. 异步模式下挂载网络并提交\nconst a = pad.toAsync();\na.setState_Net('嘉立创示例_NET1');\nawait a.done();\n\n// 3. 从画布重新读取，确认网络已挂载（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('net:', before, '→', ref.getState_Net());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Net();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_Net('嘉立创示例_NET1');\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('net:', before, '→', ref.getState_Net());\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "设置属性状态：网络",
     "remarks.text.0": "本接口仅在 PCB 编辑器可用，空字符串与 `undefined` 均被视为空网络",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个无网络的贴片焊盘",
+    "example.text.1": "2. 异步模式下挂载网络并提交",
+    "example.text.2": "3. 从画布重新读取，确认网络已挂载（保留现场供观察）",
     "params.net": "网络名称",
     "returns": "焊盘图元对象"
   },
   "title": "Set the property state: net",
   "remarks.text.0": "This API is only available in the PCB editor. Both an empty string and `undefined` are treated as an empty net",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.net": "Net name",
   "returns": "Pad primitive object"
 }

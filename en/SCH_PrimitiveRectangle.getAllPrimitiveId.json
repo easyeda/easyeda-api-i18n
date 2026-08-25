@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试矩形作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 0, 0, '#FF0000');\nconst rectId = rect.getState_PrimitiveId();\n\n// 2. 获取全部矩形的图元 ID\nconst allIds = await eda.sch_PrimitiveRectangle.getAllPrimitiveId();\n\n// 3. 清理测试矩形（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n\nconsole.log('total rectangle ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(rectId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 400, 300, 0, 0, '#FF0000');\nconst rectId = rect.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.sch_PrimitiveRectangle.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([rectId]);\n\nconsole.log('total rectangle ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(rectId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有矩形的图元 ID",
+    "example.text.0": "1. 创建一个测试矩形作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部矩形的图元 ID",
+    "example.text.2": "3. 清理测试矩形（查询类需要清理）",
     "returns": "矩形的图元 ID 数组"
   },
   "title": "Get all Rectangle primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Array of Rectangle primitive IDs"
 }

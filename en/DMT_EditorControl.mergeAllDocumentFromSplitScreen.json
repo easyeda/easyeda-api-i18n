@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 制造\"存在子分屏\"的前提：归一化布局后打开两个文档并拆出一个分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nawait eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n\n// 2. 合并所有分屏，标签页全部回到初始分屏\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n\n// 3. 回读分屏树，确认已无子分屏\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\nconsole.log('child splits left:', tree.children?.length ?? 0);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nawait eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tree = await eda.dmt_EditorControl.getSplitScreenTree();\nconsole.log('child splits left:', tree.children?.length ?? 0);\n```"
         }
       ]
     }
@@ -23,9 +50,15 @@
   "_source": {
     "title": "合并所有分屏",
     "remarks.text.0": "仅当存在子分屏时可用，将会取消所有子分屏，并将所有文档标签页合并到初始分屏内",
+    "example.text.0": "1. 制造\"存在子分屏\"的前提：归一化布局后打开两个文档并拆出一个分屏",
+    "example.text.1": "2. 合并所有分屏，标签页全部回到初始分屏",
+    "example.text.2": "3. 回读分屏树，确认已无子分屏",
     "returns": "操作是否成功"
   },
   "title": "Merge all split screens",
   "remarks.text.0": "Only available when child split screens exist. It will cancel all child split screens and merge all document tabs into the initial split screen",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the operation is successful"
 }

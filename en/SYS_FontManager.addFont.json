@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 添加一个字体到字体列表\nconst added = await eda.sys_FontManager.addFont('嘉立创示例_测试字体');\n\n// 2. 确认字体已进入列表\nconst fonts = await eda.sys_FontManager.getFontsList();\n\n// 3. 清理测试字体，恢复原有配置\nawait eda.sys_FontManager.deleteFont('嘉立创示例_测试字体');\n\nconsole.log('添加结果：', added);\nconsole.log('已进入字体列表：', fonts.includes('嘉立创示例_测试字体'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const added = await eda.sys_FontManager.addFont('嘉立创示例_测试字体');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fonts = await eda.sys_FontManager.getFontsList();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_FontManager.deleteFont('嘉立创示例_测试字体');\n\nconsole.log('添加结果：', added);\nconsole.log('已进入字体列表：', fonts.includes('嘉立创示例_测试字体'));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "添加字体到字体列表",
+    "example.text.0": "1. 添加一个字体到字体列表",
+    "example.text.1": "2. 确认字体已进入列表",
+    "example.text.2": "3. 清理测试字体，恢复原有配置",
     "params.fontName": "字体名称",
     "returns": "添加操作是否成功"
   },
   "title": "Add Font to font list",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.fontName": "Font name",
   "returns": "Add Whether the operation is successful"
 }

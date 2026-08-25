@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n//    （当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 创建两个待删除的测试引脚（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin1 = await eda.sch_PrimitivePin.create(x, y, '1', 'DEL1', 0, 10, null, 'None', 'Passive');\nconst pin2 = await eda.sch_PrimitivePin.create(x, y + 200, '2', 'DEL2', 0, 10, null, 'None', 'Passive');\n\n// 2. 记录删除前的引脚数量\nconst beforeCount = (await eda.sch_PrimitivePin.getAll()).length;\n\n// 3. 分别以 ID 字符串和图元对象两种形式删除两个引脚\nconst deleted1 = await eda.sch_PrimitivePin.delete(pin1.getState_PrimitiveId());\nconst deleted2 = await eda.sch_PrimitivePin.delete(pin2);\n\n// 4. 删除类保留现场（图元已删除，不恢复）\nconst afterCount = (await eda.sch_PrimitivePin.getAll()).length;\n\nconsole.log('deleted by id:', deleted1);\nconsole.log('deleted by object:', deleted2);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin1 = await eda.sch_PrimitivePin.create(x, y, '1', 'DEL1', 0, 10, null, 'None', 'Passive');\nconst pin2 = await eda.sch_PrimitivePin.create(x, y + 200, '2', 'DEL2', 0, 10, null, 'None', 'Passive');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeCount = (await eda.sch_PrimitivePin.getAll()).length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted1 = await eda.sch_PrimitivePin.delete(pin1.getState_PrimitiveId());\nconst deleted2 = await eda.sch_PrimitivePin.delete(pin2);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterCount = (await eda.sch_PrimitivePin.getAll()).length;\n\nconsole.log('deleted by id:', deleted1);\nconsole.log('deleted by object:', deleted2);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除引脚",
+    "example.text.0": "0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n（当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）",
+    "example.text.1": "1. 创建两个待删除的测试引脚（随机坐标避免重合）",
+    "example.text.2": "2. 记录删除前的引脚数量",
+    "example.text.3": "3. 分别以 ID 字符串和图元对象两种形式删除两个引脚",
+    "example.text.4": "4. 删除类保留现场（图元已删除，不恢复）",
     "params.primitiveIds": "引脚的图元 ID 或引脚图元对象",
     "returns": "删除操作是否成功"
   },
   "title": "Delete Pin",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveIds": "Pin primitive ID or Pin primitive object",
   "returns": "Delete Whether the operation is successful"
 }

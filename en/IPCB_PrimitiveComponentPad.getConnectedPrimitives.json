@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置测试器件，取第一个焊盘的中心坐标\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\nconst pin = (await comp.getAllPins())[0];\nconst padX = pin.getState_X();\nconst padY = pin.getState_Y();\n\n// 2. 从焊盘中心拉一段走线（起点正好落在中心 → 属于中心连接）\nconst line = await eda.pcb_PrimitiveLine.create('', 1, padX, padY, padX + 600, padY, 10);\nconst lineId = line.getState_PrimitiveId();\n\n// 3. 只查中心连接的图元\nconst centreConnected = await pin.getConnectedPrimitives(true);\n\n// 4. 查所有接触的图元\nconst allConnected = await pin.getConnectedPrimitives(false);\n\n// 5. 清理测试图元\nawait eda.pcb_PrimitiveLine.delete([lineId]);\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('centreConnectedCount:', centreConnected.length);\nconsole.log('centreContainsLine:', centreConnected.some(p => p.getState_PrimitiveId() === lineId));\nconsole.log('allConnectedCount:', allConnected.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\nconst pin = (await comp.getAllPins())[0];\nconst padX = pin.getState_X();\nconst padY = pin.getState_Y();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = await eda.pcb_PrimitiveLine.create('', 1, padX, padY, padX + 600, padY, 10);\nconst lineId = line.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const centreConnected = await pin.getConnectedPrimitives(true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allConnected = await pin.getConnectedPrimitives(false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveLine.delete([lineId]);\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('centreConnectedCount:', centreConnected.length);\nconsole.log('centreContainsLine:', centreConnected.some(p => p.getState_PrimitiveId() === lineId));\nconsole.log('allConnectedCount:', allConnected.length);\n```"
         }
       ]
     }
@@ -23,9 +68,19 @@
   "_source": {
     "title": "获取连接的图元",
     "remarks.text.0": "本接口可以获取到与焊盘直接接触的图元",
+    "example.text.0": "1. 放置测试器件，取第一个焊盘的中心坐标",
+    "example.text.1": "2. 从焊盘中心拉一段走线（起点正好落在中心 → 属于中心连接）",
+    "example.text.2": "3. 只查中心连接的图元",
+    "example.text.3": "4. 查所有接触的图元",
+    "example.text.4": "5. 清理测试图元",
     "params.onlyCentreConnection": "是否仅中心连接，如若为 `true` 则仅获取中心连接的图元（直线、圆弧线、过孔），如若为 `false` 则获取所有接触的图元"
   },
   "title": "Get connected primitives",
   "remarks.text.0": "This API can get the primitives that are in direct contact with the pad",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.onlyCentreConnection": "Whether to only use center connection. If it is `true`, only center-connected primitives (lines, arc lines, vias) are obtained; if it is `false`, all contacting primitives are obtained"
 }

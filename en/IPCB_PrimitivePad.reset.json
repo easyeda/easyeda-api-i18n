@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在顶层放置一个未旋转的圆形贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 异步模式下把旋转改成 45 度（尚未提交）\nconst a = pad.toAsync();\na.setState_Rotation(45);\n\n// 3. 重置：丢弃未提交的修改，回到画布当前状态\nawait a.reset();\n\n// 4. 从画布重新读取，确认旋转仍是 0（reset 后要以重新 get() 的结果为准）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\n// 5. 清理测试图元\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('rotationAfterReset:', ref.getState_Rotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_Rotation(45);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await a.reset();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('rotationAfterReset:', ref.getState_Rotation());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",
+    "example.text.0": "1. 在顶层放置一个未旋转的圆形贴片焊盘",
+    "example.text.1": "2. 异步模式下把旋转改成 45 度（尚未提交）",
+    "example.text.2": "3. 重置：丢弃未提交的修改，回到画布当前状态",
+    "example.text.3": "4. 从画布重新读取，确认旋转仍是 0（reset 后要以重新 get() 的结果为准）",
+    "example.text.4": "5. 清理测试图元",
     "returns": "焊盘图元对象"
   },
   "title": "Reset the async primitive to the current canvas state",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Pad primitive object"
 }

@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，在 (x, y) 处创建一个顶层图像\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n\n// 2. 读取 BBox 左上点坐标 X\nconst imageX = image.getState_X();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveImage.delete([image.getState_PrimitiveId()]);\n\nconsole.log('x:', imageX);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imageX = image.getState_X();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveImage.delete([image.getState_PrimitiveId()]);\n\nconsole.log('x:', imageX);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：BBox 左上点坐标 X",
+    "example.text.0": "1. 生成本次运行专用的坐标，在 (x, y) 处创建一个顶层图像",
+    "example.text.1": "2. 读取 BBox 左上点坐标 X",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "BBox 左上点坐标 X"
   },
   "title": "Get the property state: BBox top-left point coordinates X",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "BBox top-left point coordinates X"
 }

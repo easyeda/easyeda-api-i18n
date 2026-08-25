@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 定义矩形区域（右边界在 x = 100）\nconst zone = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n\n// 2. 外部点：到右边界的水平距离为 50\nconst outsidePoint = { x: 150, y: 40 };\nconsole.log('外部点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, outsidePoint));\n\n// 3. 内部点：在多边形内部时返回 0\nconst insidePoint = { x: 50, y: 40 };\nconsole.log('内部点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, insidePoint));\n\n// 4. 斜向最近边不是正对的那条边时，结果取真实垂线距离\nconst diagonalPoint = { x: 130, y: 110 };\nconsole.log('斜向点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, diagonalPoint));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zone = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const outsidePoint = { x: 150, y: 40 };\nconsole.log('外部点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, outsidePoint));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const insidePoint = { x: 50, y: 40 };\nconsole.log('内部点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, insidePoint));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const diagonalPoint = { x: 130, y: 110 };\nconsole.log('斜向点到边界的最短距离：', eda.sys_Math.distanceToPoint(zone, diagonalPoint));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "计算点到多边形边界的最短距离",
+    "example.text.0": "1. 定义矩形区域（右边界在 x = 100）",
+    "example.text.1": "2. 外部点：到右边界的水平距离为 50",
+    "example.text.2": "3. 内部点：在多边形内部时返回 0",
+    "example.text.3": "4. 斜向最近边不是正对的那条边时，结果取真实垂线距离",
     "params.polygon": "多边形",
     "params.point": "待计算的点",
     "returns": "最短距离，如点在多边形内部则返回 `0`"
   },
   "title": "Calculate the shortest distance from a point to the polygon boundary",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon": "Polygon",
   "params.point": "The point to calculate",
   "returns": "Shortest distance. If the point is inside the polygon, `0` is returned"

@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开指定名称的内置 UI 窗口（异步方法，需要 await；这里用占位名称演示调用方式）\nawait eda.sys_Window.openUI('嘉立创示例_UI窗口');\n\n// 2. 调用完成（未知 uiName 静默无效，不抛错）\nconsole.log('openUI 调用完成');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_Window.openUI('嘉立创示例_UI窗口');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('openUI 调用完成');\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "打开 UI 窗口",
     "remarks.text.0": "非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+    "example.text.0": "1. 打开指定名称的内置 UI 窗口（异步方法，需要 await；这里用占位名称演示调用方式）",
+    "example.text.1": "2. 调用完成（未知 uiName 静默无效，不抛错）",
     "params.uiName": "UI 名称",
     "params.args": "可选参数对象"
   },
   "title": "Open UI window",
   "remarks.text.0": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.uiName": "UI name",
   "params.args": "Optional parameter object"
 }

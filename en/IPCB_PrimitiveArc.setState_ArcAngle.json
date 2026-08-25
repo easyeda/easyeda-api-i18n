@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 2000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一段 90° 测试圆弧（PCB 坐标单位 mil，跨度 500×300）\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\n\n// 3. 读取修改前的角度\nconst before = arc.getState_ArcAngle();\n\n// 4. 切换异步模式并修改角度（90° → 45°）\nconst asyncArc = arc.toAsync();\nasyncArc.setState_ArcAngle(45);\nawait asyncArc.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveArc.get(arc.getState_PrimitiveId());\nconst after = refetched.getState_ArcAngle();\n\nconsole.log('arcAngle:', before, '→', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = arc.getState_ArcAngle();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncArc = arc.toAsync();\nasyncArc.setState_ArcAngle(45);\nawait asyncArc.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveArc.get(arc.getState_PrimitiveId());\nconst after = refetched.getState_ArcAngle();\n\nconsole.log('arcAngle:', before, '→', after);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：圆弧角度",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合",
+    "example.text.1": "2. 创建一段 90° 测试圆弧（PCB 坐标单位 mil，跨度 500×300）",
+    "example.text.2": "3. 读取修改前的角度",
+    "example.text.3": "4. 切换异步模式并修改角度（90° → 45°）",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.arcAngle": "圆弧角度",
     "returns": "圆弧线图元对象"
   },
   "title": "Set the property state: arc angle",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.arcAngle": "Arc angle",
   "returns": "Arc line primitive object"
 }

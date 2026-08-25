@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建专用测试 PCB 并等 1.5s 同步\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 打开测试 PCB（改名只对已打开的 PCB 生效）\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 3. 修改 PCB 名称\nconst newName = '嘉立创示例_PCB新名称';\nconst renamed = await eda.dmt_Pcb.modifyPcbName(pcbUuid, newName);\nconsole.log('renamed:', renamed);\n\n// 4. 等 1s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）\nawait new Promise(r => setTimeout(r, 1000));\nconst info = await eda.dmt_Pcb.getPcbInfo(pcbUuid);\nconsole.log('renamedTo:', info?.name);\nconsole.log('renameVerified:', (info?.name ?? '').toLowerCase() === newName.toLowerCase());\n\n// 5. 清理测试 PCB，保持工程整洁\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_PCB新名称';\nconst renamed = await eda.dmt_Pcb.modifyPcbName(pcbUuid, newName);\nconsole.log('renamed:', renamed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst info = await eda.dmt_Pcb.getPcbInfo(pcbUuid);\nconsole.log('renamedTo:', info?.name);\nconsole.log('renameVerified:', (info?.name ?? '').toLowerCase() === newName.toLowerCase());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
@@ -23,12 +68,22 @@
   "_source": {
     "title": "修改 PCB 名称",
     "remarks.text.0": "如若 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联原理图名称",
+    "example.text.0": "1. 创建专用测试 PCB 并等 1.5s 同步",
+    "example.text.1": "2. 打开测试 PCB（改名只对已打开的 PCB 生效）",
+    "example.text.2": "3. 修改 PCB 名称",
+    "example.text.3": "4. 等 1s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）",
+    "example.text.4": "5. 清理测试 PCB，保持工程整洁",
     "params.pcbUuid": "PCB UUID",
     "params.pcbName": "PCB 名称",
     "returns": "是否修改成功"
   },
   "title": "Modify PCB name",
   "remarks.text.0": "If the PCB is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), modifying the name will also modify the reuse block symbol name and the associated schematic name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.pcbUuid": "PCB UUID",
   "params.pcbName": "PCB name",
   "returns": "Whether Modify Successful"

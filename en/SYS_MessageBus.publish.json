@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 两个不同模块订阅同一主题\nconst panelTask = eda.sys_MessageBus.subscribe('嘉立创示例_发布', (message) => {\n  console.log('面板模块收到：', message);\n});\nconst cacheTask = eda.sys_MessageBus.subscribe('嘉立创示例_发布', (message) => {\n  console.log('缓存模块收到：', message);\n});\n\n// 2. 发布一条广播消息，两个订阅者都会收到\neda.sys_MessageBus.publish('嘉立创示例_发布', { source: '工程检查', result: '通过' });\n\n// 3. 取消订阅，恢复原状\npanelTask.cancel();\ncacheTask.cancel();\nconsole.log('已取消全部订阅');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelTask = eda.sys_MessageBus.subscribe('嘉立创示例_发布', (message) => {\n  console.log('面板模块收到：', message);\n});\nconst cacheTask = eda.sys_MessageBus.subscribe('嘉立创示例_发布', (message) => {\n  console.log('缓存模块收到：', message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.publish('嘉立创示例_发布', { source: '工程检查', result: '通过' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "panelTask.cancel();\ncacheTask.cancel();\nconsole.log('已取消全部订阅');\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "私有消息总线：发布消息",
     "remarks.text.0": "将消息广播给每一个 Subscriber",
+    "example.text.0": "1. 两个不同模块订阅同一主题",
+    "example.text.1": "2. 发布一条广播消息，两个订阅者都会收到",
+    "example.text.2": "3. 取消订阅，恢复原状",
     "params.topic": "主题",
     "params.message": "消息"
   },
   "title": "Private message bus: publish a message",
   "remarks.text.0": "Broadcast the message to every Subscriber",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.message": "Message"
 }

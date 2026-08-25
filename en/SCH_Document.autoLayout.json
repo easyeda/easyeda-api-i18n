@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试原理图并打开（文档级 API 作用于当前激活的原理图）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 对所有器件执行自动布局（空原理图无器件，立即返回结果对象）\nconst result = await eda.sch_Document.autoLayout();\nconsole.log('result:', result);\n\n// 3. 清理测试原理图\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.sch_Document.autoLayout();\nconsole.log('result:', result);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "自动布局",
     "remarks.text.0": "如不传入任何参数，将对所有器件进行自动布局",
+    "example.text.0": "1. 创建测试原理图并打开（文档级 API 作用于当前激活的原理图）",
+    "example.text.1": "2. 对所有器件执行自动布局（空原理图无器件，立即返回结果对象）",
+    "example.text.2": "3. 清理测试原理图",
     "params.props": "自动布局参数",
     "returns": "自动布局结果"
   },
   "title": "Auto layout",
   "remarks.text.0": "If no parameters are passed in, auto layout will be performed for all devices",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.props": "Auto layout parameter",
   "returns": "Auto layout result"
 }

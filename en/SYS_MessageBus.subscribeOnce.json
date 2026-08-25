@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 注册单次订阅\nlet received = null;\nconst task = eda.sys_MessageBus.subscribeOnce('嘉立创示例_单次订阅', (message) => {\n  received = message;\n});\n\n// 2. 发布两条消息：只有第一条触发回调\neda.sys_MessageBus.publish('嘉立创示例_单次订阅', '首次触发');\neda.sys_MessageBus.publish('嘉立创示例_单次订阅', '第二次发布');\nconsole.log('实际收到：', received);\n\n// 3. 消息未到时也可以主动 cancel 放弃等待\ntask.cancel();\nconsole.log('已清理单次订阅任务');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let received = null;\nconst task = eda.sys_MessageBus.subscribeOnce('嘉立创示例_单次订阅', (message) => {\n  received = message;\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.publish('嘉立创示例_单次订阅', '首次触发');\neda.sys_MessageBus.publish('嘉立创示例_单次订阅', '第二次发布');\nconsole.log('实际收到：', received);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "task.cancel();\nconsole.log('已清理单次订阅任务');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "私有消息总线：订阅单次消息",
+    "example.text.0": "1. 注册单次订阅",
+    "example.text.1": "2. 发布两条消息：只有第一条触发回调",
+    "example.text.2": "3. 消息未到时也可以主动 cancel 放弃等待",
     "params.topic": "主题",
     "params.callbackFn": "接收到消息后的回调",
     "returns": "消息总线任务"
   },
   "title": "Private message bus: subscribe to a message once",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.callbackFn": "Callback after receiving the message",
   "returns": "Message bus task"

@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个未旋转的内嵌图片\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n// 4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）\nconst imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_Rotation();\n\n// 2. 异步模式下把图片旋转 90 度，随后反悔\nconst asyncObj = obj.toAsync();\nasyncObj.setState_Rotation(90);\n\n// 3. reset 丢弃未提交的修改（保留现场供观察）\nawait asyncObj.reset();\n\n// 4. 从画布重新读取，确认旋转没有变\nconst refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('rotation:', before, '→', refetched.getState_Rotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imageData = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAEElEQVR4nGP4z8AARwzEcQCukw/x0F8jngAAAABJRU5ErkJggg==';\nconst obj = await eda.pcb_PrimitiveObject.create(3, x, y, imageData, 400, 300, 0, false, 'demo.png', false);\nconst before = obj.getState_Rotation();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncObj = obj.toAsync();\nasyncObj.setState_Rotation(90);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await asyncObj.reset();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveObject.get(obj.getState_PrimitiveId());\n\nconsole.log('rotation:', before, '→', refetched.getState_Rotation());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个未旋转的内嵌图片",
+    "example.text.1": "4x4 纯色 PNG 的 data URI（binaryData 必须是 data URI 格式，裸 base64 会创建失败）",
+    "example.text.2": "2. 异步模式下把图片旋转 90 度，随后反悔",
+    "example.text.3": "3. reset 丢弃未提交的修改（保留现场供观察）",
+    "example.text.4": "4. 从画布重新读取，确认旋转没有变",
     "returns": "二进制内嵌对象图元对象"
   },
   "title": "Reset the async primitive to the current canvas state",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Binary embedded object primitive object"
 }

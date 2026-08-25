@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 单个矩形 100 x 80（单位随输入坐标系，PCB 场景下通常是 mil）\nconst rect = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconsole.log('矩形面积：', eda.sys_Math.calculateArea(rect));\n\n// 2. 单个三角形（底 100 高 60，面积应为 3000）\nconst triangle = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 50, y: 60 }];\nconsole.log('三角形面积：', eda.sys_Math.calculateArea(triangle));\n\n// 3. 布尔运算返回的多边形组直接作为输入，得到净面积（含孔洞时自动扣除）\nconst overlap = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\nconst merged = eda.sys_Math.union(rect, overlap);\nconsole.log('两矩形合并后的净面积：', eda.sys_Math.calculateArea(merged));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconsole.log('矩形面积：', eda.sys_Math.calculateArea(rect));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const triangle = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 50, y: 60 }];\nconsole.log('三角形面积：', eda.sys_Math.calculateArea(triangle));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const overlap = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\nconst merged = eda.sys_Math.union(rect, overlap);\nconsole.log('两矩形合并后的净面积：', eda.sys_Math.calculateArea(merged));\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "计算多边形面积",
     "remarks.text.0": "使用 Shoelace 公式计算：\n- 传入单个多边形时，返回该多边形的绝对面积\n- 传入多边形组（{@link TSYS_MathPolygonGroup}，如布尔运算的返回值）时，\n  计算所有外环面积之和减去所有孔洞面积之和，得到净面积",
+    "example.text.0": "1. 单个矩形 100 x 80（单位随输入坐标系，PCB 场景下通常是 mil）",
+    "example.text.1": "2. 单个三角形（底 100 高 60，面积应为 3000）",
+    "example.text.2": "3. 布尔运算返回的多边形组直接作为输入，得到净面积（含孔洞时自动扣除）",
     "params.polygon": "多边形或多边形组",
     "returns": "面积（单个多边形为绝对面积，多边形组为净面积）"
   },
   "title": "Calculate the area of a polygon",
   "remarks.text.0": "Calculated using the Shoelace formula:\n- When a single polygon is passed in, the absolute area of the polygon is returned\n- When a polygon group ({@link TSYS_MathPolygonGroup}, such as the return value of Boolean operations) is passed in,\nthe net area is obtained by subtracting the sum of all hole areas from the sum of all outer ring areas",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.polygon": "Polygon or polygon group",
   "returns": "Area (absolute area for a single polygon, net area for a polygon group)"
 }

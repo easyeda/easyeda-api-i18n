@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取所有库的列表\nconst libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n\n// 2. 输出库数量及每个库的名称、UUID\nconsole.log('count:', libraries.length);\nlibraries.forEach((lib, i) => {\n  console.log('[' + i + '] name:', lib.name, 'uuid:', lib.uuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraries = await eda.lib_LibrariesList.getAllLibrariesList();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', libraries.length);\nlibraries.forEach((lib, i) => {\n  console.log('[' + i + '] name:', lib.name, 'uuid:', lib.uuid);\n});\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取所有库的列表",
     "remarks.text.0": "此处不会获取到系统库、个人库、工程库、收藏库的信息，如需获取它们的信息，请使用 {@link LIB_LibrariesList.getSystemLibraryUuid | getSystemLibraryUuid}、{@link LIB_LibrariesList.getPersonalLibraryUuid | getPersonalLibraryUuid}、{@link LIB_LibrariesList.getProjectLibraryUuid | getProjectLibraryUuid}、{@link LIB_LibrariesList.getFavoriteLibraryUuid | getFavoriteLibraryUuid} 接口",
+    "example.text.0": "1. 获取所有库的列表",
+    "example.text.1": "2. 输出库数量及每个库的名称、UUID",
     "returns": "库信息列表"
   },
   "title": "Get the list of all libraries",
   "remarks.text.0": "This does not get the information of the system library, personal library, project library, or favorite library. To get their information, use the {@link LIB_LibrariesList.getSystemLibraryUuid | getSystemLibraryUuid}, {@link LIB_LibrariesList.getPersonalLibraryUuid | getPersonalLibraryUuid}, {@link LIB_LibrariesList.getProjectLibraryUuid | getProjectLibraryUuid}, and {@link LIB_LibrariesList.getFavoriteLibraryUuid | getFavoriteLibraryUuid} APIs",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Library information list"
 }

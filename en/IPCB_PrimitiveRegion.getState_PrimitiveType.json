@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个矩形区域\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\n\n// 2. 读取图元类型\nconst primitiveType = region.getState_PrimitiveType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveType = region.getState_PrimitiveType();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', primitiveType);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元类型",
+    "example.text.0": "1. 创建一个矩形区域",
+    "example.text.1": "2. 读取图元类型",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "图元类型"
   },
   "title": "Get the property state: primitive type",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Primitive type"
 }

@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个测试矩形：左上角（1000,1000）尺寸 200x100，左上角（1600,1400）尺寸 150x80\nconst rect1 = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst rect2 = await eda.sch_PrimitiveRectangle.create(1600, 1400, 150, 80);\n\n// 2. 计算两个矩形整体的 BBox（传图元 ID 数组，也支持直接传图元对象数组）\nconst bbox = await eda.sch_Primitive.getPrimitivesBBox([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n\nconsole.log('minX:', bbox.minX);\nconsole.log('minY:', bbox.minY);\nconsole.log('maxX:', bbox.maxX);\nconsole.log('maxY:', bbox.maxY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect1 = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst rect2 = await eda.sch_PrimitiveRectangle.create(1600, 1400, 150, 80);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bbox = await eda.sch_Primitive.getPrimitivesBBox([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([\n  rect1.getState_PrimitiveId(),\n  rect2.getState_PrimitiveId(),\n]);\n\nconsole.log('minX:', bbox.minX);\nconsole.log('minY:', bbox.minY);\nconsole.log('maxX:', bbox.maxX);\nconsole.log('maxY:', bbox.maxY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取图元的 BBox",
+    "example.text.0": "1. 创建两个测试矩形：左上角（1000,1000）尺寸 200x100，左上角（1600,1400）尺寸 150x80",
+    "example.text.1": "2. 计算两个矩形整体的 BBox（传图元 ID 数组，也支持直接传图元对象数组）",
+    "example.text.2": "3. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "图元 ID 数组或图元对象数组",
     "returns": "图元的 BBox，如若图元不存在或没有 BBox，将会返回 `undefined` 的结果"
   },
   "title": "Get The BBox of the primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.primitiveIds": "Array of Primitive ID array or primitive objects",
   "returns": "The BBox of the primitive. If the primitive does not exist or has no BBox, `undefined` will be returned"
 }

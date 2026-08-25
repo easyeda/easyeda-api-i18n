@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开右侧面板并切换到批注标签页（'annotation' 不依赖文档类型）\neda.sys_PanelControl.openRightPanel('annotation');\nconsole.log('右侧面板已展开，并切换到批注标签页');\n\n// 2. 收起面板还原界面（自建自删，保证案例可重复运行）\neda.sys_PanelControl.closeRightPanel();\nconsole.log('右侧面板已收起，界面还原');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.openRightPanel('annotation');\nconsole.log('右侧面板已展开，并切换到批注标签页');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.closeRightPanel();\nconsole.log('右侧面板已收起，界面还原');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "打开右侧面板",
+    "example.text.0": "1. 打开右侧面板并切换到批注标签页（'annotation' 不依赖文档类型）",
+    "example.text.1": "2. 收起面板还原界面（自建自删，保证案例可重复运行）",
     "params.tab": "标签页，如若不指定则不切换标签页"
   },
   "title": "Open the right panel",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.tab": "Tab. If not specified, the tab will not be switched"
 }

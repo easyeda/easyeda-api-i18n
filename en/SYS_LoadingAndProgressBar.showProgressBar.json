@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 显示进度条并指定标题（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.showProgressBar(30, '嘉立创示例 正在处理');\nconsole.log('进度条已显示，当前进度 30%');\n\n// 2. 重复调用刷新进度（分批任务逐步推进的典型方式）\nawait new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(70, '嘉立创示例 正在处理');\nconsole.log('进度已更新到 70%');\n\n// 3. 进度达到 100，进度条自动销毁（自清理，无需手动 destroy）\nawait new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(100, '嘉立创示例 正在处理');\nconsole.log('进度达到 100%，进度条已自动销毁');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_LoadingAndProgressBar.showProgressBar(30, '嘉立创示例 正在处理');\nconsole.log('进度条已显示，当前进度 30%');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(70, '嘉立创示例 正在处理');\nconsole.log('进度已更新到 70%');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 800));\neda.sys_LoadingAndProgressBar.showProgressBar(100, '嘉立创示例 正在处理');\nconsole.log('进度达到 100%，进度条已自动销毁');\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "显示进度条或设置进度条进度",
     "remarks.text.0": "当进度达到 `100` 时，进度条将自动销毁",
+    "example.text.0": "1. 显示进度条并指定标题（同步调用，无返回值）",
+    "example.text.1": "2. 重复调用刷新进度（分批任务逐步推进的典型方式）",
+    "example.text.2": "3. 进度达到 100，进度条自动销毁（自清理，无需手动 destroy）",
     "params.progress": "进度值，取值范围 `0-100`",
     "params.title": "进度条标题"
   },
   "title": "Show the progress bar or set its progress",
   "remarks.text.0": "When the progress reaches `100`, the progress bar will be automatically destroyed",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.progress": "Progress value, value range `0-100`",
   "params.title": "Progress bar title"
 }

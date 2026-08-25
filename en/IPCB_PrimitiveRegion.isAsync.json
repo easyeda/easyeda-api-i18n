@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个矩形区域\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\n\n// 2. 查询异步模式\nconst isAsync = region.isAsync();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('isAsync:', isAsync);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isAsync = region.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('isAsync:', isAsync);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询图元是否为异步图元",
+    "example.text.0": "1. 创建一个矩形区域",
+    "example.text.1": "2. 查询异步模式",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "是否为异步图元"
   },
   "title": "Query whether the primitive is an async primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether Is async primitive"
 }

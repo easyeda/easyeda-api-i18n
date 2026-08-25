@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试导线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条属于 SIG_A 网络的测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\n\n// 3. 读取修改前的网络名称\nconst before = wire.getState_Net();\n\n// 4. 切换异步模式并改为 SIG_B\nconst asyncWire = wire.toAsync();\nasyncWire.setState_Net('SIG_B');\nawait asyncWire.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveWire.get(wire.getState_PrimitiveId());\n\nconsole.log('net:', before, '→', refetched.getState_Net());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const wire = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = wire.getState_Net();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncWire = wire.toAsync();\nasyncWire.setState_Net('SIG_B');\nawait asyncWire.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveWire.get(wire.getState_PrimitiveId());\n\nconsole.log('net:', before, '→', refetched.getState_Net());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：网络名称",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试导线重合",
+    "example.text.1": "2. 创建一条属于 SIG_A 网络的测试导线（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 读取修改前的网络名称",
+    "example.text.3": "4. 切换异步模式并改为 SIG_B",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.net": "网络名称",
     "returns": "导线图元对象"
   },
   "title": "Set the property state: net name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.net": "Net name",
   "returns": "Wire primitive object"
 }

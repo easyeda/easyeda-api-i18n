@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个\"禁止元件\"（NO_COMPONENTS=2）的规则区域\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2]);\n\n// 2. 读取规则类型数组（枚举值：2=禁止元件, 5=禁止导线, 6=禁止填充, 7=禁止覆铜, 8=禁止内电层, 9=约束区域）\nconst ruleType = region.getState_RuleType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('ruleType:', JSON.stringify(ruleType));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ruleType = region.getState_RuleType();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveRegion.delete([region.getState_PrimitiveId()]);\n\nconsole.log('ruleType:', JSON.stringify(ruleType));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：区域规则类型",
+    "example.text.0": "1. 创建一个\"禁止元件\"（NO_COMPONENTS=2）的规则区域",
+    "example.text.1": "2. 读取规则类型数组（枚举值：2=禁止元件, 5=禁止导线, 6=禁止填充, 7=禁止覆铜, 8=禁止内电层, 9=约束区域）",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "区域规则类型"
   },
   "title": "Get the property state: region rule type",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Region rule type"
 }

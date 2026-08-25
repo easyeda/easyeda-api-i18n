@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试圆，圆心 (400, 300)、半径 150（SCH 坐标单位 10mil）\nconst circle = await eda.sch_PrimitiveCircle.create(400, 300, 150);\n\n// 2. 读取圆心 Y\nconst centerY = circle.getState_CenterY();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('centerY:', centerY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const circle = await eda.sch_PrimitiveCircle.create(400, 300, 150);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const centerY = circle.getState_CenterY();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('centerY:', centerY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：圆心 Y",
+    "example.text.0": "1. 创建一个测试圆，圆心 (400, 300)、半径 150（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取圆心 Y",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "圆心 Y"
   },
   "title": "Get the property state: center of the circle Y",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Center of the circle Y"
 }

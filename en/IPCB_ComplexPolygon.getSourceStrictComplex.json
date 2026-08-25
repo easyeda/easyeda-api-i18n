@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 只放入一个单多边形构建复杂多边形\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 对比两种读取方式：区别在嵌套深度，不在是否为数组\nconst simplified = complexPolygon.getSource();              // 一维：首元素是模式标记 \"R\"\nconst strict = complexPolygon.getSourceStrictComplex();     // 二维：首元素是单多边形数组\n\nconsole.log('simplifiedFirstItem:', typeof simplified[0]);\nconsole.log('strictFirstItemIsArray:', Array.isArray(strict[0]));\nconsole.log('strictPolygonCount:', strict.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const simplified = complexPolygon.getSource();              // 一维：首元素是模式标记 \"R\"\nconst strict = complexPolygon.getSourceStrictComplex();     // 二维：首元素是单多边形数组\n\nconsole.log('simplifiedFirstItem:', typeof simplified[0]);\nconsole.log('strictFirstItemIsArray:', Array.isArray(strict[0]));\nconsole.log('strictPolygonCount:', strict.length);\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取复杂多边形数据",
     "remarks.text.0": "强制返回复杂多边形格式数据，即使它仅包含单一的单多边形",
+    "example.text.0": "1. 只放入一个单多边形构建复杂多边形",
+    "example.text.1": "2. 对比两种读取方式：区别在嵌套深度，不在是否为数组",
     "returns": "复杂多边形数据"
   },
   "title": "Get Complex polygon data",
   "remarks.text.0": "Forcibly return data in complex polygon format, even if it only contains a single polygon",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Complex polygon data"
 }

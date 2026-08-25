@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程所属团队\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 创建带描述的测试文件夹，等 1.5s 让工作区同步\nconst folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_查询', teamUuid, undefined, '嘉立创示例：初始描述');\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 查询文件夹详细属性\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('folderInfo:', JSON.stringify({\n  name: folderInfo?.name,\n  description: folderInfo?.description,\n  parentFolderUuid: folderInfo?.parentFolderUuid,\n  teamUuid: folderInfo?.teamUuid,\n}));\n\n// 4. 清理测试文件夹（查询类案例不留测试对象）\nawait eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_查询', teamUuid, undefined, '嘉立创示例：初始描述');\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('folderInfo:', JSON.stringify({\n  name: folderInfo?.name,\n  description: folderInfo?.description,\n  parentFolderUuid: folderInfo?.parentFolderUuid,\n  teamUuid: folderInfo?.teamUuid,\n}));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "获取文件夹详细属性",
     "remarks.text.0": "当 {@link IDMT_FolderItem.parentFolderUuid | parentFolderUuid} 等于 {@link IDMT_FolderItem.teamUuid | teamUuid} 时，代表当前文件夹为指定团队下的一级文件夹",
+    "example.text.0": "1. 取当前工程所属团队",
+    "example.text.1": "2. 创建带描述的测试文件夹，等 1.5s 让工作区同步",
+    "example.text.2": "3. 查询文件夹详细属性",
+    "example.text.3": "4. 清理测试文件夹（查询类案例不留测试对象）",
     "params.teamUuid": "团队 UUID",
     "params.folderUuid": "文件夹 UUID",
     "returns": "文件夹属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get Folder detailed properties",
   "remarks.text.0": "When {@link IDMT_FolderItem.parentFolderUuid | parentFolderUuid} equals {@link IDMT_FolderItem.teamUuid | teamUuid}, it means the current folder is a first-level folder under the specified team",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.teamUuid": "Team UUID",
   "params.folderUuid": "Folder UUID",
   "returns": "Folder property; if it is `undefined`, the retrieval failed"

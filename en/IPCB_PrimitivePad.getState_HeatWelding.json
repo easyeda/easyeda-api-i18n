@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个带热焊参数的焊盘和一个普通焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst heated = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0, undefined, null, { connectionMethod: 'Divergent', divergenceSpacing: 10, divergenceLineWidth: 8, divergenceAngle: 45 });\nconst plain = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 分别读取热焊参数\nconst heatedConfig = heated.getState_HeatWelding();\nconst plainConfig = plain.getState_HeatWelding();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([heated.getState_PrimitiveId(), plain.getState_PrimitiveId()]);\n\nconsole.log('heatedConfig:', heatedConfig);\nconsole.log('plainConfig:', plainConfig);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst heated = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0, undefined, null, { connectionMethod: 'Divergent', divergenceSpacing: 10, divergenceLineWidth: 8, divergenceAngle: 45 });\nconst plain = await eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const heatedConfig = heated.getState_HeatWelding();\nconst plainConfig = plain.getState_HeatWelding();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([heated.getState_PrimitiveId(), plain.getState_PrimitiveId()]);\n\nconsole.log('heatedConfig:', heatedConfig);\nconsole.log('plainConfig:', plainConfig);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：热焊优化参数",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个带热焊参数的焊盘和一个普通焊盘",
+    "example.text.1": "2. 分别读取热焊参数",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "热焊优化参数"
   },
   "title": "Get the property state: thermal relief optimization parameters",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Thermal relief optimization parameters"
 }

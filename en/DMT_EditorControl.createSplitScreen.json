@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 归一化布局：先合并既有分屏，保证两个标签页落在同一分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n\n// 2. 打开两个文档，让当前分屏持有两个标签页\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n\n// 3. 把 PCB 标签页拆到一个新的水平分屏\nconst split = await eda.dmt_EditorControl.createSplitScreen('horizontal', tabPcb);\nconsole.log('source split:', split?.sourceSplitScreenId);\nconsole.log('new split:', split?.newSplitScreenId);\n\n// 4. 回读新分屏的标签页，确认 PCB 已在其中\nconst tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(split.newSplitScreenId);\nconsole.log('tabs in new split:', tabs.map(t => t.title));\n\n// 5. 合并所有分屏，恢复单屏布局\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const split = await eda.dmt_EditorControl.createSplitScreen('horizontal', tabPcb);\nconsole.log('source split:', split?.sourceSplitScreenId);\nconsole.log('new split:', split?.newSplitScreenId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(split.newSplitScreenId);\nconsole.log('tabs in new split:', tabs.map(t => t.title));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
         }
       ]
     }
@@ -23,12 +68,22 @@
   "_source": {
     "title": "创建分屏",
     "remarks.text.0": "请确认 {@link DMT_EditorControl.createSplitScreen | tabId} 对应的分屏存在两个以上的标签页，否则分屏将不会执行，并返回 `undefined`",
+    "example.text.0": "1. 归一化布局：先合并既有分屏，保证两个标签页落在同一分屏",
+    "example.text.1": "2. 打开两个文档，让当前分屏持有两个标签页",
+    "example.text.2": "3. 把 PCB 标签页拆到一个新的水平分屏",
+    "example.text.3": "4. 回读新分屏的标签页，确认 PCB 已在其中",
+    "example.text.4": "5. 合并所有分屏，恢复单屏布局",
     "params.splitScreenType": "分屏类型，`horizontal` 水平、`vertical` 垂直",
     "params.tabId": "标签页 ID，该标签页将会被移入新的分屏中",
     "returns": "分屏 ID，`sourceSplitScreenId` 代表源分屏，`newSplitScreenId` 代表新分屏"
   },
   "title": "Create Split screen",
   "remarks.text.0": "Please make sure the split screen corresponding to {@link DMT_EditorControl.createSplitScreen | tabId} has more than two tabs; otherwise the split screen will not be executed and `undefined` will be returned",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.splitScreenType": "Split screen type, `horizontal` horizontal, `vertical` vertical",
   "params.tabId": "Tab ID. This tab will be moved into the new split screen",
   "returns": "Split screen ID. `sourceSplitScreenId` represents the source split screen, and `newSplitScreenId` represents the new split screen"

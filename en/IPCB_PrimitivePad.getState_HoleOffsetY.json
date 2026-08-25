@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个孔心向上偏 20mil 的通孔焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 20, 0, false, 0);\n\n// 2. 读取孔偏移 Y\nconst holeOffsetY = pad.getState_HoleOffsetY();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('holeOffsetY:', holeOffsetY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 30], 0, 20, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const holeOffsetY = pad.getState_HoleOffsetY();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('holeOffsetY:', holeOffsetY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：孔偏移 Y",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个孔心向上偏 20mil 的通孔焊盘",
+    "example.text.1": "2. 读取孔偏移 Y",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "孔偏移 Y"
   },
   "title": "Get the property state: hole offset Y",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Hole offset Y"
 }

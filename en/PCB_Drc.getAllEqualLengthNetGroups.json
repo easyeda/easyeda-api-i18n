@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 建一个测试等长组作为查询对象\nawait eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_查询等长组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\n// 2. 查询所有等长网络组\nconst groups = await eda.pcb_Drc.getAllEqualLengthNetGroups();\nconsole.log('count:', groups.length);\ngroups.forEach((g, i) => {\n  console.log('[' + i + '] name:', g.name);\n});\n\n// 3. 清理测试等长组（查询类清理现场）\nawait eda.pcb_Drc.deleteEqualLengthNetGroup('嘉立创示例_查询等长组');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_查询等长组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const groups = await eda.pcb_Drc.getAllEqualLengthNetGroups();\nconsole.log('count:', groups.length);\ngroups.forEach((g, i) => {\n  console.log('[' + i + '] name:', g.name);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.deleteEqualLengthNetGroup('嘉立创示例_查询等长组');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有等长网络组的详细属性",
+    "example.text.0": "1. 建一个测试等长组作为查询对象",
+    "example.text.1": "2. 查询所有等长网络组",
+    "example.text.2": "3. 清理测试等长组（查询类清理现场）",
     "returns": "所有等长网络组的详细属性"
   },
   "title": "Get the detailed properties of all equal-length net groups",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Detailed properties of all equal-length net groups"
 }

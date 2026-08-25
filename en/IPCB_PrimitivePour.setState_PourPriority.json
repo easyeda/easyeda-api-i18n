@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个优先级为 5 的覆铜边框\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_改优先级', 5, 10, false);\nconst before = pour.getState_PourPriority();\n\n// 3. 异步模式把优先级提到 3（更早铺铜）\nconst asyncPour = pour.toAsync();\nasyncPour.setState_PourPriority(3);\nawait asyncPour.done();\n\n// 4. 从画布重新读取，确认优先级已更新（保留现场供观察）\nconst refetched = await eda.pcb_PrimitivePour.get(pour.getState_PrimitiveId());\n\nconsole.log('pourPriority:', before, '→', refetched.getState_PourPriority());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_改优先级', 5, 10, false);\nconst before = pour.getState_PourPriority();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncPour = pour.toAsync();\nasyncPour.setState_PourPriority(3);\nawait asyncPour.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitivePour.get(pour.getState_PrimitiveId());\n\nconsole.log('pourPriority:', before, '→', refetched.getState_PourPriority());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：覆铜优先级",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个优先级为 5 的覆铜边框",
+    "example.text.2": "3. 异步模式把优先级提到 3（更早铺铜）",
+    "example.text.3": "4. 从画布重新读取，确认优先级已更新（保留现场供观察）",
     "params.pourPriority": "覆铜优先级",
     "returns": "覆铜边框图元对象"
   },
   "title": "Set the property state: copper priority",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.pourPriority": "Copper priority",
   "returns": "Copper border primitive object"
 }

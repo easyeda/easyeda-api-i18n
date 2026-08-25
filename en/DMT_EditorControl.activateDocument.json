@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先后打开原理图页与 PCB，此时焦点在最后打开的 PCB 上\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nconst tabSch = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nawait eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n\n// 2. 激活原理图标签页（真实切换回原理图画布）\nconst activated = await eda.dmt_EditorControl.activateDocument(tabSch);\nconsole.log('activated:', activated);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nconst tabSch = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nawait eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const activated = await eda.dmt_EditorControl.activateDocument(tabSch);\nconsole.log('activated:', activated);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "激活文档",
     "remarks.text.0": "切换到指定文档的标签页，并将输入焦点置于其中",
+    "example.text.0": "1. 先后打开原理图页与 PCB，此时焦点在最后打开的 PCB 上",
+    "example.text.1": "2. 激活原理图标签页（真实切换回原理图画布）",
     "params.tabId": "标签页 ID",
     "returns": "操作是否成功"
   },
   "title": "Activate a document",
   "remarks.text.0": "Switch to the tab of the specified document and place the input focus in it",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.tabId": "Tab ID",
   "returns": "Whether the operation is successful"
 }

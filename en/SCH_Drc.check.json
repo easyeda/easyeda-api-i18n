@@ -10,19 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试原理图并打开（DRC 作用于当前激活的原理图）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 详细模式：返回全部违规项，无违规则为空数组\nconst violations = await eda.sch_Drc.check(true, false, true);\nconsole.log('violationCount:', violations.length);\nviolations.forEach((v, i) => {\n  console.log('[' + i + ']', typeof v === 'string' ? v : JSON.stringify(v));\n});\n\n// 3. 布尔模式：只返回是否全部通过\nconst passed = await eda.sch_Drc.check(true, false, false);\nconsole.log('allPassed:', passed);\n\n// 4. 清理测试原理图\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst schInfo = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(schInfo.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const violations = await eda.sch_Drc.check(true, false, true);\nconsole.log('violationCount:', violations.length);\nviolations.forEach((v, i) => {\n  console.log('[' + i + ']', typeof v === 'string' ? v : JSON.stringify(v));\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const passed = await eda.sch_Drc.check(true, false, false);\nconsole.log('allPassed:', passed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_Schematic.deleteSchematic(schematicUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "检查 DRC",
+    "example.text.0": "1. 创建测试原理图并打开（DRC 作用于当前激活的原理图）",
+    "example.text.1": "2. 详细模式：返回全部违规项，无违规则为空数组",
+    "example.text.2": "3. 布尔模式：只返回是否全部通过",
+    "example.text.3": "4. 清理测试原理图",
     "params.strict": "是否严格检查，当前原理图统一为严格检查模式",
     "params.userInterface": "是否显示 UI（呼出底部 DRC 窗口）",
     "params.includeVerboseError": "是否在返回值中包含详细错误信息，如若为 `true`，则返回值将始终为数组",
     "returns": "DRC 检查是否通过"
   },
   "title": "Check DRC",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.strict": "Whether strict checking is enabled. The current schematic is uniformly in strict checking mode",
   "params.userInterface": "Whether to show the UI (open the bottom DRC window)",
   "params.includeVerboseError": "Whether to include detailed error information in the return value. If it is `true`, the return value will always be an array",

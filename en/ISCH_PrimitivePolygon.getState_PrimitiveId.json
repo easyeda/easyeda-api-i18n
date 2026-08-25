@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试多边形：4 个顶点构成矩形（SCH 坐标单位 10mil，line 为 [x1,y1, x2,y2, x3,y3, x4,y4] 扁平数组）\nconst line = [400, 300, 800, 300, 800, 600, 400, 600];\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000');\n\n// 2. 读取图元 ID\nconst primitiveId = polygon.getState_PrimitiveId();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitivePolygon.delete([polygon.getState_PrimitiveId()]);\n\nconsole.log('primitiveId:', primitiveId);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = [400, 300, 800, 300, 800, 600, 400, 600];\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = polygon.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePolygon.delete([polygon.getState_PrimitiveId()]);\n\nconsole.log('primitiveId:', primitiveId);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 创建一个测试多边形：4 个顶点构成矩形（SCH 坐标单位 10mil，line 为 [x1,y1, x2,y2, x3,y3, x4,y4] 扁平数组）",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Primitive ID"
 }

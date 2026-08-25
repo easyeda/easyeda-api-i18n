@@ -10,18 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 交互式下单检查：弹出检查弹窗等待确认，确认后打开下单页面\n// const passed = await eda.sch_ManufactureData.placeSmtComponentsOrder(true);\n\n// 2. 静默检查：不弹任何弹窗，忽略警告并直接生成下单资料\n// const passed = await eda.sch_ManufactureData.placeSmtComponentsOrder(false, true);\n// console.log('下单检查结果 ' + passed);\n\n// 下单会真实打开订单页面并产生订单数据，案例中不实际执行\nconsole.log('演示调用：placeSmtComponentsOrder(true) 交互式检查，或 placeSmtComponentsOrder(false, true) 静默下单');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('演示调用：placeSmtComponentsOrder(true) 交互式检查，或 placeSmtComponentsOrder(false, true) 静默下单');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "SMT 元件下单",
+    "example.text.0": "1. 交互式下单检查：弹出检查弹窗等待确认，确认后打开下单页面\nconst passed = await eda.sch_ManufactureData.placeSmtComponentsOrder(true);",
+    "example.text.1": "2. 静默检查：不弹任何弹窗，忽略警告并直接生成下单资料\nconst passed = await eda.sch_ManufactureData.placeSmtComponentsOrder(false, true);\nconsole.log('下单检查结果 ' + passed);",
+    "example.text.2": "下单会真实打开订单页面并产生订单数据，案例中不实际执行",
     "params.interactive": "是否启用交互式检查 如若启用，则会存在弹窗等待用户进行交互，且无法使用 `ignoreWarning` 参数忽略警告， 即 `ignoreWarning` 参数将被忽略； 如若禁用，则在调用后不会有任何 EDA 内部弹窗，程序执行静默检查， 如若达成下单条件，将返回 `true` 并在新标签页打开下单页面",
     "params.ignoreWarning": "在非交互式检查时忽略警告 如果设置为 `true`，将会忽略所有检查警告项并尽可能生成下单资料； 如果设置为 `false`，存在任意警告将中断执行并返回 `false` 的结果",
     "returns": "是否通过下单检查"
   },
   "title": "SMT component ordering",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.interactive": "Whether to enable interactive checking. If enabled, a popup will wait for user interaction, and the `ignoreWarning` parameter cannot be used to ignore warnings; that is, the `ignoreWarning` parameter will be ignored. If disabled, no EDA internal popup will appear after the call, and the program performs a silent check. If the ordering conditions are met, `true` will be returned and the ordering page will be opened in a new tab",
   "params.ignoreWarning": "Ignore warnings during non-interactive checking. If set to `true`, all check warning items will be ignored and the ordering data will be generated as much as possible; if set to `false`, any warning will interrupt execution and return `false`",
   "returns": "Whether the ordering check passed"

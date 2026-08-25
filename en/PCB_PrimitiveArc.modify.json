@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试圆弧（随机坐标避免与画布已有圆弧重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\nconst arcId = arc.getState_PrimitiveId();\n\n// 2. 读取修改前的线宽与圆心角\nconst beforeWidth = arc.getState_LineWidth();\nconst beforeAngle = arc.getState_ArcAngle();\n\n// 3. 批量修改：线宽 10 → 24，圆心角 90 → 120\nawait eda.pcb_PrimitiveArc.modify(arcId, { lineWidth: 24, arcAngle: 120 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveArc.get(arcId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', arcId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('arcAngle:', beforeAngle, '→', refreshed.getState_ArcAngle());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, x, y, x + 500, y + 300, 90, 10, 1, false);\nconst arcId = arc.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeWidth = arc.getState_LineWidth();\nconst beforeAngle = arc.getState_ArcAngle();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveArc.modify(arcId, { lineWidth: 24, arcAngle: 120 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.pcb_PrimitiveArc.get(arcId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', arcId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('arcAngle:', beforeAngle, '→', refreshed.getState_ArcAngle());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改圆弧线",
+    "example.text.0": "1. 创建待修改的测试圆弧（随机坐标避免与画布已有圆弧重合）",
+    "example.text.1": "2. 读取修改前的线宽与圆心角",
+    "example.text.2": "3. 批量修改：线宽 10 → 24，圆心角 90 → 120",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "圆弧线图元对象"
   },
   "title": "Modify Arc line",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Arc line primitive object"

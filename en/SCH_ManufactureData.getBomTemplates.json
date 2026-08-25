@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取全部 BOM 模板名\nconst templates = await eda.sch_ManufactureData.getBomTemplates();\n\n// 2. 逐个查看\nconsole.log('模板数量：', templates.length);\ntemplates.forEach((name, index) => console.log(`模板 ${index + 1}：`, name));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const templates = await eda.sch_ManufactureData.getBomTemplates();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('模板数量：', templates.length);\ntemplates.forEach((name, index) => console.log(`模板 ${index + 1}：`, name));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取 BOM 模板列表",
+    "example.text.0": "1. 获取全部 BOM 模板名",
+    "example.text.1": "2. 逐个查看",
     "returns": "BOM 模板列表"
   },
   "title": "Get BOM template list",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "BOM template list"
 }

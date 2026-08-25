@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个挂网络的测试过孔作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', x, y, 20, 40);\nconst viaId = via.getState_PrimitiveId();\n\n// 2. 获取全部过孔的图元 ID\nconst allIds = await eda.pcb_PrimitiveVia.getAllPrimitiveId();\n\n// 3. 按网络过滤：只取挂在该网络下过孔的图元 ID\nconst netIds = await eda.pcb_PrimitiveVia.getAllPrimitiveId('嘉立创示例_NET1');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([viaId]);\n\nconsole.log('total via ids:', allIds.length);\nconsole.log('demo net via ids:', netIds.length);\nconsole.log('marker id in filtered list:', netIds.includes(viaId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', x, y, 20, 40);\nconst viaId = via.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveVia.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const netIds = await eda.pcb_PrimitiveVia.getAllPrimitiveId('嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([viaId]);\n\nconsole.log('total via ids:', allIds.length);\nconsole.log('demo net via ids:', netIds.length);\nconsole.log('marker id in filtered list:', netIds.includes(viaId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有过孔图元 ID",
+    "example.text.0": "1. 创建一个挂网络的测试过孔作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部过孔的图元 ID",
+    "example.text.2": "3. 按网络过滤：只取挂在该网络下过孔的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.net": "网络名称",
     "params.primitiveLock": "是否锁定",
     "returns": "过孔的图元 ID 数组"
   },
   "title": "Get all Via primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "params.primitiveLock": "Whether it is locked",
   "returns": "Array of Via primitive IDs"

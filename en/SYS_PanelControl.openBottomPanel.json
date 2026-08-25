@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开底部面板并切换到日志标签页（'log' 不依赖文档类型，最通用）\neda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开，并切换到日志标签页');\n\n// 2. 收起面板还原界面（自建自删，保证案例可重复运行）\neda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起，界面还原');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开，并切换到日志标签页');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起，界面还原');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "打开底部面板",
+    "example.text.0": "1. 打开底部面板并切换到日志标签页（'log' 不依赖文档类型，最通用）",
+    "example.text.1": "2. 收起面板还原界面（自建自删，保证案例可重复运行）",
     "params.tab": "标签页，如若不指定则不切换标签页"
   },
   "title": "Open the bottom panel",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.tab": "Tab. If not specified, the tab will not be switched"
 }

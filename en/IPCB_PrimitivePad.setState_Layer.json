@@ -27,7 +27,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，在顶层创建一个贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Layer();\n\n// 2. 异步模式下切换到底层并提交\nconst a = pad.toAsync();\na.setState_Layer(2);\nawait a.done();\n\n// 3. 从画布重新读取，确认层已切换（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('layer:', before, '→', ref.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Layer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_Layer(2);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('layer:', before, '→', ref.getState_Layer());\n```"
         }
       ]
     }
@@ -38,6 +65,9 @@
     "remarks.text.1": "1. 顶层与底层切换时：阻焊/助焊扩展属性将会跟随切换，数据值不变",
     "remarks.text.2": "2. 多层切换到单层时：判断切换到顶层还是底层，阻焊/助焊扩展属性将只保留指定层对应的数据；如若存在特殊焊盘，将转换为普通焊盘属性，并且只保留指定层对应的数据；与孔有关的属性将被重置到默认值",
     "remarks.text.3": "3. 单层切换到多层时：阻焊/助焊扩展属性将只保留阻焊扩展，并复制原数据应用于顶层和底层；焊盘钻孔属性将被赋指定值，长宽均为焊盘直径（焊盘为长圆形或正多边形）、宽（焊盘为矩形）的 60% 的长圆形（数据层面上是长圆形，实则是正圆形），如若焊盘为折线复杂多边形，则通过专用算法计算得出数据（通常比较抽象，建议后期修改）",
+    "example.text.0": "1. 生成本次运行专用的坐标，在顶层创建一个贴片焊盘",
+    "example.text.1": "2. 异步模式下切换到底层并提交",
+    "example.text.2": "3. 从画布重新读取，确认层已切换（保留现场供观察）",
     "params.layer": "层",
     "returns": "焊盘图元对象"
   },
@@ -46,6 +76,9 @@
   "remarks.text.1": "1. When switching between the top and bottom layers: the solder mask/paste mask expansion properties will switch accordingly, and the data values remain unchanged",
   "remarks.text.2": "2. When switching from multi-layer to single layer: it determines whether to switch to the top or bottom layer, and the solder mask/paste mask expansion properties will only keep the data corresponding to the specified layer. If a special pad exists, it will be converted to a normal pad property, and only the data corresponding to the specified layer will be kept. Hole-related properties will be reset to their default values",
   "remarks.text.3": "3. When switching from single layer to multi-layer: the solder mask/paste mask expansion properties will only keep the solder mask expansion, and the original data will be copied and applied to the top and bottom layers. The pad drilling property will be assigned a specified value: a rounded rectangle whose length and width are 60% of the pad diameter (for rounded or regular polygon pads) or the pad width (for rectangular pads). Data-wise it is a rounded rectangle, but actually it is a circle. If the pad is a polyline complex polygon, the data is calculated through a dedicated algorithm (usually abstract; it is recommended to modify it later)",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.layer": "Layer",
   "returns": "Pad primitive object"
 }

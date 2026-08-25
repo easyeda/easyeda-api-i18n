@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 用 canvas 画一张测试图：白色背景，中间 10×10 像素的黑色方块\nconst canvas = document.createElement('canvas');\ncanvas.width = 20;\ncanvas.height = 20;\nconst ctx = canvas.getContext('2d');\nctx.fillStyle = '#ffffff';\nctx.fillRect(0, 0, 20, 20);\nctx.fillStyle = '#000000';\nctx.fillRect(5, 5, 10, 10);\n\n// 2. 导出为 PNG Blob\nconst imageBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));\n\n// 3. 描摹为复杂多边形（全部可选参数走默认值）\nconst complexPolygon = await eda.pcb_MathPolygon.convertImageToComplexPolygon(imageBlob, 20, 20);\n\n// 4. 读取描摹结果：分块数量与第一块的源数据（描摹出的轮廓点，坐标由算法生成）\nconst sources = complexPolygon.getSourceStrictComplex();\nconsole.log('polygonCount:', sources.length);\nconsole.log('firstSource:', JSON.stringify(sources[0]).slice(0, 120));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const canvas = document.createElement('canvas');\ncanvas.width = 20;\ncanvas.height = 20;\nconst ctx = canvas.getContext('2d');\nctx.fillStyle = '#ffffff';\nctx.fillRect(0, 0, 20, 20);\nctx.fillStyle = '#000000';\nctx.fillRect(5, 5, 10, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const imageBlob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = await eda.pcb_MathPolygon.convertImageToComplexPolygon(imageBlob, 20, 20);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const sources = complexPolygon.getSourceStrictComplex();\nconsole.log('polygonCount:', sources.length);\nconsole.log('firstSource:', JSON.stringify(sources[0]).slice(0, 120));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图像转换为复杂多边形对象",
+    "example.text.0": "1. 用 canvas 画一张测试图：白色背景，中间 10×10 像素的黑色方块",
+    "example.text.1": "2. 导出为 PNG Blob",
+    "example.text.2": "3. 描摹为复杂多边形（全部可选参数走默认值）",
+    "example.text.3": "4. 读取描摹结果：分块数量与第一块的源数据（描摹出的轮廓点，坐标由算法生成）",
     "params.imageBlob": "图像 Blob 文件，可以使用 {@link SYS_FileSystem.openReadFileDialog} 方法从文件系统读取文件",
     "params.imageWidth": "图像宽度",
     "params.imageHeight": "图像高度",
@@ -29,6 +69,10 @@
     "returns": "复杂多边形对象"
   },
   "title": "Convert Image to Complex polygon object",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.imageBlob": "Image Blob file. You can use the {@link SYS_FileSystem.openReadFileDialog} method to read a file from the file system",
   "params.imageWidth": "Image width",
   "params.imageHeight": "Image height",

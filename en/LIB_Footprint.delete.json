@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID 并新建删除对象\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_待删除封装_' + Date.now(),\n  []\n);\n\n// 2. 删除该封装\nconst deleted = await eda.lib_Footprint.delete(footprintUuid, libraryUuid);\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst footprintUuid = await eda.lib_Footprint.create(\n  libraryUuid,\n  '嘉立创示例_待删除封装_' + Date.now(),\n  []\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.lib_Footprint.delete(footprintUuid, libraryUuid);\n\nconsole.log('footprintUuid:', footprintUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除封装",
+    "example.text.0": "1. 获取个人库 UUID 并新建删除对象",
+    "example.text.1": "2. 删除该封装",
     "params.footprintUuid": "封装 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "操作是否成功"
   },
   "title": "Delete Footprint",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.footprintUuid": "Footprint UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "returns": "Whether the operation is successful"

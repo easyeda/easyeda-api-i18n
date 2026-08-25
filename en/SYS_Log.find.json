@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 写入待查找的示例日志（一条 info、一条 error）\neda.sys_Log.add('嘉立创示例_查找演示：任务开始');\neda.sys_Log.add('嘉立创示例_查找演示：网络请求失败', 'error');\n\n// 2. 按关键字查找全部匹配条目（返回 Promise，需要 await）\nconst all = await eda.sys_Log.find('嘉立创示例_查找演示');\nconsole.log('关键字匹配条目数：', all.length);\n\n// 3. 限定只在 error 类型中查找，缩小搜索范围\nconst errors = await eda.sys_Log.find('嘉立创示例_查找演示', 'error');\nconsole.log('error 类型匹配条目数：', errors.length);\nconsole.log('匹配内容：', errors.map(line => line.message).join('；'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Log.add('嘉立创示例_查找演示：任务开始');\neda.sys_Log.add('嘉立创示例_查找演示：网络请求失败', 'error');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const all = await eda.sys_Log.find('嘉立创示例_查找演示');\nconsole.log('关键字匹配条目数：', all.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const errors = await eda.sys_Log.find('嘉立创示例_查找演示', 'error');\nconsole.log('error 类型匹配条目数：', errors.length);\nconsole.log('匹配内容：', errors.map(line => line.message).join('；'));\n```"
         }
       ]
     }
@@ -23,12 +50,18 @@
   "_source": {
     "title": "查找条目",
     "remarks.text.0": "如果日志面板处于打开状态，查找操作会同时在前端展现",
+    "example.text.0": "1. 写入待查找的示例日志（一条 info、一条 error）",
+    "example.text.1": "2. 按关键字查找全部匹配条目（返回 Promise，需要 await）",
+    "example.text.2": "3. 限定只在 error 类型中查找，缩小搜索范围",
     "params.message": "查找内容",
     "params.types": "日志类型数组，可以在指定的日志类型内查找",
     "returns": "符合查找条件的日志条目数组"
   },
   "title": "Find entries",
   "remarks.text.0": "If the log panel is open, the find operation will also be displayed on the front end",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.message": "Find content",
   "params.types": "Array of log types. The search can be performed within the specified log types",
   "returns": "Array of log entries matching the find criteria"

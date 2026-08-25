@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前设计规则配置作为数据源（规则数据在 config 字段里）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n\n// 2. 另存为自定义配置，允许同名覆盖（保留现场供观察）\nconst saved = await eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_规则配置', true);\n\nconsole.log('saved:', saved);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const saved = await eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_规则配置', true);\n\nconsole.log('saved:', saved);\n```"
         }
       ]
     }
@@ -23,6 +41,8 @@
   "_source": {
     "title": "保存设计规则配置",
     "remarks.text.0": "只有自定义配置可以覆盖保存，系统配置不允许修改和覆盖",
+    "example.text.0": "1. 读取当前设计规则配置作为数据源（规则数据在 config 字段里）",
+    "example.text.1": "2. 另存为自定义配置，允许同名覆盖（保留现场供观察）",
     "params.ruleConfiguration": "设计规则配置",
     "params.configurationName": "配置名称",
     "params.allowOverwrite": "是否允许覆写同名设计规则配置，`false` 则将在遇到同名设计规则配置时返回 `false`，请注意可能的数据丢失风险",
@@ -30,6 +50,8 @@
   },
   "title": "Save Design rule configuration",
   "remarks.text.0": "Only custom configurations can be overwritten and saved. System configurations cannot be modified or overwritten",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.ruleConfiguration": "Design rule configuration",
   "params.configurationName": "Configuration name",
   "params.allowOverwrite": "Whether to allow overwriting a design rule configuration with the same name. If `false`, `false` will be returned when a configuration with the same name is encountered. Please note the possible risk of data loss",

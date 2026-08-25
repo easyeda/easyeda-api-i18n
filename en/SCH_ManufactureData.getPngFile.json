@@ -1,0 +1,43 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.getPngFile",
+    "kind": "method",
+    "name": "getPngFile",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.183",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取 PNG 文件",
+    "remarks.text.0": "支持按长宽分辨率导出高清图片（最大 4096）；\n支持只传入 `width` 或 `height` 中的任意一个，另一侧将按原始比例自动拉伸输出；\n`width` 与 `height` 均不传时，按当前一倍分辨率输出",
+    "remarks.text.1": "/ EDA v4.1.23",
+    "params.fileName": "文件名",
+    "params.resolution": "导出图片分辨率，见 {@link ISCH_ExportPngResolution}",
+    "returns": "PNG 文件数据（或压缩包）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.fileName": null,
+  "params.resolution": null,
+  "returns": null
+}

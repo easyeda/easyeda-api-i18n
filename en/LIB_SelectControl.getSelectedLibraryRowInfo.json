@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前选中行\nconst row = await eda.lib_SelectControl.getSelectedLibraryRowInfo();\n\n// 2. 库类型对照（ELIB_LibraryType）\nconst typeNames = {\n  '1': '复用模块', '2': '符号', '3': '器件', '4': '封装', '5': '3D 模型',\n  '29': '面板库', '32': '仿真模型（Ngspice）', '33': '仿真模型（SimulIDE）',\n};\n\n// 3. 输出选中行的关键信息（uuid + libraryUuid 可直接传给库管理接口）\nconsole.log('libraryType:', row.libraryType, '(' + (typeNames[row.libraryType] || '未知类型') + ')');\nconsole.log('uuid:', row.uuid);\nconsole.log('libraryUuid:', row.libraryUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const row = await eda.lib_SelectControl.getSelectedLibraryRowInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const typeNames = {\n  '1': '复用模块', '2': '符号', '3': '器件', '4': '封装', '5': '3D 模型',\n  '29': '面板库', '32': '仿真模型（Ngspice）', '33': '仿真模型（SimulIDE）',\n};\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('libraryType:', row.libraryType, '(' + (typeNames[row.libraryType] || '未知类型') + ')');\nconsole.log('uuid:', row.uuid);\nconsole.log('libraryUuid:', row.libraryUuid);\n```"
         }
       ]
     }
@@ -23,9 +50,15 @@
   "_source": {
     "title": "获取当前底部库选中行的信息",
     "remarks.text.0": "将会获取当前底部库选中行的库类型、UUID、所属库 UUID",
+    "example.text.0": "1. 读取当前选中行",
+    "example.text.1": "2. 库类型对照（ELIB_LibraryType）",
+    "example.text.2": "3. 输出选中行的关键信息（uuid + libraryUuid 可直接传给库管理接口）",
     "returns": "库属性对象，如若为 `undefined` 则获取失败"
   },
   "title": "Get the information of the currently selected row in the bottom library",
   "remarks.text.0": "It will get the library type, UUID, and the UUID of the library it belongs to for the currently selected row in the bottom library",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Library property object; if it is `undefined`, the retrieval failed"
 }

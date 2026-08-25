@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建专用测试原理图（避免误删工程里的现有原理图），等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 删除该原理图\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n\n// 3. 回读确认已删除（返回 undefined 说明原理图已不存在）\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('info after delete:', info === undefined ? '已不存在' : info.name);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('info after delete:', info === undefined ? '已不存在' : info.name);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "删除原理图",
     "remarks.text.0": "如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则删除原理图时将同步删除关联的 PCB 和复用模块符号，复用模块符号不可删除则跳过",
+    "example.text.0": "1. 创建专用测试原理图（避免误删工程里的现有原理图），等 1.5s 同步",
+    "example.text.1": "2. 删除该原理图",
+    "example.text.2": "3. 回读确认已删除（返回 undefined 说明原理图已不存在）",
     "params.schematicUuid": "原理图 UUID",
     "returns": "操作是否成功"
   },
   "title": "Delete Schematic",
   "remarks.text.0": "If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), deleting the schematic will also delete the associated PCB and reuse block symbol. If the reuse block symbol cannot be deleted, it will be skipped",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.schematicUuid": "Schematic UUID",
   "returns": "Whether the operation is successful"
 }

@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 从系统库搜索一个复用模块\nconst cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\n\n// 2. 在画布上放置该模块的符号（SCH 坐标单位 10mil）\nconst symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  { libraryUuid: cbb.libraryUuid, cbbUuid: cbb.uuid },\n  1000, 1000\n);\n\n// 3. 读取符号关联的复用模块（libraryUuid + 模块 uuid，与放置时传入的一致）\nconst cbbInfo = symbol.getState_Cbb();\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveComponent.delete([symbol.getState_PrimitiveId()]);\n\nconsole.log('cbbInfo:', cbbInfo);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cbbList = await eda.lib_Cbb.search('');\nconst cbb = cbbList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const symbol = await eda.sch_PrimitiveComponent.createCbbSymbol(\n  { libraryUuid: cbb.libraryUuid, cbbUuid: cbb.uuid },\n  1000, 1000\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cbbInfo = symbol.getState_Cbb();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([symbol.getState_PrimitiveId()]);\n\nconsole.log('cbbInfo:', cbbInfo);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：关联复用模块",
+    "example.text.0": "1. 从系统库搜索一个复用模块",
+    "example.text.1": "2. 在画布上放置该模块的符号（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 读取符号关联的复用模块（libraryUuid + 模块 uuid，与放置时传入的一致）",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "关联复用模块"
   },
   "title": "Get the property state: associate reuse block",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Associate reuse block"
 }

@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 记录切换前顶层的颜色\nconst before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n\n// 2. 切换为 Altium Designer 配色（ALTIUM_DESIGNER=2）\nconst setResult = await eda.pcb_Layer.setLayerColorConfiguration(2);\n\n// 3. 查看切换后顶层的颜色\nconst after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n\n// 4. 恢复嘉立创 EDA 默认配色（EASYEDA=1）\nconst restoreResult = await eda.pcb_Layer.setLayerColorConfiguration(1);\n\nconsole.log('setResult:', setResult);\nconsole.log('topColorBefore:', before?.color, '→ topColorAfter:', after?.color);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const setResult = await eda.pcb_Layer.setLayerColorConfiguration(2);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = (await eda.pcb_Layer.getAllLayers()).find(l => l.id === 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.setLayerColorConfiguration(1);\n\nconsole.log('setResult:', setResult);\nconsole.log('topColorBefore:', before?.color, '→ topColorAfter:', after?.color);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置层颜色配置",
+    "example.text.0": "1. 记录切换前顶层的颜色",
+    "example.text.1": "2. 切换为 Altium Designer 配色（ALTIUM_DESIGNER=2）",
+    "example.text.2": "3. 查看切换后顶层的颜色",
+    "example.text.3": "4. 恢复嘉立创 EDA 默认配色（EASYEDA=1）",
     "params.colorConfiguration": "颜色配置",
     "returns": "操作是否成功"
   },
   "title": "Set the layer color configuration",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.colorConfiguration": "Color configuration",
   "returns": "Whether the operation is successful"
 }

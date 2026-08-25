@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试面板并打开它，让焦点落到面板文档上（原理图/PCB 焦点下返回 undefined）\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(panelUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 获取当前焦点面板的详细属性\nconst panel = await eda.dmt_Panel.getCurrentPanelInfo();\n\n// 3. 输出面板的名称、UUID 与所属工程\nconsole.log('name:', panel?.name);\nconsole.log('panelUuid:', panel?.uuid);\nconsole.log('parentProjectUuid:', panel?.parentProjectUuid);\n\n// 4. 清理测试面板（面板处于打开状态也可以直接删除）\nawait eda.dmt_Panel.deletePanel(panelUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(panelUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panel = await eda.dmt_Panel.getCurrentPanelInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('name:', panel?.name);\nconsole.log('panelUuid:', panel?.uuid);\nconsole.log('parentProjectUuid:', panel?.parentProjectUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Panel.deletePanel(panelUuid);\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "获取当前面板的详细属性",
     "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的面板的详细属性",
+    "example.text.0": "1. 创建测试面板并打开它，让焦点落到面板文档上（原理图/PCB 焦点下返回 undefined）",
+    "example.text.1": "2. 获取当前焦点面板的详细属性",
+    "example.text.2": "3. 输出面板的名称、UUID 与所属工程",
+    "example.text.3": "4. 清理测试面板（面板处于打开状态也可以直接删除）",
     "returns": "面板的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get detailed properties of Current panel",
   "remarks.text.0": "It will get the detailed properties of the currently open panel that has the last input focus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Panel detailed properties of; if it is `undefined`, the retrieval failed"
 }

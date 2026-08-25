@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取当前工作区属性\nconst workspace = await eda.dmt_Workspace.getCurrentWorkspaceInfo();\n\n// 2. 输出当前工作区属性（uuid 可直接用作 toggleToWorkspace 的切换参数）\nconsole.log('当前工作区名称：', workspace?.name);\nconsole.log('当前工作区 uuid：', workspace?.uuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const workspace = await eda.dmt_Workspace.getCurrentWorkspaceInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('当前工作区名称：', workspace?.name);\nconsole.log('当前工作区 uuid：', workspace?.uuid);\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取当前工作区的详细属性",
     "remarks.text.0": "将会获取当前工作区的详细属性",
+    "example.text.0": "1. 获取当前工作区属性",
+    "example.text.1": "2. 输出当前工作区属性（uuid 可直接用作 toggleToWorkspace 的切换参数）",
     "returns": "工作区的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get the detailed properties of the current workspace",
   "remarks.text.0": "It will get the detailed properties of the current workspace",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Detailed properties of the workspace. If it is `undefined`, the retrieval failed"
 }

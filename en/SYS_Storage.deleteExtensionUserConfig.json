@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 写入一条待删除的演示配置\nawait eda.sys_Storage.setExtensionUserConfig('嘉立创示例_临时项', '待删除数据');\n\n// 2. 删除该配置\nconst deleted = await eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_临时项');\n\n// 3. 复查：删除后再读取该 key，应为 undefined\nconst after = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_临时项');\n\nconsole.log('删除结果：', deleted);\nconsole.log('删除后再读取：', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_Storage.setExtensionUserConfig('嘉立创示例_临时项', '待删除数据');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.sys_Storage.deleteExtensionUserConfig('嘉立创示例_临时项');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = eda.sys_Storage.getExtensionUserConfig('嘉立创示例_临时项');\n\nconsole.log('删除结果：', deleted);\nconsole.log('删除后再读取：', after);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "删除扩展用户配置",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 写入一条待删除的演示配置",
+    "example.text.1": "2. 删除该配置",
+    "example.text.2": "3. 复查：删除后再读取该 key，应为 undefined",
     "params.key": "配置项",
     "returns": "操作是否成功"
   },
   "title": "Delete Extension user configuration",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.key": "Configuration item",
   "returns": "Whether the operation is successful"
 }

@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建面板，返回新面板 UUID\nconst panelUuid = await eda.dmt_Panel.createPanel();\nconsole.log('panelUuid:', panelUuid);\n\n// 2. 等 1.5s 让面板在工作区落地，回读确认\nawait new Promise(r => setTimeout(r, 1500));\nconst panelInfo = await eda.dmt_Panel.getPanelInfo(panelUuid);\nconsole.log('name:', panelInfo?.name);\n\n// 3. 删除本例创建的面板，保持工程整洁\nconst deleted = await eda.dmt_Panel.deletePanel(panelUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelUuid = await eda.dmt_Panel.createPanel();\nconsole.log('panelUuid:', panelUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst panelInfo = await eda.dmt_Panel.getPanelInfo(panelUuid);\nconsole.log('name:', panelInfo?.name);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Panel.deletePanel(panelUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建面板",
+    "example.text.0": "1. 创建面板，返回新面板 UUID",
+    "example.text.1": "2. 等 1.5s 让面板在工作区落地，回读确认",
+    "example.text.2": "3. 删除本例创建的面板，保持工程整洁",
     "returns": "面板 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Panel",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Panel UUID, if it is `undefined` creation fails"
 }

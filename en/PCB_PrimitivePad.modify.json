@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试焊盘（随机坐标避免与画布已有焊盘重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n\n// 2. 读取修改前的编号与旋转\nconst beforeNumber = pad.getState_PadNumber();\nconst beforeRotation = pad.getState_Rotation();\n\n// 3. 批量修改：编号 '1' → 'A1'，旋转 0 → 45 度\nawait eda.pcb_PrimitivePad.modify(padId, { padNumber: 'A1', rotation: 45 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitivePad.get(padId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', padId);\nconsole.log('padNumber:', beforeNumber, '→', refreshed.getState_PadNumber());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padId = pad.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeNumber = pad.getState_PadNumber();\nconst beforeRotation = pad.getState_Rotation();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.modify(padId, { padNumber: 'A1', rotation: 45 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.pcb_PrimitivePad.get(padId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', padId);\nconsole.log('padNumber:', beforeNumber, '→', refreshed.getState_PadNumber());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改焊盘",
+    "example.text.0": "1. 创建待修改的测试焊盘（随机坐标避免与画布已有焊盘重合）",
+    "example.text.1": "2. 读取修改前的编号与旋转",
+    "example.text.2": "3. 批量修改：编号 '1' → 'A1'，旋转 0 → 45 度",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "焊盘图元对象"
   },
   "title": "Modify Pad",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Pad primitive object"

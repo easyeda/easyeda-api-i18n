@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 注册拉取回调（每次只能拉一个消息）\nlet count = 0;\nconst task = eda.sys_MessageBus.pull('嘉立创示例_拉取', (message) => {\n  count++;\n  console.log('第', count, '次拉到：', message);\n});\n\n// 2. 推送两条消息：只有第一条会被这个 Puller 收到\neda.sys_MessageBus.push('嘉立创示例_拉取', '任务甲');\neda.sys_MessageBus.push('嘉立创示例_拉取', '任务乙');\n\nconsole.log('拉取次数：', count);\n\n// 3. 取消任务（未消费完的排队消息一并放弃）\ntask.cancel();\nconsole.log('已取消拉取任务');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let count = 0;\nconst task = eda.sys_MessageBus.pull('嘉立创示例_拉取', (message) => {\n  count++;\n  console.log('第', count, '次拉到：', message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.push('嘉立创示例_拉取', '任务甲');\neda.sys_MessageBus.push('嘉立创示例_拉取', '任务乙');\n\nconsole.log('拉取次数：', count);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "task.cancel();\nconsole.log('已取消拉取任务');\n```"
         }
       ]
     }
@@ -23,12 +50,18 @@
   "_source": {
     "title": "私有消息总线：拉消息",
     "remarks.text.0": "每次只能拉一个消息",
+    "example.text.0": "1. 注册拉取回调（每次只能拉一个消息）",
+    "example.text.1": "2. 推送两条消息：只有第一条会被这个 Puller 收到",
+    "example.text.2": "3. 取消任务（未消费完的排队消息一并放弃）",
     "params.topic": "主题",
     "params.callbackFn": "拉到消息后的回调",
     "returns": "消息总线任务"
   },
   "title": "Private message bus: pull a message",
   "remarks.text.0": "Only one message can be pulled at a time",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "params.callbackFn": "Callback after a message is pulled",
   "returns": "Message bus task"

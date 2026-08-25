@@ -10,18 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 从本地选择模板文件（弹窗需要用户交互）\n// const templateFile = await eda.sys_FileSystem.openReadFileDialog('.xlsx');\n\n// 2. 上传为新的 BOM 模板（第二参数指定模板名，不传则从文件名取）\n// const templateName = await eda.sch_ManufactureData.uploadBomTemplateFile(templateFile, '嘉立创示例_模板');\n// console.log('上传后的模板名 ' + templateName);\n\n// 3. 上传后用 getBomTemplates 查看列表确认，不再需要时用 deleteBomTemplate 删除\nconsole.log('演示流程：openReadFileDialog 读取 xlsx → uploadBomTemplateFile 上传 → getBomTemplates 确认');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('演示流程：openReadFileDialog 读取 xlsx → uploadBomTemplateFile 上传 → getBomTemplates 确认');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "上传 BOM 模板文件",
+    "example.text.0": "1. 从本地选择模板文件（弹窗需要用户交互）\nconst templateFile = await eda.sys_FileSystem.openReadFileDialog('.xlsx');",
+    "example.text.1": "2. 上传为新的 BOM 模板（第二参数指定模板名，不传则从文件名取）\nconst templateName = await eda.sch_ManufactureData.uploadBomTemplateFile(templateFile, '嘉立创示例_模板');\nconsole.log('上传后的模板名 ' + templateName);",
+    "example.text.2": "3. 上传后用 getBomTemplates 查看列表确认，不再需要时用 deleteBomTemplate 删除",
     "params.templateFile": "BOM 模板文件",
     "params.template": "BOM 模板名称，如若为 `undefined` 则自动从 `templateFile` 中取值",
     "returns": "BOM 模板名称"
   },
   "title": "Upload a BOM template file",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.templateFile": "BOM template file",
   "params.template": "BOM template name. If it is `undefined`, the value is automatically taken from `templateFile`",
   "returns": "BOM template name"

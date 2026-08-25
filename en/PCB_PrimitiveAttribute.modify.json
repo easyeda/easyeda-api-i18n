@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置测试器件并添加自定义属性（随机坐标避免与画布已有器件重合）：\n//    按立创编号从系统库精确反查器件，返回项不含 libraryUuid，需补上才能用于 create\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\nconst devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst comp = await eda.pcb_PrimitiveComponent.create({ libraryUuid: sysLibUuid, uuid: devices[0].uuid }, 1, x, y);\nconst compId = comp.getState_PrimitiveId();\nawait comp.setAttribute('嘉立创示例_Tolerance', '1%', true, true);\n\n// 2. 找到自定义属性的图元并读取修改前的值\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst target = attrs.find(a => a.getState_Key() === '嘉立创示例_Tolerance');\nconst beforeValue = target.getState_Value();\nconst beforeFontSize = target.getState_FontSize();\n\n// 3. 批量修改：属性值 1% → 5%，字号 45 → 60\nawait eda.pcb_PrimitiveAttribute.modify(target.getState_PrimitiveId(), { value: '5%', fontSize: 60 });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.pcb_PrimitiveAttribute.get(target.getState_PrimitiveId());\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('value:', beforeValue, '→', refreshed.getState_Value());\nconsole.log('fontSize:', beforeFontSize, '→', refreshed.getState_FontSize());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\nconst devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst comp = await eda.pcb_PrimitiveComponent.create({ libraryUuid: sysLibUuid, uuid: devices[0].uuid }, 1, x, y);\nconst compId = comp.getState_PrimitiveId();\nawait comp.setAttribute('嘉立创示例_Tolerance', '1%', true, true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst target = attrs.find(a => a.getState_Key() === '嘉立创示例_Tolerance');\nconst beforeValue = target.getState_Value();\nconst beforeFontSize = target.getState_FontSize();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveAttribute.modify(target.getState_PrimitiveId(), { value: '5%', fontSize: 60 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.pcb_PrimitiveAttribute.get(target.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('value:', beforeValue, '→', refreshed.getState_Value());\nconsole.log('fontSize:', beforeFontSize, '→', refreshed.getState_FontSize());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改文本",
+    "example.text.0": "1. 放置测试器件并添加自定义属性（随机坐标避免与画布已有器件重合）：\n按立创编号从系统库精确反查器件，返回项不含 libraryUuid，需补上才能用于 create",
+    "example.text.1": "2. 找到自定义属性的图元并读取修改前的值",
+    "example.text.2": "3. 批量修改：属性值 1% → 5%，字号 45 → 60",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "文本图元对象"
   },
   "title": "Modify Text",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Text primitive object"

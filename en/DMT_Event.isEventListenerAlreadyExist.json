@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_tab_exist';\n\n// 1. 注册前查询：应为 false\nconst before = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('before:', before);\n\n// 2. 注册一个监听使 id 生效\neda.dmt_Event.addEditorTabEventListener(\n  listenerId,\n  'toggle',\n  () => {}\n);\n\n// 3. 注册后查询：应为 true\nconst after = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('after:', after);\n\n// 4. 移除后查询：应回到 false\neda.dmt_Event.removeEventListener(listenerId);\nconst afterRemove = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('afterRemove:', afterRemove);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_tab_exist';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('before:', before);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.dmt_Event.addEditorTabEventListener(\n  listenerId,\n  'toggle',\n  () => {}\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('after:', after);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.dmt_Event.removeEventListener(listenerId);\nconst afterRemove = eda.dmt_Event.isEventListenerAlreadyExist(listenerId);\nconsole.log('afterRemove:', afterRemove);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询事件监听是否存在",
+    "example.text.0": "1. 注册前查询：应为 false",
+    "example.text.1": "2. 注册一个监听使 id 生效",
+    "example.text.2": "3. 注册后查询：应为 true",
+    "example.text.3": "4. 移除后查询：应回到 false",
     "params.id": "事件 ID",
     "returns": "事件监听是否存在"
   },
   "title": "Query whether the event listener exists",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Event ID",
   "returns": "Whether the event listener exists"
 }

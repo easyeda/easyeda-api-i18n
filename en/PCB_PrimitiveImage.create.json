@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机基准坐标，避免与画布上已有的图像重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 构造折线多边形轮廓（局部坐标 200×150 的五边形），图像轮廓必须是 ComplexPolygon 对象\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  0, 0, 'L', 200, 0, 200, 150, 100, 220, 0, 150\n]);\n\n// 3. 在顶层铜层（1）创建图像，宽 400、高 300，不旋转、不镜像、不锁定\nconst image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', image.getState_PrimitiveId());\nconsole.log('layer:', image.getState_Layer());\nconsole.log('width:', image.getState_Width());\nconsole.log('height:', image.getState_Height());\nconsole.log('primitiveType:', image.getState_PrimitiveType());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  0, 0, 'L', 200, 0, 200, 150, 100, 220, 0, 150\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const image = await eda.pcb_PrimitiveImage.create(x, y, complexPolygon, 1, 400, 300, 0, false, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', image.getState_PrimitiveId());\nconsole.log('layer:', image.getState_Layer());\nconsole.log('width:', image.getState_Width());\nconsole.log('height:', image.getState_Height());\nconsole.log('primitiveType:', image.getState_PrimitiveType());\n```"
         }
       ]
     }
@@ -23,6 +59,10 @@
   "_source": {
     "title": "创建图像",
     "remarks.text.0": "如需创建彩色丝印图像，请使用 {@link PCB_PrimitiveObject | 二进制内嵌对象图元类}",
+    "example.text.0": "1. 生成随机基准坐标，避免与画布上已有的图像重合",
+    "example.text.1": "2. 构造折线多边形轮廓（局部坐标 200×150 的五边形），图像轮廓必须是 ComplexPolygon 对象",
+    "example.text.2": "3. 在顶层铜层（1）创建图像，宽 400、高 300，不旋转、不镜像、不锁定",
+    "example.text.3": "4. 创建类保留现场，不删除图元",
     "params.x": "BBox 左上点坐标 X",
     "params.y": "BBox 左上点坐标 Y",
     "params.complexPolygon": "图像源数据（复杂多边形），可以使用 {@link PCB_MathPolygon.convertImageToComplexPolygon} 方法将图像文件转换为复杂多边形数据",
@@ -36,6 +76,10 @@
   },
   "title": "Create Image",
   "remarks.text.0": "To create a color silkscreen image, use the {@link PCB_PrimitiveObject | binary embedded object primitive class}",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.x": "BBox top-left point coordinates X",
   "params.y": "BBox top-left point coordinates Y",
   "params.complexPolygon": "Image source data (complex polygon). You can use the {@link PCB_MathPolygon.convertImageToComplexPolygon} method to convert an image file into complex polygon data",

@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开（文档级 API 作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 换算数据坐标 (300, 400)。新建 PCB 画布原点与数据原点重合，换算值不变\nconst before = await eda.pcb_Document.convertDataOriginToCanvasOrigin(300, 400);\nconsole.log('before:', JSON.stringify(before));\n\n// 3. 设置画布原点偏移后再换算同一坐标，观察映射随之变化\nawait eda.pcb_Document.setCanvasOrigin(50, 100);\nconst after = await eda.pcb_Document.convertDataOriginToCanvasOrigin(300, 400);\nconsole.log('after:', JSON.stringify(after));\n\n// 4. 清理测试 PCB（偏移随文档一起删除）\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = await eda.pcb_Document.convertDataOriginToCanvasOrigin(300, 400);\nconsole.log('before:', JSON.stringify(before));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Document.setCanvasOrigin(50, 100);\nconst after = await eda.pcb_Document.convertDataOriginToCanvasOrigin(300, 400);\nconsole.log('after:', JSON.stringify(after));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "输入数据坐标返回该坐标对应的画布坐标",
     "remarks.text.0": "嘉立创 EDA 前端显示的坐标均为画布原点；嘉立创 EDA API 使用的均为数据原点；在创建 PCB 时，默认画布原点等于数据原点",
+    "example.text.0": "1. 创建测试 PCB 并打开（文档级 API 作用于当前激活的 PCB）",
+    "example.text.1": "2. 换算数据坐标 (300, 400)。新建 PCB 画布原点与数据原点重合，换算值不变",
+    "example.text.2": "3. 设置画布原点偏移后再换算同一坐标，观察映射随之变化",
+    "example.text.3": "4. 清理测试 PCB（偏移随文档一起删除）",
     "params.x": "数据原点 X",
     "params.y": "数据原点 Y",
     "returns": "画布原点坐标"
   },
   "title": "Input a data coordinate and return the canvas coordinate corresponding to that coordinate",
   "remarks.text.0": "The coordinates displayed on the EasyEDA front end are all relative to the canvas origin; the EasyEDA API uses the data origin; when creating a PCB, the default canvas origin equals the data origin",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.x": "Data origin X",
   "params.y": "Data origin Y",
   "returns": "Canvas origin coordinate"

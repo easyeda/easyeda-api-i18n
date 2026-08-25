@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取工程内所有板子\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\n\n// 2. 输出每块板子的名称与下属文档\nboards.forEach((board, i) => {\n  console.log(`board[${i}]:`, board.name, 'schematic:', board.schematic?.uuid, 'pcb:', board.pcb?.uuid);\n});\n\nconsole.log('total:', boards.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "boards.forEach((board, i) => {\n  console.log(`board[${i}]:`, board.name, 'schematic:', board.schematic?.uuid, 'pcb:', board.pcb?.uuid);\n});\n\nconsole.log('total:', boards.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取工程内所有板子的详细属性",
+    "example.text.0": "1. 获取工程内所有板子",
+    "example.text.1": "2. 输出每块板子的名称与下属文档",
     "returns": "所有板子的详细属性的数组"
   },
   "title": "Get all in the project board detailed properties of",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Array of detailed properties of all Board"
 }

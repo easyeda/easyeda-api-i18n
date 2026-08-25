@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n//    （当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 随机放置坐标，避免与符号上已有引脚重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建编号 1、名为 CLK 的引脚：朝向 90 度、长 20、红色、时钟形状、输入类型\nconst pin = await eda.sch_PrimitivePin.create(x, y, '1', 'CLK', 90, 20, '#FF0000', 'Clock', 'IN');\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', pin.getState_PrimitiveId());\nconsole.log('primitiveType:', pin.getState_PrimitiveType());\nconsole.log('pinNumber:', pin.getState_PinNumber(), 'pinName:', pin.getState_PinName());\nconsole.log('x:', pin.getState_X(), 'y:', pin.getState_Y());\nconsole.log('pinLength:', pin.getState_PinLength());\nconsole.log('pinColor:', pin.getState_PinColor());\nconsole.log('pinShape:', pin.getState_PinShape(), 'pinType:', pin.getState_pinType());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pin = await eda.sch_PrimitivePin.create(x, y, '1', 'CLK', 90, 20, '#FF0000', 'Clock', 'IN');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', pin.getState_PrimitiveId());\nconsole.log('primitiveType:', pin.getState_PrimitiveType());\nconsole.log('pinNumber:', pin.getState_PinNumber(), 'pinName:', pin.getState_PinName());\nconsole.log('x:', pin.getState_X(), 'y:', pin.getState_Y());\nconsole.log('pinLength:', pin.getState_PinLength());\nconsole.log('pinColor:', pin.getState_PinColor());\nconsole.log('pinShape:', pin.getState_PinShape(), 'pinType:', pin.getState_pinType());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建引脚",
+    "example.text.0": "0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n（当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）",
+    "example.text.1": "1. 随机放置坐标，避免与符号上已有引脚重合（SCH 坐标单位 10mil）",
+    "example.text.2": "2. 创建编号 1、名为 CLK 的引脚：朝向 90 度、长 20、红色、时钟形状、输入类型",
+    "example.text.3": "3. 创建类保留现场，不删除图元",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
     "params.pinNumber": "引脚编号",
@@ -29,6 +69,10 @@
     "returns": "引脚图元对象"
   },
   "title": "Create Pin",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.x": "X coordinate",
   "params.y": "Y coordinate",
   "params.pinNumber": "Pin number",

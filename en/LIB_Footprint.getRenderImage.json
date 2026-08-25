@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 搜索系统库，取一个封装作为渲染来源\nconst [source] = await eda.lib_Footprint.search('0402', undefined, undefined, 1, 1);\n\n// 2. 获取渲染图（PNG Blob）\nconst blob = await eda.lib_Footprint.getRenderImage({\n  footprintUuid: source.uuid,\n  libraryUuid: source.libraryUuid,\n});\n\n// 3. Blob 可转成 URL 直接展示：URL.createObjectURL(blob)\nconsole.log('sourceName:', source.name);\nconsole.log('imageSize:', blob.size);\nconsole.log('imageType:', blob.type);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const [source] = await eda.lib_Footprint.search('0402', undefined, undefined, 1, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const blob = await eda.lib_Footprint.getRenderImage({\n  footprintUuid: source.uuid,\n  libraryUuid: source.libraryUuid,\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('sourceName:', source.name);\nconsole.log('imageSize:', blob.size);\nconsole.log('imageType:', blob.type);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取封装渲染图",
+    "example.text.0": "1. 搜索系统库，取一个封装作为渲染来源",
+    "example.text.1": "2. 获取渲染图（PNG Blob）",
+    "example.text.2": "3. Blob 可转成 URL 直接展示：URL.createObjectURL(blob)",
     "params.footprint": "封装的索引",
     "returns": "封装渲染图"
   },
   "title": "Get the footprint render image",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.footprint": "Index of the footprint",
   "returns": "Footprint render image"
 }

@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 写入三种不同类型的示例日志，便于观察筛选效果\neda.sys_Log.add('嘉立创示例_筛选演示：常规信息');\neda.sys_Log.add('嘉立创示例_筛选演示：电压偏高', 'warn');\neda.sys_Log.add('嘉立创示例_筛选演示：铺铜失败', 'error');\n\n// 2. 不传参数，获取全部类型的日志（返回 Promise，需要 await）\nconst all = await eda.sys_Log.sort();\nconsole.log('全部日志条目数：', all.length);\n\n// 3. 传入类型数组，只筛选警告和错误两类\nconst problems = await eda.sys_Log.sort(['warn', 'error']);\nconsole.log('警告和错误条目数：', problems.length);\nconsole.log('问题明细：', problems.map(line => `[${line.type}] ${line.message}`).join('；'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_Log.add('嘉立创示例_筛选演示：常规信息');\neda.sys_Log.add('嘉立创示例_筛选演示：电压偏高', 'warn');\neda.sys_Log.add('嘉立创示例_筛选演示：铺铜失败', 'error');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const all = await eda.sys_Log.sort();\nconsole.log('全部日志条目数：', all.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const problems = await eda.sys_Log.sort(['warn', 'error']);\nconsole.log('警告和错误条目数：', problems.length);\nconsole.log('问题明细：', problems.map(line => `[${line.type}] ${line.message}`).join('；'));\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "筛选并获取日志条目",
     "remarks.text.0": "如果日志面板处于打开状态，筛选操作会同时在前端展现",
+    "example.text.0": "1. 写入三种不同类型的示例日志，便于观察筛选效果",
+    "example.text.1": "2. 不传参数，获取全部类型的日志（返回 Promise，需要 await）",
+    "example.text.2": "3. 传入类型数组，只筛选警告和错误两类",
     "params.types": "日志类型数组，可以同时指定多种日志类型，如若不指定则为全部类型",
     "returns": "符合筛选条件的日志条目数组"
   },
   "title": "Filter and get log entries",
   "remarks.text.0": "If the log panel is open, the filter operation will also be displayed on the front end",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.types": "Array of log types. Multiple log types can be specified at the same time. If not specified, all types are used",
   "returns": "Array of log entries matching the filter criteria"
 }

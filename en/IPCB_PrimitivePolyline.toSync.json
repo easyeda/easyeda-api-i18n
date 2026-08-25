@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一条折线\nconst polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\nconst before = polyline.isAsync();\n\n// 3. 转换为同步图元（保留现场供观察）\nconst syncPolyline = polyline.toSync();\nconst after = syncPolyline.isAsync();\n\n// 4. 同步图元直接读取属性，无需提交\nconsole.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncPolyline.getState_PrimitiveType());\nconsole.log('layer:', syncPolyline.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon([x, y, 'L', x + 500, y, x + 500, y + 300]);\nconst polyline = await eda.pcb_PrimitivePolyline.create('', 1, polygon, 10, false);\nconst before = polyline.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncPolyline = polyline.toSync();\nconst after = syncPolyline.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('isAsync:', before, '→', after);\nconsole.log('primitiveType:', syncPolyline.getState_PrimitiveType());\nconsole.log('layer:', syncPolyline.getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一条折线",
+    "example.text.2": "3. 转换为同步图元（保留现场供观察）",
+    "example.text.3": "4. 同步图元直接读取属性，无需提交",
     "returns": "折线图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Polyline primitive object"
 }

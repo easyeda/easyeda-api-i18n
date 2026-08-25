@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 查询全部设计规则配置（含系统配置）\nconst all = await eda.pcb_Drc.getAllRuleConfigurations(true);\n\n// 2. 输出配置数量和名称\nconsole.log('count:', all.length);\nall.forEach((c, i) => {\n  console.log('[' + i + '] name:', c.name);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const all = await eda.pcb_Drc.getAllRuleConfigurations(true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', all.length);\nall.forEach((c, i) => {\n  console.log('[' + i + '] name:', c.name);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有设计规则配置",
+    "example.text.0": "1. 查询全部设计规则配置（含系统配置）",
+    "example.text.1": "2. 输出配置数量和名称",
     "params.includeSystem": "是否获取系统设计规则配置",
     "returns": "所有设计规则配置"
   },
   "title": "Get all Design rule configuration",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.includeSystem": "Whether Get System design rule configuration",
   "returns": "All design rule configurations"
 }

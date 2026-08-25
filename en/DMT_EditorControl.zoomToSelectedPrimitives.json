@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开原理图页，创建一个文本图元作为选中目标\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst text = await eda.sch_PrimitiveText.create(100, 80, '嘉立创示例_缩放目标');\n\n// 2. 以图元 ID 建立选中状态\nconst selected = await eda.sch_SelectControl.doSelectPrimitives([text.getState_PrimitiveId()]);\nconsole.log('selected:', selected);\n\n// 3. 缩放到选中的图元，返回可视区域边界\nconst bounds = await eda.dmt_EditorControl.zoomToSelectedPrimitives(tabId);\nconsole.log('bounds:', bounds);\n\n// 4. 清理：取消选中并删除测试图元\nawait eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\nconsole.log('cleaned');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst text = await eda.sch_PrimitiveText.create(100, 80, '嘉立创示例_缩放目标');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selected = await eda.sch_SelectControl.doSelectPrimitives([text.getState_PrimitiveId()]);\nconsole.log('selected:', selected);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bounds = await eda.dmt_EditorControl.zoomToSelectedPrimitives(tabId);\nconsole.log('bounds:', bounds);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\nconsole.log('cleaned');\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "缩放到已选中图元（适应选中）",
     "remarks.text.0": "在返回数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil",
+    "example.text.0": "1. 打开原理图页，创建一个文本图元作为选中目标",
+    "example.text.1": "2. 以图元 ID 建立选中状态",
+    "example.text.2": "3. 缩放到选中的图元，返回可视区域边界",
+    "example.text.3": "4. 清理：取消选中并删除测试图元",
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在"
   },
   "title": "Zoom to the selected primitives (fit selection)",
   "remarks.text.0": "In the returned data, the coordinate unit span of the schematic and symbol canvases is 0.01inch, and that of the PCB and footprint canvases is mil",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
   "returns": "Region data after zooming. `false` indicates that the canvas does not support the zoom operation or the `tabId` does not exist"
 }

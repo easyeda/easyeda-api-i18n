@@ -15,7 +15,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 实现外部库的符号数据回调（真实场景中在此对接自己的数据源）\nconst symbolFunctions = {\n  // 分类树：库面板左侧的分类目录\n  getClassificationTree: async () => [\n    { name: '电阻', uuid: 'resistor' },\n    { name: '电容', uuid: 'capacitor' }\n  ],\n  // 列表搜索：响应用户的关键字搜索与分页，返回分页结构\n  getList: async (props) => {\n    const all = [{ uuid: 'demo_0402', title: '示例符号 0402' }];\n    return {\n      count: all.length,\n      lists: all,\n      page: props.page || 1,\n      pageSize: props.pageSize || 10,\n      totalPage: 1\n    };\n  },\n  // 详情：用户选中条目后获取完整信息\n  getDetail: async (uuid) => {\n    return { uuid, title: '示例符号 0402' };\n  }\n};\n\n// 2. 以指定标题注册外部库，挂载符号类型资源\nconst libUuid = await eda.lib_LibrariesList.registerExtendLibrary('嘉立创示例_外部库', {\n  symbol: symbolFunctions\n});\n\n// 3. 输出注册结果，库面板中即可看到「嘉立创示例_外部库」\nconsole.log('libUuid:', libUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const symbolFunctions = {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  getClassificationTree: async () => [\n    { name: '电阻', uuid: 'resistor' },\n    { name: '电容', uuid: 'capacitor' }\n  ],"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  getList: async (props) => {\n    const all = [{ uuid: 'demo_0402', title: '示例符号 0402' }];\n    return {\n      count: all.length,\n      lists: all,\n      page: props.page || 1,\n      pageSize: props.pageSize || 10,\n      totalPage: 1\n    };\n  },"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  getDetail: async (uuid) => {\n    return { uuid, title: '示例符号 0402' };\n  }\n};\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.registerExtendLibrary('嘉立创示例_外部库', {\n  symbol: symbolFunctions\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.5",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('libUuid:', libUuid);\n```"
         }
       ]
     }
@@ -23,12 +77,24 @@
   "_source": {
     "title": "注册外部库",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 实现外部库的符号数据回调（真实场景中在此对接自己的数据源）",
+    "example.text.1": "分类树：库面板左侧的分类目录",
+    "example.text.2": "列表搜索：响应用户的关键字搜索与分页，返回分页结构",
+    "example.text.3": "详情：用户选中条目后获取完整信息",
+    "example.text.4": "2. 以指定标题注册外部库，挂载符号类型资源",
+    "example.text.5": "3. 输出注册结果，库面板中即可看到「嘉立创示例_外部库」",
     "params.title": "标题",
     "params.libFunctions": "库方法",
     "returns": "库 UUID"
   },
   "title": "Register an external library",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
+  "example.text.5": null,
   "params.title": "Title",
   "params.libFunctions": "Library functions",
   "returns": "Library UUID"

@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\ntry {\n    // 1. 取出当前网表字符串（'Protel2' 对应 ESYS_NetlistType.ALTIUM_DESIGNER）\n    const netlist = await eda.sch_Netlist.getNetlist('Protel2');\n    console.log('写回前网表长度：', netlist.length);\n\n    // 2. 原样写回当前网表（返回 void，不抛错即表示写回成功）\n    await eda.sch_Netlist.setNetlist('Protel2', netlist);\n\n    // 3. 重新读取，确认网表内容未被破坏\n    const after = await eda.sch_Netlist.getNetlist('Protel2');\n    console.log('写回后网表长度：', after.length);\n    console.log('写回前后一致：', after === netlist);\n} catch (e) {\n    // 原理图数据不满足网表校验（如引脚编号重复）时会抛错\n    console.log('当前原理图数据不满足网表校验，写回未完成');\n}\n```"
+          "content": "```javascript\ntry {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    const netlist = await eda.sch_Netlist.getNetlist('Protel2');\n    console.log('写回前网表长度：', netlist.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    await eda.sch_Netlist.setNetlist('Protel2', netlist);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    const after = await eda.sch_Netlist.getNetlist('Protel2');\n    console.log('写回后网表长度：', after.length);\n    console.log('写回前后一致：', after === netlist);\n} catch (e) {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    console.log('当前原理图数据不满足网表校验，写回未完成');\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "更新网表",
+    "example.text.0": "1. 取出当前网表字符串（'Protel2' 对应 ESYS_NetlistType.ALTIUM_DESIGNER）",
+    "example.text.1": "2. 原样写回当前网表（返回 void，不抛错即表示写回成功）",
+    "example.text.2": "3. 重新读取，确认网表内容未被破坏",
+    "example.text.3": "原理图数据不满足网表校验（如引脚编号重复）时会抛错",
     "params.type": "网表格式",
     "params.netlist": "网表数据"
   },
   "title": "Update the netlist",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.type": "Netlist format",
   "params.netlist": "Netlist data"
 }

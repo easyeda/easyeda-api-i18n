@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取所有工作区\nconst workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\n\n// 2. 输出工作区数量与每个工作区的属性（name/uuid/itemType）\nconsole.log('工作区数量：', workspaces.length);\nworkspaces.forEach((ws, i) => {\n  console.log(`工作区${i + 1}：`, ws.name, 'uuid:', ws.uuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const workspaces = await eda.dmt_Workspace.getAllWorkspacesInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('工作区数量：', workspaces.length);\nworkspaces.forEach((ws, i) => {\n  console.log(`工作区${i + 1}：`, ws.name, 'uuid:', ws.uuid);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有工作区的详细属性",
+    "example.text.0": "1. 获取所有工作区",
+    "example.text.1": "2. 输出工作区数量与每个工作区的属性（name/uuid/itemType）",
     "returns": "所有工作区的详细属性"
   },
   "title": "Get the detailed properties of all workspaces",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Detailed properties of all workspaces"
 }

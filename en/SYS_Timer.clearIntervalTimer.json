@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 挂一个每 200ms 触发的循环定时器\nlet tickCount = 0;\nconst created = eda.sys_Timer.setIntervalTimer('嘉立创示例_停表', 200, () => { tickCount++; });\n\n// 2. 让它运行约 1.5 秒\nawait new Promise(resolve => setTimeout(resolve, 1500));\nconst ticksAtClear = tickCount;\n\n// 3. 清除定时器，回调不再触发\nconst cleared = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\nawait new Promise(resolve => setTimeout(resolve, 600));\n\n// 4. 清除不存在的 ID 返回 false（该定时器已在上一步被清除）\nconst again = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\n\nconsole.log('定时器设置结果：', created);\nconsole.log('清除结果：', cleared);\nconsole.log('清除前触发次数：', ticksAtClear, '，清除后新增：', tickCount - ticksAtClear);\nconsole.log('再次清除同一 ID：', again);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let tickCount = 0;\nconst created = eda.sys_Timer.setIntervalTimer('嘉立创示例_停表', 200, () => { tickCount++; });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(resolve => setTimeout(resolve, 1500));\nconst ticksAtClear = tickCount;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cleared = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\nawait new Promise(resolve => setTimeout(resolve, 600));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const again = eda.sys_Timer.clearIntervalTimer('嘉立创示例_停表');\n\nconsole.log('定时器设置结果：', created);\nconsole.log('清除结果：', cleared);\nconsole.log('清除前触发次数：', ticksAtClear, '，清除后新增：', tickCount - ticksAtClear);\nconsole.log('再次清除同一 ID：', again);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "清除指定循环定时器",
+    "example.text.0": "1. 挂一个每 200ms 触发的循环定时器",
+    "example.text.1": "2. 让它运行约 1.5 秒",
+    "example.text.2": "3. 清除定时器，回调不再触发",
+    "example.text.3": "4. 清除不存在的 ID 返回 false（该定时器已在上一步被清除）",
     "params.id": "定时器 ID",
     "returns": "定时器是否清除成功"
   },
   "title": "Clear the specified interval timer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.id": "Timer ID",
   "returns": "Whether the timer was cleared successfully"
 }

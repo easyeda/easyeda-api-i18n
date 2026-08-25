@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个覆铜边框（刚创建还没有生成填充）\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_查填充', 5, 10, false);\n\n// 3. 查询关联的覆铜填充图元\nconst copperRegion = await pour.getCopperRegion();\nconst hasFill = copperRegion !== undefined;\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('hasCopperRegion:', hasFill);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('', 1, polygon, 'solid', false, '嘉立创示例_查填充', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copperRegion = await pour.getCopperRegion();\nconst hasFill = copperRegion !== undefined;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePour.delete([pour.getState_PrimitiveId()]);\n\nconsole.log('hasCopperRegion:', hasFill);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取铺铜区域覆铜填充图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个覆铜边框（刚创建还没有生成填充）",
+    "example.text.2": "3. 查询关联的覆铜填充图元",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "returns": "覆铜填充图元，如若不存在关联的覆铜填充图元则返回 `undefined`"
   },
   "title": "Get the copper fill primitive of the copper region",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "The copper fill primitive. If no associated copper fill primitive exists, `undefined` is returned"
 }

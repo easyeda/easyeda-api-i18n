@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n\n// 2. 取第一个填充子区域的 ID（本方法按 pourFillId 定位，不是图元 ID）\nconst pourFills = poured.getState_PourFills();\nif (pourFills.length === 0) {\n  console.log('说明：该覆铜填充没有子区域');\n  return;\n}\n\n// 3. 为该子区域添加阻焊区域（保留现场供观察）\nconst solderMaskFill = await poured.addSolderMaskFill(pourFills[0].id);\n\n// 4. 输出生成的阻焊填充图元信息\nif (solderMaskFill) {\n  console.log('primitiveType:', solderMaskFill.getState_PrimitiveType());\n  console.log('primitiveId:', solderMaskFill.getState_PrimitiveId());\n} else {\n  console.log('说明：未能生成阻焊区域（返回 undefined）');\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\nconst poured = pouredList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pourFills = poured.getState_PourFills();\nif (pourFills.length === 0) {\n  console.log('说明：该覆铜填充没有子区域');\n  return;\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const solderMaskFill = await poured.addSolderMaskFill(pourFills[0].id);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "if (solderMaskFill) {\n  console.log('primitiveType:', solderMaskFill.getState_PrimitiveType());\n  console.log('primitiveId:', solderMaskFill.getState_PrimitiveId());\n} else {\n  console.log('说明：未能生成阻焊区域（返回 undefined）');\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "添加：阻焊区域",
+    "example.text.0": "1. 获取画布上已有的覆铜填充图元",
+    "example.text.1": "2. 取第一个填充子区域的 ID（本方法按 pourFillId 定位，不是图元 ID）",
+    "example.text.2": "3. 为该子区域添加阻焊区域（保留现场供观察）",
+    "example.text.3": "4. 输出生成的阻焊填充图元信息",
     "returns": "阻焊区域填充图元对象，无法转换或 ID 错误将返回 `undefined`"
   },
   "title": "Add: solder mask region",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "The solder mask region fill primitive object. If conversion fails or the ID is incorrect, `undefined` is returned"
 }

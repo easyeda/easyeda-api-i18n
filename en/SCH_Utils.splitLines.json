@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 一条连续线的扁平坐标（SCH 坐标单位是 10mil，100 ≈ 25.4mm）\nconst flatLine = [100, 100, 400, 100, 400, 300];\nconst single = eda.sch_Utils.splitLines(flatLine);\nconsole.log('单条连续线：', JSON.stringify(single), '，多段线条数：', single.length);\n\n// 2. 相互断开的两条线——各自保留为列表中的独立条目\nconst separated = eda.sch_Utils.splitLines([\n  [100, 100, 300, 100],\n  [500, 100, 700, 100, 700, 300],\n]);\nconsole.log('断开的两条线：', JSON.stringify(separated), '，多段线条数：', separated.length);\n\n// 3. 实际场景：读取画布上导线的坐标数据（嵌套段数组）并归一化\nconst wire = await eda.sch_PrimitiveWire.create([800, 300, 1200, 300, 1200, 500]);\nconst lineData = wire.getState_Line();\nconsole.log('导线原始坐标：', JSON.stringify(lineData));\nconst polylines = eda.sch_Utils.splitLines(lineData);\nconsole.log('导线归一化结果：', JSON.stringify(polylines), '，多段线条数：', polylines.length);\n\n// 4. 清理测试图元（查询演示，保持画布干净）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const flatLine = [100, 100, 400, 100, 400, 300];\nconst single = eda.sch_Utils.splitLines(flatLine);\nconsole.log('单条连续线：', JSON.stringify(single), '，多段线条数：', single.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const separated = eda.sch_Utils.splitLines([\n  [100, 100, 300, 100],\n  [500, 100, 700, 100, 700, 300],\n]);\nconsole.log('断开的两条线：', JSON.stringify(separated), '，多段线条数：', separated.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const wire = await eda.sch_PrimitiveWire.create([800, 300, 1200, 300, 1200, 500]);\nconst lineData = wire.getState_Line();\nconsole.log('导线原始坐标：', JSON.stringify(lineData));\nconst polylines = eda.sch_Utils.splitLines(lineData);\nconsole.log('导线归一化结果：', JSON.stringify(polylines), '，多段线条数：', polylines.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "拆分多段线",
     "remarks.text.0": "将相互之间无任何连接的多段线坐标组拆分成多个多段线，无论是否有多个多段线，本函数都会在输入数据的基础上包裹一层数组；\n建议用于 {@link ISCH_PrimitiveBus} 和 {@link ISCH_PrimitiveWire} 等包含多段线的场景",
+    "example.text.0": "1. 一条连续线的扁平坐标（SCH 坐标单位是 10mil，100 ≈ 25.4mm）",
+    "example.text.1": "2. 相互断开的两条线——各自保留为列表中的独立条目",
+    "example.text.2": "3. 实际场景：读取画布上导线的坐标数据（嵌套段数组）并归一化",
+    "example.text.3": "4. 清理测试图元（查询演示，保持画布干净）",
     "params.lines": "多段线坐标组，每段都是连续的一组 `[x1, y1, x2, y2, x3, y3]` 所描述的线"
   },
   "title": "Split polyline",
   "remarks.text.0": "Splits polyline coordinate groups that have no connections to each other into multiple polylines. Regardless of whether there are multiple polylines, this function wraps an extra layer of array around the input data;\nit is recommended for scenarios containing polylines such as {@link ISCH_PrimitiveBus} and {@link ISCH_PrimitiveWire}",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.lines": "Polyline coordinate group. Each segment is a continuous line described by `[x1, y1, x2, y2, x3, y3]`"
 }

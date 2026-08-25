@@ -27,7 +27,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 记录切换前的图层总数\nconst before = await eda.pcb_Layer.getAllLayers();\n\n// 2. 切换为 FPC 软板（FPC=2），自动新增补强层\nconst fpcResult = await eda.pcb_Layer.setPcbType(2);\n\n// 3. 查看切换后的图层总数变化\nconst fpcLayers = await eda.pcb_Layer.getAllLayers();\n\n// 4. 切回普通板材（NORMAL=1），恢复原板材类型\nconst restoreResult = await eda.pcb_Layer.setPcbType(1);\n\nconsole.log('fpcResult:', fpcResult);\nconsole.log('layerCountBefore:', before.length, '→ layerCountAfter:', fpcLayers.length);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = await eda.pcb_Layer.getAllLayers();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fpcResult = await eda.pcb_Layer.setPcbType(2);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fpcLayers = await eda.pcb_Layer.getAllLayers();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.setPcbType(1);\n\nconsole.log('fpcResult:', fpcResult);\nconsole.log('layerCountBefore:', before.length, '→ layerCountAfter:', fpcLayers.length);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
@@ -38,6 +74,10 @@
     "remarks.text.1": "请注意：",
     "remarks.text.2": "1. 嘉立创暂不支持超过 2 层铜箔层的 FPC 软板生产；",
     "remarks.text.3": "2. 将 PCB 类型从 FPC 软板切换为普通板材时需要预先删除 FPC 补强层上的任何图元，否则将无法切换并返回 `false` 的结果。",
+    "example.text.0": "1. 记录切换前的图层总数",
+    "example.text.1": "2. 切换为 FPC 软板（FPC=2），自动新增补强层",
+    "example.text.2": "3. 查看切换后的图层总数变化",
+    "example.text.3": "4. 切回普通板材（NORMAL=1），恢复原板材类型",
     "params.pcbType": "PCB 类型",
     "returns": "操作是否成功"
   },
@@ -46,6 +86,10 @@
   "remarks.text.1": "Please note:",
   "remarks.text.2": "1. EasyEDA does not yet support FPC flexible board production with more than 2 copper layers;",
   "remarks.text.3": "2. When switching the PCB type from FPC flexible board to ordinary board, any primitives on the FPC stiffener layer must be deleted in advance; otherwise, the switch will fail and `false` will be returned.",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.pcbType": "PCB type",
   "returns": "Whether the operation is successful"
 }

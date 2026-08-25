@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 判断当前是否为客户端环境（同步返回布尔值）\nconst isClient = eda.sys_Environment.isClient();\n\n// 2. 输出判断结果（桌面客户端为 true，网页版为 false）\nconsole.log('是否客户端环境：', isClient);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isClient = eda.sys_Environment.isClient();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('是否客户端环境：', isClient);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "是否处于客户端环境",
+    "example.text.0": "1. 判断当前是否为客户端环境（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果（桌面客户端为 true，网页版为 false）",
     "returns": "是否处于客户端环境"
   },
   "title": "Whether it is in the client environment",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Whether it is in the client environment"
 }

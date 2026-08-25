@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n\n// 2. 读取焊盘摘要数据\nconst pads = comp.getState_Pads();\n\n// 3. 摘要出每个焊盘的编号与网络\nconst padSummaries = pads.map(pad => ({ padNumber: pad.padNumber, net: pad.net }));\n\n// 4. 清理测试器件\nawait eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('padCount:', pads.length);\nconsole.log('padSummaries:', JSON.stringify(padSummaries));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pads = comp.getState_Pads();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const padSummaries = pads.map(pad => ({ padNumber: pad.padNumber, net: pad.net }));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('padCount:', pads.length);\nconsole.log('padSummaries:', JSON.stringify(padSummaries));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：焊盘",
+    "example.text.0": "1. 放置一个测试器件",
+    "example.text.1": "2. 读取焊盘摘要数据",
+    "example.text.2": "3. 摘要出每个焊盘的编号与网络",
+    "example.text.3": "4. 清理测试器件",
     "returns": "焊盘"
   },
   "title": "Get the property state: pad",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Pad"
 }

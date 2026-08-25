@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个通孔类型的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_ViaType();\n\n// 2. 异步模式下切换为缝合孔并提交\nconst a = via.toAsync();\na.setState_ViaType(2);\nawait a.done();\n\n// 3. 从画布重新读取，确认类型已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('viaType:', before, '→', ref.getState_ViaType());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_ViaType();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = via.toAsync();\na.setState_ViaType(2);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('viaType:', before, '→', ref.getState_ViaType());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：过孔类型",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个通孔类型的测试过孔",
+    "example.text.1": "2. 异步模式下切换为缝合孔并提交",
+    "example.text.2": "3. 从画布重新读取，确认类型已生效（保留现场供观察）",
     "params.viaType": "过孔类型",
     "returns": "过孔图元对象"
   },
   "title": "Set the property state: via type",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.viaType": "Via type",
   "returns": "Via primitive object"
 }

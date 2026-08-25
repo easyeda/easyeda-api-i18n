@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条水平测试导线（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000]);\n\n// 2. 读取多段线坐标组（返回画布规格化后的坐标，段内端点顺序可能与创建时相反）\nconst line = wire.getState_Line();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('line:', JSON.stringify(line));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = wire.getState_Line();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('line:', JSON.stringify(line));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：多段线坐标组",
+    "example.text.0": "1. 创建一条水平测试导线（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取多段线坐标组（返回画布规格化后的坐标，段内端点顺序可能与创建时相反）",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "多段线坐标组"
   },
   "title": "Get the property state: polyline coordinate group",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Polyline coordinate group"
 }

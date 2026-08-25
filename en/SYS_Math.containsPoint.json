@@ -23,7 +23,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 定义一块禁布区，测试三个典型位置的点\nconst keepout = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst inside = { x: 50, y: 40 };    // 区域中心，明显在内部\nconst outside = { x: 150, y: 40 };  // 区域右侧，明显在外部\nconst corner = { x: 0, y: 0 };      // 顶点，落在边界上\n\nconsole.log('中心点在禁布区内：', eda.sys_Math.containsPoint(keepout, inside));\nconsole.log('外部点在禁布区内：', eda.sys_Math.containsPoint(keepout, outside));\nconsole.log('顶点在禁布区内：', eda.sys_Math.containsPoint(keepout, corner));\n\n// 2. 严格判断边界点：距离为 0 说明点恰好在边界上\nconsole.log('顶点到边界的距离：', eda.sys_Math.distanceToPoint(keepout, corner));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const keepout = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst inside = { x: 50, y: 40 };    // 区域中心，明显在内部\nconst outside = { x: 150, y: 40 };  // 区域右侧，明显在外部\nconst corner = { x: 0, y: 0 };      // 顶点，落在边界上\n\nconsole.log('中心点在禁布区内：', eda.sys_Math.containsPoint(keepout, inside));\nconsole.log('外部点在禁布区内：', eda.sys_Math.containsPoint(keepout, outside));\nconsole.log('顶点在禁布区内：', eda.sys_Math.containsPoint(keepout, corner));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('顶点到边界的距离：', eda.sys_Math.distanceToPoint(keepout, corner));\n```"
         }
       ]
     }
@@ -33,6 +51,8 @@
     "remarks.text.0": "使用射线法（Ray Casting）判断点是否在多边形内部",
     "remarks.text.1": "由于射线法的特性，边界上的点行为不一致：部分边界上的点可能返回 `true`，部分可能返回 `false`，\n具体取决于射线方向与边界的几何关系",
     "remarks.text.2": "如需严格判断点是否在边界上，请结合 {@link SYS_Math.distanceToPoint} 判断距离是否为 `0`",
+    "example.text.0": "1. 定义一块禁布区，测试三个典型位置的点",
+    "example.text.1": "2. 严格判断边界点：距离为 0 说明点恰好在边界上",
     "params.polygon": "多边形",
     "params.point": "待判断的点",
     "returns": "是否在多边形内部"
@@ -41,6 +61,8 @@
   "remarks.text.0": "Use the ray casting method to determine whether the point is inside the polygon",
   "remarks.text.1": "Due to the characteristics of the ray casting method, points on the boundary behave inconsistently: some boundary points may return `true`, and some may return `false`,\ndepending on the geometric relationship between the ray direction and the boundary",
   "remarks.text.2": "To strictly determine whether the point is on the boundary, combine {@link SYS_Math.distanceToPoint} to check whether the distance is `0`",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.polygon": "Polygon",
   "params.point": "The point to determine",
   "returns": "Whether In polygon internal"

@@ -10,18 +10,29 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 从文件选择器读取模板文件\nconst templateFile = await eda.sys_FileSystem.openReadFileDialog('.xlsx');\nif (templateFile) {\n    const templateName = await eda.pcb_ManufactureData.uploadBomTemplateFile(\n        templateFile,\n        'MyCustomTemplate'\n    );\n    if (templateName) {\n        console.log('模板上传成功:', templateName);\n    }\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const templateFile = await eda.sys_FileSystem.openReadFileDialog('.xlsx');\nif (templateFile) {\n    const templateName = await eda.pcb_ManufactureData.uploadBomTemplateFile(\n        templateFile,\n        'MyCustomTemplate'\n    );\n    if (templateName) {\n        console.log('模板上传成功:', templateName);\n    }\n}\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "上传 BOM 模板文件",
+    "example.text.0": "从文件选择器读取模板文件",
     "params.templateFile": "BOM 模板文件",
     "params.template": "BOM 模板名称，如若为 `undefined` 则自动从 `templateFile` 中取值",
     "returns": "BOM 模板名称"
   },
   "title": "Upload a BOM template file",
+  "example.text.0": null,
   "params.templateFile": "BOM template file",
   "params.template": "BOM template name. If it is `undefined`, the value is automatically taken from `templateFile`",
   "returns": "BOM template name"

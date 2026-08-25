@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000]);\n\n// 2. 读取图元 ID\nconst primitiveId = bus.getState_PrimitiveId();\n\n// 3. 用该 ID 反查同一图元，验证 ID 有效（查询类案例不留测试对象）\nconst refetched = await eda.sch_PrimitiveBus.get(primitiveId);\nawait eda.sch_PrimitiveBus.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetch matched:', refetched.getState_PrimitiveId() === primitiveId);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [1000, 1000, 1400, 1000]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveId = bus.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveBus.get(primitiveId);\nawait eda.sch_PrimitiveBus.delete([primitiveId]);\n\nconsole.log('primitiveId:', primitiveId);\nconsole.log('refetch matched:', refetched.getState_PrimitiveId() === primitiveId);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：图元 ID",
+    "example.text.0": "1. 创建一条测试总线（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取图元 ID",
+    "example.text.2": "3. 用该 ID 反查同一图元，验证 ID 有效（查询类案例不留测试对象）",
     "returns": "图元 ID"
   },
   "title": "Get the property state: primitive ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Primitive ID"
 }

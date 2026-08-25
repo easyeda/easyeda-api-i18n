@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 设置自定义属性（属性名、属性值、名称可见、值可见）\nawait comp.setAttribute('嘉立创示例_Tolerance', '1%', true, true);\n\n// 4. 通过属性图元接口确认属性已写入（保留现场供观察）\nconst attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst added = attrs.find(a => a.getState_Key() === '嘉立创示例_Tolerance');\n\nconsole.log('attrKey:', added.getState_Key());\nconsole.log('attrValue:', added.getState_Value());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await comp.setAttribute('嘉立创示例_Tolerance', '1%', true, true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const attrIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\nconst attrs = await eda.pcb_PrimitiveAttribute.get(attrIds);\nconst added = attrs.find(a => a.getState_Key() === '嘉立创示例_Tolerance');\n\nconsole.log('attrKey:', added.getState_Key());\nconsole.log('attrValue:', added.getState_Value());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置测试器件",
+    "example.text.2": "3. 设置自定义属性（属性名、属性值、名称可见、值可见）",
+    "example.text.3": "4. 通过属性图元接口确认属性已写入（保留现场供观察）",
     "params.key": "属性名，如若器件不存在该属性名的属性，将会新增该属性",
     "params.value": "属性值",
     "params.keyVisible": "属性名可见性",
@@ -24,6 +64,10 @@
     "returns": "属性图元对象"
   },
   "title": "Set Property",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.key": "Attribute name. If the device does not have an attribute with this name, the attribute will be added",
   "params.value": "Property value",
   "params.keyVisible": "Attribute name visibility",

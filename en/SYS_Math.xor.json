@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 新旧两版部分重叠的板框轮廓\nconst oldOutline = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst newOutline = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\n\n// 2. 异或：重叠的中间区域被扣除，剩下两侧不重叠的部分\nconst diff = eda.sys_Math.xor(oldOutline, newOutline);\nconsole.log('差异区域多边形个数：', diff.length);\n\n// 3. 异或面积：8000 + 4000 - 2 x 重叠 2000 = 8000（重叠部分两次都不算）\nconsole.log('差异区域总面积：', eda.sys_Math.calculateArea(diff));\n\n// 4. 完全相同的两个多边形异或结果为空数组（无差异；空组不能再传给\n//    calculateArea，空输入会抛『无法识别的多边形输入格式』）\nconsole.log('自身与自身异或的差异区域个数：', eda.sys_Math.xor(oldOutline, oldOutline).length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const oldOutline = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst newOutline = [{ x: 50, y: 20 }, { x: 150, y: 20 }, { x: 150, y: 60 }, { x: 50, y: 60 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const diff = eda.sys_Math.xor(oldOutline, newOutline);\nconsole.log('差异区域多边形个数：', diff.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('差异区域总面积：', eda.sys_Math.calculateArea(diff));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('自身与自身异或的差异区域个数：', eda.sys_Math.xor(oldOutline, oldOutline).length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "计算两个多边形的对称差集（异或）",
+    "example.text.0": "1. 新旧两版部分重叠的板框轮廓",
+    "example.text.1": "2. 异或：重叠的中间区域被扣除，剩下两侧不重叠的部分",
+    "example.text.2": "3. 异或面积：8000 + 4000 - 2 x 重叠 2000 = 8000（重叠部分两次都不算）",
+    "example.text.3": "4. 完全相同的两个多边形异或结果为空数组（无差异；空组不能再传给\ncalculateArea，空输入会抛『无法识别的多边形输入格式』）",
     "params.polygon1": "多边形 1",
     "params.polygon2": "多边形 2",
     "returns": "对称差集结果的多边形组，保留外环与孔洞的归属关系"
   },
   "title": "Calculate the symmetric difference (XOR) of two polygons",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon1": "Polygon 1",
   "params.polygon2": "Polygon 2",
   "returns": "Polygon group of the symmetric difference result, preserving the association between outer rings and holes"

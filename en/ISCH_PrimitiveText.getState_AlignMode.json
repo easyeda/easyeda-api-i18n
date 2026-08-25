@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个右下对齐的测试文本（第 11 参是对齐模式，9 = RIGHT_BOTTOM）\nconst text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_对齐', 0, null, null, null, false, false, false, 9);\n\n// 2. 读取对齐模式\nconst alignMode = text.getState_AlignMode();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('alignMode:', alignMode);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const text = await eda.sch_PrimitiveText.create(400, 300, '嘉立创示例_对齐', 0, null, null, null, false, false, false, 9);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const alignMode = text.getState_AlignMode();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveText.delete([text.getState_PrimitiveId()]);\n\nconsole.log('alignMode:', alignMode);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：对齐模式",
+    "example.text.0": "1. 创建一个右下对齐的测试文本（第 11 参是对齐模式，9 = RIGHT_BOTTOM）",
+    "example.text.1": "2. 读取对齐模式",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "对齐模式"
   },
   "title": "Get the property state: alignment mode",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Alignment mode"
 }

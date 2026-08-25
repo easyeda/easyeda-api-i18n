@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取编辑器编译日期（同步返回字符串）\nconst compliedDate = eda.sys_Environment.getEditorCompliedDate();\n\n// 2. 输出编译日期（如 2024-06-01，具体以当前环境为准）\nconsole.log('编辑器编译日期：', compliedDate);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const compliedDate = eda.sys_Environment.getEditorCompliedDate();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('编辑器编译日期：', compliedDate);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取编辑器编译日期",
+    "example.text.0": "1. 读取编辑器编译日期（同步返回字符串）",
+    "example.text.1": "2. 输出编译日期（如 2024-06-01，具体以当前环境为准）",
     "returns": "编辑器编译日期"
   },
   "title": "Get the editor compiled date",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Editor compiled date"
 }

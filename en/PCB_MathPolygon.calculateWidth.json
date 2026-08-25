@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 矩形源数组（宽 100、高 50），BBox 宽度为 100\nconsole.log('rectWidth:', eda.pcb_MathPolygon.calculateWidth(['R', 0, 0, 100, 50, 0, 0]));\n\n// 2. 圆心在原点、半径 50 的圆，BBox 宽度为直径 100\nconsole.log('circleWidth:', eda.pcb_MathPolygon.calculateWidth(['CIRCLE', 0, 0, 50]));\n\n// 3. 传复杂多边形对象：矩形 X 范围 0～100，圆 X 范围 170～230，整体跨度 230\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 0, 0, 100, 50, 0, 0],\n  ['CIRCLE', 200, 200, 30],\n]);\nconsole.log('complexWidth:', eda.pcb_MathPolygon.calculateWidth(complexPolygon));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('rectWidth:', eda.pcb_MathPolygon.calculateWidth(['R', 0, 0, 100, 50, 0, 0]));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('circleWidth:', eda.pcb_MathPolygon.calculateWidth(['CIRCLE', 0, 0, 50]));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 0, 0, 100, 50, 0, 0],\n  ['CIRCLE', 200, 200, 30],\n]);\nconsole.log('complexWidth:', eda.pcb_MathPolygon.calculateWidth(complexPolygon));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "计算复杂多边形 BBox 宽度",
+    "example.text.0": "1. 矩形源数组（宽 100、高 50），BBox 宽度为 100",
+    "example.text.1": "2. 圆心在原点、半径 50 的圆，BBox 宽度为直径 100",
+    "example.text.2": "3. 传复杂多边形对象：矩形 X 范围 0～100，圆 X 范围 170～230，整体跨度 230",
     "params.complexPolygon": "复杂多边形",
     "returns": "BBox 宽度"
   },
   "title": "Calculate complex polygon BBox width",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.complexPolygon": "Complex polygon",
   "returns": "BBox width"
 }

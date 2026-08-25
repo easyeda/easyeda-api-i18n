@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个测试过孔（随机坐标避免重合），尺寸不同便于区分\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via1 = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\nconst via2 = await eda.pcb_PrimitiveVia.create('', x, y + 500, 30, 60);\n\n// 2. 传单个 ID 字符串，返回单个过孔对象\nconst single = await eda.pcb_PrimitiveVia.get(via1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回过孔对象数组\nconst arr = await eda.pcb_PrimitiveVia.get([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n\nconsole.log('single holeDiameter:', single.getState_HoleDiameter());\nconsole.log('array length:', arr.length);\nconsole.log('via2 diameter:', arr[1].getState_Diameter());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst via1 = await eda.pcb_PrimitiveVia.create('', x, y, 20, 40);\nconst via2 = await eda.pcb_PrimitiveVia.create('', x, y + 500, 30, 60);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.pcb_PrimitiveVia.get(via1.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.pcb_PrimitiveVia.get([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via1.getState_PrimitiveId(), via2.getState_PrimitiveId()]);\n\nconsole.log('single holeDiameter:', single.getState_HoleDiameter());\nconsole.log('array length:', arr.length);\nconsole.log('via2 diameter:', arr[1].getState_Diameter());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取过孔",
+    "example.text.0": "1. 创建两个测试过孔（随机坐标避免重合），尺寸不同便于区分",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个过孔对象",
+    "example.text.2": "3. 传 ID 数组，返回过孔对象数组",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "过孔的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "过孔图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Via",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Via primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Via primitive object, `undefined` indicates that the retrieval failed"
 }

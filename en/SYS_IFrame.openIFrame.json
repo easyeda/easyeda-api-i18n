@@ -31,7 +31,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个带标题和最大化/最小化按钮的内联框架窗口（自建 ID 便于后续定位）\nconst opened = await eda.sys_IFrame.openIFrame('/extension.json', 360, 240, '嘉立创示例_窗口', {\n  title: '嘉立创示例 内联框架窗口',\n  minimizeButton: true,\n  maximizeButton: true,\n  grayscaleMask: false,\n});\nconsole.log('打开结果：', opened);\n\n// 2. 关闭刚才打开的窗口还原界面（自建自删，保证案例可重复运行）\nconst closed = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口');\nconsole.log('关闭结果：', closed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const opened = await eda.sys_IFrame.openIFrame('/extension.json', 360, 240, '嘉立创示例_窗口', {\n  title: '嘉立创示例 内联框架窗口',\n  minimizeButton: true,\n  maximizeButton: true,\n  grayscaleMask: false,\n});\nconsole.log('打开结果：', opened);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closed = await eda.sys_IFrame.closeIFrame('嘉立创示例_窗口');\nconsole.log('关闭结果：', closed);\n```"
         }
       ]
     }
@@ -43,6 +61,8 @@
     "remarks.text.2": "正文部分为内联框架，`width` 和 `height` 均为正文部分内联框架的宽高；",
     "remarks.text.3": "内联框架需要展示 `htmlFileName` 的内容，该 HTML 从扩展包内获取，并已在安装时被存储至 IndexedDB 中",
     "remarks.text.4": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 打开一个带标题和最大化/最小化按钮的内联框架窗口（自建 ID 便于后续定位）",
+    "example.text.1": "2. 关闭刚才打开的窗口还原界面（自建自删，保证案例可重复运行）",
     "params.htmlFileName": "需要加载的 HTML 文件在扩展包内的路径，从扩展根目录起始，例如 `/iframe/index.html`",
     "params.width": "内联框架窗口的宽度",
     "params.height": "内联框架窗口的高度",
@@ -56,6 +76,8 @@
   "remarks.text.2": "The body is an iframe. `width` and `height` are the width and height of the iframe in the body;",
   "remarks.text.3": "The iframe needs to display the content of `htmlFileName`. This HTML is obtained from the extension package and has been stored in IndexedDB during installation",
   "remarks.text.4": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.htmlFileName": "The path of the HTML file to load within the extension package, starting from the extension root directory, e.g. `/iframe/index.html`",
   "params.width": "Width of the iframe window",
   "params.height": "Height of the iframe window",

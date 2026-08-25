@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两段测试圆弧（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst arc1 = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y);\nconst arc2 = await eda.sch_PrimitiveArc.create(x, y + 200, x + 100, y + 300, x + 200, y + 200);\n\n// 2. 传单个 ID 字符串，返回单个圆弧对象\nconst single = await eda.sch_PrimitiveArc.get(arc1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回圆弧对象数组（任一 ID 未匹配不影响其它图元的返回）\nconst arr = await eda.sch_PrimitiveArc.get([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveArc.delete([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\nconsole.log('single startX:', single.getState_StartX());\nconsole.log('array length:', arr.length);\nconsole.log('arc2 endX:', arr[1].getState_EndX());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst arc1 = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y);\nconst arc2 = await eda.sch_PrimitiveArc.create(x, y + 200, x + 100, y + 300, x + 200, y + 200);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.sch_PrimitiveArc.get(arc1.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.sch_PrimitiveArc.get([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveArc.delete([arc1.getState_PrimitiveId(), arc2.getState_PrimitiveId()]);\n\nconsole.log('single startX:', single.getState_StartX());\nconsole.log('array length:', arr.length);\nconsole.log('arc2 endX:', arr[1].getState_EndX());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取圆弧",
+    "example.text.0": "1. 创建两段测试圆弧（随机坐标避免重合）",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个圆弧对象",
+    "example.text.2": "3. 传 ID 数组，返回圆弧对象数组（任一 ID 未匹配不影响其它图元的返回）",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "圆弧的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "圆弧图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Arc",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Arc primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Arc primitive object, `undefined` indicates that the retrieval failed"
 }

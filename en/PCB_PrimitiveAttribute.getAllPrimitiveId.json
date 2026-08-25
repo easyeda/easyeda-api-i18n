@@ -10,19 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）：\n//    按立创编号从系统库精确反查器件，返回项不含 libraryUuid，需补上才能用于 create\nconst devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst comp = await eda.pcb_PrimitiveComponent.create({ libraryUuid: sysLibUuid, uuid: devices[0].uuid }, 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 获取 PCB 上全部属性的图元 ID\nconst allIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId();\n\n// 3. 按父图元过滤：只取该器件的属性图元 ID\nconst ownIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('total attribute ids:', allIds.length);\nconsole.log('component attribute ids:', ownIds.length);\nconsole.log('component ids all in total list:', ownIds.every(id => allIds.includes(id)));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.searchByProperties({ supplierId: 'C1523' }, undefined, undefined, undefined, 5, 1);\nconst sysLibUuid = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst comp = await eda.pcb_PrimitiveComponent.create({ libraryUuid: sysLibUuid, uuid: devices[0].uuid }, 1, 5000, 5000);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ownIds = await eda.pcb_PrimitiveAttribute.getAllPrimitiveId(compId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([compId]);\n\nconsole.log('total attribute ids:', allIds.length);\nconsole.log('component attribute ids:', ownIds.length);\nconsole.log('component ids all in total list:', ownIds.every(id => allIds.includes(id)));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有属性的图元 ID",
+    "example.text.0": "1. 放置一个测试器件（属性图元随器件生成，无法单独创建）：\n按立创编号从系统库精确反查器件，返回项不含 libraryUuid，需补上才能用于 create",
+    "example.text.1": "2. 获取 PCB 上全部属性的图元 ID",
+    "example.text.2": "3. 按父图元过滤：只取该器件的属性图元 ID",
+    "example.text.3": "4. 清理测试器件（属性图元随器件一起删除）",
     "params.parentPrimitiveId": "关联的父图元 ID",
     "params.layer": "层",
     "params.primitiveLock": "是否锁定",
     "returns": "属性的图元 ID 数组"
   },
   "title": "Get all Property primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.parentPrimitiveId": "Associated parent primitive ID",
   "params.layer": "Layer",
   "params.primitiveLock": "Whether it is locked",

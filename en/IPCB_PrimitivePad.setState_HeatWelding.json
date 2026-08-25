@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个无热焊参数的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_HeatWelding();\n\n// 2. 异步模式下配置发散式热焊参数并提交\nconst a = pad.toAsync();\na.setState_HeatWelding({ connectionMethod: 'Divergent', divergenceSpacing: 10, divergenceLineWidth: 8, divergenceAngle: 45 });\nawait a.done();\n\n// 3. 从图元对象读取配置结果（保留现场供观察）\nconst after = pad.getState_HeatWelding();\n\nconsole.log('heatWelding:', before, '→', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_HeatWelding();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_HeatWelding({ connectionMethod: 'Divergent', divergenceSpacing: 10, divergenceLineWidth: 8, divergenceAngle: 45 });\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = pad.getState_HeatWelding();\n\nconsole.log('heatWelding:', before, '→', after);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：热焊优化参数",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个无热焊参数的贴片焊盘",
+    "example.text.1": "2. 异步模式下配置发散式热焊参数并提交",
+    "example.text.2": "3. 从图元对象读取配置结果（保留现场供观察）",
     "params.heatWelding": "热焊优化参数",
     "returns": "焊盘图元对象"
   },
   "title": "Set the property state: thermal relief optimization parameters",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.heatWelding": "Thermal relief optimization parameters",
   "returns": "Pad primitive object"
 }

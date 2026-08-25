@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试总线重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条水平单段测试总线（SCH 坐标单位 10mil）\nconst bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\n\n// 3. 读取修改前的路径\nconst before = bus.getState_Line();\n\n// 4. 切换异步模式并改为 L 形两段（先水平再垂直，段间共享端点）\nconst asyncBus = bus.toAsync();\nasyncBus.setState_Line([x, y, x + 400, y, x + 400, y + 400]);\nawait asyncBus.done();\n\n// 5. 从画布重新读取，确认路径已更新（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveBus.get(bus.getState_PrimitiveId());\n\nconsole.log('line:', JSON.stringify(before), '→', JSON.stringify(refetched.getState_Line()));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bus = await eda.sch_PrimitiveBus.create('DATA[0..7]', [x, y, x + 400, y]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = bus.getState_Line();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncBus = bus.toAsync();\nasyncBus.setState_Line([x, y, x + 400, y, x + 400, y + 400]);\nawait asyncBus.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveBus.get(bus.getState_PrimitiveId());\n\nconsole.log('line:', JSON.stringify(before), '→', JSON.stringify(refetched.getState_Line()));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：多段线坐标组",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试总线重合",
+    "example.text.1": "2. 创建一条水平单段测试总线（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 读取修改前的路径",
+    "example.text.3": "4. 切换异步模式并改为 L 形两段（先水平再垂直，段间共享端点）",
+    "example.text.4": "5. 从画布重新读取，确认路径已更新（保留现场供观察）",
     "params.line": "多段线坐标组",
     "returns": "总线图元对象"
   },
   "title": "Set the property state: polyline coordinate group",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.line": "Polyline coordinate group",
   "returns": "Bus primitive object"
 }

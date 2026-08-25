@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建专用测试原理图（自带图页 p1 作为复制源），等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst sourcePageUuid = info.page[0].uuid;\n\n// 2. 复制该图页，目标显式指定为同一原理图，返回新图页 UUID\nconst copiedUuid = await eda.dmt_Schematic.copySchematicPage(sourcePageUuid, schematicUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 回读副本图页，确认名称与归属\nconst copyPage = await eda.dmt_Schematic.getSchematicPageInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyPageName:', copyPage?.name);\nconsole.log('belongsToSchematic:', copyPage?.parentSchematicUuid === schematicUuid);\n\n// 4. 清理本例创建的原理图（副本图页随之删除）\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconst sourcePageUuid = info.page[0].uuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copiedUuid = await eda.dmt_Schematic.copySchematicPage(sourcePageUuid, schematicUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copyPage = await eda.dmt_Schematic.getSchematicPageInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyPageName:', copyPage?.name);\nconsole.log('belongsToSchematic:', copyPage?.parentSchematicUuid === schematicUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "复制原理图图页",
+    "example.text.0": "1. 创建专用测试原理图（自带图页 p1 作为复制源），等 1.5s 同步",
+    "example.text.1": "2. 复制该图页，目标显式指定为同一原理图，返回新图页 UUID",
+    "example.text.2": "3. 回读副本图页，确认名称与归属",
+    "example.text.3": "4. 清理本例创建的原理图（副本图页随之删除）",
     "params.schematicPageUuid": "源原理图图页 UUID",
     "params.schematicUuid": "目标原理图 UUID，如若不指定则为当前原理图",
     "returns": "新原理图图页 UUID，如若为 `undefined` 则复制失败"
   },
   "title": "Copy Schematic sheet",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.schematicPageUuid": "Source schematic sheet UUID",
   "params.schematicUuid": "Target schematic UUID. If not specified, it is the current schematic",
   "returns": "New schematic sheet UUID. If it is `undefined`, the copy failed"

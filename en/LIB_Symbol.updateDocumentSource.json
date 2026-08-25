@@ -10,19 +10,85 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID，从系统库复制一个符号（有内容，源码链路才完整）\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\nconst symbolUuid = await eda.lib_Symbol.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  [],\n  '嘉立创示例_源码符号_' + Date.now()\n);\n\n// 2. 在编辑器中打开符号，等待文档加载完成\nconst tabId = await eda.lib_Symbol.openInEditor(symbolUuid, libraryUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 读取当前打开符号的文档源码\nconst documentSource = await eda.sys_FileManager.getDocumentSource();\n\n// 4. 把源码写回库中的符号（此处原样写回；实际使用时可先改写 documentSource）\nconst updated = await eda.lib_Symbol.updateDocumentSource(symbolUuid, libraryUuid, documentSource);\n\n// 5. 关闭编辑器标签页（符号本体保留在库中）\nawait eda.dmt_EditorControl.closeDocument(tabId);\n\n// 修改类保留现场\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('sourceLength:', documentSource.length);\nconsole.log('updated:', updated);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\nconst symbolUuid = await eda.lib_Symbol.copy(\n  source.uuid,\n  source.libraryUuid,\n  libraryUuid,\n  [],\n  '嘉立创示例_源码符号_' + Date.now()\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabId = await eda.lib_Symbol.openInEditor(symbolUuid, libraryUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const documentSource = await eda.sys_FileManager.getDocumentSource();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const updated = await eda.lib_Symbol.updateDocumentSource(symbolUuid, libraryUuid, documentSource);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.closeDocument(tabId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.5",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('sourceLength:', documentSource.length);\nconsole.log('updated:', updated);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "更新符号的文档源码",
+    "example.text.0": "1. 获取个人库 UUID，从系统库复制一个符号（有内容，源码链路才完整）",
+    "example.text.1": "2. 在编辑器中打开符号，等待文档加载完成",
+    "example.text.2": "3. 读取当前打开符号的文档源码",
+    "example.text.3": "4. 把源码写回库中的符号（此处原样写回；实际使用时可先改写 documentSource）",
+    "example.text.4": "5. 关闭编辑器标签页（符号本体保留在库中）",
+    "example.text.5": "修改类保留现场",
     "params.symbolUuid": "符号 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.documentSource": "文档源码",
     "returns": "是否更新成功"
   },
   "title": "Update the document source code of the symbol",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
+  "example.text.5": null,
   "params.symbolUuid": "Symbol UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.documentSource": "Document source code",

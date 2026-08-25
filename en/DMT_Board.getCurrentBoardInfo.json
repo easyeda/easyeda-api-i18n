@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 切换到第一块板子下属的 PCB 文档（工程里可能存在不属于任何板子的 PCB，不能直接取 getAllPcbsInfo()[0]）\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nawait eda.dmt_EditorControl.openDocument(boards[0].pcb.uuid);\nawait new Promise(r => setTimeout(r, 500));\n\n// 2. 获取当前焦点对应的板子\nconst board = await eda.dmt_Board.getCurrentBoardInfo();\n\n// 3. 输出板子属性\nconsole.log('name:', board.name);\nconsole.log('schematic:', board.schematic?.uuid);\nconsole.log('pcb:', board.pcb?.uuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\nawait eda.dmt_EditorControl.openDocument(boards[0].pcb.uuid);\nawait new Promise(r => setTimeout(r, 500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const board = await eda.dmt_Board.getCurrentBoardInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('name:', board.name);\nconsole.log('schematic:', board.schematic?.uuid);\nconsole.log('pcb:', board.pcb?.uuid);\n```"
         }
       ]
     }
@@ -23,9 +50,15 @@
   "_source": {
     "title": "获取当前板子的详细属性",
     "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的原理图、PCB 所关联的板子的详细属性",
+    "example.text.0": "1. 切换到第一块板子下属的 PCB 文档（工程里可能存在不属于任何板子的 PCB，不能直接取 getAllPcbsInfo()[0]）",
+    "example.text.1": "2. 获取当前焦点对应的板子",
+    "example.text.2": "3. 输出板子属性",
     "returns": "板子的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get detailed properties of Current board",
   "remarks.text.0": "It will get the detailed properties of the board associated with the currently open schematic or PCB that has the last input focus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Board detailed properties of; if it is `undefined`, the retrieval failed"
 }

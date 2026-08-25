@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 将非激活层透明度设为 60，让当前编辑层更突出\nconst setResult = await eda.pcb_Layer.setInactiveLayerTransparency(60);\n\n// 2. 恢复为 0（不透明），避免影响日常查看\nconst restoreResult = await eda.pcb_Layer.setInactiveLayerTransparency(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const setResult = await eda.pcb_Layer.setInactiveLayerTransparency(60);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.setInactiveLayerTransparency(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置非激活层透明度",
+    "example.text.0": "1. 将非激活层透明度设为 60，让当前编辑层更突出",
+    "example.text.1": "2. 恢复为 0（不透明），避免影响日常查看",
     "params.transparency": "透明度，范围 `0-100`",
     "returns": "操作是否成功"
   },
   "title": "Set the inactive layer transparency",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.transparency": "Transparency, range `0-100`",
   "returns": "Whether the operation is successful"
 }

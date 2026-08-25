@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合\nconst x = 56000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一条测试直线\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n\n// 3. 转换为同步图元\nconst syncLine = line.toSync();\n\n// 4. 同步模式下修改线宽，立即生效（无需 done()）\nsyncLine.setState_LineWidth(40);\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\n\nconsole.log('isSync after toSync:', !syncLine.isAsync());\nconsole.log('lineWidth:', 10, '→', refetched.getState_LineWidth());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 56000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncLine = line.toSync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "syncLine.setState_LineWidth(40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\n\nconsole.log('isSync after toSync:', !syncLine.isAsync());\nconsole.log('lineWidth:', 10, '→', refetched.getState_LineWidth());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合",
+    "example.text.1": "2. 创建一条测试直线",
+    "example.text.2": "3. 转换为同步图元",
+    "example.text.3": "4. 同步模式下修改线宽，立即生效（无需 done()）",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "returns": "直线图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Line primitive object"
 }

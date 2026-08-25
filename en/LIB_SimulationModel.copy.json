@@ -10,7 +10,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID，并新建一个仿真模型作为复制来源\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst sourceName = '嘉立创示例_仿真模型来源_' + Date.now();\nconst sourceUuid = await eda.lib_SimulationModel.create(libraryUuid, {\n  modelType: 'Ngspice',\n  modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n  modelName: sourceName,\n});\n\n// 2. 同库复制，指定新名称避免同名冲突（分类传 [] = 不分类）\nconst newName = '嘉立创示例_仿真模型副本_' + Date.now();\nconst copiedUuid = await eda.lib_SimulationModel.copy(\n  sourceUuid,\n  libraryUuid,\n  libraryUuid,\n  [],\n  newName\n);\n\n// 创建类保留现场（副本留在个人库中供观察）\n\nconsole.log('sourceUuid:', sourceUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('newName:', newName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst sourceName = '嘉立创示例_仿真模型来源_' + Date.now();\nconst sourceUuid = await eda.lib_SimulationModel.create(libraryUuid, {\n  modelType: 'Ngspice',\n  modelData: '* 示例电阻模型\\n.model EXAMPLE_RES RES(R=1k)\\n',\n  modelName: sourceName,\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_仿真模型副本_' + Date.now();\nconst copiedUuid = await eda.lib_SimulationModel.copy(\n  sourceUuid,\n  libraryUuid,\n  libraryUuid,\n  [],\n  newName\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('sourceUuid:', sourceUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('newName:', newName);\n```"
         }
       ]
     },
@@ -24,6 +51,9 @@
   },
   "_source": {
     "title": "复制仿真模型",
+    "example.text.0": "1. 获取个人库 UUID，并新建一个仿真模型作为复制来源",
+    "example.text.1": "2. 同库复制，指定新名称避免同名冲突（分类传 [] = 不分类）",
+    "example.text.2": "创建类保留现场（副本留在个人库中供观察）",
     "params.simulationModelUuid": "仿真模型 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.targetLibraryUuid": "目标库 UUID",
@@ -32,6 +62,9 @@
     "returns": "目标库内新仿真模型的 UUID"
   },
   "title": "Copy the simulation model",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.simulationModelUuid": "Simulation model UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.targetLibraryUuid": "Target library UUID",

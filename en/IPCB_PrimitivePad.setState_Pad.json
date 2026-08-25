@@ -19,7 +19,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个圆形贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Pad();\n\n// 2. 异步模式下改成 80 x 50 矩形并提交\nconst a = pad.toAsync();\na.setState_Pad(['RECT', 80, 50, 0]);\nawait a.done();\n\n// 3. 从画布重新读取，确认外形已更新（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('padShape:', before, '→', ref.getState_Pad());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst before = pad.getState_Pad();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_Pad(['RECT', 80, 50, 0]);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('padShape:', before, '→', ref.getState_Pad());\n```"
         }
       ]
     }
@@ -28,12 +55,18 @@
     "title": "设置属性状态：焊盘外形",
     "remarks.text.0": "设置焊盘外形时将会联动设置部分其它属性状态：",
     "remarks.text.1": "1. 特殊焊盘外形属性将被清空",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个圆形贴片焊盘",
+    "example.text.1": "2. 异步模式下改成 80 x 50 矩形并提交",
+    "example.text.2": "3. 从画布重新读取，确认外形已更新（保留现场供观察）",
     "params.pad": "焊盘外形",
     "returns": "焊盘图元对象"
   },
   "title": "Set the property state: pad shape",
   "remarks.text.0": "When setting the pad shape, some other property states will be set in conjunction:",
   "remarks.text.1": "1. The special pad shape property will be cleared",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.pad": "Pad shape",
   "returns": "Pad primitive object"
 }

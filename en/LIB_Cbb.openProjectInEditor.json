@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 记录当前工程，便于演示结束后恢复\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\n\n// 2. 复制一个系统库模块到个人库作为打开对象\nconst systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_打开工程_' + Date.now());\n\n// 3. 在编辑器打开模块工程\nconst opened = await eda.lib_Cbb.openProjectInEditor(cbbUuid, personalLib);\n\n// 4. 恢复原来打开的工程\nawait new Promise((r) => setTimeout(r, 1000));\nawait eda.dmt_Project.openProject(projectInfo.uuid);\n\nconsole.log('source:', source.name, source.uuid);\nconsole.log('opened:', opened);\nconsole.log('restored:', projectInfo.uuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const systemLib = await eda.lib_LibrariesList.getSystemLibraryUuid();\nconst personalLib = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst results = await eda.lib_Cbb.search('', systemLib, undefined, 1);\nconst source = results[0];\nconst cbbUuid = await eda.lib_Cbb.copy(source.uuid, systemLib, personalLib, [], '嘉立创示例_打开工程_' + Date.now());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const opened = await eda.lib_Cbb.openProjectInEditor(cbbUuid, personalLib);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise((r) => setTimeout(r, 1000));\nawait eda.dmt_Project.openProject(projectInfo.uuid);\n\nconsole.log('source:', source.name, source.uuid);\nconsole.log('opened:', opened);\nconsole.log('restored:', projectInfo.uuid);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "在编辑器打开复用模块工程",
     "remarks.text.0": "本操作将会在 EDA 前端打开模块工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据",
+    "example.text.0": "1. 记录当前工程，便于演示结束后恢复",
+    "example.text.1": "2. 复制一个系统库模块到个人库作为打开对象",
+    "example.text.2": "3. 在编辑器打开模块工程",
+    "example.text.3": "4. 恢复原来打开的工程",
     "params.cbbUuid": "复用模块 UUID",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取"
   },
   "title": "Open in the editor reuse block project",
   "remarks.text.0": "This operation will open the module project in the EDA front end. If another project was previously opened with unsaved changes, executing this operation will directly lose all unsaved data",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.cbbUuid": "Reuse block UUID",
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in"
 }

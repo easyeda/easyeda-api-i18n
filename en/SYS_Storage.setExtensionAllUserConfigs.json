@@ -19,7 +19,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 备份当前全部配置（整体覆盖前必做）\nconst backup = eda.sys_Storage.getExtensionAllUserConfigs();\n\n// 2. 整体写入一份新配置，原有配置被覆盖\nconst ok = await eda.sys_Storage.setExtensionAllUserConfigs({\n  '嘉立创示例_单位': 'mil',\n  '嘉立创示例_检查更新': true,\n});\n\n// 3. 把备份的原配置写回，还原存储现场\nconst restored = await eda.sys_Storage.setExtensionAllUserConfigs(backup);\n\nconsole.log('整体写入结果：', ok);\nconsole.log('恢复备份结果：', restored);\nconsole.log('备份配置条数：', Object.keys(backup).length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const backup = eda.sys_Storage.getExtensionAllUserConfigs();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ok = await eda.sys_Storage.setExtensionAllUserConfigs({\n  '嘉立创示例_单位': 'mil',\n  '嘉立创示例_检查更新': true,\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restored = await eda.sys_Storage.setExtensionAllUserConfigs(backup);\n\nconsole.log('整体写入结果：', ok);\nconsole.log('恢复备份结果：', restored);\nconsole.log('备份配置条数：', Object.keys(backup).length);\n```"
         }
       ]
     }
@@ -28,12 +55,18 @@
     "title": "设置扩展所有用户配置",
     "remarks.text.0": "此举会覆盖当前扩展的所有用户配置信息，请谨慎操作",
     "remarks.text.1": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 备份当前全部配置（整体覆盖前必做）",
+    "example.text.1": "2. 整体写入一份新配置，原有配置被覆盖",
+    "example.text.2": "3. 把备份的原配置写回，还原存储现场",
     "params.configs": "扩展所有用户配置",
     "returns": "操作是否成功"
   },
   "title": "Set all user configurations of the extension",
   "remarks.text.0": "This will overwrite all user configuration information of the current extension. Please operate with caution",
   "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.configs": "All user configurations of the extension",
   "returns": "Whether the operation is successful"
 }

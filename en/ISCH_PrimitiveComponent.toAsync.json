@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 放置一个测试器件（创建后默认处于异步模式）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\n\n// 3. 显式转换为异步图元（同步图元由此回到异步模式）\nconst asyncComp = comp.toAsync();\nasyncComp.setState_Designator('C300');\n\n// 4. 提交到画布\nawait asyncComp.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveComponent.get(comp.getState_PrimitiveId());\n\nconsole.log('isAsync:', comp.isAsync());\nconsole.log('designator: C? →', refetched.getState_Designator());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncComp = comp.toAsync();\nasyncComp.setState_Designator('C300');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await asyncComp.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveComponent.get(comp.getState_PrimitiveId());\n\nconsole.log('isAsync:', comp.isAsync());\nconsole.log('designator: C? →', refetched.getState_Designator());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为异步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置一个测试器件（创建后默认处于异步模式）",
+    "example.text.2": "3. 显式转换为异步图元（同步图元由此回到异步模式）",
+    "example.text.3": "4. 提交到画布",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "returns": "圆弧线图元对象"
   },
   "title": "Convert Primitive to Async primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Arc line primitive object"
 }

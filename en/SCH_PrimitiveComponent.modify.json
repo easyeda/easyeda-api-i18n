@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试器件（随机坐标避免与画布已有器件重合）\nconst devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 读取修改前的位号、旋转与 X 坐标\nconst beforeDesignator = comp.getState_Designator();\nconst beforeRotation = comp.getState_Rotation();\nconst beforeX = comp.getState_X();\n\n// 3. 批量修改：右移 400（约 101.6mm）、旋转 90 度、位号改为 U100\nawait eda.sch_PrimitiveComponent.modify(compId, {\n  x: x + 400,\n  rotation: 90,\n  designator: '嘉立创示例_U100'\n});\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitiveComponent.get(compId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', compId);\nconsole.log('designator:', beforeDesignator, '→', refreshed.getState_Designator());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\nconsole.log('x:', beforeX, '→', refreshed.getState_X());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeDesignator = comp.getState_Designator();\nconst beforeRotation = comp.getState_Rotation();\nconst beforeX = comp.getState_X();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.modify(compId, {\n  x: x + 400,\n  rotation: 90,\n  designator: '嘉立创示例_U100'\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.sch_PrimitiveComponent.get(compId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', compId);\nconsole.log('designator:', beforeDesignator, '→', refreshed.getState_Designator());\nconsole.log('rotation:', beforeRotation, '→', refreshed.getState_Rotation());\nconsole.log('x:', beforeX, '→', refreshed.getState_X());\n```"
         }
       ]
     }
@@ -23,6 +68,11 @@
   "_source": {
     "title": "修改器件",
     "remarks.text.0": "仅当器件类型为 {@link ESCH_PrimitiveComponentType.COMPONENT | COMPONENT} 时允许使用该方法进行修改",
+    "example.text.0": "1. 创建待修改的测试器件（随机坐标避免与画布已有器件重合）",
+    "example.text.1": "2. 读取修改前的位号、旋转与 X 坐标",
+    "example.text.2": "3. 批量修改：右移 400（约 101.6mm）、旋转 90 度、位号改为 U100",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
@@ -42,6 +92,11 @@
   },
   "title": "Modify Device",
   "remarks.text.0": "This method can only be used for modification when the device type is {@link ESCH_PrimitiveComponentType.COMPONENT | COMPONENT}",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.x": "X coordinate",
   "params.y": "Y coordinate",

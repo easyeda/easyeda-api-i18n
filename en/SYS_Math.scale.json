@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 定义一个矩形焊区\nconst pad = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n\n// 2. 等比放大 1.5 倍：绕质心原地放大，面积变为 2.25 倍\nconst enlarged = eda.sys_Math.scale(pad, 1.5);\nconsole.log('放大 1.5 倍后的顶点：', JSON.stringify(enlarged));\nconsole.log('放大后的面积：', eda.sys_Math.calculateArea(enlarged));\n\n// 3. X、Y 采用不同比例：只在 X 方向拉宽 2 倍（绕质心，Y 不变）\nconst stretched = eda.sys_Math.scale(pad, 2, 1);\nconsole.log('仅 X 方向放大 2 倍后的顶点：', JSON.stringify(stretched));\n\n// 4. 指定缩放中心 (0, 0)：各点坐标直接乘以比例\nconst fromOrigin = eda.sys_Math.scale(pad, 2, 2, 0, 0);\nconsole.log('绕原点放大后的第一个点：', JSON.stringify(fromOrigin[0]));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pad = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const enlarged = eda.sys_Math.scale(pad, 1.5);\nconsole.log('放大 1.5 倍后的顶点：', JSON.stringify(enlarged));\nconsole.log('放大后的面积：', eda.sys_Math.calculateArea(enlarged));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const stretched = eda.sys_Math.scale(pad, 2, 1);\nconsole.log('仅 X 方向放大 2 倍后的顶点：', JSON.stringify(stretched));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fromOrigin = eda.sys_Math.scale(pad, 2, 2, 0, 0);\nconsole.log('绕原点放大后的第一个点：', JSON.stringify(fromOrigin[0]));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "缩放多边形",
+    "example.text.0": "1. 定义一个矩形焊区",
+    "example.text.1": "2. 等比放大 1.5 倍：绕质心原地放大，面积变为 2.25 倍",
+    "example.text.2": "3. X、Y 采用不同比例：只在 X 方向拉宽 2 倍（绕质心，Y 不变）",
+    "example.text.3": "4. 指定缩放中心 (0, 0)：各点坐标直接乘以比例",
     "params.polygon": "多边形",
     "params.scaleX": "X 方向缩放比例",
     "params.scaleY": "Y 方向缩放比例，默认与 scaleX 相同",
@@ -25,6 +65,10 @@
     "returns": "缩放后的离散点数组"
   },
   "title": "Scale the polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon": "Polygon",
   "params.scaleX": "X direction scale ratio",
   "params.scaleY": "Y direction scale ratio, defaulting to the same as scaleX",

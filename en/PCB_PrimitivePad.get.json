@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个测试焊盘（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', x, y + 500, 0, ['RECT', 80, 40, 0], '', null, 0, 0, 0, false, 0);\n\n// 2. 传单个 ID 字符串，返回单个焊盘对象\nconst single = await eda.pcb_PrimitivePad.get(pad1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回焊盘对象数组（任一 ID 未匹配不影响其它项返回）\nconst arr = await eda.pcb_PrimitivePad.get([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitivePad.delete([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n\nconsole.log('single padNumber:', single.getState_PadNumber());\nconsole.log('array length:', arr.length);\nconsole.log('pad2 layer:', arr[1].getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', x, y + 500, 0, ['RECT', 80, 40, 0], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.pcb_PrimitivePad.get(pad1.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.pcb_PrimitivePad.get([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()]);\n\nconsole.log('single padNumber:', single.getState_PadNumber());\nconsole.log('array length:', arr.length);\nconsole.log('pad2 layer:', arr[1].getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取焊盘",
+    "example.text.0": "1. 创建两个测试焊盘（随机坐标避免重合）",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个焊盘对象",
+    "example.text.2": "3. 传 ID 数组，返回焊盘对象数组（任一 ID 未匹配不影响其它项返回）",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "焊盘的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "焊盘图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Pad",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Pad primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Pad primitive object, `undefined` indicates that the retrieval failed"
 }

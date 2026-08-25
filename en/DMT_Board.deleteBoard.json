@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 复制一块板子作为删除目标，避免误删工程里有用的板子\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst tempName = await eda.dmt_Board.copyBoard(boards[0].name);\nconsole.log('temp board:', tempName);\n\n// 2. 删除该板子\nconst deleted = await eda.dmt_Board.deleteBoard(tempName);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\nconst tempName = await eda.dmt_Board.copyBoard(boards[0].name);\nconsole.log('temp board:', tempName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Board.deleteBoard(tempName);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "删除板子",
     "remarks.text.0": "如若指定板子不存在，接口将返回 `false` 的结果，表示操作失败",
+    "example.text.0": "1. 复制一块板子作为删除目标，避免误删工程里有用的板子",
+    "example.text.1": "2. 删除该板子",
     "params.boardName": "板子名称",
     "returns": "操作是否成功"
   },
   "title": "Delete Board",
   "remarks.text.0": "If the specified board does not exist, the API will return `false`, indicating that the operation failed",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.boardName": "Board name",
   "returns": "Whether the operation is successful"
 }

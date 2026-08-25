@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 基本换算：25.4 mm = 1 英寸（同步返回数值，无需 await）\nconsole.log('25.4 mm =', eda.sys_Unit.mmToInch(25.4), '英寸');\n\n// 2. 常用板宽换算：100 mm 与 160 mm\nconsole.log('100 mm =', eda.sys_Unit.mmToInch(100), '英寸');\nconsole.log('160 mm =', eda.sys_Unit.mmToInch(160), '英寸');\n\n// 3. 指定保留 6 位小数（默认 4 位，小尺寸需要更多位才不损失精度）\nconsole.log('2.54 mm 保留 6 位小数 =', eda.sys_Unit.mmToInch(2.54, 6), '英寸');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('25.4 mm =', eda.sys_Unit.mmToInch(25.4), '英寸');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('100 mm =', eda.sys_Unit.mmToInch(100), '英寸');\nconsole.log('160 mm =', eda.sys_Unit.mmToInch(160), '英寸');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('2.54 mm 保留 6 位小数 =', eda.sys_Unit.mmToInch(2.54, 6), '英寸');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "单位转换：毫米到英寸",
+    "example.text.0": "1. 基本换算：25.4 mm = 1 英寸（同步返回数值，无需 await）",
+    "example.text.1": "2. 常用板宽换算：100 mm 与 160 mm",
+    "example.text.2": "3. 指定保留 6 位小数（默认 4 位，小尺寸需要更多位才不损失精度）",
     "params.mm": "输入毫米数",
     "params.numberOfDecimals": "保留小数位数，默认为 `4`",
     "returns": "输出英寸数"
   },
   "title": "Unit conversion: millimeters to inches",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.mm": "Input value in millimeters",
   "params.numberOfDecimals": "Number of decimal places to keep, default is `4`",
   "returns": "Output value in inches"

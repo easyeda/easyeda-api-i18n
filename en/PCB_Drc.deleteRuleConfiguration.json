@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前配置并保存为待删除的自定义配置\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_待删配置', true);\n\n// 2. 删除该自定义配置\nconst result = await eda.pcb_Drc.deleteRuleConfiguration('嘉立创示例_待删配置');\n\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_待删配置', true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.deleteRuleConfiguration('嘉立创示例_待删配置');\n\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "删除设计规则配置",
     "remarks.text.0": "系统配置不允许删除",
+    "example.text.0": "1. 读取当前配置并保存为待删除的自定义配置",
+    "example.text.1": "2. 删除该自定义配置",
     "params.configurationName": "配置名称",
     "returns": "删除是否成功"
   },
   "title": "Delete Design rule configuration",
   "remarks.text.0": "The system configuration does not allow deletion",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.configurationName": "Configuration name",
   "returns": "Delete Whether Successful"
 }

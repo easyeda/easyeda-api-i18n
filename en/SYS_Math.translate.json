@@ -10,19 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 定义一个器件占位轮廓\nconst footprint = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n\n// 2. 向右平移 200、向上平移 150（得到排布到新位置的轮廓）\nconst placed = eda.sys_Math.translate(footprint, 200, 150);\nconsole.log('平移后的顶点：', JSON.stringify(placed));\n\n// 3. 负偏移向左下方平移\nconst back = eda.sys_Math.translate(placed, -200, -150);\nconsole.log('再平移回原位后的第一个点：', JSON.stringify(back[0]));\n\n// 4. 平移前后形状不变，周长与面积保持一致\nconsole.log('平移前后周长：', eda.sys_Math.calculatePerimeter(footprint), '/', eda.sys_Math.calculatePerimeter(placed));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const footprint = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const placed = eda.sys_Math.translate(footprint, 200, 150);\nconsole.log('平移后的顶点：', JSON.stringify(placed));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const back = eda.sys_Math.translate(placed, -200, -150);\nconsole.log('再平移回原位后的第一个点：', JSON.stringify(back[0]));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('平移前后周长：', eda.sys_Math.calculatePerimeter(footprint), '/', eda.sys_Math.calculatePerimeter(placed));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "平移多边形",
+    "example.text.0": "1. 定义一个器件占位轮廓",
+    "example.text.1": "2. 向右平移 200、向上平移 150（得到排布到新位置的轮廓）",
+    "example.text.2": "3. 负偏移向左下方平移",
+    "example.text.3": "4. 平移前后形状不变，周长与面积保持一致",
     "params.polygon": "多边形",
     "params.dx": "X 方向偏移量",
     "params.dy": "Y 方向偏移量",
     "returns": "平移后的离散点数组"
   },
   "title": "Translate the polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon": "Polygon",
   "params.dx": "X direction offset",
   "params.dy": "Y direction offset",

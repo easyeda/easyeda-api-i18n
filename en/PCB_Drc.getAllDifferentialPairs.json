@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的网络名和差分对名，创建测试差分对\nconst ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\nconst pairName = '嘉立创示例_查询差分对_' + ts;\nawait eda.pcb_Drc.createDifferentialPair(pairName, netP, netN);\n\n// 2. 查询所有差分对（v3.4 起返回结构可能为数组或对象，先按数组遍历）\nconst pairs = await eda.pcb_Drc.getAllDifferentialPairs();\nconst list = Array.isArray(pairs) ? pairs : Object.values(pairs);\nconsole.log('count:', list.length);\nlist.forEach((p, i) => {\n  console.log('[' + i + '] name:', p.name, 'positiveNet:', p.positiveNet, 'negativeNet:', p.negativeNet);\n});\n\n// 3. 清理测试差分对（查询类清理现场）\nawait eda.pcb_Drc.deleteDifferentialPair(pairName);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ts = Date.now();\nconst netP = 'JLC_DEMO_DP_P_' + ts;\nconst netN = 'JLC_DEMO_DP_N_' + ts;\nconst x = 3000 + Math.floor(Math.random() * 20000);\nawait eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], netP, null, 0, 0, 0, false, 0);\nawait eda.pcb_PrimitivePad.create(1, '2', x + 500, 3000, 0, ['ELLIPSE', 60, 60], netN, null, 0, 0, 0, false, 0);\nconst pairName = '嘉立创示例_查询差分对_' + ts;\nawait eda.pcb_Drc.createDifferentialPair(pairName, netP, netN);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pairs = await eda.pcb_Drc.getAllDifferentialPairs();\nconst list = Array.isArray(pairs) ? pairs : Object.values(pairs);\nconsole.log('count:', list.length);\nlist.forEach((p, i) => {\n  console.log('[' + i + '] name:', p.name, 'positiveNet:', p.positiveNet, 'negativeNet:', p.negativeNet);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.deleteDifferentialPair(pairName);\n```"
         }
       ]
     },
@@ -30,9 +57,15 @@
   "_source": {
     "title": "获取所有差分对的详细属性",
     "remarks.text.0": "- 返回值类型更改为对象",
+    "example.text.0": "1. 生成本次运行专用的网络名和差分对名，创建测试差分对",
+    "example.text.1": "2. 查询所有差分对（v3.4 起返回结构可能为数组或对象，先按数组遍历）",
+    "example.text.2": "3. 清理测试差分对（查询类清理现场）",
     "returns": "所有差分对的详细属性"
   },
   "title": "Get the detailed properties of all differential pairs",
   "remarks.text.0": "- The return value type is changed to an object",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Detailed properties of all differential pairs"
 }

@@ -19,7 +19,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个内联框架窗口（自建 fixture）\nconst opened = await eda.sys_IFrame.openIFrame('/extension.json', 320, 200, '嘉立创示例_隐藏演示', {\n  title: '嘉立创示例 隐藏演示窗口',\n});\nconsole.log('打开结果：', opened);\n\n// 2. 隐藏该窗口（窗口从界面消失，但未被销毁）\nconst hidden = await eda.sys_IFrame.hideIFrame('嘉立创示例_隐藏演示');\nconsole.log('隐藏结果：', hidden);\n\n// 3. 对已隐藏的窗口再次隐藏，验证幂等语义（返回 true）\nconst hideAgain = await eda.sys_IFrame.hideIFrame('嘉立创示例_隐藏演示');\nconsole.log('重复隐藏结果：', hideAgain);\n\n// 4. 对不存在的窗口 ID 隐藏，结果导向返回 false（不抛错）\nconst hideMissing = await eda.sys_IFrame.hideIFrame('嘉立创示例_不存在的窗口');\nconsole.log('不存在的窗口 ID →', hideMissing);\n\n// 5. 关闭隐藏状态的窗口还原界面（隐藏的窗口可直接关闭）\nconst closed = await eda.sys_IFrame.closeIFrame('嘉立创示例_隐藏演示');\nconsole.log('关闭隐藏窗口结果：', closed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const opened = await eda.sys_IFrame.openIFrame('/extension.json', 320, 200, '嘉立创示例_隐藏演示', {\n  title: '嘉立创示例 隐藏演示窗口',\n});\nconsole.log('打开结果：', opened);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const hidden = await eda.sys_IFrame.hideIFrame('嘉立创示例_隐藏演示');\nconsole.log('隐藏结果：', hidden);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const hideAgain = await eda.sys_IFrame.hideIFrame('嘉立创示例_隐藏演示');\nconsole.log('重复隐藏结果：', hideAgain);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const hideMissing = await eda.sys_IFrame.hideIFrame('嘉立创示例_不存在的窗口');\nconsole.log('不存在的窗口 ID →', hideMissing);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closed = await eda.sys_IFrame.closeIFrame('嘉立创示例_隐藏演示');\nconsole.log('关闭隐藏窗口结果：', closed);\n```"
         }
       ]
     }
@@ -28,12 +73,22 @@
     "title": "隐藏内联框架窗口",
     "remarks.text.0": "本接口为结果导向的：\n如若未找到指定内联框架窗口，接口将会返回 `false`；\n如若在执行操作前该内联框架窗口已处于隐藏状态，接口将会返回 `true`",
     "remarks.text.1": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 打开一个内联框架窗口（自建 fixture）",
+    "example.text.1": "2. 隐藏该窗口（窗口从界面消失，但未被销毁）",
+    "example.text.2": "3. 对已隐藏的窗口再次隐藏，验证幂等语义（返回 true）",
+    "example.text.3": "4. 对不存在的窗口 ID 隐藏，结果导向返回 false（不抛错）",
+    "example.text.4": "5. 关闭隐藏状态的窗口还原界面（隐藏的窗口可直接关闭）",
     "params.id": "内联框架窗口 ID，未传入时将隐藏扩展关联的所有内联框架窗口",
     "returns": "操作是否成功"
   },
   "title": "Hide iframe window",
   "remarks.text.0": "This API is result-oriented:\nIf the specified iframe window is not found, the API returns `false`;\nif the iframe window was already hidden before the operation, the API returns `true`",
   "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.id": "Iframe window ID. If not passed in, all iframe windows associated with the extension will be hidden",
   "returns": "Whether the operation is successful"
 }

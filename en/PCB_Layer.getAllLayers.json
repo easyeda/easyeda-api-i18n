@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 一次性取回当前 PCB 的全部图层\nconst layers = await eda.pcb_Layer.getAllLayers();\n\n// 2. 查看顶层（TOP=1）的典型属性\nconst top = layers.find(l => l.id === 1);\n\n// 3. 统计信号层（铜箔层）数量\nconst copperCount = layers.filter(l => l.type === 'SIGNAL').length;\n\nconsole.log('totalCount:', layers.length);\nconsole.log('topLayerName:', top?.name);\nconsole.log('topLayerColor:', top?.color);\nconsole.log('topLayerLocked:', top?.locked);\nconsole.log('copperLayerCount:', copperCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layers = await eda.pcb_Layer.getAllLayers();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const top = layers.find(l => l.id === 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copperCount = layers.filter(l => l.type === 'SIGNAL').length;\n\nconsole.log('totalCount:', layers.length);\nconsole.log('topLayerName:', top?.name);\nconsole.log('topLayerColor:', top?.color);\nconsole.log('topLayerLocked:', top?.locked);\nconsole.log('copperLayerCount:', copperCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有图层的详细属性",
+    "example.text.0": "1. 一次性取回当前 PCB 的全部图层",
+    "example.text.1": "2. 查看顶层（TOP=1）的典型属性",
+    "example.text.2": "3. 统计信号层（铜箔层）数量",
     "returns": "所有图层的详细属性"
   },
   "title": "Get the detailed properties of all layers",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Detailed properties of all layers"
 }

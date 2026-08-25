@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（C0402 电容有两个引脚，SCH 坐标单位 10mil）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 获取器件全部引脚（C0402 电容返回 2 个引脚图元）\nconst pins = await comp.getAllPins();\n\n// 3. 清理测试器件（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('pinCount:', pins.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pins = await comp.getAllPins();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('pinCount:', pins.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取器件关联的所有引脚",
+    "example.text.0": "1. 放置一个测试器件（C0402 电容有两个引脚，SCH 坐标单位 10mil）",
+    "example.text.1": "2. 获取器件全部引脚（C0402 电容返回 2 个引脚图元）",
+    "example.text.2": "3. 清理测试器件（查询类需要清理）",
     "returns": "器件引脚图元数组"
   },
   "title": "Get all pins associated with the device",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Device pin primitive array"
 }

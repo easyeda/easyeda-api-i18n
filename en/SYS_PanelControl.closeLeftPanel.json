@@ -10,13 +10,35 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先展开左侧面板制造“已打开”状态（不传 tab 则保持当前标签页）\neda.sys_PanelControl.openLeftPanel();\nconsole.log('左侧面板已展开');\n\n// 2. 收起左侧面板（同步调用，无返回值）\neda.sys_PanelControl.closeLeftPanel();\nconsole.log('左侧面板已收起');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.openLeftPanel();\nconsole.log('左侧面板已展开');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.closeLeftPanel();\nconsole.log('左侧面板已收起');\n```"
         }
       ]
     }
   },
   "_source": {
-    "title": "关闭左侧面板"
+    "title": "关闭左侧面板",
+    "example.text.0": "1. 先展开左侧面板制造“已打开”状态（不传 tab 则保持当前标签页）",
+    "example.text.1": "2. 收起左侧面板（同步调用，无返回值）"
   },
-  "title": "Close the left panel"
+  "title": "Close the left panel",
+  "example.text.0": null,
+  "example.text.1": null
 }

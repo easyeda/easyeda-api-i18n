@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建两级测试分类（复用模块库，ELIB_LibraryType.CBB = '1'）\nconst tag = Date.now();\nconst primaryName = '嘉立创示例_按名索引一级_' + tag;\nconst secondaryName = '嘉立创示例_按名索引二级_' + tag;\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\nawait eda.lib_Classification.createSecondary(\n  libraryUuid, '1', primaryIndex.primaryClassificationUuid, secondaryName\n);\n\n// 3. 只按一级名称查索引\nconst primaryOnly = await eda.lib_Classification.getIndexByName(libraryUuid, '1', primaryName);\n\n// 4. 按一级 + 二级名称查索引（secondaryClassificationName 可选）\nconst withSecondary = await eda.lib_Classification.getIndexByName(\n  libraryUuid, '1', primaryName, secondaryName\n);\n\n// 5. 清理测试分类（查询类需要清理）\nawait eda.lib_Classification.deleteByUuid(libraryUuid, primaryIndex.primaryClassificationUuid);\n\nconsole.log('primaryOnly.primaryClassificationUuid:', primaryOnly.primaryClassificationUuid);\nconsole.log('withSecondary.secondaryClassificationUuid:', withSecondary.secondaryClassificationUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tag = Date.now();\nconst primaryName = '嘉立创示例_按名索引一级_' + tag;\nconst secondaryName = '嘉立创示例_按名索引二级_' + tag;\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\nawait eda.lib_Classification.createSecondary(\n  libraryUuid, '1', primaryIndex.primaryClassificationUuid, secondaryName\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primaryOnly = await eda.lib_Classification.getIndexByName(libraryUuid, '1', primaryName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const withSecondary = await eda.lib_Classification.getIndexByName(\n  libraryUuid, '1', primaryName, secondaryName\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.lib_Classification.deleteByUuid(libraryUuid, primaryIndex.primaryClassificationUuid);\n\nconsole.log('primaryOnly.primaryClassificationUuid:', primaryOnly.primaryClassificationUuid);\nconsole.log('withSecondary.secondaryClassificationUuid:', withSecondary.secondaryClassificationUuid);\n```"
         }
       ]
     }
@@ -23,6 +68,11 @@
   "_source": {
     "title": "获取指定名称的分类的分类索引",
     "remarks.text.0": "分类索引内包含分类的 UUID，具体可查阅 {@link ILIB_ClassificationIndex}",
+    "example.text.0": "1. 获取个人库 UUID",
+    "example.text.1": "2. 创建两级测试分类（复用模块库，ELIB_LibraryType.CBB = '1'）",
+    "example.text.2": "3. 只按一级名称查索引",
+    "example.text.3": "4. 按一级 + 二级名称查索引（secondaryClassificationName 可选）",
+    "example.text.4": "5. 清理测试分类（查询类需要清理）",
     "params.libraryUuid": "库 UUID",
     "params.libraryType": "库类型",
     "params.primaryClassificationName": "一级分类名称",
@@ -32,6 +82,11 @@
   },
   "title": "Get the classification index of the classification with the specified name",
   "remarks.text.0": "The classification index contains the UUID of the classification. For details, refer to {@link ILIB_ClassificationIndex}",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.libraryUuid": "Library UUID",
   "params.libraryType": "Library type",
   "params.primaryClassificationName": "Primary classification name",

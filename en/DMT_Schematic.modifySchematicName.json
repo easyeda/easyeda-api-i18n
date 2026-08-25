@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建专用测试原理图（自带图页 p1）并等 1.5s 同步\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 打开自带图页 p1（改名只对已打开的原理图生效）\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(info.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 3. 修改原理图名称（只对本例创建的测试原理图改名）\nconst newName = '嘉立创示例_原理图新名称';\nconst renamed = await eda.dmt_Schematic.modifySchematicName(schematicUuid, newName);\nconsole.log('renamed:', renamed);\n\n// 4. 等 1.5s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）\nawait new Promise(r => setTimeout(r, 1500));\nconst after = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('renamedTo:', after?.name);\nconsole.log('renameVerified:', (after?.name ?? '').toLowerCase() === newName.toLowerCase());\n\n// 5. 清理测试原理图，保持工程整洁\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nawait eda.dmt_EditorControl.openDocument(info.page[0].uuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_原理图新名称';\nconst renamed = await eda.dmt_Schematic.modifySchematicName(schematicUuid, newName);\nconsole.log('renamed:', renamed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst after = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('renamedTo:', after?.name);\nconsole.log('renameVerified:', (after?.name ?? '').toLowerCase() === newName.toLowerCase());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
@@ -23,12 +68,22 @@
   "_source": {
     "title": "修改原理图名称",
     "remarks.text.0": "如若原理图已关联复用模块（在工程库内存在同名的复用模块符号），则修改名称时将同步修改复用模块符号名称与关联 PCB 名称",
+    "example.text.0": "1. 创建专用测试原理图（自带图页 p1）并等 1.5s 同步",
+    "example.text.1": "2. 打开自带图页 p1（改名只对已打开的原理图生效）",
+    "example.text.2": "3. 修改原理图名称（只对本例创建的测试原理图改名）",
+    "example.text.3": "4. 等 1.5s 让改名同步，回读验证（英文名可能被归一化为小写，按不区分大小写比较）",
+    "example.text.4": "5. 清理测试原理图，保持工程整洁",
     "params.schematicUuid": "原理图 UUID",
     "params.schematicName": "原理图名称",
     "returns": "是否修改成功"
   },
   "title": "Modify Schematic name",
   "remarks.text.0": "If the schematic is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), modifying the name will also modify the reuse block symbol name and the associated PCB name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.schematicUuid": "Schematic UUID",
   "params.schematicName": "Schematic name",
   "returns": "Whether Modify Successful"

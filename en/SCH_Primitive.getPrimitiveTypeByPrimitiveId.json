@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条测试导线作为查询目标（SCH 坐标单位 10mil）\nconst wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000], 'SIG_A');\n\n// 2. 用图元 ID 查询类型\nconst type = await eda.sch_Primitive.getPrimitiveTypeByPrimitiveId(wire.getState_PrimitiveId());\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', type);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const wire = await eda.sch_PrimitiveWire.create([1000, 1000, 1400, 1000], 'SIG_A');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const type = await eda.sch_Primitive.getPrimitiveTypeByPrimitiveId(wire.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveWire.delete([wire.getState_PrimitiveId()]);\n\nconsole.log('primitiveType:', type);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取指定 ID 的图元的图元类型",
+    "example.text.0": "1. 创建一条测试导线作为查询目标（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 用图元 ID 查询类型",
+    "example.text.2": "3. 清理测试图元（查询类需要清理）",
     "params.id": "图元 ID",
     "returns": "图元类型"
   },
   "title": "Get the primitive type of the primitive with the specified ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.id": "Primitive ID",
   "returns": "Primitive type"
 }

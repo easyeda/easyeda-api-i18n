@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（属性图元随器件生成，无法单独创建）\nconst devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 传父图元 ID，拿到该器件的全部属性\nconst compAttrs = await eda.sch_PrimitiveAttribute.getAll(compId);\nconst keys = compAttrs.map(a => a.getState_Key());\n\n// 3. 不传参数，拿到当前图页上的所有属性图元\nconst allAttrs = await eda.sch_PrimitiveAttribute.getAll();\n\n// 4. 清理测试器件（属性图元随器件一起删除）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('component attr count:', compAttrs.length);\nconsole.log('keys:', keys.join(', '));\nconsole.log('page total attrs:', allAttrs.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('');\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const compAttrs = await eda.sch_PrimitiveAttribute.getAll(compId);\nconst keys = compAttrs.map(a => a.getState_Key());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allAttrs = await eda.sch_PrimitiveAttribute.getAll();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('component attr count:', compAttrs.length);\nconsole.log('keys:', keys.join(', '));\nconsole.log('page total attrs:', allAttrs.length);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "获取所有属性",
     "remarks.text.0": "不传递父图元 ID 将拿到图页中的所有属性图元",
+    "example.text.0": "1. 放置一个测试器件（属性图元随器件生成，无法单独创建）",
+    "example.text.1": "2. 传父图元 ID，拿到该器件的全部属性",
+    "example.text.2": "3. 不传参数，拿到当前图页上的所有属性图元",
+    "example.text.3": "4. 清理测试器件（属性图元随器件一起删除）",
     "params.parentPrimitiveId": "父图元 ID",
     "returns": "属性图元对象数组"
   },
   "title": "Get all Property",
   "remarks.text.0": "If no parent primitive ID is passed, all attribute primitives in the sheet will be obtained",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.parentPrimitiveId": "Parent primitive ID",
   "returns": "Array of Property primitive objects"
 }

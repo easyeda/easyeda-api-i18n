@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程所属团队，作为文件夹的归属\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 在团队根目录下创建测试文件夹\nconst folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_文件夹', teamUuid);\n\n// 3. 等待工作区同步后回读，确认文件夹已落地\nawait new Promise(r => setTimeout(r, 1500));\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('name:', folderInfo?.name);\nconsole.log('parentFolderUuid:', folderInfo?.parentFolderUuid === teamUuid ? '(团队根目录)' : folderInfo?.parentFolderUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_文件夹', teamUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst folderInfo = await eda.dmt_Folder.getFolderInfo(teamUuid, folderUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('name:', folderInfo?.name);\nconsole.log('parentFolderUuid:', folderInfo?.parentFolderUuid === teamUuid ? '(团队根目录)' : folderInfo?.parentFolderUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建文件夹",
+    "example.text.0": "1. 取当前工程所属团队，作为文件夹的归属",
+    "example.text.1": "2. 在团队根目录下创建测试文件夹",
+    "example.text.2": "3. 等待工作区同步后回读，确认文件夹已落地",
     "params.folderName": "文件夹名称",
     "params.teamUuid": "团队 UUID",
     "params.parentFolderUuid": "父文件夹 UUID，如若不指定，则为根文件夹",
@@ -24,6 +54,9 @@
     "returns": "文件夹 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Folder",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.folderName": "Folder name",
   "params.teamUuid": "Team UUID",
   "params.parentFolderUuid": "Parent folder UUID. If not specified, it is the root folder",

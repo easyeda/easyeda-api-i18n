@@ -10,19 +10,41 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 在公共总线注册一个库查询服务\neda.sys_MessageBus.rpcServicePublic('嘉立创示例_公共RPC调用', (message) => {\n  return { name: message, stock: 1200 };\n});\n\n// 2. 调用公共 RPC 服务，await 拿到返回值\nconst reply = await eda.sys_MessageBus.rpcCallPublic('嘉立创示例_公共RPC调用', '0402 电阻');\nconsole.log('查询结果：', reply.name, '库存', reply.stock);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.rpcServicePublic('嘉立创示例_公共RPC调用', (message) => {\n  return { name: message, stock: 1200 };\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const reply = await eda.sys_MessageBus.rpcCallPublic('嘉立创示例_公共RPC调用', '0402 电阻');\nconsole.log('查询结果：', reply.name, '库存', reply.stock);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "公共消息总线：调用 RPC 服务",
+    "example.text.0": "1. 在公共总线注册一个库查询服务",
+    "example.text.1": "2. 调用公共 RPC 服务，await 拿到返回值",
     "params.topic": "主题",
     "params.message": "消息",
     "params.timeout": "超时",
     "returns": "RPC 服务返回"
   },
   "title": "Public message bus: call RPC service",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.topic": "Theme",
   "params.message": "Message",
   "params.timeout": "Timeout",

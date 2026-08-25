@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个实心填充的测试圆（fillStyle 传字符串枚举，如 'Solid'）\nconst circle = await eda.sch_PrimitiveCircle.create(400, 300, 150, '#FF0000', '#FFEC8B', 6, 0, 'Solid');\n\n// 2. 读取填充样式\nconst fillStyle = circle.getState_FillStyle();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('fillStyle:', fillStyle);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const circle = await eda.sch_PrimitiveCircle.create(400, 300, 150, '#FF0000', '#FFEC8B', 6, 0, 'Solid');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const fillStyle = circle.getState_FillStyle();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('fillStyle:', fillStyle);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：填充样式",
+    "example.text.0": "1. 创建一个实心填充的测试圆（fillStyle 传字符串枚举，如 'Solid'）",
+    "example.text.1": "2. 读取填充样式",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "填充样式"
   },
   "title": "Get the property state: fill style",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Fill style"
 }

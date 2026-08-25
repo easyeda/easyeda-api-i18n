@@ -10,13 +10,35 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先显示加载覆盖作为销毁对象（与 showLoading 成对演示）\neda.sys_LoadingAndProgressBar.showLoading();\nconsole.log('加载覆盖已显示');\nawait new Promise(r => setTimeout(r, 800));\n\n// 2. 销毁覆盖，编辑器恢复可操作（同步调用，无返回值）\neda.sys_LoadingAndProgressBar.destroyLoading();\nconsole.log('加载覆盖已销毁，编辑器恢复可操作');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_LoadingAndProgressBar.showLoading();\nconsole.log('加载覆盖已显示');\nawait new Promise(r => setTimeout(r, 800));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_LoadingAndProgressBar.destroyLoading();\nconsole.log('加载覆盖已销毁，编辑器恢复可操作');\n```"
         }
       ]
     }
   },
   "_source": {
-    "title": "销毁无进度加载覆盖"
+    "title": "销毁无进度加载覆盖",
+    "example.text.0": "1. 先显示加载覆盖作为销毁对象（与 showLoading 成对演示）",
+    "example.text.1": "2. 销毁覆盖，编辑器恢复可操作（同步调用，无返回值）"
   },
-  "title": "Destroy the no-progress loading overlay"
+  "title": "Destroy the no-progress loading overlay",
+  "example.text.0": null,
+  "example.text.1": null
 }

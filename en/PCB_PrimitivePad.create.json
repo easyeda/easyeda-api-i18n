@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机坐标，避免与画布上已有的焊盘重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 在顶层（1）创建一个 60x60 圆形贴片焊盘：外形用 ['ELLIPSE', 宽, 高]，无孔传 null\nconst smd = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 3. 在多层（12）创建一个 80x80 通孔焊盘：圆孔直径 35mil，金属化孔壁（沉铜）\nconst thru = await eda.pcb_PrimitivePad.create(12, '2', x, y + 500, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 35], 0, 0, 0, true, 0);\n\n// 4. 创建类保留现场，不删除图元\nconsole.log('smd padId:', smd.getState_PrimitiveId());\nconsole.log('smd layer:', smd.getState_Layer());\nconsole.log('thru padId:', thru.getState_PrimitiveId());\nconsole.log('thru layer:', thru.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const smd = await eda.pcb_PrimitivePad.create(1, '1', x, y, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const thru = await eda.pcb_PrimitivePad.create(12, '2', x, y + 500, 0, ['ELLIPSE', 80, 80], '', ['ROUND', 35], 0, 0, 0, true, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('smd padId:', smd.getState_PrimitiveId());\nconsole.log('smd layer:', smd.getState_Layer());\nconsole.log('thru padId:', thru.getState_PrimitiveId());\nconsole.log('thru layer:', thru.getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建焊盘",
+    "example.text.0": "1. 生成随机坐标，避免与画布上已有的焊盘重合",
+    "example.text.1": "2. 在顶层（1）创建一个 60x60 圆形贴片焊盘：外形用 ['ELLIPSE', 宽, 高]，无孔传 null",
+    "example.text.2": "3. 在多层（12）创建一个 80x80 通孔焊盘：圆孔直径 35mil，金属化孔壁（沉铜）",
+    "example.text.3": "4. 创建类保留现场，不删除图元",
     "params.layer": "层",
     "params.padNumber": "焊盘编号",
     "params.x": "位置 X",
@@ -37,6 +77,10 @@
     "returns": "焊盘图元对象"
   },
   "title": "Create Pad",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.layer": "Layer",
   "params.padNumber": "Pad number",
   "params.x": "X position",

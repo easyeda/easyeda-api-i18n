@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n\n// 2. 放置测试器件并取出 Designator（编号）属性\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n\n// 3. 读取修改前的 X 坐标，向右平移 50 单位（约 12.7mm）\nconst before = designator.getState_X();\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_X(before + 50);\nawait asyncAttr.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('attrX:', before, '→', refetched.getState_X());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 6000);\nconst y = 2000 + Math.floor(Math.random() * 6000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], x, y);\nconst attrIds = await eda.sch_PrimitiveAttribute.getAllPrimitiveId(comp.getState_PrimitiveId());\nconst attrs = await eda.sch_PrimitiveAttribute.get(attrIds);\nconst designator = attrs.find(a => a.getState_Key() === 'Designator');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = designator.getState_X();\nconst asyncAttr = designator.toAsync();\nasyncAttr.setState_X(before + 50);\nawait asyncAttr.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveAttribute.get(designator.getState_PrimitiveId());\n\nconsole.log('attrX:', before, '→', refetched.getState_X());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：坐标 X",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置测试器件并取出 Designator（编号）属性",
+    "example.text.2": "3. 读取修改前的 X 坐标，向右平移 50 单位（约 12.7mm）",
+    "example.text.3": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.x": "坐标 X",
     "returns": "属性图元对象"
   },
   "title": "Set the property state: X coordinate",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.x": "X coordinate",
   "returns": "Attribute primitive object"
 }

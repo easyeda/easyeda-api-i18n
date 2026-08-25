@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 2. 读取位置 X\nconst posX = pad.getState_X();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('posX:', posX);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const posX = pad.getState_X();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\n\nconsole.log('posX:', posX);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：位置 X",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个贴片焊盘",
+    "example.text.1": "2. 读取位置 X",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "位置 X"
   },
   "title": "Get the property state: X position",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "X position"
 }

@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取第一块板子，记录原名称\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst originalName = boards[0].name;\nconst newName = originalName + '_tmp';\n\n// 2. 改名并输出结果\nconst modified = await eda.dmt_Board.modifyBoardName(originalName, newName);\nconsole.log('original:', originalName);\nconsole.log('new:', newName);\nconsole.log('modified:', modified);\n\n// 3. 等待改名生效后改回原名称（改名是异步提交，紧跟的第二次改名会返回 false）\nawait new Promise(r => setTimeout(r, 1000));\nconst restored = await eda.dmt_Board.modifyBoardName(newName, originalName);\nconsole.log('restored:', restored);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\nconst originalName = boards[0].name;\nconst newName = originalName + '_tmp';\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const modified = await eda.dmt_Board.modifyBoardName(originalName, newName);\nconsole.log('original:', originalName);\nconsole.log('new:', newName);\nconsole.log('modified:', modified);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst restored = await eda.dmt_Board.modifyBoardName(newName, originalName);\nconsole.log('restored:', restored);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改板子名称",
+    "example.text.0": "1. 取第一块板子，记录原名称",
+    "example.text.1": "2. 改名并输出结果",
+    "example.text.2": "3. 等待改名生效后改回原名称（改名是异步提交，紧跟的第二次改名会返回 false）",
     "params.originalBoardName": "原板子名称",
     "params.boardName": "新板子名称",
     "returns": "是否修改成功"
   },
   "title": "Modify Board name",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.originalBoardName": "Original board name",
   "params.boardName": "New board name",
   "returns": "Whether Modify Successful"

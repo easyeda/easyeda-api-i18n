@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 将非激活层设为置灰模式（TURN_GRAY=1）\nconst setResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(1);\n\n// 2. 恢复为正常亮度（NORMAL_BRIGHTNESS=0），避免影响日常查看\nconst restoreResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const setResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.setInactiveLayerDisplayMode(0);\n\nconsole.log('setResult:', setResult);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置非激活层展示模式",
+    "example.text.0": "1. 将非激活层设为置灰模式（TURN_GRAY=1）",
+    "example.text.1": "2. 恢复为正常亮度（NORMAL_BRIGHTNESS=0），避免影响日常查看",
     "params.displayMode": "展示模式",
     "returns": "是否设置成功"
   },
   "title": "Set Inactive layer display mode",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.displayMode": "Display mode",
   "returns": "Whether Set Successful"
 }

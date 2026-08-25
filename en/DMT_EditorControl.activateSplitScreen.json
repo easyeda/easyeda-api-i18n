@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 归一化布局后打开两个文档，并拆出一个新分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nconst split = await eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n\n// 2. 激活新分屏（输入焦点移到该分屏）\nconst activated = await eda.dmt_EditorControl.activateSplitScreen(split.newSplitScreenId);\nconsole.log('activated:', activated);\n\n// 3. 合并所有分屏，恢复单屏布局\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nconst split = await eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const activated = await eda.dmt_EditorControl.activateSplitScreen(split.newSplitScreenId);\nconsole.log('activated:', activated);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "激活分屏",
     "remarks.text.0": "使输入焦点",
+    "example.text.0": "1. 归一化布局后打开两个文档，并拆出一个新分屏",
+    "example.text.1": "2. 激活新分屏（输入焦点移到该分屏）",
+    "example.text.2": "3. 合并所有分屏，恢复单屏布局",
     "params.splitScreenId": "分屏 ID",
     "returns": "操作是否成功"
   },
   "title": "Activate a split screen",
   "remarks.text.0": "Give input focus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.splitScreenId": "Split screen ID",
   "returns": "Whether the operation is successful"
 }

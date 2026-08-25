@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 建一个测试网络类作为查询对象\nawait eda.pcb_Drc.createNetClass('嘉立创示例_查询网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 2. 查询所有网络类\nconst classes = await eda.pcb_Drc.getAllNetClasses();\nconsole.log('count:', classes.length);\nclasses.forEach((c, i) => {\n  console.log('[' + i + '] name:', c.name);\n});\n\n// 3. 清理测试网络类（查询类清理现场）\nawait eda.pcb_Drc.deleteNetClass('嘉立创示例_查询网络类');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.createNetClass('嘉立创示例_查询网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const classes = await eda.pcb_Drc.getAllNetClasses();\nconsole.log('count:', classes.length);\nclasses.forEach((c, i) => {\n  console.log('[' + i + '] name:', c.name);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.deleteNetClass('嘉立创示例_查询网络类');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有网络类的详细属性",
+    "example.text.0": "1. 建一个测试网络类作为查询对象",
+    "example.text.1": "2. 查询所有网络类",
+    "example.text.2": "3. 清理测试网络类（查询类清理现场）",
     "returns": "所有网络类的详细属性"
   },
   "title": "Get all Net class detailed properties of",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Detailed properties of all net classes"
 }

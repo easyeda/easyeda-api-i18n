@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页，确定缩放的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 适应全部图元，返回缩放后的可视区域边界\nconst bounds = await eda.dmt_EditorControl.zoomToAllPrimitives(tabId);\nconsole.log('bounds:', bounds);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bounds = await eda.dmt_EditorControl.zoomToAllPrimitives(tabId);\nconsole.log('bounds:', bounds);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "缩放到所有图元（适应全部）",
     "remarks.text.0": "在返回数据中，原理图、符号画布坐标单位跨度为 0.01inch，PCB、封装画布坐标单位跨度为 mil",
+    "example.text.0": "1. 打开一个原理图页，确定缩放的画布",
+    "example.text.1": "2. 适应全部图元，返回缩放后的可视区域边界",
     "params.tabId": "标签页 ID，如若未传入，则为最后输入焦点的画布",
     "returns": "缩放到的区域数据，`false` 表示画布不支持该缩放操作或 `tabId` 不存在"
   },
   "title": "Zoom to all primitives (fit all)",
   "remarks.text.0": "In the returned data, the coordinate unit span of the schematic and symbol canvases is 0.01inch, and that of the PCB and footprint canvases is mil",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be used",
   "returns": "Region data after zooming. `false` indicates that the canvas does not support the zoom operation or the `tabId` does not exist"
 }

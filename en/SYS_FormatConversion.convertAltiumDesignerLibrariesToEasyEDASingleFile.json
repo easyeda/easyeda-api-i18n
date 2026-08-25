@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 准备 Altium Designer 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n//    选取用户文件，此处直接构造 File 对象演示调用）\nconst schLib = new File(['占位内容，真实场景为 .SchLib 文件内容'], '嘉立创示例_元件库.SchLib');\n\n// 2. 转换为单个嘉立创库文件\nconst easyedaLib = await eda.sys_FormatConversion.convertAltiumDesignerLibrariesToEasyEDASingleFile(schLib);\n\n// 3. 输出转换得到的库文件信息\nconsole.log('库文件名：', easyedaLib.name);\nconsole.log('文件大小：', easyedaLib.size, '字节');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schLib = new File(['占位内容，真实场景为 .SchLib 文件内容'], '嘉立创示例_元件库.SchLib');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const easyedaLib = await eda.sys_FormatConversion.convertAltiumDesignerLibrariesToEasyEDASingleFile(schLib);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('库文件名：', easyedaLib.name);\nconsole.log('文件大小：', easyedaLib.size, '字节');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "转换 Altium Designer 库到单个嘉立创库文件",
+    "example.text.0": "1. 准备 Altium Designer 库文件（真实场景用 sys_FileSystem.openReadFileDialog\n选取用户文件，此处直接构造 File 对象演示调用）",
+    "example.text.1": "2. 转换为单个嘉立创库文件",
+    "example.text.2": "3. 输出转换得到的库文件信息",
     "params.file": "Altium Designer 库文件",
     "returns": "嘉立创库文件"
   },
   "title": "Convert Altium Designer libraries to a single EasyEDA library file",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.file": "Altium Designer library file",
   "returns": "EasyEDA library file"
 }

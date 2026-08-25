@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取编辑器版本号（同步返回字符串）\nconst version = eda.sys_Environment.getEditorCurrentVersion();\n\n// 2. 输出版本号（如 2.2.36，具体以当前环境为准）\nconsole.log('编辑器当前版本：', version);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const version = eda.sys_Environment.getEditorCurrentVersion();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('编辑器当前版本：', version);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取编辑器当前版本",
+    "example.text.0": "1. 读取编辑器版本号（同步返回字符串）",
+    "example.text.1": "2. 输出版本号（如 2.2.36，具体以当前环境为准）",
     "params.onlySemantic": "是否仅返回语义化版本号 ADD since EDA v3.2.176 ADD since EDA v4.1.13",
     "returns": "编辑器当前版本"
   },
   "title": "Get the current version of the editor",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.onlySemantic": "Whether to only return the semantic version number. ADD since EDA v3.2.176, ADD since EDA v4.1.13",
   "returns": "Current version of the editor"
 }

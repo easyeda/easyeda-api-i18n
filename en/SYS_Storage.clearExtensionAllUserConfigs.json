@@ -19,7 +19,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 备份当前全部配置（清空前必做）\nconst backup = eda.sys_Storage.getExtensionAllUserConfigs();\n\n// 2. 写入一条演示配置，让清空操作有效果可见\nawait eda.sys_Storage.setExtensionUserConfig('嘉立创示例_待清除', '演示数据');\n\n// 3. 清空全部配置\nconst cleared = await eda.sys_Storage.clearExtensionAllUserConfigs();\n\n// 4. 复查：清空后配置条数应为 0\nconst after = eda.sys_Storage.getExtensionAllUserConfigs();\n\n// 5. 把备份的原配置写回，还原存储现场\nconst restored = await eda.sys_Storage.setExtensionAllUserConfigs(backup);\n\nconsole.log('清空结果：', cleared);\nconsole.log('清空后配置条数：', Object.keys(after).length);\nconsole.log('恢复备份结果：', restored);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const backup = eda.sys_Storage.getExtensionAllUserConfigs();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_Storage.setExtensionUserConfig('嘉立创示例_待清除', '演示数据');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cleared = await eda.sys_Storage.clearExtensionAllUserConfigs();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = eda.sys_Storage.getExtensionAllUserConfigs();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restored = await eda.sys_Storage.setExtensionAllUserConfigs(backup);\n\nconsole.log('清空结果：', cleared);\nconsole.log('清空后配置条数：', Object.keys(after).length);\nconsole.log('恢复备份结果：', restored);\n```"
         }
       ]
     }
@@ -28,10 +73,20 @@
     "title": "清除扩展所有用户配置",
     "remarks.text.0": "此举会删除当前扩展的所有用户配置信息，请谨慎操作",
     "remarks.text.1": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 备份当前全部配置（清空前必做）",
+    "example.text.1": "2. 写入一条演示配置，让清空操作有效果可见",
+    "example.text.2": "3. 清空全部配置",
+    "example.text.3": "4. 复查：清空后配置条数应为 0",
+    "example.text.4": "5. 把备份的原配置写回，还原存储现场",
     "returns": "操作是否成功"
   },
   "title": "Clear all user configurations of the extension",
   "remarks.text.0": "This will delete all user configuration information of the current extension. Please operate with caution",
   "remarks.text.1": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Whether the operation is successful"
 }

@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先隐藏底层丝印层（BOTTOM_SILKSCREEN=4）制造初始状态\nawait eda.pcb_Layer.setLayerInvisible(4);\n\n// 2. 恢复底层丝印层可见\nconst showResult = await eda.pcb_Layer.setLayerVisible(4);\n\n// 3. 从图层列表确认显隐状态（SHOW=1）\nconst layers = await eda.pcb_Layer.getAllLayers();\nconst silk = layers.find(l => l.id === 4);\n\nconsole.log('showResult:', showResult);\nconsole.log('silkLayerStatus:', silk?.layerStatus);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Layer.setLayerInvisible(4);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const showResult = await eda.pcb_Layer.setLayerVisible(4);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layers = await eda.pcb_Layer.getAllLayers();\nconst silk = layers.find(l => l.id === 4);\n\nconsole.log('showResult:', showResult);\nconsole.log('silkLayerStatus:', silk?.layerStatus);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将层设置为可见",
+    "example.text.0": "1. 先隐藏底层丝印层（BOTTOM_SILKSCREEN=4）制造初始状态",
+    "example.text.1": "2. 恢复底层丝印层可见",
+    "example.text.2": "3. 从图层列表确认显隐状态（SHOW=1）",
     "params.layer": "层，如若不指定任何层则默认为所有层",
     "params.setOtherLayerInvisible": "是否将其它层设置为不可见",
     "returns": "操作是否成功"
   },
   "title": "Set the layer to visible",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.layer": "Layer. If no layer is specified, all layers are used by default",
   "params.setOtherLayerInvisible": "Whether to set other layers to invisible",
   "returns": "Whether the operation is successful"

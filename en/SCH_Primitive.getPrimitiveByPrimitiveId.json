@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试矩形作为查询目标（SCH 坐标单位 10mil）\nconst rect = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst id = rect.getState_PrimitiveId();\n\n// 2. 用图元 ID 反查，返回该图元的完整属性对象（图元实例）\nconst primitive = await eda.sch_Primitive.getPrimitiveByPrimitiveId(id);\n\n// 3. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveRectangle.delete([id]);\n\nconsole.log('primitiveType:', primitive.getState_PrimitiveType());\nconsole.log('width:', primitive.getState_Width());\nconsole.log('height:', primitive.getState_Height());\nconsole.log('id match:', primitive.getState_PrimitiveId() === id);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(1000, 1000, 200, 100);\nconst id = rect.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitive = await eda.sch_Primitive.getPrimitiveByPrimitiveId(id);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveRectangle.delete([id]);\n\nconsole.log('primitiveType:', primitive.getState_PrimitiveType());\nconsole.log('width:', primitive.getState_Width());\nconsole.log('height:', primitive.getState_Height());\nconsole.log('id match:', primitive.getState_PrimitiveId() === id);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取指定 ID 的图元的所有属性",
+    "example.text.0": "1. 创建一个测试矩形作为查询目标（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 用图元 ID 反查，返回该图元的完整属性对象（图元实例）",
+    "example.text.2": "3. 清理测试图元（查询类需要清理）",
     "params.id": "图元 ID",
     "returns": "图元的所有属性"
   },
   "title": "Get all properties of the primitive with the specified ID",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.id": "Primitive ID",
   "returns": "All properties of the primitive"
 }

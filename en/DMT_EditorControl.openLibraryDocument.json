@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 搜索库符号，拿到其所在库 UUID 与符号 UUID\nconst results = await eda.lib_Symbol.search('0603');\nconsole.log('symbol:', results[0].name);\n\n// 2. 打开该符号的编辑画布，返回标签页 ID（'2' = ELIB_LibraryType.SYMBOL）\nconst tabId = await eda.dmt_EditorControl.openLibraryDocument(results[0].libraryUuid, '2', results[0].uuid);\nconsole.log('tabId:', tabId);\n\n// 3. 看完关闭标签页\nconst closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const results = await eda.lib_Symbol.search('0603');\nconsole.log('symbol:', results[0].name);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabId = await eda.dmt_EditorControl.openLibraryDocument(results[0].libraryUuid, '2', results[0].uuid);\nconsole.log('tabId:', tabId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "打开库符号、封装文档",
+    "example.text.0": "1. 搜索库符号，拿到其所在库 UUID 与符号 UUID",
+    "example.text.1": "2. 打开该符号的编辑画布，返回标签页 ID（'2' = ELIB_LibraryType.SYMBOL）",
+    "example.text.2": "3. 看完关闭标签页",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.libraryType": "库类型，支持符号和封装",
     "params.uuid": "符号、封装 UUID",
@@ -24,6 +54,9 @@
     "returns": "标签页 ID，如若为 `undefined`，则打开文档失败"
   },
   "title": "Open library symbol, footprint document",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.libraryType": "Library type, support symbol and footprint",
   "params.uuid": "Symbol, footprint UUID",

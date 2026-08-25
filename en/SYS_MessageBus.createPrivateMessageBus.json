@@ -15,15 +15,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 手动创建私有消息总线（重复调用无副作用）\neda.sys_MessageBus.createPrivateMessageBus();\n\n// 2. 订阅一个主题，验证总线已就绪\nconst task = eda.sys_MessageBus.subscribe('嘉立创示例_创建总线', (message) => {\n  console.log('订阅者收到：', message);\n});\n\n// 3. 发布消息，回调立即触发\neda.sys_MessageBus.publish('嘉立创示例_创建总线', '总线已创建并可用');\n\n// 4. 取消订阅，恢复原状\ntask.cancel();\nconsole.log('已取消订阅');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.createPrivateMessageBus();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const task = eda.sys_MessageBus.subscribe('嘉立创示例_创建总线', (message) => {\n  console.log('订阅者收到：', message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.publish('嘉立创示例_创建总线', '总线已创建并可用');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "task.cancel();\nconsole.log('已取消订阅');\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建私有消息总线",
-    "remarks.text.0": "一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线"
+    "remarks.text.0": "一般无需调用该方法，在进行监听或发送消息时会自动创建私有消息总线",
+    "example.text.0": "1. 手动创建私有消息总线（重复调用无副作用）",
+    "example.text.1": "2. 订阅一个主题，验证总线已就绪",
+    "example.text.2": "3. 发布消息，回调立即触发",
+    "example.text.3": "4. 取消订阅，恢复原状"
   },
   "title": "Create Private message bus",
-  "remarks.text.0": "Generally, there is no need to call this method. The private message bus is automatically created when listening or sending messages"
+  "remarks.text.0": "Generally, there is no need to call this method. The private message bus is automatically created when listening or sending messages",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null
 }

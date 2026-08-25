@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试多边形作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst polygon = await eda.sch_PrimitivePolygon.create([x, y, x + 400, y, x + 400, y + 300, x, y + 300], '#FF0000');\nconst polygonId = polygon.getState_PrimitiveId();\n\n// 2. 获取当前原理图页的全部多边形\nconst all = await eda.sch_PrimitivePolygon.getAll();\n\n// 3. 清理测试多边形（查询类需要清理）\nawait eda.sch_PrimitivePolygon.delete([polygonId]);\n\nconsole.log('total polygons:', all.length);\nconsole.log('marker polygon found:', all.some(p => p.getState_PrimitiveId() === polygonId));\nconsole.log('marker color:', all.find(p => p.getState_PrimitiveId() === polygonId).getState_Color());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst polygon = await eda.sch_PrimitivePolygon.create([x, y, x + 400, y, x + 400, y + 300, x, y + 300], '#FF0000');\nconst polygonId = polygon.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const all = await eda.sch_PrimitivePolygon.getAll();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePolygon.delete([polygonId]);\n\nconsole.log('total polygons:', all.length);\nconsole.log('marker polygon found:', all.some(p => p.getState_PrimitiveId() === polygonId));\nconsole.log('marker color:', all.find(p => p.getState_PrimitiveId() === polygonId).getState_Color());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有多边形",
+    "example.text.0": "1. 创建一个测试多边形作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取当前原理图页的全部多边形",
+    "example.text.2": "3. 清理测试多边形（查询类需要清理）",
     "returns": "多边形图元对象数组"
   },
   "title": "Get all Polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Array of Polygon primitive objects"
 }

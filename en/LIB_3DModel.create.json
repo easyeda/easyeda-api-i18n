@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 构造一个单面片的 ASCII STL 模型文件\nconst stl = [\n  'solid example',\n  'facet normal 0 0 1',\n  'outer loop',\n  'vertex 0 0 0',\n  'vertex 10 0 0',\n  'vertex 0 10 0',\n  'endloop',\n  'endfacet',\n  'endsolid example',\n].join('\\n');\nconst blob = new Blob([stl], { type: 'model/stl' });\n\n// 3. 导入到个人库，模型单位为毫米\nconst modelUuids = await eda.lib_3DModel.create(libraryUuid, blob, [], 'mm');\n\n// 创建类保留现场\n\nconsole.log('libraryUuid:', libraryUuid);\nconsole.log('created:', modelUuids ? modelUuids.length : 0);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const stl = [\n  'solid example',\n  'facet normal 0 0 1',\n  'outer loop',\n  'vertex 0 0 0',\n  'vertex 10 0 0',\n  'vertex 0 10 0',\n  'endloop',\n  'endfacet',\n  'endsolid example',\n].join('\\n');\nconst blob = new Blob([stl], { type: 'model/stl' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const modelUuids = await eda.lib_3DModel.create(libraryUuid, blob, [], 'mm');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "\nconsole.log('libraryUuid:', libraryUuid);\nconsole.log('created:', modelUuids ? modelUuids.length : 0);\n```"
         }
       ]
     }
@@ -23,6 +59,10 @@
   "_source": {
     "title": "创建 3D 模型",
     "remarks.text.0": "传入的 `modelFile` 可以为多个模型文件的压缩包，EDA 将会自动提取多个模型",
+    "example.text.0": "1. 获取个人库 UUID",
+    "example.text.1": "2. 构造一个单面片的 ASCII STL 模型文件",
+    "example.text.2": "3. 导入到个人库，模型单位为毫米",
+    "example.text.3": "创建类保留现场",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.modelFile": "3D 模型文件数据",
     "params.classification": "分类",
@@ -31,6 +71,10 @@
   },
   "title": "Create 3D model",
   "remarks.text.0": "The passed-in `modelFile` can be an archive of multiple model files. EDA will automatically extract the multiple models",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.libraryUuid": "Library UUID, you can use {@link LIB_LibrariesList} APIs in",
   "params.modelFile": "3D model file data",
   "params.classification": "Classification",

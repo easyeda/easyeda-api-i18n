@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 用矩形模式（R x y width height rot round）创建一块单多边形\nconst rectPolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 再用圆形模式（CIRCLE x y radius）创建一块，展示不同模式的源数据形态\nconst circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 2000, 1150, 100]);\n\n// 3. 读取源数组：矩形是 \"R\" 打头的参数序列，圆形是 \"CIRCLE\" 打头\nconsole.log('rectSource:', JSON.stringify(rectPolygon.getSource()));\nconsole.log('circleSource:', JSON.stringify(circlePolygon.getSource()));\n\n// 4. 源数组可以直接喂回 createPolygon 复制出一块等价的多边形（数据回环）\nconst copied = eda.pcb_MathPolygon.createPolygon(rectPolygon.getSource());\nconsole.log('roundTripMatch:', JSON.stringify(copied.getSource()) === JSON.stringify(rectPolygon.getSource()));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rectPolygon = eda.pcb_MathPolygon.createPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const circlePolygon = eda.pcb_MathPolygon.createPolygon(['CIRCLE', 2000, 1150, 100]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('rectSource:', JSON.stringify(rectPolygon.getSource()));\nconsole.log('circleSource:', JSON.stringify(circlePolygon.getSource()));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copied = eda.pcb_MathPolygon.createPolygon(rectPolygon.getSource());\nconsole.log('roundTripMatch:', JSON.stringify(copied.getSource()) === JSON.stringify(rectPolygon.getSource()));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取单多边形数据",
+    "example.text.0": "1. 用矩形模式（R x y width height rot round）创建一块单多边形",
+    "example.text.1": "2. 再用圆形模式（CIRCLE x y radius）创建一块，展示不同模式的源数据形态",
+    "example.text.2": "3. 读取源数组：矩形是 \"R\" 打头的参数序列，圆形是 \"CIRCLE\" 打头",
+    "example.text.3": "4. 源数组可以直接喂回 createPolygon 复制出一块等价的多边形（数据回环）",
     "returns": "单多边形数据"
   },
   "title": "Get Single polygon data",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Single polygon data"
 }

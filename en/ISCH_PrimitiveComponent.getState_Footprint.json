@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件（SCH 坐标单位 10mil）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n\n// 2. 读取关联的库封装（器件未绑定封装时为 undefined）\nconst footprint = comp.getState_Footprint();\n\n// 3. 清理测试器件（查询类需要清理）\nawait eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('footprint:', JSON.stringify(footprint));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.sch_PrimitiveComponent.create(devices[0], 600, 600);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const footprint = comp.getState_Footprint();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveComponent.delete([compId]);\n\nconsole.log('footprint:', JSON.stringify(footprint));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：关联库封装",
+    "example.text.0": "1. 放置一个测试器件（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 读取关联的库封装（器件未绑定封装时为 undefined）",
+    "example.text.2": "3. 清理测试器件（查询类需要清理）",
     "returns": "关联库封装"
   },
   "title": "Get the property state: associate library footprint",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Associate library footprint"
 }

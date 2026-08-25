@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合\nconst x = 22000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n\n// 2. 创建一条顶层（1）测试直线\nconst line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n\n// 3. 读取修改前的层\nconst before = line.getState_Layer();\n\n// 4. 切换异步模式并换层（顶层 1 → 底层 2）\nconst asyncLine = line.toAsync();\nasyncLine.setState_Layer(2);\nawait asyncLine.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\nconst after = refetched.getState_Layer();\n\nconsole.log('layer:', before, '→', after);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 22000 + (Math.floor(Math.random() * 100000));\nconst y = 2000 + (Math.floor(Math.random() * 100000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = await eda.pcb_PrimitiveLine.create('', 1, x, y, x + 600, y, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = line.getState_Layer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncLine = line.toAsync();\nasyncLine.setState_Layer(2);\nawait asyncLine.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveLine.get(line.getState_PrimitiveId());\nconst after = refetched.getState_Layer();\n\nconsole.log('layer:', before, '→', after);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：层",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试走线重合",
+    "example.text.1": "2. 创建一条顶层（1）测试直线",
+    "example.text.2": "3. 读取修改前的层",
+    "example.text.3": "4. 切换异步模式并换层（顶层 1 → 底层 2）",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.layer": "层",
     "returns": "直线图元对象"
   },
   "title": "Set the property state: Layer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.layer": "Layer",
   "returns": "Line primitive object"
 }

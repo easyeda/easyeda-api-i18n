@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建带网络名的过孔并选中，让画布存在选中的网络\nconst via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\nawait eda.pcb_Net.selectNet('嘉立创示例_NET1');\n\n// 2. 取消所有网络的选中\nconst cleared = await eda.pcb_Net.unselectAllNets();\n\n// 3. 清理测试图元（操作类需要清理）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('allSelectionsCleared:', cleared);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const via = await eda.pcb_PrimitiveVia.create('嘉立创示例_NET1', 2000, 2000, 20, 40);\nawait eda.pcb_Net.selectNet('嘉立创示例_NET1');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cleared = await eda.pcb_Net.unselectAllNets();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('allSelectionsCleared:', cleared);\n```"
         }
       ]
     }
@@ -23,9 +50,15 @@
   "_source": {
     "title": "取消选中所有网络",
     "remarks.text.0": "如果希望取消选中所有图元，请使用 {@link PCB_SelectControl.clearSelected} 接口",
+    "example.text.0": "1. 创建带网络名的过孔并选中，让画布存在选中的网络",
+    "example.text.1": "2. 取消所有网络的选中",
+    "example.text.2": "3. 清理测试图元（操作类需要清理）",
     "returns": "操作是否成功"
   },
   "title": "Unselect all nets",
   "remarks.text.0": "If you want to unselect all primitives, use the {@link PCB_SelectControl.clearSelected} API",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the operation is successful"
 }

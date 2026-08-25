@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个测试文本（创建后默认处于异步模式）\nconst text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_文本');\n\n// 3. 转换为同步图元\nconst syncText = text.toSync();\n\n// 4. 同步模式下把文字改为定稿内容，立即生效，无需 done()\nsyncText.setState_Content('嘉立创示例_定稿');\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveText.get(text.getState_PrimitiveId());\n\nconsole.log('isAsync after toSync:', text.isAsync());\nconsole.log('content:', '嘉立创示例_文本', '→', refetched.getState_Content());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const text = await eda.sch_PrimitiveText.create(x, y, '嘉立创示例_文本');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncText = text.toSync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "syncText.setState_Content('嘉立创示例_定稿');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveText.get(text.getState_PrimitiveId());\n\nconsole.log('isAsync after toSync:', text.isAsync());\nconsole.log('content:', '嘉立创示例_文本', '→', refetched.getState_Content());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合",
+    "example.text.1": "2. 创建一个测试文本（创建后默认处于异步模式）",
+    "example.text.2": "3. 转换为同步图元",
+    "example.text.3": "4. 同步模式下把文字改为定稿内容，立即生效，无需 done()",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "returns": "文本图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Text primitive object"
 }

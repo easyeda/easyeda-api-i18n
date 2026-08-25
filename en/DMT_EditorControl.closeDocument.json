@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建临时原理图并给它加一页（新建的原理图没有页面，需显式创建）\nconst schematicUuid = await eda.dmt_Schematic.createSchematic('嘉立创示例_关闭文档');\nconst pageUuid = await eda.dmt_Schematic.createSchematicPage(schematicUuid);\n\n// 2. 打开该页面作为关闭目标\nconst tabId = await eda.dmt_EditorControl.openDocument(pageUuid);\nconsole.log('opened tab:', tabId);\n\n// 3. 关闭该标签页（空白文档，无未保存内容）\nconst closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n\n// 4. 删除临时原理图，保持工程整洁\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic('嘉立创示例_关闭文档');\nconst pageUuid = await eda.dmt_Schematic.createSchematicPage(schematicUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabId = await eda.dmt_EditorControl.openDocument(pageUuid);\nconsole.log('opened tab:', tabId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const closed = await eda.dmt_EditorControl.closeDocument(tabId);\nconsole.log('closed:', closed);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "关闭文档",
     "remarks.text.0": "如若文档尚未保存，执行此操作将会直接丢失所有未保存的数据，请在修改操作完成后首先执行 {@link SCH_Document.save}、{@link PCB_Document.save}、{@link PNL_Document.save} 保存数据",
+    "example.text.0": "1. 创建临时原理图并给它加一页（新建的原理图没有页面，需显式创建）",
+    "example.text.1": "2. 打开该页面作为关闭目标",
+    "example.text.2": "3. 关闭该标签页（空白文档，无未保存内容）",
+    "example.text.3": "4. 删除临时原理图，保持工程整洁",
     "params.tabId": "标签页 ID，此处支持 {@link IDMT_SchematicPageItem.uuid}、{@link IDMT_PcbItem.uuid}、{@link IDMT_PanelItem.uuid} 作为输入",
     "returns": "操作是否成功"
   },
   "title": "Close document",
   "remarks.text.0": "If the document has not been saved, executing this operation will directly lose all unsaved data. After completing modification operations, first execute {@link SCH_Document.save}, {@link PCB_Document.save}, and {@link PNL_Document.save} to save the data",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.tabId": "Tab ID. Here {@link IDMT_SchematicPageItem.uuid}, {@link IDMT_PcbItem.uuid}, and {@link IDMT_PanelItem.uuid} are supported as input",
   "returns": "Whether the operation is successful"
 }

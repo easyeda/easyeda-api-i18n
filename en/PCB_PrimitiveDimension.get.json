@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个测试标注（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim1 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm'\n);\nconst dim2 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y + 1000, x, y + 800, x + 2000, y + 800, x + 2000, y + 1000],\n  3,\n  'mil'\n);\n\n// 2. 传单个 ID 字符串，返回单个标注对象\nconst single = await eda.pcb_PrimitiveDimension.get(dim1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回标注对象数组\nconst arr = await eda.pcb_PrimitiveDimension.get([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveDimension.delete([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\nconsole.log('single dimensionType:', single.getState_DimensionType());\nconsole.log('single unit:', single.getState_Unit());\nconsole.log('array length:', arr.length);\nconsole.log('dim2 unit:', arr[1].getState_Unit());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst dim1 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm'\n);\nconst dim2 = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y + 1000, x, y + 800, x + 2000, y + 800, x + 2000, y + 1000],\n  3,\n  'mil'\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.pcb_PrimitiveDimension.get(dim1.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.pcb_PrimitiveDimension.get([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveDimension.delete([\n  dim1.getState_PrimitiveId(),\n  dim2.getState_PrimitiveId()\n]);\n\nconsole.log('single dimensionType:', single.getState_DimensionType());\nconsole.log('single unit:', single.getState_Unit());\nconsole.log('array length:', arr.length);\nconsole.log('dim2 unit:', arr[1].getState_Unit());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取尺寸标注",
+    "example.text.0": "1. 创建两个测试标注（随机坐标避免重合）",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个标注对象",
+    "example.text.2": "3. 传 ID 数组，返回标注对象数组",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "尺寸标注的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "尺寸标注图元对象，`undefined` 表示获取失败"
   },
   "title": "Get the dimension",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Primitive ID of the dimension, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Dimension primitive object, `undefined` indicates that the retrieval failed"
 }

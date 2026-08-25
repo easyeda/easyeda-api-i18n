@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个 10mil 线宽的长度标注\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3,\n  undefined,\n  10\n);\n\n// 3. 切换异步模式，累计一处未提交的线宽修改（10 → 99）\nconst asyncDim = dim.toAsync();\nasyncDim.setState_LineWidth(99);\n\n// 4. 重置：丢弃未提交的修改，回到画布当前状态\nawait asyncDim.reset();\n\n// 5. 从画布重新读取，线宽仍是 10（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('lineWidth after reset:', refetched.getState_LineWidth());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, 2000, x, 1800, x + 2000, 1800, x + 2000, 2000],\n  3,\n  undefined,\n  10\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncDim = dim.toAsync();\nasyncDim.setState_LineWidth(99);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await asyncDim.reset();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveDimension.get(dim.getState_PrimitiveId());\n\nconsole.log('lineWidth after reset:', refetched.getState_LineWidth());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将异步图元重置为当前画布状态",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试标注重合",
+    "example.text.1": "2. 创建一个 10mil 线宽的长度标注",
+    "example.text.2": "3. 切换异步模式，累计一处未提交的线宽修改（10 → 99）",
+    "example.text.3": "4. 重置：丢弃未提交的修改，回到画布当前状态",
+    "example.text.4": "5. 从画布重新读取，线宽仍是 10（保留现场供观察）",
     "returns": "尺寸标注图元对象"
   },
   "title": "Reset the async primitive to the current canvas state",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Dimension primitive object"
 }

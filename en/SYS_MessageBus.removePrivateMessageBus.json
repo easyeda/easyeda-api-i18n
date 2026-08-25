@@ -15,15 +15,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 订阅一个主题并验证能收到消息\nlet received = null;\neda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除前的消息');\nconsole.log('移除前收到：', received);\n\n// 2. 移除私有消息总线，原有订阅全部失效\neda.sys_MessageBus.removePrivateMessageBus();\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除后的消息');\nconsole.log('移除后订阅者是否还收到：', received);\n\n// 3. 再次订阅，总线自动重建恢复正常\neda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '重建后的消息');\nconsole.log('重建后收到：', received);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let received = null;\neda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除前的消息');\nconsole.log('移除前收到：', received);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.removePrivateMessageBus();\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '移除后的消息');\nconsole.log('移除后订阅者是否还收到：', received);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.subscribe('嘉立创示例_移除总线', (message) => {\n  received = message;\n});\neda.sys_MessageBus.publish('嘉立创示例_移除总线', '重建后的消息');\nconsole.log('重建后收到：', received);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "移除私有消息总线",
-    "remarks.text.0": "一般无需调用该方法，除非你知道自己在做什么"
+    "remarks.text.0": "一般无需调用该方法，除非你知道自己在做什么",
+    "example.text.0": "1. 订阅一个主题并验证能收到消息",
+    "example.text.1": "2. 移除私有消息总线，原有订阅全部失效",
+    "example.text.2": "3. 再次订阅，总线自动重建恢复正常"
   },
   "title": "Remove Private message bus",
-  "remarks.text.0": "Generally, there is no need to call this method unless you know what you are doing"
+  "remarks.text.0": "Generally, there is no need to call this method unless you know what you are doing",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null
 }

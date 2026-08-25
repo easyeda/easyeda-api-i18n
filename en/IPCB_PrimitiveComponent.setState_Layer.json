@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合\nconst x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n\n// 2. 放置测试器件（默认贴顶面）\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n\n// 3. 读取修改前的所在面\nconst before = comp.getState_Layer();\n\n// 4. 异步模式翻到底面并提交\nconst asyncComp = comp.toAsync();\nasyncComp.setState_Layer(2);\nawait asyncComp.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.pcb_PrimitiveComponent.get([compId]);\n\nconsole.log('layer:', before, '→', refetched[0].getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 20000 + Math.floor(Math.random() * 80000);\nconst y = 20000 + Math.floor(Math.random() * 80000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, x, y);\nconst compId = comp.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = comp.getState_Layer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncComp = comp.toAsync();\nasyncComp.setState_Layer(2);\nawait asyncComp.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.pcb_PrimitiveComponent.get([compId]);\n\nconsole.log('layer:', before, '→', refetched[0].getState_Layer());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：层",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试器件重合",
+    "example.text.1": "2. 放置测试器件（默认贴顶面）",
+    "example.text.2": "3. 读取修改前的所在面",
+    "example.text.3": "4. 异步模式翻到底面并提交",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.layer": "层",
     "returns": "器件图元对象"
   },
   "title": "Set the property state: Layer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.layer": "Layer",
   "returns": "Device primitive object"
 }

@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个顶层丝印（3）测试文本作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst text = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_ID查找目标', 'default', 45, 6, 3, 0, false, 0, false, false);\nconst textId = text.getState_PrimitiveId();\n\n// 2. 获取全部文本的图元 ID\nconst allIds = await eda.pcb_PrimitiveString.getAllPrimitiveId();\n\n// 3. 按层过滤：只取顶层丝印（3）文本的图元 ID\nconst silkIds = await eda.pcb_PrimitiveString.getAllPrimitiveId(3);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveString.delete([textId]);\n\nconsole.log('total string ids:', allIds.length);\nconsole.log('top silkscreen string ids:', silkIds.length);\nconsole.log('marker id in filtered list:', silkIds.includes(textId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst text = await eda.pcb_PrimitiveString.create(3, x, y, '嘉立创示例_ID查找目标', 'default', 45, 6, 3, 0, false, 0, false, false);\nconst textId = text.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveString.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const silkIds = await eda.pcb_PrimitiveString.getAllPrimitiveId(3);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveString.delete([textId]);\n\nconsole.log('total string ids:', allIds.length);\nconsole.log('top silkscreen string ids:', silkIds.length);\nconsole.log('marker id in filtered list:', silkIds.includes(textId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有文本的图元 ID",
+    "example.text.0": "1. 创建一个顶层丝印（3）测试文本作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部文本的图元 ID",
+    "example.text.2": "3. 按层过滤：只取顶层丝印（3）文本的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.layer": "层",
     "params.primitiveLock": "是否锁定",
     "returns": "文本的图元 ID 数组"
   },
   "title": "Get all Text primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.layer": "Layer",
   "params.primitiveLock": "Whether it is locked",
   "returns": "Array of Text primitive IDs"

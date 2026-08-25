@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取当前显示语言\nconst current = await eda.sys_I18n.getCurrentLanguage();\n\n// 2. 判断当前是否中文环境\nconsole.log('当前语言：', current);\nconsole.log('是否中文环境：', current.startsWith('zh'));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.sys_I18n.getCurrentLanguage();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('当前语言：', current);\nconsole.log('是否中文环境：', current.startsWith('zh'));\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取当前语言环境",
     "remarks.text.0": "能够获取到的语言受 EDA 当前支持语言限制，其它 API 支持的语言需要显式指定 `language` 参数才能使用",
+    "example.text.0": "1. 获取当前显示语言",
+    "example.text.1": "2. 判断当前是否中文环境",
     "returns": "语言"
   },
   "title": "Get Current language environment",
   "remarks.text.0": "The languages that can be obtained are limited by the languages currently supported by EDA. Languages supported by other APIs need to explicitly specify the `language` parameter to be used",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Language"
 }

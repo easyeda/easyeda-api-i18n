@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前配置并保存为自定义配置（作为待指定的默认配置）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_默认规则配置', true);\n\n// 2. 把它设置为新建 PCB 的默认设计规则配置\nconst result = await eda.pcb_Drc.setAsDefaultRuleConfiguration('嘉立创示例_默认规则配置');\n\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.pcb_Drc.getCurrentRuleConfiguration();\nawait eda.pcb_Drc.saveRuleConfiguration(current.config, '嘉立创示例_默认规则配置', true);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.setAsDefaultRuleConfiguration('嘉立创示例_默认规则配置');\n\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "设置为新建 PCB 默认设计规则配置",
     "remarks.text.0": "返回值为结果导向，重复设置相同的设计规则为默认设计规则也将返回 `true`",
+    "example.text.0": "1. 读取当前配置并保存为自定义配置（作为待指定的默认配置）",
+    "example.text.1": "2. 把它设置为新建 PCB 的默认设计规则配置",
     "params.configurationName": "配置名称",
     "returns": "设置是否成功"
   },
   "title": "Set as the default design rule configuration for new PCBs",
   "remarks.text.0": "The return value is result-oriented. Repeatedly setting the same design rule as the default will also return `true`",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.configurationName": "Configuration name",
   "returns": "Set Whether Successful"
 }

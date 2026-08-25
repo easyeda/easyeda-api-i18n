@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机基准坐标，避免与画布上已有的标注重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 在顶层丝印（3）创建长度标注：测量 (x, y) 到 (x+2000, y) 的水平距离，\n//    箭头端点向内收 200mil，单位毫米（mm），线宽 10mil，精度 2 位小数\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm',\n  10,\n  2,\n  false\n);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', dim.getState_PrimitiveId());\nconsole.log('dimensionType:', dim.getState_DimensionType());\nconsole.log('layer:', dim.getState_Layer());\nconsole.log('unit:', dim.getState_Unit());\nconsole.log('lineWidth:', dim.getState_LineWidth());\nconsole.log('precision:', dim.getState_Precision());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [x, y, x, y - 200, x + 2000, y - 200, x + 2000, y],\n  3,\n  'mm',\n  10,\n  2,\n  false\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', dim.getState_PrimitiveId());\nconsole.log('dimensionType:', dim.getState_DimensionType());\nconsole.log('layer:', dim.getState_Layer());\nconsole.log('unit:', dim.getState_Unit());\nconsole.log('lineWidth:', dim.getState_LineWidth());\nconsole.log('precision:', dim.getState_Precision());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建尺寸标注",
+    "example.text.0": "1. 生成随机基准坐标，避免与画布上已有的标注重合",
+    "example.text.1": "2. 在顶层丝印（3）创建长度标注：测量 (x, y) 到 (x+2000, y) 的水平距离，\n箭头端点向内收 200mil，单位毫米（mm），线宽 10mil，精度 2 位小数",
+    "example.text.2": "3. 创建类保留现场，不删除图元",
     "params.dimensionType": "尺寸标注类型",
     "params.coordinateSet": "尺寸标注坐标集",
     "params.layer": "层",
@@ -27,6 +57,9 @@
     "returns": "尺寸标注图元对象"
   },
   "title": "Create a dimension",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.dimensionType": "Dimension type",
   "params.coordinateSet": "Dimension coordinate set",
   "params.layer": "Layer",

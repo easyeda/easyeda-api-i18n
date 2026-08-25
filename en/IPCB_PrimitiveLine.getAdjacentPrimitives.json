@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一条直线走线，终点落在 (7500, 7000)\nconst line = await eda.pcb_PrimitiveLine.create('', 1, 7000, 7000, 7500, 7000, 10);\n\n// 2. 创建一段圆弧，起点与直线终点重合，两段构成一整段导线\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 7500, 7000, 7800, 7300, 90, 10, 1, false);\n\n// 3. 获取与直线直接相连的图元，并读出各自的类型\nconst adjacent = await line.getAdjacentPrimitives();\n\n// 4. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('adjacent count:', adjacent.length);\nadjacent.forEach((p, i) => {\n  console.log(`adjacent[${i}] type:`, p.getState_PrimitiveType());\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const line = await eda.pcb_PrimitiveLine.create('', 1, 7000, 7000, 7500, 7000, 10);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, 7500, 7000, 7800, 7300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const adjacent = await line.getAdjacentPrimitives();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveLine.delete([line.getState_PrimitiveId()]);\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('adjacent count:', adjacent.length);\nadjacent.forEach((p, i) => {\n  console.log(`adjacent[${i}] type:`, p.getState_PrimitiveType());\n});\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "获取相邻的图元对象",
     "remarks.text.0": "将会获取与直线两端直接相连的直线、过孔、圆弧线图元对象",
+    "example.text.0": "1. 创建一条直线走线，终点落在 (7500, 7000)",
+    "example.text.1": "2. 创建一段圆弧，起点与直线终点重合，两段构成一整段导线",
+    "example.text.2": "3. 获取与直线直接相连的图元，并读出各自的类型",
+    "example.text.3": "4. 清理测试图元（查询类案例不留测试对象）",
     "returns": "相邻的直线、过孔、圆弧线图元对象"
   },
   "title": "Get Adjacent primitive objects",
   "remarks.text.0": "It will get the line, via, and arc-line primitive objects directly connected to both ends of the line",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Adjacent line, via, and arc-line primitive objects"
 }

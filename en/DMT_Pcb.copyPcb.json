@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个专用源 PCB 并等 1.5s 同步（复制前源 PCB 必须已在工作区落地）\nconst sourceUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 复制源 PCB，返回副本 UUID\nconst copiedUuid = await eda.dmt_Pcb.copyPcb(sourceUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 回读副本，确认名称与归属\nconst copyInfo = await eda.dmt_Pcb.getPcbInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyName:', copyInfo?.name);\nconsole.log('copyParentBoardName:', copyInfo?.parentBoardName);\n\n// 4. 清理本例创建的两块 PCB（先删副本再删源），保持工程整洁\nconst deletedCopy = await eda.dmt_Pcb.deletePcb(copiedUuid);\nconsole.log('deleted:', deletedCopy);\nconst deletedSource = await eda.dmt_Pcb.deletePcb(sourceUuid);\nconsole.log('deleted:', deletedSource);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const sourceUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copiedUuid = await eda.dmt_Pcb.copyPcb(sourceUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copyInfo = await eda.dmt_Pcb.getPcbInfo(copiedUuid);\nconsole.log('copiedUuid:', copiedUuid);\nconsole.log('copyName:', copyInfo?.name);\nconsole.log('copyParentBoardName:', copyInfo?.parentBoardName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deletedCopy = await eda.dmt_Pcb.deletePcb(copiedUuid);\nconsole.log('deleted:', deletedCopy);\nconst deletedSource = await eda.dmt_Pcb.deletePcb(sourceUuid);\nconsole.log('deleted:', deletedSource);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "复制 PCB",
     "remarks.text.0": "即使此处 PCB 已关联复用模块（在工程库内存在同名的复用模块符号），也不新建复用模块符号，此操作逻辑与当前编辑器前端保持一致",
+    "example.text.0": "1. 创建一个专用源 PCB 并等 1.5s 同步（复制前源 PCB 必须已在工作区落地）",
+    "example.text.1": "2. 复制源 PCB，返回副本 UUID",
+    "example.text.2": "3. 回读副本，确认名称与归属",
+    "example.text.3": "4. 清理本例创建的两块 PCB（先删副本再删源），保持工程整洁",
     "params.pcbUuid": "源 PCB UUID",
     "params.boardName": "新 PCB 所属板子名称，如若不指定则为游离 PCB",
     "returns": "新 PCB UUID，如若为 `undefined` 则复制失败"
   },
   "title": "Copy PCB",
   "remarks.text.0": "Even if the PCB here is already associated with a reuse block (a reuse block symbol with the same name exists in the project library), no new reuse block symbol will be created. This operation logic is consistent with the current editor front end",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.pcbUuid": "Source PCB UUID",
   "params.boardName": "Name of the board the new PCB belongs to. If not specified, it is a free PCB",
   "returns": "New PCB UUID. If it is `undefined`, the copy failed"

@@ -10,15 +10,37 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上全部覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\n\n// 2. 读取第一个覆铜填充的关键状态\nconst first = pouredList[0];\n\nconsole.log('total poured:', pouredList.length);\nconsole.log('first primitiveType:', first.getState_PrimitiveType());\nconsole.log('first 关联覆铜边框 ID：', first.getState_PourPrimitiveId());\nconsole.log('first 子区域数量：', first.getState_PourFills().length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const first = pouredList[0];\n\nconsole.log('total poured:', pouredList.length);\nconsole.log('first primitiveType:', first.getState_PrimitiveType());\nconsole.log('first 关联覆铜边框 ID：', first.getState_PourPrimitiveId());\nconsole.log('first 子区域数量：', first.getState_PourFills().length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有覆铜填充图元",
+    "example.text.0": "1. 获取画布上全部覆铜填充图元",
+    "example.text.1": "2. 读取第一个覆铜填充的关键状态",
     "returns": "覆铜填充图元对象数组"
   },
   "title": "Get all Copper fill primitive",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Array of Copper fill primitive objects"
 }

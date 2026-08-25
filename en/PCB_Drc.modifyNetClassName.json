@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 建一个待改名的网络类\nawait eda.pcb_Drc.createNetClass('嘉立创示例_网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n\n// 2. 改名（用时间戳后缀避免与之前保留的现场重名，保留现场供观察）\nconst newName = '嘉立创示例_网络类_改_' + Date.now();\nconst result = await eda.pcb_Drc.modifyNetClassName('嘉立创示例_网络类', newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.createNetClass('嘉立创示例_网络类', [], { r: 255, g: 0, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_网络类_改_' + Date.now();\nconst result = await eda.pcb_Drc.modifyNetClassName('嘉立创示例_网络类', newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改网络类的名称",
+    "example.text.0": "1. 建一个待改名的网络类",
+    "example.text.1": "2. 改名（用时间戳后缀避免与之前保留的现场重名，保留现场供观察）",
     "params.originalNetClassName": "原网络类名称",
     "params.netClassName": "新网络类名称",
     "returns": "操作是否成功"
   },
   "title": "Modify Net class name of",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.originalNetClassName": "Original net class name",
   "params.netClassName": "New net class name",
   "returns": "Whether the operation is successful"

@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 传入两个源数组的数组，创建矩形外框加圆形第二块的复杂多边形（纯数据对象，画布上还看不到）\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 1000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n\n// 2. 读取复杂多边形的分块源数据，确认两块都被解析\nconst sources = complexPolygon.getSourceStrictComplex();\nsources.forEach((source, index) => {\n  console.log('source' + (index + 1) + ':', JSON.stringify(source));\n});\nconsole.log('count:', sources.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 1000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const sources = complexPolygon.getSourceStrictComplex();\nsources.forEach((source, index) => {\n  console.log('source' + (index + 1) + ':', JSON.stringify(source));\n});\nconsole.log('count:', sources.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建复杂多边形",
+    "example.text.0": "1. 传入两个源数组的数组，创建矩形外框加圆形第二块的复杂多边形（纯数据对象，画布上还看不到）",
+    "example.text.1": "2. 读取复杂多边形的分块源数据，确认两块都被解析",
     "params.complexPolygon": "复杂多边形数据",
     "returns": "复杂多边形对象，`undefined` 表示数据不合法"
   },
   "title": "Create Complex polygon",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.complexPolygon": "Complex polygon data",
   "returns": "Complex polygon object. `undefined` indicates that the data is invalid"
 }

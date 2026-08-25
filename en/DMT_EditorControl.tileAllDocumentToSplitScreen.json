@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 归一化布局：先合并既有子分屏，满足\"无子分屏\"前提\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n\n// 2. 打开两个文档，给平铺提供素材\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nawait eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n\n// 3. 平铺：每个标签页各占一个分屏\nconst tiled = await eda.dmt_EditorControl.tileAllDocumentToSplitScreen();\nconsole.log('tiled:', tiled);\n\n// 4. 合并所有分屏，恢复单屏布局\nconst merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nawait eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tiled = await eda.dmt_EditorControl.tileAllDocumentToSplitScreen();\nconsole.log('tiled:', tiled);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const merged = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('merged:', merged);\n```"
         }
       ]
     }
@@ -23,9 +59,17 @@
   "_source": {
     "title": "平铺所有文档",
     "remarks.text.0": "仅当不存在子分屏时可用，将会自动为所有已打开的文档标签页创建分屏",
+    "example.text.0": "1. 归一化布局：先合并既有子分屏，满足\"无子分屏\"前提",
+    "example.text.1": "2. 打开两个文档，给平铺提供素材",
+    "example.text.2": "3. 平铺：每个标签页各占一个分屏",
+    "example.text.3": "4. 合并所有分屏，恢复单屏布局",
     "returns": "操作是否成功"
   },
   "title": "Tile all documents",
   "remarks.text.0": "Only available when no child split screens exist. It will automatically create split screens for all opened document tabs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Whether the operation is successful"
 }

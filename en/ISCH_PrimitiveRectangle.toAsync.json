@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试矩形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一个测试矩形（创建后默认处于异步模式）\nconst rect = await eda.sch_PrimitiveRectangle.create(x, y, 200, 100);\n\n// 3. 先切换到同步模式，再转回异步模式，确认可来回切换\nrect.toSync();\nconst asyncRect = rect.toAsync();\n\n// 4. 异步模式下批量修改尺寸，一次提交\nasyncRect.setState_Width(300);\nasyncRect.setState_Height(150);\nawait asyncRect.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveRectangle.get(rect.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', rect.isAsync());\nconsole.log('width:', 200, '→', refetched.getState_Width());\nconsole.log('height:', 100, '→', refetched.getState_Height());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(x, y, 200, 100);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "rect.toSync();\nconst asyncRect = rect.toAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "asyncRect.setState_Width(300);\nasyncRect.setState_Height(150);\nawait asyncRect.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveRectangle.get(rect.getState_PrimitiveId());\n\nconsole.log('isAsync after toAsync:', rect.isAsync());\nconsole.log('width:', 200, '→', refetched.getState_Width());\nconsole.log('height:', 100, '→', refetched.getState_Height());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为异步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试矩形重合",
+    "example.text.1": "2. 创建一个测试矩形（创建后默认处于异步模式）",
+    "example.text.2": "3. 先切换到同步模式，再转回异步模式，确认可来回切换",
+    "example.text.3": "4. 异步模式下批量修改尺寸，一次提交",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "returns": "矩形图元对象"
   },
   "title": "Convert Primitive to Async primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Rectangle primitive object"
 }

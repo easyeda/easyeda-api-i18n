@@ -19,7 +19,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 列出系统库封装，取第一个的 UUID\nconst footprintList = await eda.lib_Footprint.search('', undefined, [], undefined, 5, 1);\nconst footprint = footprintList[0];\n\n// 2. 按封装 UUID 获取封装文件\nconst footprintFile = await eda.sys_FileManager.getFootprintFileByFootprintUuid(footprint.uuid);\n\n// 3. 输出封装与文件信息（size 单位为字节）\nconsole.log('封装名：', footprint.name);\nconsole.log('文件名：', footprintFile.name);\nconsole.log('文件大小：', footprintFile.size);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const footprintList = await eda.lib_Footprint.search('', undefined, [], undefined, 5, 1);\nconst footprint = footprintList[0];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const footprintFile = await eda.sys_FileManager.getFootprintFileByFootprintUuid(footprint.uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('封装名：', footprint.name);\nconsole.log('文件名：', footprintFile.name);\nconsole.log('文件大小：', footprintFile.size);\n```"
         }
       ]
     }
@@ -28,6 +55,9 @@
     "title": "使用封装 UUID 获取封装文件",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
     "remarks.text.1": "注意：本接口需要启用 **团队库 \\> 下载库** 权限，没有权限调用将始终 `throw Error`",
+    "example.text.0": "1. 列出系统库封装，取第一个的 UUID",
+    "example.text.1": "2. 按封装 UUID 获取封装文件",
+    "example.text.2": "3. 输出封装与文件信息（size 单位为字节）",
     "params.footprintUuid": "封装 UUID 或封装 UUID 列表",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取，如若不传入，则为系统库",
     "returns": "封装文件数据，`undefined` 表示数据获取失败"
@@ -35,6 +65,9 @@
   "title": "Use footprint UUID get footprint file",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
   "remarks.text.1": "Note: This API requires the **Team Library > Download Library** permission. Calling it without permission will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.footprintUuid": "Footprint UUID or footprint UUID list",
   "params.libraryUuid": "Library UUID. It can be obtained using the APIs in {@link LIB_LibrariesList}. If not passed in, it is the system library",
   "returns": "Footprint file data, `undefined` indicates that the data retrieval failed"

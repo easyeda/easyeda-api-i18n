@@ -10,19 +10,30 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个空的等长网络组，指定面板显示颜色（保留现场供观察）\nconst created = await eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_等长网络组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\nconsole.log('created:', created);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const created = await eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_等长网络组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\nconsole.log('created:', created);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建等长网络组",
+    "example.text.0": "1. 创建一个空的等长网络组，指定面板显示颜色（保留现场供观察）",
     "params.equalLengthNetGroupName": "等长网络组名称",
     "params.nets": "网络名称数组",
     "params.color": "等长网络组颜色",
     "returns": "操作是否成功"
   },
   "title": "Create an equal-length net group",
+  "example.text.0": null,
   "params.equalLengthNetGroupName": "Equal-length net group name",
   "params.nets": "Net name array",
   "params.color": "Equal-length net group color",

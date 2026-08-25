@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程所属团队\nconst projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n\n// 2. 创建一个测试文件夹，保证列表里有新近创建的对象\nconst folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_盘点', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 获取所有文件夹 UUID，确认测试文件夹在列\nconst allUuids = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('total folders:', allUuids.length);\nconsole.log('test folder included:', allUuids.includes(folderUuid));\n\n// 4. 清理测试文件夹（查询类案例不留测试对象）\nawait eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const projectInfo = await eda.dmt_Project.getCurrentProjectInfo();\nconst teamUuid = projectInfo.teamUuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const folderUuid = await eda.dmt_Folder.createFolder('嘉立创示例_盘点', teamUuid);\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allUuids = await eda.dmt_Folder.getAllFoldersUuid(teamUuid);\n\nconsole.log('folderUuid:', folderUuid);\nconsole.log('total folders:', allUuids.length);\nconsole.log('test folder included:', allUuids.includes(folderUuid));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Folder.deleteFolder(teamUuid, folderUuid);\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "获取所有文件夹的 UUID",
     "remarks.text.0": "本接口忽略层级信息，将会返回所有层级的文件夹的 UUID 并放置于一维数组中",
+    "example.text.0": "1. 取当前工程所属团队",
+    "example.text.1": "2. 创建一个测试文件夹，保证列表里有新近创建的对象",
+    "example.text.2": "3. 获取所有文件夹 UUID，确认测试文件夹在列",
+    "example.text.3": "4. 清理测试文件夹（查询类案例不留测试对象）",
     "params.teamUuid": "团队 UUID",
     "returns": "文件夹 UUID 数组"
   },
   "title": "Get the UUIDs of all folders",
   "remarks.text.0": "This API ignores hierarchy information. It will return the UUIDs of folders at all levels and place them in a one-dimensional array",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.teamUuid": "Team UUID",
   "returns": "Folder UUID array"
 }

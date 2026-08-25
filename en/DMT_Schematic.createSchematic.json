@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建原理图（不指定 boardName，得到游离原理图），返回新原理图 UUID\nconst schematicUuid = await eda.dmt_Schematic.createSchematic();\nconsole.log('schematicUuid:', schematicUuid);\n\n// 2. 等 1.5s 让原理图在工作区落地，回读确认（自带图页 p1）\nawait new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('name:', info?.name);\nconsole.log('pages:', (info?.page || []).map(p => p.name).join(', '));\nconsole.log('parentBoardName:', info?.parentBoardName);\n\n// 3. 删除本例创建的原理图，保持工程整洁\nawait new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const schematicUuid = await eda.dmt_Schematic.createSchematic();\nconsole.log('schematicUuid:', schematicUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\nconst info = await eda.dmt_Schematic.getSchematicInfo(schematicUuid);\nconsole.log('name:', info?.name);\nconsole.log('pages:', (info?.page || []).map(p => p.name).join(', '));\nconsole.log('parentBoardName:', info?.parentBoardName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1000));\nconst deleted = await eda.dmt_Schematic.deleteSchematic(schematicUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建原理图",
+    "example.text.0": "1. 创建原理图（不指定 boardName，得到游离原理图），返回新原理图 UUID",
+    "example.text.1": "2. 等 1.5s 让原理图在工作区落地，回读确认（自带图页 p1）",
+    "example.text.2": "3. 删除本例创建的原理图，保持工程整洁",
     "params.boardName": "所属板子名称，如若不指定则为游离原理图",
     "returns": "原理图 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Schematic",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.boardName": "Name of the board it belongs to. If not specified, it is a free schematic",
   "returns": "Schematic UUID, if it is `undefined` creation fails"
 }

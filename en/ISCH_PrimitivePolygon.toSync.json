@@ -10,15 +10,70 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试多边形重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst line = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\n\n// 2. 创建一个测试多边形（创建后默认处于异步模式）\nconst polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000', null, 6, 0);\n\n// 3. 转换为同步图元\nconst syncPolygon = polygon.toSync();\n\n// 4. 同步模式下加粗边线，立即生效，无需 done()\nsyncPolygon.setState_LineWidth(15);\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitivePolygon.get(polygon.getState_PrimitiveId());\n\nconsole.log('isAsync after toSync:', polygon.isAsync());\nconsole.log('lineWidth:', 6, '→', refetched.getState_LineWidth());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst line = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = await eda.sch_PrimitivePolygon.create(line, '#FF0000', null, 6, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const syncPolygon = polygon.toSync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "syncPolygon.setState_LineWidth(15);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitivePolygon.get(polygon.getState_PrimitiveId());\n\nconsole.log('isAsync after toSync:', polygon.isAsync());\nconsole.log('lineWidth:', 6, '→', refetched.getState_LineWidth());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将图元转换为同步图元",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试多边形重合",
+    "example.text.1": "2. 创建一个测试多边形（创建后默认处于异步模式）",
+    "example.text.2": "3. 转换为同步图元",
+    "example.text.3": "4. 同步模式下加粗边线，立即生效，无需 done()",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "returns": "多边形图元对象"
   },
   "title": "Convert Primitive to Sync primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "returns": "Polygon primitive object"
 }

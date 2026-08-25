@@ -10,13 +10,35 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先展开底部面板制造“已打开”状态，便于观察关闭效果\neda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开');\n\n// 2. 收起底部面板（同步调用，无返回值）\neda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.openBottomPanel('log');\nconsole.log('底部面板已展开');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.closeBottomPanel();\nconsole.log('底部面板已收起');\n```"
         }
       ]
     }
   },
   "_source": {
-    "title": "关闭底部面板"
+    "title": "关闭底部面板",
+    "example.text.0": "1. 先展开底部面板制造“已打开”状态，便于观察关闭效果",
+    "example.text.1": "2. 收起底部面板（同步调用，无返回值）"
   },
-  "title": "Close the bottom panel"
+  "title": "Close the bottom panel",
+  "example.text.0": null,
+  "example.text.1": null
 }

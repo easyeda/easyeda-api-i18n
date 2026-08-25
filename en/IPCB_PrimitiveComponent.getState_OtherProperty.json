@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n\n// 2. 读取其它参数字典\nconst otherProperty = comp.getState_OtherProperty();\n\n// 3. 清理测试器件\nawait eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('propertyCount:', Object.keys(otherProperty).length);\nconsole.log('value:', otherProperty['Value']);\nconsole.log('description:', otherProperty['Description']);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const otherProperty = comp.getState_OtherProperty();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('propertyCount:', Object.keys(otherProperty).length);\nconsole.log('value:', otherProperty['Value']);\nconsole.log('description:', otherProperty['Description']);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：其它参数",
+    "example.text.0": "1. 放置一个测试器件",
+    "example.text.1": "2. 读取其它参数字典",
+    "example.text.2": "3. 清理测试器件",
     "returns": "其它参数"
   },
   "title": "Get the property state: other parameters",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Other parameters"
 }

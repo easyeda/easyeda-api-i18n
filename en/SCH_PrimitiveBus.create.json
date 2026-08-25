@@ -10,13 +10,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成随机起点坐标，避免与画布上已有的总线重合（SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一条两段相连的 L 形总线：先向右再向上，段与段必须首尾相连且各自水平或垂直\nconst bus = await eda.sch_PrimitiveBus.create(\n  'DATA[0..7]',\n  [[x, y, x + 400, y], [x + 400, y, x + 400, y + 200]],\n  '#FF0000',  // 总线颜色\n  6,          // 线宽（范围 1-10）\n  1           // 线型：1 = DASHED（虚线）\n);\n\n// 3. 创建类保留现场，不删除图元\nconsole.log('primitiveId:', bus.getState_PrimitiveId());\nconsole.log('primitiveType:', bus.getState_PrimitiveType());\nconsole.log('busName:', bus.getState_BusName());\nconsole.log('color:', bus.getState_Color());\nconsole.log('lineWidth:', bus.getState_LineWidth());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const bus = await eda.sch_PrimitiveBus.create(\n  'DATA[0..7]',\n  [[x, y, x + 400, y], [x + 400, y, x + 400, y + 200]],\n  '#FF0000',  // 总线颜色\n  6,          // 线宽（范围 1-10）\n  1           // 线型：1 = DASHED（虚线）\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', bus.getState_PrimitiveId());\nconsole.log('primitiveType:', bus.getState_PrimitiveType());\nconsole.log('busName:', bus.getState_BusName());\nconsole.log('color:', bus.getState_Color());\nconsole.log('lineWidth:', bus.getState_LineWidth());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建总线",
+    "example.text.0": "1. 生成随机起点坐标，避免与画布上已有的总线重合（SCH 坐标单位 10mil）",
+    "example.text.1": "2. 创建一条两段相连的 L 形总线：先向右再向上，段与段必须首尾相连且各自水平或垂直",
+    "example.text.2": "3. 创建类保留现场，不删除图元",
     "params.busName": "总线名称",
     "params.line": "多段线坐标组，每段都是连续的一组 `[x1, y1, x2, y2, x3, y3]` 所描述的线，如若多段线彼此无任何连接则创建将会失败 类型 `Array<Array<number>>` 的案例说明： 1. `[[], [0, 0, 0, 1]]`，段 1 没有路径，非法 2. `[[1], [0, 0, 0, 1]]`，段 1 只有 x、缺少 y，非法 3. `[[0, 0, -1, 0], [0, 0, 1, 1]]`，段 1 为水平线，但段 2 为斜线，非法 4. `[[0, 0, -1, 0, -1, 1], [0, 1, 1, 1]]`，两段彼此无连接，非法 5. `[[1, 1], [1, 2, 2, 2]]`，段 1 只有一个点，忽略此段，段 2 为水平段，最终路径仅保留段 2，合法 6. `[[1, 1], [1, 2]]`，段 1 只有一个点，忽略此段，段 2 亦忽略，最终路径为空，非法",
     "params.color": "总线颜色，`null` 表示默认",
@@ -25,6 +55,9 @@
     "returns": "总线图元对象"
   },
   "title": "Create a bus",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.busName": "Bus name",
   "params.line": "Polyline coordinate group. Each segment is a continuous line described by `[x1, y1, x2, y2, x3, y3]`. If the polylines have no connection to each other, the creation will fail. Examples for the type `Array<Array<number>>`: 1. `[[], [0, 0, 0, 1]]` - segment 1 has no path, invalid; 2. `[[1], [0, 0, 0, 1]]` - segment 1 only has x, missing y, invalid; 3. `[[0, 0, -1, 0], [0, 0, 1, 1]]` - segment 1 is a horizontal line but segment 2 is a diagonal line, invalid; 4. `[[0, 0, -1, 0, -1, 1], [0, 1, 1, 1]]` - the two segments have no connection, invalid; 5. `[[1, 1], [1, 2, 2, 2]]` - segment 1 has only one point, ignored; segment 2 is a horizontal segment, and the final path keeps only segment 2, valid; 6. `[[1, 1], [1, 2]]` - segment 1 has only one point, ignored; segment 2 is also ignored, and the final path is empty, invalid",
   "params.color": "Bus color. `null` indicates the default",

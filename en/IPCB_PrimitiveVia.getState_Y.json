@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 5000, 20, 40);\n\n// 2. 读取中心点纵坐标\nconst viaY = via.getState_Y();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('y:', viaY);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 5000, 20, 40);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const viaY = via.getState_Y();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveVia.delete([via.getState_PrimitiveId()]);\n\nconsole.log('y:', viaY);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：坐标 Y",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个测试过孔",
+    "example.text.1": "2. 读取中心点纵坐标",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "坐标 Y"
   },
   "title": "Get the property state: Y coordinate",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Y coordinate"
 }

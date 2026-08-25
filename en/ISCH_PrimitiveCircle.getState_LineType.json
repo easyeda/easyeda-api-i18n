@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个虚线轮廓的测试圆（lineType 传数字枚举，1 = DASHED）\nconst circle = await eda.sch_PrimitiveCircle.create(400, 300, 150, '#FF0000', null, 6, 1);\n\n// 2. 读取线型\nconst lineType = circle.getState_LineType();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('lineType:', lineType);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const circle = await eda.sch_PrimitiveCircle.create(400, 300, 150, '#FF0000', null, 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const lineType = circle.getState_LineType();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveCircle.delete([circle.getState_PrimitiveId()]);\n\nconsole.log('lineType:', lineType);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：线型",
+    "example.text.0": "1. 创建一个虚线轮廓的测试圆（lineType 传数字枚举，1 = DASHED）",
+    "example.text.1": "2. 读取线型",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "线型"
   },
   "title": "Get the property state: line type",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Line type"
 }

@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建 2 个测试焊盘并选中\nconst pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\nawait eda.pcb_SelectControl.doSelectPrimitives(padIds);\n\n// 2. 查询所有已选中图元的图元 ID\nconst selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\nconsole.log('包含全部测试焊盘：', padIds.every(id => selectedIds.includes(id)));\n\n// 3. 清理：清除选中并删除测试图元\nawait eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pad1 = await eda.pcb_PrimitivePad.create(1, '1', 2000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst pad2 = await eda.pcb_PrimitivePad.create(1, '2', 3000, 2000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padIds = [pad1.getState_PrimitiveId(), pad2.getState_PrimitiveId()];\nawait eda.pcb_SelectControl.doSelectPrimitives(padIds);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selectedIds = await eda.pcb_SelectControl.getAllSelectedPrimitives_PrimitiveId();\nconsole.log('选中图元数量：', selectedIds.length);\nconsole.log('包含全部测试焊盘：', padIds.every(id => selectedIds.includes(id)));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_SelectControl.clearSelected();\nawait eda.pcb_PrimitivePad.delete(padIds);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询所有已选中图元的图元 ID",
+    "example.text.0": "1. 创建 2 个测试焊盘并选中",
+    "example.text.1": "2. 查询所有已选中图元的图元 ID",
+    "example.text.2": "3. 清理：清除选中并删除测试图元",
     "returns": "所有已选中图元的图元 ID"
   },
   "title": "Query the primitive IDs of all selected primitives",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Primitive IDs of all selected primitives"
 }

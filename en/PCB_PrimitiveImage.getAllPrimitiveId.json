@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个顶层铜层（1）测试图像作为查找目标（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst cp = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, cp, 1, 400, 300, 0, false, false);\nconst imageId = image.getState_PrimitiveId();\n\n// 2. 获取全部图像的图元 ID\nconst allIds = await eda.pcb_PrimitiveImage.getAllPrimitiveId();\n\n// 3. 按层过滤：只取顶层铜层（1）图像的图元 ID\nconst topCopperIds = await eda.pcb_PrimitiveImage.getAllPrimitiveId(1);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveImage.delete([imageId]);\n\nconsole.log('total image ids:', allIds.length);\nconsole.log('top copper image ids:', topCopperIds.length);\nconsole.log('marker id in top copper list:', topCopperIds.includes(imageId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst cp = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image = await eda.pcb_PrimitiveImage.create(x, y, cp, 1, 400, 300, 0, false, false);\nconst imageId = image.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveImage.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const topCopperIds = await eda.pcb_PrimitiveImage.getAllPrimitiveId(1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveImage.delete([imageId]);\n\nconsole.log('total image ids:', allIds.length);\nconsole.log('top copper image ids:', topCopperIds.length);\nconsole.log('marker id in top copper list:', topCopperIds.includes(imageId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有图像的图元 ID",
+    "example.text.0": "1. 创建一个顶层铜层（1）测试图像作为查找目标（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部图像的图元 ID",
+    "example.text.2": "3. 按层过滤：只取顶层铜层（1）图像的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.layer": "层",
     "params.primitiveLock": "是否锁定",
     "returns": "图像的图元 ID 数组"
   },
   "title": "Get all Image primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.layer": "Layer",
   "params.primitiveLock": "Whether it is locked",
   "returns": "Array of Image primitive IDs"

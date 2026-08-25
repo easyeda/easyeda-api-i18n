@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取当前工程 UUID（打开自身，避免切换到其它工程）\nconst info = await eda.dmt_Project.getCurrentProjectInfo();\nconst projectUuid = info.uuid;\n\n// 2. 打开该工程\nconst opened = await eda.dmt_Project.openProject(projectUuid);\n\nconsole.log('opened:', opened);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const info = await eda.dmt_Project.getCurrentProjectInfo();\nconst projectUuid = info.uuid;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const opened = await eda.dmt_Project.openProject(projectUuid);\n\nconsole.log('opened:', opened);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "打开工程",
     "remarks.text.0": "本操作将会在 EDA 前端打开指定工程，如若原先已打开其它工程且有未保存的变更，执行本操作将直接丢失所有未保存的数据",
+    "example.text.0": "1. 取当前工程 UUID（打开自身，避免切换到其它工程）",
+    "example.text.1": "2. 打开该工程",
     "params.projectUuid": "工程 UUID",
     "returns": "是否成功打开工程"
   },
   "title": "Open project",
   "remarks.text.0": "This operation will open the specified project in the EDA front end. If another project was previously opened with unsaved changes, executing this operation will directly lose all unsaved data",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.projectUuid": "Project UUID",
   "returns": "Whether Successful open project"
 }

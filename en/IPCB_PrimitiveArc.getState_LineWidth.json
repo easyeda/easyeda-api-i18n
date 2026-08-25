@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一段 10mil 线宽的测试圆弧\nconst arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n\n// 2. 读取线宽\nconst lineWidth = arc.getState_LineWidth();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('lineWidth:', lineWidth);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.pcb_PrimitiveArc.create('', 1, 1000, 1000, 1500, 1300, 90, 10, 1, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const lineWidth = arc.getState_LineWidth();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveArc.delete([arc.getState_PrimitiveId()]);\n\nconsole.log('lineWidth:', lineWidth);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：线宽",
+    "example.text.0": "1. 创建一段 10mil 线宽的测试圆弧",
+    "example.text.1": "2. 读取线宽",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "线宽"
   },
   "title": "Get the property state: Line width",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Line width"
 }

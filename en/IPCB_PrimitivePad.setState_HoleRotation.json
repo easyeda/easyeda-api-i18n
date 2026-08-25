@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个插槽通孔焊盘（槽未旋转）\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['SLOT', 30, 80], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleRotation();\n\n// 2. 异步模式下把孔旋转 45 度并提交\nconst a = pad.toAsync();\na.setState_HoleRotation(45);\nawait a.done();\n\n// 3. 从画布重新读取，确认旋转已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeRotation:', before, '→', ref.getState_HoleRotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(12, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', ['SLOT', 30, 80], 0, 0, 0, false, 0);\nconst before = pad.getState_HoleRotation();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_HoleRotation(45);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('holeRotation:', before, '→', ref.getState_HoleRotation());\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "设置属性状态：孔相对于焊盘的旋转角度",
     "remarks.text.0": "如若孔不存在，则属性将不会被修改",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个插槽通孔焊盘（槽未旋转）",
+    "example.text.1": "2. 异步模式下把孔旋转 45 度并提交",
+    "example.text.2": "3. 从画布重新读取，确认旋转已生效（保留现场供观察）",
     "params.holeRotation": "孔相对于焊盘的旋转角度",
     "returns": "焊盘图元对象"
   },
   "title": "Set the property state: Rotation angle of the hole relative to the pad",
   "remarks.text.0": "If the hole does not exist, the property will not be modified",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.holeRotation": "Rotation angle of the hole relative to the pad",
   "returns": "Pad primitive object"
 }

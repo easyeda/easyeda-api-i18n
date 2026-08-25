@@ -10,7 +10,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取视口大小（同步方法，直接取值）\nconst size = eda.sys_Window.getViewportSize();\n\n// 2. 展示宽高\nconsole.log('视口宽：', size.width, 'px，视口高：', size.height, 'px');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const size = eda.sys_Window.getViewportSize();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('视口宽：', size.width, 'px，视口高：', size.height, 'px');\n```"
         }
       ]
     },
@@ -24,8 +42,12 @@
   },
   "_source": {
     "title": "获取页面当前视口大小",
+    "example.text.0": "1. 获取视口大小（同步方法，直接取值）",
+    "example.text.1": "2. 展示宽高",
     "returns": "视口宽高（单位：像素）"
   },
   "title": "Get the current viewport size of the page",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Viewport width and height (in pixels)"
 }

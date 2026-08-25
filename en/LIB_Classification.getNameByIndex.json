@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取个人库 UUID\nconst libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n\n// 2. 创建两级测试分类，拿到两个索引对象（复用模块库）\nconst tag = Date.now();\nconst primaryName = '嘉立创示例_按索引查名一级_' + tag;\nconst secondaryName = '嘉立创示例_按索引查名二级_' + tag;\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\nconst secondaryIndex = await eda.lib_Classification.createSecondary(\n  libraryUuid, '1', primaryIndex.primaryClassificationUuid, secondaryName\n);\n\n// 3. 分别解析一级索引、二级索引的名称\nconst primaryNames = await eda.lib_Classification.getNameByIndex(primaryIndex);\nconst secondaryNames = await eda.lib_Classification.getNameByIndex(secondaryIndex);\n\n// 4. 清理测试分类（查询类需要清理）\nawait eda.lib_Classification.deleteByUuid(libraryUuid, primaryIndex.primaryClassificationUuid);\n\nconsole.log('primaryNames:', primaryNames);\nconsole.log('secondaryNames:', secondaryNames);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tag = Date.now();\nconst primaryName = '嘉立创示例_按索引查名一级_' + tag;\nconst secondaryName = '嘉立创示例_按索引查名二级_' + tag;\nconst primaryIndex = await eda.lib_Classification.createPrimary(libraryUuid, '1', primaryName);\nconst secondaryIndex = await eda.lib_Classification.createSecondary(\n  libraryUuid, '1', primaryIndex.primaryClassificationUuid, secondaryName\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primaryNames = await eda.lib_Classification.getNameByIndex(primaryIndex);\nconst secondaryNames = await eda.lib_Classification.getNameByIndex(secondaryIndex);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.lib_Classification.deleteByUuid(libraryUuid, primaryIndex.primaryClassificationUuid);\n\nconsole.log('primaryNames:', primaryNames);\nconsole.log('secondaryNames:', secondaryNames);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取指定索引的分类的名称",
+    "example.text.0": "1. 获取个人库 UUID",
+    "example.text.1": "2. 创建两级测试分类，拿到两个索引对象（复用模块库）",
+    "example.text.2": "3. 分别解析一级索引、二级索引的名称",
+    "example.text.3": "4. 清理测试分类（查询类需要清理）",
     "params.classificationIndex": "分类索引",
     "returns": "两级分类的名称",
     "deprecated": "since EDA v3.2; dropped EDA v3.3"
   },
   "title": "Get the name of the classification at the specified index",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.classificationIndex": "Classification index",
   "returns": "Name of the two-level classification",
   "deprecated": "since EDA v3.2; dropped EDA v3.3"

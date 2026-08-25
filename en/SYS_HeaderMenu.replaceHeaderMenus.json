@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先导入一版菜单数据作为被替换对象（blank 空白页环境）\nawait eda.sys_HeaderMenu.insertHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单A', title: '菜单 A', menuItems: [{ id: '嘉立创示例_子A', title: '子项 A' }] }],\n});\nconsole.log('已导入第一版菜单');\n\n// 2. 整体替换为第二版菜单数据\nawait eda.sys_HeaderMenu.replaceHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单B', title: '菜单 B', menuItems: [{ id: '嘉立创示例_子B', title: '子项 B' }] }],\n});\nconsole.log('已替换为第二版菜单');\n\n// 3. 还原系统默认菜单\neda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已还原系统默认菜单');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_HeaderMenu.insertHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单A', title: '菜单 A', menuItems: [{ id: '嘉立创示例_子A', title: '子项 A' }] }],\n});\nconsole.log('已导入第一版菜单');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_HeaderMenu.replaceHeaderMenus({\n  blank: [{ id: '嘉立创示例_菜单B', title: '菜单 B', menuItems: [{ id: '嘉立创示例_子B', title: '子项 B' }] }],\n});\nconsole.log('已替换为第二版菜单');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_HeaderMenu.removeHeaderMenus();\nconsole.log('已还原系统默认菜单');\n```"
         }
       ]
     }
@@ -23,9 +50,15 @@
   "_source": {
     "title": "替换顶部菜单数据",
     "remarks.text.0": "本接口相当于同时执行了 {@link SYS_HeaderMenu.removeHeaderMenus | 移除} 和 {@link SYS_HeaderMenu.insertHeaderMenus | 导入} 操作",
+    "example.text.0": "1. 先导入一版菜单数据作为被替换对象（blank 空白页环境）",
+    "example.text.1": "2. 整体替换为第二版菜单数据",
+    "example.text.2": "3. 还原系统默认菜单",
     "params.headerMenus": "顶部菜单数据"
   },
   "title": "Replace top menu data",
   "remarks.text.0": "This API is equivalent to executing the {@link SYS_HeaderMenu.removeHeaderMenus | remove} and {@link SYS_HeaderMenu.insertHeaderMenus | insert} operations at the same time",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.headerMenus": "Top menu data"
 }

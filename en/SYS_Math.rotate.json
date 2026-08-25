@@ -10,13 +10,53 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 定义一个矩形安装座\nconst mount = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n\n// 2. 不传中心：绕质心 (50, 40) 逆时针旋转 90 度，占位原地转身\nconst selfRotated = eda.sys_Math.rotate(mount, 90);\nconsole.log('绕质心旋转后的顶点：', JSON.stringify(selfRotated));\n\n// 3. 传中心参数：绕坐标原点 (0, 0) 旋转 90 度，图形整体公转\n//    逆时针 90 度把 (x, y) 映射为 (-y, x)\nconst originRotated = eda.sys_Math.rotate(mount, 90, 0, 0);\nconsole.log('绕原点旋转后的顶点：', JSON.stringify(originRotated));\n\n// 4. 负角度顺时针旋转，与正角度互为逆变换\nconst back = eda.sys_Math.rotate(originRotated, -90, 0, 0);\nconsole.log('再顺时针转回后的第一个点：', JSON.stringify(back[0]));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const mount = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selfRotated = eda.sys_Math.rotate(mount, 90);\nconsole.log('绕质心旋转后的顶点：', JSON.stringify(selfRotated));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const originRotated = eda.sys_Math.rotate(mount, 90, 0, 0);\nconsole.log('绕原点旋转后的顶点：', JSON.stringify(originRotated));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const back = eda.sys_Math.rotate(originRotated, -90, 0, 0);\nconsole.log('再顺时针转回后的第一个点：', JSON.stringify(back[0]));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "旋转多边形",
+    "example.text.0": "1. 定义一个矩形安装座",
+    "example.text.1": "2. 不传中心：绕质心 (50, 40) 逆时针旋转 90 度，占位原地转身",
+    "example.text.2": "3. 传中心参数：绕坐标原点 (0, 0) 旋转 90 度，图形整体公转\n逆时针 90 度把 (x, y) 映射为 (-y, x)",
+    "example.text.3": "4. 负角度顺时针旋转，与正角度互为逆变换",
     "params.polygon": "多边形",
     "params.angle": "旋转角度（角度制，正值为逆时针）",
     "params.centerX": "旋转中心 X 坐标，默认为质心",
@@ -24,6 +64,10 @@
     "returns": "旋转后的离散点数组"
   },
   "title": "Rotate the polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon": "Polygon",
   "params.angle": "Rotation angle (in degrees, positive values are counterclockwise)",
   "params.centerX": "X coordinate of the rotation center, defaulting to the centroid",

@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 小矩形完全落在大矩形内部 → true\nconst board = [{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 120 }, { x: 0, y: 120 }];\nconst device = [{ x: 50, y: 40 }, { x: 90, y: 40 }, { x: 90, y: 70 }, { x: 50, y: 70 }];\nconsole.log('板框完全包含器件：', eda.sys_Math.contains(board, device));\n\n// 2. 器件跨越板框边界（部分重叠，不是完全包含）→ false\nconst overhang = [{ x: 150, y: 40 }, { x: 250, y: 40 }, { x: 250, y: 70 }, { x: 150, y: 70 }];\nconsole.log('板框完全包含越界器件：', eda.sys_Math.contains(board, overhang));\n\n// 3. 只关心区域重叠不关心完全包含时，配合 intersects 使用\nconsole.log('两器件区域有重叠：', eda.sys_Math.intersects(device, overhang));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const board = [{ x: 0, y: 0 }, { x: 200, y: 0 }, { x: 200, y: 120 }, { x: 0, y: 120 }];\nconst device = [{ x: 50, y: 40 }, { x: 90, y: 40 }, { x: 90, y: 70 }, { x: 50, y: 70 }];\nconsole.log('板框完全包含器件：', eda.sys_Math.contains(board, device));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const overhang = [{ x: 150, y: 40 }, { x: 250, y: 40 }, { x: 250, y: 70 }, { x: 150, y: 70 }];\nconsole.log('板框完全包含越界器件：', eda.sys_Math.contains(board, overhang));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('两器件区域有重叠：', eda.sys_Math.intersects(device, overhang));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "判断 polygon1 是否完全包含 polygon2",
+    "example.text.0": "1. 小矩形完全落在大矩形内部 → true",
+    "example.text.1": "2. 器件跨越板框边界（部分重叠，不是完全包含）→ false",
+    "example.text.2": "3. 只关心区域重叠不关心完全包含时，配合 intersects 使用",
     "params.polygon1": "外部多边形",
     "params.polygon2": "内部多边形",
     "returns": "polygon1 是否完全包含 polygon2"
   },
   "title": "Determine whether polygon1 completely contains polygon2",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.polygon1": "Outer polygon",
   "params.polygon2": "Internal polygon",
   "returns": "Whether polygon1 completely contains polygon2"

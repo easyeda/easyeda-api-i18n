@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先发起拉取（Promise 挂起等待消息）\nconst pending = eda.sys_MessageBus.pullAsync('嘉立创示例_异步拉取');\n\n// 2. 推送消息，挂起的 Promise 随即满足\neda.sys_MessageBus.push('嘉立创示例_异步拉取', { task: '导出 BOM', done: true });\n\n// 3. await 直接拿到拉到的消息\nconst message = await pending;\nconsole.log('拉到的消息：', message);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pending = eda.sys_MessageBus.pullAsync('嘉立创示例_异步拉取');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.push('嘉立创示例_异步拉取', { task: '导出 BOM', done: true });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const message = await pending;\nconsole.log('拉到的消息：', message);\n```"
         }
       ]
     }
@@ -23,11 +50,17 @@
   "_source": {
     "title": "私有消息总线：拉消息 Promise 版本",
     "remarks.text.0": "每次只能拉一个消息，可以使用 `await` 等待消息拉取",
+    "example.text.0": "1. 先发起拉取（Promise 挂起等待消息）",
+    "example.text.1": "2. 推送消息，挂起的 Promise 随即满足",
+    "example.text.2": "3. await 直接拿到拉到的消息",
     "params.topic": "主题",
     "returns": "拉取到的消息"
   },
   "title": "Private message bus: pull a message (Promise version)",
   "remarks.text.0": "Only one message can be pulled at a time. You can use `await` to wait for the message to be pulled",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.topic": "Theme",
   "returns": "The pulled message"
 }

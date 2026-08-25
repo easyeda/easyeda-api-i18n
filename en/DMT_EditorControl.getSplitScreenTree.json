@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页，保证分屏树里有标签页可读\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 读取分屏树\nconst tree = await eda.dmt_EditorControl.getSplitScreenTree();\n\n// 3. 递归遍历，收集所有分屏 ID 与标签页标题\nconst splitIds = [];\nconst tabTitles = [];\n(function walk(node) {\n  splitIds.push(node.id);\n  if (node.tabs) tabTitles.push(...node.tabs.map(t => t.title));\n  (node.children || []).forEach(walk);\n})(tree);\nconsole.log('split count:', splitIds.length);\nconsole.log('tab titles:', tabTitles);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tree = await eda.dmt_EditorControl.getSplitScreenTree();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const splitIds = [];\nconst tabTitles = [];\n(function walk(node) {\n  splitIds.push(node.id);\n  if (node.tabs) tabTitles.push(...node.tabs.map(t => t.title));\n  (node.children || []).forEach(walk);\n})(tree);\nconsole.log('split count:', splitIds.length);\nconsole.log('tab titles:', tabTitles);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取编辑器分屏属性树",
+    "example.text.0": "1. 打开一个原理图页，保证分屏树里有标签页可读",
+    "example.text.1": "2. 读取分屏树",
+    "example.text.2": "3. 递归遍历，收集所有分屏 ID 与标签页标题",
     "returns": "编辑器分屏属性树，如若为 `undefined`，则数据获取失败"
   },
   "title": "Get the editor split screen property tree",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "The editor split screen property tree. If it is `undefined`, the data retrieval failed"
 }

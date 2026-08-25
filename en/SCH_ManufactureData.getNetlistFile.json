@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 导出 Altium Designer 格式的网表（'Protel2' 对应 ESYS_NetlistType.ALTIUM_DESIGNER）\ntry {\n    const netlistFile = await eda.sch_ManufactureData.getNetlistFile('嘉立创示例_网表', 'Protel2');\n    console.log('导出文件名：', netlistFile?.name);\n    console.log('文件大小：', netlistFile?.size);\n} catch (e) {\n    // 原理图数据不满足网表校验（如引脚编号重复）时会抛错\n    console.log('当前原理图数据不满足网表导出要求，导出未完成');\n}\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "try {\n    const netlistFile = await eda.sch_ManufactureData.getNetlistFile('嘉立创示例_网表', 'Protel2');\n    console.log('导出文件名：', netlistFile?.name);\n    console.log('文件大小：', netlistFile?.size);\n} catch (e) {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "    // "
+        },
+        {
+          "type": "code",
+          "content": "    console.log('当前原理图数据不满足网表导出要求，导出未完成');\n}\n```"
         }
       ]
     }
@@ -23,12 +41,16 @@
   "_source": {
     "title": "获取网表文件（Netlist）",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "example.text.0": "1. 导出 Altium Designer 格式的网表（'Protel2' 对应 ESYS_NetlistType.ALTIUM_DESIGNER）",
+    "example.text.1": "原理图数据不满足网表校验（如引脚编号重复）时会抛错",
     "params.fileName": "文件名",
     "params.netlistType": "网表类型",
     "returns": "网表文件数据"
   },
   "title": "Get the netlist file (Netlist)",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.fileName": "File name",
   "params.netlistType": "Netlist type",
   "returns": "Netlist file data"

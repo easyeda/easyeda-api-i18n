@@ -15,7 +15,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先注册一条连接用于演示\neda.sys_WebSocket.register('嘉立创示例_关闭', 'ws://127.0.0.1:49620',\n  () => {},\n  () => {\n    console.log('连接已建立');\n  });\n\n// 2. 等待握手完成\nawait new Promise(r => setTimeout(r, 1500));\n\n// 3. 以「正常关闭」状态码 1000 关闭连接，并附带原因\neda.sys_WebSocket.close('嘉立创示例_关闭', 1000, '演示完毕');\nconsole.log('已关闭连接（code 1000）');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_WebSocket.register('嘉立创示例_关闭', 'ws://127.0.0.1:49620',\n  () => {},\n  () => {\n    console.log('连接已建立');\n  });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_WebSocket.close('嘉立创示例_关闭', 1000, '演示完毕');\nconsole.log('已关闭连接（code 1000）');\n```"
         }
       ]
     }
@@ -23,6 +50,9 @@
   "_source": {
     "title": "关闭 WebSocket 连接",
     "remarks.text.0": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "example.text.0": "1. 先注册一条连接用于演示",
+    "example.text.1": "2. 等待握手完成",
+    "example.text.2": "3. 以「正常关闭」状态码 1000 关闭连接，并附带原因",
     "params.id": "自定义的 WebSocket ID",
     "params.code": "数字状态码，对应 {@link https://developer.mozilla.org/docs/Web/API/CloseEvent/code | WebSocket.CloseEvent} 内允许的状态码",
     "params.reason": "一个人类可读的字符串，解释连接关闭的原因",
@@ -30,6 +60,9 @@
   },
   "title": "Close the WebSocket connection",
   "remarks.text.0": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.id": "Custom WebSocket ID",
   "params.code": "Numeric status code, corresponding to the codes allowed in {@link https://developer.mozilla.org/docs/Web/API/CloseEvent/code | WebSocket.CloseEvent}",
   "params.reason": "A human-readable string explaining why the connection was closed",

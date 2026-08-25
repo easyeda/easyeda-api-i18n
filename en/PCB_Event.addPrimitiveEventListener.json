@@ -15,7 +15,52 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\nconst listenerId = '嘉立创示例_primitive_event';\nconst events = [];\n\n// 1. 注册图元事件监听，eventType 用 'all' 接收全部图元事件\neda.pcb_Event.addPrimitiveEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    events.push({ eventType, primitiveType: props?.[0]?.primitiveType });\n  },\n  false\n);\n\n// 2. 创建一个测试焊盘，触发图元 add 事件\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', 5000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nawait new Promise(r => setTimeout(r, 500));\n\n// 3. 删除测试焊盘，再触发一次图元删除事件（同时清理测试图元）\nawait eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\nawait new Promise(r => setTimeout(r, 500));\n\n// 4. 观察两次操作分别触发的事件\nconsole.log('events:', JSON.stringify(events));\n\n// 5. 清理监听\nconst removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
+          "content": "```javascript\nconst listenerId = '嘉立创示例_primitive_event';\nconst events = [];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.pcb_Event.addPrimitiveEventListener(\n  listenerId,\n  'all',\n  (eventType, props) => {\n    events.push({ eventType, primitiveType: props?.[0]?.primitiveType });\n  },\n  false\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pad = await eda.pcb_PrimitivePad.create(1, '1', 5000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nawait new Promise(r => setTimeout(r, 500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([pad.getState_PrimitiveId()]);\nawait new Promise(r => setTimeout(r, 500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('events:', JSON.stringify(events));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.pcb_Event.removeEventListener(listenerId);\nconsole.log('removed:', removed);\n```"
         }
       ]
     }
@@ -23,6 +68,11 @@
   "_source": {
     "title": "新增图元事件监听",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "example.text.0": "1. 注册图元事件监听，eventType 用 'all' 接收全部图元事件",
+    "example.text.1": "2. 创建一个测试焊盘，触发图元 add 事件",
+    "example.text.2": "3. 删除测试焊盘，再触发一次图元删除事件（同时清理测试图元）",
+    "example.text.3": "4. 观察两次操作分别触发的事件",
+    "example.text.4": "5. 清理监听",
     "params.id": "事件 ID，用以防止重复注册事件",
     "params.eventType": "事件类型",
     "params.callFn": "事件触发时的回调函数",
@@ -30,6 +80,11 @@
   },
   "title": "Add a primitive event listener",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.id": "Event ID, used to prevent duplicate event registration",
   "params.eventType": "Event type",
   "params.callFn": "The callback function triggered when the event fires",

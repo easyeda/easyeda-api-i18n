@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两条测试导线，分别属于不同网络（随机坐标避免重合，SCH 坐标单位 10mil）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst wire1 = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\nconst wire2 = await eda.sch_PrimitiveWire.create([x, y + 200, x + 400, y + 200], 'SIG_B');\nconst wire1Id = wire1.getState_PrimitiveId();\n\n// 2. 不传参数，获取全部导线的图元 ID\nconst allIds = await eda.sch_PrimitiveWire.getAllPrimitiveId();\n\n// 3. 传网络名称，只获取该网络导线的图元 ID\nconst onlyAIds = await eda.sch_PrimitiveWire.getAllPrimitiveId('SIG_A');\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.sch_PrimitiveWire.delete([wire1.getState_PrimitiveId(), wire2.getState_PrimitiveId()]);\n\nconsole.log('total wire ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(wire1Id));\nconsole.log('SIG_A id count:', onlyAIds.length);\nconsole.log('SIG_A contains marker:', onlyAIds.includes(wire1Id));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst wire1 = await eda.sch_PrimitiveWire.create([x, y, x + 400, y], 'SIG_A');\nconst wire2 = await eda.sch_PrimitiveWire.create([x, y + 200, x + 400, y + 200], 'SIG_B');\nconst wire1Id = wire1.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.sch_PrimitiveWire.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const onlyAIds = await eda.sch_PrimitiveWire.getAllPrimitiveId('SIG_A');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitiveWire.delete([wire1.getState_PrimitiveId(), wire2.getState_PrimitiveId()]);\n\nconsole.log('total wire ids:', allIds.length);\nconsole.log('marker id in list:', allIds.includes(wire1Id));\nconsole.log('SIG_A id count:', onlyAIds.length);\nconsole.log('SIG_A contains marker:', onlyAIds.includes(wire1Id));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有导线的图元 ID",
+    "example.text.0": "1. 创建两条测试导线，分别属于不同网络（随机坐标避免重合，SCH 坐标单位 10mil）",
+    "example.text.1": "2. 不传参数，获取全部导线的图元 ID",
+    "example.text.2": "3. 传网络名称，只获取该网络导线的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.net": "网络名称",
     "returns": "导线的图元 ID 数组"
   },
   "title": "Get all Wire primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.net": "Net name",
   "returns": "Array of Wire primitive IDs"
 }

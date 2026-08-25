@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先移除历史运行遗留的自定义层，保证案例可以反复执行\nconst layers = await eda.pcb_Layer.getAllLayers();\nfor (const item of layers.filter(l => l.type === 'CUSTOM')) {\n  await eda.pcb_Layer.removeLayer(item.id);\n}\n\n// 2. 新增自定义层，返回新层的图层 ID（CUSTOM_1=71 起顺延分配）\nconst customLayerId = await eda.pcb_Layer.addCustomLayer();\n\n// 3. 从图层列表确认新层已存在（保留现场，可在图层面板观察）\nconst after = await eda.pcb_Layer.getAllLayers();\nconst newLayer = after.find(l => l.id === customLayerId);\n\nconsole.log('customLayerId:', customLayerId);\nconsole.log('newLayerName:', newLayer?.name);\nconsole.log('customLayerCount:', after.filter(l => l.type === 'CUSTOM').length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layers = await eda.pcb_Layer.getAllLayers();\nfor (const item of layers.filter(l => l.type === 'CUSTOM')) {\n  await eda.pcb_Layer.removeLayer(item.id);\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const customLayerId = await eda.pcb_Layer.addCustomLayer();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const after = await eda.pcb_Layer.getAllLayers();\nconst newLayer = after.find(l => l.id === customLayerId);\n\nconsole.log('customLayerId:', customLayerId);\nconsole.log('newLayerName:', newLayer?.name);\nconsole.log('customLayerCount:', after.filter(l => l.type === 'CUSTOM').length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "新增自定义层",
+    "example.text.0": "1. 先移除历史运行遗留的自定义层，保证案例可以反复执行",
+    "example.text.1": "2. 新增自定义层，返回新层的图层 ID（CUSTOM_1=71 起顺延分配）",
+    "example.text.2": "3. 从图层列表确认新层已存在（保留现场，可在图层面板观察）",
     "returns": "新增的自定义层的图层 ID，如若为 `undefined` 则为新增失败，可能是自定义层数量已达到上限"
   },
   "title": "Add a custom layer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "The layer ID of the newly added custom layer. If it is `undefined`, the addition failed, possibly because the number of custom layers has reached the upper limit"
 }

@@ -10,18 +10,62 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 大矩形铺铜区域与一个完全落在其内部的矩形开孔区\nconst copper = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst hole = [{ x: 30, y: 20 }, { x: 70, y: 20 }, { x: 70, y: 60 }, { x: 30, y: 60 }];\n\n// 2. 挖孔：差集结果的多边形组里，开孔区被记为孔洞\nconst cut = eda.sys_Math.subtract(copper, hole);\nconsole.log('差集结果多边形个数：', cut.length);\nconsole.log('孔洞数：', cut[0].holes.length);\n\n// 3. 挖孔后的净面积：100 x 80 - 40 x 40 = 6400\nconsole.log('挖孔后的净面积：', eda.sys_Math.calculateArea(cut));\n\n// 4. 减去完全分离的多边形不产生任何变化（结果仍是原形状的等价组）\nconst far = [{ x: 200, y: 0 }, { x: 280, y: 0 }, { x: 280, y: 40 }, { x: 200, y: 40 }];\nconst untouched = eda.sys_Math.subtract(copper, far);\nconsole.log('减去分离区域后的面积：', eda.sys_Math.calculateArea(untouched));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const copper = [{ x: 0, y: 0 }, { x: 100, y: 0 }, { x: 100, y: 80 }, { x: 0, y: 80 }];\nconst hole = [{ x: 30, y: 20 }, { x: 70, y: 20 }, { x: 70, y: 60 }, { x: 30, y: 60 }];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const cut = eda.sys_Math.subtract(copper, hole);\nconsole.log('差集结果多边形个数：', cut.length);\nconsole.log('孔洞数：', cut[0].holes.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('挖孔后的净面积：', eda.sys_Math.calculateArea(cut));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const far = [{ x: 200, y: 0 }, { x: 280, y: 0 }, { x: 280, y: 40 }, { x: 200, y: 40 }];\nconst untouched = eda.sys_Math.subtract(copper, far);\nconsole.log('减去分离区域后的面积：', eda.sys_Math.calculateArea(untouched));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "计算两个多边形的差集（polygon1 - polygon2）",
+    "example.text.0": "1. 大矩形铺铜区域与一个完全落在其内部的矩形开孔区",
+    "example.text.1": "2. 挖孔：差集结果的多边形组里，开孔区被记为孔洞",
+    "example.text.2": "3. 挖孔后的净面积：100 x 80 - 40 x 40 = 6400",
+    "example.text.3": "4. 减去完全分离的多边形不产生任何变化（结果仍是原形状的等价组）",
     "params.polygon1": "被减多边形",
     "params.polygon2": "减去的多边形",
     "returns": "差集结果的多边形组，保留外环与孔洞的归属关系"
   },
   "title": "Calculate the difference of two polygons (polygon1 - polygon2)",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.polygon1": "Minuend polygon",
   "params.polygon2": "Subtrahend polygon",
   "returns": "Polygon group of the difference result, preserving the association between outer rings and holes"

@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取所有直接团队\nconst teams = await eda.dmt_Team.getAllTeamsInfo();\n\n// 2. 输出团队数量与每个团队的属性（name/uuid/identity/itemType）\nconsole.log('团队数量：', teams.length);\nteams.forEach((team, i) => {\n  console.log(`团队${i + 1}：`, team.name, 'uuid:', team.uuid, '身份 ID：', team.identity);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const teams = await eda.dmt_Team.getAllTeamsInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('团队数量：', teams.length);\nteams.forEach((team, i) => {\n  console.log(`团队${i + 1}：`, team.name, 'uuid:', team.uuid, '身份 ID：', team.identity);\n});\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取所有直接团队的详细属性",
     "remarks.text.0": "个人本质上也是一个名为 **个人** 的团队",
+    "example.text.0": "1. 获取所有直接团队",
+    "example.text.1": "2. 输出团队数量与每个团队的属性（name/uuid/identity/itemType）",
     "returns": "所有团队的详细属性"
   },
   "title": "Get the detailed properties of all direct teams",
   "remarks.text.0": "A personal space is essentially a team named **Personal**",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Detailed properties of all teams"
 }

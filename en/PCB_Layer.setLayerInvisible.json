@@ -10,18 +10,51 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 隐藏底层丝印层（BOTTOM_SILKSCREEN=4）\nconst hideResult = await eda.pcb_Layer.setLayerInvisible(4);\n\n// 2. 从图层列表确认显隐状态（HIDDEN=2）\nconst layers = await eda.pcb_Layer.getAllLayers();\nconst silk = layers.find(l => l.id === 4);\n\n// 3. 恢复可见，避免影响后续查看\nconst restoreResult = await eda.pcb_Layer.setLayerVisible(4);\n\nconsole.log('hideResult:', hideResult);\nconsole.log('silkLayerStatus:', silk?.layerStatus);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const hideResult = await eda.pcb_Layer.setLayerInvisible(4);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const layers = await eda.pcb_Layer.getAllLayers();\nconst silk = layers.find(l => l.id === 4);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.setLayerVisible(4);\n\nconsole.log('hideResult:', hideResult);\nconsole.log('silkLayerStatus:', silk?.layerStatus);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "将层设置为不可见",
+    "example.text.0": "1. 隐藏底层丝印层（BOTTOM_SILKSCREEN=4）",
+    "example.text.1": "2. 从图层列表确认显隐状态（HIDDEN=2）",
+    "example.text.2": "3. 恢复可见，避免影响后续查看",
     "params.layer": "层，如若不指定任何层则默认为所有层",
     "params.setOtherLayerVisible": "是否将其它层设置为可见",
     "returns": "操作是否成功"
   },
   "title": "Set the layer to invisible",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.layer": "Layer. If no layer is specified, all layers are used by default",
   "params.setOtherLayerVisible": "Whether to set other layers to visible",
   "returns": "Whether the operation is successful"

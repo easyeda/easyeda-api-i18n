@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取画布上已有的覆铜填充图元\nconst pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\n\n// 2. 记录删除前的覆铜填充数量\nconst beforeCount = (await eda.pcb_PrimitivePoured.getAll()).length;\n\n// 3. 以 ID 数组形式删除第一个覆铜填充（也可以传图元对象）\nconst deleted = await eda.pcb_PrimitivePoured.delete([pouredList[0].getState_PrimitiveId()]);\n\n// 4. 删除类保留现场（图元已删除，不恢复），从画布确认数量变化\nconst afterCount = (await eda.pcb_PrimitivePoured.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePoured.getAll();\nif (!pouredList || pouredList.length === 0) {\n  console.log('说明：PCB 上没有覆铜填充，请先手动绘制覆铜并重建（设计 → 覆铜）');\n  return;\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeCount = (await eda.pcb_PrimitivePoured.getAll()).length;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.pcb_PrimitivePoured.delete([pouredList[0].getState_PrimitiveId()]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const afterCount = (await eda.pcb_PrimitivePoured.getAll()).length;\n\nconsole.log('deleted:', deleted);\nconsole.log('beforeCount:', beforeCount, '→ afterCount:', afterCount);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "删除覆铜填充",
+    "example.text.0": "1. 获取画布上已有的覆铜填充图元",
+    "example.text.1": "2. 记录删除前的覆铜填充数量",
+    "example.text.2": "3. 以 ID 数组形式删除第一个覆铜填充（也可以传图元对象）",
+    "example.text.3": "4. 删除类保留现场（图元已删除，不恢复），从画布确认数量变化",
     "params.primitiveIds": "覆铜填充的图元 ID 或覆铜填充图元对象",
     "returns": "删除操作是否成功"
   },
   "title": "Delete Copper fill",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Copper fill primitive ID or Copper fill primitive object",
   "returns": "Delete Whether the operation is successful"
 }

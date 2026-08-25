@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 用单个单多边形构建：getSource 会化简最外层数组\nconst single = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n\n// 2. 用多个单多边形构建：getSource 返回二维数组\nconst multi = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 2000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n\nconsole.log('singleSource:', JSON.stringify(single.getSource()));\nconsole.log('multiSource:', JSON.stringify(multi.getSource()));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = eda.pcb_MathPolygon.createComplexPolygon(['R', 1000, 1000, 500, 300, 0, 0]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const multi = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 2000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n\nconsole.log('singleSource:', JSON.stringify(single.getSource()));\nconsole.log('multiSource:', JSON.stringify(multi.getSource()));\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取多边形数据",
     "remarks.text.0": "如遇仅包含单一的单多边形，将会化简最外层的数组",
+    "example.text.0": "1. 用单个单多边形构建：getSource 会化简最外层数组",
+    "example.text.1": "2. 用多个单多边形构建：getSource 返回二维数组",
     "returns": "单多边形或复杂多边形数据"
   },
   "title": "Get Polygon data",
   "remarks.text.0": "If it only contains a single polygon, the outermost array will be simplified",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Single polygon or complex polygon data"
 }

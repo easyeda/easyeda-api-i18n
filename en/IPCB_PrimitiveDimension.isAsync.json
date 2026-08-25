@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个长度标注，创建后默认处于异步模式\nconst dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\nconst asyncOnCreate = dim.isAsync();\n\n// 2. 切换到同步模式再查询一次，对比两种模式\ndim.toSync();\nconst asyncAfterToSync = dim.isAsync();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('isAsync on create:', asyncOnCreate);\nconsole.log('isAsync after toSync:', asyncAfterToSync);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const dim = await eda.pcb_PrimitiveDimension.create(\n  'Length Dimension',\n  [1000, 1000, 1000, 800, 3000, 800, 3000, 1000],\n  3\n);\nconst asyncOnCreate = dim.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "dim.toSync();\nconst asyncAfterToSync = dim.isAsync();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveDimension.delete([dim.getState_PrimitiveId()]);\n\nconsole.log('isAsync on create:', asyncOnCreate);\nconsole.log('isAsync after toSync:', asyncAfterToSync);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询图元是否为异步图元",
+    "example.text.0": "1. 创建一个长度标注，创建后默认处于异步模式",
+    "example.text.1": "2. 切换到同步模式再查询一次，对比两种模式",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "是否为异步图元"
   },
   "title": "Query whether the primitive is an async primitive",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether Is async primitive"
 }

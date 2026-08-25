@@ -23,7 +23,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，创建一个无孔的贴片焊盘\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', null, 0, 0, 0, false, 0);\nconst beforeHole = pad.getState_Hole();\n\n// 2. 异步模式下设置 35mil 圆孔并提交\nconst a = pad.toAsync();\na.setState_Hole(['ROUND', 35]);\nawait a.done();\n\n// 3. 从画布重新读取，确认孔已生效且层被联动切到多层（保留现场供观察）\nconst ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('hole:', beforeHole, '→', ref.getState_Hole());\nconsole.log('layer:', ref.getState_Layer());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst pad = await eda.pcb_PrimitivePad.create(1, '1', x, 3000, 0, ['ELLIPSE', 80, 80], '', null, 0, 0, 0, false, 0);\nconst beforeHole = pad.getState_Hole();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = pad.toAsync();\na.setState_Hole(['ROUND', 35]);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitivePad.get(pad.getState_PrimitiveId());\n\nconsole.log('hole:', beforeHole, '→', ref.getState_Hole());\nconsole.log('layer:', ref.getState_Layer());\n```"
         }
       ]
     }
@@ -33,6 +60,9 @@
     "remarks.text.0": "设置孔时将会联动设置部分其它属性状态：",
     "remarks.text.1": "1. 层将会强制切换到多层",
     "remarks.text.2": "本接口无法将孔设置为 `null`，如果想要移除孔属性，请使用 {@link IPCB_PrimitivePad.setState_Layer | setState_Layer} 方法切换层为顶层或底层",
+    "example.text.0": "1. 生成本次运行专用的坐标，创建一个无孔的贴片焊盘",
+    "example.text.1": "2. 异步模式下设置 35mil 圆孔并提交",
+    "example.text.2": "3. 从画布重新读取，确认孔已生效且层被联动切到多层（保留现场供观察）",
     "params.hole": "焊盘钻孔",
     "returns": "焊盘图元对象"
   },
@@ -40,6 +70,9 @@
   "remarks.text.0": "When setting the hole, some other property states will be set in conjunction:",
   "remarks.text.1": "1. The layer will be forcibly switched to multi-layer",
   "remarks.text.2": "This API cannot set the hole to `null`. If you want to remove the hole property, use the {@link IPCB_PrimitivePad.setState_Layer | setState_Layer} method to switch the layer to the top or bottom layer",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.hole": "Pad drilling",
   "returns": "Pad primitive object"
 }

@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个默认扩展（遵循规则）的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_SolderMaskExpansion();\n\n// 2. 异步模式下自定义顶层阻焊扩展并提交\nconst a = via.toAsync();\na.setState_SolderMaskExpansion({ topSolderMask: 4 });\nawait a.done();\n\n// 3. 从画布重新读取，确认扩展已生效（未设置的底层项返回 null）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('expansion:', before, '→', ref.getState_SolderMaskExpansion());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_SolderMaskExpansion();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = via.toAsync();\na.setState_SolderMaskExpansion({ topSolderMask: 4 });\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('expansion:', before, '→', ref.getState_SolderMaskExpansion());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：阻焊/助焊扩展",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个默认扩展（遵循规则）的测试过孔",
+    "example.text.1": "2. 异步模式下自定义顶层阻焊扩展并提交",
+    "example.text.2": "3. 从画布重新读取，确认扩展已生效（未设置的底层项返回 null）",
     "params.solderMaskExpansion": "阻焊/助焊扩展",
     "returns": "过孔图元对象"
   },
   "title": "Set the property state: solder mask / paste mask expansion",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.solderMaskExpansion": "Solder mask / paste mask expansion",
   "returns": "Via primitive object"
 }

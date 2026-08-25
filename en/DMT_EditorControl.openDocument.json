@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取工程里第一个原理图页作为打开目标\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconsole.log('target:', pages[0].name);\n\n// 2. 打开该页面，返回标签页 ID\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconsole.log('tabId:', tabId);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconsole.log('target:', pages[0].name);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconsole.log('tabId:', tabId);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "打开文档",
+    "example.text.0": "1. 取工程里第一个原理图页作为打开目标",
+    "example.text.1": "2. 打开该页面，返回标签页 ID",
     "params.documentUuid": "文档 UUID，此处支持 {@link IDMT_SchematicItem.uuid}、{@link IDMT_SchematicPageItem.uuid}、{@link IDMT_PcbItem.uuid}、{@link IDMT_PanelItem.uuid} 作为输入",
     "params.splitScreenId": "分屏 ID，即 {@link DMT_EditorControl.getSplitScreenTree} 方法获取到的 {@link IDMT_EditorSplitScreenItem.id}",
     "returns": "标签页 ID，如若为 `undefined`，则打开文档失败"
   },
   "title": "Open document",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.documentUuid": "Document UUID. Here {@link IDMT_SchematicItem.uuid}, {@link IDMT_SchematicPageItem.uuid}, {@link IDMT_PcbItem.uuid}, and {@link IDMT_PanelItem.uuid} are supported as input",
   "params.splitScreenId": "Split screen ID, which is the {@link IDMT_EditorSplitScreenItem.id} obtained by the {@link DMT_EditorControl.getSplitScreenTree} method",
   "returns": "Tab ID, if it is `undefined`, then open document failed"

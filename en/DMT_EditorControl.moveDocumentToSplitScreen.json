@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 归一化布局后打开两个文档，把 PCB 拆到新分屏\nawait eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nconst split = await eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n\n// 2. 把 PCB 标签页移回源分屏\nconst moved = await eda.dmt_EditorControl.moveDocumentToSplitScreen(tabPcb, split.sourceSplitScreenId);\nconsole.log('moved:', moved);\n\n// 3. 回读源分屏标签页，确认两个标签页又同处一个分屏\nconst tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(split.sourceSplitScreenId);\nconsole.log('source split tabs:', tabs.map(t => t.title));\n\n// 4. 清理：合并残余分屏，恢复单屏布局\nconst mergedBack = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('mergedBack:', mergedBack);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst pcbs = await eda.dmt_Pcb.getAllPcbsInfo();\nawait eda.dmt_EditorControl.openDocument(pages[0].uuid);\nconst tabPcb = await eda.dmt_EditorControl.openDocument(pcbs[0].uuid);\nconst split = await eda.dmt_EditorControl.createSplitScreen('vertical', tabPcb);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const moved = await eda.dmt_EditorControl.moveDocumentToSplitScreen(tabPcb, split.sourceSplitScreenId);\nconsole.log('moved:', moved);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const tabs = await eda.dmt_EditorControl.getTabsBySplitScreenId(split.sourceSplitScreenId);\nconsole.log('source split tabs:', tabs.map(t => t.title));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const mergedBack = await eda.dmt_EditorControl.mergeAllDocumentFromSplitScreen();\nconsole.log('mergedBack:', mergedBack);\n```"
         }
       ]
     }
@@ -23,12 +59,20 @@
   "_source": {
     "title": "将文档移动到指定分屏",
     "remarks.text.0": "移动文档后，编辑器分屏属性树可能会出现变化",
+    "example.text.0": "1. 归一化布局后打开两个文档，把 PCB 拆到新分屏",
+    "example.text.1": "2. 把 PCB 标签页移回源分屏",
+    "example.text.2": "3. 回读源分屏标签页，确认两个标签页又同处一个分屏",
+    "example.text.3": "4. 清理：合并残余分屏，恢复单屏布局",
     "params.tabId": "标签页 ID",
     "params.splitScreenId": "{@link IDMT_EditorSplitScreenItem.id | 分屏 ID}",
     "returns": "操作是否成功"
   },
   "title": "Move a document to the specified split screen",
   "remarks.text.0": "After moving the document, the editor split screen property tree may change",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.tabId": "Tab ID",
   "params.splitScreenId": "{@link IDMT_EditorSplitScreenItem.id | Split screen ID}",
   "returns": "Whether the operation is successful"

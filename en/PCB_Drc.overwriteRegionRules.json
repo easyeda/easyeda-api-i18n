@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前所有区域规则（数组）\nconst regionRules = await eda.pcb_Drc.getRegionRules();\n\n// 2. 整体写回（原样写回演示覆写成功，实际使用时可先增删改数组元素）\nconst result = await eda.pcb_Drc.overwriteRegionRules(regionRules);\n\nconsole.log('ruleCount:', regionRules.length);\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const regionRules = await eda.pcb_Drc.getRegionRules();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.overwriteRegionRules(regionRules);\n\nconsole.log('ruleCount:', regionRules.length);\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "覆写区域规则",
     "remarks.text.0": "将会覆写当前 PCB 的所有区域规则，请注意数据丢失风险",
+    "example.text.0": "1. 读取当前所有区域规则（数组）",
+    "example.text.1": "2. 整体写回（原样写回演示覆写成功，实际使用时可先增删改数组元素）",
     "params.regionRules": "区域规则",
     "returns": "覆写是否成功"
   },
   "title": "Overwrite region rules",
   "remarks.text.0": "It will overwrite all region rules of the current PCB. Please note the risk of data loss",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.regionRules": "Region rules",
   "returns": "Overwrite whether it is successful"
 }

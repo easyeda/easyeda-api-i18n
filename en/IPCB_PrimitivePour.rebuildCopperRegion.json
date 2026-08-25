@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n\n// 2. 创建一个挂 GND 网络的覆铜边框（保留现场供观察）\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_重建覆铜', 5, 10, false);\n\n// 3. 重建覆铜填充（成功时返回生成的覆铜填充图元）\nlet rebuilt = false;\nlet result = undefined;\ntry {\n  result = await pour.rebuildCopperRegion();\n  rebuilt = result !== undefined;\n} catch (e) {\n  // 当前版本在纯 API 创建的覆铜上重建会报内部错误，捕获后继续\n  console.log('说明：当前环境 rebuildCopperRegion 报错：', e.message);\n}\n\nconsole.log('rebuildRequested:', true);\nconsole.log('hasCopperRegion:', rebuilt);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst pour = await eda.pcb_PrimitivePour.create('GND', 1, polygon, 'solid', false, '嘉立创示例_重建覆铜', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let rebuilt = false;\nlet result = undefined;\ntry {\n  result = await pour.rebuildCopperRegion();\n  rebuilt = result !== undefined;\n} catch (e) {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  console.log('说明：当前环境 rebuildCopperRegion 报错：', e.message);\n}\n\nconsole.log('rebuildRequested:', true);\nconsole.log('hasCopperRegion:', rebuilt);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "重建铺铜区域覆铜填充",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试图元重合",
+    "example.text.1": "2. 创建一个挂 GND 网络的覆铜边框（保留现场供观察）",
+    "example.text.2": "3. 重建覆铜填充（成功时返回生成的覆铜填充图元）",
+    "example.text.3": "当前版本在纯 API 创建的覆铜上重建会报内部错误，捕获后继续",
     "returns": "覆铜填充图元，如若未重建出覆铜填充图元则返回 `undefined`"
   },
   "title": "Rebuild the copper fill of the copper region",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "The copper fill primitive. If no copper fill primitive is rebuilt, `undefined` is returned"
 }

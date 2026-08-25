@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 建一个待改名的等长网络组\nawait eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_等长网络组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n\n// 2. 改名（用时间戳后缀避免与之前保留的现场重名，保留现场供观察）\nconst newName = '嘉立创示例_等长网络组_改_' + Date.now();\nconst result = await eda.pcb_Drc.modifyEqualLengthNetGroupName('嘉立创示例_等长网络组', newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_Drc.createEqualLengthNetGroup('嘉立创示例_等长网络组', [], { r: 0, g: 255, b: 0, alpha: 1 });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newName = '嘉立创示例_等长网络组_改_' + Date.now();\nconst result = await eda.pcb_Drc.modifyEqualLengthNetGroupName('嘉立创示例_等长网络组', newName);\n\nconsole.log('newName:', newName);\nconsole.log('result:', result);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改等长网络组的名称",
+    "example.text.0": "1. 建一个待改名的等长网络组",
+    "example.text.1": "2. 改名（用时间戳后缀避免与之前保留的现场重名，保留现场供观察）",
     "params.originalEqualLengthNetGroupName": "原等长网络组名称",
     "params.equalLengthNetGroupName": "新等长网络组名称",
     "returns": "操作是否成功"
   },
   "title": "Modify the name of the equal-length net group",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.originalEqualLengthNetGroupName": "Original equal-length net group name",
   "params.equalLengthNetGroupName": "New equal-length net group name",
   "returns": "Whether the operation is successful"

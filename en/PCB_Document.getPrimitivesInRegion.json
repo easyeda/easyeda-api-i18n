@@ -10,13 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 放两个测试焊盘：一个在 (500, 500)，一个在 (3000, 3000)\nconst padA = await eda.pcb_PrimitivePad.create(1, '1', 500, 500, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padB = await eda.pcb_PrimitivePad.create(1, '2', 3000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n\n// 3. 小区域 (0,1000,1000,0) 只盖住第一个焊盘\nconst small = await eda.pcb_Document.getPrimitivesInRegion(0, 1000, 1000, 0);\nconsole.log('smallRegionCount:', small.length);\n\n// 4. 大区域 (0,4000,4000,0) 盖住两个焊盘，完全框选模式\nconst big = await eda.pcb_Document.getPrimitivesInRegion(0, 4000, 4000, 0, true);\nconsole.log('bigRegionCount:', big.length);\n\n// 5. 清理测试图元和测试 PCB\nawait eda.pcb_PrimitivePad.delete([padA.getState_PrimitiveId(), padB.getState_PrimitiveId()]);\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const padA = await eda.pcb_PrimitivePad.create(1, '1', 500, 500, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\nconst padB = await eda.pcb_PrimitivePad.create(1, '2', 3000, 3000, 0, ['ELLIPSE', 60, 60], '', null, 0, 0, 0, false, 0);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const small = await eda.pcb_Document.getPrimitivesInRegion(0, 1000, 1000, 0);\nconsole.log('smallRegionCount:', small.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const big = await eda.pcb_Document.getPrimitivesInRegion(0, 4000, 4000, 0, true);\nconsole.log('bigRegionCount:', big.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitivePad.delete([padA.getState_PrimitiveId(), padB.getState_PrimitiveId()]);\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取区域内所有图元",
+    "example.text.0": "1. 创建测试 PCB 并打开",
+    "example.text.1": "2. 放两个测试焊盘：一个在 (500, 500)，一个在 (3000, 3000)",
+    "example.text.2": "3. 小区域 (0,1000,1000,0) 只盖住第一个焊盘",
+    "example.text.3": "4. 大区域 (0,4000,4000,0) 盖住两个焊盘，完全框选模式",
+    "example.text.4": "5. 清理测试图元和测试 PCB",
     "params.left": "矩形框第一 X 坐标",
     "params.right": "矩形框第二 X 坐标",
     "params.top": "矩形框第一 Y 坐标",
@@ -25,6 +75,11 @@
     "returns": "区域内所有图元"
   },
   "title": "Get All primitives in the region",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.left": "First X coordinate of the rectangle",
   "params.right": "Second X coordinate of the rectangle",
   "params.top": "First Y coordinate of the rectangle",

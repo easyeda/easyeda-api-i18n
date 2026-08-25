@@ -10,13 +10,33 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 按立创 C 编号精确搜索，每页 5 条\nconst results = await eda.lib_Device.searchByProperties(\n  { supplierId: 'C1523' },\n  undefined,\n  undefined,\n  undefined,\n  5,\n  1\n);\n\n// 2. 输出搜索结果\nconsole.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const results = await eda.lib_Device.searchByProperties(\n  { supplierId: 'C1523' },\n  undefined,\n  undefined,\n  undefined,\n  5,\n  1\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('count:', results.length);\nresults.forEach((item, i) => {\n  console.log('[' + i + '] name:', item.name, 'uuid:', item.uuid, 'supplierId:', item.supplierId);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "使用属性精确搜索器件",
+    "example.text.0": "1. 按立创 C 编号精确搜索，每页 5 条",
+    "example.text.1": "2. 输出搜索结果",
     "params.properties": "属性",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.classification": "分类，默认为全部 ADD since EDA v4",
@@ -26,6 +46,8 @@
     "returns": "搜索到的器件属性的列表"
   },
   "title": "Search devices precisely by properties",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.properties": "Property",
   "params.libraryUuid": "Library UUID, default is system library, you can use {@link LIB_LibrariesList} APIs in",
   "params.classification": "Classification, defaults to all ADD since EDA v4",

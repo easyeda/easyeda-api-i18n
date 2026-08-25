@@ -15,7 +15,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 先推送消息（此时还没有 Puller，消息排队保留）\neda.sys_MessageBus.push('嘉立创示例_推送', '先推后拉的消息');\n\n// 2. 再注册拉取回调，排队的消息立即交付\nconst task = eda.sys_MessageBus.pull('嘉立创示例_推送', (message) => {\n  console.log('拉到排队消息：', message);\n});\n\n// 3. 常规顺序演示：先注册再推送\nconst task2 = eda.sys_MessageBus.pull('嘉立创示例_推送', (message) => {\n  console.log('拉到实时消息：', message);\n});\neda.sys_MessageBus.push('嘉立创示例_推送', '先拉后推的消息');\n\n// 4. 取消任务，恢复原状\ntask.cancel();\ntask2.cancel();\nconsole.log('已取消拉取任务');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_MessageBus.push('嘉立创示例_推送', '先推后拉的消息');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const task = eda.sys_MessageBus.pull('嘉立创示例_推送', (message) => {\n  console.log('拉到排队消息：', message);\n});\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const task2 = eda.sys_MessageBus.pull('嘉立创示例_推送', (message) => {\n  console.log('拉到实时消息：', message);\n});\neda.sys_MessageBus.push('嘉立创示例_推送', '先拉后推的消息');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "task.cancel();\ntask2.cancel();\nconsole.log('已取消拉取任务');\n```"
         }
       ]
     }
@@ -23,11 +59,19 @@
   "_source": {
     "title": "私有消息总线：推消息",
     "remarks.text.0": "每个消息只有一个 Puller 可以收到",
+    "example.text.0": "1. 先推送消息（此时还没有 Puller，消息排队保留）",
+    "example.text.1": "2. 再注册拉取回调，排队的消息立即交付",
+    "example.text.2": "3. 常规顺序演示：先注册再推送",
+    "example.text.3": "4. 取消任务，恢复原状",
     "params.topic": "主题",
     "params.message": "消息"
   },
   "title": "Private message bus: push a message",
   "remarks.text.0": "Each message can only be received by one Puller",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.topic": "Theme",
   "params.message": "Message"
 }

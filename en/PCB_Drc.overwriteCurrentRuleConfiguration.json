@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取当前设计规则配置（返回 { config, name }，规则数据在 config 里）\nconst current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n\n// 2. 整体写回当前配置（原样写回演示覆写成功，实际使用时可先修改 config 中的字段）\nconst result = await eda.pcb_Drc.overwriteCurrentRuleConfiguration(current.config);\n\nconsole.log('configName:', current.name);\nconsole.log('result:', result);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const current = await eda.pcb_Drc.getCurrentRuleConfiguration();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const result = await eda.pcb_Drc.overwriteCurrentRuleConfiguration(current.config);\n\nconsole.log('configName:', current.name);\nconsole.log('result:', result);\n```"
         }
       ]
     }
@@ -23,11 +41,15 @@
   "_source": {
     "title": "覆写当前设计规则配置",
     "remarks.text.0": "将会覆写 PCB 当前的设计规则配置，请注意数据丢失风险",
+    "example.text.0": "1. 读取当前设计规则配置（返回 { config, name }，规则数据在 config 里）",
+    "example.text.1": "2. 整体写回当前配置（原样写回演示覆写成功，实际使用时可先修改 config 中的字段）",
     "params.ruleConfiguration": "设计规则配置",
     "returns": "覆写是否成功"
   },
   "title": "Overwrite current design rule configuration",
   "remarks.text.0": "It will overwrite the current design rule configuration of the PCB. Please note the risk of data loss",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.ruleConfiguration": "Design rule configuration",
   "returns": "Overwrite whether it is successful"
 }

@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 尝试获取所有参与的团队（当前版本会触发内部缺陷）\nlet teams;\ntry {\n  teams = await eda.dmt_Team.getAllInvolvedTeamInfo();\n} catch (e) {\n  console.log('说明：当前版本触发内部缺陷，改用 getAllTeamsInfo 替代：', e.message);\n\n  // 2. 替代方案：获取所有直接团队\n  teams = await eda.dmt_Team.getAllTeamsInfo();\n}\n\n// 3. 输出团队数量与每个团队的属性\nconsole.log('团队数量：', teams.length);\nteams.forEach((team, i) => {\n  console.log(`团队${i + 1}：`, team.name, 'uuid:', team.uuid);\n});\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "let teams;\ntry {\n  teams = await eda.dmt_Team.getAllInvolvedTeamInfo();\n} catch (e) {\n  console.log('说明：当前版本触发内部缺陷，改用 getAllTeamsInfo 替代：', e.message);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  teams = await eda.dmt_Team.getAllTeamsInfo();\n}\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('团队数量：', teams.length);\nteams.forEach((team, i) => {\n  console.log(`团队${i + 1}：`, team.name, 'uuid:', team.uuid);\n});\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有参与的团队的详细属性",
+    "example.text.0": "1. 尝试获取所有参与的团队（当前版本会触发内部缺陷）",
+    "example.text.1": "2. 替代方案：获取所有直接团队",
+    "example.text.2": "3. 输出团队数量与每个团队的属性",
     "returns": "所有参与的团队的详细属性"
   },
   "title": "Get the detailed properties of all involved teams",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Detailed properties of all involved teams"
 }

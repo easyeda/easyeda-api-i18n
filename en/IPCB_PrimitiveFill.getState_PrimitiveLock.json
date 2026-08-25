@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个未锁定的矩形填充\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n\n// 2. 读取锁定状态\nconst primitiveLock = fill.getState_PrimitiveLock();\n\n// 3. 清理测试图元（查询类案例不留测试对象）\nawait eda.pcb_PrimitiveFill.delete([fill.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', primitiveLock);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst fill = await eda.pcb_PrimitiveFill.create(1, polygon, '', 0, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveLock = fill.getState_PrimitiveLock();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveFill.delete([fill.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', primitiveLock);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：是否锁定",
+    "example.text.0": "1. 创建一个未锁定的矩形填充",
+    "example.text.1": "2. 读取锁定状态",
+    "example.text.2": "3. 清理测试图元（查询类案例不留测试对象）",
     "returns": "是否锁定"
   },
   "title": "Get the property state: whether it is locked",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether it is locked"
 }

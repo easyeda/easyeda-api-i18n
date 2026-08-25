@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 获取当前团队属性\nconst team = await eda.dmt_Team.getCurrentTeamInfo();\n\n// 2. 输出当前团队属性（uuid 常用作后续 DMT_Folder/Project API 的 teamUuid 参数）\nconsole.log('当前团队名称：', team?.name);\nconsole.log('当前团队 uuid：', team?.uuid);\nconsole.log('当前团队身份 ID：', team?.identity);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const team = await eda.dmt_Team.getCurrentTeamInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('当前团队名称：', team?.name);\nconsole.log('当前团队 uuid：', team?.uuid);\nconsole.log('当前团队身份 ID：', team?.identity);\n```"
         }
       ]
     }
@@ -23,9 +41,13 @@
   "_source": {
     "title": "获取当前团队的详细属性",
     "remarks.text.0": "将会获取当前打开且拥有最后输入焦点的原理图、PCB、面板所关联的工程的所属团队的详细属性",
+    "example.text.0": "1. 获取当前团队属性",
+    "example.text.1": "2. 输出当前团队属性（uuid 常用作后续 DMT_Folder/Project API 的 teamUuid 参数）",
     "returns": "团队的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get the detailed properties of the current team",
   "remarks.text.0": "It will get the detailed properties of the team that the project belongs to, associated with the currently open schematic, PCB, or panel that has the last input focus",
+  "example.text.0": null,
+  "example.text.1": null,
   "returns": "Detailed properties of the team. If it is `undefined`, the retrieval failed"
 }

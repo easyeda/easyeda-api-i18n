@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 取第一块板子的名称作为复制源\nconst boards = await eda.dmt_Board.getAllBoardsInfo();\nconst sourceName = boards[0].name;\n\n// 2. 复制板子，返回新板子名称\nconst newBoardName = await eda.dmt_Board.copyBoard(sourceName);\nconsole.log(\"source:\", sourceName);\nconsole.log(\"copy:\", newBoardName);\n\n// 3. 删除复制的板子，保持工程整洁\nconst deleted = await eda.dmt_Board.deleteBoard(newBoardName);\nconsole.log(\"deleted:\", deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boards = await eda.dmt_Board.getAllBoardsInfo();\nconst sourceName = boards[0].name;\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const newBoardName = await eda.dmt_Board.copyBoard(sourceName);\nconsole.log(\"source:\", sourceName);\nconsole.log(\"copy:\", newBoardName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Board.deleteBoard(newBoardName);\nconsole.log(\"deleted:\", deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "复制板子",
+    "example.text.0": "1. 取第一块板子的名称作为复制源",
+    "example.text.1": "2. 复制板子，返回新板子名称",
+    "example.text.2": "3. 删除复制的板子，保持工程整洁",
     "params.sourceBoardName": "源板子名称",
     "returns": "新板子名称，如若为 `undefined` 则复制失败"
   },
   "title": "Copy Board",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.sourceBoardName": "Source board name",
   "returns": "New board name, if it is `undefined` the copy fails"
 }

@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 切换当前工作层到底层（BOTTOM=2）\nconst selectResult = await eda.pcb_Layer.selectLayer(2);\n\n// 2. 再切回顶层（TOP=1），恢复常用工作层\nconst restoreResult = await eda.pcb_Layer.selectLayer(1);\n\nconsole.log('selectResult:', selectResult);\nconsole.log('restoreResult:', restoreResult);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const selectResult = await eda.pcb_Layer.selectLayer(2);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const restoreResult = await eda.pcb_Layer.selectLayer(1);\n\nconsole.log('selectResult:', selectResult);\nconsole.log('restoreResult:', restoreResult);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "选中图层",
+    "example.text.0": "1. 切换当前工作层到底层（BOTTOM=2）",
+    "example.text.1": "2. 再切回顶层（TOP=1），恢复常用工作层",
     "params.layer": "层",
     "returns": "操作是否成功，不存在指定层将返回 `false`"
   },
   "title": "Select a layer",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.layer": "Layer",
   "returns": "Whether the operation was successful. `false` is returned if the specified layer does not exist"
 }

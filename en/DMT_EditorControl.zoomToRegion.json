@@ -15,7 +15,25 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页，确定缩放的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 缩放到 (0,0)-(400,300) 的矩形区域\nconst zoomed = await eda.dmt_EditorControl.zoomToRegion(0, 400, 0, 300, tabId);\nconsole.log('zoomed:', zoomed);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const zoomed = await eda.dmt_EditorControl.zoomToRegion(0, 400, 0, 300, tabId);\nconsole.log('zoomed:', zoomed);\n```"
         }
       ]
     }
@@ -23,6 +41,8 @@
   "_source": {
     "title": "缩放到区域",
     "remarks.text.0": "在原理图、符号画布坐标单位跨度为 0.01inch，在 PCB、封装画布坐标单位跨度为 mil",
+    "example.text.0": "1. 打开一个原理图页，确定缩放的画布",
+    "example.text.1": "2. 缩放到 (0,0)-(400,300) 的矩形区域",
     "params.left": "矩形框第一 X 坐标",
     "params.right": "矩形框第二 X 坐标",
     "params.top": "矩形框第一 Y 坐标",
@@ -32,6 +52,8 @@
   },
   "title": "Zoom to region",
   "remarks.text.0": "In the schematic and symbol canvases, the coordinate unit span is 0.01inch; in the PCB and footprint canvases, it is mil",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.left": "First X coordinate of the rectangle",
   "params.right": "Second X coordinate of the rectangle",
   "params.top": "First Y coordinate of the rectangle",

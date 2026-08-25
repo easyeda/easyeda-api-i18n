@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试面板并打开（save 只对已打开的面板生效）\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(panelUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 保存面板文档\nconst saved = await eda.pnl_Document.save();\nconsole.log('saved:', saved);\n\n// 3. 删除本例创建的测试面板，保持工程整洁\nconst deleted = await eda.dmt_Panel.deletePanel(panelUuid);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(panelUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const saved = await eda.pnl_Document.save();\nconsole.log('saved:', saved);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Panel.deletePanel(panelUuid);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "保存文档",
+    "example.text.0": "1. 创建测试面板并打开（save 只对已打开的面板生效）",
+    "example.text.1": "2. 保存面板文档",
+    "example.text.2": "3. 删除本例创建的测试面板，保持工程整洁",
     "returns": "保存操作是否成功，保存失败、上传失败等错误均返回 `false`"
   },
   "title": "Save Document",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether the save operation was successful. Errors such as save failure and upload failure all return `false`"
 }

@@ -10,19 +10,63 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个顶层测试区域作为查找目标：规则 [2] 即禁止元件（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2], '嘉立创示例_ID查找目标');\nconst regionId = region.getState_PrimitiveId();\n\n// 2. 获取全部区域的图元 ID\nconst allIds = await eda.pcb_PrimitiveRegion.getAllPrimitiveId();\n\n// 3. 按层 + 规则类型过滤：只取顶层（1）禁止元件（[2]）区域的图元 ID\nconst filteredIds = await eda.pcb_PrimitiveRegion.getAllPrimitiveId(1, [2]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveRegion.delete([regionId]);\n\nconsole.log('total region ids:', allIds.length);\nconsole.log('filtered region ids:', filteredIds.length);\nconsole.log('marker id in filtered list:', filteredIds.includes(regionId));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst region = await eda.pcb_PrimitiveRegion.create(1, polygon, [2], '嘉立创示例_ID查找目标');\nconst regionId = region.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allIds = await eda.pcb_PrimitiveRegion.getAllPrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const filteredIds = await eda.pcb_PrimitiveRegion.getAllPrimitiveId(1, [2]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveRegion.delete([regionId]);\n\nconsole.log('total region ids:', allIds.length);\nconsole.log('filtered region ids:', filteredIds.length);\nconsole.log('marker id in filtered list:', filteredIds.includes(regionId));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取所有区域的图元 ID",
+    "example.text.0": "1. 创建一个顶层测试区域作为查找目标：规则 [2] 即禁止元件（随机坐标避免重合）",
+    "example.text.1": "2. 获取全部区域的图元 ID",
+    "example.text.2": "3. 按层 + 规则类型过滤：只取顶层（1）禁止元件（[2]）区域的图元 ID",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.layer": "层",
     "params.ruleType": "区域规则类型，只会匹配所有规则类型均一致的图元",
     "params.primitiveLock": "是否锁定",
     "returns": "区域的图元 ID 数组"
   },
   "title": "Get all Region primitive IDs",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.layer": "Layer",
   "params.ruleType": "Region rule type. Only primitives whose rule types are all consistent will be matched",
   "params.primitiveLock": "Whether it is locked",

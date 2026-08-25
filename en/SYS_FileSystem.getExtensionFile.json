@@ -10,17 +10,39 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 读取扩展安装目录下的 extension.json\nconst file = await eda.sys_FileSystem.getExtensionFile('extension.json');\n\n// 2. 输出文件信息（size 单位为字节，内容可用 file.text() 读取）\nconsole.log('文件名：', file.name);\nconsole.log('文件大小：', file.size);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const file = await eda.sys_FileSystem.getExtensionFile('extension.json');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('文件名：', file.name);\nconsole.log('文件大小：', file.size);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取扩展内的文件",
+    "example.text.0": "1. 读取扩展安装目录下的 extension.json",
+    "example.text.1": "2. 输出文件信息（size 单位为字节，内容可用 file.text() 读取）",
     "params.uri": "文件路径",
     "returns": "File 格式文件"
   },
   "title": "Get a file from the extension",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.uri": "File path",
   "returns": "File format file"
 }

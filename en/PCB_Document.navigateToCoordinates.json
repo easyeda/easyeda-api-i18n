@@ -23,7 +23,34 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试 PCB 并打开（视口操作作用于当前激活的 PCB）\nconst pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n\n// 2. 定位到数据坐标 (1000, 800)\nconst navigated = await eda.pcb_Document.navigateToCoordinates(1000, 800);\nconsole.log('navigated:', navigated);\n\n// 3. 清理测试 PCB\nawait eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\nawait eda.dmt_EditorControl.openDocument(pcbUuid);\nawait new Promise(r => setTimeout(r, 1000));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const navigated = await eda.pcb_Document.navigateToCoordinates(1000, 800);\nconsole.log('navigated:', navigated);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
         }
       ]
     }
@@ -33,6 +60,9 @@
     "remarks.text.0": "本接口在前端画布上定位到指定的数据层面坐标；",
     "remarks.text.1": "如果希望在进行本操作时前端画布坐标能与传入数据一致，\n建议调用 {@link PCB_Document.setCanvasOrigin} 方法并设置偏移量为零；",
     "remarks.text.2": "此处的单位为数据层面单位，在跨度上等同于画布层面的 mil",
+    "example.text.0": "1. 创建测试 PCB 并打开（视口操作作用于当前激活的 PCB）",
+    "example.text.1": "2. 定位到数据坐标 (1000, 800)",
+    "example.text.2": "3. 清理测试 PCB",
     "params.x": "坐标 X",
     "params.y": "坐标 Y",
     "returns": "操作是否成功"
@@ -41,6 +71,9 @@
   "remarks.text.0": "This API positions on the front-end canvas to the specified data-level coordinate;",
   "remarks.text.1": "If you want the front-end canvas coordinate to be consistent with the passed-in data during this operation,\nit is recommended to call the {@link PCB_Document.setCanvasOrigin} method and set the offset to zero;",
   "remarks.text.2": "The units here are data-level units, which are equivalent to mil on the canvas level in span",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.x": "X coordinate",
   "params.y": "Y coordinate",
   "returns": "Whether the operation is successful"

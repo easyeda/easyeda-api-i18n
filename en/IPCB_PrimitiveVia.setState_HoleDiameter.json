@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，放置一个孔径 20mil 的测试过孔\nconst x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_HoleDiameter();\n\n// 2. 异步模式下加大孔径并提交\nconst a = via.toAsync();\na.setState_HoleDiameter(28);\nawait a.done();\n\n// 3. 从画布重新读取，确认孔径已生效（保留现场供观察）\nconst ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('holeDiameter:', before, '→', ref.getState_HoleDiameter());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 3000 + Math.floor(Math.random() * 100000);\nconst via = await eda.pcb_PrimitiveVia.create('', x, 3000, 20, 40);\nconst before = via.getState_HoleDiameter();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const a = via.toAsync();\na.setState_HoleDiameter(28);\nawait a.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const ref = await eda.pcb_PrimitiveVia.get(via.getState_PrimitiveId());\n\nconsole.log('holeDiameter:', before, '→', ref.getState_HoleDiameter());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：孔径",
+    "example.text.0": "1. 生成本次运行专用的坐标，放置一个孔径 20mil 的测试过孔",
+    "example.text.1": "2. 异步模式下加大孔径并提交",
+    "example.text.2": "3. 从画布重新读取，确认孔径已生效（保留现场供观察）",
     "params.holeDiameter": "孔径",
     "returns": "过孔图元对象"
   },
   "title": "Set the property state: hole diameter",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.holeDiameter": "Hole diameter",
   "returns": "Via primitive object"
 }

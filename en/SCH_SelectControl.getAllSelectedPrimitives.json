@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建测试矩形并选中\nconst rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n\n// 2. 获取所有已选中图元的图元对象\nconst primitives = await eda.sch_SelectControl.getAllSelectedPrimitives();\nconsole.log('选中图元数量：', primitives.length);\n\n// 3. 图元对象可直接调用图元方法读取属性\nconst first = primitives[0];\nconsole.log('primitiveId:', first.getState_PrimitiveId());\nconsole.log('primitiveType:', first.getState_PrimitiveType());\n\n// 4. 清理：清除选中并删除测试图元\neda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const rect = await eda.sch_PrimitiveRectangle.create(400, 300, 200, 100);\nconst rectId = rect.getState_PrimitiveId();\nawait eda.sch_SelectControl.doSelectPrimitives([rectId]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitives = await eda.sch_SelectControl.getAllSelectedPrimitives();\nconsole.log('选中图元数量：', primitives.length);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const first = primitives[0];\nconsole.log('primitiveId:', first.getState_PrimitiveId());\nconsole.log('primitiveType:', first.getState_PrimitiveType());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sch_SelectControl.clearSelected();\nawait eda.sch_PrimitiveRectangle.delete([rectId]);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "查询所有已选中图元的图元对象",
+    "example.text.0": "1. 创建测试矩形并选中",
+    "example.text.1": "2. 获取所有已选中图元的图元对象",
+    "example.text.2": "3. 图元对象可直接调用图元方法读取属性",
+    "example.text.3": "4. 清理：清除选中并删除测试图元",
     "returns": "所有已选中图元的图元对象"
   },
   "title": "Query the primitive objects of all selected primitives",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Primitive objects of all selected primitives"
 }

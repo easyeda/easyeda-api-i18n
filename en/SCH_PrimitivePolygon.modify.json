@@ -10,18 +10,73 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建待修改的测试多边形：4 顶点矩形、红色边线、黄色填充（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\nconst polygon = await eda.sch_PrimitivePolygon.create(rect, '#FF0000', '#FFFF00', 6, 1);\nconst polygonId = polygon.getState_PrimitiveId();\n\n// 2. 记录修改前的线宽、颜色与填充色\nconst beforeWidth = polygon.getState_LineWidth();\nconst beforeColor = polygon.getState_Color();\nconst beforeFill = polygon.getState_FillColor();\n\n// 3. 批量修改：形状整体替换为 3 顶点三角形、线宽 6 → 10、边线改绿色、填充改无色\nconst triangle = [x, y, x + 400, y, x + 200, y + 350];\nawait eda.sch_PrimitivePolygon.modify(polygonId, { line: triangle, lineWidth: 10, color: '#00AA00', fillColor: 'none' });\n\n// 4. modify 返回后需要重新 get() 才能读到画布上的最新值\nconst refreshed = await eda.sch_PrimitivePolygon.get(polygonId);\n\n// 5. 修改类保留现场，供观察修改结果\nconsole.log('primitiveId:', polygonId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\nconsole.log('fillColor:', beforeFill, '→', refreshed.getState_FillColor());\nconsole.log('line:', JSON.stringify(rect), '→', JSON.stringify(refreshed.getState_Line()));\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst rect = [x, y, x + 400, y, x + 400, y + 300, x, y + 300];\nconst polygon = await eda.sch_PrimitivePolygon.create(rect, '#FF0000', '#FFFF00', 6, 1);\nconst polygonId = polygon.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const beforeWidth = polygon.getState_LineWidth();\nconst beforeColor = polygon.getState_Color();\nconst beforeFill = polygon.getState_FillColor();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const triangle = [x, y, x + 400, y, x + 200, y + 350];\nawait eda.sch_PrimitivePolygon.modify(polygonId, { line: triangle, lineWidth: 10, color: '#00AA00', fillColor: 'none' });\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refreshed = await eda.sch_PrimitivePolygon.get(polygonId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('primitiveId:', polygonId);\nconsole.log('lineWidth:', beforeWidth, '→', refreshed.getState_LineWidth());\nconsole.log('color:', beforeColor, '→', refreshed.getState_Color());\nconsole.log('fillColor:', beforeFill, '→', refreshed.getState_FillColor());\nconsole.log('line:', JSON.stringify(rect), '→', JSON.stringify(refreshed.getState_Line()));\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "修改多边形",
+    "example.text.0": "1. 创建待修改的测试多边形：4 顶点矩形、红色边线、黄色填充（随机坐标避免重合）",
+    "example.text.1": "2. 记录修改前的线宽、颜色与填充色",
+    "example.text.2": "3. 批量修改：形状整体替换为 3 顶点三角形、线宽 6 → 10、边线改绿色、填充改无色",
+    "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
+    "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",
     "params.property": "修改参数",
     "returns": "多边形图元对象"
   },
   "title": "Modify Polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveId": "Primitive ID",
   "params.property": "Modify Parameter",
   "returns": "Polygon primitive object"

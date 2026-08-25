@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n\n// 2. 创建一段测试圆弧，起点 (x, y)（SCH 坐标单位 10mil）\nconst arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y, null, null, 6, 1);\n\n// 3. 读取修改前的起点 Y\nconst before = arc.getState_StartY();\n\n// 4. 切换异步模式并将起点 Y 上移 60\nconst asyncArc = arc.toAsync();\nasyncArc.setState_StartY(y - 60);\nawait asyncArc.done();\n\n// 5. 从画布重新读取，确认修改已生效（保留现场供观察）\nconst refetched = await eda.sch_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('startY:', before, '→', refetched.getState_StartY());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arc = await eda.sch_PrimitiveArc.create(x, y, x + 100, y + 100, x + 200, y, null, null, 6, 1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const before = arc.getState_StartY();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const asyncArc = arc.toAsync();\nasyncArc.setState_StartY(y - 60);\nawait asyncArc.done();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const refetched = await eda.sch_PrimitiveArc.get(arc.getState_PrimitiveId());\n\nconsole.log('startY:', before, '→', refetched.getState_StartY());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "设置属性状态：起始点 Y",
+    "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试圆弧重合",
+    "example.text.1": "2. 创建一段测试圆弧，起点 (x, y)（SCH 坐标单位 10mil）",
+    "example.text.2": "3. 读取修改前的起点 Y",
+    "example.text.3": "4. 切换异步模式并将起点 Y 上移 60",
+    "example.text.4": "5. 从画布重新读取，确认修改已生效（保留现场供观察）",
     "params.startY": "起始点 Y",
     "returns": "圆弧图元对象"
   },
   "title": "Set the property state: start point Y",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.startY": "Start point Y",
   "returns": "Arc primitive object"
 }

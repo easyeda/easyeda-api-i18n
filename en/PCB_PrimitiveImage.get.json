@@ -10,17 +10,61 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建两个测试图像（随机坐标避免重合，轮廓用折线多边形）\nconst x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst cp = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image1 = await eda.pcb_PrimitiveImage.create(x, y, cp, 1, 400, 300, 0, false, false);\nconst image2 = await eda.pcb_PrimitiveImage.create(x, y + 1000, cp, 1, 400, 300, 0, false, false);\n\n// 2. 传单个 ID 字符串，返回单个图像对象\nconst single = await eda.pcb_PrimitiveImage.get(image1.getState_PrimitiveId());\n\n// 3. 传 ID 数组，返回图像对象数组\nconst arr = await eda.pcb_PrimitiveImage.get([\n  image1.getState_PrimitiveId(),\n  image2.getState_PrimitiveId()\n]);\n\n// 4. 清理测试图元（查询类需要清理）\nawait eda.pcb_PrimitiveImage.delete([\n  image1.getState_PrimitiveId(),\n  image2.getState_PrimitiveId()\n]);\n\nconsole.log('single layer:', single.getState_Layer());\nconsole.log('single width:', single.getState_Width());\nconsole.log('array length:', arr.length);\nconsole.log('image2 rotation:', arr[1].getState_Rotation());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst cp = eda.pcb_MathPolygon.createComplexPolygon([0, 0, 'L', 200, 0, 200, 150, 0, 150]);\nconst image1 = await eda.pcb_PrimitiveImage.create(x, y, cp, 1, 400, 300, 0, false, false);\nconst image2 = await eda.pcb_PrimitiveImage.create(x, y + 1000, cp, 1, 400, 300, 0, false, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.pcb_PrimitiveImage.get(image1.getState_PrimitiveId());\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.pcb_PrimitiveImage.get([\n  image1.getState_PrimitiveId(),\n  image2.getState_PrimitiveId()\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveImage.delete([\n  image1.getState_PrimitiveId(),\n  image2.getState_PrimitiveId()\n]);\n\nconsole.log('single layer:', single.getState_Layer());\nconsole.log('single width:', single.getState_Width());\nconsole.log('array length:', arr.length);\nconsole.log('image2 rotation:', arr[1].getState_Rotation());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取图像",
+    "example.text.0": "1. 创建两个测试图像（随机坐标避免重合，轮廓用折线多边形）",
+    "example.text.1": "2. 传单个 ID 字符串，返回单个图像对象",
+    "example.text.2": "3. 传 ID 数组，返回图像对象数组",
+    "example.text.3": "4. 清理测试图元（查询类需要清理）",
     "params.primitiveIds": "图像的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "图像图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Image",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": "Image primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Image primitive object, `undefined` indicates that the retrieval failed"
 }

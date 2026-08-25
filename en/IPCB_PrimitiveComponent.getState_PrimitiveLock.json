@@ -10,15 +10,48 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 放置一个测试器件\nconst devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n\n// 2. 读取锁定状态\nconst primitiveLock = comp.getState_PrimitiveLock();\n\n// 3. 清理测试器件\nawait eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', primitiveLock);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const devices = await eda.lib_Device.search('C0402');\nconst comp = await eda.pcb_PrimitiveComponent.create(devices[0], 1, 5000, 5000);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const primitiveLock = comp.getState_PrimitiveLock();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_PrimitiveComponent.delete([comp.getState_PrimitiveId()]);\n\nconsole.log('primitiveLock:', primitiveLock);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取属性状态：是否锁定",
+    "example.text.0": "1. 放置一个测试器件",
+    "example.text.1": "2. 读取锁定状态",
+    "example.text.2": "3. 清理测试器件",
     "returns": "是否锁定"
   },
   "title": "Get the property state: whether it is locked",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "returns": "Whether it is locked"
 }

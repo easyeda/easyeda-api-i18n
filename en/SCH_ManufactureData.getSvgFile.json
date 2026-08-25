@@ -1,0 +1,41 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.getSvgFile",
+    "kind": "method",
+    "name": "getSvgFile",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.183",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取 SVG 文件",
+    "remarks.text.0": "多图页时会导出为压缩包（zip）",
+    "remarks.text.1": "/ EDA v4.1.23",
+    "params.fileName": "文件名",
+    "returns": "SVG 文件数据（或压缩包）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.fileName": null,
+  "returns": null
+}

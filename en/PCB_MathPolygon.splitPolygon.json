@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 构建一个两块的复杂多边形（矩形外框 + 圆形）\nconst complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 1000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n\n// 2. 拆分为单多边形对象数组\nconst polygons = eda.pcb_MathPolygon.splitPolygon(complexPolygon);\n\n// 3. 逐个读取单多边形的源数据\npolygons.forEach((polygon, index) => {\n  console.log('polygon' + (index + 1) + ':', JSON.stringify(polygon.getSource()));\n});\nconsole.log('count:', polygons.length);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const complexPolygon = eda.pcb_MathPolygon.createComplexPolygon([\n  ['R', 1000, 1000, 500, 300, 0, 0],\n  ['CIRCLE', 3000, 1150, 100],\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const polygons = eda.pcb_MathPolygon.splitPolygon(complexPolygon);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "polygons.forEach((polygon, index) => {\n  console.log('polygon' + (index + 1) + ':', JSON.stringify(polygon.getSource()));\n});\nconsole.log('count:', polygons.length);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "拆分单多边形",
+    "example.text.0": "1. 构建一个两块的复杂多边形（矩形外框 + 圆形）",
+    "example.text.1": "2. 拆分为单多边形对象数组",
+    "example.text.2": "3. 逐个读取单多边形的源数据",
     "params.complexPolygons": "复杂多边形",
     "returns": "单多边形数组"
   },
   "title": "Split single polygon",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.complexPolygons": "Complex polygon",
   "returns": "Single polygon array"
 }

@@ -10,17 +10,50 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开一个原理图页，确定截图的画布\nconst pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n\n// 2. 获取该画布当前渲染区域的图像\nconst image = await eda.dmt_EditorControl.getCurrentRenderedAreaImage(tabId);\n\n// 3. 读取 Blob 的基本信息（字节数与 MIME 类型）\nconsole.log('isBlob:', image instanceof Blob);\nconsole.log('size:', image.size);\nconsole.log('mimeType:', image.type);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pages = await eda.dmt_Schematic.getAllSchematicPagesInfo();\nconst tabId = await eda.dmt_EditorControl.openDocument(pages[0].uuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const image = await eda.dmt_EditorControl.getCurrentRenderedAreaImage(tabId);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('isBlob:', image instanceof Blob);\nconsole.log('size:', image.size);\nconsole.log('mimeType:', image.type);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取画布渲染区域图像",
+    "example.text.0": "1. 打开一个原理图页，确定截图的画布",
+    "example.text.1": "2. 获取该画布当前渲染区域的图像",
+    "example.text.2": "3. 读取 Blob 的基本信息（字节数与 MIME 类型）",
     "params.tabId": "标签页 ID，如若未传入，则获取最后输入焦点的画布",
     "returns": "- 画布渲染区域的 Blob 格式图像数据"
   },
   "title": "Get the canvas rendering region image",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
   "params.tabId": "Tab ID. If not passed in, the canvas with the last input focus will be obtained",
   "returns": "- Blob-format image data of the canvas rendering region"
 }

@@ -35,7 +35,43 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 打开底部库面板，便于右击列表项观察菜单变化\neda.sys_PanelControl.openBottomPanel('library');\n\n// 2. 组合新的菜单项列表：内置项只传 id（保持原属性、原图标与快捷键），\n//    末尾追加扩展自定义菜单项（完整数据，含二级菜单与点击回调）\nconst menuItems = [\n  { id: 'refresh' },\n  null,\n  { id: 'editDevice' },\n  { id: 'easyEditDevice' },\n  { id: 'editSymbol' },\n  { id: 'linkSymbol' },\n  { id: 'editFootprint' },\n  { id: 'linkFootprint' },\n  { id: 'link3DModel' },\n  null,\n  { id: 'modifyCategory' },\n  null,\n  { id: 'libDelete' },\n  null,\n  { id: 'saveAs' },\n  { id: 'symbolSaveAs' },\n  { id: 'footprintSaveAs' },\n  { id: 'saveAsLocal' },\n  { id: 'model3DSaveAs' },\n  null,\n  { id: 'viewProductDetail' },\n  { id: 'viewDatasheet' },\n  null,\n  { id: 'addOrRemoveFavorite' },\n  { id: 'addIntoBasicLibrary' },\n  null,\n  {\n    id: '嘉立创示例_器件批量处理',\n    title: '器件批量处理',\n    menuItems: [\n      { id: '嘉立创示例_发送校验', title: '发送校验', registerFn: 'onDeviceCheck' },\n      { id: '嘉立创示例_导出BOM', title: '导出 BOM', registerFn: 'onDeviceExport' },\n    ],\n  },\n];\n\n// 3. 注册到个人器件列表的右键菜单（真实扩展在入口文件导出\n//    onDeviceCheck / onDeviceExport 两个方法即可收到点击回调）\nawait eda.sys_RightClickMenu.changeMenu('componentLidTableContextMenuIdMenu_device_personal', menuItems);\n\n// 4. 输出结果：在底部库面板右击个人器件列表的任意器件即可看到新菜单\nconsole.log('右键菜单已修改，菜单项数量：', menuItems.length);\nconsole.log('请在底部库面板右击个人器件列表的器件查看效果');\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "eda.sys_PanelControl.openBottomPanel('library');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const menuItems = [\n  { id: 'refresh' },\n  null,\n  { id: 'editDevice' },\n  { id: 'easyEditDevice' },\n  { id: 'editSymbol' },\n  { id: 'linkSymbol' },\n  { id: 'editFootprint' },\n  { id: 'linkFootprint' },\n  { id: 'link3DModel' },\n  null,\n  { id: 'modifyCategory' },\n  null,\n  { id: 'libDelete' },\n  null,\n  { id: 'saveAs' },\n  { id: 'symbolSaveAs' },\n  { id: 'footprintSaveAs' },\n  { id: 'saveAsLocal' },\n  { id: 'model3DSaveAs' },\n  null,\n  { id: 'viewProductDetail' },\n  { id: 'viewDatasheet' },\n  null,\n  { id: 'addOrRemoveFavorite' },\n  { id: 'addIntoBasicLibrary' },\n  null,\n  {\n    id: '嘉立创示例_器件批量处理',\n    title: '器件批量处理',\n    menuItems: [\n      { id: '嘉立创示例_发送校验', title: '发送校验', registerFn: 'onDeviceCheck' },\n      { id: '嘉立创示例_导出BOM', title: '导出 BOM', registerFn: 'onDeviceExport' },\n    ],\n  },\n];\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sys_RightClickMenu.changeMenu('componentLidTableContextMenuIdMenu_device_personal', menuItems);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('右键菜单已修改，菜单项数量：', menuItems.length);\nconsole.log('请在底部库面板右击个人器件列表的器件查看效果');\n```"
         }
       ]
     }
@@ -48,6 +84,10 @@
     "remarks.text.3": "本接口将会强制新建的右键菜单的 ID 包含扩展 UUID，例如输入的 `id = 'example'`，将会被自动重写为 `e143d88179874e7f851cc890cd22fc71|example`",
     "remarks.text.4": "注意：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
     "remarks.text.5": "非公开接口使用提醒：本接口按原样提供，不提供参数的额外文档，参数可能在任何版本出现破坏性更改并不另行通知",
+    "example.text.0": "1. 打开底部库面板，便于右击列表项观察菜单变化",
+    "example.text.1": "2. 组合新的菜单项列表：内置项只传 id（保持原属性、原图标与快捷键），\n末尾追加扩展自定义菜单项（完整数据，含二级菜单与点击回调）",
+    "example.text.2": "3. 注册到个人器件列表的右键菜单（真实扩展在入口文件导出\nonDeviceCheck / onDeviceExport 两个方法即可收到点击回调）",
+    "example.text.3": "4. 输出结果：在底部库面板右击个人器件列表的任意器件即可看到新菜单",
     "params.menuId": "菜单 ID",
     "params.menuItems": "菜单项，`null` 代表分隔符"
   },
@@ -58,6 +98,10 @@
   "remarks.text.3": "This API forces the ID of the newly created right-click menu to include the extension UUID. For example, an input `id = 'example'` will be automatically rewritten to `e143d88179874e7f851cc890cd22fc71|example`",
   "remarks.text.4": "Note: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
   "remarks.text.5": "Non-public API usage notice: This API is provided as-is without additional documentation for parameters. Parameters may be changed in a breaking manner in any version without notice.",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.menuId": "Menu ID",
   "params.menuItems": "Menu items. `null` represents a separator"
 }

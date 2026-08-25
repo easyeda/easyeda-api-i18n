@@ -10,17 +10,72 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n//    （当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）\nconst libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n\n// 1. 在符号画布上创建两个测试引脚（随机坐标避免重合）\nconst x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin1 = await eda.sch_PrimitivePin.create(x, y, '1', 'INA', 0, 10, null, 'None', 'IN');\nconst pin2 = await eda.sch_PrimitivePin.create(x, y + 200, '2', 'INB', 0, 10, null, 'None', 'OUT');\nconst id1 = pin1.getState_PrimitiveId();\nconst id2 = pin2.getState_PrimitiveId();\n\n// 2. 传单个 ID 字符串，返回单个引脚对象\nconst single = await eda.sch_PrimitivePin.get(id1);\n\n// 3. 传 ID 数组，返回引脚对象数组（任一 ID 未匹配不影响其它图元的返回）\nconst arr = await eda.sch_PrimitivePin.get([id1, id2]);\n\n// 4. 清理测试引脚（查询类需要清理）\nawait eda.sch_PrimitivePin.delete([id1, id2]);\n\nconsole.log('single pinNumber:', single.getState_PinNumber());\nconsole.log('array length:', arr.length);\nconsole.log('pin2 name:', arr[1].getState_PinName());\nconsole.log('pin2 type:', arr[1].getState_pinType());\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst found = await eda.lib_Symbol.search('', libUuid, [], undefined, 100, 1);\nconst hit = found.find(s => s.name === '嘉立创示例_Pin测试符号');\nconst symUuid = hit ? hit.uuid : await eda.lib_Symbol.create(libUuid, '嘉立创示例_Pin测试符号');\nawait eda.lib_Symbol.openInEditor(symUuid, libUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 8000);\nconst y = 2000 + Math.floor(Math.random() * 8000);\nconst pin1 = await eda.sch_PrimitivePin.create(x, y, '1', 'INA', 0, 10, null, 'None', 'IN');\nconst pin2 = await eda.sch_PrimitivePin.create(x, y + 200, '2', 'INB', 0, 10, null, 'None', 'OUT');\nconst id1 = pin1.getState_PrimitiveId();\nconst id2 = pin2.getState_PrimitiveId();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const single = await eda.sch_PrimitivePin.get(id1);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const arr = await eda.sch_PrimitivePin.get([id1, id2]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.4",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.sch_PrimitivePin.delete([id1, id2]);\n\nconsole.log('single pinNumber:', single.getState_PinNumber());\nconsole.log('array length:', arr.length);\nconsole.log('pin2 name:', arr[1].getState_PinName());\nconsole.log('pin2 type:', arr[1].getState_pinType());\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取引脚",
+    "example.text.0": "0. 引脚图元仅符号编辑器可用：优先复用测试符号，没有则新建后打开\n（当前版本非空关键字 search 会抛错，用空关键字列出后按名称过滤）",
+    "example.text.1": "1. 在符号画布上创建两个测试引脚（随机坐标避免重合）",
+    "example.text.2": "2. 传单个 ID 字符串，返回单个引脚对象",
+    "example.text.3": "3. 传 ID 数组，返回引脚对象数组（任一 ID 未匹配不影响其它图元的返回）",
+    "example.text.4": "4. 清理测试引脚（查询类需要清理）",
     "params.primitiveIds": "引脚的图元 ID，可以为字符串或字符串数组，如若为数组，则返回的也是数组",
     "returns": "引脚图元对象，`undefined` 表示获取失败"
   },
   "title": "Get Pin",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
+  "example.text.4": null,
   "params.primitiveIds": "Pin primitive ID, which can be a string or an array of strings. If it is an array, an array is also returned",
   "returns": "Pin primitive object, `undefined` indicates that the retrieval failed"
 }

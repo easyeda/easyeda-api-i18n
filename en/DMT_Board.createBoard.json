@@ -10,18 +10,40 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 无参调用，由系统自动创建一对原理图/PCB 文档并关联\nconst boardName = await eda.dmt_Board.createBoard();\nconsole.log('create:', boardName);\n\n// 2. 删除新板子（其关联文档是本例新建的，删除不影响其他板子），保持工程整洁\nconst deleted = await eda.dmt_Board.deleteBoard(boardName);\nconsole.log('deleted:', deleted);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const boardName = await eda.dmt_Board.createBoard();\nconsole.log('create:', boardName);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const deleted = await eda.dmt_Board.deleteBoard(boardName);\nconsole.log('deleted:', deleted);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "创建板子",
+    "example.text.0": "1. 无参调用，由系统自动创建一对原理图/PCB 文档并关联",
+    "example.text.1": "2. 删除新板子（其关联文档是本例新建的，删除不影响其他板子），保持工程整洁",
     "params.schematicUuid": "关联原理图 UUID",
     "params.pcbUuid": "关联 PCB UUID",
     "returns": "板子名称，如若为 `undefined` 则创建失败"
   },
   "title": "Create Board",
+  "example.text.0": null,
+  "example.text.1": null,
   "params.schematicUuid": "Associated schematic UUID",
   "params.pcbUuid": "Associated PCB UUID",
   "returns": "Board name, if it is `undefined` creation fails"

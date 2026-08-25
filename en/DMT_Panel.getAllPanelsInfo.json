@@ -10,15 +10,59 @@
       "example": [
         {
           "type": "code",
-          "content": "```javascript\n// 1. 创建一个测试面板并等 1.5s 同步，保证列表里有新近创建的对象\nconst panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\n\n// 2. 获取所有面板的详细属性\nconst panels = await eda.dmt_Panel.getAllPanelsInfo();\n\n// 3. 输出每个面板的名称与 UUID，确认测试面板在列\npanels.forEach((p, i) => {\n  console.log(`panel[${i}]:`, p.name, p.uuid);\n});\nconsole.log('total:', panels.length);\nconsole.log('test panel included:', panels.some(p => p.uuid === panelUuid));\n\n// 4. 清理测试面板（查询类案例不留测试对象）\nawait eda.dmt_Panel.deletePanel(panelUuid);\n```"
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panelUuid = await eda.dmt_Panel.createPanel();\nawait new Promise(r => setTimeout(r, 1500));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const panels = await eda.dmt_Panel.getAllPanelsInfo();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "panels.forEach((p, i) => {\n  console.log(`panel[${i}]:`, p.name, p.uuid);\n});\nconsole.log('total:', panels.length);\nconsole.log('test panel included:', panels.some(p => p.uuid === panelUuid));\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.dmt_Panel.deletePanel(panelUuid);\n```"
         }
       ]
     }
   },
   "_source": {
     "title": "获取工程内所有面板的详细属性",
+    "example.text.0": "1. 创建一个测试面板并等 1.5s 同步，保证列表里有新近创建的对象",
+    "example.text.1": "2. 获取所有面板的详细属性",
+    "example.text.2": "3. 输出每个面板的名称与 UUID，确认测试面板在列",
+    "example.text.3": "4. 清理测试面板（查询类案例不留测试对象）",
     "returns": "所有面板的详细属性的数组"
   },
   "title": "Get all in the project panel detailed properties of",
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "returns": "Array of detailed properties of all panels"
 }
