@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "id": "SelectionConfig",
+    "kind": "interface",
+    "name": "SelectionConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "选择配置",
+    "properties.type": "选择模式： - single：单击单选一行 - multiple：单击 + Ctrl/Shift 多选 - checkbox：勾选框列（勾选仅通过 checkbox，行点击不改变勾选）",
+    "properties.selectedKeys": "受控：外部维护的选中行 key 列表",
+    "properties.defaultSelectedKeys": "非受控：初始选中行 key 列表",
+    "properties.selectOnRowClick": "单击行时是否触发选中（type=single 时默认 true）",
+    "properties.ctrlSelect": "是否支持 Ctrl 多选，默认 true",
+    "properties.shiftSelect": "是否支持 Shift 范围选，默认 true",
+    "properties.rangeSelect": "是否启用 Ctrl/Shift 范围选择，默认 false（type=multiple 时可开启）",
+    "properties.disabledSelectKeys": "不可选的行 key 列表",
+    "properties.disabledCheckboxKeys": "禁用勾选框的行 key 列表",
+    "properties.checkboxColumnWidth": "勾选框列宽度，默认 30",
+    "properties.align": "勾选框列对齐，默认 'left'"
+  },
+  "title": null,
+  "properties.type": null,
+  "properties.selectedKeys": null,
+  "properties.defaultSelectedKeys": null,
+  "properties.selectOnRowClick": null,
+  "properties.ctrlSelect": null,
+  "properties.shiftSelect": null,
+  "properties.rangeSelect": null,
+  "properties.disabledSelectKeys": null,
+  "properties.disabledCheckboxKeys": null,
+  "properties.checkboxColumnWidth": null,
+  "properties.align": null
+}

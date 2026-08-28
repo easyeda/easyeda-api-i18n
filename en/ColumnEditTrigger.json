@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ColumnEditTrigger",
+    "kind": "interface",
+    "name": "ColumnEditTrigger",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "编辑触发方式"
+  },
+  "title": null
+}

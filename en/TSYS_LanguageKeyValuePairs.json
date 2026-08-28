@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "id": "ISYS_LanguageKeyValuePairs",
+    "id": "TSYS_LanguageKeyValuePairs",
     "kind": "type",
-    "name": "ISYS_LanguageKeyValuePairs",
+    "name": "TSYS_LanguageKeyValuePairs",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
       "remarks": [
@@ -18,6 +18,6 @@
     "title": "语言数据键值对",
     "remarks.text.0": "单一语言的数据"
   },
-  "title": "Language data key value for",
-  "remarks.text.0": "Data of a single language"
+  "title": null,
+  "remarks.text.0": null
 }

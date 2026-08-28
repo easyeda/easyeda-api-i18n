@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "Align",
+    "kind": "type",
+    "name": "Align",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "对齐方式"
+  },
+  "title": null
+}

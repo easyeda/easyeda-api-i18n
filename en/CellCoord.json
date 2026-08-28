@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "CellCoord",
+    "kind": "interface",
+    "name": "CellCoord",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单元格坐标（rowKey + colKey 定位一个单元格）",
+    "properties.rowKey": "行唯一标识（由 rowKey 提取）",
+    "properties.colKey": "列 key（ColumnDef.key）"
+  },
+  "title": null,
+  "properties.rowKey": null,
+  "properties.colKey": null
+}

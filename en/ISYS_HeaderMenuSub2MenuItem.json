@@ -10,11 +10,13 @@
     "properties.id": "菜单项 ID，不可重复",
     "properties.title": "菜单项标题",
     "properties.icon": "菜单项图标",
-    "properties.registerFn": "注册方法名称（需要在扩展入口文件导出该方法）"
+    "properties.registerFn": "注册方法名称（需要在扩展入口文件导出该方法）",
+    "properties.shortcutKey": "局部快捷键"
   },
   "title": "Top-level tertiary menu item",
   "properties.id": "Menu item ID, cannot be repeated",
   "properties.title": "Menu item title",
   "properties.icon": "Menu item icon",
-  "properties.registerFn": "Registration method name (the method needs to be exported in the extension entry file)"
+  "properties.registerFn": "Registration method name (the method needs to be exported in the extension entry file)",
+  "properties.shortcutKey": null
 }

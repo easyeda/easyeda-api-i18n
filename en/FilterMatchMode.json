@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "FilterMatchMode",
+    "kind": "type",
+    "name": "FilterMatchMode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "筛选匹配模式"
+  },
+  "title": null
+}

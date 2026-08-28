@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "SortingConfig",
+    "kind": "interface",
+    "name": "SortingConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "排序配置",
+    "properties.multiple": "是否支持多列排序，默认 false",
+    "properties.remote": "远端排序：true 时仅触发 onChange，不本地排序，默认 false",
+    "properties.state": "受控：外部维护的排序状态",
+    "properties.defaultState": "非受控：初始排序状态"
+  },
+  "title": null,
+  "properties.multiple": null,
+  "properties.remote": null,
+  "properties.state": null,
+  "properties.defaultState": null
+}

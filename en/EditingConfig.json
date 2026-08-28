@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "EditingConfig",
+    "kind": "interface",
+    "name": "EditingConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "编辑配置",
+    "properties.trigger": "进入编辑态的触发方式，默认 'doubleClick'",
+    "properties.editingRowIndices": "受控：正在编辑的行索引",
+    "properties.columns": "列级编辑器配置（key 为 colKey，未配置的列按 ColumnType 推断默认编辑器）"
+  },
+  "title": null,
+  "properties.trigger": null,
+  "properties.editingRowIndices": null,
+  "properties.columns": null
+}

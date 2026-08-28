@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "KeyboardConfig",
+    "kind": "interface",
+    "name": "KeyboardConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "键盘导航配置",
+    "properties.useExcelDefaults": "是否启用 Excel 默认快捷键（↑↓/Home/End/Enter/F2/Ctrl+A/Escape 等），默认 true"
+  },
+  "title": null,
+  "properties.useExcelDefaults": null
+}

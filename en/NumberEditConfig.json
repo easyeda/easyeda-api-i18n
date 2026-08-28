@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "NumberEditConfig",
+    "kind": "interface",
+    "name": "NumberEditConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "properties.step": "步长，默认 1",
+    "properties.precision": "小数精度位数"
+  },
+  "properties.step": null,
+  "properties.precision": null
+}

@@ -6,7 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "组件名 → Props 类型映射 作为 createComponent 泛型约束的唯一来源"
+    "title": "组件名 → Props 类型映射 作为 createComponent 泛型约束的唯一来源 新增组件：在此加一行（其余环节自动从本映射派生）"
   },
   "title": "Component name → Props type mapping, serving as the sole source of the `createComponent` generic constraint"
 }

@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "FixedColumnConfig",
+    "kind": "interface",
+    "name": "FixedColumnConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "固定列配置（也可通过 ColumnDef.fixed 逐列声明）",
+    "properties.left": "左侧固定列数",
+    "properties.right": "右侧固定列数"
+  },
+  "title": null,
+  "properties.left": null,
+  "properties.right": null
+}

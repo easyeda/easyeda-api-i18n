@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "FilteringConfig",
+    "kind": "interface",
+    "name": "FilteringConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "筛选配置",
+    "properties.position": "筛选位置：popover 弹窗 / inline 表头内联行，默认 'popover'",
+    "properties.filters": "受控：外部维护的筛选值（key 为 colKey）",
+    "properties.defaultFilters": "非受控：初始筛选值",
+    "properties.debounce": "输入防抖毫秒数，默认 300",
+    "properties.caseSensitive": "是否区分大小写，默认 false",
+    "properties.placeholder": "筛选输入框占位符，默认 '筛选...'"
+  },
+  "title": null,
+  "properties.position": null,
+  "properties.filters": null,
+  "properties.defaultFilters": null,
+  "properties.debounce": null,
+  "properties.caseSensitive": null,
+  "properties.placeholder": null
+}

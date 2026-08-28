@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TextareaEditConfig",
+    "kind": "interface",
+    "name": "TextareaEditConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "properties.rows": "行数，默认 3"
+  },
+  "properties.rows": null
+}

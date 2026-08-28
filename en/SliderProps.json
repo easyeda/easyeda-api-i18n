@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "SliderProps",
+    "kind": "interface",
+    "name": "SliderProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "滑杆组件：基于浏览器原生 range 输入",
+    "properties.value": "当前值（受控）",
+    "properties.min": "最小值（默认 0）",
+    "properties.max": "最大值（默认 1）"
+  },
+  "title": null,
+  "properties.value": null,
+  "properties.min": null,
+  "properties.max": null
+}

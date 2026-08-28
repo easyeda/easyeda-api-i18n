@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "BorderConfig",
+    "kind": "interface",
+    "name": "BorderConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "边框配置"
+  },
+  "title": null
+}

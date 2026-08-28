@@ -53,12 +53,12 @@
   },
   "_source": {
     "title": "新增事件监听",
-    "example.text.0": "1. 注册 focus 监听（真实场景由用户切换窗口焦点触发，这里用合成事件模拟）",
-    "example.text.1": "2. 检查返回的可移除对象，其中的 type 字段记录了监听的事件类型",
-    "example.text.2": "3. 模拟一次获得焦点事件，回调同步触发",
-    "example.text.3": "4. 注销监听，恢复原状",
-    "params.type": "事件类型，当前支持 `blur` `focus`",
-    "params.listener": "事件监听回调",
+    "example.text.0": "示例 1：注册 focus 监听（真实场景由用户切换窗口焦点触发，这里用合成事件模拟）",
+    "example.text.1": "检查返回的可移除对象，其中的 type 字段记录了监听的事件类型",
+    "example.text.2": "模拟一次获得焦点事件，回调同步触发",
+    "example.text.3": "注销监听，恢复原状",
+    "params.type": "事件类型，当前支持 `blur` `focus` `drop`",
+    "params.listener": "事件监听回调，当 `type` 为 `drop` 时，`ev` 包含 `files` 字段（`File[]` 类型）",
     "params.options": "可选参数",
     "returns": "事件监听方法，用于移除事件监听，如若为 `undefined` 则表示创建事件监听失败"
   },

@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "ClipboardConfig",
+    "kind": "interface",
+    "name": "ClipboardConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "剪贴板配置",
+    "properties.shortcuts": "自定义快捷键"
+  },
+  "title": null,
+  "properties.shortcuts": null
+}

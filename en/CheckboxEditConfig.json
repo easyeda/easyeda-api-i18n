@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "CheckboxEditConfig",
+    "kind": "interface",
+    "name": "CheckboxEditConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "properties.checkedValue": "勾选时的值，默认 true",
+    "properties.uncheckedValue": "未勾选时的值，默认 false"
+  },
+  "properties.checkedValue": null,
+  "properties.uncheckedValue": null
+}

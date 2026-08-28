@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "CellClickInfo",
+    "kind": "interface",
+    "name": "CellClickInfo",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "单元格点击信息",
+    "properties.row": "行数据",
+    "properties.rowIndex": "行索引",
+    "properties.colKey": "列 key",
+    "properties.value": "单元格值"
+  },
+  "title": null,
+  "properties.row": null,
+  "properties.rowIndex": null,
+  "properties.colKey": null,
+  "properties.value": null
+}

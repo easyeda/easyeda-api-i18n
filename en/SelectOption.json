@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "SelectOption",
+    "kind": "interface",
+    "name": "SelectOption",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "下拉选项",
+    "properties.text": "显示文本",
+    "properties.value": "选项值",
+    "properties.color": "选项颜色（如状态色标）",
+    "properties.disabled": "是否禁用该选项"
+  },
+  "title": null,
+  "properties.text": null,
+  "properties.value": null,
+  "properties.color": null,
+  "properties.disabled": null
+}

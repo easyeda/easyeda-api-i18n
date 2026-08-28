@@ -10,6 +10,10 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
         }
       ],
       "example": [
@@ -33,7 +37,7 @@
         },
         {
           "type": "code",
-          "content": "const gerberFile = await eda.pcb_ManufactureData.getGerberFile(\n    'MyBoard_Gerber',\n    false,\n    ESYS_Unit.MILLIMETER,\n    { integerNumber: 2, decimalNumber: 6 }\n);\nif (gerberFile) {\n    await eda.sys_FileSystem.saveFile(gerberFile,'Gerber.zip');\n}\n"
+          "content": "const gerberFile = await eda.pcb_ManufactureData.getGerberFile(\n    'MyBoard_Gerber',\n    false,\n    ESYS_Unit.MILLIMETER,\n    { integerNumber: 4, decimalNumber: 6 }\n);\nif (gerberFile) {\n    await eda.sys_FileSystem.saveFile(gerberFile,'Gerber.zip');\n}\n"
         },
         {
           "type": "text",
@@ -50,20 +54,22 @@
   "_source": {
     "title": "获取 PCB 制版文件（Gerber）",
     "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.1": "默认参数与编辑器「导出 PCB 制版文件」弹窗的 **一键导出** 选项保持一致（单位 `MM`、数字格式 `4:5`、导出板内真实使用的层及钻孔图层等）",
     "example.text.0": "导出默认的 Gerber 文件",
     "example.text.1": "导出并保存到本地",
     "example.text.2": "自定义导出层和对象",
     "params.fileName": "文件名",
     "params.colorSilkscreen": "是否生成彩色丝印制造文件（嘉立创专用文件）",
     "params.unit": "单位",
-    "params.digitalFormat": "数字格式",
+    "params.digitalFormat": "数字格式，默认 `4:5`；使用英制（`ESYS_Unit.INCH`）时建议 `3:6`",
     "params.other": "其它",
-    "params.layers": "导出层，默认则按照嘉立创生产需求导出",
+    "params.layers": "导出层，默认则与编辑器一键导出一致（板内真实使用的层 + 钻孔图层）",
     "params.objects": "导出对象，默认则按照嘉立创生产需求导出",
     "returns": "PCB 制版文件数据"
   },
   "title": "Get the PCB fabrication file (Gerber)",
   "remarks.text.0": "You can use {@link SYS_FileSystem.saveFile} API export the file to the local file system",
+  "remarks.text.1": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "InputEditConfig",
+    "kind": "interface",
+    "name": "InputEditConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "properties.inputType": "原生 input 类型，默认 'text'"
+  },
+  "properties.inputType": null
+}

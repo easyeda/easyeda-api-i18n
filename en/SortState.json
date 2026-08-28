@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "SortState",
+    "kind": "interface",
+    "name": "SortState",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "排序状态",
+    "properties.columnKey": "参与排序的列 key",
+    "properties.order": "排序方向"
+  },
+  "title": null,
+  "properties.columnKey": null,
+  "properties.order": null
+}

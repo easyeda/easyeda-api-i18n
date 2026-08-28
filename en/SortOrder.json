@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "SortOrder",
+    "kind": "type",
+    "name": "SortOrder",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "排序方向"
+  },
+  "title": null
+}

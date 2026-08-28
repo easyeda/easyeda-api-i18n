@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "SelectEditConfig",
+    "kind": "interface",
+    "name": "SelectEditConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "properties.options": "下拉选项",
+    "properties.searchable": "是否可搜索过滤",
+    "properties.multiple": "是否多选"
+  },
+  "properties.options": null,
+  "properties.searchable": null,
+  "properties.multiple": null
+}

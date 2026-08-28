@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "ColumnGroupDef",
+    "kind": "interface",
+    "name": "ColumnGroupDef",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "列分组：多级表头",
+    "properties.key": "分组标识（表头渲染用）",
+    "properties.title": "分组标题",
+    "properties.align": "分组对齐（子列未指定时继承）",
+    "properties.fixed": "分组固定列位置（子列未指定时继承）",
+    "properties.children": "子列"
+  },
+  "title": null,
+  "properties.key": null,
+  "properties.title": null,
+  "properties.align": null,
+  "properties.fixed": null,
+  "properties.children": null
+}

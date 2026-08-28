@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "CustomHeaderConfig",
+    "kind": "interface",
+    "name": "CustomHeaderConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "自定义表头配置（列可见性管理）",
+    "properties.availableColumns": "全部可选列（含隐藏列）",
+    "properties.visibleKeys": "当前可见列 key 列表",
+    "properties.persist": "是否持久化，默认 true",
+    "properties.storageKey": "持久化存储 key"
+  },
+  "title": null,
+  "properties.availableColumns": null,
+  "properties.visibleKeys": null,
+  "properties.persist": null,
+  "properties.storageKey": null
+}

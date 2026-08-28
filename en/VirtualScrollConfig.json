@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "VirtualScrollConfig",
+    "kind": "interface",
+    "name": "VirtualScrollConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "虚拟滚动配置",
+    "properties.overscan": "预渲染行数（上下各），默认 10",
+    "properties.scrollEndThreshold": "触发 onScrollToEnd 的距底阈值，默认 200"
+  },
+  "title": null,
+  "properties.overscan": null,
+  "properties.scrollEndThreshold": null
+}

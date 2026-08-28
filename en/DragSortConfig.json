@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "DragSortConfig",
+    "kind": "interface",
+    "name": "DragSortConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "拖拽排序配置",
+    "properties.handle": "拖拽手柄形式：独立拖拽列 / 整行拖拽，默认 'drag-column'",
+    "properties.showDragIcon": "是否显示拖拽图标，默认 true"
+  },
+  "title": null,
+  "properties.handle": null,
+  "properties.showDragIcon": null
+}

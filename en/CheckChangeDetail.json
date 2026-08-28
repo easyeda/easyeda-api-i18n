@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "CheckChangeDetail",
+    "kind": "interface",
+    "name": "CheckChangeDetail",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "勾选变更详情",
+    "properties.trigger": "变更来源",
+    "properties.row": "相关行数据"
+  },
+  "title": null,
+  "properties.trigger": null,
+  "properties.row": null
+}

@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "ColumnResizeConfig",
+    "kind": "interface",
+    "name": "ColumnResizeConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "列宽拖拽配置",
+    "properties.minWidth": "最小列宽（px），默认 25",
+    "properties.persist": "是否持久化列宽到 localStorage，默认 true",
+    "properties.storageKey": "持久化存储 key"
+  },
+  "title": null,
+  "properties.minWidth": null,
+  "properties.persist": null,
+  "properties.storageKey": null
+}

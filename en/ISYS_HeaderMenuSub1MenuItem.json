@@ -9,8 +9,9 @@
     "title": "顶部二级菜单项",
     "properties.id": "菜单项 ID，不可重复",
     "properties.title": "菜单项标题",
-    "properties.icon": "菜单项图标",
+    "properties.icon": "菜单项图标，SVG 数据",
     "properties.registerFn": "注册方法名称（需要在扩展入口文件导出该方法）",
+    "properties.shortcutKey": "局部快捷键",
     "properties.menuItems": "子菜单项"
   },
   "title": "Top-level secondary menu item",
@@ -18,5 +19,6 @@
   "properties.title": "Menu item title",
   "properties.icon": "Menu item icon",
   "properties.registerFn": "Registration method name (the method needs to be exported in the extension entry file)",
+  "properties.shortcutKey": null,
   "properties.menuItems": "Sub-menu item"
 }

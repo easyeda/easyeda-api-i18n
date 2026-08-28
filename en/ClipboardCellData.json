@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "ClipboardCellData",
+    "kind": "interface",
+    "name": "ClipboardCellData",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "剪贴板单元格数据",
+    "properties.contentType": "内容类型",
+    "properties.subType": "子类型（预留）",
+    "properties.value": "原始值",
+    "properties.text": "纯文本表示"
+  },
+  "title": null,
+  "properties.contentType": null,
+  "properties.subType": null,
+  "properties.value": null,
+  "properties.text": null
+}

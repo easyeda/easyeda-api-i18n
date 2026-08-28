@@ -10,11 +10,13 @@
     "properties.text": "按钮显示文本",
     "properties.disabled": "是否禁用",
     "properties.type": "按钮样式类型：default 默认 / primary 主按钮 / danger 危险 / forbidden 禁用态 / text 纯文本",
-    "properties.icon": "按钮图标配置"
+    "properties.icon": "按钮图标配置",
+    "properties.triggerEnter": "是否为对话框的 Enter 触发按钮（仅 Dialog 内部生效，按 Enter 会触发该按钮点击）"
   },
   "title": "Button component: a clickable operation button",
   "properties.text": "Button show text",
   "properties.disabled": "Whether Disable",
   "properties.type": "Button style type: default / primary / danger / forbidden / text",
-  "properties.icon": "Button icon configuration"
+  "properties.icon": "Button icon configuration",
+  "properties.triggerEnter": null
 }
