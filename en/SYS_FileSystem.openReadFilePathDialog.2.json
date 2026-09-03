@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "SYS_FileSystem.openReadFilePathDialog.2",
+    "kind": "method",
+    "name": "openReadFilePathDialog",
+    "className": "SYS_FileSystem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "打开读取文件路径窗口",
+    "remarks.text.0": "注意：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`",
+    "params.filenameExtensions": "文件扩展名",
+    "params.multiFiles": "是否允许读取多文件",
+    "returns": "文件路径"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.filenameExtensions": null,
+  "params.multiFiles": null,
+  "returns": null
+}

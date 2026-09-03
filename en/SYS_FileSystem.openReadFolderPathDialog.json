@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "SYS_FileSystem.openReadFolderPathDialog",
+    "kind": "method",
+    "name": "openReadFolderPathDialog",
+    "className": "SYS_FileSystem",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "打开读取目录路径窗口",
+    "remarks.text.0": "注意：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`",
+    "returns": "目录路径"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

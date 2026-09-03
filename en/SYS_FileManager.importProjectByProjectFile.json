@@ -21,7 +21,8 @@
     "params.projectFile": "工程文件",
     "params.fileType": "文件类型",
     "params.props": "导入参数，参考 EDA 前端 **导入** 窗口内的配置项",
-    "params.saveTo": "保存到工程参数",
+    "params.saveTo": "保存到工程参数，`Offline Client Local Path` 仅离线客户端可用",
+    "params.librariesImportSetting": "库导入配置",
     "returns": "导入的工程的简略工程属性"
   },
   "title": "Use project file import project",
@@ -30,5 +31,6 @@
   "params.fileType": "File type",
   "params.props": "Import parameters. Refer to the configuration items in the **Import** window of the EDA front end",
   "params.saveTo": "Save To project parameter",
+  "params.librariesImportSetting": null,
   "returns": "Brief project properties of the imported project"
 }
