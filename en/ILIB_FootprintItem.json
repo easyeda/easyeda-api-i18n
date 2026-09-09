@@ -12,7 +12,8 @@
     "properties.libraryUuid": "所属库 UUID",
     "properties.name": "封装名称",
     "properties.classification": "分类",
-    "properties.description": "描述"
+    "properties.description": "描述",
+    "properties.otherProperty": "其它属性"
   },
   "title": "Footprint property",
   "properties.libraryType": "Library type",
@@ -20,5 +21,6 @@
   "properties.libraryUuid": "UUID of the library it belongs to",
   "properties.name": "Footprint name",
   "properties.classification": "Classification",
-  "properties.description": "Description"
+  "properties.description": "Description",
+  "properties.otherProperty": null
 }

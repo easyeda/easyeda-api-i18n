@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "ISYS_HelpClassSummary",
+    "kind": "interface",
+    "name": "ISYS_HelpClassSummary",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "由 help 查询返回的类摘要",
+    "properties.title": "类标题",
+    "properties.remarks": "类说明",
+    "properties.methods": "方法名列表",
+    "properties.titles": "各接口标题（external 场景，键为接口名）"
+  },
+  "title": null,
+  "properties.title": null,
+  "properties.remarks": null,
+  "properties.methods": null,
+  "properties.titles": null
+}

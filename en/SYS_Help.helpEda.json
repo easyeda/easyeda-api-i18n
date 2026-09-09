@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SYS_Help.helpEda",
+    "kind": "method",
+    "name": "helpEda",
+    "className": "SYS_Help",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "查询 eda 静态 API"
+  },
+  "title": null
+}

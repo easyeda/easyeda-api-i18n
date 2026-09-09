@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "id": "ISYS_ExternalApiRegistration",
+    "kind": "interface",
+    "name": "ISYS_ExternalApiRegistration",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "扩展注入的上层接口注册条目",
+    "remarks.text.0": "存储在 gVars.extensionRegisteredExternalApis 与 gVars.extensionExternalApiIndex 中",
+    "properties.extensionUuid": "注册该接口的扩展 UUID",
+    "properties.priority": "注册顺序，越小越优先（最早注册优先）",
+    "properties.help": "Help 元数据（可选）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.extensionUuid": null,
+  "properties.priority": null,
+  "properties.help": null
+}

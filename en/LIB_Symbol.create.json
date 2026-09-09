@@ -52,6 +52,7 @@
     "params.classification": "分类",
     "params.symbolType": "符号类型",
     "params.description": "描述",
+    "params.otherProperty": "其它属性",
     "returns": "符号 UUID"
   },
   "title": "Create Symbol",
@@ -63,5 +64,6 @@
   "params.classification": "Classification",
   "params.symbolType": "Symbol type",
   "params.description": "Description",
+  "params.otherProperty": null,
   "returns": "Symbol UUID"
 }

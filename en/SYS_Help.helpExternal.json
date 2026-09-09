@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SYS_Help.helpExternal",
+    "kind": "method",
+    "name": "helpExternal",
+    "className": "SYS_Help",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "查询 external 动态注册接口"
+  },
+  "title": null
+}

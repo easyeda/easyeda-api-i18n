@@ -1,0 +1,59 @@
+{
+  "_meta": {
+    "id": "PCB_ImageTool.processImage",
+    "kind": "method",
+    "name": "processImage",
+    "className": "PCB_ImageTool",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const file = await eda.sys_FileSystem.openReadFileDialog(['.png', '.jpg']);\nif (!file) {\n  return;\n}\nconst res = await eda.pcb_ImageTool.processImage({ file });\nif (res.msg) {\n  eda.sys_ToastMessage.showMessage(eda.sys_I18n.text(res.msg));\n}\nif (res.dataURL) {"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "  // "
+        },
+        {
+          "type": "code",
+          "content": "  console.log('图片已就绪：', res.file.name, res.width, res.height);\n}\n```"
+        }
+      ]
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v5",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "选图处理门面（弹窗内重选图片：校验/压缩/读尺寸/预览 dataURL 全由服务端完成）",
+    "example.text.0": "弹窗内重选图片：选择 → 处理 → 更新预览",
+    "example.text.1": "更新预览：res.dataURL（图）、res.width/res.height（原始尺寸）",
+    "params.file": "弹窗内重选 `openReadFileDialog` 返回的 File",
+    "params.options": ".acceptableBytes - 可接受大小（超过则压缩），默认 2M",
+    "returns": "处理结果：`file` 压缩后文件；`dataURL` 预览图 dataURL（decode 失败为空字符串）；`width`/`height` 原始自然尺寸；`msg` 提示消息（有值需 toast，如「不能超过 50MB」「已压缩至小于2MB」）",
+    "deprecated": "临时接口（插入图片 PCB 迁移打通流程用）：等统一放置接口重构落地后删除替换，请尽快迁移，勿在新功能中继续依赖"
+  },
+  "title": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "params.file": null,
+  "params.options": null,
+  "returns": null,
+  "deprecated": null
+}

@@ -51,6 +51,7 @@
     "params.footprintName": "封装名称",
     "params.classification": "分类",
     "params.description": "描述",
+    "params.otherProperty": "其它属性",
     "returns": "封装 UUID"
   },
   "title": "Create Footprint",
@@ -61,5 +62,6 @@
   "params.footprintName": "Footprint name",
   "params.classification": "Classification",
   "params.description": "Description",
+  "params.otherProperty": null,
   "returns": "Footprint UUID"
 }

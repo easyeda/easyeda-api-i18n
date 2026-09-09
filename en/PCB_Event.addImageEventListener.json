@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Event.addImageEventListener",
+    "kind": "method",
+    "name": "addImageEventListener",
+    "className": "PCB_Event",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v5",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "新增插入图片事件监听",
+    "params.id": "事件 ID，用于防止重复注册（内部自动加扩展 uuid 前缀）",
+    "params.callFn": "事件触发时的回调，接收 pro-ui 触发的放置图片请求",
+    "returns": "是否注册成功",
+    "deprecated": "临时接口（插入图片 PCB 迁移打通流程用）：统一事件机制落地后替换，请尽快迁移，勿在新功能中继续依赖"
+  },
+  "title": null,
+  "params.id": null,
+  "params.callFn": null,
+  "returns": null,
+  "deprecated": null
+}

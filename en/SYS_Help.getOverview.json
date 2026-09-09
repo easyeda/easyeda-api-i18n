@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SYS_Help.getOverview",
+    "kind": "method",
+    "name": "getOverview",
+    "className": "SYS_Help",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取总览：各命名空间下的分组与方法名"
+  },
+  "title": null
+}

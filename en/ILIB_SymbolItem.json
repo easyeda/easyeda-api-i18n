@@ -15,7 +15,8 @@
     "properties.classification": "分类",
     "properties.type": "符号类型",
     "properties.description": "描述",
-    "properties.subPartNames": "子部件名称数组"
+    "properties.subPartNames": "子部件名称数组",
+    "properties.otherProperty": "其它属性"
   },
   "title": "Symbol property",
   "properties.libraryType": "Library type",
@@ -26,5 +27,6 @@
   "properties.classification": "Classification",
   "properties.type": "Symbol type",
   "properties.description": "Description",
-  "properties.subPartNames": "Sub-part name array"
+  "properties.subPartNames": "Sub-part name array",
+  "properties.otherProperty": null
 }

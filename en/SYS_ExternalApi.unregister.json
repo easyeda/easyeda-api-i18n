@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "id": "SYS_ExternalApi.unregister",
+    "kind": "method",
+    "name": "unregister",
+    "className": "SYS_ExternalApi",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const removed = eda.sys_ExternalApi.unregister('component', 'placeComponent');\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "注销指定接口",
+    "example.text.0": "注销此前注册的接口",
+    "params.namespace": "命名空间",
+    "params.apiName": "接口名",
+    "returns": "是否成功注销"
+  },
+  "title": null,
+  "example.text.0": null,
+  "params.namespace": null,
+  "params.apiName": null,
+  "returns": null
+}

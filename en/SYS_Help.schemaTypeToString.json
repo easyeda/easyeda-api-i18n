@@ -1,0 +1,13 @@
+{
+  "_meta": {
+    "id": "SYS_Help.schemaTypeToString",
+    "kind": "method",
+    "name": "schemaTypeToString",
+    "className": "SYS_Help",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "将 jsonSchema 的类型描述转换为字符串"
+  },
+  "title": null
+}

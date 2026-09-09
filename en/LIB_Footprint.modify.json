@@ -58,6 +58,7 @@
     "params.footprintName": "封装名称",
     "params.classification": "分类",
     "params.description": "描述",
+    "params.otherProperty": "其它属性，如希望清除某些属性，则将其的值设置为 `null`",
     "returns": "操作是否成功"
   },
   "title": "Modify Footprint",
@@ -70,5 +71,6 @@
   "params.footprintName": "Footprint name",
   "params.classification": "Classification",
   "params.description": "Description",
+  "params.otherProperty": null,
   "returns": "Whether the operation is successful"
 }
