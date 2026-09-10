@@ -10,11 +10,13 @@
     "properties.list": "列表数据（必填）",
     "properties.itemHeight": "列表项高度（像素）",
     "properties.border": "是否显示边框",
-    "properties.expandEnable": "是否允许展开嵌套子项"
+    "properties.expandEnable": "是否允许展开嵌套子项",
+    "properties.maxHeight": "列表最大高度（像素）。提供时列表视口高度取 min(内容高度, 该值)，用于如下拉菜单等父容器无定值高度的场景，使虚拟列表可正常滚动"
   },
   "title": "List component: a list that supports multi-level nesting, icons, and expansion",
   "properties.list": "List data ( required)",
   "properties.itemHeight": "List item height (pixels)",
   "properties.border": "Whether to show the border",
-  "properties.expandEnable": "Whether nested child items are allowed to expand"
+  "properties.expandEnable": "Whether nested child items are allowed to expand",
+  "properties.maxHeight": null
 }

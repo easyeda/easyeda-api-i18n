@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "id": "RowMetaConfig",
+    "kind": "interface",
+    "name": "RowMetaConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "行元数据配置，独立于业务数据（挂在 row.rowMeta 上）",
+    "properties.bgColor": "行背景色",
+    "properties.noCheckbox": "该行不显示勾选框",
+    "properties.disabledRow": "该行禁用（不可点击选中）",
+    "properties.disabledCheckbox": "该行勾选框禁用"
+  },
+  "title": null,
+  "properties.bgColor": null,
+  "properties.noCheckbox": null,
+  "properties.disabledRow": null,
+  "properties.disabledCheckbox": null
+}

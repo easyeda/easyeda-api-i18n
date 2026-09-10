@@ -8,13 +8,11 @@
   "_source": {
     "title": "布局容器：固定列数的网格布局容器",
     "properties.children": "子节点",
-    "properties.columns": "列数（必填）",
     "properties.rowGap": "行间距（像素）",
     "properties.colGap": "列间距（像素）"
   },
   "title": "Layout container: a grid layout container with a fixed number of columns",
   "properties.children": "Child node",
-  "properties.columns": "Number of columns (required)",
   "properties.rowGap": "Row gap (pixels)",
   "properties.colGap": "Column gap (pixels)"
 }

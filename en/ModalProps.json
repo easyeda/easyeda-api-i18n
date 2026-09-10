@@ -11,7 +11,7 @@
     "properties.top": "距顶部位置（像素，必填）",
     "properties.left": "距左侧位置（像素，必填）",
     "properties.width": "宽度（像素，必填）",
-    "properties.height": "高度（像素，必填）",
+    "properties.height": "高度（像素）或 'auto'（由内容撑开，此时禁用 resizeY）",
     "properties.overlay": "是否显示遮罩层",
     "properties.maxDragX": "最大水平拖拽距离（像素）",
     "properties.maxDragY": "最大垂直拖拽距离（像素）",

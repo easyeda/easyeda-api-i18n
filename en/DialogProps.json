@@ -10,7 +10,7 @@
     "properties.children": "对话框内容子节点",
     "properties.title": "标题文本（必填）",
     "properties.width": "宽度（像素）",
-    "properties.height": "高度（像素）",
+    "properties.height": "高度（像素）或 'auto'（由内容撑开，此时禁用 resizeY）",
     "properties.left": "距左侧位置（像素）",
     "properties.top": "距顶部位置（像素）",
     "properties.hide": "是否隐藏对话框",

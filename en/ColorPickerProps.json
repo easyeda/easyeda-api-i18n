@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "ColorPickerProps",
+    "kind": "interface",
+    "name": "ColorPickerProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "颜色拾取组件：复用 Input color 类型，点击弹出内置固定色板，支持预览/应用/手输/清除/默认/关闭",
+    "properties.value": "当前颜色值（受控），合法形式 `#RGB` / `#RRGGBB`；空串/无 = 无颜色",
+    "properties.disabled": "是否禁用：不可点击、不弹层、无交互",
+    "properties.readonly": "是否只读：不可手输 hex，但可打开色板选色（选色仍触发 onChange）"
+  },
+  "title": null,
+  "properties.value": null,
+  "properties.disabled": null,
+  "properties.readonly": null
+}
