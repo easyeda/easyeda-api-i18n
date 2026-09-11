@@ -4,58 +4,14 @@
     "kind": "method",
     "name": "getShortcutKeys",
     "className": "SYS_ShortcutKey",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const custom = await eda.sys_ShortcutKey.getShortcutKeys();\nconsole.log('非系统快捷键数量：', custom.length);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const all = await eda.sys_ShortcutKey.getShortcutKeys(true);\nconsole.log('含系统快捷键总数：', all.length);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const sample = all[0];\nconsole.log('首条快捷键：', JSON.stringify(sample));\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "查询快捷键列表",
-    "example.text.0": "1. 只查非系统快捷键（扩展注册的），列表精简便于观察",
-    "example.text.1": "2. 连同系统快捷键一起查（用于完整键位冲突检测）",
-    "example.text.2": "3. 观察单条数据结构：shortcutKey 是键位数组，title 是名称，\ndocumentType 是生效页面，scene 是生效场景",
     "params.includeSystem": "是否包含系统快捷键",
-    "returns": "快捷键列表",
-    "deprecated": "since EDA v4.2"
+    "returns": "快捷键列表"
   },
   "title": "Query shortcut key list",
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
   "params.includeSystem": "Whether Contain system shortcut key",
-  "returns": "Shortcut key list",
-  "deprecated": "since EDA v4.2"
+  "returns": "Shortcut key list"
 }

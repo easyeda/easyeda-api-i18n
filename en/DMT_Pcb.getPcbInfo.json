@@ -4,67 +4,14 @@
     "kind": "method",
     "name": "getPcbInfo",
     "className": "DMT_Pcb",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const pcbUuid = await eda.dmt_Pcb.createPcb();\nawait new Promise(r => setTimeout(r, 1500));\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const pcbInfo = await eda.dmt_Pcb.getPcbInfo(pcbUuid);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('name:', pcbInfo?.name);\nconsole.log('itemType:', pcbInfo?.itemType);\nconsole.log('parentBoardName:', pcbInfo?.parentBoardName);\nconsole.log('parentProjectUuid:', pcbInfo?.parentProjectUuid);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.3",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "await eda.dmt_Pcb.deletePcb(pcbUuid);\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取 PCB 的详细属性",
-    "example.text.0": "1. 创建测试 PCB 并等 1.5s 同步",
-    "example.text.1": "2. 按 UUID 查询 PCB 详细属性",
-    "example.text.2": "3. 输出属性",
-    "example.text.3": "4. 清理测试 PCB（查询类案例不留测试对象）",
     "params.pcbUuid": "PCB UUID",
     "returns": "PCB 的详细属性，如若为 `undefined` 则获取失败"
   },
   "title": "Get detailed properties of PCB",
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
-  "example.text.3": null,
   "params.pcbUuid": "PCB UUID",
   "returns": "PCB detailed properties of; if it is `undefined`, the retrieval failed"
 }

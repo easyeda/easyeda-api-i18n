@@ -13,25 +13,16 @@
         }
       ],
       "example": []
-    },
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    }
   },
   "_source": {
     "title": "设置为新建 PCB 默认物理叠层配置",
     "remarks.text.0": "返回值为结果导向，重复设置相同的物理叠层为默认物理叠层也将返回 `true`",
     "params.configurationName": "配置名称",
-    "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "设置是否成功"
   },
   "title": "Set as the default physical stacking configuration for new PCBs",
   "remarks.text.0": "The return value is result-oriented. Repeatedly setting the same physical stacking as the default will also return `true`",
   "params.configurationName": "Configuration name",
-  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
   "returns": "Set Whether Successful"
 }

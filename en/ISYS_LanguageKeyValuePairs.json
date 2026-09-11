@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "id": "TSYS_LanguageKeyValuePairs",
-    "kind": "type",
-    "name": "TSYS_LanguageKeyValuePairs",
+    "id": "ISYS_LanguageKeyValuePairs",
+    "kind": "interface",
+    "name": "ISYS_LanguageKeyValuePairs",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
       "remarks": [

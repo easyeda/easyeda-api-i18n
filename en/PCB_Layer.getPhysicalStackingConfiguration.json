@@ -4,23 +4,14 @@
     "kind": "method",
     "name": "getPhysicalStackingConfiguration",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts",
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取指定物理叠层配置",
     "params.configurationName": "配置名称",
-    "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "物理叠层配置，`undefined` 为不存在该物理叠层"
   },
   "title": "Get Specify physical stacking configuration",
   "params.configurationName": "Configuration name",
-  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
   "returns": "Physical stacking configuration, `undefined` is does not exist this physical stacking"
 }

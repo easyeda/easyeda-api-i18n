@@ -4,65 +4,12 @@
     "kind": "method",
     "name": "urlReplaceState",
     "className": "SYS_Window",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const originalHref = location.href;\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "eda.sys_Window.urlReplaceState(location.href.split('#')[0] + '#嘉立创示例_替换状态');\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('改写后的锚点：', decodeURIComponent(eda.sys_Window.getUrlAnchor()));\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.3",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "eda.sys_Window.urlReplaceState(originalHref);\nconsole.log('地址已还原');\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "修改当前的 URL 历史记录栈信息",
-    "example.text.0": "1. 备份当前完整地址",
-    "example.text.1": "2. 把当前历史记录的地址改写为带示例锚点的地址",
-    "example.text.2": "3. 验证改写生效（getUrlAnchor 返回编码后的锚点，解码后展示）",
-    "example.text.3": "4. 改回原地址（replaceState 不新增历史记录，此处完全还原）",
     "params.url": "URL"
   },
   "title": "Modify the current URL history stack information",
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
-  "example.text.3": null,
   "params.url": "URL"
 }

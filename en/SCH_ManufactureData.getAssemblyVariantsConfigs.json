@@ -4,43 +4,12 @@
     "kind": "method",
     "name": "getAssemblyVariantsConfigs",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const variantsConfigs = await eda.sch_ManufactureData.getAssemblyVariantsConfigs();\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('配置数量：', variantsConfigs.length);\nvariantsConfigs.forEach((config, index) => console.log(`配置 ${index + 1}：`, config.text, config.value));\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取装配体变量配置列表",
-    "example.text.0": "1. 获取全部装配体变量配置",
-    "example.text.1": "2. 逐个查看",
     "returns": "装配体变量配置列表"
   },
   "title": "Get the assembly variants configuration list",
-  "example.text.0": null,
-  "example.text.1": null,
   "returns": "Assembly variants configuration list"
 }

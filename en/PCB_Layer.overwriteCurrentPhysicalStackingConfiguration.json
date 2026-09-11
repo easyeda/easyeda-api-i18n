@@ -10,32 +10,19 @@
         {
           "type": "text",
           "key": "remarks.text.0"
-        },
-        {
-          "type": "text",
-          "key": "remarks.text.1"
         }
       ],
       "example": []
-    },
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    }
   },
   "_source": {
     "title": "覆写当前物理叠层配置",
     "remarks.text.0": "将会覆写 PCB 当前的物理叠层配置，请注意数据丢失风险",
-    "remarks.text.1": "如果传入的物理叠层配置不符合当前 PCB 的物理属性，将会直接返回 `false` 且不进行修改",
     "params.ruleConfiguration": "物理叠层配置",
     "returns": "覆写是否成功"
   },
   "title": "Overwrite current physical stacking configuration",
   "remarks.text.0": "It will overwrite the current physical stacking configuration of the PCB. Please note the risk of data loss",
-  "remarks.text.1": "If the passed-in physical stacking configuration does not match the physical properties of the current PCB, `false` will be returned directly without modification",
   "params.ruleConfiguration": "Physical stacking configuration",
   "returns": "Overwrite whether it is successful"
 }

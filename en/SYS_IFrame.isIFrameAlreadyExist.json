@@ -13,14 +13,7 @@
         }
       ],
       "example": []
-    },
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    }
   },
   "_source": {
     "title": "内联框架是否已存在",

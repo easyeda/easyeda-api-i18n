@@ -4,43 +4,12 @@
     "kind": "method",
     "name": "isHalfOfflineMode",
     "className": "SYS_Environment",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const isHalfOffline = eda.sys_Environment.isHalfOfflineMode();\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('是否半离线模式：', isHalfOffline);\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "是否为半离线模式",
-    "example.text.0": "1. 判断是否为半离线模式（同步返回布尔值）",
-    "example.text.1": "2. 输出判断结果（半离线模式为 true）",
     "returns": "是否为半离线模式"
   },
   "title": "Whether it is half-offline mode",
-  "example.text.0": null,
-  "example.text.1": null,
   "returns": "Whether it is half-offline mode"
 }

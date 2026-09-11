@@ -4,14 +4,7 @@
     "kind": "method",
     "name": "autoLayout",
     "className": "PCB_Document",
-    "sourceFile": "dist/api-types.d.ts",
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v3.2.162",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "自动布局",

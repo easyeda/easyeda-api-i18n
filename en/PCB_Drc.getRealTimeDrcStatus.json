@@ -4,14 +4,7 @@
     "kind": "method",
     "name": "getRealTimeDrcStatus",
     "className": "PCB_Drc",
-    "sourceFile": "dist/api-types.d.ts",
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取实时 DRC 检查状态",

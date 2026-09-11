@@ -4,56 +4,14 @@
     "kind": "method",
     "name": "getRenderImage",
     "className": "LIB_Symbol",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const [source] = await eda.lib_Symbol.search('', undefined, [], undefined, 1, 1);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const blob = await eda.lib_Symbol.getRenderImage({\n  symbolUuid: source.uuid,\n  libraryUuid: source.libraryUuid,\n});\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('sourceName:', source.name);\nconsole.log('imageSize:', blob.size);\nconsole.log('imageType:', blob.type);\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取符号渲染图",
-    "example.text.0": "1. 列出系统库符号，取一个作为渲染来源",
-    "example.text.1": "2. 获取渲染图（PNG Blob）",
-    "example.text.2": "3. Blob 可转成 URL 直接展示：URL.createObjectURL(blob)",
     "params.symbol": "符号的索引",
     "returns": "符号渲染图"
   },
   "title": "Get the symbol render image",
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
   "params.symbol": "Index of the symbol",
   "returns": "Symbol render image"
 }

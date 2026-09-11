@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "ESYS_ShortcutKeyEffectiveEditorDocumentType",
+    "kind": "enum",
+    "name": "ESYS_ShortcutKeyEffectiveEditorDocumentType",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "快捷键生效页面范围"
+  },
+  "title": null
+}

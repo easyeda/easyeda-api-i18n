@@ -4,56 +4,14 @@
     "kind": "method",
     "name": "getBomTemplateFile",
     "className": "SCH_ManufactureData",
-    "sourceFile": "dist/api-types.d.ts",
-    "codeSegments": {
-      "remarks": [],
-      "example": [
-        {
-          "type": "code",
-          "content": "```javascript"
-        },
-        {
-          "type": "text",
-          "key": "example.text.0",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const templates = await eda.sch_ManufactureData.getBomTemplates();\nconsole.log('可用模板：', templates.join('、'));\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.1",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "const templateFile = await eda.sch_ManufactureData.getBomTemplateFile(templates[0]);\n"
-        },
-        {
-          "type": "text",
-          "key": "example.text.2",
-          "prefix": "// "
-        },
-        {
-          "type": "code",
-          "content": "console.log('模板文件大小：', templateFile?.size);\n```"
-        }
-      ]
-    }
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取 BOM 模板文件",
-    "example.text.0": "1. 先拿到账号下可用的 BOM 模板列表",
-    "example.text.1": "2. 导出第一个模板的文件",
-    "example.text.2": "3. 查看导出结果",
     "params.template": "BOM 模板名称",
     "returns": "BOM 模板文件"
   },
   "title": "Get BOM template file",
-  "example.text.0": null,
-  "example.text.1": null,
-  "example.text.2": null,
   "params.template": "BOM template name",
   "returns": "BOM template file"
 }

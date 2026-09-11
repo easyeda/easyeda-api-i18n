@@ -6,9 +6,7 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "文档飞线计算功能状态",
-    "deprecated": "since EDA v4.2"
+    "title": "文档飞线计算功能状态"
   },
-  "title": "Document ratline calculation function status",
-  "deprecated": "since EDA v4.2"
+  "title": "Document ratline calculation function status"
 }

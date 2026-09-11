@@ -4,18 +4,11 @@
     "kind": "method",
     "name": "getCurrentLayer",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts",
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "获取当前图层的详细属性",
-    "returns": "当前图层的详细属性，无激活层或无 PCB 画布时返回 `undefined`"
+    "returns": "当前图层的详细属性"
   },
   "title": "Get the detailed properties of the current layer",
   "returns": "Detailed properties of the current layer. `undefined` is returned when there is no active layer or no PCB canvas"

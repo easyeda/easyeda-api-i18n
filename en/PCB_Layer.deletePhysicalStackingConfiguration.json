@@ -4,23 +4,14 @@
     "kind": "method",
     "name": "deletePhysicalStackingConfiguration",
     "className": "PCB_Layer",
-    "sourceFile": "dist/api-types.d.ts",
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
     "title": "删除物理叠层配置",
     "params.configurationName": "配置名称",
-    "params.physicalProps": "物理属性，如若不传入则默认为当前 PCB 属性",
     "returns": "删除是否成功"
   },
   "title": "Delete Physical stacking configuration",
   "params.configurationName": "Configuration name",
-  "params.physicalProps": "Physical properties. If not passed in, the current PCB properties are used by default",
   "returns": "Delete Whether Successful"
 }

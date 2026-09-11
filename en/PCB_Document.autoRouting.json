@@ -36,14 +36,7 @@
           "content": "const result = await eda.pcb_Document.autoRouting({\n    nets: ['VCC', 'GND', 'SDA', 'SCL'],\n    ignoreNets: ['NC'],\n    cornerStyle: EPCB_AutoRoutingCornerStyle.DEGREE_45,\n    optimization: EPCB_AutoRoutingOptimization.COMPLETION,\n});\n```"
         }
       ]
-    },
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v3.2.162",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    }
   },
   "_source": {
     "title": "自动布线",

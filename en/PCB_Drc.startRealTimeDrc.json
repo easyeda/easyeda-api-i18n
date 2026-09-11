@@ -13,14 +13,7 @@
         }
       ],
       "example": []
-    },
-    "versionTags": [
-      {
-        "tag": "ADD since EDA v4.2",
-        "position": "standalone",
-        "field": "remarks"
-      }
-    ]
+    }
   },
   "_source": {
     "title": "开始实时 DRC 检查",
