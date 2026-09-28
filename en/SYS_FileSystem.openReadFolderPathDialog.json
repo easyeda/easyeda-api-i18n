@@ -10,17 +10,30 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
         }
       ],
       "example": []
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.201",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "打开读取目录路径窗口",
     "remarks.text.0": "注意：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`",
+    "remarks.text.1": "/ EDA v4.1.54",
     "returns": "目录路径"
   },
   "title": null,
   "remarks.text.0": null,
+  "remarks.text.1": null,
   "returns": null
 }

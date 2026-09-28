@@ -10,19 +10,32 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
         }
       ],
       "example": []
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "内联框架是否已存在",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
-    "params.id": "内联框架 ID",
+    "remarks.text.1": "控制其它扩展打开的内联框架窗口时，`id` 需传入完整 ID 格式：`<其它扩展UUID>.<窗口ID>`（点分隔，窗口 ID 为打开时传入的 `id` 参数）",
+    "params.id": "内联框架 ID；控制其它扩展的窗口时需传 `<其它扩展UUID>.<窗口ID>`",
     "returns": "是否存在"
   },
   "title": "Whether the iframe already exists",
   "remarks.text.0": "Note: This API is only valid for extensions. Calling it in a standalone script environment will always `throw Error`",
+  "remarks.text.1": null,
   "params.id": "Iframe ID",
   "returns": "Whether Exists"
 }

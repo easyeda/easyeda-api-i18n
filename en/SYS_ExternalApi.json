@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "id": "SYS_ExternalApi",
+    "kind": "class",
+    "name": "SYS_ExternalApi",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "外部接口注入管理类",
+    "remarks.text.0": "提供扩展注入自己开发的上层接口的能力，供其他扩展、独立脚本与 runApi 调用；",
+    "remarks.text.1": "- 支持命名冲突检测：多个扩展注册同名接口时，输出冲突警告日志，调用时默认走最早注册的那个；\n- 支持生命周期管理：扩展卸载时自动注销其注册的接口，其他扩展再次调用该接口将报错；\n- 支持注入 Help 元数据：注册时附带说明、参数、返回值、示例，供 {@link SYS_Help} 渐进式披露",
+    "remarks.text.2": "调用入口为沙盒内的 `external` 对象（Proxy 动态调用），注册 / 注销统一通过本类的 `register` / `unregister`"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null
+}

@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.getClassificationTree",
+    "kind": "method",
+    "name": "getClassificationTree",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取分类树",
+    "remarks.text.0": "返回指定库与库类型下的完整分类树；",
+    "remarks.text.1": "分类不限层级数，无 UUID，节点以名称标识，子分类通过 `children` 逐级嵌套",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "returns": "分类树根节点数组，无分类时返回空数组"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "returns": null
+}

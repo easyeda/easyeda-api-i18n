@@ -13,7 +13,14 @@
         }
       ],
       "example": []
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "停止实时 DRC 检查",

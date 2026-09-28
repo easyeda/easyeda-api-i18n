@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.deleteClassification",
+    "kind": "method",
+    "name": "deleteClassification",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "删除分类",
+    "remarks.text.0": "删除分类名称数组最后一位所关联的分类（数组前序元素为其父分类路径）；",
+    "remarks.text.1": "目标分类若含有子分类，将级联删除其全部子分类",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "params.classificationNames": "分类名称数组，最后一位为待删除分类名称，前序元素为父分类路径",
+    "returns": "分类是否删除成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "params.classificationNames": null,
+  "returns": null
+}

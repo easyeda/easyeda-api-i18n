@@ -1,0 +1,19 @@
+{
+  "_meta": {
+    "id": "ESYS_PanelPosition",
+    "kind": "enum",
+    "name": "ESYS_PanelPosition",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "面板标签页位置"
+  },
+  "title": null
+}

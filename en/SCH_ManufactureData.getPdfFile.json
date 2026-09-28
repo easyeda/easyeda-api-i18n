@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "SCH_ManufactureData.getPdfFile",
+    "kind": "method",
+    "name": "getPdfFile",
+    "className": "SCH_ManufactureData",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "获取 PDF 文件",
+    "params.fileName": "文件名",
+    "params.typeSpecificParams": "类型特定参数",
+    "params.object": "对象",
+    "params.objectSpecificParams": "对象特定参数",
+    "returns": "PDF 文件数据（或压缩包）"
+  },
+  "title": null,
+  "params.fileName": null,
+  "params.typeSpecificParams": null,
+  "params.object": null,
+  "params.objectSpecificParams": null,
+  "returns": null
+}

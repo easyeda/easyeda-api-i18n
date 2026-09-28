@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "id": "SYS_IFrame.openIFrameToPanel",
+    "kind": "method",
+    "name": "openIFrameToPanel",
+    "className": "SYS_IFrame",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "打开内联框架窗口到面板",
+    "remarks.text.0": "本接口仅扩展包允许调用，用户需要在扩展包内包含用于内联的 HTML 文件；",
+    "remarks.text.1": "本接口调用后将在指定面板（左侧 / 右侧 / 底部）内打开一个内联框架窗口，\n面板标签页参数 `tab` 指定打开的标签页（不区分标签页所处面板，可互相拖动）；",
+    "remarks.text.2": "内联框架需要展示 `htmlFileName` 的内容，该 HTML 从扩展包内获取，并已在安装时被存储至 IndexedDB 中",
+    "remarks.text.3": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "params.htmlFileName": "需要加载的 HTML 文件在扩展包内的路径，从扩展根目录起始，例如 `/iframe/index.html`",
+    "params.position": "目标面板位置（左侧 / 右侧 / 底部）",
+    "params.tab": "面板标签页（不区分所处面板）",
+    "params.width": "内联框架窗口的宽度",
+    "params.height": "内联框架窗口的高度",
+    "params.id": "内联框架窗口 ID，用于关闭内联框架窗口",
+    "params.props": "其它参数（与 {@link SYS_IFrame.openIFrame} 的 `props` 一致）",
+    "returns": "操作是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "remarks.text.3": null,
+  "params.htmlFileName": null,
+  "params.position": null,
+  "params.tab": null,
+  "params.width": null,
+  "params.height": null,
+  "params.id": null,
+  "params.props": null,
+  "returns": null
+}

@@ -1,0 +1,48 @@
+{
+  "_meta": {
+    "id": "SYS_Environment.isEditorCurrentVersionGreaterThanOrEqual",
+    "kind": "method",
+    "name": "isEditorCurrentVersionGreaterThanOrEqual",
+    "className": "SYS_Environment",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const isGe = eda.sys_Environment.isEditorCurrentVersionGreaterThanOrEqual('4.1.13');\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('传入版本是否高于或等于当前版本：', isGe);\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "判断传入版本是否高于或等于编辑器当前版本",
+    "example.text.0": "1. 判断传入版本是否高于或等于当前编辑器版本（同步返回布尔值）",
+    "example.text.1": "2. 输出判断结果",
+    "params.version": "传入的版本",
+    "returns": "传入版本是否高于或等于编辑器当前版本"
+  },
+  "title": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "params.version": null,
+  "returns": null
+}

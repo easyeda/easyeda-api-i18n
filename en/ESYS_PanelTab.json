@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "ESYS_PanelTab",
+    "kind": "enum",
+    "name": "ESYS_PanelTab",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "面板标签页（不区分标签页所处面板）",
+    "remarks.text.0": "面板标签页可互相拖动，本枚举不区分标签页所处面板（左侧 / 右侧 / 底部）"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

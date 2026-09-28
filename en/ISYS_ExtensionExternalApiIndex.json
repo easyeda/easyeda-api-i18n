@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "ISYS_ExtensionExternalApiIndex",
+    "kind": "interface",
+    "name": "ISYS_ExtensionExternalApiIndex",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "external API 扁平索引（按命名空间分组）",
+    "remarks.text.0": "键结构：namespace -> apiName -> 注册者列表（按 priority 升序）\n便于调用时 O(1) 查找并按优先级取第一个（最早注册优先）"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

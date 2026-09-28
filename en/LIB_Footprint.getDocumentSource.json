@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "id": "LIB_Footprint.getDocumentSource",
+    "kind": "method",
+    "name": "getDocumentSource",
+    "className": "LIB_Footprint",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取封装的文档源码",
+    "remarks.text.0": "与 {@link LIB_Footprint.updateDocumentSource} 对称的读取接口；返回 **3.0 格式**（efoo）的封装源数据，\n可直接用于组装 PCB 源数据（如 AI 生成 eprj3 工程）。",
+    "remarks.text.1": "支持工程库 / 非工程库（系统库 / 个人库 / 扩展库）：\n- 工程库：从当前打开的工程 worker 读取（含未保存内容）；\n- 非工程库：从 lib.worker 读取（含未保存内容），worker 无缓存时回退网络获取，\n  自动处理 `history_uuid`（历史版本）、`dataStrId`（远程存储）与 2.0 → 3.0 格式转换。",
+    "remarks.text.2": "获取失败（如库条目不存在）将返回 `undefined`",
+    "params.footprintUuid": "封装 UUID",
+    "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
+    "returns": "封装的 3.0 文档源码（efoo JSON 字符串），获取失败返回 `undefined`"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "params.footprintUuid": null,
+  "params.libraryUuid": null,
+  "returns": null
+}

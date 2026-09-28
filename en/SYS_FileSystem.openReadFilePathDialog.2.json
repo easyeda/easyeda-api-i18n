@@ -10,20 +10,33 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
         }
       ],
       "example": []
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.201",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "打开读取文件路径窗口",
     "remarks.text.0": "注意：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`",
+    "remarks.text.1": "/ EDA v4.1.54",
     "params.filenameExtensions": "文件扩展名",
-    "params.multiFiles": "是否允许读取多文件",
+    "params.multiFiles": "是否允许读取多文件；受客户端协议限制，当前仅支持单选，`multiFiles=true` 时将返回单元素数组",
     "returns": "文件路径"
   },
   "title": null,
   "remarks.text.0": null,
+  "remarks.text.1": null,
   "params.filenameExtensions": null,
   "params.multiFiles": null,
   "returns": null

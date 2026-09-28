@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "EPCB_DocumentCanvasUpdateCalculationActiveStatus",
+    "kind": "enum",
+    "name": "EPCB_DocumentCanvasUpdateCalculationActiveStatus",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "画布更新计算功能状态"
+  },
+  "title": null
+}

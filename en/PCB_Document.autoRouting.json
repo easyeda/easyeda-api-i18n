@@ -10,6 +10,14 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
         }
       ],
       "example": [
@@ -36,11 +44,20 @@
           "content": "const result = await eda.pcb_Document.autoRouting({\n    nets: ['VCC', 'GND', 'SDA', 'SCL'],\n    ignoreNets: ['NC'],\n    cornerStyle: EPCB_AutoRoutingCornerStyle.DEGREE_45,\n    optimization: EPCB_AutoRoutingOptimization.COMPLETION,\n});\n```"
         }
       ]
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.150",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "自动布线",
     "remarks.text.0": "如不传入任何参数，将对所有未布线的网络进行自动布线",
+    "remarks.text.1": "本接口预期将会执行较长时间，可以尝试异步处理或增加超时时限",
+    "remarks.text.2": "/ EDA v4.1.66",
     "example.text.0": "对所有未布线的网络进行自动布线",
     "example.text.1": "指定网络进行自动布线，并忽略部分网络",
     "params.props": "自动布线参数",
@@ -48,6 +65,8 @@
   },
   "title": "Auto routing",
   "remarks.text.0": "If no parameters are passed in, auto routing will be performed for all unrouted nets",
+  "remarks.text.1": null,
+  "remarks.text.2": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.props": "Auto routing parameter",

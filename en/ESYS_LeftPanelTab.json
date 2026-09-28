@@ -6,7 +6,9 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "左侧面板标签页"
+    "title": "左侧面板标签页",
+    "deprecated": "请使用 `ESYS_PanelTab` 替代 since EDA v4.2"
   },
-  "title": "Left panel tab"
+  "title": "Left panel tab",
+  "deprecated": null
 }

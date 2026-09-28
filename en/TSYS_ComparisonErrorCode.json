@@ -1,0 +1,12 @@
+{
+  "_meta": {
+    "id": "TSYS_ComparisonErrorCode",
+    "kind": "type",
+    "name": "TSYS_ComparisonErrorCode",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "对比失败错误码"
+  },
+  "title": null
+}

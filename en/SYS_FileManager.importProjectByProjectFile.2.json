@@ -21,9 +21,9 @@
     "params.projectFile": "工程文件",
     "params.fileType": "文件类型",
     "params.props": "导入参数，参考 EDA 前端 **导入** 窗口内的配置项",
-    "params.saveTo": "保存到工程参数，`Offline Client Local Path` 仅离线客户端可用",
+    "params.saveTo": "保存到工程参数 `Offline Client Local Path` 仅离线客户端可用，该形态在 `folderPath` 下创建客户端本地工程， 同名工程已存在时报错不覆盖，该形态需要启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
     "params.librariesImportSetting": "库导入配置",
-    "returns": "导入的工程的简略工程属性"
+    "returns": "导入的工程的简略工程属性 `Offline Client Local Path` 形态的字段语义（客户端本地工程）： - `uuid` 为客户端本地工程标识（工程文件绝对路径的 SHA-256），可用于打开工程、在客户端工程列表中定位； - `friendlyName` 为本地工程名； - `teamUuid` 填充的是本地用户 UUID（离线客户端无团队概念，语义为工程归属者）； - `folderUuid` 恒为 `undefined`（离线客户端无文件夹概念）"
   },
   "title": "Use project file import project",
   "remarks.text.0": "Extracting library-related configurations is not supported yet. If the library needs to be extracted, it will be extracted according to the default configuration",

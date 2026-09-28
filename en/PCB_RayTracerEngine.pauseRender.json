@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.pauseRender",
+    "kind": "method",
+    "name": "pauseRender",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "暂停光线追踪渲染",
+    "remarks.text.0": "暂停后光线追踪引擎将停止继续渲染"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

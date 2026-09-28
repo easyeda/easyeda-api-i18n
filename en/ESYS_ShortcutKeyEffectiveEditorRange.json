@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "id": "ESYS_ShortcutKeyEffectiveEditorDocumentType",
+    "id": "ESYS_ShortcutKeyEffectiveEditorRange",
     "kind": "enum",
-    "name": "ESYS_ShortcutKeyEffectiveEditorDocumentType",
+    "name": "ESYS_ShortcutKeyEffectiveEditorRange",
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {

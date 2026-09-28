@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "id": "SYS_ShortcutKey.unregister",
+    "kind": "method",
+    "name": "unregister",
+    "className": "SYS_ShortcutKey",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.2",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "反注册快捷键",
+    "remarks.text.0": "本接口允许反注册其它扩展的快捷键，仅需按格式拼接快捷键 ID",
+    "remarks.text.1": "本接口无法反注册系统快捷键",
+    "remarks.text.2": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
+    "params.id": "快捷键 ID，如需反注册其它扩展注册的快捷键，请在前缀处拼接扩展 UUID，格式为：`<扩展 UUID>.<快捷键 ID>`",
+    "returns": "反注册是否成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "remarks.text.2": null,
+  "params.id": null,
+  "returns": null
+}

@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "ILIB_ClassificationNode",
+    "kind": "interface",
+    "name": "ILIB_ClassificationNode",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "分类树节点（分类无 UUID，以名称为唯一标识）",
+    "remarks.text.0": "分类不限层级数，以名称字符串数组标识，如 `['一级', '二级', '三级']`",
+    "properties.name": "分类名称",
+    "properties.children": "子分类节点数组"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.name": null,
+  "properties.children": null
+}

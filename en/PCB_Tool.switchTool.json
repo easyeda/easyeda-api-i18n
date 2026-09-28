@@ -1,0 +1,36 @@
+{
+  "_meta": {
+    "id": "PCB_Tool.switchTool",
+    "kind": "method",
+    "name": "switchTool",
+    "className": "PCB_Tool",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "切换设计工具",
+    "remarks.text.0": "在多种 PCB 设计工具之间切换，如默认选择工具、导线工具、圆弧工具等；",
+    "remarks.text.1": "`params` 为工具参数，结构随工具而异，缺省时使用工具默认参数",
+    "params.tool": "设计工具命令字符串",
+    "params.params": "工具参数，类型随工具而异，可选",
+    "returns": "工具是否切换成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.tool": null,
+  "params.params": null,
+  "returns": null
+}

@@ -4,12 +4,36 @@
     "kind": "method",
     "name": "autoLayout",
     "className": "PCB_Document",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v3.2.150",
+        "position": "inline",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "自动布局",
+    "remarks.text.0": "本接口预期将会执行较长时间，可以尝试异步处理或增加超时时限",
+    "remarks.text.1": "/ EDA v4.1.66",
     "returns": "自动布局结果"
   },
   "title": "Auto layout",
+  "remarks.text.0": null,
+  "remarks.text.1": null,
   "returns": "Auto layout result"
 }

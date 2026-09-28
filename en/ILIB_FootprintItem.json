@@ -13,6 +13,7 @@
     "properties.name": "封装名称",
     "properties.classification": "分类",
     "properties.description": "描述",
+    "properties.model3D": "关联 3D 模型",
     "properties.otherProperty": "其它属性"
   },
   "title": "Footprint property",
@@ -22,5 +23,6 @@
   "properties.name": "Footprint name",
   "properties.classification": "Classification",
   "properties.description": "Description",
+  "properties.model3D": null,
   "properties.otherProperty": null
 }

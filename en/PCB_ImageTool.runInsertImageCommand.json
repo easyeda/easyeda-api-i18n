@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "id": "PCB_ImageTool.runInsertImageCommand",
+    "kind": "method",
+    "name": "runInsertImageCommand",
+    "className": "PCB_ImageTool",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v5",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "运行系统插入图片命令（扩展快捷键桥接）",
+    "remarks.text.0": "与工具栏按钮/系统菜单同走 `doCommand('insertImage')`，由宿主按当前文档类型路由：\nSCH/符号/仿真/面板 → 旧直接放置流程；PCB/封装 → 扩展弹窗（publishInsertImageEvent → 扩展 addImageEventListener）。",
+    "returns": "命令是否已派发",
+    "deprecated": "临时接口，等待统一放置接口机制落地后替换"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null,
+  "deprecated": null
+}

@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "id": "LIB_Classification.createClassification",
+    "kind": "method",
+    "name": "createClassification",
+    "className": "LIB_Classification",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "创建分类",
+    "remarks.text.0": "分类以名称字符串数组标识，如 `['一级', '二级', '三级']`，数组元素按序表示从一级到末级的分类名称；",
+    "remarks.text.1": "调用后按名称数组依次创建各级分类（末级名称对应创建的最后一个分类），分类不存在 UUID，以名称为唯一标识",
+    "params.libraryUuid": "库 UUID",
+    "params.libraryType": "库类型",
+    "params.classificationNames": "分类名称数组，元素按序表示从一级到末级的分类名称",
+    "returns": "分类是否创建成功"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "remarks.text.1": null,
+  "params.libraryUuid": null,
+  "params.libraryType": null,
+  "params.classificationNames": null,
+  "returns": null
+}

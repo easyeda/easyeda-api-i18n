@@ -6,7 +6,9 @@
     "sourceFile": "dist/api-types.d.ts"
   },
   "_source": {
-    "title": "系统 / 文件管理类"
+    "title": "系统 / 文件管理类",
+    "properties.extensionUuid": "扩展 UUID"
   },
-  "title": "System / file manager class"
+  "title": "System / file manager class",
+  "properties.extensionUuid": null
 }

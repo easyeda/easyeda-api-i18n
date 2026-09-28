@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "ISYS_HelpData",
+    "kind": "interface",
+    "name": "ISYS_HelpData",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "lc-build 生成的 API jsonSchema（d.ts 的 JSON 形态）",
+    "remarks.text.0": "结构：`$defs.{类型名}.{...jsonSchema}`，类的方法位于 `properties` 下",
+    "properties.$schema": "JSON Schema 版本",
+    "properties.$defs": "类型定义表：类型名 -> 类型 schema"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.$schema": null,
+  "properties.$defs": null
+}

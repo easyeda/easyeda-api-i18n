@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "PCB_Document.getFlipBoardState",
+    "kind": "method",
+    "name": "getFlipBoardState",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取翻转板子状态",
+    "remarks.text.0": "返回当前 PCB 画布是否处于翻转（底面）视图；底面视图默认会翻转板子",
+    "returns": "当前是否已翻转板子：`true` 表示已翻转（底面视图），`false` 表示未翻转（顶面视图）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

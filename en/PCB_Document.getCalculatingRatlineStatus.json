@@ -8,8 +8,10 @@
   },
   "_source": {
     "title": "获取当前飞线计算功能状态",
-    "returns": "功能状态"
+    "returns": "功能状态",
+    "deprecated": "since EDA v4.2"
   },
   "title": "Get the current ratline calculation function status",
-  "returns": "Function state"
+  "returns": "Function state",
+  "deprecated": null
 }

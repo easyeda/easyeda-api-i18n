@@ -1,0 +1,17 @@
+{
+  "_meta": {
+    "id": "PCB_Document.setFlipBoardState",
+    "kind": "method",
+    "name": "setFlipBoardState",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "切换翻转板子状态",
+    "params.flipped": "目标翻转状态：`true` 表示切换至翻转（底面）视图，`false` 表示切换至未翻转（顶面）视图",
+    "returns": "切换操作是否成功，切换失败将返回 `false`"
+  },
+  "title": null,
+  "params.flipped": null,
+  "returns": null
+}

@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "id": "PCB_MathPolygon.disposeTrace",
+    "kind": "method",
+    "name": "disposeTrace",
+    "className": "PCB_MathPolygon",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.pcb_MathPolygon.disposeTrace();\n```"
+        }
+      ]
+    }
+  },
+  "_source": {
+    "title": "释放描摹会话资源（worker + 像素缓存）",
+    "remarks.text.0": "描摹会话结束（如扩展弹窗关闭）时调用，释放 `traceImage` 服务端持有的\nPotraceWorkerAPI 单例 worker 与 low/high 两档像素缓存（约 176MB）。幂等，可多次调用；\n下次 `traceImage` 首次传 `imageBlob` 时自动重建。纯清理接口，无返回语义。",
+    "example.text.0": "弹窗关闭时释放描摹资源"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "example.text.0": null
+}
