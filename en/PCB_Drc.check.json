@@ -6,7 +6,12 @@
     "className": "PCB_Drc",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -35,6 +40,7 @@
   },
   "_source": {
     "title": "检查 DRC",
+    "remarks.text.0": "`includeVerboseError=true` 时返回 **分组树**，顶层数组长度是错误 **类别数** 而非错误总数；\n`includeVerboseError=false` 直接返回门禁布尔值（非交互执行方式：`check(strict, false, false)`）",
     "example.text.0": "1. 详细模式：返回全部违规项（含描述），无违规则为空数组",
     "example.text.1": "2. 布尔模式：只返回是否全部通过",
     "params.strict": "是否严格检查，当前 PCB 统一为严格检查模式",
@@ -43,6 +49,7 @@
     "returns": "DRC 检查是否通过"
   },
   "title": "Check DRC",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.strict": "Whether strict checking is enabled. The current PCB is uniformly in strict checking mode",

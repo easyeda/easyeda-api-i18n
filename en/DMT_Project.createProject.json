@@ -6,7 +6,12 @@
     "className": "DMT_Project",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -35,6 +40,7 @@
   },
   "_source": {
     "title": "创建工程",
+    "remarks.text.0": "新建工程 **不初始化任何文档**（`getAllBoardsInfo` 等返回空数组），\n需显式创建 schematic / pcb / board / 首页后再使用",
     "example.text.0": "1. 创建测试工程（友好名带时间戳避免重名，名称与团队留空走默认）",
     "example.text.1": "2. 等待工作区同步后回读，确认工程已落地",
     "params.projectFriendlyName": "工程友好名称",
@@ -47,6 +53,7 @@
     "returns": "工程 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Project",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.projectFriendlyName": "Project friendly name",

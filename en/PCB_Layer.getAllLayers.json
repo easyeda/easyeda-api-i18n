@@ -6,7 +6,12 @@
     "className": "PCB_Layer",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -44,12 +49,14 @@
   },
   "_source": {
     "title": "获取所有图层的详细属性",
+    "remarks.text.0": "返回结果 **包含停用的内层**（如 16 铜层下可能返回 34 个 `SIGNAL`，其中多个 `layerStatus=0`）；\n筛选可用层的条件为 `type === 'SIGNAL' && layerStatus === 1`（或 `layerStatus !== EPCB_LayerStatus.NOT_USED`）",
     "example.text.0": "1. 一次性取回当前 PCB 的全部图层",
     "example.text.1": "2. 查看顶层（TOP=1）的典型属性",
     "example.text.2": "3. 统计信号层（铜箔层）数量",
     "returns": "所有图层的详细属性"
   },
   "title": "Get the detailed properties of all layers",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

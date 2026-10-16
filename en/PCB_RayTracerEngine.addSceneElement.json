@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.addSceneElement",
+    "kind": "method",
+    "name": "addSceneElement",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "添加场景元素",
+    "params.file": "obj 文件",
+    "returns": "新增的场景元素"
+  },
+  "title": null,
+  "params.file": null,
+  "returns": null
+}

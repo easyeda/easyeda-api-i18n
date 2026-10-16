@@ -28,7 +28,7 @@
         },
         {
           "type": "code",
-          "content": "const symbolName = '嘉立创示例_新符号_' + Date.now();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, symbolName, [], '1', '示例符号描述');\n"
+          "content": "const symbolName = '嘉立创示例_新符号_' + Date.now();\nconst symbolUuid = await eda.lib_Symbol.create(libraryUuid, symbolName, [], ELIB_SymbolType.COMPONENT, '示例符号描述');\n"
         },
         {
           "type": "text",
@@ -45,7 +45,7 @@
   "_source": {
     "title": "创建符号",
     "example.text.0": "1. 获取个人库 UUID",
-    "example.text.1": "2. 创建符号（分类传 [] = 不分类；符号类型 '1' = 原理图符号，见 ELIB_SymbolType）",
+    "example.text.1": "2. 创建符号（分类传 [] = 不分类；符号类型见 ELIB_SymbolType）",
     "example.text.2": "创建类保留现场（新符号留在个人库中供观察）",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.symbolName": "符号名称",

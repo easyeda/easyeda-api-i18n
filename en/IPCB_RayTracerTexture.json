@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerTexture",
+    "kind": "interface",
+    "name": "IPCB_RayTracerTexture",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追贴图（名称 + 缩放）",
+    "properties.name": "贴图名",
+    "properties.scale": "缩放"
+  },
+  "title": null,
+  "properties.name": null,
+  "properties.scale": null
+}

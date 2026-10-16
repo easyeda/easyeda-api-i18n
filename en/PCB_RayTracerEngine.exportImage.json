@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.exportImage",
+    "kind": "method",
+    "name": "exportImage",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "导出当前画布光追渲染效果图片（PNG）",
+    "returns": "图片数据"
+  },
+  "title": null,
+  "returns": null
+}

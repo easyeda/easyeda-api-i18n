@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.getAutoJobLog",
+    "kind": "method",
+    "name": "getAutoJobLog",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取自动布线 / 自动布局作业日志",
+    "remarks.text.0": "以结构化形式返回单个自动布线 / 自动布局作业的日志",
+    "params.jobId": "作业 ID",
+    "returns": "作业日志条目列表"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.jobId": null,
+  "returns": null
+}

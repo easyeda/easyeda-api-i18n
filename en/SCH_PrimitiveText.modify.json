@@ -64,7 +64,7 @@
     "title": "修改文本",
     "example.text.0": "1. 创建待修改的测试文本：默认样式（随机坐标避免重合）",
     "example.text.1": "2. 记录修改前的内容、颜色与字号",
-    "example.text.2": "3. 批量修改：平移位置、内容更新、颜色改蓝、字号 20、加粗",
+    "example.text.2": "3. 批量修改：平移位置、内容更新、颜色改蓝、字号 20（单位 0.01inch，即 0.2inch）、加粗",
     "example.text.3": "4. modify 返回后需要重新 get() 才能读到画布上的最新值",
     "example.text.4": "5. 修改类保留现场，供观察修改结果",
     "params.primitiveId": "图元 ID",

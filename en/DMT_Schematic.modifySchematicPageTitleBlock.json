@@ -10,6 +10,14 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
         }
       ],
       "example": [
@@ -59,6 +67,8 @@
   "_source": {
     "title": "修改原理图图页明细表",
     "remarks.text.0": "`titleBlockData` 仅需要传入任何需要修改的明细项作为 `key`，并传入其需要修改的值，任何无法识别的明细项将被忽略，任何未传入的项和值将保持默认状态",
+    "remarks.text.1": "注意事项：",
+    "remarks.text.2": "- 图页尺寸是 **硬约束**（如 A4 = 1170×825，单位 10mil），明细项 `Size` 非法会抛 `TypeError`；\n- `titleBlockData` 的合法 key 含 `Size` / `Company` 等，明细项的 `showTitle` / `showValue` / `value` **三个字段缺一不可**",
     "example.text.0": "1. 创建专用测试原理图并打开自带图页 p1，让焦点落到目标页上",
     "example.text.1": "2. 修改明细表：显示明细表，并把\"公司\"改为示例值（三个字段缺一不可）",
     "example.text.2": "3. 等 1.5s 同步，回读验证明细项已更新",
@@ -69,6 +79,8 @@
   },
   "title": "Modify the title block of a schematic sheet",
   "remarks.text.0": "`titleBlockData` only needs to pass in any title block items to be modified as `key`, along with the values to modify them to. Any unrecognized title block items will be ignored, and any unpassed items and values will remain in their default state",
+  "remarks.text.1": null,
+  "remarks.text.2": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

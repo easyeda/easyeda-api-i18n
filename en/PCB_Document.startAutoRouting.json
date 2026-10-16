@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.startAutoRouting",
+    "kind": "method",
+    "name": "startAutoRouting",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "以作业模型启动自动布线",
+    "remarks.text.0": "立即返回作业句柄（`jobId`），任务寿命与本次调用寿命解耦；后续用 {@link PCB_Document.getAutoJobStatus | getAutoJobStatus} 查询进度、\n{@link PCB_Document.cancelAutoJob | cancelAutoJob} 取消作业、{@link PCB_Document.getAutoJobLog | getAutoJobLog} 读取日志；\n入参语义与 {@link PCB_Document.autoRouting | autoRouting} 一致",
+    "params.props": "自动布线参数",
+    "returns": "自动布线作业句柄"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.props": null,
+  "returns": null
+}

@@ -18,6 +18,10 @@
         {
           "type": "text",
           "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
         }
       ],
       "example": [
@@ -57,7 +61,8 @@
     "title": "自动布线",
     "remarks.text.0": "如不传入任何参数，将对所有未布线的网络进行自动布线",
     "remarks.text.1": "本接口预期将会执行较长时间，可以尝试异步处理或增加超时时限",
-    "remarks.text.2": "/ EDA v4.1.66",
+    "remarks.text.2": "注意事项：\n- 本接口内部存在固定的 900 秒（15 分钟）硬上限，CLI 的 `--timeout` 参数无法覆盖该上限；\n- 超时或失败后，中间几何结果不会提交（超时后调用 `save()` 图元可能仍为 0/0），如需保留中间结果请改用 {@link PCB_Document.startAutoRouting | startAutoRouting} 作业模型；\n- `props.layers` 必须传入**启用层**（`layerStatus !== NOT_USED`），传停用层会被静默忽略",
+    "remarks.text.3": "/ EDA v4.1.66",
     "example.text.0": "对所有未布线的网络进行自动布线",
     "example.text.1": "指定网络进行自动布线，并忽略部分网络",
     "params.props": "自动布线参数",
@@ -67,6 +72,7 @@
   "remarks.text.0": "If no parameters are passed in, auto routing will be performed for all unrouted nets",
   "remarks.text.1": null,
   "remarks.text.2": null,
+  "remarks.text.3": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.props": "Auto routing parameter",

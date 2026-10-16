@@ -6,7 +6,12 @@
     "className": "PCB_PrimitivePad",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -53,6 +58,7 @@
   },
   "_source": {
     "title": "获取所有焊盘",
+    "remarks.text.0": "本接口 **不包含封装内嵌的图元**（如 USB-C 定位孔这类 FOOTPRINT 内的 FILL，layerId 12）；\n封装内嵌图元需配合 `scope` 类能力获取（见 {@link PCB_PrimitivePad.getAll | getAll}）",
     "example.text.0": "1. 创建一个顶层测试焊盘作为过滤目标（随机坐标避免重合）",
     "example.text.1": "2. 不带参数：获取 PCB 上全部焊盘",
     "example.text.2": "3. 按层过滤：只取顶层（1）的焊盘",
@@ -63,6 +69,7 @@
     "returns": "焊盘图元对象数组"
   },
   "title": "Get all Pad",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

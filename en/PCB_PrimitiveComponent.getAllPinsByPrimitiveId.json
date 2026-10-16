@@ -58,7 +58,7 @@
     "example.text.2": "3. 读取每个焊盘的归属与坐标，确认都属于该器件",
     "example.text.3": "4. 清理测试器件（焊盘随器件一起删除）",
     "params.primitiveId": "器件图元 ID",
-    "returns": "器件焊盘图元数组"
+    "returns": "器件焊盘图元数组；本接口 **只返回焊盘（Pad）**，封装内非 Pad 图元（如 FILL）不在此列"
   },
   "title": "Get all pads associated with the device",
   "example.text.0": null,

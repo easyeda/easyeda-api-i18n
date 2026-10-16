@@ -6,7 +6,12 @@
     "className": "SCH_Drc",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -53,6 +58,7 @@
   },
   "_source": {
     "title": "检查 DRC",
+    "remarks.text.0": "`includeVerboseError=true` 时返回 **分组树**，顶层数组长度是错误 **类别数** 而非错误总数；\n`includeVerboseError=false` 直接返回门禁布尔值（非交互执行方式：`check(strict, false, false)`）",
     "example.text.0": "1. 创建测试原理图并打开（DRC 作用于当前激活的原理图）",
     "example.text.1": "2. 详细模式：返回全部违规项，无违规则为空数组",
     "example.text.2": "3. 布尔模式：只返回是否全部通过",
@@ -63,6 +69,7 @@
     "returns": "DRC 检查是否通过"
   },
   "title": "Check DRC",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

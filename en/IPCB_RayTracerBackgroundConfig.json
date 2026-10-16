@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerBackgroundConfig",
+    "kind": "interface",
+    "name": "IPCB_RayTracerBackgroundConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追背景配置",
+    "properties.useColor": "是否使用纯色背景",
+    "properties.intensity": "强度",
+    "properties.texture": "HDR 贴图名",
+    "properties.color": "背景颜色",
+    "properties.rotation": "旋转角度",
+    "properties.hide": "是否隐藏",
+    "properties.hideColor": "隐藏时的颜色"
+  },
+  "title": null,
+  "properties.useColor": null,
+  "properties.intensity": null,
+  "properties.texture": null,
+  "properties.color": null,
+  "properties.rotation": null,
+  "properties.hide": null,
+  "properties.hideColor": null
+}

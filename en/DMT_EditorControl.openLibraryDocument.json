@@ -28,7 +28,7 @@
         },
         {
           "type": "code",
-          "content": "const tabId = await eda.dmt_EditorControl.openLibraryDocument(results[0].libraryUuid, '2', results[0].uuid);\nconsole.log('tabId:', tabId);\n"
+          "content": "const tabId = await eda.dmt_EditorControl.openLibraryDocument(results[0].libraryUuid, ELIB_LibraryType.SYMBOL, results[0].uuid);\nconsole.log('tabId:', tabId);\n"
         },
         {
           "type": "text",
@@ -45,7 +45,7 @@
   "_source": {
     "title": "打开库符号、封装文档",
     "example.text.0": "1. 搜索库符号，拿到其所在库 UUID 与符号 UUID",
-    "example.text.1": "2. 打开该符号的编辑画布，返回标签页 ID（'2' = ELIB_LibraryType.SYMBOL）",
+    "example.text.1": "2. 打开该符号的编辑画布，返回标签页 ID",
     "example.text.2": "3. 看完关闭标签页",
     "params.libraryUuid": "库 UUID，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "params.libraryType": "库类型，支持符号和封装",

@@ -14,12 +14,16 @@
       ],
       "example": [
         {
+          "type": "text",
+          "key": "example.text.0"
+        },
+        {
           "type": "code",
           "content": "```javascript"
         },
         {
           "type": "text",
-          "key": "example.text.0",
+          "key": "example.text.1",
           "prefix": "// "
         },
         {
@@ -28,7 +32,7 @@
         },
         {
           "type": "text",
-          "key": "example.text.1",
+          "key": "example.text.2",
           "prefix": "  // "
         },
         {
@@ -37,7 +41,7 @@
         },
         {
           "type": "text",
-          "key": "example.text.2",
+          "key": "example.text.3",
           "prefix": "  // "
         },
         {
@@ -46,7 +50,7 @@
         },
         {
           "type": "text",
-          "key": "example.text.3",
+          "key": "example.text.4",
           "prefix": "  // "
         },
         {
@@ -55,7 +59,7 @@
         },
         {
           "type": "text",
-          "key": "example.text.4",
+          "key": "example.text.5",
           "prefix": "// "
         },
         {
@@ -64,12 +68,20 @@
         },
         {
           "type": "text",
-          "key": "example.text.5",
+          "key": "example.text.6",
           "prefix": "// "
         },
         {
           "type": "code",
           "content": "console.log('libUuid:', libUuid);\n```"
+        },
+        {
+          "type": "text",
+          "key": "example.text.7"
+        },
+        {
+          "type": "code",
+          "content": "```javascript\nconst libUuid = await eda.lib_LibrariesList.registerExtendLibrary(\n  '嘉立创示例_外部库_另存为控制',\n  { device: deviceFunctions, symbol: symbolFunctions, footprint: footprintFunctions },\n  {\n    saveAs: {\n      device: true,\n      symbol: false,\n      footprint: false,\n    },\n  }\n);\nconsole.log('libUuid:', libUuid);\n```"
         }
       ]
     }
@@ -77,14 +89,17 @@
   "_source": {
     "title": "注册外部库",
     "remarks.text.0": "注意：本接口仅扩展有效，在独立脚本环境内调用将始终 `throw Error`",
-    "example.text.0": "1. 实现外部库的符号数据回调（真实场景中在此对接自己的数据源）",
-    "example.text.1": "分类树：库面板左侧的分类目录",
-    "example.text.2": "列表搜索：响应用户的关键字搜索与分页，返回分页结构",
-    "example.text.3": "详情：用户选中条目后获取完整信息",
-    "example.text.4": "2. 以指定标题注册外部库，挂载符号类型资源",
-    "example.text.5": "3. 输出注册结果，库面板中即可看到「嘉立创示例_外部库」",
+    "example.text.0": "注册外部库并挂载符号类型资源：",
+    "example.text.1": "1. 实现外部库的符号数据回调（真实场景中在此对接自己的数据源）",
+    "example.text.2": "分类树：库面板左侧的分类目录",
+    "example.text.3": "列表搜索：响应用户的关键字搜索与分页，返回分页结构",
+    "example.text.4": "详情：用户选中条目后获取完整信息",
+    "example.text.5": "2. 以指定标题注册外部库，挂载符号类型资源",
+    "example.text.6": "3. 输出注册结果，库面板中即可看到「嘉立创示例_外部库」",
+    "example.text.7": "注册外部库并分别控制各资源类型是否允许另存为（器件允许、符号与封装禁止，缺省的 cbb/model3d 视为允许）：",
     "params.title": "标题",
     "params.libFunctions": "库方法",
+    "params.props": "附加配置，如 {@link ILIB_RegisterExtendLibraryProps.saveAs | saveAs} 可分别控制器件、符号、封装等资源是否允许另存为（缺省均允许）",
     "returns": "库 UUID"
   },
   "title": "Register an external library",
@@ -95,7 +110,10 @@
   "example.text.3": null,
   "example.text.4": null,
   "example.text.5": null,
+  "example.text.6": null,
+  "example.text.7": null,
   "params.title": "Title",
   "params.libFunctions": "Library functions",
+  "params.props": null,
   "returns": "Library UUID"
 }

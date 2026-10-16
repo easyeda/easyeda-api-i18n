@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "ESYS_JobState",
+    "kind": "enum",
+    "name": "ESYS_JobState",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "作业状态",
+    "remarks.text.0": "自动布线 / 自动布局等长任务作业的运行阶段，可轮询查询"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

@@ -20,7 +20,7 @@
     },
     "versionTags": [
       {
-        "tag": "ADD since EDA v4",
+        "tag": "ADD since EDA v4.1.79",
         "position": "standalone",
         "field": "remarks"
       }

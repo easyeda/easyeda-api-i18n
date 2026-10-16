@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "id": "ISYS_HelpAudienceEntry",
+    "kind": "interface",
+    "name": "ISYS_HelpAudienceEntry",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "受众推荐条目（对应 `@recommendedFor` / `@notRecommendedFor` 标签）",
+    "remarks.text.0": "如 `@recommendedFor cli - 需 force=true` 解析为 `{ role: 'cli', note: '需 force=true' }`",
+    "properties.role": "受众 / 场景标识（如 `cli`、`human`、`plugin`）",
+    "properties.note": "推荐 / 不推荐的补充说明"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.role": null,
+  "properties.note": null
+}

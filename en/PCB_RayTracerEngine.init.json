@@ -5,16 +5,29 @@
     "name": "init",
     "className": "PCB_RayTracerEngine",
     "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
     "versionTags": [
       {
-        "tag": "ADD since EDA v4",
+        "tag": "ADD since EDA v4.1.79",
         "position": "standalone",
         "field": "remarks"
       }
     ]
   },
   "_source": {
-    "title": "初始化光线追踪引擎"
+    "title": "初始化光线追踪引擎",
+    "remarks.text.0": "headless / 无头环境下 `init()` 可能返回 `undefined`（不可用）；\n可用性判定用 `init() === undefined`，3D 光追相关流程不要假定一定可用",
+    "params.resourceProvider": "可选的光线追踪资源提供者：引擎按需以文件路径向扩展请求单个资源，扩展读取后返回"
   },
-  "title": "Initialize the ray tracer engine"
+  "title": "Initialize the ray tracer engine",
+  "remarks.text.0": null,
+  "params.resourceProvider": null
 }

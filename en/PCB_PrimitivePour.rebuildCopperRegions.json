@@ -4,14 +4,67 @@
     "kind": "method",
     "name": "rebuildCopperRegions",
     "className": "PCB_PrimitivePour",
-    "sourceFile": "dist/api-types.d.ts"
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [],
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const x = 2000 + Math.floor(Math.random() * 100000);\nconst y = 2000 + Math.floor(Math.random() * 100000);\nconst polygon1 = eda.pcb_MathPolygon.createPolygon(['R', x, y, 500, 300, 0, 0]);\nconst polygon2 = eda.pcb_MathPolygon.createPolygon(['R', x, y + 500, 500, 300, 0, 0]);\nconst pour1 = await eda.pcb_PrimitivePour.create('GND', 1, polygon1, 'solid', false, '嘉立创示例_批量重建1', 5, 10, false);\nconst pour2 = await eda.pcb_PrimitivePour.create('GND', 1, polygon2, 'solid', false, '嘉立创示例_批量重建2', 5, 10, false);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pouredList = await eda.pcb_PrimitivePour.rebuildCopperRegions([\n  pour1.getState_PrimitiveId(),\n  pour2.getState_PrimitiveId(),\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const allPouredList = await eda.pcb_PrimitivePour.rebuildCopperRegions();\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "console.log('pouredList length:', pouredList.length);\nconsole.log('allPouredList length:', allPouredList.length);\nif (pouredList.length > 0) {\n  console.log('所属覆铜边框 ID:', pouredList[0].getState_PourPrimitiveId());\n  console.log('填充子区域数量:', pouredList[0].getState_PourFills().length);\n}\n```"
+        }
+      ]
+    }
   },
   "_source": {
     "title": "重建覆铜区域",
+    "example.text.0": "1. 创建两条待重建的测试覆铜边框（随机坐标避免重合）",
+    "example.text.1": "2. 传入图元 ID 数组：只重建这两条覆铜的填充",
+    "example.text.2": "3. 不传参：重建画布上所有覆铜区域",
+    "example.text.3": "4. 读取重建结果（按覆铜边框分组，重建不出填充的覆铜不在返回值中）",
     "params.primitiveIds": "覆铜边框图元 ID 数组，如若未传入则重建所有覆铜区域",
-    "returns": "覆铜填充图元数组"
+    "returns": "覆铜填充图元数组（按覆铜边框分组），无重建结果的覆铜边框不会出现在返回值中"
   },
   "title": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.primitiveIds": null,
   "returns": null
 }

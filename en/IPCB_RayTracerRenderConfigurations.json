@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerRenderConfigurations",
+    "kind": "interface",
+    "name": "IPCB_RayTracerRenderConfigurations",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "光追渲染配置",
+    "remarks.text.0": "各字段可选，按字段部分更新生效",
+    "properties.file": "附加资源文件（背景 HDR / 渲染器 LUT）",
+    "properties.background": "背景配置",
+    "properties.renderer": "渲染器配置",
+    "properties.light": "光源配置，按光源名索引",
+    "properties.materialConfig": "选中材质配置",
+    "properties.pcbMaterialConfig": "PCB 材质配置"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.file": null,
+  "properties.background": null,
+  "properties.renderer": null,
+  "properties.light": null,
+  "properties.materialConfig": null,
+  "properties.pcbMaterialConfig": null
+}

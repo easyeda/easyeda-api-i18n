@@ -18,6 +18,10 @@
         {
           "type": "text",
           "key": "remarks.text.2"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.3"
         }
       ],
       "example": [
@@ -50,7 +54,8 @@
     "title": "使用立创 C 编号批量获取器件",
     "remarks.text.0": "默认情况下，如果在同一个库内匹配到多个相同 C 编号的器件，将只会返回第一个结果；",
     "remarks.text.1": "如果希望返回多个结果，请将 `allowMultiMatch` 置为 `true`；",
-    "remarks.text.2": "私有化部署环境暂无法使用本接口",
+    "remarks.text.2": "客户端 **全离线** 环境没有系统库，此时必须传入 `libraryUuid`，否则将 `throw Error`；",
+    "remarks.text.3": "私有化部署环境暂无法使用本接口",
     "example.text.0": "1. 单个 C 编号查询（默认搜索系统库）",
     "example.text.1": "2. 批量查询多个 C 编号",
     "params.lcscIds": "立创 C 编号数组",
@@ -62,6 +67,7 @@
   "remarks.text.0": "By default, if multiple devices with the same C number are matched in the same library, only the first result will be returned;",
   "remarks.text.1": "If you want to return multiple results, set `allowMultiMatch` to `true`;",
   "remarks.text.2": "This API is temporarily unavailable in the private deployment environment",
+  "remarks.text.3": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.lcscIds": "Array of LCSC C numbers",

@@ -1,0 +1,14 @@
+{
+  "_meta": {
+    "id": "ILIB_RegisterExtendLibraryProps",
+    "kind": "interface",
+    "name": "ILIB_RegisterExtendLibraryProps",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "注册外部库的附加配置",
+    "properties.saveAs": "各资源类型是否允许另存为"
+  },
+  "title": null,
+  "properties.saveAs": null
+}

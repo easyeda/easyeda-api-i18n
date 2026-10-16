@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerRendererConfig",
+    "kind": "interface",
+    "name": "IPCB_RayTracerRendererConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追渲染器配置",
+    "properties.maxRayBounces": "最大光线反弹次数",
+    "properties.rendererMaxSample": "最大采样数",
+    "properties.rendererEnableDenoise": "是否启用降噪",
+    "properties.displayDevice": "显示设备",
+    "properties.viewTransform": "视图变换",
+    "properties.lutName": "LUT 文件名"
+  },
+  "title": null,
+  "properties.maxRayBounces": null,
+  "properties.rendererMaxSample": null,
+  "properties.rendererEnableDenoise": null,
+  "properties.displayDevice": null,
+  "properties.viewTransform": null,
+  "properties.lutName": null
+}

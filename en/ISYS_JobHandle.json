@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "id": "ISYS_JobHandle",
+    "kind": "interface",
+    "name": "ISYS_JobHandle",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "作业句柄",
+    "remarks.text.0": "启动长任务作业后立即返回的标识，后续凭此查询状态、取消作业与读取日志",
+    "properties.jobId": "作业 ID"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.jobId": null
+}

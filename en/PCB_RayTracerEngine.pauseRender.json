@@ -13,7 +13,14 @@
         }
       ],
       "example": []
-    }
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
   },
   "_source": {
     "title": "暂停光线追踪渲染",

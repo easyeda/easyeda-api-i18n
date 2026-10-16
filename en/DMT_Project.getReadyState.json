@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "id": "DMT_Project.getReadyState",
+    "kind": "method",
+    "name": "getReadyState",
+    "className": "DMT_Project",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    },
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取工程的就绪状态",
+    "remarks.text.0": "返回工程的就绪阶段（未加载 / 加载中 / 就绪 / 失败），无需依赖业务数据推断",
+    "params.projectUuid": "工程 UUID 或客户端工程文件路径，如若不指定，则默认为当前工程",
+    "returns": "目标工程的就绪状态"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.projectUuid": null,
+  "returns": null
+}

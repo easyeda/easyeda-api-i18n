@@ -6,7 +6,12 @@
     "className": "LIB_Footprint",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -35,6 +40,7 @@
   },
   "_source": {
     "title": "使用属性精确搜索封装",
+    "remarks.text.0": "该接口暂时不支持工程库的精确搜索",
     "example.text.0": "1. 按名称精确搜索（官方属性集合目前仅支持 name）\n当前版本该接口不稳定：可能抛错，也可能正常返回 undefined，两种都要兼容",
     "example.text.1": "2. 输出搜索结果",
     "params.properties": "属性",
@@ -42,6 +48,7 @@
     "returns": "搜索到的封装属性的列表"
   },
   "title": "Search footprints precisely by properties",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.properties": "Property",

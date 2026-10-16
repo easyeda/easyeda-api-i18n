@@ -49,7 +49,7 @@
   },
   "_source": {
     "title": "获取 BOM 文件",
-    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统；\n`fileType='csv'` 时文件实际为 **UTF-16**（`b\"\\xff\\xfe\"` 魔数），直接写 `.csv` 会被误解码",
     "example.text.0": "使用默认配置导出 BOM",
     "example.text.1": "自定义 BOM 过滤和列配置",
     "example.text.2": "导出 CSV 格式 BOM",

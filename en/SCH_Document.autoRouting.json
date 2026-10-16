@@ -10,6 +10,10 @@
         {
           "type": "text",
           "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
         }
       ],
       "example": [
@@ -68,16 +72,18 @@
   "_source": {
     "title": "自动布线",
     "remarks.text.0": "如不传入任何参数，将对所有未布线的网络进行自动布线",
+    "remarks.text.1": "注意事项：\n- 网表键以 `getState_UniqueId()` 为准：新建元件在 `save()` 前可能返回空串，导致与网表键对不上；\n  如需稳定键，请先 `save()` 或显式传入 `props.netlist` 自建网表源；\n- netflag / netport 图元需要零长度锚点导线才能生效（缺失时端口 / 旗标不生效），自动布线前请确保锚点导线已补齐",
     "example.text.0": "1. 创建测试原理图并打开",
     "example.text.1": "2. 放置两个测试器件并取第一个引脚的坐标（关键字搜索当前版本异常，按 C 编号反查器件）",
     "example.text.2": "3. 在两个引脚上放同名接地标志，构成一个跨器件的 GND 网络",
     "example.text.3": "4. 统计布线前导线数，执行自动布线后再统计一次",
     "example.text.4": "5. 清理测试原理图（器件与网络标志随文档一起删除）",
-    "params.props": "自动布线参数",
+    "params.props": "自动布线参数（含网表源、设计符器件类型映射等）",
     "returns": "自动布线结果"
   },
   "title": "Auto routing",
   "remarks.text.0": "If no parameters are passed in, auto routing will be performed for all unrouted nets",
+  "remarks.text.1": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

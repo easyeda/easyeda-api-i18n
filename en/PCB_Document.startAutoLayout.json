@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "id": "PCB_Document.startAutoLayout",
+    "kind": "method",
+    "name": "startAutoLayout",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "以作业模型启动自动布局",
+    "remarks.text.0": "立即返回作业句柄（`jobId`），布局过程可用 {@link PCB_Document.getAutoJobStatus | getAutoJobStatus} 查询、\n{@link PCB_Document.cancelAutoJob | cancelAutoJob} 取消",
+    "returns": "自动布局作业句柄"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "returns": null
+}

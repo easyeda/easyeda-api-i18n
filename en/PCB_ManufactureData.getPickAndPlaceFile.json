@@ -31,7 +31,7 @@
   },
   "_source": {
     "title": "获取坐标文件（PickAndPlace）",
-    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统；\n`fileType='csv'` 时文件实际为 **UTF-16LE + TAB 分隔** 且无扩展名，需按内容魔数（`b\"\\xff\\xfe\"`）判定格式",
     "example.text.0": "导出毫米单位的 Excel 格式坐标文件",
     "params.fileName": "文件名",
     "params.fileType": "文件类型",

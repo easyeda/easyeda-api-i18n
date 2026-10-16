@@ -6,7 +6,12 @@
     "className": "PCB_Document",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -53,6 +58,7 @@
   },
   "_source": {
     "title": "从原理图导入变更",
+    "remarks.text.0": "如需尽可能不被弹窗阻断（CLI 调用时推荐），请传入 `force` 为 `true`，这样在不遇到严重错误时不会出现任何弹窗；\n`force=true` 会跳过确认弹窗并自动全量导入，且等待导入完成后再返回（非交互执行方式，见 {@link PCB_Document.importChanges | 参数 `force`}）",
     "example.text.0": "1. 创建测试原理图和测试 PCB",
     "example.text.1": "2. 创建板子把原理图与 PCB 关联起来（返回板子名称）",
     "example.text.2": "3. 打开 PCB 并从关联原理图导入变更",
@@ -61,6 +67,7 @@
     "returns": "导入操作是否成功，导入失败或未传入原理图 UUID 的游离 PCB 将返回 `false`"
   },
   "title": "Import changes from the schematic",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

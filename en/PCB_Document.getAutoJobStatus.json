@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.getAutoJobStatus",
+    "kind": "method",
+    "name": "getAutoJobStatus",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "查询自动布线 / 自动布局作业状态",
+    "remarks.text.0": "返回指定作业的进度、结构化错误与中间结果是否已提交，无需靠超时猜测状态；\n仅适用于 {@link PCB_Document.startAutoRouting | startAutoRouting} 与 {@link PCB_Document.startAutoLayout | startAutoLayout} 启动的作业",
+    "params.jobId": "作业 ID",
+    "returns": "作业状态详情，作业不存在时为 `undefined`"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.jobId": null,
+  "returns": null
+}

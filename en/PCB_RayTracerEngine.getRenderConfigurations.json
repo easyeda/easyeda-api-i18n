@@ -16,7 +16,7 @@
     },
     "versionTags": [
       {
-        "tag": "ADD since EDA v4",
+        "tag": "ADD since EDA v4.1.79",
         "position": "standalone",
         "field": "remarks"
       }
@@ -24,7 +24,7 @@
   },
   "_source": {
     "title": "获取光线追踪渲染配置",
-    "remarks.text.0": "本接口配置定义还在进行中",
+    "remarks.text.0": "headless / 无头环境下本接口可能 **挂起直到超时**，无头流程应避免调用 3D 光追",
     "returns": "渲染配置"
   },
   "title": "Get the ray tracer render configurations",

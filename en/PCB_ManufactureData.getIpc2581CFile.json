@@ -40,7 +40,7 @@
   },
   "_source": {
     "title": "获取 IPC-2581C 文件",
-    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统",
+    "remarks.text.0": "可以使用 {@link SYS_FileSystem.saveFile} 接口将文件导出到本地文件系统；\n导出失败时可能返回 2 字节空文件且不报错，需自行校验文件大小",
     "example.text.0": "1. 发起导出（XML 格式、毫米单位、OEM 编号取元件的 Device 属性），\n25 秒内完成就输出文件信息",
     "example.text.1": "2. 查看导出结果",
     "params.fileName": "文件名",

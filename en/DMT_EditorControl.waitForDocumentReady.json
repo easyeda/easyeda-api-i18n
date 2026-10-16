@@ -1,0 +1,30 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.waitForDocumentReady",
+    "kind": "method",
+    "name": "waitForDocumentReady",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "等待文档就绪",
+    "remarks.text.0": "阻塞等待指定文档可操作（数据加载完成）后再返回，避免在文档未就绪时发起读写导致静默失败或 `create` 挂起；\n超过 `timeoutMs` 仍未就绪时返回 `false`",
+    "params.documentUuidOrTabId": "文档 UUID 或标签页 ID",
+    "params.timeoutMs": "最长等待时间（毫秒），缺省为 60000",
+    "returns": "文档是否已在超时前就绪"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.documentUuidOrTabId": null,
+  "params.timeoutMs": null,
+  "returns": null
+}

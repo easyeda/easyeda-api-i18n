@@ -53,7 +53,7 @@
     "params.rotation": "旋转角度，可选 `0` `90` `180` `270`",
     "params.textColor": "文本颜色，`null` 表示默认",
     "params.fontName": "字体名称，`null` 表示默认",
-    "params.fontSize": "字体大小，`null` 表示默认",
+    "params.fontSize": "字体大小，单位与画布单位相同（0.01inch，100 = 1inch），`null` 表示默认",
     "params.bold": "是否加粗",
     "params.italic": "是否斜体",
     "params.underLine": "是否加下划线",

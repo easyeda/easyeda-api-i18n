@@ -1,0 +1,33 @@
+{
+  "_meta": {
+    "id": "ISYS_JobStatus",
+    "kind": "interface",
+    "name": "ISYS_JobStatus",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "作业状态详情",
+    "remarks.text.0": "含进度、结构化错误与中间结果是否已提交的信息，无需靠超时猜测状态",
+    "properties.jobId": "作业 ID",
+    "properties.state": "作业状态",
+    "properties.progress": "进度（`0` - `100`，整数百分比）",
+    "properties.error": "结构化错误信息（作业失败时携带）",
+    "properties.partial": "中间结果是否已提交（如自动布线超时 / 失败后中间几何是否已落盘）"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "properties.jobId": null,
+  "properties.state": null,
+  "properties.progress": null,
+  "properties.error": null,
+  "properties.partial": null
+}

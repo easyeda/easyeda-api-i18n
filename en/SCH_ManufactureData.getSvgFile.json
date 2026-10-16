@@ -14,6 +14,10 @@
         {
           "type": "text",
           "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
         }
       ],
       "example": []
@@ -29,13 +33,15 @@
   "_source": {
     "title": "获取 SVG 文件",
     "remarks.text.0": "多图页时会导出为压缩包（zip）",
-    "remarks.text.1": "/ EDA v4.1.23",
+    "remarks.text.1": "注意：返回的文件与 {@link SCH_ManufactureData.getPngFile | getPngFile} 同名（`schematic.zip`），\n保存时须自行改名以免互相覆盖",
+    "remarks.text.2": "/ EDA v4.1.23",
     "params.fileName": "文件名",
     "returns": "SVG 文件数据（或压缩包）"
   },
   "title": null,
   "remarks.text.0": null,
   "remarks.text.1": null,
+  "remarks.text.2": null,
   "params.fileName": null,
   "returns": null
 }

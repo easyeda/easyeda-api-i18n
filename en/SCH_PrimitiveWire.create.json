@@ -6,7 +6,12 @@
     "className": "SCH_PrimitiveWire",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -44,6 +49,7 @@
   },
   "_source": {
     "title": "创建导线",
+    "remarks.text.0": "WIRE 组即连通性模型：同网络折线若写成多个 WIRE 组，即使端点相同也不会连通；\n编辑器 `create()` 会自动把同网络折线合并为一个 WIRE primitive group，跨组连通需确保段与段首尾相接",
     "example.text.0": "1. 生成随机起点坐标，避免与画布上已有的导线重合（SCH 坐标单位 10mil）",
     "example.text.1": "2. 创建一条两段相连的 L 形导线：先向右再向上，段与段必须首尾相连且各自水平或垂直",
     "example.text.2": "3. 创建类保留现场，不删除图元；Line 读回是画布规格化坐标（端点顺序可能与传入相反），只打印不做断言",
@@ -55,6 +61,7 @@
     "returns": "导线图元对象"
   },
   "title": "Create Wire",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

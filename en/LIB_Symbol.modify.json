@@ -24,7 +24,7 @@
         },
         {
           "type": "code",
-          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(\n  libraryUuid,\n  '嘉立创示例_符号修改前_' + Date.now(),\n  [],\n  '1',\n  '修改前的描述'\n);\n"
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(\n  libraryUuid,\n  '嘉立创示例_符号修改前_' + Date.now(),\n  [],\n  ELIB_SymbolType.COMPONENT,\n  '修改前的描述'\n);\n"
         },
         {
           "type": "text",

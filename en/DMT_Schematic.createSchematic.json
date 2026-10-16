@@ -6,7 +6,12 @@
     "className": "DMT_Schematic",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -44,6 +49,7 @@
   },
   "_source": {
     "title": "创建原理图",
+    "remarks.text.0": "不传 `boardName` 时 **会自动创建一块 Board**（此后直接调用 `createBoard()` 会得到 2 块板），\n如需游离原理图请显式管理 Board 归属",
     "example.text.0": "1. 创建原理图（不指定 boardName，得到游离原理图），返回新原理图 UUID",
     "example.text.1": "2. 等 1.5s 让原理图在工作区落地，回读确认（自带图页 p1）",
     "example.text.2": "3. 删除本例创建的原理图，保持工程整洁",
@@ -51,6 +57,7 @@
     "returns": "原理图 UUID，如若为 `undefined` 则创建失败"
   },
   "title": "Create Schematic",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

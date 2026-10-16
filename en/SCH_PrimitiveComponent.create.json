@@ -6,7 +6,12 @@
     "className": "SCH_PrimitiveComponent",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -44,6 +49,7 @@
   },
   "_source": {
     "title": "创建器件",
+    "remarks.text.0": "- 引脚坐标可能不在布线栅格上（如出现 `698.5` 半格值），连接导线时两端须使用**原始坐标**，四舍五入会使端点散落为大量 `$xNnn` 短线；\n- `rotation` / `mirror` 必须填写**真实值**，硬编码 0 会使 90° 器件的引脚整体错位",
     "example.text.0": "1. 从系统库搜索器件，随机坐标避免与画布已有器件重合（SCH 坐标单位 10mil）",
     "example.text.1": "2. 创建器件：搜索结果直接作为关联库器件传入，加入 BOM 并转到 PCB",
     "example.text.2": "3. 创建类保留现场，供在画布上观察摆放结果",
@@ -58,6 +64,7 @@
     "returns": "器件图元对象"
   },
   "title": "Create Device",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

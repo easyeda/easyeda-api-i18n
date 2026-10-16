@@ -6,7 +6,12 @@
     "className": "LIB_Device",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -35,6 +40,7 @@
   },
   "_source": {
     "title": "搜索器件",
+    "remarks.text.0": "本接口为 **模糊搜索**，可能返回社区伪编号（如 `C99xxxxxxx`）或近似结果（如 `C14604` 命中近似型号）；\n需要按属性精确检索请用 {@link LIB_Device.searchByProperties | searchByProperties}（如 `{ supplierId: 'C1523' }`）",
     "example.text.0": "1. 按关键字搜索系统库中的器件，每页 5 条",
     "example.text.1": "2. 输出搜索结果",
     "params.key": "搜索关键字",
@@ -46,6 +52,7 @@
     "returns": "搜索到的器件属性的列表"
   },
   "title": "Search device",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.key": "Search keyword",

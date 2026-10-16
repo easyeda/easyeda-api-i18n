@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerSceneElementTransform",
+    "kind": "interface",
+    "name": "IPCB_RayTracerSceneElementTransform",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追场景元素变换参数",
+    "properties.position": "位置",
+    "properties.rotation": "旋转（角度）",
+    "properties.scale": "缩放"
+  },
+  "title": null,
+  "properties.position": null,
+  "properties.rotation": null,
+  "properties.scale": null
+}

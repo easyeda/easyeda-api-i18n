@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerSceneElement",
+    "kind": "interface",
+    "name": "IPCB_RayTracerSceneElement",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追场景元素",
+    "properties.id": "元素 ID",
+    "properties.name": "元素名称",
+    "properties.transform": "变换参数"
+  },
+  "title": null,
+  "properties.id": null,
+  "properties.name": null,
+  "properties.transform": null
+}

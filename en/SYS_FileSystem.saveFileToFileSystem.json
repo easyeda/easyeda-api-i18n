@@ -14,6 +14,10 @@
         {
           "type": "text",
           "key": "remarks.text.1"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.2"
         }
       ],
       "example": []
@@ -23,18 +27,18 @@
     "title": "向文件系统写入文件",
     "remarks.text.0": "注意 1：本接口仅客户端有效，在浏览器环境内调用将始终 `throw Error`",
     "remarks.text.1": "注意 2：本接口需要使用者启用扩展的外部交互权限，如若未启用将始终 `throw Error`",
+    "remarks.text.2": "注意 3：CLI 本地文件写入**不做路径白名单校验**、不受 `APP_PROJECT_DIR` 限制；`uri` 结尾带斜杠 `/`（Windows 为反斜杠 `\\`）识别为目录，`force` 控制是否覆盖已存在文件",
     "params.uri": "文件资源定位符 如若结尾为斜杠 `/`（Windows 为反斜杠 `\\`），则识别为文件夹； 如若结尾非斜杠，则识别为完整文件名，此时 `fileName` 参数将被忽略",
     "params.fileData": "文件数据",
     "params.fileName": "文件名称",
-    "params.force": "强制写入（文件存在则覆盖文件）",
     "returns": "写入操作是否成功，如若不允许覆盖但文件已存在将返回 `false` 的结果"
   },
   "title": "Write a file to the file system",
   "remarks.text.0": "Note 1: This API is only valid for clients. Calling it in a browser environment will always `throw Error`",
   "remarks.text.1": "Note 2: This API requires the user to enable the extension external interaction permission, if not enabled, it will always `throw Error`",
+  "remarks.text.2": null,
   "params.uri": "File resource locator. If it ends with a slash `/` (a backslash `\\` on Windows), it is recognized as a folder; if it does not end with a slash, it is recognized as a complete file name, in which case the `fileName` parameter is ignored",
   "params.fileData": "File data",
   "params.fileName": "File name",
-  "params.force": "Force write (overwrite the file if it exists)",
   "returns": "Whether the write operation was successful. If overwriting is not allowed but the file already exists, `false` is returned"
 }

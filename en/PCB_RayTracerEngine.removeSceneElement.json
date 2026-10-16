@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.removeSceneElement",
+    "kind": "method",
+    "name": "removeSceneElement",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "移除场景元素",
+    "params.id": "场景元素 ID"
+  },
+  "title": null,
+  "params.id": null
+}

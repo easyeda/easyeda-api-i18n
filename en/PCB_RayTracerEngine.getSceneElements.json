@@ -1,0 +1,22 @@
+{
+  "_meta": {
+    "id": "PCB_RayTracerEngine.getSceneElements",
+    "kind": "method",
+    "name": "getSceneElements",
+    "className": "PCB_RayTracerEngine",
+    "sourceFile": "dist/api-types.d.ts",
+    "versionTags": [
+      {
+        "tag": "ADD since EDA v4.1.79",
+        "position": "standalone",
+        "field": "remarks"
+      }
+    ]
+  },
+  "_source": {
+    "title": "获取当前所有场景元素",
+    "returns": "场景元素列表"
+  },
+  "title": null,
+  "returns": null
+}

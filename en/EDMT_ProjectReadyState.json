@@ -1,0 +1,23 @@
+{
+  "_meta": {
+    "id": "EDMT_ProjectReadyState",
+    "kind": "enum",
+    "name": "EDMT_ProjectReadyState",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "工程就绪状态",
+    "remarks.text.0": "工程数据加载 / 初始化的阶段，读写工程前可据此确认工程已就绪，避免误判「工程为空」或触发永久挂起"
+  },
+  "title": null,
+  "remarks.text.0": null
+}

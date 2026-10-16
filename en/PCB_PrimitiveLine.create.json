@@ -6,7 +6,12 @@
     "className": "PCB_PrimitiveLine",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -44,6 +49,7 @@
   },
   "_source": {
     "title": "创建直线",
+    "remarks.text.0": "- 板框层（`BOARD_OUTLINE = 11`）须用 {@link PCB_PrimitivePolyline | Polyline} 绘制，本接口不适用；\n- 走线与已有图元相交处会被原生分割（如调用 200 次可能得到 202 段），几何校验不能只比段数",
     "example.text.0": "1. 生成随机起点坐标，避免与画布上已有的直线重合",
     "example.text.1": "2. 在顶层铜层创建一条水平走线：起点（x, y）到终点（x+600, y），线宽 10mil，不锁定",
     "example.text.2": "3. 创建类保留现场，不删除图元",
@@ -58,6 +64,7 @@
     "returns": "直线图元对象"
   },
   "title": "Create a line",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

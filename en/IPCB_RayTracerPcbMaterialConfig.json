@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerPcbMaterialConfig",
+    "kind": "interface",
+    "name": "IPCB_RayTracerPcbMaterialConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追 PCB 材质配置",
+    "properties.substrate": "基板材质",
+    "properties.solder": "阻焊材质",
+    "properties.spray": "喷镀材质",
+    "properties.lastSubstrate": "上一次基板材质（用于替换）",
+    "properties.lastSolder": "上一次阻焊材质",
+    "properties.lastSpray": "上一次喷镀材质"
+  },
+  "title": null,
+  "properties.substrate": null,
+  "properties.solder": null,
+  "properties.spray": null,
+  "properties.lastSubstrate": null,
+  "properties.lastSolder": null,
+  "properties.lastSpray": null
+}

@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "id": "IPCB_RayTracerLightConfig",
+    "kind": "interface",
+    "name": "IPCB_RayTracerLightConfig",
+    "sourceFile": "dist/api-types.d.ts"
+  },
+  "_source": {
+    "title": "光追光源配置",
+    "properties.color": "颜色",
+    "properties.power": "功率",
+    "properties.size": "尺寸",
+    "properties.position": "位置",
+    "properties.rotate": "旋转",
+    "properties.normalize": "是否归一化",
+    "properties.rayVisibilityDiffuse": "光线可见性-漫反射",
+    "properties.rayVisibilityGlossy": "光线可见性-光泽",
+    "properties.castShadow": "是否投射阴影",
+    "properties.hideRender": "渲染时隐藏",
+    "properties.cameraVisible": "相机可见",
+    "properties.spread": "扩散角",
+    "properties.colorMap": "颜色贴图名",
+    "properties.file": "光源贴图文件"
+  },
+  "title": null,
+  "properties.color": null,
+  "properties.power": null,
+  "properties.size": null,
+  "properties.position": null,
+  "properties.rotate": null,
+  "properties.normalize": null,
+  "properties.rayVisibilityDiffuse": null,
+  "properties.rayVisibilityGlossy": null,
+  "properties.castShadow": null,
+  "properties.hideRender": null,
+  "properties.cameraVisible": null,
+  "properties.spread": null,
+  "properties.colorMap": null,
+  "properties.file": null
+}

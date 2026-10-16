@@ -20,7 +20,48 @@
           "key": "remarks.text.2"
         }
       ],
-      "example": []
+      "example": [
+        {
+          "type": "code",
+          "content": "```javascript"
+        },
+        {
+          "type": "text",
+          "key": "example.text.0",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const libraryUuid = await eda.lib_LibrariesList.getPersonalLibraryUuid();\nconst symbolUuid = await eda.lib_Symbol.create(\n  libraryUuid,\n  '嘉立创示例_读取源码_' + Date.now(),\n  [],\n  ELIB_SymbolType.COMPONENT\n);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.1",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const pending = eda.lib_Symbol.getDocumentSource(symbolUuid, libraryUuid);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.2",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "const settled = await Promise.race([\n  Promise.resolve(pending).then(\n    source => 'fulfilled，源码长度 ' + (source ? source.length : '空'),\n    () => 'rejected'\n  ),\n  new Promise(resolve => setTimeout(() => resolve('pending（3 秒内未返回）'), 3000)),\n]);\n"
+        },
+        {
+          "type": "text",
+          "key": "example.text.3",
+          "prefix": "// "
+        },
+        {
+          "type": "code",
+          "content": "await eda.lib_Symbol.delete(symbolUuid, libraryUuid);\n\nconsole.log('symbolUuid:', symbolUuid);\nconsole.log('returns:', typeof pending.then === 'function' ? 'Promise' : typeof pending);\nconsole.log('settled:', settled);\n```"
+        }
+      ]
     }
   },
   "_source": {
@@ -28,6 +69,10 @@
     "remarks.text.0": "与 {@link LIB_Symbol.updateDocumentSource} 对称的读取接口；返回 **3.0 格式**（esym）的符号源数据，\n可直接用于组装原理图源数据（如 AI 生成 eprj3 工程）。",
     "remarks.text.1": "支持工程库 / 非工程库（系统库 / 个人库 / 扩展库）：\n- 工程库：从当前打开的工程 worker 读取（含未保存内容）；\n- 非工程库：从 lib.worker 读取（含未保存内容），worker 无缓存时回退网络获取，\n  自动处理 `history_uuid`（历史版本）、`dataStrId`（远程存储）与 2.0 → 3.0 格式转换。",
     "remarks.text.2": "获取失败（如库条目不存在）将返回 `undefined`",
+    "example.text.0": "1. 获取个人库 UUID 并新建符号作为读取对象（第四参数为符号类型，见 ELIB_SymbolType）",
+    "example.text.1": "2. 读取该符号的文档源码（第二参数为符号所属库）",
+    "example.text.2": "3. 等待 3 秒观察结果状态（当前版本 Promise 不 settle，用超时保护避免卡住）",
+    "example.text.3": "4. 清理测试符号（查询类需要清理）",
     "params.symbolUuid": "符号 UUID",
     "params.libraryUuid": "库 UUID，默认为系统库，可以使用 {@link LIB_LibrariesList} 内的接口获取",
     "returns": "符号的 3.0 文档源码（esym JSON 字符串），获取失败返回 `undefined`"
@@ -36,6 +81,10 @@
   "remarks.text.0": null,
   "remarks.text.1": null,
   "remarks.text.2": null,
+  "example.text.0": null,
+  "example.text.1": null,
+  "example.text.2": null,
+  "example.text.3": null,
   "params.symbolUuid": null,
   "params.libraryUuid": null,
   "returns": null

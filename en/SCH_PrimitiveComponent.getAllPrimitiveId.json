@@ -6,7 +6,16 @@
     "className": "SCH_PrimitiveComponent",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        },
+        {
+          "type": "text",
+          "key": "remarks.text.1"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -53,6 +62,8 @@
   },
   "_source": {
     "title": "获取所有器件的图元 ID",
+    "remarks.text.0": "`allSchematicPages=true` 时本接口 **不会主动加载未打开的图页**，只返回已加载图页中的器件",
+    "remarks.text.1": "如需覆盖全部图页，请先打开所有图页（如逐页 `openDocument`）再调用",
     "example.text.0": "1. 创建一个网络标识作为查找目标（随机坐标避免重合，SCH 坐标单位 10mil）",
     "example.text.1": "2. 不传参数，取当前图页全部器件的图元 ID",
     "example.text.2": "3. 传入类型 'netflag' 只取网络标识的图元 ID",
@@ -62,6 +73,8 @@
     "returns": "器件的图元 ID 数组"
   },
   "title": "Get all Device primitive IDs",
+  "remarks.text.0": null,
+  "remarks.text.1": null,
   "example.text.0": null,
   "example.text.1": null,
   "example.text.2": null,

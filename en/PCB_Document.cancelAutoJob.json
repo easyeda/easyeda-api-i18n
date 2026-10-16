@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "PCB_Document.cancelAutoJob",
+    "kind": "method",
+    "name": "cancelAutoJob",
+    "className": "PCB_Document",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "取消自动布线 / 自动布局作业",
+    "remarks.text.0": "终止失控的自动布线 / 自动布局作业，无需等待内部截止时间；\n仅适用于 {@link PCB_Document.startAutoRouting | startAutoRouting} 与 {@link PCB_Document.startAutoLayout | startAutoLayout} 启动的作业",
+    "params.jobId": "作业 ID",
+    "returns": "是否成功发起取消"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.jobId": null,
+  "returns": null
+}

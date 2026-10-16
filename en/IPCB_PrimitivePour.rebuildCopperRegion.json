@@ -57,7 +57,7 @@
     "example.text.1": "2. 创建一个挂 GND 网络的覆铜边框（保留现场供观察）",
     "example.text.2": "3. 重建覆铜填充（成功时返回生成的覆铜填充图元）",
     "example.text.3": "当前版本在纯 API 创建的覆铜上重建会报内部错误，捕获后继续",
-    "returns": "覆铜填充图元，如若未重建出覆铜填充图元则返回 `undefined`"
+    "returns": "覆铜填充图元，如若未重建出覆铜填充图元则返回 `undefined`； 返回值可能包含 **多个 Pour** 的填充，请以 {@link IPCB_PrimitivePoured.getState_PourPrimitiveId | getState_PourPrimitiveId} 归属， 不要假设 `primitiveId` 在本次调用内唯一"
   },
   "title": "Rebuild the copper fill of the copper region",
   "example.text.0": null,

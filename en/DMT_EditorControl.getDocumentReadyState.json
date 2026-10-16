@@ -1,0 +1,28 @@
+{
+  "_meta": {
+    "id": "DMT_EditorControl.getDocumentReadyState",
+    "kind": "method",
+    "name": "getDocumentReadyState",
+    "className": "DMT_EditorControl",
+    "sourceFile": "dist/api-types.d.ts",
+    "codeSegments": {
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
+      "example": []
+    }
+  },
+  "_source": {
+    "title": "获取文档的就绪状态",
+    "remarks.text.0": "返回指定文档的就绪阶段（未加载 / 加载中 / 就绪 / 失败），可用于多文档顺序加载的流程编排",
+    "params.documentUuidOrTabId": "文档 UUID 或标签页 ID",
+    "returns": "指定文档的就绪状态"
+  },
+  "title": null,
+  "remarks.text.0": null,
+  "params.documentUuidOrTabId": null,
+  "returns": null
+}

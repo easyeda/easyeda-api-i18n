@@ -55,9 +55,9 @@
     "title": "设置属性状态：字体大小",
     "example.text.0": "1. 生成本次运行专用的坐标，避免与之前保留的测试文本重合",
     "example.text.1": "2. 创建一个默认字号的测试文本（SCH 坐标单位 10mil）",
-    "example.text.2": "3. 切换异步模式，把字号增大到 20",
+    "example.text.2": "3. 切换异步模式，把字号增大到 20（单位 0.01inch，即 0.2inch）",
     "example.text.3": "4. 从画布重新读取，确认修改已生效（保留现场供观察）",
-    "params.fontSize": "字体大小",
+    "params.fontSize": "字体大小，单位与画布单位相同（0.01inch，100 = 1inch）",
     "returns": "文本图元对象"
   },
   "title": "Set the property state: font size",

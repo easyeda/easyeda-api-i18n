@@ -6,7 +6,12 @@
     "className": "DMT_Board",
     "sourceFile": "dist/api-types.d.ts",
     "codeSegments": {
-      "remarks": [],
+      "remarks": [
+        {
+          "type": "text",
+          "key": "remarks.text.0"
+        }
+      ],
       "example": [
         {
           "type": "code",
@@ -35,6 +40,7 @@
   },
   "_source": {
     "title": "创建板子",
+    "remarks.text.0": "`schematicUuid` 必须传 **原理图实体 UUID**（传图页 UUID 将会 **返回 `undefined`**）",
     "example.text.0": "1. 无参调用，由系统自动创建一对原理图/PCB 文档并关联",
     "example.text.1": "2. 删除新板子（其关联文档是本例新建的，删除不影响其他板子），保持工程整洁",
     "params.schematicUuid": "关联原理图 UUID",
@@ -42,6 +48,7 @@
     "returns": "板子名称，如若为 `undefined` 则创建失败"
   },
   "title": "Create Board",
+  "remarks.text.0": null,
   "example.text.0": null,
   "example.text.1": null,
   "params.schematicUuid": "Associated schematic UUID",
